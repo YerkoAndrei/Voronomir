@@ -1,0 +1,37 @@
+# Stride / Visual Studio
+Cache/
+_ReSharper*
+*.user
+*.lock
+*.lock.json
+*.suo
+*.VC.db
+*.vshost.exe
+*.manifest
+*.sdf
+
+# Cache Visual Studio 
+.vs/
+.suo/
+.vsconfig*
+
+# Compilaciones
+[Bb]in/
+[Oo]bj/
+*.apk
+*.aab
+*.app
+*.exe
+
+# Archivos grandes
+*.mp4
+
+# Krita
+*.png~
+*.psd~
+
+# Blender
+*.blend1
+
+# LMMS
+*.bak
