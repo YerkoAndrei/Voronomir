@@ -40,10 +40,12 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     7104a1b2696edbfc5247e2e5587fd9ce: !CameraComponent
-                        Id: 5c2dcfa2-2947-4eaa-876f-fe95384732e6
+                        Id: fea3501f-1ad1-4cb3-baef-4ab0eb026846
                         Name: null
                         Projection: Perspective
                         VerticalFieldOfView: 80.0
+                        UseCustomAspectRatio: true
+                        AspectRatio: 1.777778
                         Slot: 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
         -   Entity:
                 Id: ba60ce79-3157-4571-a2c4-6f7626c25993
@@ -126,10 +128,10 @@ Hierarchy:
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
-                        FallSpeed: 10.0
+                        FallSpeed: 100.0
                         MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 5.0
-                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        JumpSpeed: 15.0
+                        Gravity: {X: 0.0, Y: -50.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
                                 Length: 1.5
@@ -142,9 +144,10 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             4f555758721bbf121dfb821111b51961: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
-                    161319966847e0b5f91a733b6c6b08ec: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
-                        Id: 43f01ad3-ac71-49f5-aac9-a26d1e611a25
+                    394fdee386130a03b3f350550ce7b03a: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
+                        Id: 57ced855-0f8a-4092-9133-ae41e2e76b87
                         cuerpo: ref!! 3a532fb5-e650-4150-b3c5-14f486d9073f
-                        "cámara": ref!! 5c2dcfa2-2947-4eaa-876f-fe95384732e6
-                    a825587ae2146193835f365bd3998b4c: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
-                        Id: 73c00c3d-ebd1-4095-a80d-acf2dc89bd91
+                        "cámara": ref!! fea3501f-1ad1-4cb3-baef-4ab0eb026846
+                        sensibilidad: 1.0
+                    9f39d0a5dab3080bdcadb0dbfd0032a4: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
+                        Id: cf114505-16b9-4712-a010-c2ba1ce114e1
