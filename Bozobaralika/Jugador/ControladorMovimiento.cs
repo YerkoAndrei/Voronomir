@@ -7,9 +7,9 @@ namespace Bozobaralika;
 
 public class ControladorMovimiento : SyncScript
 {
+    public float sensibilidad;
     public CharacterComponent cuerpo;
     public CameraComponent cámara;
-    public float sensibilidad;
 
     // Movimiento
     private bool detención;
@@ -58,8 +58,8 @@ public class ControladorMovimiento : SyncScript
             DesactivarCaminar();
 
         // Debug
-        DebugText.Print(aceleración.ToString(), new Int2(x: 20, y: 40));
         DebugText.Print(cuerpo.LinearVelocity.ToString(), new Int2(x: 20, y: 20));
+        DebugText.Print(aceleración.ToString(), new Int2(x: 20, y: 40));
     }
 
     private void Correr()
@@ -136,7 +136,7 @@ public class ControladorMovimiento : SyncScript
         return 1;
     }
 
-    public void PausarMovimiento()
+    public void DetenerMovimiento()
     {
         detención = true;
     }

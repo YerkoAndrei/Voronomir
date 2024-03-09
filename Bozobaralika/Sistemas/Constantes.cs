@@ -20,6 +20,7 @@ public static class Constantes
 
     public enum Arma
     {
+        espada,
         pistola,
         escopeta,
         metralleta,

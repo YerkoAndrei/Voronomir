@@ -1,0 +1,22 @@
+!PrefabAsset
+Id: 8e9d85b9-a162-4e07-b7b2-56c0bec72782
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 5bfdc32d-ce31-4338-b875-c3ad36cab97c
+    Parts:
+        -   Entity:
+                Id: 5bfdc32d-ce31-4338-b875-c3ad36cab97c
+                Name: Hoyo
+                Components:
+                    9d00e085f3303ca400354a066ad2b2bb: !TransformComponent
+                        Id: 39380bdc-58cb-4772-bfee-6503d118dc26
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    902163abf3f49b3b82c5183f33d508ad: !ModelComponent
+                        Id: a3c282ee-3449-438e-86c4-77fd1ae664d5
+                        Model: 3de091c5-25d4-4c12-8e62-18cbe4432ced:Sphere
+                        Materials: {}
