@@ -11,18 +11,31 @@ public class ControladorMovimiento : SyncScript
     public CameraComponent cámara;
     public float sensibilidad;
 
+    // Movimiento
+    private bool detención;
     private Vector3 movimiento;
     private float multiplicadorVelocidad;
+
+    // Aceleración
+    private float tiempoAceleración;
+    private float tempoAceleración;
+    private float minAceleración;
+    private float maxAceleración;
     private float aceleración;
 
+    // Cursor
     private float rotaciónX;
     private float rotaciónY;
 
     public override void Start()
     {
-        multiplicadorVelocidad = 4;
+        minAceleración = 1f;
+        maxAceleración = 1.5f;
+        tiempoAceleración = 20;
 
-        // interfaz
+        multiplicadorVelocidad = ObtenerMultiplicadorVelocidad();
+
+        // Debug
         Input.LockMousePosition(true);
         Game.IsMouseVisible = false;
     }
@@ -30,16 +43,12 @@ public class ControladorMovimiento : SyncScript
     // PENDIENTE: Control
     public override void Update()
     {
-        // interfaz
-        if (Input.IsKeyPressed(Keys.Space))
-        {
-            Input.LockMousePosition(false);
-            Game.IsMouseVisible = true;
-        }
+        if (Input.IsMouseButtonPressed(MouseButton.Left))
+            PausarMovimiento();
 
         // Correr
-        Mirar();
         Correr();
+        Mirar();
 
         // Salto
         if (Input.IsKeyPressed(Keys.Space))
@@ -50,8 +59,10 @@ public class ControladorMovimiento : SyncScript
             Deslizar();
 
         // Caminar
-        if (Input.IsKeyDown(Keys.LeftCtrl) || Input.IsKeyDown(Keys.RightCtrl))
-            Caminar();
+        if (Input.IsKeyPressed(Keys.LeftCtrl) || Input.IsKeyPressed(Keys.RightCtrl))
+            Caminar(true);
+        if (Input.IsKeyReleased(Keys.LeftCtrl) || Input.IsKeyReleased(Keys.RightCtrl))
+            Caminar(false);
     }
 
     private void Correr()
@@ -69,29 +80,41 @@ public class ControladorMovimiento : SyncScript
             movimiento += Vector3.UnitX;
 
         // Aceleración
-        if (movimiento == Vector3.Zero)
-            aceleración = 1;
+        if (movimiento == Vector3.Zero || detención)
+        {
+            tempoAceleración = 0;
+            aceleración = minAceleración;
+            detención = false;
+        }
         else
         {
-            aceleración += (float)Game.UpdateTime.Elapsed.TotalSeconds * 4;
-            aceleración = MathUtil.Clamp(aceleración, 1, 2);
+            tempoAceleración += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            aceleración = MathUtil.SmoothStep(tempoAceleración / tiempoAceleración);
+            aceleración = MathUtil.Clamp((aceleración + minAceleración), minAceleración, maxAceleración);
         }
 
         // Movimiento
-        movimiento = Vector3.Transform(movimiento, cámara.Entity.Transform.Rotation);
+        movimiento = Vector3.Transform(movimiento, cuerpo.Orientation);
         movimiento.Y = 0;
 
         movimiento.Normalize();
-        cuerpo.SetVelocity(movimiento * aceleración * multiplicadorVelocidad);
+        cuerpo.SetVelocity(movimiento * 10 * multiplicadorVelocidad * aceleración);
+
+        // Rotación
+        rotaciónX -= Input.MouseDelta.X * sensibilidad;
+        cuerpo.Orientation = Quaternion.RotationYawPitchRoll(rotaciónX, 0, 0);
+
+        // Debug
+        DebugText.Print(aceleración.ToString(), new Int2(x: 20, y: 40));
+        DebugText.Print(cuerpo.LinearVelocity.ToString(), new Int2(x: 20, y: 20));
     }
 
     private void Mirar()
     {
-        rotaciónX -= Input.MouseDelta.X * sensibilidad;
         rotaciónY -= Input.MouseDelta.Y * sensibilidad;
         rotaciónY = MathUtil.Clamp(rotaciónY, -MathUtil.PiOverTwo, MathUtil.PiOverTwo);
 
-        cámara.Entity.Transform.Rotation = Quaternion.RotationYawPitchRoll(rotaciónX, rotaciónY, 0);
+        cámara.Entity.Transform.Rotation = Quaternion.RotationYawPitchRoll(0, rotaciónY, 0);
     }
 
     private void Saltar()
@@ -105,8 +128,22 @@ public class ControladorMovimiento : SyncScript
 
     }
 
-    private void Caminar()
+    private void Caminar(bool caminar)
     {
-        multiplicadorVelocidad = 0.2f;
+        if(caminar)
+            multiplicadorVelocidad = ObtenerMultiplicadorVelocidad() / 2f;
+        else
+            multiplicadorVelocidad = ObtenerMultiplicadorVelocidad();
+    }
+
+    private float ObtenerMultiplicadorVelocidad()
+    {
+        // PENDIENTE: mejoras
+        return 1;
+    }
+
+    public void PausarMovimiento()
+    {
+        detención = true;
     }
 }
