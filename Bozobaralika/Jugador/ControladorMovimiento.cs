@@ -13,6 +13,7 @@ public class ControladorMovimiento : SyncScript
 
     // Movimiento
     private bool detención;
+    private bool caminando;
     private Vector3 movimiento;
     private float multiplicadorVelocidad;
 
@@ -31,7 +32,7 @@ public class ControladorMovimiento : SyncScript
     {
         minAceleración = 1f;
         maxAceleración = 1.5f;
-        tiempoAceleración = 20;
+        tiempoAceleración = 20f;
 
         multiplicadorVelocidad = ObtenerMultiplicadorVelocidad();
 
@@ -40,12 +41,8 @@ public class ControladorMovimiento : SyncScript
         Game.IsMouseVisible = false;
     }
 
-    // PENDIENTE: Control
     public override void Update()
     {
-        if (Input.IsMouseButtonPressed(MouseButton.Left))
-            PausarMovimiento();
-
         // Correr
         Correr();
         Mirar();
@@ -54,20 +51,19 @@ public class ControladorMovimiento : SyncScript
         if (Input.IsKeyPressed(Keys.Space))
             Saltar();
 
-        // Deslizamiento
-        if (Input.IsKeyPressed(Keys.LeftShift) || Input.IsKeyPressed(Keys.RightShift))
-            Deslizar();
-
         // Caminar
-        if (Input.IsKeyPressed(Keys.LeftCtrl) || Input.IsKeyPressed(Keys.RightCtrl))
-            Caminar(true);
+        if (Input.IsKeyDown(Keys.LeftCtrl) || Input.IsKeyDown(Keys.RightCtrl))
+            Caminar();
         if (Input.IsKeyReleased(Keys.LeftCtrl) || Input.IsKeyReleased(Keys.RightCtrl))
-            Caminar(false);
+            DesactivarCaminar();
+
+        // Debug
+        DebugText.Print(aceleración.ToString(), new Int2(x: 20, y: 40));
+        DebugText.Print(cuerpo.LinearVelocity.ToString(), new Int2(x: 20, y: 20));
     }
 
     private void Correr()
     {
-        // PENDIENTE: controlar cambios bruscos
         movimiento = new Vector3();
 
         if (Input.IsKeyDown(Keys.W) || Input.IsKeyDown(Keys.Up))
@@ -80,7 +76,7 @@ public class ControladorMovimiento : SyncScript
             movimiento += Vector3.UnitX;
 
         // Aceleración
-        if (movimiento == Vector3.Zero || detención)
+        if (movimiento == Vector3.Zero || detención || caminando)
         {
             tempoAceleración = 0;
             aceleración = minAceleración;
@@ -103,10 +99,6 @@ public class ControladorMovimiento : SyncScript
         // Rotación
         rotaciónX -= Input.MouseDelta.X * sensibilidad;
         cuerpo.Orientation = Quaternion.RotationYawPitchRoll(rotaciónX, 0, 0);
-
-        // Debug
-        DebugText.Print(aceleración.ToString(), new Int2(x: 20, y: 40));
-        DebugText.Print(cuerpo.LinearVelocity.ToString(), new Int2(x: 20, y: 20));
     }
 
     private void Mirar()
@@ -123,17 +115,19 @@ public class ControladorMovimiento : SyncScript
             cuerpo.Jump();
     }
 
-    private void Deslizar()
+    private void Caminar()
     {
+        if (!cuerpo.IsGrounded)
+            return;
 
+        caminando = true;
+        multiplicadorVelocidad = ObtenerMultiplicadorVelocidad() * 0.25f;
     }
 
-    private void Caminar(bool caminar)
+    private void DesactivarCaminar()
     {
-        if(caminar)
-            multiplicadorVelocidad = ObtenerMultiplicadorVelocidad() / 2f;
-        else
-            multiplicadorVelocidad = ObtenerMultiplicadorVelocidad();
+        caminando = false;
+        multiplicadorVelocidad = ObtenerMultiplicadorVelocidad();
     }
 
     private float ObtenerMultiplicadorVelocidad()
