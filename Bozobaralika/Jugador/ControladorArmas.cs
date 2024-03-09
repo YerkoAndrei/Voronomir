@@ -1,4 +1,5 @@
-﻿using Stride.Core.Mathematics;
+﻿using System.Threading.Tasks;
+using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
@@ -22,21 +23,45 @@ public class ControladorArmas : SyncScript
     private Arma armaActual;
     private float últimoDisparo;
 
+    // Metralleta
+    private bool metralletaAtascada;
+    private float tempoMetralleta;
+    private float tiempoMaxMetralleta;
+    private float tiempoAtascamientoMetralleta;
+
     public override void Start()
     {
+        tiempoMaxMetralleta = 4f;
+        tiempoAtascamientoMetralleta = 2f;
+        tempoMetralleta = tiempoAtascamientoMetralleta;
+
         ApagarArmas();
         CambiarArma(Arma.pistola);
     }
 
     public override void Update()
     {
+        // Disparo general
         if (Input.IsMouseButtonPressed(MouseButton.Left))
+        {
             Disparar();
 
-        // PENDIENTE: gasto de metralleta
+            if(tempoMetralleta >= tiempoMaxMetralleta)
+                metralletaAtascada = false;
+        }
+
         // Metralleta
-        if (Input.IsMouseButtonDown(MouseButton.Left) && armaActual == Arma.metralleta)
-            Disparar();
+        if (Input.IsMouseButtonDown(MouseButton.Left) && armaActual == Arma.metralleta && !metralletaAtascada)
+        {
+            tempoMetralleta -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            if (tempoMetralleta > 0)
+                Disparar();
+            else
+                AtascarMetralleta();
+        }
+
+        if (!Input.IsMouseButtonDown(MouseButton.Left))
+            EnfriarMetralleta();
 
         // Melé
         if (Input.IsKeyPressed(Keys.E) || Input.IsMouseButtonPressed(MouseButton.Right))
@@ -58,8 +83,10 @@ public class ControladorArmas : SyncScript
 
         // Debug
         DebugText.Print(armaActual.ToString(), new Int2(x: 20, y: 60));
-        DebugText.Print(últimoDisparo.ToString(), new Int2(x: 20, y: 80));
-        DebugText.Print(Game.UpdateTime.Total.TotalSeconds.ToString(), new Int2(x: 20, y: 100));
+        DebugText.Print(metralletaAtascada.ToString(), new Int2(x: 20, y: 80));
+        DebugText.Print(tempoMetralleta.ToString(), new Int2(x: 20, y: 100));
+        DebugText.Print(últimoDisparo.ToString(), new Int2(x: 20, y: 120));
+        DebugText.Print(Game.UpdateTime.Total.TotalSeconds.ToString(), new Int2(x: 20, y: 140));
     }
 
     private void Disparar()
@@ -157,11 +184,11 @@ public class ControladorArmas : SyncScript
             case Arma.espada:
                 return 4;
             case Arma.pistola:
-                return 1;
-            case Arma.escopeta:
-                return 1;
-            case Arma.metralleta:
                 return 2;
+            case Arma.escopeta:
+                return 1f;
+            case Arma.metralleta:
+                return 0.5f;
             case Arma.rifle:
                 return 4;
             default:
@@ -180,7 +207,7 @@ public class ControladorArmas : SyncScript
             case Arma.escopeta:
                 return 0.8f;
             case Arma.metralleta:
-                return 0.1f;
+                return 0.05f;
             case Arma.rifle:
                 return 2f;
             default:
@@ -192,6 +219,19 @@ public class ControladorArmas : SyncScript
     {
         // PENDIENTE: mejoras
         return 10;
+    }
+
+    private void EnfriarMetralleta()
+    {
+        if (tempoMetralleta < tiempoMaxMetralleta)
+            tempoMetralleta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+    }
+
+    private async void AtascarMetralleta()
+    {
+        metralletaAtascada = true;
+        await Task.Delay((int)(tiempoAtascamientoMetralleta * 1000));
+        tempoMetralleta = tiempoMaxMetralleta;
     }
 
     private void CambiarArma(Arma nuevaArma)
