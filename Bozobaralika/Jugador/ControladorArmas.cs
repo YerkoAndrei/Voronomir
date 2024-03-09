@@ -20,6 +20,7 @@ public class ControladorArmas : SyncScript
     public TransformComponent rife;
 
     private Arma armaActual;
+    private float últimoDisparo;
 
     public override void Start()
     {
@@ -32,12 +33,20 @@ public class ControladorArmas : SyncScript
         if (Input.IsMouseButtonPressed(MouseButton.Left))
             Disparar();
 
+        // PENDIENTE: gasto de metralleta
+        // Metralleta
+        if (Input.IsMouseButtonDown(MouseButton.Left) && armaActual == Arma.metralleta)
+            Disparar();
+
+        // Melé
         if (Input.IsKeyPressed(Keys.E) || Input.IsMouseButtonPressed(MouseButton.Right))
             Atacar();
 
+        // Cura
         if (Input.IsKeyPressed(Keys.F))
             Curar();
 
+        // Cambio armas
         if (Input.IsKeyPressed(Keys.D1) || Input.IsKeyPressed(Keys.NumPad1))
             CambiarArma(Arma.pistola);
         if (Input.IsKeyPressed(Keys.D2) || Input.IsKeyPressed(Keys.NumPad2))
@@ -49,10 +58,18 @@ public class ControladorArmas : SyncScript
 
         // Debug
         DebugText.Print(armaActual.ToString(), new Int2(x: 20, y: 60));
+        DebugText.Print(últimoDisparo.ToString(), new Int2(x: 20, y: 80));
+        DebugText.Print(Game.UpdateTime.Total.TotalSeconds.ToString(), new Int2(x: 20, y: 100));
     }
 
     private void Disparar()
     {
+        // Cadencia
+        var tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparo;
+        if ((float)Game.UpdateTime.Total.TotalSeconds < tiempoDisparo)
+            return;
+
+        últimoDisparo = (float)Game.UpdateTime.Total.TotalSeconds;
         switch (armaActual)
         {
             case Arma.pistola:
@@ -62,7 +79,7 @@ public class ControladorArmas : SyncScript
                 movimiento.DetenerMovimiento();
                 for (int i = 0; i < ObtenerCantidadPerdigones(); i++)
                 {
-                    CalcularRayo(0.2f);
+                    CalcularRayo(0.25f);
                 }
                 break;
             case Arma.metralleta:
@@ -81,7 +98,7 @@ public class ControladorArmas : SyncScript
         var aleatorioY = RangoAleatorio(-(imprecisión), imprecisión);
         var aleatorio = new Vector3(aleatorioX, aleatorioY, 0);
 
-        // Distancia máxima de cálculo: 1000
+        // Distancia máxima de disparo: 1000
         var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector +
                         (cámara.Entity.Transform.WorldMatrix.Forward + aleatorio) * 1000;
 
@@ -91,14 +108,12 @@ public class ControladorArmas : SyncScript
 
         if (resultado.Succeeded && resultado.Collider != null)
         {
-            // Distancia
+            // PENDIENTE: dañor por distancia, rifle al reves
+            // Daño segun distancia
             var distancia = Vector3.Distance(cámara.Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
-
-            // dañar segun distancia
             var dañoFinal = ObtenerDaño(armaActual);// * distancia;
 
             //resultado.Collider.Entity.Get<Enemigo>().Dañar(dañoFinal);
-            //Log.Warning(resultado.Collider.Entity.Name + " - " + distancia.ToString());
 
             // PENDIENTE: usar piscina
             // Marca balazo
@@ -110,7 +125,7 @@ public class ControladorArmas : SyncScript
 
     private void Atacar()
     {
-        // Distancia máxima de cálculo: 2
+        // Distancia máxima melé: 2
         var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector +
                         cámara.Entity.Transform.WorldMatrix.Forward * 2;
 
@@ -121,7 +136,6 @@ public class ControladorArmas : SyncScript
         if (resultado.Succeeded && resultado.Collider != null)
         {
             var dañoFinal = ObtenerDaño(Arma.espada);
-
             //resultado.Collider.Entity.Get<Enemigo>().Dañar(dañoFinal);
 
             // Marca ataque
@@ -150,6 +164,25 @@ public class ControladorArmas : SyncScript
                 return 2;
             case Arma.rifle:
                 return 4;
+            default:
+                return 0;
+        }
+    }
+
+    private float ObtenerCadencia(Arma arma)
+    {
+        switch (arma)
+        {
+            case Arma.espada:
+                return 0.2f;
+            case Arma.pistola:
+                return 0.2f;
+            case Arma.escopeta:
+                return 0.8f;
+            case Arma.metralleta:
+                return 0.1f;
+            case Arma.rifle:
+                return 2f;
             default:
                 return 0;
         }
