@@ -20,7 +20,7 @@ public static class Constantes
 
     public enum Arma
     {
-        melé,
+        pistola,
         escopeta,
         metralleta,
         rifle
