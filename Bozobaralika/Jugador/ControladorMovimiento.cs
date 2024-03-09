@@ -14,8 +14,8 @@ public class ControladorMovimiento : SyncScript
     // Movimiento
     private bool detención;
     private bool caminando;
-    private Vector3 movimiento;
     private float multiplicadorVelocidad;
+    private Vector3 movimiento;
 
     // Aceleración
     private float tiempoAceleración;

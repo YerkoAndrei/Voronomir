@@ -18,7 +18,7 @@ public static class Constantes
         jefe
     }
 
-    public enum Arma
+    public enum Armas
     {
         espada,
         pistola,

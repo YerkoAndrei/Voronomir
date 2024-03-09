@@ -20,7 +20,7 @@ public class ControladorArmas : SyncScript
     public TransformComponent metralleta;
     public TransformComponent rife;
 
-    private Arma armaActual;
+    private Armas armaActual;
     private float últimoDisparo;
 
     // Metralleta
@@ -36,7 +36,7 @@ public class ControladorArmas : SyncScript
         tempoMetralleta = tiempoAtascamientoMetralleta;
 
         ApagarArmas();
-        CambiarArma(Arma.pistola);
+        CambiarArma(Armas.pistola);
     }
 
     public override void Update()
@@ -51,7 +51,7 @@ public class ControladorArmas : SyncScript
         }
 
         // Metralleta
-        if (Input.IsMouseButtonDown(MouseButton.Left) && armaActual == Arma.metralleta && !metralletaAtascada)
+        if (Input.IsMouseButtonDown(MouseButton.Left) && armaActual == Armas.metralleta && !metralletaAtascada)
         {
             tempoMetralleta -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
             if (tempoMetralleta > 0)
@@ -73,13 +73,13 @@ public class ControladorArmas : SyncScript
 
         // Cambio armas
         if (Input.IsKeyPressed(Keys.D1) || Input.IsKeyPressed(Keys.NumPad1))
-            CambiarArma(Arma.pistola);
+            CambiarArma(Armas.pistola);
         if (Input.IsKeyPressed(Keys.D2) || Input.IsKeyPressed(Keys.NumPad2))
-            CambiarArma(Arma.escopeta);
+            CambiarArma(Armas.escopeta);
         if (Input.IsKeyPressed(Keys.D3) || Input.IsKeyPressed(Keys.NumPad3))
-            CambiarArma(Arma.metralleta);
+            CambiarArma(Armas.metralleta);
         if (Input.IsKeyPressed(Keys.D4) || Input.IsKeyPressed(Keys.NumPad4))
-            CambiarArma(Arma.rifle);
+            CambiarArma(Armas.rifle);
 
         // Debug
         DebugText.Print(armaActual.ToString(), new Int2(x: 20, y: 60));
@@ -96,23 +96,27 @@ public class ControladorArmas : SyncScript
         if ((float)Game.UpdateTime.Total.TotalSeconds < tiempoDisparo)
             return;
 
+        // Metralleta
+        if (armaActual == Armas.metralleta && metralletaAtascada)
+            return;
+
         últimoDisparo = (float)Game.UpdateTime.Total.TotalSeconds;
         switch (armaActual)
         {
-            case Arma.pistola:
+            case Armas.pistola:
                 CalcularRayo(0);
                 break;
-            case Arma.escopeta:
+            case Armas.escopeta:
                 movimiento.DetenerMovimiento();
                 for (int i = 0; i < ObtenerCantidadPerdigones(); i++)
                 {
                     CalcularRayo(0.25f);
                 }
                 break;
-            case Arma.metralleta:
+            case Armas.metralleta:
                 CalcularRayo(0.1f);
                 break;
-            case Arma.rifle:
+            case Armas.rifle:
                 movimiento.DetenerMovimiento();
                 CalcularRayo(0);
                 break;
@@ -123,7 +127,8 @@ public class ControladorArmas : SyncScript
     {
         var aleatorioX = RangoAleatorio(-(imprecisión), imprecisión);
         var aleatorioY = RangoAleatorio(-(imprecisión), imprecisión);
-        var aleatorio = new Vector3(aleatorioX, aleatorioY, 0);
+        var aleatorioZ = RangoAleatorio(-(imprecisión), imprecisión);
+        var aleatorio = new Vector3(aleatorioX, aleatorioY, aleatorioZ);
 
         // Distancia máxima de disparo: 1000
         var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector +
@@ -162,7 +167,7 @@ public class ControladorArmas : SyncScript
 
         if (resultado.Succeeded && resultado.Collider != null)
         {
-            var dañoFinal = ObtenerDaño(Arma.espada);
+            var dañoFinal = ObtenerDaño(Armas.espada);
             //resultado.Collider.Entity.Get<Enemigo>().Dañar(dañoFinal);
 
             // Marca ataque
@@ -177,38 +182,38 @@ public class ControladorArmas : SyncScript
 
     }
 
-    private float ObtenerDaño(Arma arma)
+    private float ObtenerDaño(Armas arma)
     {
         switch (armaActual)
         {
-            case Arma.espada:
-                return 4;
-            case Arma.pistola:
-                return 2;
-            case Arma.escopeta:
-                return 1f;
-            case Arma.metralleta:
-                return 0.5f;
-            case Arma.rifle:
-                return 4;
+            case Armas.espada:
+                return 40;
+            case Armas.pistola:
+                return 20;
+            case Armas.escopeta:
+                return 10;
+            case Armas.metralleta:
+                return 5;
+            case Armas.rifle:
+                return 40;
             default:
                 return 0;
         }
     }
 
-    private float ObtenerCadencia(Arma arma)
+    private float ObtenerCadencia(Armas arma)
     {
         switch (arma)
         {
-            case Arma.espada:
+            case Armas.espada:
                 return 0.2f;
-            case Arma.pistola:
+            case Armas.pistola:
                 return 0.2f;
-            case Arma.escopeta:
+            case Armas.escopeta:
                 return 0.8f;
-            case Arma.metralleta:
+            case Armas.metralleta:
                 return 0.05f;
-            case Arma.rifle:
+            case Armas.rifle:
                 return 2f;
             default:
                 return 0;
@@ -234,25 +239,25 @@ public class ControladorArmas : SyncScript
         tempoMetralleta = tiempoMaxMetralleta;
     }
 
-    private void CambiarArma(Arma nuevaArma)
+    private void CambiarArma(Armas nuevaArma)
     {
         ApagarArmas();
         armaActual = nuevaArma;
 
         switch (armaActual)
         {
-            case Arma.pistola:
+            case Armas.pistola:
                 espada.Entity.Get<ModelComponent>().Enabled = true;
                 pistola.Entity.Get<ModelComponent>().Enabled = true;
                 break;
-            case Arma.escopeta:
+            case Armas.escopeta:
                 escopeta.Entity.Get<ModelComponent>().Enabled = true;
                 break;
-            case Arma.metralleta:
+            case Armas.metralleta:
                 espada.Entity.Get<ModelComponent>().Enabled = true;
                 metralleta.Entity.Get<ModelComponent>().Enabled = true;
                 break;
-            case Arma.rifle:
+            case Armas.rifle:
                 rife.Entity.Get<ModelComponent>().Enabled = true;
                 break;
         }
