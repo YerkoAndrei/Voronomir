@@ -10,6 +10,8 @@ Hierarchy:
         - ref!! 52cd02bd-3165-4aa6-8d1e-7538541119a3
         - ref!! cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
         - ref!! ba60ce79-3157-4571-a2c4-6f7626c25993
+        - ref!! 5806e859-d7ec-42d4-ac78-edfc026317d2
+        - ref!! 8b42ea7d-752a-4920-97e2-1646ec7b9189
         - ref!! dd82e74f-617b-481e-bb36-34773b64d421
     Parts:
         -   Entity:
@@ -47,6 +49,35 @@ Hierarchy:
                         UseCustomAspectRatio: true
                         AspectRatio: 1.777778
                         Slot: 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
+        -   Entity:
+                Id: 5806e859-d7ec-42d4-ac78-edfc026317d2
+                Name: Cube
+                Components:
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: dc9ac95a-a725-4ea0-82d2-5a047ae63b5a
+                        Position: {X: 0.0, Y: 1.0, Z: -4.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 4.0, Y: 2.0, Z: 1.0}
+                        Children: {}
+                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
+                        Id: 2c0648fa-79da-4913-843d-347a4a300df9
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 8b42ea7d-752a-4920-97e2-1646ec7b9189
+                Name: Cube
+                Components:
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: fa742505-f28a-43fb-9b75-e753aedeaee8
+                        Position: {X: -5.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 2.0, Z: 6.0}
+                        Children: {}
+                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
+                        Id: 8aa1e751-dc5a-4e5a-a58e-24eb0e91c610
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
         -   Entity:
                 Id: ba60ce79-3157-4571-a2c4-6f7626c25993
                 Name: Sphere
@@ -128,10 +159,10 @@ Hierarchy:
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
-                        FallSpeed: 100.0
+                        FallSpeed: 10.0
                         MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 15.0
-                        Gravity: {X: 0.0, Y: -50.0, Z: 0.0}
+                        JumpSpeed: 10.0
+                        Gravity: {X: 0.0, Y: -25.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
                                 Length: 1.5
@@ -146,6 +177,7 @@ Hierarchy:
                             4f555758721bbf121dfb821111b51961: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
                     394fdee386130a03b3f350550ce7b03a: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
                         Id: 57ced855-0f8a-4092-9133-ae41e2e76b87
+                        Priority: 10
                         cuerpo: ref!! 3a532fb5-e650-4150-b3c5-14f486d9073f
                         "cámara": ref!! fea3501f-1ad1-4cb3-baef-4ab0eb026846
                         sensibilidad: 1.0
