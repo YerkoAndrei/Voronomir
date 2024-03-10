@@ -214,9 +214,9 @@ Hierarchy:
                 Components:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: f8da5fff-2637-4fbf-a5da-7cc4fd74113d
-                        Position: {X: -0.3, Y: 0.0, Z: -0.8}
+                        Position: {X: -0.3, Y: 0.3, Z: -0.8}
                         Rotation: {X: 0.25488698, Y: -0.16773123, Z: 0.04494346, W: 0.95125127}
-                        Scale: {X: 0.009999999, Y: 0.01, Z: 2.0}
+                        Scale: {X: 0.009999999, Y: 0.01, Z: 1.5}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: c3f3e014-10d4-4345-b491-72cfe4c5a54b
@@ -228,7 +228,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 0581adaa-618c-4926-bd0c-773cfa32ddae
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -252,7 +252,7 @@ Hierarchy:
                             Skybox: fa0474ca-0906-42ca-8deb-fbe7df071b66:Skybox
         -   Entity:
                 Id: 54351e3a-e019-421d-9676-cc885527baf6
-                Name: "Cámara"
+                Name: Cabeza
                 Components:
                     e65a81596fe695650289a9304d55af07: !TransformComponent
                         Id: a27891ac-33da-4772-9156-fe14a6dc59f1
@@ -260,18 +260,12 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            36d3c59ff298eb8b6306d66d61ab4b87: ref!! a032338b-57be-4ac1-baf5-af21df6b2d12
+                            b1afc6c1b1145896975e0fcac17906ef: ref!! 0581adaa-618c-4926-bd0c-773cfa32ddae
                             b5fcbefeb06d7f9d1602678ab261c631: ref!! 861d6472-473d-4c50-9156-01ccc4b6e378
                             9e1369c97ef88ac60a5436cfb7fa1e6a: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
                             32470a676780800250b81a249ff33f63: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
                             334e90ab78c48ae82f0477a8d2a12a34: ref!! 8374c3d3-7007-4071-9f10-14045dd1b355
-                    7104a1b2696edbfc5247e2e5587fd9ce: !CameraComponent
-                        Id: fea3501f-1ad1-4cb3-baef-4ab0eb026846
-                        Name: null
-                        Projection: Perspective
-                        VerticalFieldOfView: 80.0
-                        UseCustomAspectRatio: true
-                        AspectRatio: 1.777778
-                        Slot: 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
         -   Entity:
                 Id: 54dfafb5-c570-4d4a-9829-8f5a8cb31a3e
                 Name: Pistola
@@ -362,6 +356,24 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
+                Id: a4e203b8-36fe-425c-ac8c-a03ec4a00ff9
+                Name: "Cámara"
+                Components:
+                    e65a81596fe695650289a9304d55af07: !TransformComponent
+                        Id: a032338b-57be-4ac1-baf5-af21df6b2d12
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7104a1b2696edbfc5247e2e5587fd9ce: !CameraComponent
+                        Id: d37efe62-6123-4994-bb6a-66753b20c695
+                        Name: null
+                        Projection: Perspective
+                        VerticalFieldOfView: 80.0
+                        UseCustomAspectRatio: true
+                        AspectRatio: 1.777778
+                        Slot: 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
+        -   Entity:
                 Id: b8b825d3-16a6-410e-9bfd-e4400a802454
                 Name: Sphere
                 Components:
@@ -431,7 +443,6 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            a9c1fbf603f988b31fa7bb41abdf9296: ref!! 0581adaa-618c-4926-bd0c-773cfa32ddae
                             73b4929b4bc7273000541b77e255741d: ref!! e69d0818-85b3-44b5-a0f1-cfd79bb09854
         -   Entity:
                 Id: cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
@@ -526,7 +537,8 @@ Hierarchy:
                     51e7d48363aedad8f548bd717eb0b6b5: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
                         Id: c46f69dc-db00-454e-8f32-19c17e5759b2
                         cuerpo: ref!! 3a532fb5-e650-4150-b3c5-14f486d9073f
-                        "cámara": ref!! fea3501f-1ad1-4cb3-baef-4ab0eb026846
+                        cabeza: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
+                        "cámara": ref!! d37efe62-6123-4994-bb6a-66753b20c695
                         movimiento: ref!! 57ced855-0f8a-4092-9133-ae41e2e76b87
                         armas: ref!! cf114505-16b9-4712-a010-c2ba1ce114e1
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent

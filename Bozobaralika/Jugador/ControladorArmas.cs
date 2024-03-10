@@ -25,6 +25,7 @@ public class ControladorArmas : SyncScript
     public TransformComponent ejeRife;
 
     private ControladorMovimiento movimiento;
+    private TransformComponent cabeza;
     private CameraComponent cámara;
 
     private Armas armaActual;
@@ -46,9 +47,10 @@ public class ControladorArmas : SyncScript
     private float tiempoMaxMetralleta;
     private float tiempoAtascamientoMetralleta;
 
-    public void Iniciar(ControladorMovimiento _movimiento, CameraComponent _cámara)
+    public void Iniciar(ControladorMovimiento _movimiento, TransformComponent _cabeza, CameraComponent _cámara)
     {
         movimiento = _movimiento;
+        cabeza = _cabeza;
         cámara = _cámara;
 
         dañoMínimo = 1f;
@@ -168,6 +170,7 @@ public class ControladorArmas : SyncScript
                 {
                     CalcularRayo(0.25f);
                 }
+                VibrarCámara(6);
                 AnimarDisparo(ejeEscopeta, 0.5f, 0.2f);
                 últimoDisparoEscopeta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
@@ -179,6 +182,7 @@ public class ControladorArmas : SyncScript
             case Armas.rifle:
                 movimiento.DetenerMovimiento();
                 CalcularRayo(0);
+                VibrarCámara(8);
                 AnimarDisparo(ejeRife, 2f, 0.5f);
                 últimoDisparoRifle = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
@@ -193,10 +197,10 @@ public class ControladorArmas : SyncScript
         var aleatorio = new Vector3(aleatorioX, aleatorioY, aleatorioZ);
 
         // Distancia máxima de disparo: 1000
-        var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector +
-                        (cámara.Entity.Transform.WorldMatrix.Forward + aleatorio) * 1000;
+        var dirección = cabeza.WorldMatrix.TranslationVector +
+                        (cabeza.WorldMatrix.Forward + aleatorio) * 1000;
 
-        var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
+        var resultado = this.GetSimulation().Raycast(cabeza.WorldMatrix.TranslationVector,
                                                      dirección,
                                                      CollisionFilterGroups.DefaultFilter);
 
@@ -216,17 +220,32 @@ public class ControladorArmas : SyncScript
 
             // PENDIENTE: efecto
             // Daño segun distancia
-            var distancia = Vector3.Distance(cámara.Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
+            var distancia = Vector3.Distance(cabeza.WorldMatrix.TranslationVector, resultado.Point);
             var reducción = 0f;
             if(distancia > ObtenerDistanciaMáxima(armaActual))
                 reducción = (distancia - ObtenerDistanciaMáxima(armaActual)) * 0.5f;
 
-            // Rifle daña según distancia
+            // Retroalimentación daño
             var dañoFinal = 0f;
-            if(armaActual != Armas.rifle)
-                dañoFinal = ObtenerDaño(armaActual) - reducción;
-            else
-                dañoFinal = ObtenerDaño(armaActual) + reducción;
+            switch (armaActual)
+            {
+                // Pistola y metralleta solo vibra si hace daño
+                case Armas.pistola:
+                    VibrarCámara(1f);
+                    dañoFinal = ObtenerDaño(armaActual) - reducción;
+                    break;
+                case Armas.escopeta:
+                    dañoFinal = ObtenerDaño(armaActual) - reducción;
+                    break;
+                case Armas.metralleta:
+                    VibrarCámara(2f);
+                    dañoFinal = ObtenerDaño(armaActual) - reducción;
+                    break;
+                // Rifle daña según distancia
+                case Armas.rifle:
+                    dañoFinal = ObtenerDaño(armaActual) + reducción;
+                    break;
+            }
 
             // Daña enemigo
             dañoFinal = MathUtil.Clamp(dañoFinal, dañoMínimo, dañoMáximo);
@@ -248,10 +267,10 @@ public class ControladorArmas : SyncScript
         AnimarAtaque();
 
         // Distancia máxima melé: 2
-        var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector +
-                        cámara.Entity.Transform.WorldMatrix.Forward * 2;
+        var dirección = cabeza.WorldMatrix.TranslationVector +
+                        cabeza.WorldMatrix.Forward * 2;
 
-        var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
+        var resultado = this.GetSimulation().Raycast(cabeza.WorldMatrix.TranslationVector,
                                                      dirección,
                                                      CollisionFilterGroups.DefaultFilter);
 
@@ -442,15 +461,16 @@ public class ControladorArmas : SyncScript
             entra.Rotation = Quaternion.Lerp(rotaciónEntra, rotaciónCentro, tiempo);
             sale.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
 
+            // Espada / pistola
+            if (modeloSale == modeloPistola)
+                ejeEspada.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
+
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
         }
         
         cambiandoArma = false;
         modeloSale.Entity.Get<ModelComponent>().Enabled = false;
-
-        if(modeloSale == modeloPistola)
-            modeloEspada.Entity.Get<ModelComponent>().Enabled = false;
     }
 
     private async void AnimarDisparo(TransformComponent arma, float retroceso, float duración)
@@ -494,5 +514,42 @@ public class ControladorArmas : SyncScript
         }
         
         ejeEspada.Rotation = Quaternion.Identity;
+    }
+
+    private async void VibrarCámara(float fuerza)
+    {
+        float duración = 0.01f;
+        int iteraciones = 6;
+        int iteración = 0;
+
+        while (iteración < iteraciones)
+        {
+            var inicial = cámara.Entity.Transform.Position;
+            var objetivo = Vector3.Zero;
+
+            // Aleatorio
+            if (iteración < (iteraciones - 1))
+            {
+                var aletorioX = RangoAleatorio(-0.02f, 0.02f);
+                var aletorioY = RangoAleatorio(-0.02f, 0.02f);
+                var aletorioZ = RangoAleatorio(-0.02f, 0.02f);
+                objetivo = Vector3.Zero + new Vector3(aletorioX, aletorioY, aletorioZ) * fuerza;
+            }
+
+            float tiempoLerp = 0;
+            float tiempo = 0;
+
+            while (tiempoLerp < duración)
+            {
+                tiempo = tiempoLerp / duración;
+                cámara.Entity.Transform.Position = Vector3.Lerp(inicial, objetivo, tiempo);
+
+                tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                await Task.Delay(1);
+            }
+            iteración++;
+        }
+
+        cámara.Entity.Transform.Position = Vector3.Zero;
     }
 }

@@ -10,7 +10,7 @@ public class ControladorMovimiento : SyncScript
     public float sensibilidad;
 
     private CharacterComponent cuerpo;
-    private CameraComponent cámara;
+    private TransformComponent cabeza;
 
     // Movimiento
     private bool detención;
@@ -29,10 +29,10 @@ public class ControladorMovimiento : SyncScript
     private float rotaciónX;
     private float rotaciónY;
 
-    public void Iniciar(CharacterComponent _cuerpo, CameraComponent _cámara)
+    public void Iniciar(CharacterComponent _cuerpo, TransformComponent _cabeza)
     {
         cuerpo = _cuerpo;
-        cámara = _cámara;
+        cabeza = _cabeza;
 
         minAceleración = 1f;
         maxAceleración = 1.5f;
@@ -106,7 +106,7 @@ public class ControladorMovimiento : SyncScript
         rotaciónY -= Input.MouseDelta.Y * sensibilidad;
         rotaciónY = MathUtil.Clamp(rotaciónY, -MathUtil.PiOverTwo, MathUtil.PiOverTwo);
 
-        cámara.Entity.Transform.Rotation = Quaternion.RotationYawPitchRoll(0, rotaciónY, 0);
+        cabeza.Entity.Transform.Rotation = Quaternion.RotationYawPitchRoll(0, rotaciónY, 0);
     }
 
     private void Saltar()

@@ -3,11 +3,11 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Bozobaralika;
-using static Constantes;
 
 public class ControladorJugador : SyncScript
 {
     public CharacterComponent cuerpo;
+    public TransformComponent cabeza;
     public CameraComponent cámara;
 
     public ControladorMovimiento movimiento;
@@ -21,8 +21,8 @@ public class ControladorJugador : SyncScript
         vidaMax = 100;
         vida = vidaMax;
 
-        movimiento.Iniciar(cuerpo, cámara);
-        armas.Iniciar(movimiento, cámara);
+        movimiento.Iniciar(cuerpo, cabeza);
+        armas.Iniciar(movimiento, cabeza, cámara);
 
         // Debug
         Input.LockMousePosition(true);
