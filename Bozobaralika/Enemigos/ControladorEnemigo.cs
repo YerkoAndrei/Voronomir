@@ -1,4 +1,5 @@
 ﻿using Stride.Engine;
+using Stride.Physics;
 
 namespace Bozobaralika;
 using static Constantes;
@@ -6,6 +7,7 @@ using static Constantes;
 public class ControladorEnemigo : SyncScript
 {
     public Enemigos enemigo;
+    public CharacterComponent cuerpo;
 
     private float vida;
 
@@ -63,6 +65,7 @@ public class ControladorEnemigo : SyncScript
 
     private void Morir()
     {
-
+        cuerpo.Enabled = false;
+        Entity.Scene.Entities.Remove(Entity);
     }
 }
