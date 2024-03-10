@@ -7,12 +7,12 @@ namespace Bozobaralika;
 
 public class ControladorMovimiento : SyncScript
 {
-
     private CharacterComponent cuerpo;
     private TransformComponent cabeza;
 
     // Movimiento
     private bool detención;
+    private bool bloqueo;
     private bool caminando;
     private float multiplicadorVelocidad;
     private Vector3 movimiento;
@@ -91,11 +91,14 @@ public class ControladorMovimiento : SyncScript
         }
 
         // Movimiento
-        movimiento = Vector3.Transform(movimiento, cuerpo.Orientation);
-        movimiento.Y = 0;
+        if(!bloqueo)
+        {
+            movimiento = Vector3.Transform(movimiento, cuerpo.Orientation);
+            movimiento.Y = 0;
 
-        movimiento.Normalize();
-        cuerpo.SetVelocity(movimiento * 10 * multiplicadorVelocidad * aceleración);
+            movimiento.Normalize();
+            cuerpo.SetVelocity(movimiento * 10 * multiplicadorVelocidad * aceleración);
+        }
 
         // Rotación
         rotaciónX -= Input.MouseDelta.X * sensibilidad;
@@ -112,7 +115,7 @@ public class ControladorMovimiento : SyncScript
 
     private void Saltar()
     {
-        if(cuerpo.IsGrounded)
+        if(cuerpo.IsGrounded && !bloqueo)
             cuerpo.Jump();
     }
 
@@ -137,9 +140,21 @@ public class ControladorMovimiento : SyncScript
         return 1;
     }
 
+    public bool ObtenerEnSuelo()
+    {
+        return cuerpo.IsGrounded;
+    }
+
     public void DetenerMovimiento()
     {
         detención = true;
+    }
+
+    public void Bloquear(bool bloquear)
+    {
+        detención = true;
+        bloqueo = bloquear;
+        cuerpo.SetVelocity(Vector3.Zero);
     }
 
     public void CambiarSensiblidad(bool reducir)

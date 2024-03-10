@@ -30,6 +30,7 @@ public class ControladorArmas : SyncScript
     private InterfazJuego interfaz;
 
     private Armas armaActual;
+    private bool bloqueo;
     private float dañoMínimo;
     private float dañoMáximo;
 
@@ -76,6 +77,9 @@ public class ControladorArmas : SyncScript
 
     public override void Update()
     {
+        if (bloqueo)
+            return;
+
         // Disparo general
         if (Input.IsMouseButtonPressed(MouseButton.Left))
         {
@@ -108,10 +112,6 @@ public class ControladorArmas : SyncScript
 
         if (Input.IsMouseButtonReleased(MouseButton.Right) && armaActual == Armas.rifle)
             AcercarMira(false);
-
-        // Cura
-        if (Input.IsKeyPressed(Keys.F))
-            Curar();
 
         // Cambio armas
         if (Input.IsKeyPressed(Keys.D1) || Input.IsKeyPressed(Keys.NumPad1))
@@ -299,11 +299,6 @@ public class ControladorArmas : SyncScript
         }
     }
 
-    private void Curar()
-    {
-
-    }
-
     private int ObtenerCantidadPerdigones()
     {
         // PENDIENTE: mejoras
@@ -451,6 +446,11 @@ public class ControladorArmas : SyncScript
         modeloEscopeta.Entity.Get<ModelComponent>().Enabled = false;
         modeloMetralleta.Entity.Get<ModelComponent>().Enabled = false;
         modeloRife.Entity.Get<ModelComponent>().Enabled = false;
+    }
+
+    public void Bloquear(bool bloquear)
+    {
+        bloqueo = bloquear;
     }
 
     private async void AnimarCambioArma(TransformComponent entra, TransformComponent sale, ModelComponent modeloSale)
