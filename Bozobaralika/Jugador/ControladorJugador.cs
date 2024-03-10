@@ -32,7 +32,7 @@ public class ControladorJugador : SyncScript
     public override void Update()
     {
         // Debug
-        DebugText.Print(vida + "/" + vidaMax, new Int2(x: 20, y: 160));
+        DebugText.Print(vida + "/" + vidaMax, new Int2(x: 20, y: 140));
     }
 
     public void RecibirDaño(float daño)

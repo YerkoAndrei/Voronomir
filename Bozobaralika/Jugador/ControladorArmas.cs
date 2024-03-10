@@ -27,9 +27,14 @@ public class ControladorArmas : SyncScript
     private CameraComponent cámara;
 
     private Armas armaActual;
-    private float últimoDisparo;
     private float dañoMínimo;
     private float dañoMáximo;
+
+    private float últimoDisparoEspada;
+    private float últimoDisparoPistola;
+    private float últimoDisparoEscopeta;
+    private float últimoDisparoMetralleta;
+    private float últimoDisparoRifle;
 
     private bool cambiandoArma;
     private Vector3 posiciónEjes;
@@ -114,8 +119,7 @@ public class ControladorArmas : SyncScript
         DebugText.Print(armaActual.ToString(), new Int2(x: 20, y: 60));
         DebugText.Print(metralletaAtascada.ToString(), new Int2(x: 20, y: 80));
         DebugText.Print(tempoMetralleta.ToString(), new Int2(x: 20, y: 100));
-        DebugText.Print(últimoDisparo.ToString(), new Int2(x: 20, y: 120));
-        DebugText.Print(Game.UpdateTime.Total.TotalSeconds.ToString(), new Int2(x: 20, y: 140));
+        DebugText.Print(Game.UpdateTime.Total.TotalSeconds.ToString(), new Int2(x: 20, y: 120));
     }
 
     private void Disparar()
@@ -123,21 +127,39 @@ public class ControladorArmas : SyncScript
         if (cambiandoArma)
             return;
 
-        // Cadencia
-        var tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparo;
-        if ((float)Game.UpdateTime.Total.TotalSeconds < tiempoDisparo)
-            return;
-
         // Metralleta
         if (armaActual == Armas.metralleta && metralletaAtascada)
             return;
 
-        últimoDisparo = (float)Game.UpdateTime.Total.TotalSeconds;
+        // Cadencia
+        var tiempoDisparo = 0f;
+        switch (armaActual)
+        {
+            case Armas.espada:
+                tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoEspada;
+                    break;
+            case Armas.pistola:
+                tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoPistola;
+                break;
+            case Armas.escopeta:
+                tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoEscopeta;
+                break;
+            case Armas.metralleta:
+                tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoMetralleta;
+                break;
+            case Armas.rifle:
+                tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoRifle;
+                break;
+        }
+        if ((float)Game.UpdateTime.Total.TotalSeconds < tiempoDisparo)
+            return;
+
         switch (armaActual)
         {
             case Armas.pistola:
                 CalcularRayo(0);
                 AnimarDisparo(ejePistola, 0.2f, 0.1f);
+                últimoDisparoPistola = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
             case Armas.escopeta:
                 movimiento.DetenerMovimiento();
@@ -146,15 +168,18 @@ public class ControladorArmas : SyncScript
                     CalcularRayo(0.25f);
                 }
                 AnimarDisparo(ejeEscopeta, 0.5f, 0.2f);
+                últimoDisparoEscopeta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
             case Armas.metralleta:
                 CalcularRayo(0.1f);
                 AnimarDisparo(ejeMetralleta, 0.15f, 0.05f);
+                últimoDisparoMetralleta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
             case Armas.rifle:
                 movimiento.DetenerMovimiento();
                 CalcularRayo(0);
                 AnimarDisparo(ejeRife, 2f, 0.5f);
+                últimoDisparoRifle = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
         }
     }
@@ -211,6 +236,11 @@ public class ControladorArmas : SyncScript
     private void Atacar()
     {
         if (cambiandoArma)
+            return;
+
+        // Cadencia
+        var tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoEspada;
+        if ((float)Game.UpdateTime.Total.TotalSeconds < tiempoDisparo)
             return;
 
         // Distancia máxima melé: 2
