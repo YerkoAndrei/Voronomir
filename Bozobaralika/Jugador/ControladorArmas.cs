@@ -12,11 +12,16 @@ public class ControladorArmas : SyncScript
 {
     public Prefab prefabMarca;
 
-    public TransformComponent espada;
-    public TransformComponent pistola;
-    public TransformComponent escopeta;
-    public TransformComponent metralleta;
-    public TransformComponent rife;
+    public ModelComponent modeloEspada;
+    public ModelComponent modeloPistola;
+    public ModelComponent modeloEscopeta;
+    public ModelComponent modeloMetralleta;
+    public ModelComponent modeloRife;
+    
+    public TransformComponent ejePistola;
+    public TransformComponent ejeEscopeta;
+    public TransformComponent ejeMetralleta;
+    public TransformComponent ejeRife;
 
     private ControladorMovimiento movimiento;
     private CameraComponent cámara;
@@ -25,6 +30,8 @@ public class ControladorArmas : SyncScript
     private float últimoDisparo;
     private float dañoMínimo;
     private float dañoMáximo;
+
+    private bool cambiandoArma;
 
     // Metralleta
     private bool metralletaAtascada;
@@ -44,8 +51,11 @@ public class ControladorArmas : SyncScript
         tiempoAtascamientoMetralleta = 2f;
         tempoMetralleta = tiempoAtascamientoMetralleta;
 
+        // Arma por defecto
         ApagarArmas();
-        CambiarArma(Armas.pistola);
+        armaActual = Armas.pistola;
+        modeloEspada.Entity.Get<ModelComponent>().Enabled = true;
+        modeloPistola.Entity.Get<ModelComponent>().Enabled = true;
     }
 
     public override void Update()
@@ -107,6 +117,9 @@ public class ControladorArmas : SyncScript
 
     private void Disparar()
     {
+        if (cambiandoArma)
+            return;
+
         // Cadencia
         var tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparo;
         if ((float)Game.UpdateTime.Total.TotalSeconds < tiempoDisparo)
@@ -190,6 +203,9 @@ public class ControladorArmas : SyncScript
 
     private void Atacar()
     {
+        if (cambiandoArma)
+            return;
+
         // Distancia máxima melé: 2
         var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector +
                         cámara.Entity.Transform.WorldMatrix.Forward * 2;
@@ -309,33 +325,90 @@ public class ControladorArmas : SyncScript
 
     private void CambiarArma(Armas nuevaArma)
     {
-        ApagarArmas();
-        armaActual = nuevaArma;
+        if (cambiandoArma || nuevaArma == armaActual)
+            return;
 
+        var armaSale = ejePistola;
+        var modeloSale = modeloPistola;
         switch (armaActual)
         {
             case Armas.pistola:
-                espada.Entity.Get<ModelComponent>().Enabled = true;
-                pistola.Entity.Get<ModelComponent>().Enabled = true;
+                armaSale = ejePistola;
+                modeloSale = modeloPistola;
                 break;
             case Armas.escopeta:
-                escopeta.Entity.Get<ModelComponent>().Enabled = true;
+                armaSale = ejeEscopeta;
+                modeloSale = modeloEscopeta;
                 break;
             case Armas.metralleta:
-                metralleta.Entity.Get<ModelComponent>().Enabled = true;
+                armaSale = ejeMetralleta;
+                modeloSale = modeloMetralleta;
                 break;
             case Armas.rifle:
-                rife.Entity.Get<ModelComponent>().Enabled = true;
+                armaSale = ejeRife;
+                modeloSale = modeloRife;
+                break;
+        }
+
+        armaActual = nuevaArma;
+        switch (armaActual)
+        {
+            case Armas.pistola:
+                modeloEspada.Entity.Get<ModelComponent>().Enabled = true;
+                modeloPistola.Entity.Get<ModelComponent>().Enabled = true;
+                AnimarArmas(ejePistola, armaSale, modeloSale);
+                break;
+            case Armas.escopeta:
+                modeloEscopeta.Entity.Get<ModelComponent>().Enabled = true;
+                AnimarArmas(ejeEscopeta, armaSale, modeloSale);
+                break;
+            case Armas.metralleta:
+                modeloMetralleta.Entity.Get<ModelComponent>().Enabled = true;
+                AnimarArmas(ejeMetralleta, armaSale, modeloSale);
+                break;
+            case Armas.rifle:
+                modeloRife.Entity.Get<ModelComponent>().Enabled = true;
+                AnimarArmas(ejeRife, armaSale, modeloSale);
                 break;
         }
     }
 
     private void ApagarArmas()
     {
-        espada.Entity.Get<ModelComponent>().Enabled = false;
-        pistola.Entity.Get<ModelComponent>().Enabled = false;
-        escopeta.Entity.Get<ModelComponent>().Enabled = false;
-        metralleta.Entity.Get<ModelComponent>().Enabled = false;
-        rife.Entity.Get<ModelComponent>().Enabled = false;
+        modeloEspada.Entity.Get<ModelComponent>().Enabled = false;
+        modeloPistola.Entity.Get<ModelComponent>().Enabled = false;
+        modeloEscopeta.Entity.Get<ModelComponent>().Enabled = false;
+        modeloMetralleta.Entity.Get<ModelComponent>().Enabled = false;
+        modeloRife.Entity.Get<ModelComponent>().Enabled = false;
+    }
+
+    private async void AnimarArmas(TransformComponent entra, TransformComponent sale, ModelComponent modeloSale)
+    {
+        cambiandoArma = true;
+
+        var rotaciónCentro = Quaternion.Identity;
+        var rotaciónEntra = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-90), 0, 0);
+        var rotaciónSale = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(90), 0, 0);
+
+        float duración = 0.1f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+
+            entra.Rotation = Quaternion.Lerp(rotaciónEntra, rotaciónCentro, tiempo);
+            sale.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+        
+        cambiandoArma = false;
+        modeloSale.Entity.Get<ModelComponent>().Enabled = false;
+
+        if(modeloSale == modeloPistola)
+            modeloEspada.Entity.Get<ModelComponent>().Enabled = false;
     }
 }
