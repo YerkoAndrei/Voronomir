@@ -52,9 +52,9 @@ public class ControladorMovimiento : SyncScript
             Saltar();
 
         // Caminar
-        if (Input.IsKeyDown(Keys.LeftCtrl) || Input.IsKeyDown(Keys.RightCtrl))
+        if (Input.IsKeyDown(Keys.LeftShift) || Input.IsKeyDown(Keys.RightShift))
             Caminar();
-        if (Input.IsKeyReleased(Keys.LeftCtrl) || Input.IsKeyReleased(Keys.RightCtrl))
+        if (Input.IsKeyReleased(Keys.LeftShift) || Input.IsKeyReleased(Keys.RightShift))
             DesactivarCaminar();
 
         // Debug
