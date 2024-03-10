@@ -47,14 +47,15 @@ Hierarchy:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 63dd9eef-ba83-4ac2-9b82-4bf6a7670c54
                     aca0345ca9e8bfeaea36bf431d80705a: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: 9c8b7eb6-a941-48c5-96b0-494ced9be529
+                        enemigo: "meléLigero"
         -   Entity:
                 Id: 3ae95755-c197-4240-9695-d1e550076239
                 Name: Metralleta
                 Components:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 9c8cd132-4d00-4b14-8ba7-704651c1b1ac
-                        Position: {X: 0.3, Y: -0.5, Z: -0.5}
-                        Rotation: {X: 0.0, Y: 0.17364816, Z: 0.0, W: 0.9848078}
+                        Position: {X: 0.0, Y: -0.5, Z: -0.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.1, Y: 0.1, Z: 0.99999994}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent

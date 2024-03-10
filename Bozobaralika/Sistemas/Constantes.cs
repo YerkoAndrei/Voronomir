@@ -27,6 +27,27 @@ public static class Constantes
         rifle
     }
 
+    public enum Enemigos
+    {
+        meléLigero,     // Esqueleto
+        meléMediano,    // Lancero
+        meléPesado,     // Escudo
+        rangoLigero,    // Cubo
+        rangoMediano,   // Babosa
+        rangoPesado,    // Araña
+
+        especialLigero, // Motoquero
+        especialPesado, // Calavera
+
+        minijefeMelé,   // Minotauro
+        minijefeRango,  // Dinosaurio
+    }
+
+    public enum Jefes
+    {
+
+    }
+
     // Configuración
     public enum TipoCurva
     {
