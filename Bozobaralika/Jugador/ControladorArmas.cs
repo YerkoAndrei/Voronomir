@@ -32,6 +32,7 @@ public class ControladorArmas : SyncScript
     private float dañoMáximo;
 
     private bool cambiandoArma;
+    private Vector3 posiciónEjes;
 
     // Metralleta
     private bool metralletaAtascada;
@@ -46,6 +47,8 @@ public class ControladorArmas : SyncScript
 
         dañoMínimo = 1f;
         dañoMáximo = 60f;
+
+        posiciónEjes = new Vector3(0, -0.5f, 0);
 
         tiempoMaxMetralleta = 4f;
         tiempoAtascamientoMetralleta = 2f;
@@ -134,6 +137,7 @@ public class ControladorArmas : SyncScript
         {
             case Armas.pistola:
                 CalcularRayo(0);
+                AnimarDisparo(ejePistola, 0.2f, 0.1f);
                 break;
             case Armas.escopeta:
                 movimiento.DetenerMovimiento();
@@ -141,13 +145,16 @@ public class ControladorArmas : SyncScript
                 {
                     CalcularRayo(0.25f);
                 }
+                AnimarDisparo(ejeEscopeta, 0.5f, 0.2f);
                 break;
             case Armas.metralleta:
                 CalcularRayo(0.1f);
+                AnimarDisparo(ejeMetralleta, 0.15f, 0.05f);
                 break;
             case Armas.rifle:
                 movimiento.DetenerMovimiento();
                 CalcularRayo(0);
+                AnimarDisparo(ejeRife, 2f, 0.5f);
                 break;
         }
     }
@@ -311,7 +318,7 @@ public class ControladorArmas : SyncScript
             case Armas.espada:
                 return 0.2f;
             case Armas.pistola:
-                return 0.1f;
+                return 0.2f;
             case Armas.escopeta:
                 return 0.8f;
             case Armas.metralleta:
@@ -356,19 +363,19 @@ public class ControladorArmas : SyncScript
             case Armas.pistola:
                 modeloEspada.Entity.Get<ModelComponent>().Enabled = true;
                 modeloPistola.Entity.Get<ModelComponent>().Enabled = true;
-                AnimarArmas(ejePistola, armaSale, modeloSale);
+                AnimarCambioArma(ejePistola, armaSale, modeloSale);
                 break;
             case Armas.escopeta:
                 modeloEscopeta.Entity.Get<ModelComponent>().Enabled = true;
-                AnimarArmas(ejeEscopeta, armaSale, modeloSale);
+                AnimarCambioArma(ejeEscopeta, armaSale, modeloSale);
                 break;
             case Armas.metralleta:
                 modeloMetralleta.Entity.Get<ModelComponent>().Enabled = true;
-                AnimarArmas(ejeMetralleta, armaSale, modeloSale);
+                AnimarCambioArma(ejeMetralleta, armaSale, modeloSale);
                 break;
             case Armas.rifle:
                 modeloRife.Entity.Get<ModelComponent>().Enabled = true;
-                AnimarArmas(ejeRife, armaSale, modeloSale);
+                AnimarCambioArma(ejeRife, armaSale, modeloSale);
                 break;
         }
     }
@@ -382,7 +389,7 @@ public class ControladorArmas : SyncScript
         modeloRife.Entity.Get<ModelComponent>().Enabled = false;
     }
 
-    private async void AnimarArmas(TransformComponent entra, TransformComponent sale, ModelComponent modeloSale)
+    private async void AnimarCambioArma(TransformComponent entra, TransformComponent sale, ModelComponent modeloSale)
     {
         cambiandoArma = true;
 
@@ -410,5 +417,26 @@ public class ControladorArmas : SyncScript
 
         if(modeloSale == modeloPistola)
             modeloEspada.Entity.Get<ModelComponent>().Enabled = false;
+    }
+
+    private async void AnimarDisparo(TransformComponent arma, float retroceso, float duración)
+    {
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        // Posición rápida
+        var posiciónDisparo = posiciónEjes + new Vector3(0, 0, retroceso);
+        arma.Position = posiciónDisparo;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+            arma.Position = Vector3.Lerp(posiciónDisparo, posiciónEjes, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+
+        arma.Position = posiciónEjes;
     }
 }
