@@ -60,7 +60,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 63dd9eef-ba83-4ac2-9b82-4bf6a7670c54
-                    aca0345ca9e8bfeaea36bf431d80705a: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                    8b666d4dff59c580a419a90a709f76e4: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: 9c8b7eb6-a941-48c5-96b0-494ced9be529
                         enemigo: "meléLigero"
                         cuerpo: ref!! 74c9977b-d672-4514-98eb-5990b74351e4
@@ -94,7 +94,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! aafe6013-256d-40de-bbc1-cb6667c58902
-                    aca0345ca9e8bfeaea36bf431d80705a: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                    16e4f19a891b3f713ec307e025a37492: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: bb58a754-ee3a-460c-89c7-99859f40ac93
                         enemigo: "meléLigero"
                         cuerpo: ref!! 51a237a6-22b5-45eb-900e-3e4d5d91d6f6
@@ -170,7 +170,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! fe72f515-f064-4808-9935-bf79466de973
-                    aca0345ca9e8bfeaea36bf431d80705a: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                    45657a7c02a9a2688c75199ea8dfc8a3: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: ebfb1423-21e2-4176-a435-cac5c1c2852b
                         enemigo: "meléLigero"
                         cuerpo: ref!! efdccfd3-ea26-4910-b082-c36b93b28b0b
@@ -204,10 +204,35 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 8464a1d0-2d53-4e3d-bd87-c43aa5610d7c
-                    aca0345ca9e8bfeaea36bf431d80705a: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                    3200dc6040b4d0f1ddd6a9ba3b5044f9: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: 35bda781-0584-4eec-b99d-cc32ee5659bb
                         enemigo: "meléLigero"
                         cuerpo: ref!! 909bc64c-49c7-4b6c-9733-e1a837e3580f
+        -   Entity:
+                Id: 50dd94d4-010c-458e-aa47-1c44e03e0ae6
+                Name: Espada
+                Components:
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: f8da5fff-2637-4fbf-a5da-7cc4fd74113d
+                        Position: {X: -0.3, Y: 0.0, Z: -0.8}
+                        Rotation: {X: 0.25488698, Y: -0.16773123, Z: 0.04494346, W: 0.95125127}
+                        Scale: {X: 0.009999999, Y: 0.01, Z: 2.0}
+                        Children: {}
+                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
+                        Id: c3f3e014-10d4-4345-b491-72cfe4c5a54b
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+        -   Entity:
+                Id: 524b2fce-11fa-4bb8-83ce-f536073d8cf4
+                Name: EjeEspada
+                Components:
+                    2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
+                        Id: 0581adaa-618c-4926-bd0c-773cfa32ddae
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            e16dfa3055164ef63c7c03ca1a895a74: ref!! f8da5fff-2637-4fbf-a5da-7cc4fd74113d
         -   Entity:
                 Id: 52cd02bd-3165-4aa6-8d1e-7538541119a3
                 Name: Skybox
@@ -304,20 +329,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             03cac127b85e429c2515bdcea74b1c68: ref!! fe02ed36-e4ce-4251-9332-6401627e3d29
-        -   Entity:
-                Id: 8524c338-3ee6-43c8-89d9-ec0c935589e9
-                Name: Espada
-                Components:
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: 5da32500-ce1f-4303-a865-e2392f5b06c3
-                        Position: {X: -0.3, Y: 0.0, Z: -0.8}
-                        Rotation: {X: 0.25488698, Y: -0.16773123, Z: 0.04494346, W: 0.95125127}
-                        Scale: {X: 0.009999999, Y: 0.01, Z: 2.0}
-                        Children: {}
-                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
-                        Id: 46e237e0-001d-4825-8965-9c7d31a089b4
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
-                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 8b42ea7d-752a-4920-97e2-1646ec7b9189
@@ -420,7 +431,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            e16dfa3055164ef63c7c03ca1a895a74: ref!! 5da32500-ce1f-4303-a865-e2392f5b06c3
+                            a9c1fbf603f988b31fa7bb41abdf9296: ref!! 0581adaa-618c-4926-bd0c-773cfa32ddae
                             73b4929b4bc7273000541b77e255741d: ref!! e69d0818-85b3-44b5-a0f1-cfd79bb09854
         -   Entity:
                 Id: cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
@@ -512,7 +523,7 @@ Hierarchy:
                                 Length: 1.5
                                 LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    cbd582e32e52be922fefd2caf76c4d6b: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
+                    51e7d48363aedad8f548bd717eb0b6b5: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
                         Id: c46f69dc-db00-454e-8f32-19c17e5759b2
                         cuerpo: ref!! 3a532fb5-e650-4150-b3c5-14f486d9073f
                         "cámara": ref!! fea3501f-1ad1-4cb3-baef-4ab0eb026846
@@ -525,18 +536,19 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             4f555758721bbf121dfb821111b51961: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
-                    394fdee386130a03b3f350550ce7b03a: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
+                    0517a7cf5c5cd381807f54e8c748a550: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
                         Id: 57ced855-0f8a-4092-9133-ae41e2e76b87
                         Priority: 10
                         sensibilidad: 1.0
-                    9f39d0a5dab3080bdcadb0dbfd0032a4: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
+                    921059f954f6e21e3aabe7ad0530d8ed: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: cf114505-16b9-4712-a010-c2ba1ce114e1
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/MarcaBala
-                        modeloEspada: ref!! 46e237e0-001d-4825-8965-9c7d31a089b4
+                        modeloEspada: ref!! c3f3e014-10d4-4345-b491-72cfe4c5a54b
                         modeloPistola: ref!! 9e51d45a-9d04-4092-b1b7-cabdba4365e9
                         modeloEscopeta: ref!! 2f860ba4-41c4-48d5-8d5f-9459560589d7
                         modeloMetralleta: ref!! 7f8bc918-bb85-4a3e-83a3-06076b368917
                         modeloRife: ref!! 5c201108-0f07-4202-a233-3abfcab58dd1
+                        ejeEspada: ref!! 0581adaa-618c-4926-bd0c-773cfa32ddae
                         ejePistola: ref!! 861d6472-473d-4c50-9156-01ccc4b6e378
                         ejeEscopeta: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
                         ejeMetralleta: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214

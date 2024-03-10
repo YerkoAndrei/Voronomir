@@ -17,7 +17,8 @@ public class ControladorArmas : SyncScript
     public ModelComponent modeloEscopeta;
     public ModelComponent modeloMetralleta;
     public ModelComponent modeloRife;
-    
+
+    public TransformComponent ejeEspada;
     public TransformComponent ejePistola;
     public TransformComponent ejeEscopeta;
     public TransformComponent ejeMetralleta;
@@ -239,9 +240,12 @@ public class ControladorArmas : SyncScript
             return;
 
         // Cadencia
-        var tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoEspada;
+        var tiempoDisparo = ObtenerCadencia(Armas.espada) + últimoDisparoEspada;
         if ((float)Game.UpdateTime.Total.TotalSeconds < tiempoDisparo)
             return;
+
+        últimoDisparoEspada = (float)Game.UpdateTime.Total.TotalSeconds;
+        AnimarAtaque();
 
         // Distancia máxima melé: 2
         var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector +
@@ -468,5 +472,27 @@ public class ControladorArmas : SyncScript
         }
 
         arma.Position = posiciónEjes;
+    }
+
+    private async void AnimarAtaque()
+    {
+        float duración = 0.1f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        // Rotación rápida
+        var rotaciónAtaque = Quaternion.RotationYawPitchRoll(0, MathUtil.DegreesToRadians(-40), 0);
+        ejeEspada.Rotation = rotaciónAtaque;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+            ejeEspada.Rotation = Quaternion.Lerp(rotaciónAtaque, Quaternion.Identity, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+        
+        ejeEspada.Rotation = Quaternion.Identity;
     }
 }
