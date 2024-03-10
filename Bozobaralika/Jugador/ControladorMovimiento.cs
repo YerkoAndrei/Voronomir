@@ -76,7 +76,7 @@ public class ControladorMovimiento : SyncScript
             movimiento += Vector3.UnitX;
 
         // Aceleración
-        if (movimiento == Vector3.Zero || detención || caminando)
+        if (movimiento == Vector3.Zero || detención || caminando || cuerpo.Collisions.Count > 1)
         {
             tempoAceleración = 0;
             aceleración = minAceleración;
