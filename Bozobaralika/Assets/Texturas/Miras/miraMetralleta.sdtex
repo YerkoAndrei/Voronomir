@@ -1,0 +1,7 @@
+!Texture
+Id: feb5202a-462f-4115-8031-7a28a732b3d0
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file miraMetralleta.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

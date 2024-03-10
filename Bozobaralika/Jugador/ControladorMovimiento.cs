@@ -7,7 +7,6 @@ namespace Bozobaralika;
 
 public class ControladorMovimiento : SyncScript
 {
-    public float sensibilidad;
 
     private CharacterComponent cuerpo;
     private TransformComponent cabeza;
@@ -26,6 +25,7 @@ public class ControladorMovimiento : SyncScript
     private float aceleración;
 
     // Cursor
+    private float sensibilidad;
     private float rotaciónX;
     private float rotaciónY;
 
@@ -38,6 +38,7 @@ public class ControladorMovimiento : SyncScript
         maxAceleración = 1.5f;
         tiempoAceleración = 20f;
 
+        CambiarSensiblidad(false);
         multiplicadorVelocidad = ObtenerMultiplicadorVelocidad();
     }
 
@@ -139,5 +140,14 @@ public class ControladorMovimiento : SyncScript
     public void DetenerMovimiento()
     {
         detención = true;
+    }
+
+    public void CambiarSensiblidad(bool reducir)
+    {
+        // PENDIENTE: ajustes
+        if (reducir)
+            sensibilidad = 0.4f;
+        else
+            sensibilidad = 1f;
     }
 }

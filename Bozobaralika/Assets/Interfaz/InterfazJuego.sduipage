@@ -1,0 +1,97 @@
+!UIPageAsset
+Id: d8d2b8e8-b800-4e51-94a9-d59d5fb618bc
+SerializedVersion: {Stride: 2.1.0.1}
+Tags: []
+Design:
+    Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+Hierarchy:
+    RootParts:
+        - !Grid ref!! 266428cb-b9d3-4c47-94c2-2ba0bbc851f2
+    Parts:
+        -   UIElement: !Grid
+                Id: 266428cb-b9d3-4c47-94c2-2ba0bbc851f2
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                Children:
+                    765854fdc81c94fe90f7e3097e76552f: !Grid ref!! 49b75539-86e0-470d-911a-8690f66615b4
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
+                Id: 49b75539-86e0-470d-911a-8690f66615b4
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Miras
+                Children:
+                    6ff597e429e806994949c4de18d45aaa: !ImageElement ref!! 9dcfa9a3-ad60-491d-bb81-359506de19ba
+                    611464a46bf4be8ddfe8aeeb853c25ca: !ImageElement ref!! ad9d9f28-8a91-42d4-9074-6c62ccd28aa3
+                    98046954a4c112afb241308e71200511: !ImageElement ref!! 85d08406-1342-4f61-a088-e86ee449acd8
+                    6ed5a00e82f98e2cadc3b8895cb7fd20: !ImageElement ref!! 9cd2d46b-af16-4a8a-a534-5079740eb5eb
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 85d08406-1342-4f61-a088-e86ee449acd8
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 100.0
+                Height: 100.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: miraMetralleta
+                Source: !SpriteFromTexture
+                    Texture: feb5202a-462f-4115-8031-7a28a732b3d0:Texturas/Miras/miraMetralleta
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 0, G: 255, B: 0, A: 255}
+        -   UIElement: !ImageElement
+                Id: 9cd2d46b-af16-4a8a-a534-5079740eb5eb
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 700.0
+                Height: 700.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: miraRifle
+                Source: !SpriteFromTexture
+                    Texture: 3134df63-81f1-47aa-89e7-f161af2a9ac5:Texturas/Miras/miraRifle
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 0, G: 255, B: 0, A: 255}
+        -   UIElement: !ImageElement
+                Id: 9dcfa9a3-ad60-491d-bb81-359506de19ba
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 100.0
+                Height: 100.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: miraPistola
+                Source: !SpriteFromTexture
+                    Texture: 27f5f360-1f8f-40cc-a19a-728a67fe77b4:Texturas/Miras/miraPistola
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 0, G: 255, B: 0, A: 255}
+        -   UIElement: !ImageElement
+                Id: ad9d9f28-8a91-42d4-9074-6c62ccd28aa3
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 100.0
+                Height: 100.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: miraEscopeta
+                Source: !SpriteFromTexture
+                    Texture: 745c9413-b336-4886-b905-c1d82c3a53b4:Texturas/Miras/miraEscopeta
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 0, G: 255, B: 0, A: 255}

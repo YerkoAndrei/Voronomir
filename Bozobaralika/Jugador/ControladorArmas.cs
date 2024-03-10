@@ -27,6 +27,7 @@ public class ControladorArmas : SyncScript
     private ControladorMovimiento movimiento;
     private TransformComponent cabeza;
     private CameraComponent cámara;
+    private InterfazJuego interfaz;
 
     private Armas armaActual;
     private float dañoMínimo;
@@ -47,11 +48,12 @@ public class ControladorArmas : SyncScript
     private float tiempoMaxMetralleta;
     private float tiempoAtascamientoMetralleta;
 
-    public void Iniciar(ControladorMovimiento _movimiento, TransformComponent _cabeza, CameraComponent _cámara)
+    public void Iniciar(ControladorMovimiento _movimiento, TransformComponent _cabeza, CameraComponent _cámara, InterfazJuego _interfaz)
     {
         movimiento = _movimiento;
         cabeza = _cabeza;
         cámara = _cámara;
+        interfaz = _interfaz;
 
         dañoMínimo = 1f;
         dañoMáximo = 60f;
@@ -65,6 +67,7 @@ public class ControladorArmas : SyncScript
         // Arma por defecto
         ApagarArmas();
         armaActual = Armas.pistola;
+        interfaz.CambiarMira(armaActual);
         modeloEspada.Entity.Get<ModelComponent>().Enabled = true;
         modeloPistola.Entity.Get<ModelComponent>().Enabled = true;
     }
@@ -321,10 +324,14 @@ public class ControladorArmas : SyncScript
     private void AcercarMira(bool acercar)
     {
         // PENDIENTE: elegir FOV de opciones
-        if(acercar)
+        // PENDIENTE: animacioón
+        if (acercar)
             cámara.VerticalFieldOfView = 20;
         else
             cámara.VerticalFieldOfView = 80;
+
+        movimiento.CambiarSensiblidad(acercar);
+        interfaz.MostrarMiraRifle(acercar);
     }
 
     private float ObtenerDaño(Armas arma)
@@ -445,6 +452,7 @@ public class ControladorArmas : SyncScript
     private async void AnimarCambioArma(TransformComponent entra, TransformComponent sale, ModelComponent modeloSale)
     {
         cambiandoArma = true;
+        interfaz.ApagarMiras();
 
         var rotaciónCentro = Quaternion.Identity;
         var rotaciónEntra = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-90), 0, 0);
@@ -462,7 +470,9 @@ public class ControladorArmas : SyncScript
             sale.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
 
             // Espada / pistola
-            if (modeloSale == modeloPistola)
+            if (entra == ejePistola)
+                ejeEspada.Rotation = Quaternion.Lerp(rotaciónEntra, rotaciónCentro, tiempo);
+            else if (sale == ejePistola)
                 ejeEspada.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
@@ -470,7 +480,12 @@ public class ControladorArmas : SyncScript
         }
         
         cambiandoArma = false;
+        interfaz.CambiarMira(armaActual);
+
         modeloSale.Entity.Get<ModelComponent>().Enabled = false;
+
+        if (sale == ejePistola)
+            modeloEspada.Entity.Get<ModelComponent>().Enabled = false;
     }
 
     private async void AnimarDisparo(TransformComponent arma, float retroceso, float duración)

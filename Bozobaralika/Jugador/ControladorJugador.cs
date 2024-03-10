@@ -1,6 +1,7 @@
 ﻿using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
+using System.Linq;
 
 namespace Bozobaralika;
 
@@ -13,6 +14,7 @@ public class ControladorJugador : SyncScript
     public ControladorMovimiento movimiento;
     public ControladorArmas armas;
 
+    private InterfazJuego interfaz;
     private float vida;
     private float vidaMax;
 
@@ -21,8 +23,10 @@ public class ControladorJugador : SyncScript
         vidaMax = 100;
         vida = vidaMax;
 
+        interfaz = Entity.Scene.Entities.Where(o => o.Get<InterfazJuego>() != null).FirstOrDefault().Get<InterfazJuego>();
+
         movimiento.Iniciar(cuerpo, cabeza);
-        armas.Iniciar(movimiento, cabeza, cámara);
+        armas.Iniciar(movimiento, cabeza, cámara, interfaz);
 
         // Debug
         Input.LockMousePosition(true);

@@ -1,0 +1,7 @@
+!Texture
+Id: 27f5f360-1f8f-40cc-a19a-728a67fe77b4
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file miraPistola.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

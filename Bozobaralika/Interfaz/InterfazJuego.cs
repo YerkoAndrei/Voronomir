@@ -1,26 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Stride.Core.Mathematics;
-using Stride.Input;
+﻿using Stride.UI;
 using Stride.Engine;
+using Stride.UI.Controls;
 
-namespace Bozobaralika
+namespace Bozobaralika;
+using static Constantes;
+
+public class InterfazJuego : SyncScript
 {
-    public class InterfazJuego : SyncScript
+    private ImageElement miraPistola;
+    private ImageElement miraEscopeta;
+    private ImageElement miraMetralleta;
+    private ImageElement miraRifle;
+
+    public override void Start()
     {
-        // Declared public member fields and properties will show in the game studio
+        var página = Entity.Get<UIComponent>().Page.RootElement;
 
-        public override void Start()
-        {
-            // Initialization of the script.
-        }
+        miraPistola = página.FindVisualChildOfType<ImageElement>("miraPistola");
+        miraEscopeta = página.FindVisualChildOfType<ImageElement>("miraEscopeta");
+        miraMetralleta = página.FindVisualChildOfType<ImageElement>("miraMetralleta");
+        miraRifle = página.FindVisualChildOfType<ImageElement>("miraRifle");
 
-        public override void Update()
+        ApagarMiras();
+    }
+
+    public override void Update()
+    {
+
+    }
+
+    public void CambiarMira(Armas arma)
+    {
+        switch (arma)
         {
-            // Do stuff every new frame
+            case Armas.pistola:
+                miraPistola.Visibility = Visibility.Visible;
+                break;
+            case Armas.escopeta:
+                miraEscopeta.Visibility = Visibility.Visible;
+                break;
+            case Armas.metralleta:
+                miraMetralleta.Visibility = Visibility.Visible;
+                break;
+            case Armas.rifle:
+                break;
         }
+    }
+
+    public void MostrarMiraRifle(bool mostrar)
+    {
+        ApagarMiras();
+
+        if(mostrar)
+            miraRifle.Visibility = Visibility.Visible;
+        else
+            miraRifle.Visibility = Visibility.Hidden;
+    }
+
+    public void ApagarMiras()
+    {
+        miraPistola.Visibility = Visibility.Hidden;
+        miraEscopeta.Visibility = Visibility.Hidden;
+        miraMetralleta.Visibility = Visibility.Hidden;
+        miraRifle.Visibility = Visibility.Hidden;
     }
 }
