@@ -69,8 +69,15 @@ public class ControladorArmas : SyncScript
             EnfriarMetralleta();
 
         // Melé
-        if (Input.IsKeyPressed(Keys.E) || Input.IsMouseButtonPressed(MouseButton.Right))
+        if ((Input.IsKeyPressed(Keys.E) || Input.IsMouseButtonPressed(MouseButton.Right)) && armaActual == Armas.pistola)
             Atacar();
+
+        // Rifle
+        if (Input.IsMouseButtonPressed(MouseButton.Right) && armaActual == Armas.rifle)
+            AcercarMira(true);
+
+        if (Input.IsMouseButtonReleased(MouseButton.Right) && armaActual == Armas.rifle)
+            AcercarMira(false);
 
         // Cura
         if (Input.IsKeyPressed(Keys.F))
@@ -212,6 +219,34 @@ public class ControladorArmas : SyncScript
 
     }
 
+    private int ObtenerCantidadPerdigones()
+    {
+        // PENDIENTE: mejoras
+        return 20;
+    }
+
+    private void EnfriarMetralleta()
+    {
+        if (tempoMetralleta < tiempoMaxMetralleta)
+            tempoMetralleta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+    }
+
+    private async void AtascarMetralleta()
+    {
+        metralletaAtascada = true;
+        await Task.Delay((int)(tiempoAtascamientoMetralleta * 1000));
+        tempoMetralleta = tiempoMaxMetralleta;
+    }
+
+    private void AcercarMira(bool acercar)
+    {
+        // PENDIENTE: elegir FOV de opciones
+        if(acercar)
+            cámara.VerticalFieldOfView = 20;
+        else
+            cámara.VerticalFieldOfView = 80;
+    }
+
     private float ObtenerDaño(Armas arma)
     {
         switch (arma)
@@ -256,7 +291,7 @@ public class ControladorArmas : SyncScript
             case Armas.espada:
                 return 0.2f;
             case Armas.pistola:
-                return 0.2f;
+                return 0.1f;
             case Armas.escopeta:
                 return 0.8f;
             case Armas.metralleta:
@@ -266,25 +301,6 @@ public class ControladorArmas : SyncScript
             default:
                 return 0;
         }
-    }
-
-    private int ObtenerCantidadPerdigones()
-    {
-        // PENDIENTE: mejoras
-        return 20;
-    }
-
-    private void EnfriarMetralleta()
-    {
-        if (tempoMetralleta < tiempoMaxMetralleta)
-            tempoMetralleta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-    }
-
-    private async void AtascarMetralleta()
-    {
-        metralletaAtascada = true;
-        await Task.Delay((int)(tiempoAtascamientoMetralleta * 1000));
-        tempoMetralleta = tiempoMaxMetralleta;
     }
 
     private void CambiarArma(Armas nuevaArma)
@@ -302,7 +318,6 @@ public class ControladorArmas : SyncScript
                 escopeta.Entity.Get<ModelComponent>().Enabled = true;
                 break;
             case Armas.metralleta:
-                espada.Entity.Get<ModelComponent>().Enabled = true;
                 metralleta.Entity.Get<ModelComponent>().Enabled = true;
                 break;
             case Armas.rifle:
