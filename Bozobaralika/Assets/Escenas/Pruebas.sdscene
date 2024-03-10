@@ -13,7 +13,40 @@ Hierarchy:
         - ref!! 5806e859-d7ec-42d4-ac78-edfc026317d2
         - ref!! 8b42ea7d-752a-4920-97e2-1646ec7b9189
         - ref!! dd82e74f-617b-481e-bb36-34773b64d421
+        - ref!! 01a3360a-7f24-41b6-9f84-af8196ae98d1
     Parts:
+        -   Folder: null
+            Entity:
+                Id: 01a3360a-7f24-41b6-9f84-af8196ae98d1
+                Name: Enemigo
+                Components:
+                    a60cbff727993b50e85c8863a7d8a974: !CharacterComponent
+                        Id: 74c9977b-d672-4514-98eb-5990b74351e4
+                        CollisionGroup: KinematicFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 10.0
+                        Gravity: {X: 0.0, Y: -25.0, Z: 0.0}
+                        ColliderShapes:
+                            ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
+                                Length: 1.5
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
+                        Id: 7f8abd7c-3f6f-44a8-9a41-e132c6b8d12d
+                        Position: {X: 2.1946316, Y: 0.0, Z: -1.3296795}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 63dd9eef-ba83-4ac2-9b82-4bf6a7670c54
+                    aca0345ca9e8bfeaea36bf431d80705a: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                        Id: 9c8b7eb6-a941-48c5-96b0-494ced9be529
         -   Entity:
                 Id: 3ae95755-c197-4240-9695-d1e550076239
                 Name: Metralleta
@@ -159,6 +192,20 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: b8b825d3-16a6-410e-9bfd-e4400a802454
+                Name: Sphere
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: 63dd9eef-ba83-4ac2-9b82-4bf6a7670c54
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 2.0, Z: 0.51}
+                        Children: {}
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: a8c572e1-16df-433f-8bde-39498bb8d6ad
+                        Model: 3de091c5-25d4-4c12-8e62-18cbe4432ced:Sphere
+                        Materials: {}
         -   Entity:
                 Id: ba60ce79-3157-4571-a2c4-6f7626c25993
                 Name: Sphere

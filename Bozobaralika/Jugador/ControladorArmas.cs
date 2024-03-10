@@ -22,6 +22,8 @@ public class ControladorArmas : SyncScript
 
     private Armas armaActual;
     private float últimoDisparo;
+    private float dañoMínimo;
+    private float dañoMáximo;
 
     // Metralleta
     private bool metralletaAtascada;
@@ -31,6 +33,9 @@ public class ControladorArmas : SyncScript
 
     public override void Start()
     {
+        dañoMínimo = 1f;
+        dañoMáximo = 60f;
+
         tiempoMaxMetralleta = 4f;
         tiempoAtascamientoMetralleta = 2f;
         tempoMetralleta = tiempoAtascamientoMetralleta;
@@ -140,18 +145,35 @@ public class ControladorArmas : SyncScript
 
         if (resultado.Succeeded && resultado.Collider != null)
         {
-            // PENDIENTE: dañor por distancia, rifle al reves
+            var enemigo = resultado.Collider.Entity.Get<ControladorEnemigo>();
+            if (enemigo == null)
+            {
+                // PENDIENTE: usar piscina
+                // PENDIENTE: efecto
+                // Marca balazo
+                var marca = prefabMarca.Instantiate()[0];
+                marca.Transform.Position = resultado.Point;
+                Entity.Scene.Entities.Add(marca);
+                return;
+            }
+
+            // PENDIENTE: efecto
             // Daño segun distancia
             var distancia = Vector3.Distance(cámara.Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
-            var dañoFinal = ObtenerDaño(armaActual);// * distancia;
+            var reducción = 0f;
+            if(distancia > ObtenerDistanciaMáxima(armaActual))
+                reducción = (distancia - ObtenerDistanciaMáxima(armaActual)) * 0.5f;
 
-            //resultado.Collider.Entity.Get<Enemigo>().Dañar(dañoFinal);
+            // Rifle daña según distancia
+            var dañoFinal = 0f;
+            if(armaActual != Armas.rifle)
+                dañoFinal = ObtenerDaño(armaActual) - reducción;
+            else
+                dañoFinal = ObtenerDaño(armaActual) + reducción;
 
-            // PENDIENTE: usar piscina
-            // Marca balazo
-            var marca = prefabMarca.Instantiate()[0];
-            marca.Transform.Position = resultado.Point;
-            Entity.Scene.Entities.Add(marca);
+            // Daña enemigo
+            dañoFinal = MathUtil.Clamp(dañoFinal, dañoMínimo, dañoMáximo);
+            enemigo.RecibirDaño(dañoFinal);
         }
     }
 
@@ -167,13 +189,21 @@ public class ControladorArmas : SyncScript
 
         if (resultado.Succeeded && resultado.Collider != null)
         {
-            var dañoFinal = ObtenerDaño(Armas.espada);
-            //resultado.Collider.Entity.Get<Enemigo>().Dañar(dañoFinal);
+            var enemigo = resultado.Collider.Entity.Get<ControladorEnemigo>();
+            if (enemigo == null)
+            {
+                // PENDIENTE: usar piscina
+                // PENDIENTE: efecto
+                // Marca balazo
+                var marca = prefabMarca.Instantiate()[0];
+                marca.Transform.Position = resultado.Point;
+                Entity.Scene.Entities.Add(marca);
+                return;
+            }
 
-            // Marca ataque
-            var marca = prefabMarca.Instantiate()[0];
-            marca.Transform.Position = resultado.Point;
-            Entity.Scene.Entities.Add(marca);
+            // PENDIENTE: efecto
+            // Daña enemigo
+            enemigo.RecibirDaño(ObtenerDistanciaMáxima(Armas.espada));
         }
     }
 
@@ -184,7 +214,7 @@ public class ControladorArmas : SyncScript
 
     private float ObtenerDaño(Armas arma)
     {
-        switch (armaActual)
+        switch (arma)
         {
             case Armas.espada:
                 return 40;
@@ -198,6 +228,24 @@ public class ControladorArmas : SyncScript
                 return 40;
             default:
                 return 0;
+        }
+    }
+
+    private float ObtenerDistanciaMáxima(Armas arma)
+    {
+        switch (arma)
+        {
+            default:
+            case Armas.espada:
+                return 0;
+            case Armas.pistola:
+                return 10;
+            case Armas.escopeta:
+                return 5;
+            case Armas.metralleta:
+                return 10;
+            case Armas.rifle:
+                return 10;
         }
     }
 
@@ -223,7 +271,7 @@ public class ControladorArmas : SyncScript
     private int ObtenerCantidadPerdigones()
     {
         // PENDIENTE: mejoras
-        return 10;
+        return 20;
     }
 
     private void EnfriarMetralleta()

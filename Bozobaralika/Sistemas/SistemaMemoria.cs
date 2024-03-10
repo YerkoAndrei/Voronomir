@@ -14,7 +14,6 @@ public class SistemaMemoria : StartupScript
     private static string desarrollador = "YerkoAndrei";
     private static string producto = "Bozobaralika";
 
-    private static string archivoFortalezas = "Fortalezas";
     private static string archivoConfiguración = "Configuración";
 
     private static string rutaConfiguración;
