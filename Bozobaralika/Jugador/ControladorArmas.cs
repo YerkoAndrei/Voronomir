@@ -210,7 +210,7 @@ public class ControladorArmas : SyncScript
 
             // PENDIENTE: efecto
             // Daña enemigo
-            enemigo.RecibirDaño(ObtenerDistanciaMáxima(Armas.espada));
+            enemigo.RecibirDaño(ObtenerDaño(Armas.espada));
         }
     }
 
