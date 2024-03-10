@@ -1,0 +1,7 @@
+!Texture
+Id: e99dfabe-bc63-4d5f-b04f-e132129de808
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file imgEscopeta.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

@@ -1,0 +1,7 @@
+!Texture
+Id: 24f096cb-35fd-437d-9baf-31d9b23b5236
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file imgMetralleta.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

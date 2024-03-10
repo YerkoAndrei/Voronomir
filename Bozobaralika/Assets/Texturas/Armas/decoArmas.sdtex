@@ -1,0 +1,7 @@
+!Texture
+Id: 06d28cdc-d365-45f3-8be3-8fccc23d4c92
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file decoArmas.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

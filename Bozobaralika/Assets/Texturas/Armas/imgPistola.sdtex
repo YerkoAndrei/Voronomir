@@ -1,0 +1,7 @@
+!Texture
+Id: a3381a04-3773-4ee9-9f51-d8fd0cb0f35a
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file imgPistola.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

@@ -1,0 +1,7 @@
+!Texture
+Id: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Cuadrado.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
