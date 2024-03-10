@@ -8,8 +8,9 @@ namespace Bozobaralika;
 public class ControladorMovimiento : SyncScript
 {
     public float sensibilidad;
-    public CharacterComponent cuerpo;
-    public CameraComponent cámara;
+
+    private CharacterComponent cuerpo;
+    private CameraComponent cámara;
 
     // Movimiento
     private bool detención;
@@ -28,17 +29,16 @@ public class ControladorMovimiento : SyncScript
     private float rotaciónX;
     private float rotaciónY;
 
-    public override void Start()
+    public void Iniciar(CharacterComponent _cuerpo, CameraComponent _cámara)
     {
+        cuerpo = _cuerpo;
+        cámara = _cámara;
+
         minAceleración = 1f;
         maxAceleración = 1.5f;
         tiempoAceleración = 20f;
 
         multiplicadorVelocidad = ObtenerMultiplicadorVelocidad();
-
-        // Debug
-        Input.LockMousePosition(true);
-        Game.IsMouseVisible = false;
     }
 
     public override void Update()

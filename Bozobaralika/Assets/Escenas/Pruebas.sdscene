@@ -465,6 +465,12 @@ Hierarchy:
                                 Length: 1.5
                                 LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    cbd582e32e52be922fefd2caf76c4d6b: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
+                        Id: c46f69dc-db00-454e-8f32-19c17e5759b2
+                        cuerpo: ref!! 3a532fb5-e650-4150-b3c5-14f486d9073f
+                        "cámara": ref!! fea3501f-1ad1-4cb3-baef-4ab0eb026846
+                        movimiento: ref!! 57ced855-0f8a-4092-9133-ae41e2e76b87
+                        armas: ref!! cf114505-16b9-4712-a010-c2ba1ce114e1
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: d0f0434a-e882-4b76-9c27-cc89cb138ce7
                         Position: {X: 0.0, Y: 0.0, Z: 3.0}
@@ -476,12 +482,8 @@ Hierarchy:
                         Id: 57ced855-0f8a-4092-9133-ae41e2e76b87
                         Priority: 10
                         sensibilidad: 1.0
-                        cuerpo: ref!! 3a532fb5-e650-4150-b3c5-14f486d9073f
-                        "cámara": ref!! fea3501f-1ad1-4cb3-baef-4ab0eb026846
                     9f39d0a5dab3080bdcadb0dbfd0032a4: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: cf114505-16b9-4712-a010-c2ba1ce114e1
-                        movimiento: ref!! 57ced855-0f8a-4092-9133-ae41e2e76b87
-                        "cámara": ref!! fea3501f-1ad1-4cb3-baef-4ab0eb026846
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/MarcaBala
                         espada: ref!! 5da32500-ce1f-4303-a865-e2392f5b06c3
                         pistola: ref!! e69d0818-85b3-44b5-a0f1-cfd79bb09854

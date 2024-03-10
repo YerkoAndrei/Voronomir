@@ -10,8 +10,6 @@ using static Constantes;
 
 public class ControladorArmas : SyncScript
 {
-    public ControladorMovimiento movimiento;
-    public CameraComponent cámara;
     public Prefab prefabMarca;
 
     public TransformComponent espada;
@@ -19,6 +17,9 @@ public class ControladorArmas : SyncScript
     public TransformComponent escopeta;
     public TransformComponent metralleta;
     public TransformComponent rife;
+
+    private ControladorMovimiento movimiento;
+    private CameraComponent cámara;
 
     private Armas armaActual;
     private float últimoDisparo;
@@ -31,8 +32,11 @@ public class ControladorArmas : SyncScript
     private float tiempoMaxMetralleta;
     private float tiempoAtascamientoMetralleta;
 
-    public override void Start()
+    public void Iniciar(ControladorMovimiento _movimiento, CameraComponent _cámara)
     {
+        movimiento = _movimiento;
+        cámara = _cámara;
+
         dañoMínimo = 1f;
         dañoMáximo = 60f;
 
