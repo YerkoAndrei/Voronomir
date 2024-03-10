@@ -1,5 +1,6 @@
 ﻿using Stride.Core.Mathematics;
 using Stride.Engine;
+using Stride.Input;
 using Stride.Physics;
 using System.Linq;
 
@@ -24,6 +25,7 @@ public class ControladorJugador : SyncScript
         vida = vidaMax;
 
         interfaz = Entity.Scene.Entities.Where(o => o.Get<InterfazJuego>() != null).FirstOrDefault().Get<InterfazJuego>();
+        interfaz.ActualizarVida(vida / vidaMax);
 
         movimiento.Iniciar(cuerpo, cabeza);
         armas.Iniciar(movimiento, cabeza, cámara, interfaz);
@@ -37,11 +39,18 @@ public class ControladorJugador : SyncScript
     {
         // Debug
         DebugText.Print(vida + "/" + vidaMax, new Int2(x: 20, y: 140));
+
+        if (Input.IsKeyPressed(Keys.K))
+            RecibirDaño(2);
+
+        if (Input.IsKeyPressed(Keys.L))
+            RecibirDaño(-10);
     }
 
     public void RecibirDaño(float daño)
     {
         vida -= daño;
+        interfaz.ActualizarVida(vida / vidaMax);
 
         if (vida <= 0)
             Morir();
@@ -49,6 +58,7 @@ public class ControladorJugador : SyncScript
 
     private void Morir()
     {
-        // interfaz
+        // PENDIENTE: efectos
+        interfaz.Morir();
     }
 }

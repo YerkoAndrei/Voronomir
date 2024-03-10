@@ -552,7 +552,6 @@ Hierarchy:
                     0517a7cf5c5cd381807f54e8c748a550: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
                         Id: 57ced855-0f8a-4092-9133-ae41e2e76b87
                         Priority: 10
-                        sensibilidad: 1.0
                     921059f954f6e21e3aabe7ad0530d8ed: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: cf114505-16b9-4712-a010-c2ba1ce114e1
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/MarcaBala
@@ -600,6 +599,10 @@ Hierarchy:
                 Components:
                     10babbb5fcbc26f06c0193f56a8f5533: !Bozobaralika.InterfazJuego,Bozobaralika.Proyecto
                         Id: ac089fc3-6539-46f3-a199-bf1b524b39f9
+                        vidaCompleta: {R: 0, G: 255, B: 0, A: 10}
+                        "vidaVacía": {R: 255, G: 0, B: 0, A: 200}
+                        armaNormal: {R: 255, G: 255, B: 255, A: 100}
+                        armaSeleccionada: {R: 255, G: 0, B: 0, A: 200}
                     4f1cfdbcc9744c8b9c06d7c94fea91bb: !TransformComponent
                         Id: 3c106bf7-c2f5-4960-9a50-dcdc4555467d
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}

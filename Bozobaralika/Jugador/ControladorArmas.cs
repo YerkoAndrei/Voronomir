@@ -68,6 +68,8 @@ public class ControladorArmas : SyncScript
         ApagarArmas();
         armaActual = Armas.pistola;
         interfaz.CambiarMira(armaActual);
+        interfaz.CambiarÍcono(armaActual);
+
         modeloEspada.Entity.Get<ModelComponent>().Enabled = true;
         modeloPistola.Entity.Get<ModelComponent>().Enabled = true;
     }
@@ -418,6 +420,8 @@ public class ControladorArmas : SyncScript
         }
 
         armaActual = nuevaArma;
+        interfaz.CambiarÍcono(armaActual);
+
         switch (armaActual)
         {
             case Armas.pistola:
