@@ -119,10 +119,6 @@ RenderFeatures:
                 RenderGroup: Group30
                 RenderStage: ref!! cd2388bf-1520-4739-a8a4-c58254842e76
                 EffectName: null
-            2ec0de1f2a14841954881e56a91e0b9a*: !Stride.Rendering.SimpleGroupToRenderStageSelector,Stride.Rendering
-                RenderGroup: Group31
-                RenderStage: null
-                EffectName: null
     9013eab3ea0ef6c98bf133b86c173d45: !Stride.Particles.Rendering.ParticleEmitterRenderFeature,Stride.Particles
         RenderStageSelectors:
             af1bd241305893ef8ff7952184e1cb0b: !Stride.Particles.Rendering.ParticleEmitterTransparentRenderStageSelector,Stride.Particles
@@ -226,7 +222,7 @@ Game*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
             Id: ed5d689a-ec5b-4eca-9919-0f6abe337165
             Camera: ref!! 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
             Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 86d9ec9d-31f0-4d35-b1b7-f3537ed399ae
-            RenderMask: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29
+            RenderMask: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group11
         9b1fc22f7ff978e9fa4ca6360d7a867d: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
             Id: 76aa7799-ae16-41fe-85f6-c59fa7dcb5e7
             Camera: ref!! 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca

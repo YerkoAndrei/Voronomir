@@ -129,6 +129,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 7f8bc918-bb85-4a3e-83a3-06076b368917
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        RenderGroup: Group11
                         Materials: {}
         -   Entity:
                 Id: 50dd94d4-010c-458e-aa47-1c44e03e0ae6
@@ -143,6 +144,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: c3f3e014-10d4-4345-b491-72cfe4c5a54b
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        RenderGroup: Group11
                         Materials: {}
         -   Entity:
                 Id: 524b2fce-11fa-4bb8-83ce-f536073d8cf4
@@ -201,6 +203,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 9e51d45a-9d04-4092-b1b7-cabdba4365e9
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        RenderGroup: Group11
                         Materials: {}
         -   Entity:
                 Id: 5806e859-d7ec-42d4-ac78-edfc026317d2
@@ -292,8 +295,6 @@ Hierarchy:
                         Name: null
                         Projection: Perspective
                         VerticalFieldOfView: 90.0
-                        NearClipPlane: 0.2
-                        UseCustomAspectRatio: true
                         AspectRatio: 1.777778
                         Slot: 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
         -   Entity:
@@ -422,6 +423,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 5c201108-0f07-4202-a233-3abfcab58dd1
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        RenderGroup: Group11
                         Materials: {}
         -   Entity:
                 Id: dca75c2f-3874-4e83-9565-15c148fa0401
@@ -511,6 +513,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 2f860ba4-41c4-48d5-8d5f-9459560589d7
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        RenderGroup: Group11
                         Materials: {}
         -   Entity:
                 Id: ff5480c7-125b-4faf-a925-a78b68f1b73b
