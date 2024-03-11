@@ -7,9 +7,6 @@ Cameras:
     de2e75c3b2b23e54162686363f3f138e:
         Id: 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
         Name: Main
-    b6492b0be6a1dfd31701ea8568f20904*:
-        Id: fef6d757-7d67-4c6d-99a3-d0e0e556718c
-        Name: Sobretodo
 RenderStages:
     47116750c1a5d449b4ad3625f71439b3:
         Id: ee3f3531-74a9-42e2-9a9a-420d66f88cc5
@@ -44,11 +41,6 @@ RenderStages:
     3cf2d92d2b4732dcc32bbb2fad08cf76*:
         Id: cd2388bf-1520-4739-a8a4-c58254842e76
         Name: UI
-        EffectSlotName: Main
-        SortMode: !FrontToBackSortMode {}
-    3276f5f3aa6b40a037a1bd04ad3d1d64*:
-        Id: 5323b353-c5a9-4b08-8d62-faab4ee679da
-        Name: Sobretodo
         EffectSlotName: Main
         SortMode: !FrontToBackSortMode {}
 RenderFeatures:
@@ -129,7 +121,7 @@ RenderFeatures:
                 EffectName: null
             2ec0de1f2a14841954881e56a91e0b9a*: !Stride.Rendering.SimpleGroupToRenderStageSelector,Stride.Rendering
                 RenderGroup: Group31
-                RenderStage: ref!! 5323b353-c5a9-4b08-8d62-faab4ee679da
+                RenderStage: null
                 EffectName: null
     9013eab3ea0ef6c98bf133b86c173d45: !Stride.Particles.Rendering.ParticleEmitterRenderFeature,Stride.Particles
         RenderStageSelectors:
@@ -241,7 +233,7 @@ Game*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
             Child: !Stride.Rendering.Compositing.SingleStageRenderer,Stride.Rendering
                 Id: 0e60a365-fd45-4c65-88f5-f6e437474a94
                 RenderStage: ref!! cd2388bf-1520-4739-a8a4-c58254842e76
-            RenderMask: Group30
+            RenderMask: Group30, Group31
 SingleView: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 7332f0ab-4ceb-45ac-8132-210092975e75
 Editor*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
     Id: 9f7ab1d8-cc4b-42fe-97f7-272cf696a6d7
