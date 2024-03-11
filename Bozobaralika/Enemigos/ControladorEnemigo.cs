@@ -7,13 +7,20 @@ using static Constantes;
 public class ControladorEnemigo : SyncScript
 {
     public Enemigos enemigo;
-    public CharacterComponent cuerpo;
+
+    private CharacterComponent cuerpo;
+    private ControladorPersecusión persecusión;
 
     private float vida;
 
     public override void Start()
     {
-        switch(enemigo)
+        cuerpo = Entity.Get<CharacterComponent>();
+        persecusión = Entity.Get<ControladorPersecusión>();
+
+        persecusión.Iniciar(5f, 0.2f);
+
+        switch (enemigo)
         {
             case Enemigos.meléLigero:
                 vida = 100;
