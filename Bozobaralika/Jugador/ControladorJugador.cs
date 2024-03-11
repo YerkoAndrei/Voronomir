@@ -9,12 +9,12 @@ namespace Bozobaralika;
 
 public class ControladorJugador : SyncScript
 {
-    public CharacterComponent cuerpo;
     public TransformComponent cabeza;
     public CameraComponent cámara;
 
-    public ControladorMovimiento movimiento;
-    public ControladorArmas armas;
+    private CharacterComponent cuerpo;
+    private ControladorMovimiento movimiento;
+    private ControladorArmas armas;
 
     private InterfazJuego interfaz;
     private bool curando;
@@ -28,6 +28,10 @@ public class ControladorJugador : SyncScript
 
         interfaz = Entity.Scene.Entities.Where(o => o.Get<InterfazJuego>() != null).FirstOrDefault().Get<InterfazJuego>();
         interfaz.ActualizarVida(vida / vidaMax);
+
+        cuerpo = Entity.Get<CharacterComponent>();
+        movimiento = Entity.Get<ControladorMovimiento>();
+        armas = Entity.Get<ControladorArmas>();
 
         movimiento.Iniciar(cuerpo, cabeza);
         armas.Iniciar(movimiento, cabeza, cámara, interfaz);

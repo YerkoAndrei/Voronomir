@@ -6,7 +6,7 @@ using Stride.UI.Controls;
 namespace Bozobaralika;
 using static Constantes;
 
-public class InterfazJuego : SyncScript
+public class InterfazJuego : StartupScript
 {
     public Color vidaCompleta;
     public Color vidaVacía;
@@ -45,11 +45,6 @@ public class InterfazJuego : SyncScript
         imgRifle = página.FindVisualChildOfType<ImageElement>("imgRifle");
 
         ApagarMiras();
-    }
-
-    public override void Update()
-    {
-
     }
 
     public void ActualizarVida(float porcentaje)
