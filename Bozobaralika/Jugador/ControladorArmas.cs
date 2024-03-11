@@ -176,7 +176,7 @@ public class ControladorArmas : SyncScript
                 {
                     CalcularRayo(0.25f);
                 }
-                VibrarCámara(10);
+                VibrarCámara(20);
                 AnimarDisparo(ejeEscopeta, 0.5f, 0.2f);
                 últimoDisparoEscopeta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
@@ -188,7 +188,7 @@ public class ControladorArmas : SyncScript
             case Armas.rifle:
                 movimiento.DetenerMovimiento();
                 CalcularRayoPenetrante();
-                VibrarCámara(20);
+                VibrarCámara(40);
                 AnimarDisparo(ejeRife, 2f, 0.5f);
                 últimoDisparoRifle = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
@@ -233,10 +233,10 @@ public class ControladorArmas : SyncScript
         switch (armaActual)
         {
             case Armas.pistola:
-                VibrarCámara(2f);
+                VibrarCámara(4f);
                 break;
             case Armas.metralleta:
-                VibrarCámara(4f);
+                VibrarCámara(2f);
                 break;
         }
 
@@ -584,7 +584,7 @@ public class ControladorArmas : SyncScript
             {
                 var aletorioX = RangoAleatorio(-0.02f, 0.02f);
                 var aletorioY = RangoAleatorio(-0.02f, 0.02f);
-                var aletorioZ = RangoAleatorio(-0.02f, 0.02f);
+                var aletorioZ = RangoAleatorio(-0.01f, 0.01f);
                 objetivo = Vector3.Zero + new Vector3(aletorioX, aletorioY, aletorioZ) * fuerza;
             }
 
