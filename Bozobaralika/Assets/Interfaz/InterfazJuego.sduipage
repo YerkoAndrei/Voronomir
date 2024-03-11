@@ -13,6 +13,7 @@ Hierarchy:
                 DependencyProperties:
                     4e6232c4ba2540e0106d2192a115940d~GridBase.ColumnPropertyKey: 0
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.5
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -24,7 +25,8 @@ Hierarchy:
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
                 Id: 18843bab-6c2a-4d06-9865-e0d2d2d91da7
-                DependencyProperties: {}
+                DependencyProperties:
+                    710fe17f36b4f010ac2e3c191cd5df25~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -37,7 +39,8 @@ Hierarchy:
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
                 Id: 198d3bb2-a3a7-4cd2-ba10-d837f4cef590
-                DependencyProperties: {}
+                DependencyProperties:
+                    9b1a68adfd7485a9b0853b87dd57c99d~Panel.ZIndexPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -52,6 +55,7 @@ Hierarchy:
                 Id: 1f2cd61c-3339-4a98-8a1d-307b6fbece08
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.5
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -119,15 +123,16 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Rifle
                 Children:
+                    fb64a390b75173a459ddcd168e9e5679: !ImageElement ref!! 95187428-8d3f-4120-8659-5a1e4a1a5ba1
                     f01254d4dd9bbc7eaedfcfadaeacfaf8: !ImageElement ref!! a28a61c2-f0a2-4638-b013-8999916134b9
-                    2d54437f5cf168bc0252cf79803d9d8b: !ImageElement ref!! 95187428-8d3f-4120-8659-5a1e4a1a5ba1
                     2a47c64493937fd41d681af758b3a117: !ImageElement ref!! ef102853-8e63-46b8-b549-b795a02141dd
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: 65d37beb-a012-411d-88b5-d62ed55ef95f
-                DependencyProperties: {}
+                DependencyProperties:
+                    40d6d4ea7f4b997c14a8b1d99b3a790d~Panel.ZIndexPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -148,8 +153,8 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Pistola
                 Children:
+                    ef7bcae47b23ca0468c71544a35d72f0: !ImageElement ref!! 1f2cd61c-3339-4a98-8a1d-307b6fbece08
                     3b5b4d746c683dde142a4092f70a40b8: !ImageElement ref!! 18843bab-6c2a-4d06-9865-e0d2d2d91da7
-                    b68d68aea426743a4c4fe4dcb55bad23: !ImageElement ref!! 1f2cd61c-3339-4a98-8a1d-307b6fbece08
                     ba2ac22536255d552858ee4b2cfb65bb: !ImageElement ref!! 198d3bb2-a3a7-4cd2-ba10-d837f4cef590
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -171,7 +176,8 @@ Hierarchy:
                 Color: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
                 Id: 874cee85-a7e9-475f-9f0d-f59d432f212e
-                DependencyProperties: {}
+                DependencyProperties:
+                    36717d1279101e8505eef3631c24a78d~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -207,8 +213,8 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Escopeta
                 Children:
+                    b60e4f5eccab0835e5439fbcf2216480: !ImageElement ref!! baf2a7ef-6afe-469f-9263-cc969e1cc31e
                     5de0b8341645dffe959e8ca60489b09a: !ImageElement ref!! 874cee85-a7e9-475f-9f0d-f59d432f212e
-                    8dfa9f5396550d3fa90b3d9b68d889e2: !ImageElement ref!! baf2a7ef-6afe-469f-9263-cc969e1cc31e
                     596ae905839ce7a48f6158e8fcf7d9ea: !ImageElement ref!! f9f18285-e035-4323-bb74-deee2aa75369
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -218,6 +224,7 @@ Hierarchy:
                 DependencyProperties:
                     32fba0cee5fbd5ff73855a76273a654f~GridBase.ColumnPropertyKey: 0
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.5
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -259,7 +266,8 @@ Hierarchy:
                 Color: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
                 Id: a28a61c2-f0a2-4638-b013-8999916134b9
-                DependencyProperties: {}
+                DependencyProperties:
+                    2514505e8aa838431836cf5eb3c6a829~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -290,6 +298,7 @@ Hierarchy:
                 DependencyProperties:
                     bd225ec4cfd070782d938f70cf65e3b9~GridBase.ColumnPropertyKey: 0
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.5
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -301,7 +310,8 @@ Hierarchy:
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
                 Id: da97b4cc-aca5-4668-9280-c12700792b56
-                DependencyProperties: {}
+                DependencyProperties:
+                    44ba59351756fa80c1fc22fa633f4cc9~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -323,15 +333,16 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Metralleta
                 Children:
+                    9b4de3a985cb7d025ebed2e76aa67acc: !ImageElement ref!! 163cf578-8edc-4584-89fc-c36b45d53030
                     696d109c19d227c875a283692d8a56f0: !ImageElement ref!! da97b4cc-aca5-4668-9280-c12700792b56
-                    cafad56e0c675d7f11ba07fee8d75056: !ImageElement ref!! 163cf578-8edc-4584-89fc-c36b45d53030
                     d54a58e92401faf1a3d05b63d9b1ca3e: !ImageElement ref!! 65d37beb-a012-411d-88b5-d62ed55ef95f
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: ef102853-8e63-46b8-b549-b795a02141dd
-                DependencyProperties: {}
+                DependencyProperties:
+                    e05d112425e2b0a57a1419e1969e1e5b~Panel.ZIndexPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -362,7 +373,8 @@ Hierarchy:
                 Columns: 4
         -   UIElement: !ImageElement
                 Id: f9f18285-e035-4323-bb74-deee2aa75369
-                DependencyProperties: {}
+                DependencyProperties:
+                    fabc7fe9909a44084fb7f95b4a9e9a0b~Panel.ZIndexPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
