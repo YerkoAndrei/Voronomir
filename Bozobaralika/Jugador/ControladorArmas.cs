@@ -3,6 +3,7 @@ using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
+using System.Collections.Generic;
 
 namespace Bozobaralika;
 using static Sistema;
@@ -175,7 +176,7 @@ public class ControladorArmas : SyncScript
                 {
                     CalcularRayo(0.25f);
                 }
-                VibrarCámara(8);
+                VibrarCámara(10);
                 AnimarDisparo(ejeEscopeta, 0.5f, 0.2f);
                 últimoDisparoEscopeta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
@@ -186,8 +187,8 @@ public class ControladorArmas : SyncScript
                 break;
             case Armas.rifle:
                 movimiento.DetenerMovimiento();
-                CalcularRayo(0);
-                VibrarCámara(12);
+                CalcularRayoPenetrante();
+                VibrarCámara(20);
                 AnimarDisparo(ejeRife, 2f, 0.5f);
                 últimoDisparoRifle = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
@@ -201,58 +202,77 @@ public class ControladorArmas : SyncScript
         var aleatorioZ = RangoAleatorio(-(imprecisión), imprecisión);
         var aleatorio = new Vector3(aleatorioX, aleatorioY, aleatorioZ);
 
-        // Distancia máxima de disparo: 1000
+        // Distancia máxima de disparo: 500
         var dirección = cabeza.WorldMatrix.TranslationVector +
-                        (cabeza.WorldMatrix.Forward + aleatorio) * 1000;
+                        (cabeza.WorldMatrix.Forward + aleatorio) * 500;
 
         var resultado = this.GetSimulation().Raycast(cabeza.WorldMatrix.TranslationVector,
                                                      dirección,
                                                      CollisionFilterGroups.DefaultFilter);
+        if (!resultado.Succeeded)
+            return;
 
-        if (resultado.Succeeded && resultado.Collider != null)
+        var enemigo = resultado.Collider.Entity.Get<ControladorEnemigo>();
+        if (enemigo == null)
+        {
+            CrearMarca(Armas.espada, resultado.Point);
+            return;
+        }
+
+        // PENDIENTE: efecto
+        // Daño segun distancia
+        var distancia = Vector3.Distance(cabeza.WorldMatrix.TranslationVector, resultado.Point);
+        var reducción = 0f;
+        if(distancia > ObtenerDistanciaMáxima(armaActual))
+            reducción = (distancia - ObtenerDistanciaMáxima(armaActual)) * 0.5f;
+
+        // Retroalimentación daño
+        switch (armaActual)
+        {
+            case Armas.pistola:
+                VibrarCámara(2f);
+                break;
+            case Armas.metralleta:
+                VibrarCámara(4f);
+                break;
+        }
+
+        // Daña enemigo
+        var dañoFinal = ObtenerDaño(armaActual) - reducción;
+        dañoFinal = MathUtil.Clamp(dañoFinal, dañoMínimo, dañoMáximo);
+        enemigo.RecibirDaño(dañoFinal);
+    }
+
+    private void CalcularRayoPenetrante()
+    {
+        // Distancia máxima de disparo: 1000
+        var dirección = cabeza.WorldMatrix.TranslationVector + cabeza.WorldMatrix.Forward * 1000;
+
+        var resultados = new List<HitResult>();
+        this.GetSimulation().RaycastPenetrating(cabeza.WorldMatrix.TranslationVector,
+                                                dirección, resultados,
+                                                CollisionFilterGroups.DefaultFilter);
+        if (resultados.Count == 0)
+            return;
+
+        foreach (var resultado in resultados)
         {
             var enemigo = resultado.Collider.Entity.Get<ControladorEnemigo>();
             if (enemigo == null)
             {
-                // PENDIENTE: usar piscina
-                // PENDIENTE: efecto
-                // Marca balazo
-                var marca = prefabMarca.Instantiate()[0];
-                marca.Transform.Position = resultado.Point;
-                Entity.Scene.Entities.Add(marca);
-                return;
+                CrearMarca(Armas.espada, resultado.Point);
+                break;
             }
 
             // PENDIENTE: efecto
             // Daño segun distancia
             var distancia = Vector3.Distance(cabeza.WorldMatrix.TranslationVector, resultado.Point);
-            var reducción = 0f;
-            if(distancia > ObtenerDistanciaMáxima(armaActual))
-                reducción = (distancia - ObtenerDistanciaMáxima(armaActual)) * 0.5f;
-
-            // Retroalimentación daño
-            var dañoFinal = 0f;
-            switch (armaActual)
-            {
-                // Pistola y metralleta solo vibra si hace daño
-                case Armas.pistola:
-                    VibrarCámara(1f);
-                    dañoFinal = ObtenerDaño(armaActual) - reducción;
-                    break;
-                case Armas.escopeta:
-                    dañoFinal = ObtenerDaño(armaActual) - reducción;
-                    break;
-                case Armas.metralleta:
-                    VibrarCámara(2f);
-                    dañoFinal = ObtenerDaño(armaActual) - reducción;
-                    break;
-                // Rifle daña según distancia
-                case Armas.rifle:
-                    dañoFinal = ObtenerDaño(armaActual) + reducción;
-                    break;
-            }
+            var aumento = 0f;
+            if (distancia > ObtenerDistanciaMáxima(armaActual))
+                aumento = (distancia - ObtenerDistanciaMáxima(armaActual)) * 0.5f;
 
             // Daña enemigo
+            var dañoFinal = ObtenerDaño(armaActual) + aumento;
             dañoFinal = MathUtil.Clamp(dañoFinal, dañoMínimo, dañoMáximo);
             enemigo.RecibirDaño(dañoFinal);
         }
@@ -284,12 +304,7 @@ public class ControladorArmas : SyncScript
             var enemigo = resultado.Collider.Entity.Get<ControladorEnemigo>();
             if (enemigo == null)
             {
-                // PENDIENTE: usar piscina
-                // PENDIENTE: efecto
-                // Marca balazo
-                var marca = prefabMarca.Instantiate()[0];
-                marca.Transform.Position = resultado.Point;
-                Entity.Scene.Entities.Add(marca);
+                CrearMarca(Armas.espada, resultado.Point);
                 return;
             }
 
@@ -297,6 +312,18 @@ public class ControladorArmas : SyncScript
             // Daña enemigo
             enemigo.RecibirDaño(ObtenerDaño(Armas.espada));
         }
+    }
+
+    private void CrearMarca(Armas arma, Vector3 posición)
+    {
+        // PENDIENTE: usar piscina
+        // PENDIENTE: efecto
+        // Marca balazo
+        var marca = prefabMarca.Instantiate()[0];
+        marca.Transform.Position = posición;
+        Entity.Scene.Entities.Add(marca);
+        return;
+
     }
 
     private int ObtenerCantidadPerdigones()
