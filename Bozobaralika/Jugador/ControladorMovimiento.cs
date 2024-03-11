@@ -101,16 +101,16 @@ public class ControladorMovimiento : SyncScript
         }
 
         // Rotación
-        rotaciónX -= Input.MouseDelta.X * sensibilidad;
-        cuerpo.Orientation = Quaternion.RotationYawPitchRoll(rotaciónX, 0, 0);
+        rotaciónY -= Input.MouseDelta.X * sensibilidad;
+        cuerpo.Orientation = Quaternion.RotationY(rotaciónY);
     }
 
     private void Mirar()
     {
-        rotaciónY -= Input.MouseDelta.Y * sensibilidad;
-        rotaciónY = MathUtil.Clamp(rotaciónY, -MathUtil.PiOverTwo, MathUtil.PiOverTwo);
+        rotaciónX -= Input.MouseDelta.Y * sensibilidad;
+        rotaciónX = MathUtil.Clamp(rotaciónX, -MathUtil.PiOverTwo, MathUtil.PiOverTwo);
 
-        cabeza.Entity.Transform.Rotation = Quaternion.RotationYawPitchRoll(0, rotaciónY, 0);
+        cabeza.Entity.Transform.Rotation = Quaternion.RotationX(rotaciónX);
     }
 
     private void Saltar()
