@@ -13,7 +13,7 @@ Hierarchy:
         - ref!! ba60ce79-3157-4571-a2c4-6f7626c25993
         - ref!! 5806e859-d7ec-42d4-ac78-edfc026317d2
         - ref!! 8b42ea7d-752a-4920-97e2-1646ec7b9189
-        - ref!! 82aacaea-52c2-4d12-8003-4c5f0e4ef65a
+        - ref!! 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
         - ref!! d3476e3f-eee5-41dc-9c59-89b96ac24a2b
         - ref!! dd82e74f-617b-481e-bb36-34773b64d421
         - ref!! 01a3360a-7f24-41b6-9f84-af8196ae98d1
@@ -37,7 +37,6 @@ Hierarchy:
                 Components:
                     a60cbff727993b50e85c8863a7d8a974: !CharacterComponent
                         Id: 74c9977b-d672-4514-98eb-5990b74351e4
-                        Enabled: false
                         CollisionGroup: KinematicFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -47,8 +46,8 @@ Hierarchy:
                         CcdSweptSphereRadius: 0.0
                         FallSpeed: 10.0
                         MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 10.0
-                        Gravity: {X: 0.0, Y: -25.0, Z: 0.0}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
                                 Length: 2.0
@@ -61,15 +60,47 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 63dd9eef-ba83-4ac2-9b82-4bf6a7670c54
-                    8b666d4dff59c580a419a90a709f76e4: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                    051ced03d01f78d0f55d906c927879e6: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: 9c8b7eb6-a941-48c5-96b0-494ced9be529
                         enemigo: "meléLigero"
-                    fa4c9304ed1de9b8b2d4839075dc0374: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                    e49a27e25173089c0021387cbb1a6365: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: be76673d-0fe6-416b-9dad-ca1ea75969a5
                     b96e80a04d6c3438bc402c3dc55f77e2: !NavigationComponent
                         Id: 1bc02936-6d2e-4e45-b5db-e67d123aee53
                         NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
+        -   Folder: null
+            Entity:
+                Id: 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
+                Name: Cube
+                Components:
+                    ae0a1c16314df115170f0165e6677708: !ModelComponent
+                        Id: 87927965-5ca5-4822-afc0-fdff9898e33d
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: 77584610-80f0-4beb-944e-1361b36a9563
+                        Position: {X: -5.0, Y: 0.109, Z: 3.698}
+                        Rotation: {X: 0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Scale: {X: 1.0, Y: 2.0, Z: 3.5}
+                        Children: {}
+                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
+                        Id: f952b7c7-ed88-4e26-be4c-aefda995f495
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 2959869c-59c7-47b9-95c6-ff39d0f29ccb
                 Name: Modelo
@@ -213,20 +244,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             03cac127b85e429c2515bdcea74b1c68: ref!! fe02ed36-e4ce-4251-9332-6401627e3d29
-        -   Entity:
-                Id: 82aacaea-52c2-4d12-8003-4c5f0e4ef65a
-                Name: Ruta
-                Components:
-                    5bacc95216e57e08d5983266474cfc8b: !TransformComponent
-                        Id: 0c4a815c-ff7a-498b-b554-3e7b101c28ad
-                        Position: {X: 1.1027833, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.2, Y: 0.2, Z: 0.2}
-                        Children: {}
-                    ccb1d7853882a8ff163f5bbaffcef23d: !ModelComponent
-                        Id: cfdf30e5-5395-4754-8c95-ac3884de4514
-                        Model: 3de091c5-25d4-4c12-8e62-18cbe4432ced:Sphere
-                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 8b42ea7d-752a-4920-97e2-1646ec7b9189
@@ -389,7 +406,7 @@ Hierarchy:
                         Children: {}
                     8da989470e5d3482f6697c8ae7b8694b: !Stride.Navigation.NavigationBoundingBoxComponent,Stride.Navigation
                         Id: 42364fca-41df-4490-ba99-fb64dd6d91f6
-                        Size: {X: 10.0, Y: 1.0, Z: 10.0}
+                        Size: {X: 8.0, Y: 1.0, Z: 8.0}
         -   Entity:
                 Id: db50b768-0f44-49c4-8372-0296baa63e20
                 Name: Rifle
@@ -451,7 +468,7 @@ Hierarchy:
                                 Length: 1.5
                                 LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    51e7d48363aedad8f548bd717eb0b6b5: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
+                    9275a41acefd65a081c0eff39b6d73a5: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
                         Id: c46f69dc-db00-454e-8f32-19c17e5759b2
                         cabeza: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
                         "cámara": ref!! d37efe62-6123-4994-bb6a-66753b20c695
@@ -463,10 +480,10 @@ Hierarchy:
                         Children:
                             4f555758721bbf121dfb821111b51961: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
                             30cb10bb707641b055d441b3eb811031: ref!! f71c0d70-242d-498c-8708-4aeddcd57fd6
-                    0517a7cf5c5cd381807f54e8c748a550: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
+                    79267b1b7b89de3186bae9b5b45149c1: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
                         Id: 57ced855-0f8a-4092-9133-ae41e2e76b87
                         Priority: 10
-                    921059f954f6e21e3aabe7ad0530d8ed: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
+                    fd8388ddcff45c3f4e28979df1e76d76: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: cf114505-16b9-4712-a010-c2ba1ce114e1
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/MarcaBala
                         modeloEspada: ref!! c3f3e014-10d4-4345-b491-72cfe4c5a54b
@@ -497,7 +514,7 @@ Hierarchy:
                 Id: ff5480c7-125b-4faf-a925-a78b68f1b73b
                 Name: Interfaz
                 Components:
-                    10babbb5fcbc26f06c0193f56a8f5533: !Bozobaralika.InterfazJuego,Bozobaralika.Proyecto
+                    28a4571dc21e7e82f14f7f65cc326f0d: !Bozobaralika.InterfazJuego,Bozobaralika.Proyecto
                         Id: ac089fc3-6539-46f3-a199-bf1b524b39f9
                         vidaCompleta: {R: 0, G: 255, B: 0, A: 10}
                         "vidaVacía": {R: 255, G: 0, B: 0, A: 200}
@@ -511,6 +528,7 @@ Hierarchy:
                         Children: {}
                     f3a22f8e1824704a6bc6e9eb03a4f8da: !UIComponent
                         Id: 6e48cc9f-2b1d-427d-bcec-8076cdc55154
+                        Enabled: false
                         Page: d8d2b8e8-b800-4e51-94a9-d59d5fb618bc:Interfaz/InterfazJuego
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}

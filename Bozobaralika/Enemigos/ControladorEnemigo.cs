@@ -12,33 +12,38 @@ public class ControladorEnemigo : SyncScript
     private ControladorPersecusión persecusión;
 
     private float vida;
+    private bool activo;
 
     public override void Start()
     {
         cuerpo = Entity.Get<CharacterComponent>();
         persecusión = Entity.Get<ControladorPersecusión>();
 
-        persecusión.Iniciar(5f, 0.2f);
-
         switch (enemigo)
         {
             case Enemigos.meléLigero:
                 vida = 100;
+                persecusión.Iniciar(this, 0.5f, 6f, 0.2f);
                 break;
             case Enemigos.meléMediano:
                 vida = 400;
+                persecusión.Iniciar(this, 0.5f, 5f, 2f);
                 break;
             case Enemigos.meléPesado:
                 vida = 200;
+                persecusión.Iniciar(this, 0.5f, 3f, 5f);
                 break;
             case Enemigos.rangoLigero:
                 vida = 40;
+                persecusión.Iniciar(this, 0.5f, 10f, 2f);
                 break;
             case Enemigos.rangoMediano:
                 vida = 100;
+                persecusión.Iniciar(this, 0.5f, 2f, 10f);
                 break;
             case Enemigos.rangoPesado:
                 vida = 500;
+                persecusión.Iniciar(this, 0.5f, 5f, 12f);
                 break;
 
             case Enemigos.especialLigero:
@@ -55,9 +60,16 @@ public class ControladorEnemigo : SyncScript
                 vida = 3000;
                 break;
         }
+
+        activo = true;
     }
 
     public override void Update()
+    {
+
+    }
+
+    public void Atacar()
     {
 
     }
@@ -70,8 +82,14 @@ public class ControladorEnemigo : SyncScript
             Morir();
     }
 
+    public bool ObtenerActivo()
+    {
+        return activo;
+    }
+
     private void Morir()
     {
+        activo = false;
         cuerpo.Enabled = false;
         Entity.Scene.Entities.Remove(Entity);
     }

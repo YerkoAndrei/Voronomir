@@ -1,6 +1,5 @@
 ﻿using Stride.Core.Mathematics;
 using Stride.Engine;
-using Stride.Input;
 using Stride.Navigation;
 using Stride.Physics;
 using System.Collections.Generic;
@@ -16,12 +15,21 @@ public class ControladorPersecusión : SyncScript
 
     private List<Vector3> ruta;
     private int índiceRuta;
+
+    private Vector3 movimiento;
+    private float distanciaRuta;
+    private float distanciaJugador;
     private float distanciaMínima;
+
+    private ControladorEnemigo controlador;
 
     private float velocidad;
     private float distanciaAtaque;
 
-    public void Iniciar(float _velocidad, float _distanciaAtaque)
+    private float tempoBusqueda;
+    private float tiempoBusqueda;
+
+    public void Iniciar(ControladorEnemigo _controlador, float _tiempoBusqueda, float _velocidad, float _distanciaAtaque)
     {
         jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Transform;
 
@@ -31,21 +39,32 @@ public class ControladorPersecusión : SyncScript
 
         distanciaMínima = 0.1f;
 
+        controlador = _controlador;
+        tiempoBusqueda = _tiempoBusqueda;
+        tempoBusqueda = tiempoBusqueda;
+
         velocidad = _velocidad;
         distanciaAtaque = _distanciaAtaque;
     }
 
     public override void Update()
     {
-        Perseguir();
+        if (!controlador.ObtenerActivo())
+            return;
 
-        if (Input.IsMouseButtonPressed(MouseButton.Right))
+        // Busca cada cierto tiempo
+        tempoBusqueda -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+        if(tempoBusqueda <= 0)
             BuscarJugador();
+
+        Perseguir();
     }
 
     private void BuscarJugador()
     {
         ruta.Clear();
+        índiceRuta = 0;
+        tempoBusqueda = tiempoBusqueda;
         navegador.TryFindPath(jugador.Position, ruta);
     }
 
@@ -54,24 +73,24 @@ public class ControladorPersecusión : SyncScript
         if (ruta.Count == 0)
             return;
 
-        var distanciaRuta = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ruta[índiceRuta]);
-        var distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, jugador.Position);
+        distanciaRuta = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ruta[índiceRuta]);
+        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, jugador.Position);
 
         // Ataque
         if (distanciaJugador <= distanciaAtaque)
         {
-
+            controlador.Atacar();
             return;
         }
 
         // Movimiento
         if (distanciaRuta > distanciaMínima)
         {
-            var direction = ruta[índiceRuta] - Entity.Transform.WorldMatrix.TranslationVector;
-            direction.Normalize();
-            direction *= velocidad * (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            movimiento = ruta[índiceRuta] - Entity.Transform.WorldMatrix.TranslationVector;
+            movimiento.Normalize();
+            movimiento *= (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
-            Entity.Transform.Position += direction;
+            cuerpo.SetVelocity(movimiento * 100 * velocidad);
         }
         else
         {
