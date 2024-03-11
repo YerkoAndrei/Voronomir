@@ -6,6 +6,7 @@ using Stride.Input;
 using Stride.Physics;
 
 namespace Bozobaralika;
+using static Sistema;
 
 public class ControladorJugador : SyncScript
 {
@@ -15,8 +16,9 @@ public class ControladorJugador : SyncScript
     private CharacterComponent cuerpo;
     private ControladorMovimiento movimiento;
     private ControladorArmas armas;
-
     private InterfazJuego interfaz;
+
+    private Vector3 posiciónCabeza;
     private bool curando;
     private float vida;
     private float vidaMax;
@@ -32,9 +34,11 @@ public class ControladorJugador : SyncScript
         cuerpo = Entity.Get<CharacterComponent>();
         movimiento = Entity.Get<ControladorMovimiento>();
         armas = Entity.Get<ControladorArmas>();
-
+        
         movimiento.Iniciar(cuerpo, cabeza);
-        armas.Iniciar(movimiento, cabeza, cámara, interfaz);
+        armas.Iniciar(this, movimiento, cámara, interfaz);
+
+        posiciónCabeza = cabeza.Position;
 
         // Debug
         Input.LockMousePosition(true);
@@ -106,5 +110,42 @@ public class ControladorJugador : SyncScript
     {
         // PENDIENTE: efectos
         interfaz.Morir();
+    }
+
+    public async void VibrarCámara(float fuerza)
+    {
+        float duración = 0.01f;
+        int iteraciones = 6;
+        int iteración = 0;
+
+        while (iteración < iteraciones)
+        {
+            var inicial = cabeza.Position;
+            var objetivo = posiciónCabeza;
+
+            // Aleatorio
+            if (iteración < (iteraciones - 1))
+            {
+                var aletorioX = RangoAleatorio(-0.02f, 0.02f);
+                var aletorioY = RangoAleatorio(-0.02f, 0.02f);
+                var aletorioZ = RangoAleatorio(-0.01f, 0.01f);
+                objetivo = posiciónCabeza + new Vector3(aletorioX, aletorioY, aletorioZ) * fuerza;
+            }
+
+            float tiempoLerp = 0;
+            float tiempo = 0;
+
+            while (tiempoLerp < duración)
+            {
+                tiempo = tiempoLerp / duración;
+                cabeza.Position = Vector3.Lerp(inicial, objetivo, tiempo);
+
+                tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                await Task.Delay(1);
+            }
+            iteración++;
+        }
+
+        cabeza.Position = posiciónCabeza;
     }
 }

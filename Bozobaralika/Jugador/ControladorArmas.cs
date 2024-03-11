@@ -25,8 +25,8 @@ public class ControladorArmas : SyncScript
     public TransformComponent ejeMetralleta;
     public TransformComponent ejeRife;
 
+    private ControladorJugador controlador;
     private ControladorMovimiento movimiento;
-    private TransformComponent cabeza;
     private CameraComponent cámara;
     private InterfazJuego interfaz;
 
@@ -42,6 +42,7 @@ public class ControladorArmas : SyncScript
     private float últimoDisparoRifle;
 
     private bool cambiandoArma;
+    private bool usandoMira;
     private Vector3 posiciónEjes;
 
     // Metralleta
@@ -50,10 +51,10 @@ public class ControladorArmas : SyncScript
     private float tiempoMaxMetralleta;
     private float tiempoAtascamientoMetralleta;
 
-    public void Iniciar(ControladorMovimiento _movimiento, TransformComponent _cabeza, CameraComponent _cámara, InterfazJuego _interfaz)
+    public void Iniciar(ControladorJugador _controlador, ControladorMovimiento _movimiento, CameraComponent _cámara, InterfazJuego _interfaz)
     {
+        controlador = _controlador;
         movimiento = _movimiento;
-        cabeza = _cabeza;
         cámara = _cámara;
         interfaz = _interfaz;
 
@@ -176,7 +177,7 @@ public class ControladorArmas : SyncScript
                 {
                     CalcularRayo(0.25f);
                 }
-                VibrarCámara(20);
+                controlador.VibrarCámara(20);
                 AnimarDisparo(ejeEscopeta, 0.5f, 0.2f);
                 últimoDisparoEscopeta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
@@ -188,7 +189,7 @@ public class ControladorArmas : SyncScript
             case Armas.rifle:
                 movimiento.DetenerMovimiento();
                 CalcularRayoPenetrante();
-                VibrarCámara(40);
+                controlador.VibrarCámara(40);
                 AnimarDisparo(ejeRife, 2f, 0.5f);
                 últimoDisparoRifle = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
@@ -203,10 +204,10 @@ public class ControladorArmas : SyncScript
         var aleatorio = new Vector3(aleatorioX, aleatorioY, aleatorioZ);
 
         // Distancia máxima de disparo: 500
-        var dirección = cabeza.WorldMatrix.TranslationVector +
-                        (cabeza.WorldMatrix.Forward + aleatorio) * 500;
+        var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector +
+                        (cámara.Entity.Transform.WorldMatrix.Forward + aleatorio) * 500;
 
-        var resultado = this.GetSimulation().Raycast(cabeza.WorldMatrix.TranslationVector,
+        var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
                                                      dirección,
                                                      CollisionFilterGroups.DefaultFilter);
         if (!resultado.Succeeded)
@@ -224,7 +225,7 @@ public class ControladorArmas : SyncScript
 
         // PENDIENTE: efecto
         // Daño segun distancia
-        var distancia = Vector3.Distance(cabeza.WorldMatrix.TranslationVector, resultado.Point);
+        var distancia = Vector3.Distance(cámara.Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
         var reducción = 0f;
         if(distancia > ObtenerDistanciaMáxima(armaActual))
             reducción = (distancia - ObtenerDistanciaMáxima(armaActual)) * 0.5f;
@@ -233,10 +234,10 @@ public class ControladorArmas : SyncScript
         switch (armaActual)
         {
             case Armas.pistola:
-                VibrarCámara(4f);
+                controlador.VibrarCámara(8f);
                 break;
             case Armas.metralleta:
-                VibrarCámara(2f);
+                controlador.VibrarCámara(6f);
                 break;
         }
 
@@ -249,10 +250,10 @@ public class ControladorArmas : SyncScript
     private void CalcularRayoPenetrante()
     {
         // Distancia máxima de disparo: 1000
-        var dirección = cabeza.WorldMatrix.TranslationVector + cabeza.WorldMatrix.Forward * 1000;
+        var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector + cámara.Entity.Transform.WorldMatrix.Forward * 1000;
 
         var resultados = new List<HitResult>();
-        this.GetSimulation().RaycastPenetrating(cabeza.WorldMatrix.TranslationVector,
+        this.GetSimulation().RaycastPenetrating(cámara.Entity.Transform.WorldMatrix.TranslationVector,
                                                 dirección, resultados,
                                                 CollisionFilterGroups.DefaultFilter);
         if (resultados.Count == 0)
@@ -272,7 +273,7 @@ public class ControladorArmas : SyncScript
 
             // PENDIENTE: efecto
             // Daño segun distancia
-            var distancia = Vector3.Distance(cabeza.WorldMatrix.TranslationVector, resultado.Point);
+            var distancia = Vector3.Distance(cámara.Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
             var aumento = 0f;
             if (distancia > ObtenerDistanciaMáxima(armaActual))
                 aumento = (distancia - ObtenerDistanciaMáxima(armaActual)) * 0.5f;
@@ -298,10 +299,10 @@ public class ControladorArmas : SyncScript
         AnimarAtaque();
 
         // Distancia máxima melé: 2
-        var dirección = cabeza.WorldMatrix.TranslationVector +
-                        cabeza.WorldMatrix.Forward * 2;
+        var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector +
+                        cámara.Entity.Transform.WorldMatrix.Forward * 2;
 
-        var resultado = this.GetSimulation().Raycast(cabeza.WorldMatrix.TranslationVector,
+        var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
                                                      dirección,
                                                      CollisionFilterGroups.DefaultFilter);
 
@@ -355,7 +356,8 @@ public class ControladorArmas : SyncScript
     {
         // PENDIENTE: elegir FOV de opciones
         // PENDIENTE: animacioón
-        if (acercar)
+        usandoMira = acercar;
+        if (usandoMira)
             cámara.VerticalFieldOfView = 20;
         else
             cámara.VerticalFieldOfView = 90;
@@ -422,7 +424,7 @@ public class ControladorArmas : SyncScript
 
     private void CambiarArma(Armas nuevaArma)
     {
-        if (cambiandoArma || nuevaArma == armaActual)
+        if (cambiandoArma || nuevaArma == armaActual || usandoMira)
             return;
 
         var armaSale = ejePistola;
@@ -566,42 +568,5 @@ public class ControladorArmas : SyncScript
         }
         
         ejeEspada.Rotation = Quaternion.Identity;
-    }
-
-    private async void VibrarCámara(float fuerza)
-    {
-        float duración = 0.01f;
-        int iteraciones = 6;
-        int iteración = 0;
-
-        while (iteración < iteraciones)
-        {
-            var inicial = cámara.Entity.Transform.Position;
-            var objetivo = Vector3.Zero;
-
-            // Aleatorio
-            if (iteración < (iteraciones - 1))
-            {
-                var aletorioX = RangoAleatorio(-0.02f, 0.02f);
-                var aletorioY = RangoAleatorio(-0.02f, 0.02f);
-                var aletorioZ = RangoAleatorio(-0.01f, 0.01f);
-                objetivo = Vector3.Zero + new Vector3(aletorioX, aletorioY, aletorioZ) * fuerza;
-            }
-
-            float tiempoLerp = 0;
-            float tiempo = 0;
-
-            while (tiempoLerp < duración)
-            {
-                tiempo = tiempoLerp / duración;
-                cámara.Entity.Transform.Position = Vector3.Lerp(inicial, objetivo, tiempo);
-
-                tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-                await Task.Delay(1);
-            }
-            iteración++;
-        }
-
-        cámara.Entity.Transform.Position = Vector3.Zero;
     }
 }
