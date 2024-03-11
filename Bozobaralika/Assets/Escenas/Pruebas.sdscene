@@ -50,8 +50,8 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
-                                Length: 2.0
-                                LocalOffset: {X: 0.0, Y: 1.25, Z: 0.0}
+                                Length: 1.5
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 7f8abd7c-3f6f-44a8-9a41-e132c6b8d12d
@@ -80,9 +80,9 @@ Hierarchy:
                         Materials: {}
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 77584610-80f0-4beb-944e-1361b36a9563
-                        Position: {X: -5.0, Y: 0.109, Z: 3.698}
-                        Rotation: {X: 0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
-                        Scale: {X: 1.0, Y: 2.0, Z: 3.5}
+                        Position: {X: -5.0, Y: 0.134, Z: 4.232}
+                        Rotation: {X: 0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
+                        Scale: {X: 2.0, Y: 2.0, Z: 4.0}
                         Children: {}
                     0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
                         Id: f952b7c7-ed88-4e26-be4c-aefda995f495
@@ -107,13 +107,14 @@ Hierarchy:
                 Components:
                     e8f9cf0aa966229b689d889367899aac: !TransformComponent
                         Id: f71c0d70-242d-498c-8708-4aeddcd57fd6
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.75, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.49, Y: 1.5, Z: 0.49}
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: acdbb950-a431-481f-8a7d-525838ed137f
                         Model: c7f6cc1f-dca4-4efe-802b-421756419e85:Cylinder
+                        RenderGroup: Group10
                         Materials: {}
         -   Entity:
                 Id: 3ae95755-c197-4240-9695-d1e550076239
@@ -257,7 +258,7 @@ Hierarchy:
                         Id: fa742505-f28a-43fb-9b75-e753aedeaee8
                         Position: {X: -5.0, Y: 1.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 2.0, Z: 6.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 6.0}
                         Children: {}
                     0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
                         Id: d2cdcbe2-1046-4ff2-8b0e-c5d71573ab5d
@@ -290,7 +291,8 @@ Hierarchy:
                         Id: d37efe62-6123-4994-bb6a-66753b20c695
                         Name: null
                         Projection: Perspective
-                        VerticalFieldOfView: 80.0
+                        VerticalFieldOfView: 90.0
+                        NearClipPlane: 0.2
                         UseCustomAspectRatio: true
                         AspectRatio: 1.777778
                         Slot: 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
@@ -300,7 +302,7 @@ Hierarchy:
                 Components:
                     e8f9cf0aa966229b689d889367899aac: !TransformComponent
                         Id: 63dd9eef-ba83-4ac2-9b82-4bf6a7670c54
-                        Position: {X: 0.0, Y: 1.25, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.5, Y: 2.0, Z: 0.5}
                         Children: {}
@@ -465,8 +467,8 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: -25.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
-                                Length: 1.5
-                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Length: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.75, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     9275a41acefd65a081c0eff39b6d73a5: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
                         Id: c46f69dc-db00-454e-8f32-19c17e5759b2
@@ -528,8 +530,8 @@ Hierarchy:
                         Children: {}
                     f3a22f8e1824704a6bc6e9eb03a4f8da: !UIComponent
                         Id: 6e48cc9f-2b1d-427d-bcec-8076cdc55154
-                        Enabled: false
                         Page: d8d2b8e8-b800-4e51-94a9-d59d5fb618bc:Interfaz/InterfazJuego
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
                         ResolutionStretch: FixedHeightAdaptableWidth
+                        RenderGroup: Group30
