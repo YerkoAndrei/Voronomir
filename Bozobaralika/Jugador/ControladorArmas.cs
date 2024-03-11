@@ -212,12 +212,15 @@ public class ControladorArmas : SyncScript
         if (!resultado.Succeeded)
             return;
 
-        var enemigo = resultado.Collider.Entity.Get<ControladorEnemigo>();
-        if (enemigo == null)
+        if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
         {
             CrearMarca(Armas.espada, resultado.Point);
             return;
         }
+
+        var enemigo = resultado.Collider.Entity.Get<ControladorEnemigo>();
+        if (enemigo == null)
+            return;
 
         // PENDIENTE: efecto
         // Daño segun distancia
@@ -257,12 +260,15 @@ public class ControladorArmas : SyncScript
 
         foreach (var resultado in resultados)
         {
-            var enemigo = resultado.Collider.Entity.Get<ControladorEnemigo>();
-            if (enemigo == null)
+            if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
             {
                 CrearMarca(Armas.espada, resultado.Point);
                 break;
             }
+
+            var enemigo = resultado.Collider.Entity.Get<ControladorEnemigo>();
+            if (enemigo == null)
+                return;
 
             // PENDIENTE: efecto
             // Daño segun distancia
@@ -352,7 +358,7 @@ public class ControladorArmas : SyncScript
         if (acercar)
             cámara.VerticalFieldOfView = 20;
         else
-            cámara.VerticalFieldOfView = 80;
+            cámara.VerticalFieldOfView = 90;
 
         movimiento.CambiarSensiblidad(acercar);
         interfaz.MostrarMiraRifle(acercar);
