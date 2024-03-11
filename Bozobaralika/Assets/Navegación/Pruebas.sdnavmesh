@@ -5,7 +5,7 @@ Tags: []
 Scene: d96f9ef1-9ebb-4fd3-a140-1cacde38458e:Escenas/Pruebas
 IncludedCollisionGroups: AllFilter
 BuildSettings:
-    CellHeight: 0.2
+    CellHeight: 0.01
     CellSize: 0.3
     TileSize: 32
     MinRegionArea: 2
