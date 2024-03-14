@@ -191,7 +191,7 @@ public class ControladorArmas : SyncScript
                 {
                     CalcularRayo(0.25f);
                 }
-                controlador.VibrarCámara(20);
+                controlador.VibrarCámara(16, 10);
                 AnimarDisparo(ejeEscopeta, 0.5f, 0.2f);
                 últimoDisparoEscopeta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
@@ -203,7 +203,7 @@ public class ControladorArmas : SyncScript
             case Armas.rifle:
                 movimiento.DetenerMovimiento();
                 CalcularRayoPenetrante();
-                controlador.VibrarCámara(40);
+                controlador.VibrarCámara(20, 12);
                 AnimarDisparo(ejeRife, 2f, 0.5f);
                 últimoDisparoRifle = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
@@ -249,10 +249,10 @@ public class ControladorArmas : SyncScript
         switch (armaActual)
         {
             case Armas.pistola:
-                controlador.VibrarCámara(8f);
+                controlador.VibrarCámara(6f, 6);
                 break;
             case Armas.metralleta:
-                controlador.VibrarCámara(6f);
+                controlador.VibrarCámara(4f, 4);
                 break;
         }
 
