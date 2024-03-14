@@ -23,7 +23,7 @@ public class ControladorEnemigo : SyncScript
         {
             case Enemigos.meléLigero:
                 vida = 100;
-                persecusión.Iniciar(this, 0.5f, 6f, 0.2f);
+                persecusión.Iniciar(this, 0.1f, 6f, 0.2f);
                 break;
             case Enemigos.meléMediano:
                 vida = 400;
