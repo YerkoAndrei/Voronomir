@@ -6,7 +6,7 @@ using Stride.Physics;
 using System.Collections.Generic;
 
 namespace Bozobaralika;
-using static Sistema;
+using static Utilidades;
 using static Constantes;
 
 public class ControladorArmas : SyncScript

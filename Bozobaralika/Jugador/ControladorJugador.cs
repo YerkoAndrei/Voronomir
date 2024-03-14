@@ -6,7 +6,7 @@ using Stride.Input;
 using Stride.Physics;
 
 namespace Bozobaralika;
-using static Sistema;
+using static Utilidades;
 
 public class ControladorJugador : SyncScript
 {
