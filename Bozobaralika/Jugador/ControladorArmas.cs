@@ -230,7 +230,7 @@ public class ControladorArmas : SyncScript
 
         if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
         {
-            CrearMarca(Armas.espada, resultado.Point);
+            CrearMarca(armaActual, resultado.Point);
             return;
         }
 
@@ -279,7 +279,7 @@ public class ControladorArmas : SyncScript
         {
             if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
             {
-                CrearMarca(Armas.espada, resultado.Point);
+                CrearMarca(armaActual, resultado.Point);
                 break;
             }
 
