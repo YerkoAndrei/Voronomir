@@ -6,14 +6,19 @@ ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
-        - ref!! dca75c2f-3874-4e83-9565-15c148fa0401
+        - ref!! 2c46881f-53e6-4d1d-85df-924007329f46
+        - ref!! d471c428-d220-4860-b67e-f0ad26d2d613
+        - ref!! 1203753a-eca1-4f4a-85e3-0edf0ce91347
+        - ref!! f557bc44-8313-4a06-ba9a-35f36f7d42de
         - ref!! 52cd02bd-3165-4aa6-8d1e-7538541119a3
+        - ref!! dca75c2f-3874-4e83-9565-15c148fa0401
         - ref!! ff5480c7-125b-4faf-a925-a78b68f1b73b
         - ref!! cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
         - ref!! ba60ce79-3157-4571-a2c4-6f7626c25993
         - ref!! 5806e859-d7ec-42d4-ac78-edfc026317d2
         - ref!! 8b42ea7d-752a-4920-97e2-1646ec7b9189
         - ref!! 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
+        - ref!! eb300b4d-c14f-4f40-b4b3-e09e965b69a5
         - ref!! d3476e3f-eee5-41dc-9c59-89b96ac24a2b
         - ref!! dd82e74f-617b-481e-bb36-34773b64d421
         - ref!! 01a3360a-7f24-41b6-9f84-af8196ae98d1
@@ -55,7 +60,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 7f8abd7c-3f6f-44a8-9a41-e132c6b8d12d
-                        Position: {X: 3.0030212, Y: 0.0, Z: -1.3296795}
+                        Position: {X: 3.0, Y: 0.0, Z: -1.3296795}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -80,12 +85,44 @@ Hierarchy:
                         Materials: {}
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 77584610-80f0-4beb-944e-1361b36a9563
-                        Position: {X: -5.0, Y: 0.134, Z: 4.232}
+                        Position: {X: -5.0, Y: 0.01, Z: 4.447}
                         Rotation: {X: 0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
-                        Scale: {X: 2.0, Y: 2.0, Z: 4.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 4.5}
                         Children: {}
                     0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
                         Id: f952b7c7-ed88-4e26-be4c-aefda995f495
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: Muros
+            Entity:
+                Id: 1203753a-eca1-4f4a-85e3-0edf0ce91347
+                Name: Cube
+                Components:
+                    ae0a1c16314df115170f0165e6677708: !ModelComponent
+                        Id: 1e2901f0-9316-4b4b-ac61-08e5314da545
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: 324561d4-8967-40e9-bd6d-3e0c4ed3b251
+                        Position: {X: 0.0, Y: 1.5, Z: -20.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 40.0, Y: 3.0, Z: 1.0}
+                        Children: {}
+                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
+                        Id: fa87a99e-2772-4eea-baf5-5a7ee755d00d
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -116,6 +153,38 @@ Hierarchy:
                         Model: c7f6cc1f-dca4-4efe-802b-421756419e85:Cylinder
                         RenderGroup: Group10
                         Materials: {}
+        -   Folder: Muros
+            Entity:
+                Id: 2c46881f-53e6-4d1d-85df-924007329f46
+                Name: Cube
+                Components:
+                    ae0a1c16314df115170f0165e6677708: !ModelComponent
+                        Id: d2b47470-f19c-41cd-aa8f-ddd3be8967a0
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: 56178e94-747f-4fbc-a1f8-fe489855cd99
+                        Position: {X: -20.0, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 3.0, Z: 40.0}
+                        Children: {}
+                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
+                        Id: b334cb6d-4dbf-49ee-80d0-3bd7b9851274
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 3ae95755-c197-4240-9695-d1e550076239
                 Name: Metralleta
@@ -403,13 +472,45 @@ Hierarchy:
                 Components:
                     6d8bcecd738075517046081af5f60aa5: !TransformComponent
                         Id: 41785259-ad2a-40cc-90fa-6dc5351274e5
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     8da989470e5d3482f6697c8ae7b8694b: !Stride.Navigation.NavigationBoundingBoxComponent,Stride.Navigation
                         Id: 42364fca-41df-4490-ba99-fb64dd6d91f6
-                        Size: {X: 8.0, Y: 1.0, Z: 8.0}
+                        Size: {X: 20.0, Y: 1.5, Z: 20.0}
+        -   Folder: Muros
+            Entity:
+                Id: d471c428-d220-4860-b67e-f0ad26d2d613
+                Name: Cube
+                Components:
+                    ae0a1c16314df115170f0165e6677708: !ModelComponent
+                        Id: d0966398-95a1-4a94-8753-397886ad520d
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: 55b0cb1d-8f86-4329-b2c4-e582dc024795
+                        Position: {X: 20.0, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 3.0, Z: 40.0}
+                        Children: {}
+                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
+                        Id: 075c1757-649c-4a19-8bc5-afce4602a703
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: db50b768-0f44-49c4-8372-0296baa63e20
                 Name: Rifle
@@ -500,6 +601,70 @@ Hierarchy:
                         ejeEscopeta: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
                         ejeMetralleta: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
                         ejeRife: ref!! 8374c3d3-7007-4071-9f10-14045dd1b355
+        -   Folder: null
+            Entity:
+                Id: eb300b4d-c14f-4f40-b4b3-e09e965b69a5
+                Name: Cube
+                Components:
+                    ae0a1c16314df115170f0165e6677708: !ModelComponent
+                        Id: c08f63a8-efa3-4b5d-b2b8-763e33061b45
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: 54231152-8e5d-4adf-923f-606314ebce36
+                        Position: {X: -5.0, Y: 0.01, Z: -4.447}
+                        Rotation: {X: -0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
+                        Scale: {X: 2.0, Y: 2.0, Z: 4.5}
+                        Children: {}
+                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
+                        Id: 8b91c208-c537-4774-9b3e-77afe8264977
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: Muros
+            Entity:
+                Id: f557bc44-8313-4a06-ba9a-35f36f7d42de
+                Name: Cube
+                Components:
+                    ae0a1c16314df115170f0165e6677708: !ModelComponent
+                        Id: cc61408f-d7b5-4921-b020-23666943d5f0
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: a4261350-d80e-49ce-9ab7-b724439a707e
+                        Position: {X: 0.0, Y: 1.5, Z: 20.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 40.0, Y: 3.0, Z: 1.0}
+                        Children: {}
+                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
+                        Id: 0d2f722f-2501-4812-b5f4-702542d935fb
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: f6c06ac1-d807-442e-8596-a58b93cf4fe7
                 Name: Escopeta
