@@ -9,6 +9,14 @@ namespace Bozobaralika;
 using static Utilidades;
 using static Constantes;
 
+// Filtros:
+// Default      - Disparos
+// Static       - Entorno
+// Kinematic    - Enemigos
+// Debris       - Escombros
+// Sensor       - Puertas
+// Character    - Jugador
+
 public class ControladorArmas : SyncScript
 {
     public Prefab prefabMarca;
@@ -30,6 +38,7 @@ public class ControladorArmas : SyncScript
     private CameraComponent cámara;
     private InterfazJuego interfaz;
 
+    private CollisionFilterGroupFlags colisionesDisparo;
     private Armas armaActual;
     private bool bloqueo;
     private float dañoMínimo;
@@ -66,6 +75,11 @@ public class ControladorArmas : SyncScript
         tiempoMaxMetralleta = 4f;
         tiempoAtascamientoMetralleta = 2f;
         tempoMetralleta = tiempoAtascamientoMetralleta;
+
+        // Filtros disparos
+        colisionesDisparo = new CollisionFilterGroupFlags();
+        colisionesDisparo |= (CollisionFilterGroupFlags)BulletSharp.CollisionFilterGroups.StaticFilter;
+        colisionesDisparo |= (CollisionFilterGroupFlags)BulletSharp.CollisionFilterGroups.KinematicFilter;
 
         // Arma por defecto
         ApagarArmas();
@@ -209,7 +223,8 @@ public class ControladorArmas : SyncScript
 
         var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
                                                      dirección,
-                                                     CollisionFilterGroups.DefaultFilter);
+                                                     CollisionFilterGroups.DefaultFilter,
+                                                     colisionesDisparo);
         if (!resultado.Succeeded)
             return;
 
@@ -255,7 +270,8 @@ public class ControladorArmas : SyncScript
         var resultados = new List<HitResult>();
         this.GetSimulation().RaycastPenetrating(cámara.Entity.Transform.WorldMatrix.TranslationVector,
                                                 dirección, resultados,
-                                                CollisionFilterGroups.DefaultFilter);
+                                                CollisionFilterGroups.DefaultFilter,
+                                                colisionesDisparo);
         if (resultados.Count == 0)
             return;
 
@@ -304,7 +320,8 @@ public class ControladorArmas : SyncScript
 
         var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
                                                      dirección,
-                                                     CollisionFilterGroups.DefaultFilter);
+                                                     CollisionFilterGroups.DefaultFilter,
+                                                     colisionesDisparo);
 
         if (resultado.Succeeded && resultado.Collider != null)
         {
