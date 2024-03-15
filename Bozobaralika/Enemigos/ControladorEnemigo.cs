@@ -4,9 +4,11 @@ using Stride.Physics;
 namespace Bozobaralika;
 using static Constantes;
 
-public class ControladorEnemigo : SyncScript
+public class ControladorEnemigo : StartupScript
 {
     public Enemigos enemigo;
+    public ControladorArmaMelé armaMelé;
+    //public ControladorArmaEnemigo armaDisparo;
 
     private CharacterComponent cuerpo;
     private ControladorPersecusión persecusión;
@@ -24,26 +26,32 @@ public class ControladorEnemigo : SyncScript
             case Enemigos.meléLigero:
                 vida = 100;
                 persecusión.Iniciar(this, 0.1f, 6f, 0.2f);
+                //armaMelé.Iniciar(false);
                 break;
             case Enemigos.meléMediano:
                 vida = 400;
                 persecusión.Iniciar(this, 0.5f, 5f, 2f);
+                //armaMelé.Iniciar(false);
                 break;
             case Enemigos.meléPesado:
                 vida = 200;
                 persecusión.Iniciar(this, 0.5f, 3f, 5f);
+                //armaMelé.Iniciar(false);
                 break;
             case Enemigos.rangoLigero:
                 vida = 40;
                 persecusión.Iniciar(this, 0.5f, 10f, 2f);
+                //armaDisparo.Iniciar();
                 break;
             case Enemigos.rangoMediano:
                 vida = 100;
                 persecusión.Iniciar(this, 0.5f, 2f, 10f);
+                //armaDisparo.Iniciar();
                 break;
             case Enemigos.rangoPesado:
                 vida = 500;
                 persecusión.Iniciar(this, 0.5f, 5f, 12f);
+                //armaDisparo.Iniciar();
                 break;
 
             case Enemigos.especialLigero:
@@ -62,11 +70,6 @@ public class ControladorEnemigo : SyncScript
         }
 
         activo = true;
-    }
-
-    public override void Update()
-    {
-
     }
 
     public void Atacar()

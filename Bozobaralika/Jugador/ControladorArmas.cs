@@ -19,6 +19,7 @@ using static Constantes;
 
 public class ControladorArmas : SyncScript
 {
+    public ControladorArmaMelé armaMelé;
     public Prefab prefabMarca;
 
     public ModelComponent modeloEspada;
@@ -76,10 +77,13 @@ public class ControladorArmas : SyncScript
         tiempoAtascamientoMetralleta = 2f;
         tempoMetralleta = tiempoAtascamientoMetralleta;
 
+        // Melé
+        armaMelé.Iniciar(true);
+
         // Filtros disparos
         colisionesDisparo = new CollisionFilterGroupFlags();
-        colisionesDisparo |= (CollisionFilterGroupFlags)BulletSharp.CollisionFilterGroups.StaticFilter;
-        colisionesDisparo |= (CollisionFilterGroupFlags)BulletSharp.CollisionFilterGroups.KinematicFilter;
+        colisionesDisparo |= CollisionFilterGroupFlags.StaticFilter;
+        colisionesDisparo |= CollisionFilterGroupFlags.KinematicFilter;
 
         // Arma por defecto
         ApagarArmas();
@@ -312,30 +316,10 @@ public class ControladorArmas : SyncScript
             return;
 
         últimoDisparoEspada = (float)Game.UpdateTime.Total.TotalSeconds;
+
+        // PENDIENTE: efecto
+        armaMelé.Atacar(ObtenerDaño(Armas.espada));
         AnimarAtaque();
-
-        // Distancia máxima melé: 2
-        var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector +
-                        cámara.Entity.Transform.WorldMatrix.Forward * 2;
-
-        var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
-                                                     dirección,
-                                                     CollisionFilterGroups.DefaultFilter,
-                                                     colisionesDisparo);
-
-        if (resultado.Succeeded && resultado.Collider != null)
-        {
-            var enemigo = resultado.Collider.Entity.Get<ControladorEnemigo>();
-            if (enemigo == null)
-            {
-                CrearMarca(Armas.espada, resultado.Point);
-                return;
-            }
-
-            // PENDIENTE: efecto
-            // Daña enemigo
-            enemigo.RecibirDaño(ObtenerDaño(Armas.espada));
-        }
     }
 
     private void CrearMarca(Armas arma, Vector3 posición)
@@ -583,7 +567,7 @@ public class ControladorArmas : SyncScript
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
         }
-        
+
         ejeEspada.Rotation = Quaternion.Identity;
     }
 }
