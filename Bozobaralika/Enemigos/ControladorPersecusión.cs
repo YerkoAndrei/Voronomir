@@ -17,6 +17,7 @@ public class ControladorPersecusión : SyncScript
     private int índiceRuta;
 
     private Vector3 movimiento;
+    private Vector3 posiciónJugador;
     private float distanciaRuta;
     private float distanciaJugador;
     private float distanciaMínima;
@@ -57,6 +58,7 @@ public class ControladorPersecusión : SyncScript
         if(tempoBusqueda <= 0)
             BuscarJugador();
 
+        MirarJugador();
         Perseguir();
     }
 
@@ -66,6 +68,15 @@ public class ControladorPersecusión : SyncScript
         índiceRuta = 0;
         tempoBusqueda = tiempoBusqueda;
         navegador.TryFindPath(jugador.Position, ruta);
+    }
+
+    private void MirarJugador()
+    {
+        posiciónJugador = jugador.Position - Entity.Transform.Position;
+        posiciónJugador.Y = 0f;
+        posiciónJugador.Normalize();
+
+        cuerpo.Orientation = Quaternion.LookRotation(posiciónJugador, Entity.Transform.WorldMatrix.Up);
     }
 
     private void Perseguir()
