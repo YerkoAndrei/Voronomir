@@ -49,7 +49,7 @@ public class InterfazJuego : StartupScript
 
     public void ActualizarVida(float porcentaje)
     {
-        imgVida.Opacity = MathUtil.Clamp((1 - porcentaje), 0.1f, 0.9f);
+        imgVida.Opacity = MathUtil.Clamp((1 - porcentaje), 0.6f, 0.9f);
         imgVida.Color = Color.Lerp(vidaVacía, vidaCompleta, porcentaje);
         imgVida.Width = tamañoVida * porcentaje;
     }
