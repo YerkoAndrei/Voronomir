@@ -317,6 +317,15 @@ public class ControladorArmas : SyncScript
 
         últimoDisparoEspada = (float)Game.UpdateTime.Total.TotalSeconds;
 
+        // Distancia máxima de disparo: 2
+        var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector + cámara.Entity.Transform.WorldMatrix.Forward * 2;
+        var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
+                                                     dirección,
+                                                     CollisionFilterGroups.DefaultFilter,
+                                                     CollisionFilterGroupFlags.StaticFilter);
+        if (resultado.Succeeded)
+            CrearMarca(armaActual, resultado.Point);
+
         // PENDIENTE: efecto
         armaMelé.Atacar(ObtenerDaño(Armas.espada));
         AnimarAtaque();
