@@ -67,10 +67,11 @@ Hierarchy:
                         Children:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 63dd9eef-ba83-4ac2-9b82-4bf6a7670c54
                             20d49bb548259541d92e7110aa4ed017: ref!! 9878a3a0-60e5-4bfa-9f66-5e7cc3737d18
+                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! c57c8823-ca8e-4ddc-9555-02c2dd33eae3
                     051ced03d01f78d0f55d906c927879e6: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: 9c8b7eb6-a941-48c5-96b0-494ced9be529
                         enemigo: "meléLigero"
-                        "armaMelé": null
+                        "armaMelé": ref!! a13e9284-0c3f-4cbd-90e6-f62de2f6c8a9
                     e49a27e25173089c0021387cbb1a6365: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: be76673d-0fe6-416b-9dad-ca1ea75969a5
                     b96e80a04d6c3438bc402c3dc55f77e2: !NavigationComponent
@@ -466,6 +467,39 @@ Hierarchy:
                             e18eaac0a7411411fbf210a96af11762: !SphereColliderShapeDesc
                                 Is2D: false
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: bc63eae8-8aec-4695-b5bd-b88a5444f14a
+                Name: "ArmaMelé"
+                Components:
+                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
+                        Id: c57c8823-ca8e-4ddc-9555-02c2dd33eae3
+                        Position: {X: 0.0, Y: 1.25, Z: -1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 2.0}
+                        Children: {}
+                    67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
+                        Id: a7a78a11-1feb-44a5-b9d9-4fd74404fcf3
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ee1f0f8d5ea461771e1abc59d4677dae: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    698c96cce57d4aa664164ef6bd395e46: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
+                        Id: a13e9284-0c3f-4cbd-90e6-f62de2f6c8a9
         -   Folder: null
             Entity:
                 Id: cd1986fa-cf35-44f0-aaa5-5532cdf56c75

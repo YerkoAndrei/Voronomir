@@ -1,9 +1,10 @@
-﻿using Stride.Core.Mathematics;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Navigation;
 using Stride.Physics;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Bozobaralika;
 
@@ -24,6 +25,7 @@ public class ControladorPersecusión : SyncScript
 
     private ControladorEnemigo controlador;
 
+    private bool atacando;
     private float velocidad;
     private float distanciaAtaque;
 
@@ -50,7 +52,7 @@ public class ControladorPersecusión : SyncScript
 
     public override void Update()
     {
-        if (!controlador.ObtenerActivo())
+        if (!controlador.ObtenerActivo() || atacando)
             return;
 
         // Busca cada cierto tiempo
@@ -90,7 +92,7 @@ public class ControladorPersecusión : SyncScript
         // Ataque
         if (distanciaJugador <= distanciaAtaque)
         {
-            controlador.Atacar();
+            Atacar();
             return;
         }
 
@@ -110,5 +112,20 @@ public class ControladorPersecusión : SyncScript
             else
                 ruta.Clear();
         }
+    }
+
+    private async void Atacar()
+    {
+        atacando = true;
+
+        // Delay de preparación de ataque
+        await Task.Delay((int)(controlador.ObtenerPreparaciónAtaque() * 1000));
+
+        controlador.Atacar();
+        cuerpo.SetVelocity(Vector3.Zero);
+        await Task.Delay((int)(controlador.ObtenerDescansoAtaque() * 1000));
+
+        BuscarJugador();
+        atacando = false;
     }
 }
