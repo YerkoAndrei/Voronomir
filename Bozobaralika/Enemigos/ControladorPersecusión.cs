@@ -121,6 +121,9 @@ public class ControladorPersecusión : SyncScript
         // Delay de preparación de ataque
         await Task.Delay((int)(controlador.ObtenerPreparaciónAtaque() * 1000));
 
+        if (!controlador.ObtenerActivo())
+            return;
+
         controlador.Atacar();
         cuerpo.SetVelocity(Vector3.Zero);
         await Task.Delay((int)(controlador.ObtenerDescansoAtaque() * 1000));
