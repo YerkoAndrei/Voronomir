@@ -1,0 +1,38 @@
+!Skeleton
+Id: a888224c-73f3-481d-8ab6-70e6af90ff0b
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Esqueleto.fbx
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    602b284b312eb99f92a84d0164bff2cd: {Name: RootNode, Depth: 0}
+    fb70aff1c2a55450259a5f075b183a8b: {Name: Esqueleto, Depth: 1}
+    32a709feeb9b102fb6f849e2cbb0c356: {Name: Esquelto, Depth: 1}
+    9fae67e5bb60a5bc4997f82044be8b73: {Name: raiz, Depth: 2}
+    7f53b45eb6e0b4283d83215f771d0262: {Name: pelvis, Depth: 3}
+    d2f1e90b880b7e05dec5b07106aa753b: {Name: columna_01, Depth: 4}
+    3a71c7fe21e1bb80b4e109961412321e: {Name: columna_02, Depth: 5}
+    54b25d6b2e551641302f5446c96b7cfc: {Name: pecho, Depth: 6}
+    8fa62ec8202eb9beed05b3dc3bc056d3: {Name: hombro.R, Depth: 7}
+    b6c1d898fb4b38aadcdb069bb27190c0: {Name: brazo.R, Depth: 8}
+    b220a38a6dabe899c6989efc3880e533: {Name: antebrazo.R, Depth: 9}
+    e0b8668a6f4e721d7b92326145d4a1cf: {Name: mano.R, Depth: 10}
+    bf139f1fe6a03324a4444cf8bea99b26: {Name: mano.R_end, Depth: 11}
+    90fb62aec6845a586c552569a33933dc: {Name: cuello, Depth: 7}
+    fbe3f1f18c4b5aa417a8569bbf01c569: {Name: cabeza, Depth: 8}
+    6c2b02c2dbf3381e395b00e20fbf2d18: {Name: cabeza_end, Depth: 9}
+    94f2e9564dbbdf42cb1894c7b90a736a: {Name: hombro.L, Depth: 7}
+    e4a65148a5346c107fa2f45943706b4a: {Name: brazo.L, Depth: 8}
+    62cfb7e5f1fecbd15054d449880e1e3a: {Name: antebrazo.L, Depth: 9}
+    aba56e1d75c0aa92cd63fcddb86ddec2: {Name: mano.L, Depth: 10}
+    4c48677b5406701b93a69f8baa95bf7a: {Name: mano.L_end, Depth: 11}
+    e50b8fcba72642a1ae12486ace8c6a21: {Name: musclo.R, Depth: 4}
+    71c611d077c8f28e69befe9ea5f9d7b9: {Name: canilla.R, Depth: 5}
+    f772475c1e70b5f407743fe942c92d0d: {Name: pie.R, Depth: 6}
+    4de8e45c801ed04a4e931688bc6d84b9: {Name: pie.R_end, Depth: 7}
+    44c6baa77e76731c948e2f037ec1a853: {Name: musclo.L, Depth: 4}
+    3041b6a236ad2cd2cdce331bac5ec4f0: {Name: canilla.L, Depth: 5}
+    cb205583760d5e63fdcd667c6a6febec: {Name: pie.L, Depth: 6}
+    be292e86595834194b78065aa1967181: {Name: pie.L_end, Depth: 7}
+~SourceHashes:
+    2e95cec48050acfd39e7949b9ed98c75~Esqueleto.fbx: e69bf456aea75fa2dcaee1e6654c110d
