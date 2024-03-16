@@ -22,6 +22,7 @@ Hierarchy:
         - ref!! d3476e3f-eee5-41dc-9c59-89b96ac24a2b
         - ref!! dd82e74f-617b-481e-bb36-34773b64d421
         - ref!! 01a3360a-7f24-41b6-9f84-af8196ae98d1
+        - ref!! 0aecf7f3-a7e1-4894-ad91-771d79253b2c
     Parts:
         -   Folder: null
             Entity:
@@ -42,6 +43,7 @@ Hierarchy:
                 Components:
                     a60cbff727993b50e85c8863a7d8a974: !CharacterComponent
                         Id: 74c9977b-d672-4514-98eb-5990b74351e4
+                        Enabled: false
                         CollisionGroup: KinematicFilter
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
@@ -78,6 +80,22 @@ Hierarchy:
                         Id: 1bc02936-6d2e-4e45-b5db-e67d123aee53
                         NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
+        -   Entity:
+                Id: 0aecf7f3-a7e1-4894-ad91-771d79253b2c
+                Name: Esqueleto
+                Components:
+                    73aa6c557e1c0152826853bbb7d00e0e: !TransformComponent
+                        Id: 3310f3eb-f541-40e1-ac33-56146c5d9347
+                        Position: {X: 5.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6ac340b3a9df00d337322210109d3bdc: !ModelComponent
+                        Id: 54bedfac-1cbe-427e-b02d-2753266929dc
+                        Model: 1ce33547-2031-4c35-9ec6-fb989d5fdcf2:Modelos/Esqueleto/Esqueleto
+                        Materials: {}
+                    4ad3fd70b7c6b0ed09852f9146f406eb: !Bozobaralika.AnimadorProcedural,Bozobaralika.Proyecto
+                        Id: 5627b909-8c10-4f4f-9f7c-250055100948
         -   Folder: null
             Entity:
                 Id: 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
