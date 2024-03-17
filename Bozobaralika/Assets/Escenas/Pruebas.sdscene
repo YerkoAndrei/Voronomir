@@ -22,8 +22,30 @@ Hierarchy:
         - ref!! d3476e3f-eee5-41dc-9c59-89b96ac24a2b
         - ref!! dd82e74f-617b-481e-bb36-34773b64d421
         - ref!! 01a3360a-7f24-41b6-9f84-af8196ae98d1
-        - ref!! 0aecf7f3-a7e1-4894-ad91-771d79253b2c
+        - ref!! 00a9628e-10ba-490b-b4de-135740c5d52b
     Parts:
+        -   Entity:
+                Id: 00a9628e-10ba-490b-b4de-135740c5d52b
+                Name: Esqueleto
+                Components:
+                    c33370e3f98af373ee21dfd537660cbb: !TransformComponent
+                        Id: 95499a9b-c54f-415f-b680-2b1e89734b76
+                        Position: {X: 5.0, Y: 4.7683716E-07, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            e63515d582d50c5ba2d168dda30b8d9f: ref!! 732cf8bb-695a-4b29-b917-88a8d7b4c121
+                    29a42a5152c5a4fae2367c086e9374e9: !ModelComponent
+                        Id: 2138665c-fd1c-4a2f-8ad0-6a166a3c81c7
+                        Model: f5db96bb-4bd0-421c-bccc-698ab68815b8:Modelos/Esqueleto/Esqueleto
+                        Materials: {}
+                    9ab6cbca7c563c5d1d6982b3d110b63d: !Bozobaralika.AnimadorProcedural,Bozobaralika.Proyecto
+                        Id: f6c95b28-6e9e-4151-ab35-ae8225f553a5
+                        objetivo: ref!! 732cf8bb-695a-4b29-b917-88a8d7b4c121
+                        huesos:
+                            abe55ae3aaf4989c3952f628f4179499: muslo.L
+                            ffa1e1f30e2aed3328a39ab28128d478: canilla.L
+                            4b571e7474abefa709a122b73a21eec2: pie.L
         -   Folder: null
             Entity:
                 Id: 017c6223-0006-4979-99c2-72b0de8729ea
@@ -70,32 +92,16 @@ Hierarchy:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 63dd9eef-ba83-4ac2-9b82-4bf6a7670c54
                             20d49bb548259541d92e7110aa4ed017: ref!! 9878a3a0-60e5-4bfa-9f66-5e7cc3737d18
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! c57c8823-ca8e-4ddc-9555-02c2dd33eae3
-                    051ced03d01f78d0f55d906c927879e6: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                    6833abf62140c96215f51b8892101442: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: 9c8b7eb6-a941-48c5-96b0-494ced9be529
                         enemigo: "meléLigero"
                         "armaMelé": ref!! a13e9284-0c3f-4cbd-90e6-f62de2f6c8a9
-                    e49a27e25173089c0021387cbb1a6365: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                    fc6fb82712014aee9ab0c8bfd994cd12: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: be76673d-0fe6-416b-9dad-ca1ea75969a5
                     b96e80a04d6c3438bc402c3dc55f77e2: !NavigationComponent
                         Id: 1bc02936-6d2e-4e45-b5db-e67d123aee53
                         NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
-        -   Entity:
-                Id: 0aecf7f3-a7e1-4894-ad91-771d79253b2c
-                Name: Esqueleto
-                Components:
-                    73aa6c557e1c0152826853bbb7d00e0e: !TransformComponent
-                        Id: 3310f3eb-f541-40e1-ac33-56146c5d9347
-                        Position: {X: 5.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    6ac340b3a9df00d337322210109d3bdc: !ModelComponent
-                        Id: 54bedfac-1cbe-427e-b02d-2753266929dc
-                        Model: 1ce33547-2031-4c35-9ec6-fb989d5fdcf2:Modelos/Esqueleto/Esqueleto
-                        Materials: {}
-                    4ad3fd70b7c6b0ed09852f9146f406eb: !Bozobaralika.AnimadorProcedural,Bozobaralika.Proyecto
-                        Id: 5627b909-8c10-4f4f-9f7c-250055100948
         -   Folder: null
             Entity:
                 Id: 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
@@ -191,8 +197,22 @@ Hierarchy:
                             ee1f0f8d5ea461771e1abc59d4677dae: !SphereColliderShapeDesc
                                 Is2D: false
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                    698c96cce57d4aa664164ef6bd395e46: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
+                    651da990edd6ca1f6bd9064afa95dc40: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
                         Id: 72ecda8e-7d43-469a-b3ed-b87cb747013c
+        -   Entity:
+                Id: 18f0495c-860e-4007-996c-a377da962457
+                Name: ObjetivoPieIzq
+                Components:
+                    272a833c44cdf9eaa08c2cdf3291040a: !TransformComponent
+                        Id: 732cf8bb-695a-4b29-b917-88a8d7b4c121
+                        Position: {X: 0.1352, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    7c893823f8ff4a1bdb6635e8e200a2d8: !ModelComponent
+                        Id: 40fe9b1c-9aa2-4013-b2f3-7d0114f9449e
+                        Model: 3de091c5-25d4-4c12-8e62-18cbe4432ced:Sphere
+                        Materials: {}
         -   Entity:
                 Id: 2959869c-59c7-47b9-95c6-ff39d0f29ccb
                 Name: Modelo
@@ -516,7 +536,7 @@ Hierarchy:
                             ee1f0f8d5ea461771e1abc59d4677dae: !SphereColliderShapeDesc
                                 Is2D: false
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                    698c96cce57d4aa664164ef6bd395e46: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
+                    66881ca948eb2309ad35ce8ad0c2df92: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
                         Id: a13e9284-0c3f-4cbd-90e6-f62de2f6c8a9
         -   Folder: null
             Entity:
@@ -678,7 +698,7 @@ Hierarchy:
                                 Length: 1.0
                                 LocalOffset: {X: 0.0, Y: 0.75, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    9275a41acefd65a081c0eff39b6d73a5: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
+                    13b0e8efe669dc82ab4fd408504a6cc6: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
                         Id: c46f69dc-db00-454e-8f32-19c17e5759b2
                         cabeza: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
                         "cámara": ref!! d37efe62-6123-4994-bb6a-66753b20c695
@@ -690,10 +710,10 @@ Hierarchy:
                         Children:
                             4f555758721bbf121dfb821111b51961: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
                             30cb10bb707641b055d441b3eb811031: ref!! f71c0d70-242d-498c-8708-4aeddcd57fd6
-                    79267b1b7b89de3186bae9b5b45149c1: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
+                    08b035116f1c73216e8534ad2c5805a1: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
                         Id: 57ced855-0f8a-4092-9133-ae41e2e76b87
                         Priority: 10
-                    fd8388ddcff45c3f4e28979df1e76d76: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
+                    1f4e160477b1c935668610ce883135e1: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: cf114505-16b9-4712-a010-c2ba1ce114e1
                         "armaMelé": ref!! 72ecda8e-7d43-469a-b3ed-b87cb747013c
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/MarcaBala
@@ -790,7 +810,7 @@ Hierarchy:
                 Id: ff5480c7-125b-4faf-a925-a78b68f1b73b
                 Name: Interfaz
                 Components:
-                    28a4571dc21e7e82f14f7f65cc326f0d: !Bozobaralika.InterfazJuego,Bozobaralika.Proyecto
+                    aabb26d84ed19ef7003fce10de6b5d02: !Bozobaralika.InterfazJuego,Bozobaralika.Proyecto
                         Id: ac089fc3-6539-46f3-a199-bf1b524b39f9
                         vidaCompleta: {R: 0, G: 255, B: 0, A: 255}
                         "vidaVacía": {R: 255, G: 0, B: 0, A: 255}
