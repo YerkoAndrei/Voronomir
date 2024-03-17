@@ -12,8 +12,8 @@ public class AnimadorProcedural : SyncScript
     private Vector3 objetivoPrueba0 = new Vector3(5, 0, 4);
     private Vector3 objetivoPrueba1 = new Vector3(5, 0, 0);
 
-    private Vector3 objetivoKI0 = new Vector3(0, -1, 1f);
-    private Vector3 objetivoKI1 = new Vector3(0, -1, -0.1f);
+    private Vector3 objetivoKI0 = new Vector3(0, 0, 1f);
+    private Vector3 objetivoKI1 = new Vector3(0, 0, -0.1f);
     private Vector3 baseIzq;
 
     //real
@@ -103,7 +103,7 @@ public class AnimadorProcedural : SyncScript
     private Vector3[] PosicionarInverso(Vector3[] _posicionesRectas)
     {
         // Cálculo desde punta
-        posicionesInversas[cantidadHuesos - 1] = objetivo.Position;
+        posicionesInversas[cantidadHuesos - 1] = objetivo.Position - Vector3.UnitY;
 
         for (int i = (cantidadHuesos - 2); i >= 0; i--)
         {
