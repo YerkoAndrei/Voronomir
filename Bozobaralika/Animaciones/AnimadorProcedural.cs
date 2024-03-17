@@ -12,8 +12,8 @@ public class AnimadorProcedural : SyncScript
     private Vector3 objetivoPrueba0 = new Vector3(5, 0, 4);
     private Vector3 objetivoPrueba1 = new Vector3(5, 0, 0);
 
-    private Vector3 objetivoKI0 = new Vector3(0, 0, 1f);
-    private Vector3 objetivoKI1 = new Vector3(0, 0, -0.1f);
+    private Vector3 objetivoKI0 = new Vector3(0, -1, 1f);
+    private Vector3 objetivoKI1 = new Vector3(0, -1, -0.1f);
     private Vector3 baseIzq;
 
     //real
@@ -94,9 +94,9 @@ public class AnimadorProcedural : SyncScript
             if (i != (cantidadHuesos - 1))
                 esqueleto.NodeTransformations[idHuesos[i]].Transform.Rotation = Quaternion.LookRotation(posicionesFinales[i + 1] - esqueleto.NodeTransformations[idHuesos[i]].Transform.Position, Vector3.UnitY);
             else
-                esqueleto.NodeTransformations[idHuesos[i]].Transform.Rotation = Quaternion.LookRotation(objetivo.Position - esqueleto.NodeTransformations[idHuesos[i]].Transform.Position, Vector3.UnitY);            
+                esqueleto.NodeTransformations[idHuesos[i]].Transform.Rotation = Quaternion.LookRotation(objetivo.Position - esqueleto.NodeTransformations[idHuesos[i]].Transform.Position, Vector3.UnitY);
             */
-        }
+        }        
     }
 
     // FABRIK Backward
@@ -107,7 +107,7 @@ public class AnimadorProcedural : SyncScript
 
         for (int i = (cantidadHuesos - 2); i >= 0; i--)
         {
-            var dirección = posicionesInversas[i + 1] - _posicionesRectas[i];
+            var dirección = Vector3.Normalize(posicionesInversas[i + 1] - _posicionesRectas[i]);
             posicionesInversas[i] = posicionesInversas[i + 1] + (dirección * longitudHuesos[i]);
         }
         return posicionesInversas;
@@ -121,7 +121,7 @@ public class AnimadorProcedural : SyncScript
 
         for (int i = 1; i < cantidadHuesos; i++)
         {
-            var dirección = posicionesRectas[i - 1] - _posicionesInversas[i];
+            var dirección = Vector3.Normalize(posicionesRectas[i - 1] - _posicionesInversas[i]);
             posicionesRectas[i] = posicionesRectas[i - 1] + (dirección * longitudHuesos[i - 1]);
         }
         return posicionesRectas;

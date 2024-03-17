@@ -42,7 +42,7 @@ Hierarchy:
                         Id: 2138665c-fd1c-4a2f-8ad0-6a166a3c81c7
                         Model: f5db96bb-4bd0-421c-bccc-698ab68815b8:Modelos/Esqueleto/Esqueleto
                         Materials: {}
-                    9ab6cbca7c563c5d1d6982b3d110b63d: !Bozobaralika.AnimadorProcedural,Bozobaralika.Proyecto
+                    beb2170d68378d0e1635e5aaca324cd5: !Bozobaralika.AnimadorProcedural,Bozobaralika.Proyecto
                         Id: f6c95b28-6e9e-4151-ab35-ae8225f553a5
                         objetivo: ref!! 732cf8bb-695a-4b29-b917-88a8d7b4c121
                         huesos:
@@ -95,11 +95,11 @@ Hierarchy:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 63dd9eef-ba83-4ac2-9b82-4bf6a7670c54
                             20d49bb548259541d92e7110aa4ed017: ref!! 9878a3a0-60e5-4bfa-9f66-5e7cc3737d18
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! c57c8823-ca8e-4ddc-9555-02c2dd33eae3
-                    6833abf62140c96215f51b8892101442: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                    c70c81b8a8805ed6edf8c8f96fa2d9ac: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: 9c8b7eb6-a941-48c5-96b0-494ced9be529
                         enemigo: "meléLigero"
                         "armaMelé": ref!! a13e9284-0c3f-4cbd-90e6-f62de2f6c8a9
-                    fc6fb82712014aee9ab0c8bfd994cd12: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                    a53820a9348989738db4b224a9d06c06: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: be76673d-0fe6-416b-9dad-ca1ea75969a5
                     b96e80a04d6c3438bc402c3dc55f77e2: !NavigationComponent
                         Id: 1bc02936-6d2e-4e45-b5db-e67d123aee53
@@ -200,7 +200,7 @@ Hierarchy:
                             ee1f0f8d5ea461771e1abc59d4677dae: !SphereColliderShapeDesc
                                 Is2D: false
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                    651da990edd6ca1f6bd9064afa95dc40: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
+                    2ede9a5dad8ad72467ab05f84652d5ee: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
                         Id: 72ecda8e-7d43-469a-b3ed-b87cb747013c
         -   Entity:
                 Id: 18f0495c-860e-4007-996c-a377da962457
@@ -208,7 +208,7 @@ Hierarchy:
                 Components:
                     272a833c44cdf9eaa08c2cdf3291040a: !TransformComponent
                         Id: 732cf8bb-695a-4b29-b917-88a8d7b4c121
-                        Position: {X: 0.1352, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.1, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.1, Y: 0.1, Z: 0.1}
                         Children: {}
@@ -576,7 +576,7 @@ Hierarchy:
                             ee1f0f8d5ea461771e1abc59d4677dae: !SphereColliderShapeDesc
                                 Is2D: false
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                    66881ca948eb2309ad35ce8ad0c2df92: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
+                    d23cc2bc7a312f175981ea8013b4d432: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
                         Id: a13e9284-0c3f-4cbd-90e6-f62de2f6c8a9
         -   Folder: null
             Entity:
@@ -738,7 +738,7 @@ Hierarchy:
                                 Length: 1.0
                                 LocalOffset: {X: 0.0, Y: 0.75, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    13b0e8efe669dc82ab4fd408504a6cc6: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
+                    198a1675755723e5c944af1d76d9df79: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
                         Id: c46f69dc-db00-454e-8f32-19c17e5759b2
                         cabeza: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
                         "cámara": ref!! d37efe62-6123-4994-bb6a-66753b20c695
@@ -750,10 +750,10 @@ Hierarchy:
                         Children:
                             4f555758721bbf121dfb821111b51961: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
                             30cb10bb707641b055d441b3eb811031: ref!! f71c0d70-242d-498c-8708-4aeddcd57fd6
-                    08b035116f1c73216e8534ad2c5805a1: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
+                    e21b2a8a890c40f611fe2462b32f170d: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
                         Id: 57ced855-0f8a-4092-9133-ae41e2e76b87
                         Priority: 10
-                    1f4e160477b1c935668610ce883135e1: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
+                    780dedeeefd2f990b2fddb618fee0eb0: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: cf114505-16b9-4712-a010-c2ba1ce114e1
                         "armaMelé": ref!! 72ecda8e-7d43-469a-b3ed-b87cb747013c
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/MarcaBala
@@ -869,7 +869,7 @@ Hierarchy:
                 Id: ff5480c7-125b-4faf-a925-a78b68f1b73b
                 Name: Interfaz
                 Components:
-                    aabb26d84ed19ef7003fce10de6b5d02: !Bozobaralika.InterfazJuego,Bozobaralika.Proyecto
+                    a4fe29122b45e8a65312e79fda1bd273: !Bozobaralika.InterfazJuego,Bozobaralika.Proyecto
                         Id: ac089fc3-6539-46f3-a199-bf1b524b39f9
                         vidaCompleta: {R: 0, G: 255, B: 0, A: 255}
                         "vidaVacía": {R: 255, G: 0, B: 0, A: 255}
