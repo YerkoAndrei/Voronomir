@@ -35,6 +35,9 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             e63515d582d50c5ba2d168dda30b8d9f: ref!! 732cf8bb-695a-4b29-b917-88a8d7b4c121
+                            f78520db03c94679b7cf340bf0800a32: ref!! dbb347ad-6268-462b-b558-63571b5e5234
+                            d7aff48bdf3cfe7bb1fe9a21876a101f: ref!! 832752c1-ddaa-4008-80c8-5d50113d762d
+                            7aff2a0467b53768fcf360075d625d6c: ref!! 85f6c7e4-efe1-4141-b7f7-afff383cbc78
                     29a42a5152c5a4fae2367c086e9374e9: !ModelComponent
                         Id: 2138665c-fd1c-4a2f-8ad0-6a166a3c81c7
                         Model: f5db96bb-4bd0-421c-bccc-698ab68815b8:Modelos/Esqueleto/Esqueleto
@@ -277,6 +280,25 @@ Hierarchy:
                         Materials: {}
         -   Folder: null
             Entity:
+                Id: 44e1cf8f-145e-40a2-bd49-529904c84703
+                Name: rodilla
+                Components:
+                    272a833c44cdf9eaa08c2cdf3291040a: !TransformComponent
+                        Id: 832752c1-ddaa-4008-80c8-5d50113d762d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.001, Y: 0.001, Z: 0.001}
+                        Children: {}
+                    7c893823f8ff4a1bdb6635e8e200a2d8: !ModelComponent
+                        Id: ab6a83e9-8441-4205-95b2-ee3d36f7fa05
+                        Model: 3de091c5-25d4-4c12-8e62-18cbe4432ced:Sphere
+                        Materials: {}
+                    4136f8a2a236c224684bd5dd1a580789: !ModelNodeLinkComponent
+                        Id: eab66eba-16c0-4bad-98b3-03ea6add1d91
+                        Target: ref!! 2138665c-fd1c-4a2f-8ad0-6a166a3c81c7
+                        NodeName: canilla.L
+        -   Folder: null
+            Entity:
                 Id: 4b535315-7a21-4b5a-bc52-2e4c05024fc2
                 Name: Cabeza
                 Components:
@@ -408,6 +430,24 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             03cac127b85e429c2515bdcea74b1c68: ref!! fe02ed36-e4ce-4251-9332-6401627e3d29
+        -   Entity:
+                Id: 798a5af1-2b4b-496c-bb56-f9929c185557
+                Name: tobillo
+                Components:
+                    272a833c44cdf9eaa08c2cdf3291040a: !TransformComponent
+                        Id: dbb347ad-6268-462b-b558-63571b5e5234
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.001, Y: 0.001, Z: 0.001}
+                        Children: {}
+                    7c893823f8ff4a1bdb6635e8e200a2d8: !ModelComponent
+                        Id: 70301639-109d-479f-a49e-528cd816e295
+                        Model: 3de091c5-25d4-4c12-8e62-18cbe4432ced:Sphere
+                        Materials: {}
+                    9e1b80d12c7a70917d799d7f14165eca: !ModelNodeLinkComponent
+                        Id: 86165649-5fd9-499a-8186-0dcbd89a2d0e
+                        Target: ref!! 2138665c-fd1c-4a2f-8ad0-6a166a3c81c7
+                        NodeName: pie.L
         -   Folder: null
             Entity:
                 Id: 8b42ea7d-752a-4920-97e2-1646ec7b9189
@@ -727,6 +767,25 @@ Hierarchy:
                         ejeEscopeta: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
                         ejeMetralleta: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
                         ejeRife: ref!! 8374c3d3-7007-4071-9f10-14045dd1b355
+        -   Folder: null
+            Entity:
+                Id: e82c2fe3-cec9-41ef-9ce3-c8ad5ed6b76b
+                Name: cadera
+                Components:
+                    272a833c44cdf9eaa08c2cdf3291040a: !TransformComponent
+                        Id: 85f6c7e4-efe1-4141-b7f7-afff383cbc78
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.001, Y: 0.001, Z: 0.001}
+                        Children: {}
+                    7c893823f8ff4a1bdb6635e8e200a2d8: !ModelComponent
+                        Id: d1ec2dc3-4f28-49a9-a649-c42f40f4d4b2
+                        Model: 3de091c5-25d4-4c12-8e62-18cbe4432ced:Sphere
+                        Materials: {}
+                    4136f8a2a236c224684bd5dd1a580789: !ModelNodeLinkComponent
+                        Id: b69aee3a-3c44-42cc-a61b-854ccc8b2079
+                        Target: ref!! 2138665c-fd1c-4a2f-8ad0-6a166a3c81c7
+                        NodeName: muslo.L
         -   Folder: null
             Entity:
                 Id: eb300b4d-c14f-4f40-b4b3-e09e965b69a5

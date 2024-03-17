@@ -12,7 +12,7 @@ public class AnimadorProcedural : SyncScript
     private Vector3 objetivoPrueba0 = new Vector3(5, 0, 4);
     private Vector3 objetivoPrueba1 = new Vector3(5, 0, 0);
 
-    private Vector3 objetivoKI0 = new Vector3(0, 0, 0.5f);
+    private Vector3 objetivoKI0 = new Vector3(0, 0, 1f);
     private Vector3 objetivoKI1 = new Vector3(0, 0, -0.1f);
     private Vector3 baseIzq;
 
@@ -36,7 +36,7 @@ public class AnimadorProcedural : SyncScript
     {
         modelo = Entity.Get<ModelComponent>();
         esqueleto = modelo.Skeleton;
-        iteraciones = 5;
+        iteraciones = 3;
 
         // Inicialización
         cantidadHuesos = huesos.Count;
@@ -58,9 +58,10 @@ public class AnimadorProcedural : SyncScript
 
         // Longitud de huesos
         longitudHuesos[(cantidadHuesos - 1)] = 0;
+        esqueleto.ResetInitialValues();
         for (int i = 0; i < (cantidadHuesos - 1); i++)
         {
-            longitudHuesos[i] = (esqueleto.NodeTransformations[idHuesos[i + 1]].Transform.Position - esqueleto.NodeTransformations[idHuesos[i]].Transform.Position).Length();
+            longitudHuesos[i] = (esqueleto.NodeTransformations[idHuesos[i]].Transform.Position - esqueleto.NodeTransformations[idHuesos[i + 1]].Transform.Position).Length();
         }
 
         baseIzq = objetivo.Position;
@@ -75,27 +76,26 @@ public class AnimadorProcedural : SyncScript
 
     private void AplicarKI()
     {
-        // Inicializando posiciones
         for (int i = 0; i < cantidadHuesos; i++)
         {
             posicionesFinales[i] = esqueleto.NodeTransformations[idHuesos[i]].Transform.Position;
         }
 
-        // Aplicando FABRIK
         for (int i = 0; i < iteraciones; i++)
         {
+            // FABRIK
             posicionesFinales = PosicionarRecto(PosicionarInverso(posicionesFinales));
         }
 
-        // Aplicando resultados
         for (int i = 0; i < cantidadHuesos; i++)
         {
             esqueleto.NodeTransformations[idHuesos[i]].Transform.Position = posicionesFinales[i];
-
+            /*
             if (i != (cantidadHuesos - 1))
                 esqueleto.NodeTransformations[idHuesos[i]].Transform.Rotation = Quaternion.LookRotation(posicionesFinales[i + 1] - esqueleto.NodeTransformations[idHuesos[i]].Transform.Position, Vector3.UnitY);
             else
                 esqueleto.NodeTransformations[idHuesos[i]].Transform.Rotation = Quaternion.LookRotation(objetivo.Position - esqueleto.NodeTransformations[idHuesos[i]].Transform.Position, Vector3.UnitY);            
+            */
         }
     }
 
@@ -107,7 +107,7 @@ public class AnimadorProcedural : SyncScript
 
         for (int i = (cantidadHuesos - 2); i >= 0; i--)
         {
-            var dirección = Vector3.Normalize(_posicionesRectas[i] - posicionesInversas[i + 1]);
+            var dirección = posicionesInversas[i + 1] - _posicionesRectas[i];
             posicionesInversas[i] = posicionesInversas[i + 1] + (dirección * longitudHuesos[i]);
         }
         return posicionesInversas;
@@ -121,7 +121,7 @@ public class AnimadorProcedural : SyncScript
 
         for (int i = 1; i < cantidadHuesos; i++)
         {
-            var dirección = Vector3.Normalize(_posicionesInversas[i] - posicionesRectas[i - 1]);
+            var dirección = posicionesRectas[i - 1] - _posicionesInversas[i];
             posicionesRectas[i] = posicionesRectas[i - 1] + (dirección * longitudHuesos[i - 1]);
         }
         return posicionesRectas;
