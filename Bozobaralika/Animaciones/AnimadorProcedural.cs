@@ -57,12 +57,10 @@ public class AnimadorProcedural : SyncScript
         }
 
         // Longitud de huesos
-        for (int i = 0; i < cantidadHuesos; i++)
+        longitudHuesos[(cantidadHuesos - 1)] = 0;
+        for (int i = 0; i < (cantidadHuesos - 1); i++)
         {
-            if (i < (cantidadHuesos - 1))
-                longitudHuesos[i] = (esqueleto.NodeTransformations[idHuesos[i + 1]].Transform.Position - esqueleto.NodeTransformations[idHuesos[i]].Transform.Position).Length();
-            else
-                longitudHuesos[i] = 0;
+            longitudHuesos[i] = (esqueleto.NodeTransformations[idHuesos[i + 1]].Transform.Position - esqueleto.NodeTransformations[idHuesos[i]].Transform.Position).Length();
         }
 
         baseIzq = objetivo.Position;
@@ -105,15 +103,12 @@ public class AnimadorProcedural : SyncScript
     private Vector3[] PosicionarInverso(Vector3[] _posicionesRectas)
     {
         // Cálculo desde punta
-        for (int i = (cantidadHuesos - 1); i >= 0; i--)
+        posicionesInversas[cantidadHuesos - 1] = objetivo.Position;
+
+        for (int i = (cantidadHuesos - 2); i >= 0; i--)
         {
-            if (i == (cantidadHuesos - 1))
-                posicionesInversas[i] = objetivo.WorldMatrix.TranslationVector;
-            else
-            {
-                var dirección = Vector3.Normalize(_posicionesRectas[i] - posicionesInversas[i + 1]);
-                posicionesInversas[i] = posicionesInversas[i + 1] + (dirección * longitudHuesos[i]);
-            }
+            var dirección = Vector3.Normalize(_posicionesRectas[i] - posicionesInversas[i + 1]);
+            posicionesInversas[i] = posicionesInversas[i + 1] + (dirección * longitudHuesos[i]);
         }
         return posicionesInversas;
     }
@@ -122,15 +117,12 @@ public class AnimadorProcedural : SyncScript
     private Vector3[] PosicionarRecto(Vector3[] _posicionesInversas)
     {
         // Cálculo desde raíz
-        for (int i = 0; i < cantidadHuesos; i++)
+        posicionesRectas[0] = esqueleto.NodeTransformations[idHuesos[0]].Transform.Position;
+
+        for (int i = 1; i < cantidadHuesos; i++)
         {
-            if (i  == 0)
-                posicionesRectas[i] = esqueleto.NodeTransformations[idHuesos[0]].Transform.Position;
-            else
-            {
-                var dirección = Vector3.Normalize(_posicionesInversas[i] - posicionesRectas[i - 1]);
-                posicionesRectas[i] = posicionesRectas[i - 1] + (dirección * longitudHuesos[i - 1]);
-            }
+            var dirección = Vector3.Normalize(_posicionesInversas[i] - posicionesRectas[i - 1]);
+            posicionesRectas[i] = posicionesRectas[i - 1] + (dirección * longitudHuesos[i - 1]);
         }
         return posicionesRectas;
     }
@@ -174,7 +166,7 @@ public class AnimadorProcedural : SyncScript
         while (tiempoLerp < duración)
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-            
+
             if (objetivo == objetivoPrueba0)
                 Entity.Transform.Position = Vector3.Lerp(objetivoPrueba1, objetivoPrueba0, tiempo);
             else
