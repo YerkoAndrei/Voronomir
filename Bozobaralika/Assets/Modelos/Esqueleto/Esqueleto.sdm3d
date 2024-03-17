@@ -1,15 +1,15 @@
 !Model
-Id: 1ce33547-2031-4c35-9ec6-fb989d5fdcf2
+Id: f5db96bb-4bd0-421c-bccc-698ab68815b8
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Source: !file Esqueleto.fbx
-Skeleton: a888224c-73f3-481d-8ab6-70e6af90ff0b:Modelos/Esqueleto/Esqueleto Skeleton
+Skeleton: e5b77f38-7462-49d1-966b-556a92d4a4b5:Modelos/Esqueleto/Esqueleto Skeleton
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Materials:
-    31a7cc1c65524d8ce866c14ca1476ae7:
+    377cd50daed0dce11f8a05b6ddbab0b8:
         Name: Esqueleto
         MaterialInstance:
             Material: ce207942-5b70-4702-83c7-eec8a7b104a3:Modelos/Esqueleto/Material
 Modifiers: {}
 ~SourceHashes:
-    a98c257d2fe13166943cbb8be8c4c365~Esqueleto.fbx: e69bf456aea75fa2dcaee1e6654c110d
+    563d975c15793756c5b98d6411a44dda~Esqueleto.fbx: 20c519a0f4827cb4b58de9e2476a9f86

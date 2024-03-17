@@ -1,38 +1,38 @@
 !Skeleton
-Id: a888224c-73f3-481d-8ab6-70e6af90ff0b
+Id: e5b77f38-7462-49d1-966b-556a92d4a4b5
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Source: !file Esqueleto.fbx
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Nodes:
-    602b284b312eb99f92a84d0164bff2cd: {Name: RootNode, Depth: 0}
-    fb70aff1c2a55450259a5f075b183a8b: {Name: Esqueleto, Depth: 1}
-    32a709feeb9b102fb6f849e2cbb0c356: {Name: Esquelto, Depth: 1}
-    9fae67e5bb60a5bc4997f82044be8b73: {Name: raiz, Depth: 2}
-    7f53b45eb6e0b4283d83215f771d0262: {Name: pelvis, Depth: 3}
-    d2f1e90b880b7e05dec5b07106aa753b: {Name: columna_01, Depth: 4}
-    3a71c7fe21e1bb80b4e109961412321e: {Name: columna_02, Depth: 5}
-    54b25d6b2e551641302f5446c96b7cfc: {Name: pecho, Depth: 6}
-    8fa62ec8202eb9beed05b3dc3bc056d3: {Name: hombro.R, Depth: 7}
-    b6c1d898fb4b38aadcdb069bb27190c0: {Name: brazo.R, Depth: 8}
-    b220a38a6dabe899c6989efc3880e533: {Name: antebrazo.R, Depth: 9}
-    e0b8668a6f4e721d7b92326145d4a1cf: {Name: mano.R, Depth: 10}
-    bf139f1fe6a03324a4444cf8bea99b26: {Name: mano.R_end, Depth: 11}
-    90fb62aec6845a586c552569a33933dc: {Name: cuello, Depth: 7}
-    fbe3f1f18c4b5aa417a8569bbf01c569: {Name: cabeza, Depth: 8}
-    6c2b02c2dbf3381e395b00e20fbf2d18: {Name: cabeza_end, Depth: 9}
-    94f2e9564dbbdf42cb1894c7b90a736a: {Name: hombro.L, Depth: 7}
-    e4a65148a5346c107fa2f45943706b4a: {Name: brazo.L, Depth: 8}
-    62cfb7e5f1fecbd15054d449880e1e3a: {Name: antebrazo.L, Depth: 9}
-    aba56e1d75c0aa92cd63fcddb86ddec2: {Name: mano.L, Depth: 10}
-    4c48677b5406701b93a69f8baa95bf7a: {Name: mano.L_end, Depth: 11}
-    e50b8fcba72642a1ae12486ace8c6a21: {Name: musclo.R, Depth: 4}
-    71c611d077c8f28e69befe9ea5f9d7b9: {Name: canilla.R, Depth: 5}
-    f772475c1e70b5f407743fe942c92d0d: {Name: pie.R, Depth: 6}
-    4de8e45c801ed04a4e931688bc6d84b9: {Name: pie.R_end, Depth: 7}
-    44c6baa77e76731c948e2f037ec1a853: {Name: musclo.L, Depth: 4}
-    3041b6a236ad2cd2cdce331bac5ec4f0: {Name: canilla.L, Depth: 5}
-    cb205583760d5e63fdcd667c6a6febec: {Name: pie.L, Depth: 6}
-    be292e86595834194b78065aa1967181: {Name: pie.L_end, Depth: 7}
+    85c32db68700e351a5b0ca099598efd8: {Name: RootNode, Depth: 0}
+    09c4e3df20e0de001f64cc075d6359c1: {Name: Esqueleto, Depth: 1}
+    fd0d4446f47202fdacfe5f9fb0f31c00: {Name: Esquelto, Depth: 1}
+    297e2a2ca22c8c4e27ea5473abcc18af: {Name: "raíz", Depth: 2}
+    53e3c60cb88f61b87178de36d830b476: {Name: pelvis, Depth: 3}
+    e3ace6211035e21bade0e0e36bf71764: {Name: columna_01, Depth: 4}
+    aaec22b27f97117e85fd93ef71025312: {Name: columna_02, Depth: 5}
+    5172287e334ac74dfd692658093e5263: {Name: pecho, Depth: 6}
+    9586553483efd3ddb1974aa98e67431c: {Name: hombro.R, Depth: 7}
+    0ed62016454ff072f2e690a2088d89d0: {Name: brazo.R, Depth: 8}
+    7f7636c2301f6b4314aaecef2a0a2545: {Name: antebrazo.R, Depth: 9}
+    292145bb2a21ae4eaf6264493acc3ffe: {Name: mano.R, Depth: 10}
+    08ba2a4e8c88fbb789db5e1b74ec22a1: {Name: mano.R_end, Depth: 11}
+    d3df7e8abf9c1a0625c31f8cd3a133ce: {Name: cuello, Depth: 7}
+    cc701f94f32cc89714d0ee726fc96747: {Name: cabeza, Depth: 8}
+    f38cd40c4a9f44afc76cf21cd7ccee20: {Name: cabeza_end, Depth: 9}
+    0369a1a8a04840d000b117a58ebf66cc: {Name: hombro.L, Depth: 7}
+    821d8dcf8957ce60befd15ad948b090a: {Name: brazo.L, Depth: 8}
+    f2b5833b84dd97d98e69c207bc4cab4a: {Name: antebrazo.L, Depth: 9}
+    4ae76512dfdd6e4d768cd31159bb5f55: {Name: mano.L, Depth: 10}
+    9dc25ce7ad7e1352366336e573b1bce2: {Name: mano.L_end, Depth: 11}
+    046733cb28322039e4ae1df8ae4535af: {Name: muslo.R, Depth: 4}
+    3abd08b97318af525b63a450df022def: {Name: canilla.R, Depth: 5}
+    aedbf095317da7293f4b8bffa3ccc8d1: {Name: pie.R, Depth: 6}
+    9cf3d3de4e7c4253b26e40cef2fb9a20: {Name: pie.R_end, Depth: 7}
+    c3d8e0b06fc889721af9ae34b18c384a: {Name: muslo.L, Depth: 4}
+    f36b109d1c18022f8433106b5861d5ba: {Name: canilla.L, Depth: 5}
+    36616fc1768948820e46b27de316c526: {Name: pie.L, Depth: 6}
+    f8729d9f9c8ba49bd6589a14a1d6ba4b: {Name: pie.L_end, Depth: 7}
 ~SourceHashes:
-    2e95cec48050acfd39e7949b9ed98c75~Esqueleto.fbx: e69bf456aea75fa2dcaee1e6654c110d
+    60b82330f057ad4ff6b47b2c22c845f0~Esqueleto.fbx: 20c519a0f4827cb4b58de9e2476a9f86
