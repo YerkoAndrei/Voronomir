@@ -113,30 +113,45 @@ public class ControladorJugador : SyncScript
         interfaz.Morir();
     }
 
-    public async void VibrarCámara(float fuerza, int iteraciones)
+    public void VibrarCámara(float fuerza, int iteraciones)
     {
         var duración = 0.01f;
-        var posiciones = new List<Vector3>();
+        RotarCámara(duración, fuerza, iteraciones);
 
+        var duraciónMovimiento = duración * iteraciones;
+        MoverCámara(duraciónMovimiento, fuerza);
+    }
+
+    public async void RotarCámara(float duración, float fuerza, int iteraciones)
+    {
+        // Vibración se suaviza al final
+        var aleatorios = new List<Vector2>();
         for (int i = 0; i < iteraciones; i++)
         {
-            var aletorioX = RangoAleatorio(-0.02f, 0.02f);
-            var aletorioY = RangoAleatorio(-0.02f, 0.02f);
-            var aletorioZ = RangoAleatorio(-0.01f, 0.06f);
-            posiciones.Add(posiciónCabeza + (new Vector3(aletorioX, aletorioY, aletorioZ) * fuerza));
+            aleatorios.Add(new Vector2(RangoAleatorio(-0.05f, 0.05f), RangoAleatorio(-0.05f, 0.05f)));
+        }
+        aleatorios = aleatorios.OrderByDescending(o => Vector2.Distance(o, Vector2.Zero)).ToList();
+
+        // Vectores ordenados a cuaterniones
+        var rotaciónCabeza = cámara.Entity.Transform.Rotation;
+        var rotaciones = new List<Quaternion>();
+        for (int i = 0; i < iteraciones; i++)
+        {
+            var rotación = rotaciónCabeza;
+            rotación *= Quaternion.RotationX(aleatorios[i].X);
+            rotación *= Quaternion.RotationY(aleatorios[i].Y);
+            rotaciones.Add(rotación * fuerza);
         }
 
-        // Vibración se suaviza al final
-        posiciones = posiciones.OrderByDescending(o => Vector3.Distance(o, posiciónCabeza)).ToList();
-
+        // Iteraciones de rotación
         for (int i = 0; i < iteraciones; i++)
         {
-            var inicial = cabeza.Position;
-            var objetivo = posiciónCabeza;
+            var inicial = cámara.Entity.Transform.Rotation;
+            var objetivo = Quaternion.Identity;
 
             // Última iteración vuelve
             if (i < (iteraciones - 1))
-                objetivo = posiciones[i];
+                objetivo = rotaciones[i];
 
             float tiempoLerp = 0;
             float tiempo = 0;
@@ -144,11 +159,28 @@ public class ControladorJugador : SyncScript
             while (tiempoLerp < duración)
             {
                 tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-                cabeza.Position = Vector3.Lerp(inicial, objetivo, tiempo);
+                cámara.Entity.Transform.Rotation = Quaternion.Lerp(inicial, objetivo, tiempo);
 
                 tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
                 await Task.Delay(1);
             }
+        }
+        cámara.Entity.Transform.Rotation = rotaciónCabeza;
+    }
+
+    public async void MoverCámara(float duración, float fuerza)
+    {
+        var retroceso = posiciónCabeza + (new Vector3(0, 0, 0.012f) * fuerza);
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+            cabeza.Position = Vector3.Lerp(retroceso, posiciónCabeza, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            await Task.Delay(1);
         }
         cabeza.Position = posiciónCabeza;
     }
