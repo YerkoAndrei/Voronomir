@@ -81,9 +81,7 @@ public class ControladorArmas : SyncScript
         armaMelé.Iniciar(true);
 
         // Filtros disparos
-        colisionesDisparo = new CollisionFilterGroupFlags();
-        colisionesDisparo |= CollisionFilterGroupFlags.StaticFilter;
-        colisionesDisparo |= CollisionFilterGroupFlags.KinematicFilter;
+        colisionesDisparo = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.KinematicFilter;
 
         // Arma por defecto
         ApagarArmas();
