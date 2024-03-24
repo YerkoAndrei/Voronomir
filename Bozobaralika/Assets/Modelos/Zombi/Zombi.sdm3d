@@ -1,0 +1,15 @@
+!Model
+Id: c518407e-c1e3-40b7-939b-712d59ee3dda
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Zombi.fbx
+Skeleton: 08741abd-1ca6-4e62-ab8a-6cfb272cc7ca:Modelos/Zombi/Zombi Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    26cb99d8349c5eae772b265de7cec67e:
+        Name: Zombi
+        MaterialInstance:
+            Material: 64481b11-86fd-4d14-a234-b59b75858074:Modelos/Zombi/Materiales/Zombi
+Modifiers: {}
+~SourceHashes:
+    697e4170f12329a7ab6da82a0c0db985~Zombi.fbx: cd26c4dfeb832e30cee923b1c13c81e1

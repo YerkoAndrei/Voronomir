@@ -1,0 +1,38 @@
+!Skeleton
+Id: 08741abd-1ca6-4e62-ab8a-6cfb272cc7ca
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Zombi.fbx
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    8d3a132f2286a3078ff7c3f0a744c62b: {Name: RootNode, Depth: 0}
+    baab0fc9171c7cb246e866328a4420a0: {Name: Zombi, Depth: 1}
+    9afea00df5df4e89632522f1a8df57f2: {Name: CuerpoZombi, Depth: 1}
+    643ec07e378b8a3e30394f442b1c12af: {Name: "raíz", Depth: 2}
+    7e66574dcbae6b853234f39cc8393874: {Name: pelvis, Depth: 3}
+    564b26a4fc0de8ca985ebd6d1a2a02a0: {Name: columna_01, Depth: 4}
+    6761f56f76f6585303ade6bef9f27e54: {Name: columna_02, Depth: 5}
+    fd1babc242fc2702d1e280efe39ff3f2: {Name: pecho, Depth: 6}
+    ca63b21eb508fb21edd2c4cbff584051: {Name: hombro.R, Depth: 7}
+    d6af4c7ae290b76a1ab894abcecbc72c: {Name: brazo.R, Depth: 8}
+    71b777b924b748cb664cee41db32ca38: {Name: antebrazo.R, Depth: 9}
+    0f9edb8a60185620ee0f36093151cafc: {Name: mano.R, Depth: 10}
+    ad5578f016fcf1618c04e18b97c39465: {Name: mano.R_end, Depth: 11}
+    8d2196961f11d51180936ec954a937e4: {Name: cuello, Depth: 7}
+    396bdd0e70b11a753dd70fec27ba3702: {Name: cabeza, Depth: 8}
+    e3307d9694a92e8a87b3345e7b121aac: {Name: cabeza_end, Depth: 9}
+    87f55c01dc8f734dcefb954a621dad76: {Name: hombro.L, Depth: 7}
+    df50b610792192ea4289daac83b3d909: {Name: brazo.L, Depth: 8}
+    593fc800217c6a311f386ed731048919: {Name: antebrazo.L, Depth: 9}
+    bad8babd0fd0c90dfe98b4b5ee418645: {Name: mano.L, Depth: 10}
+    a6b2c6bdcef67b68789682437cb6ef46: {Name: mano.L_end, Depth: 11}
+    6a9db240eec2957e48fec4132b5f5f1a: {Name: muslo.R, Depth: 4}
+    e789facacc19e90c874898243eb1dc36: {Name: canilla.R, Depth: 5}
+    e9440f3e6479e9b1f55e8b2da5390d82: {Name: pie.R, Depth: 6}
+    24478654b33ca149ea043b5981740c1a: {Name: pie.R_end, Depth: 7}
+    93e3d6f199d14f482a3bde0e6f6c3384: {Name: muslo.L, Depth: 4}
+    2fc6c80890c017e41ac922f8d143ba33: {Name: canilla.L, Depth: 5}
+    d0fa1bfe28acf29b678a65f9a755dc25: {Name: pie.L, Depth: 6}
+    bbccf50757b8eae4b22494b9a4fdc248: {Name: pie.L_end, Depth: 7}
+~SourceHashes:
+    27e4c79b8a9ec775922f65314e92d662~Zombi.fbx: cd26c4dfeb832e30cee923b1c13c81e1
