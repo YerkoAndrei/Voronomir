@@ -1,0 +1,19 @@
+!Model
+Id: e7e9c3c8-5d88-45b0-ab27-9c5d1daf66f9
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Escudo.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    85c71ddc6dd3aa5877ecb57e1660eddb:
+        Name: Metal
+        MaterialInstance:
+            Material: 701c8794-3b66-4d83-a0df-f5f1142aee5a:Modelos/Escudo/Materiales/Metal
+    bd2c6499ff40d7b149d841df986b96ae:
+        Name: Cerebro
+        MaterialInstance:
+            Material: ca6296e7-fa98-4518-bbcc-dfc3db927d7e:Modelos/Escudo/Materiales/Cerebro
+Modifiers: {}
+~SourceHashes:
+    1567905b998d57928a6d6a267f7f6cb0~Escudo.glb: 9485815c1f02d0d6efe3feb62f7a6821

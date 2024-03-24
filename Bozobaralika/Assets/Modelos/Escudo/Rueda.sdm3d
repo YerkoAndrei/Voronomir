@@ -1,0 +1,15 @@
+!Model
+Id: 32e8ed66-1b39-4a3b-bf05-45681e2a1fb7
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Rueda.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    cfdb1de939d9395a646546571cb7a814:
+        Name: Rueda
+        MaterialInstance:
+            Material: 669095ed-40c1-4ba5-acb4-8b96a5969157:Modelos/Escudo/Materiales/Rueda
+Modifiers: {}
+~SourceHashes:
+    95a0b3a6be08ddbef01e24a581af7490~Rueda.glb: bb70e18f3e94162a1291110c3737c3bd
