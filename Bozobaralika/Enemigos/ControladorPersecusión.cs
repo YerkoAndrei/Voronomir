@@ -74,11 +74,11 @@ public class ControladorPersecusión : SyncScript
 
     private void MirarJugador()
     {
-        posiciónJugador = jugador.Position - Entity.Transform.Position;
+        posiciónJugador = jugador.WorldMatrix.TranslationVector - Entity.Transform.WorldMatrix.TranslationVector;
         posiciónJugador.Y = 0f;
         posiciónJugador.Normalize();
 
-        cuerpo.Orientation = Quaternion.LookRotation(posiciónJugador, Entity.Transform.WorldMatrix.Up);
+        cuerpo.Orientation = Quaternion.LookRotation(posiciónJugador, Vector3.UnitY);
     }
 
     private void Perseguir()
