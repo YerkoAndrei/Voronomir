@@ -1,0 +1,19 @@
+!Model
+Id: 6b08a986-efc1-48f4-ae15-92a1d2041409
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Cubo.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    cc94fa95d789976f4d17d18d23beec80:
+        Name: Base
+        MaterialInstance:
+            Material: edbbdce0-1209-45e3-9f7c-46e9a0f19ecf:Modelos/Cubo/Materiales/Base
+    b3e5565de4580b9866f9c4f95b54bb44:
+        Name: Deco
+        MaterialInstance:
+            Material: null
+Modifiers: {}
+~SourceHashes:
+    1a9c392e46f977eff60158417ca4b9b3~Cubo.fbx: 81d0a16114da68abbdbf8bd3ec9f34c0
