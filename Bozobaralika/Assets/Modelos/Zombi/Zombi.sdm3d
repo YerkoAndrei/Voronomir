@@ -1,15 +1,19 @@
 !Model
-Id: c518407e-c1e3-40b7-939b-712d59ee3dda
+Id: 314e89d9-f776-4b7a-a521-e4fe278cc1b5
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Source: !file Zombi.fbx
-Skeleton: 08741abd-1ca6-4e62-ab8a-6cfb272cc7ca:Modelos/Zombi/Zombi Skeleton
+Source: !file Zombi.glb
+Skeleton: c4b7cb8e-8aca-49cd-8d06-c4fdbdf2f2b6:Modelos/Zombi/Zombi Skeleton
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Materials:
-    26cb99d8349c5eae772b265de7cec67e:
-        Name: Zombi
+    f293cd6f516acb2ebb8dca46630eccd8:
+        Name: Carne
         MaterialInstance:
-            Material: 64481b11-86fd-4d14-a234-b59b75858074:Modelos/Zombi/Materiales/Zombi
+            Material: e6ef8863-ef00-4d25-95f8-a1b2e5ebff0d:Modelos/Zombi/Materiales/Carne
+    2b4c4c967bbffd2190113752c60c3b91:
+        Name: Hueso
+        MaterialInstance:
+            Material: a2fab130-c10d-4823-81cd-961fe67340fc:Modelos/Zombi/Materiales/Hueso
 Modifiers: {}
 ~SourceHashes:
-    697e4170f12329a7ab6da82a0c0db985~Zombi.fbx: cd26c4dfeb832e30cee923b1c13c81e1
+    67d44db6230c41d009815b6fbf12837d~Zombi.glb: fecb34b9496c5315757ab7b183922fcc
