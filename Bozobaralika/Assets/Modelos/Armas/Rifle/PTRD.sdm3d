@@ -1,0 +1,19 @@
+!Model
+Id: e1d41a8b-2723-4a8b-9f40-144593f8145b
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file PTRD.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    41e7a4fa566c56f44812a3dc65daeeb4:
+        Name: Metal
+        MaterialInstance:
+            Material: fce50e72-1dbf-4955-8f81-546020be008b:Modelos/Armas/Rifle/Materiales/Metal
+    c5bb7e70a2bdd344c1b88546c47e52b2:
+        Name: Madera
+        MaterialInstance:
+            Material: 360d40f9-d44e-4040-a52d-624fdef91104:Modelos/Armas/Rifle/Materiales/Madera
+Modifiers: {}
+~SourceHashes:
+    9039b67853ddfec01fcc96bc69d29e42~PTRD.glb: 1a2b04a302448ef2a701b5430e51bcb7
