@@ -1,0 +1,40 @@
+!Skeleton
+Id: f0103a02-4bc3-4826-a8ef-64d196ec5532
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file "Araña.glb"
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    b028f709af97c511a22cb122403d5936: {Name: Esqueleto, Depth: 0}
+    654c707e0a6ab99519f10c9f67cc0173: {Name: "Araña", Depth: 1}
+    34f77d8da67493e05488132204af1f1f: {Name: cabeza, Depth: 1}
+    da232e8939a598bb0cad946b21c3989b: {Name: colmillo.R, Depth: 2}
+    b90668e9571b9a849c4d45d6680c4f17: {Name: colmillo.L, Depth: 2}
+    4b166813fe178bf3c3c55f9c5a187f61: {Name: poto_01, Depth: 1}
+    747c6cd02200108e8bb555a5e2c5af50: {Name: poto_02, Depth: 2}
+    885dec6b179bea4dd29238faaeb20ba0: {Name: pata.4_01.R, Depth: 1}
+    5aec31a560ae918f64257c44139365bf: {Name: pata.4_02.R, Depth: 2}
+    f8c235976bc00b295fc90c8227dabd81: {Name: pata.4_03.R, Depth: 3}
+    f9482252158338c70b2176cf17f90410: {Name: pata.3_01.R, Depth: 1}
+    8f7ecb52fbb89d63a97fd3d603573c5a: {Name: pata.3_02.R, Depth: 2}
+    6120142a75be9f7997b19854abcd0d8d: {Name: pata.3_03.R, Depth: 3}
+    a3febeee53033469b5d318a41f323431: {Name: pata.2_01.R, Depth: 1}
+    6862dff0e61538d3a77db91694474cc4: {Name: pata.2_02.R, Depth: 2}
+    7a6b08bd065cb85e32983c2e4b8a7613: {Name: pata.2_03.R, Depth: 3}
+    4fbf60f6b4d33b53fb4ba9cee5b7ab55: {Name: pata.1_01.R, Depth: 1}
+    5b59d2141139c6b6699c036a0ae7deb7: {Name: pata.1_02.R, Depth: 2}
+    b70a304e0cbc22ac8e14be2b6a77ddca: {Name: pata.1_03.R, Depth: 3}
+    62095def1fb70abb48e4b0a4996fc146: {Name: pata.4_01.L, Depth: 1}
+    de1e3439a24bca18273bda3922954d6f: {Name: pata.4_02.L, Depth: 2}
+    dc94ed6491239f6455a4ae884ee14fa5: {Name: pata.4_03.L, Depth: 3}
+    ad2bdae216745183c8576b1f4c234b34: {Name: pata.3_01.L, Depth: 1}
+    8d9a85f83f84bf972bad4b29504d85f1: {Name: pata.3_02.L, Depth: 2}
+    3d950a33ef1b9bb1fe82f76e38e7e0ca: {Name: pata.3_03.L, Depth: 3}
+    401daca1ca0b7379bf116cbbf470134e: {Name: pata.2_01.L, Depth: 1}
+    4e8d42fa86a031b6536e35a15cc219a3: {Name: pata.2_02.L, Depth: 2}
+    f7eb5419d638b26da7dea4ed23cc8bae: {Name: pata.2_03.L, Depth: 3}
+    a3dd8da3503c1fabe8c530f0fd8898ca: {Name: pata.1_01.L, Depth: 1}
+    3f800cbd1d3337a293cbcafaaf2fd0d9: {Name: pata.1_02.L, Depth: 2}
+    2609362674325a23a811aa0164f18121: {Name: pata.1_03.L, Depth: 3}
+~SourceHashes:
+    "7611a6d6dc88e0eac66154f3a28157a3~Araña.glb": ae3f66efc9edef63f222c0915024208d
