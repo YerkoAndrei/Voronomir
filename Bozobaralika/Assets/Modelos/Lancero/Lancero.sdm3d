@@ -1,0 +1,19 @@
+!Model
+Id: 449f714b-c2f9-4b2d-b6a8-5ed407b77a72
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Lancero.glb
+Skeleton: 07644d29-c766-4552-ad3e-d154d243d8f3:Modelos/Lancero/Lancero Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    0e70a461b54d2f4fa355cce3640131bd:
+        Name: Ropa
+        MaterialInstance:
+            Material: dfb6be6c-5420-463a-8219-391263b506e3:Modelos/Lancero/Materiales/Ropa
+    e0a39c4f0f8ebdd47b76907f255cbec9:
+        Name: Metal
+        MaterialInstance:
+            Material: bef691b9-d545-4dfe-a5e0-1568208f32ad:Modelos/Lancero/Materiales/Metal
+Modifiers: {}
+~SourceHashes:
+    db69b113cc0b08c3fe7cd431d7518fa3~Lancero.glb: febf5239dccbeef437cb2c29d37cffd4
