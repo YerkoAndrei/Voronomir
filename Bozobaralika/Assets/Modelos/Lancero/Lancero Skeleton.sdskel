@@ -5,28 +5,24 @@ Tags: []
 Source: !file Lancero.glb
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Nodes:
-    ef1de7f2ef3bd5efee57740e9008f019: {Name: ROOT, Depth: 0}
+    35092203dab0af52e2f6f81ad665e7fc: {Name: Esqueleto, Depth: 0}
     07382d5e34c8f58cda007bb4861fd97c: {Name: Lancero, Depth: 1}
-    35092203dab0af52e2f6f81ad665e7fc: {Name: Esqueleto, Depth: 1}
-    32aefbf051f1886ba77f70ceba32a3af: {Name: pelvis, Depth: 2}
-    6caf30a09dba2d0bdac1e4f56e021ad6: {Name: columna_01, Depth: 3}
-    ee259ed45eeda40cc9455b2797ef9139: {Name: columna_02, Depth: 4}
-    3aae113034a251fc49ba70ea18ff2a32: {Name: pecho, Depth: 5}
-    2b50dc083bcdd88edcc5f264d58ee043: {Name: hombro.R, Depth: 6}
-    f19899e54ca721e323153f93e0f29776: {Name: brazo.R, Depth: 7}
-    cd9cd7fe667cdca8bcaae8e2d6b7b67f: {Name: antebrazo.R, Depth: 8}
-    839ca5c599401198f3ac738bd2a56b5b: {Name: mano.R, Depth: 9}
-    b6df78464d61fc526467cb97dbea8d47: {Name: cuello, Depth: 6}
-    54d1ff0f33a2a137a6edfb9d749f9d37: {Name: cabeza, Depth: 7}
-    2eb1749e7924e9e80530a0b192abf30b: {Name: hombro.L, Depth: 6}
-    130cf24ce46806ac521bf7f7e69c23a9: {Name: brazo.L, Depth: 7}
-    acec3536ddff8a426e89efc38ca0d829: {Name: antebrazo.L, Depth: 8}
-    1c9c646cda6750075078544b516018dd: {Name: mano.L, Depth: 9}
-    b2e97ba9a15d9386d582ef4aa4fa2ed4: {Name: muslo.R, Depth: 3}
-    3d1e59215d6cc13834972ee8db3a3e56: {Name: canilla.R, Depth: 4}
-    680770c47143226c7d5ac8bd8f07afa0: {Name: pie.R, Depth: 5}
-    73f64f966e7218890ab65257297d4364: {Name: muslo.L, Depth: 3}
-    581ca72ad3a51270a5c78cd04f9db5b2: {Name: canilla.L, Depth: 4}
-    fdd3644cdcc23c0de07d686c631697d5: {Name: pie.L, Depth: 5}
+    32aefbf051f1886ba77f70ceba32a3af: {Name: pelvis, Depth: 1}
+    63a2305779cd9e4e9086c250a2550e59: {Name: columna, Depth: 2}
+    3aae113034a251fc49ba70ea18ff2a32: {Name: pecho, Depth: 3}
+    f19899e54ca721e323153f93e0f29776: {Name: brazo.R, Depth: 4}
+    cd9cd7fe667cdca8bcaae8e2d6b7b67f: {Name: antebrazo.R, Depth: 5}
+    839ca5c599401198f3ac738bd2a56b5b: {Name: mano.R, Depth: 6}
+    b6df78464d61fc526467cb97dbea8d47: {Name: cuello, Depth: 4}
+    54d1ff0f33a2a137a6edfb9d749f9d37: {Name: cabeza, Depth: 5}
+    130cf24ce46806ac521bf7f7e69c23a9: {Name: brazo.L, Depth: 4}
+    acec3536ddff8a426e89efc38ca0d829: {Name: antebrazo.L, Depth: 5}
+    1c9c646cda6750075078544b516018dd: {Name: mano.L, Depth: 6}
+    b2e97ba9a15d9386d582ef4aa4fa2ed4: {Name: muslo.R, Depth: 2}
+    3d1e59215d6cc13834972ee8db3a3e56: {Name: canilla.R, Depth: 3}
+    680770c47143226c7d5ac8bd8f07afa0: {Name: pie.R, Depth: 4}
+    73f64f966e7218890ab65257297d4364: {Name: muslo.L, Depth: 2}
+    581ca72ad3a51270a5c78cd04f9db5b2: {Name: canilla.L, Depth: 3}
+    fdd3644cdcc23c0de07d686c631697d5: {Name: pie.L, Depth: 4}
 ~SourceHashes:
-    c2229590a18ba8a9c0bc6eb3ec978b33~Lancero.glb: febf5239dccbeef437cb2c29d37cffd4
+    c2229590a18ba8a9c0bc6eb3ec978b33~Lancero.glb: 71ae2d347b909e0ae071905ce436a5d2
