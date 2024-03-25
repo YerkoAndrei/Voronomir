@@ -13,7 +13,7 @@ Materials:
     e0a39c4f0f8ebdd47b76907f255cbec9:
         Name: Metal
         MaterialInstance:
-            Material: bef691b9-d545-4dfe-a5e0-1568208f32ad:Modelos/Lancero/Materiales/Metal
+            Material: bef691b9-d545-4dfe-a5e0-1568208f32ad:Modelos/Lancero/Materiales/Armadura
 Modifiers: {}
 ~SourceHashes:
     db69b113cc0b08c3fe7cd431d7518fa3~Lancero.glb: febf5239dccbeef437cb2c29d37cffd4

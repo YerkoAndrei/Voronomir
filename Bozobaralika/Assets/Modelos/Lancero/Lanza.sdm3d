@@ -1,0 +1,19 @@
+!Model
+Id: 4b34d26f-7f32-492d-8a58-e38df8cd8e9e
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Lanza.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    4e023b73846236c1e575a05e5aa1b3c8:
+        Name: Madera
+        MaterialInstance:
+            Material: c9e345af-f8ab-4681-ade2-f0d720365241:Modelos/Lancero/Materiales/Madera
+    edd03eeffa6177d259beb853873d774a:
+        Name: Metal
+        MaterialInstance:
+            Material: 82f556af-20d8-4e33-998c-5cd032c90a03:Modelos/Lancero/Materiales/Metal
+Modifiers: {}
+~SourceHashes:
+    28216933bb42a125481f0f5e170a4971~Lanza.glb: 198bae67fd0906e134fe98530d0864c3
