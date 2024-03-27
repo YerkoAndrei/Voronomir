@@ -20,8 +20,8 @@ public class ControladorMovimiento : SyncScript
     // Aceleración
     private float tiempoAceleración;
     private float tempoAceleración;
-    private float minAceleración;
-    private float maxAceleración;
+    private float minVelocidad;
+    private float maxVelocidad;
     private float aceleración;
 
     // Cursor
@@ -34,9 +34,9 @@ public class ControladorMovimiento : SyncScript
         cuerpo = _cuerpo;
         cabeza = _cabeza;
 
-        minAceleración = 1f;
-        maxAceleración = 1.5f;
+        minVelocidad = 1f;
         tiempoAceleración = 20f;
+        CambiarVelocidadMáxima(false);
 
         CambiarSensiblidad(false);
         multiplicadorVelocidad = ObtenerMultiplicadorVelocidad();
@@ -80,14 +80,14 @@ public class ControladorMovimiento : SyncScript
         if (movimiento == Vector3.Zero || detención || caminando || cuerpo.Collisions.Count > 1)
         {
             tempoAceleración = 0;
-            aceleración = minAceleración;
+            aceleración = minVelocidad;
             detención = false;
         }
         else
         {
             tempoAceleración += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             aceleración = MathUtil.SmoothStep(tempoAceleración / tiempoAceleración);
-            aceleración = MathUtil.Clamp((aceleración + minAceleración), minAceleración, maxAceleración);
+            aceleración = MathUtil.Clamp((aceleración + minVelocidad), minVelocidad, maxVelocidad);
         }
 
         // Movimiento
@@ -155,6 +155,14 @@ public class ControladorMovimiento : SyncScript
         detención = true;
         bloqueo = bloquear;
         cuerpo.SetVelocity(Vector3.Zero);
+    }
+
+    public void CambiarVelocidadMáxima(bool melé)
+    {
+        if (melé)
+            maxVelocidad = 2.0f;
+        else
+            maxVelocidad = 1.5f;
     }
 
     public void CambiarSensiblidad(bool reducir)

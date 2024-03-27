@@ -16,12 +16,12 @@ public class InterfazJuego : StartupScript
     private ImageElement imgVida;
     private float tamañoVida;
 
-    private ImageElement miraPistola;
+    private ImageElement miraEspada;
     private ImageElement miraEscopeta;
     private ImageElement miraMetralleta;
     private ImageElement miraRifle;
 
-    private ImageElement imgPistola;
+    private ImageElement imgEspada;
     private ImageElement imgEscopeta;
     private ImageElement imgMetralleta;
     private ImageElement imgRifle;
@@ -34,12 +34,12 @@ public class InterfazJuego : StartupScript
         imgVida = página.FindVisualChildOfType<ImageElement>("imgVida");
         tamañoVida = imgVida.Width;
 
-        miraPistola = página.FindVisualChildOfType<ImageElement>("miraPistola");
+        miraEspada = página.FindVisualChildOfType<ImageElement>("miraEspada");
         miraEscopeta = página.FindVisualChildOfType<ImageElement>("miraEscopeta");
         miraMetralleta = página.FindVisualChildOfType<ImageElement>("miraMetralleta");
         miraRifle = página.FindVisualChildOfType<ImageElement>("miraRifle");
 
-        imgPistola = página.FindVisualChildOfType<ImageElement>("imgPistola");
+        imgEspada = página.FindVisualChildOfType<ImageElement>("imgEspada");
         imgEscopeta = página.FindVisualChildOfType<ImageElement>("imgEscopeta");
         imgMetralleta = página.FindVisualChildOfType<ImageElement>("imgMetralleta");
         imgRifle = página.FindVisualChildOfType<ImageElement>("imgRifle");
@@ -59,8 +59,8 @@ public class InterfazJuego : StartupScript
         ApagarÍconos();
         switch (arma)
         {
-            case Armas.pistola:
-                imgPistola.Color = armaSeleccionada;
+            case Armas.espada:
+                imgEspada.Color = armaSeleccionada;
                 break;
             case Armas.escopeta:
                 imgEscopeta.Color = armaSeleccionada;
@@ -78,8 +78,8 @@ public class InterfazJuego : StartupScript
     {
         switch (arma)
         {
-            case Armas.pistola:
-                miraPistola.Visibility = Visibility.Visible;
+            case Armas.espada:
+                miraEspada.Visibility = Visibility.Visible;
                 break;
             case Armas.escopeta:
                 miraEscopeta.Visibility = Visibility.Visible;
@@ -104,7 +104,7 @@ public class InterfazJuego : StartupScript
 
     public void ApagarMiras()
     {
-        miraPistola.Visibility = Visibility.Hidden;
+        miraEspada.Visibility = Visibility.Hidden;
         miraEscopeta.Visibility = Visibility.Hidden;
         miraMetralleta.Visibility = Visibility.Hidden;
         miraRifle.Visibility = Visibility.Hidden;
@@ -112,7 +112,7 @@ public class InterfazJuego : StartupScript
 
     public void ApagarÍconos()
     {
-        imgPistola.Color = armaNormal;
+        imgEspada.Color = armaNormal;
         imgEscopeta.Color = armaNormal;
         imgMetralleta.Color = armaNormal;
         imgRifle.Color = armaNormal;

@@ -54,8 +54,8 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 8374c3d3-7007-4071-9f10-14045dd1b355
-                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Rotation: {X: 0.08715574, Y: 0.0, Z: 0.0, W: 0.9961947}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             dfa71521e15dbf6c3948d9f3fd1c2b8d: ref!! 3f49b083-741f-4e55-8add-88eefa292f0c
@@ -122,7 +122,7 @@ Hierarchy:
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.5
+                        Friction: 1.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
@@ -154,7 +154,7 @@ Hierarchy:
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.5
+                        Friction: 1.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
@@ -234,7 +234,7 @@ Hierarchy:
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.5
+                        Friction: 1.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
@@ -312,8 +312,8 @@ Hierarchy:
                 Components:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: f8da5fff-2637-4fbf-a5da-7cc4fd74113d
-                        Position: {X: -0.3, Y: 0.3, Z: -0.8}
-                        Rotation: {X: 0.25488698, Y: -0.16773123, Z: 0.04494346, W: 0.95125127}
+                        Position: {X: 0.0, Y: 0.3, Z: -0.8}
+                        Rotation: {X: 0.258819, Y: -4.453338E-09, Z: 1.6620085E-08, W: 0.9659258}
                         Scale: {X: 0.009999999, Y: 0.01, Z: 1.5}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
@@ -331,7 +331,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            e16dfa3055164ef63c7c03ca1a895a74: ref!! f8da5fff-2637-4fbf-a5da-7cc4fd74113d
+                            0eda69cb917f5ccb8823d158d0a0ab1c: ref!! f8da5fff-2637-4fbf-a5da-7cc4fd74113d
         -   Entity:
                 Id: 52cd02bd-3165-4aa6-8d1e-7538541119a3
                 Name: Skybox
@@ -362,25 +362,9 @@ Hierarchy:
                             36d3c59ff298eb8b6306d66d61ab4b87: ref!! a032338b-57be-4ac1-baf5-af21df6b2d12
                             52b6f030c9d852975f4a2cf54f55bc92: ref!! 2ce1f117-06b0-4b85-a82c-b2214ec15f2c
                             b1afc6c1b1145896975e0fcac17906ef: ref!! 0581adaa-618c-4926-bd0c-773cfa32ddae
-                            b5fcbefeb06d7f9d1602678ab261c631: ref!! 861d6472-473d-4c50-9156-01ccc4b6e378
                             9e1369c97ef88ac60a5436cfb7fa1e6a: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
                             32470a676780800250b81a249ff33f63: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
                             334e90ab78c48ae82f0477a8d2a12a34: ref!! 8374c3d3-7007-4071-9f10-14045dd1b355
-        -   Entity:
-                Id: 54dfafb5-c570-4d4a-9829-8f5a8cb31a3e
-                Name: Pistola
-                Components:
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: e69d0818-85b3-44b5-a0f1-cfd79bb09854
-                        Position: {X: 0.3, Y: 0.0, Z: -0.5}
-                        Rotation: {X: 0.0, Y: 0.17364816, Z: 0.0, W: 0.9848078}
-                        Scale: {X: 0.1, Y: 0.1, Z: 0.49999997}
-                        Children: {}
-                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
-                        Id: 9e51d45a-9d04-4092-b1b7-cabdba4365e9
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
-                        RenderGroup: Group11
-                        Materials: {}
         -   Folder: Entorno
             Entity:
                 Id: 5806e859-d7ec-42d4-ac78-edfc026317d2
@@ -401,7 +385,7 @@ Hierarchy:
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.5
+                        Friction: 1.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
@@ -492,7 +476,7 @@ Hierarchy:
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.5
+                        Friction: 1.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
@@ -643,17 +627,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             54d9233232d55c02a600c6c8a5ad47ff: ref!! 9c8cd132-4d00-4b14-8ba7-704651c1b1ac
-        -   Entity:
-                Id: ce2b7a55-b407-4692-bc57-1f709fa56a79
-                Name: EjePistola
-                Components:
-                    2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
-                        Id: 861d6472-473d-4c50-9156-01ccc4b6e378
-                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            73b4929b4bc7273000541b77e255741d: ref!! e69d0818-85b3-44b5-a0f1-cfd79bb09854
         -   Folder: Entorno
             Entity:
                 Id: cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
@@ -717,7 +690,7 @@ Hierarchy:
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.5
+                        Friction: 1.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
@@ -826,12 +799,10 @@ Hierarchy:
                         "armaMelé": ref!! 72ecda8e-7d43-469a-b3ed-b87cb747013c
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/MarcaBala
                         modeloEspada: ref!! c3f3e014-10d4-4345-b491-72cfe4c5a54b
-                        modeloPistola: ref!! 9e51d45a-9d04-4092-b1b7-cabdba4365e9
                         modeloEscopeta: ref!! 2f860ba4-41c4-48d5-8d5f-9459560589d7
                         modeloMetralleta: ref!! 7f8bc918-bb85-4a3e-83a3-06076b368917
                         modeloRife: ref!! 5c201108-0f07-4202-a233-3abfcab58dd1
                         ejeEspada: ref!! 0581adaa-618c-4926-bd0c-773cfa32ddae
-                        ejePistola: ref!! 861d6472-473d-4c50-9156-01ccc4b6e378
                         ejeEscopeta: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
                         ejeMetralleta: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
                         ejeRife: ref!! 8374c3d3-7007-4071-9f10-14045dd1b355
@@ -855,7 +826,7 @@ Hierarchy:
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.5
+                        Friction: 1.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
@@ -933,7 +904,7 @@ Hierarchy:
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.5
+                        Friction: 1.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0

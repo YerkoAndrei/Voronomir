@@ -23,13 +23,11 @@ public class ControladorArmas : SyncScript
     public Prefab prefabMarca;
 
     public ModelComponent modeloEspada;
-    public ModelComponent modeloPistola;
     public ModelComponent modeloEscopeta;
     public ModelComponent modeloMetralleta;
     public ModelComponent modeloRife;
 
     public TransformComponent ejeEspada;
-    public TransformComponent ejePistola;
     public TransformComponent ejeEscopeta;
     public TransformComponent ejeMetralleta;
     public TransformComponent ejeRife;
@@ -46,7 +44,6 @@ public class ControladorArmas : SyncScript
     private float dañoMáximo;
 
     private float últimoDisparoEspada;
-    private float últimoDisparoPistola;
     private float últimoDisparoEscopeta;
     private float últimoDisparoMetralleta;
     private float últimoDisparoRifle;
@@ -85,12 +82,11 @@ public class ControladorArmas : SyncScript
 
         // Arma por defecto
         ApagarArmas();
-        armaActual = Armas.pistola;
+        armaActual = Armas.espada;
         interfaz.CambiarMira(armaActual);
         interfaz.CambiarÍcono(armaActual);
 
         modeloEspada.Entity.Get<ModelComponent>().Enabled = true;
-        modeloPistola.Entity.Get<ModelComponent>().Enabled = true;
     }
 
     public override void Update()
@@ -120,10 +116,6 @@ public class ControladorArmas : SyncScript
         if (!Input.IsMouseButtonDown(MouseButton.Left))
             EnfriarMetralleta();
 
-        // Melé
-        if ((Input.IsKeyPressed(Keys.E) || Input.IsMouseButtonPressed(MouseButton.Right)) && armaActual == Armas.pistola)
-            Atacar();
-
         // Rifle
         if (Input.IsMouseButtonPressed(MouseButton.Right) && armaActual == Armas.rifle)
             AcercarMira(true);
@@ -133,7 +125,7 @@ public class ControladorArmas : SyncScript
 
         // Cambio armas
         if (Input.IsKeyPressed(Keys.D1) || Input.IsKeyPressed(Keys.NumPad1))
-            CambiarArma(Armas.pistola);
+            CambiarArma(Armas.espada);
         if (Input.IsKeyPressed(Keys.D2) || Input.IsKeyPressed(Keys.NumPad2))
             CambiarArma(Armas.escopeta);
         if (Input.IsKeyPressed(Keys.D3) || Input.IsKeyPressed(Keys.NumPad3))
@@ -163,9 +155,6 @@ public class ControladorArmas : SyncScript
         {
             case Armas.espada:
                 tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoEspada;
-                    break;
-            case Armas.pistola:
-                tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoPistola;
                 break;
             case Armas.escopeta:
                 tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoEscopeta;
@@ -182,10 +171,10 @@ public class ControladorArmas : SyncScript
 
         switch (armaActual)
         {
-            case Armas.pistola:
-                CalcularRayo(0);
-                AnimarDisparo(ejePistola, 0.2f, 0.1f);
-                últimoDisparoPistola = (float)Game.UpdateTime.Total.TotalSeconds;
+            case Armas.espada:
+                Atacar();
+                AnimarAtaque();
+                últimoDisparoEspada = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
             case Armas.escopeta:
                 movimiento.DetenerMovimiento();
@@ -248,15 +237,8 @@ public class ControladorArmas : SyncScript
             reducción = (distancia - ObtenerDistanciaMáxima(armaActual)) * 0.5f;
 
         // Retroalimentación daño
-        switch (armaActual)
-        {
-            case Armas.pistola:
-                controlador.VibrarCámara(6f, 6);
-                break;
-            case Armas.metralleta:
-                controlador.VibrarCámara(4f, 4);
-                break;
-        }
+        if (armaActual == Armas.metralleta)
+            controlador.VibrarCámara(4f, 4);
 
         // Daña enemigo
         var dañoFinal = ObtenerDaño(armaActual) - reducción;
@@ -289,6 +271,9 @@ public class ControladorArmas : SyncScript
             if (enemigo == null)
                 return;
 
+            // Retroalimentación daño
+            controlador.VibrarCámara(4f, 4);
+
             // PENDIENTE: efecto
             // Daño segun distancia
             var distancia = Vector3.Distance(cámara.Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
@@ -305,15 +290,10 @@ public class ControladorArmas : SyncScript
 
     private void Atacar()
     {
-        if (cambiandoArma)
-            return;
-
         // Cadencia
         var tiempoDisparo = ObtenerCadencia(Armas.espada) + últimoDisparoEspada;
         if ((float)Game.UpdateTime.Total.TotalSeconds < tiempoDisparo)
             return;
-
-        últimoDisparoEspada = (float)Game.UpdateTime.Total.TotalSeconds;
 
         // Distancia máxima de disparo: 2
         var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector + cámara.Entity.Transform.WorldMatrix.Forward * 2;
@@ -326,7 +306,6 @@ public class ControladorArmas : SyncScript
 
         // PENDIENTE: efecto
         armaMelé.Atacar(ObtenerDaño(Armas.espada));
-        AnimarAtaque();
     }
 
     private void CrearMarca(Armas arma, Vector3 posición)
@@ -380,8 +359,6 @@ public class ControladorArmas : SyncScript
         {
             case Armas.espada:
                 return 40;
-            case Armas.pistola:
-                return 20;
             case Armas.escopeta:
                 return 10;
             case Armas.metralleta:
@@ -400,8 +377,6 @@ public class ControladorArmas : SyncScript
             default:
             case Armas.espada:
                 return 0;
-            case Armas.pistola:
-                return 10;
             case Armas.escopeta:
                 return 5;
             case Armas.metralleta:
@@ -416,8 +391,6 @@ public class ControladorArmas : SyncScript
         switch (arma)
         {
             case Armas.espada:
-                return 0.2f;
-            case Armas.pistola:
                 return 0.2f;
             case Armas.escopeta:
                 return 0.8f;
@@ -435,13 +408,13 @@ public class ControladorArmas : SyncScript
         if (cambiandoArma || nuevaArma == armaActual || usandoMira)
             return;
 
-        var armaSale = ejePistola;
-        var modeloSale = modeloPistola;
+        var armaSale = ejeEspada;
+        var modeloSale = modeloEspada;
         switch (armaActual)
         {
-            case Armas.pistola:
-                armaSale = ejePistola;
-                modeloSale = modeloPistola;
+            case Armas.espada:
+                armaSale = ejeEspada;
+                modeloSale = modeloEspada;
                 break;
             case Armas.escopeta:
                 armaSale = ejeEscopeta;
@@ -458,24 +431,28 @@ public class ControladorArmas : SyncScript
         }
 
         armaActual = nuevaArma;
+        movimiento.DetenerMovimiento();
         interfaz.CambiarÍcono(armaActual);
 
         switch (armaActual)
         {
-            case Armas.pistola:
+            case Armas.espada:
+                movimiento.CambiarVelocidadMáxima(true);
                 modeloEspada.Entity.Get<ModelComponent>().Enabled = true;
-                modeloPistola.Entity.Get<ModelComponent>().Enabled = true;
-                AnimarCambioArma(ejePistola, armaSale, modeloSale);
+                AnimarCambioArma(ejeEspada, armaSale, modeloSale);
                 break;
             case Armas.escopeta:
+                movimiento.CambiarVelocidadMáxima(false);
                 modeloEscopeta.Entity.Get<ModelComponent>().Enabled = true;
                 AnimarCambioArma(ejeEscopeta, armaSale, modeloSale);
                 break;
             case Armas.metralleta:
+                movimiento.CambiarVelocidadMáxima(false);
                 modeloMetralleta.Entity.Get<ModelComponent>().Enabled = true;
                 AnimarCambioArma(ejeMetralleta, armaSale, modeloSale);
                 break;
             case Armas.rifle:
+                movimiento.CambiarVelocidadMáxima(false);
                 modeloRife.Entity.Get<ModelComponent>().Enabled = true;
                 AnimarCambioArma(ejeRife, armaSale, modeloSale);
                 break;
@@ -485,7 +462,6 @@ public class ControladorArmas : SyncScript
     private void ApagarArmas()
     {
         modeloEspada.Entity.Get<ModelComponent>().Enabled = false;
-        modeloPistola.Entity.Get<ModelComponent>().Enabled = false;
         modeloEscopeta.Entity.Get<ModelComponent>().Enabled = false;
         modeloMetralleta.Entity.Get<ModelComponent>().Enabled = false;
         modeloRife.Entity.Get<ModelComponent>().Enabled = false;
@@ -516,12 +492,6 @@ public class ControladorArmas : SyncScript
             entra.Rotation = Quaternion.Lerp(rotaciónEntra, rotaciónCentro, tiempo);
             sale.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
 
-            // Espada / pistola
-            if (entra == ejePistola)
-                ejeEspada.Rotation = Quaternion.Lerp(rotaciónEntra, rotaciónCentro, tiempo);
-            else if (sale == ejePistola)
-                ejeEspada.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
-
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
         }
@@ -530,9 +500,6 @@ public class ControladorArmas : SyncScript
         interfaz.CambiarMira(armaActual);
 
         modeloSale.Entity.Get<ModelComponent>().Enabled = false;
-
-        if (sale == ejePistola)
-            modeloEspada.Entity.Get<ModelComponent>().Enabled = false;
     }
 
     private async void AnimarDisparo(TransformComponent arma, float retroceso, float duración)

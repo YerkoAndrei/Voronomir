@@ -60,7 +60,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: imgPistola
+                Name: imgEspada
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
@@ -151,7 +151,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: Pistola
+                Name: Espada
                 Children:
                     ef7bcae47b23ca0468c71544a35d72f0: !ImageElement ref!! 1f2cd61c-3339-4a98-8a1d-307b6fbece08
                     3b5b4d746c683dde142a4092f70a40b8: !ImageElement ref!! 18843bab-6c2a-4d06-9865-e0d2d2d91da7
@@ -259,7 +259,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: miraPistola
+                Name: miraEspada
                 Source: !SpriteFromTexture
                     Texture: 27f5f360-1f8f-40cc-a19a-728a67fe77b4:Texturas/Miras/miraPistola
                     Center: {X: 0.0, Y: 0.0}
