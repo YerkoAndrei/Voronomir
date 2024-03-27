@@ -39,6 +39,7 @@ public class ControladorArmas : SyncScript
 
     private CollisionFilterGroupFlags colisionesDisparo;
     private Armas armaActual;
+    private Armas armaAnterior;
     private bool bloqueo;
     private float dañoMínimo;
     private float dañoMáximo;
@@ -83,6 +84,7 @@ public class ControladorArmas : SyncScript
         // Arma por defecto
         ApagarArmas();
         armaActual = Armas.espada;
+        armaAnterior = armaActual;
         interfaz.CambiarMira(armaActual);
         interfaz.CambiarÍcono(armaActual);
 
@@ -132,6 +134,9 @@ public class ControladorArmas : SyncScript
             CambiarArma(Armas.metralleta);
         if (Input.IsKeyPressed(Keys.D4) || Input.IsKeyPressed(Keys.NumPad4))
             CambiarArma(Armas.rifle);
+
+        if (Input.IsKeyPressed(Keys.Q))
+            CambiarArma(armaAnterior);
 
         // Debug
         DebugText.Print(armaActual.ToString(), new Int2(x: 20, y: 60));
@@ -430,6 +435,7 @@ public class ControladorArmas : SyncScript
                 break;
         }
 
+        armaAnterior = armaActual;
         armaActual = nuevaArma;
         movimiento.DetenerMovimiento();
         interfaz.CambiarÍcono(armaActual);
