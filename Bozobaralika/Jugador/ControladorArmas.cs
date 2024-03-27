@@ -187,7 +187,7 @@ public class ControladorArmas : SyncScript
                 últimoDisparoEscopeta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
             case Armas.metralleta:
-                CalcularRayo(0.1f);
+                CalcularRayo(0.06f);
                 AnimarDisparo(ejeMetralleta, 0.15f, 0.05f);
                 últimoDisparoMetralleta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
@@ -238,7 +238,7 @@ public class ControladorArmas : SyncScript
 
         // Retroalimentación daño
         if (armaActual == Armas.metralleta)
-            controlador.VibrarCámara(4f, 4);
+            controlador.VibrarCámara(1f, 4);
 
         // Daña enemigo
         var dañoFinal = ObtenerDaño(armaActual) - reducción;
