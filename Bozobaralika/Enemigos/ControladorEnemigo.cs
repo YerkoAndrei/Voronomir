@@ -27,12 +27,12 @@ public class ControladorEnemigo : StartupScript
             case Enemigos.meléLigero:
                 vida = 100;
                 melé = true;
-                persecusión.Iniciar(this, 0.1f, 6f, 1f);
+                persecusión.Iniciar(this, 0.1f, 6f, 1.5f);
                 break;
             case Enemigos.meléMediano:
                 vida = 400;
                 melé = true;
-                persecusión.Iniciar(this, 0.5f, 5f, 2f);
+                persecusión.Iniciar(this, 0.1f, 5f, 3f);
                 break;
             case Enemigos.meléPesado:
                 vida = 200;
@@ -82,6 +82,8 @@ public class ControladorEnemigo : StartupScript
     {
         if (melé)
             armaMelé.Atacar(ObtenerDañoMelé());
+        //else
+            //armaDisparo.Atacar(ObtenerDañoDisparo());
     }
 
     public void RecibirDaño(float daño)
@@ -113,7 +115,22 @@ public class ControladorEnemigo : StartupScript
             case Enemigos.meléMediano:
                 return 20;
             case Enemigos.meléPesado:
+                return 0;
+            default:
+                return 0;
+        }
+    }
+
+    private float ObtenerDañoRango()
+    {
+        switch (enemigo)
+        {
+            case Enemigos.rangoLigero:
+                return 10;
+            case Enemigos.rangoMediano:
                 return 20;
+            case Enemigos.rangoPesado:
+                return 40;
             default:
                 return 0;
         }
@@ -124,7 +141,7 @@ public class ControladorEnemigo : StartupScript
         switch (enemigo)
         {
             case Enemigos.meléLigero:
-                return 0.2f;
+                return 0.25f;
             case Enemigos.meléMediano:
                 return 0.2f;
             case Enemigos.meléPesado:

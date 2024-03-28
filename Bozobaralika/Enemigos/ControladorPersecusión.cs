@@ -10,6 +10,7 @@ namespace Bozobaralika;
 
 public class ControladorPersecusión : SyncScript
 {
+    private IAnimador animador;
     private CharacterComponent cuerpo;
     private TransformComponent jugador;
     private NavigationComponent navegador;
@@ -27,7 +28,11 @@ public class ControladorPersecusión : SyncScript
 
     private bool atacando;
     private float velocidad;
+    private float aceleración;
     private float distanciaAtaque;
+
+    private float tempoAceleración;
+    private float tiempoAceleración;
 
     private float tempoBusqueda;
     private float tiempoBusqueda;
@@ -35,12 +40,21 @@ public class ControladorPersecusión : SyncScript
     public void Iniciar(ControladorEnemigo _controlador, float _tiempoBusqueda, float _velocidad, float _distanciaAtaque)
     {
         jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Transform;
+        foreach (var componente in Entity.Components)
+        {
+            if (componente is IAnimador)
+            {
+                animador = (IAnimador)componente;
+                break;
+            }
+        }
 
         cuerpo = Entity.Get<CharacterComponent>();
         navegador = Entity.Get<NavigationComponent>();
         ruta = new List<Vector3>();
 
         distanciaMínima = 0.1f;
+        tiempoAceleración = 1;
 
         controlador = _controlador;
         tiempoBusqueda = _tiempoBusqueda;
@@ -103,7 +117,10 @@ public class ControladorPersecusión : SyncScript
             movimiento.Normalize();
             movimiento *= (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
-            cuerpo.SetVelocity(movimiento * 100 * velocidad);
+            tempoAceleración += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            aceleración = MathUtil.SmoothStep(tempoAceleración / tiempoAceleración);
+            
+            cuerpo.SetVelocity(movimiento * 100 * velocidad * aceleración);
         }
         else
         {
@@ -117,6 +134,7 @@ public class ControladorPersecusión : SyncScript
     private async void Atacar()
     {
         atacando = true;
+        tempoAceleración = 0;
 
         // Delay de preparación de ataque
         await Task.Delay((int)(controlador.ObtenerPreparaciónAtaque() * 1000));
@@ -124,6 +142,7 @@ public class ControladorPersecusión : SyncScript
         if (!controlador.ObtenerActivo())
             return;
 
+        animador.Atacar();
         controlador.Atacar();
         cuerpo.SetVelocity(Vector3.Zero);
         await Task.Delay((int)(controlador.ObtenerDescansoAtaque() * 1000));

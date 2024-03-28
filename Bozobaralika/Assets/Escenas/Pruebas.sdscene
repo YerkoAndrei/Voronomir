@@ -69,7 +69,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 01a3360a-7f24-41b6-9f84-af8196ae98d1
-                Name: Enemigo
+                Name: Enemigo (zombi)
                 Components:
                     a60cbff727993b50e85c8863a7d8a974: !CharacterComponent
                         Id: 74c9977b-d672-4514-98eb-5990b74351e4
@@ -93,11 +93,10 @@ Hierarchy:
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 7f8abd7c-3f6f-44a8-9a41-e132c6b8d12d
                         Position: {X: 3.0, Y: 0.0, Z: -1.3296795}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 63dd9eef-ba83-4ac2-9b82-4bf6a7670c54
-                            20d49bb548259541d92e7110aa4ed017: ref!! 9878a3a0-60e5-4bfa-9f66-5e7cc3737d18
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! c57c8823-ca8e-4ddc-9555-02c2dd33eae3
                     bb01368017a9cd5377554e97337d1e5d: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: 9c8b7eb6-a941-48c5-96b0-494ced9be529
@@ -109,6 +108,8 @@ Hierarchy:
                         Id: 1bc02936-6d2e-4e45-b5db-e67d123aee53
                         NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
+                    768db3b6ea5a804934dce807b9215ebe: !Bozobaralika.AnimadorZombi,Bozobaralika.Proyecto
+                        Id: e9e85dea-0285-413b-9cb6-036b9501f48d
         -   Entity:
                 Id: 03bd6f4d-4a01-43c5-b6be-2c6d6c327c81
                 Name: Modelo
@@ -414,21 +415,6 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 71bc6db9-9218-42f0-ae1a-8cc1fb6476df
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
-                        Materials: {}
-        -   Folder: null
-            Entity:
-                Id: 4b535315-7a21-4b5a-bc52-2e4c05024fc2
-                Name: Cabeza
-                Components:
-                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
-                        Id: 9878a3a0-60e5-4bfa-9f66-5e7cc3737d18
-                        Position: {X: 0.0, Y: 1.8, Z: -0.25}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.4, Y: 0.1, Z: 0.4}
-                        Children: {}
-                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
-                        Id: 3896a724-eb72-4e5f-8b42-ed896df7ad7e
-                        Model: c7f6cc1f-dca4-4efe-802b-421756419e85:Cylinder
                         Materials: {}
         -   Entity:
                 Id: 50dd94d4-010c-458e-aa47-1c44e03e0ae6
@@ -850,13 +836,13 @@ Hierarchy:
                 Components:
                     e8f9cf0aa966229b689d889367899aac: !TransformComponent
                         Id: 63dd9eef-ba83-4ac2-9b82-4bf6a7670c54
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 2.0, Z: 0.5}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: 3669b122-5954-419e-a2f1-2ed48e57bb18
-                        Model: c7f6cc1f-dca4-4efe-802b-421756419e85:Cylinder
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
                         Materials: {}
         -   Entity:
                 Id: b9bcaf75-d766-4cdc-9c86-025cf46dd616
@@ -913,7 +899,7 @@ Hierarchy:
                 Components:
                     48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
                         Id: c57c8823-ca8e-4ddc-9555-02c2dd33eae3
-                        Position: {X: 0.0, Y: 1.25, Z: -1.0}
+                        Position: {X: 0.0, Y: 1.25, Z: 1.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 2.0}
                         Children: {}
