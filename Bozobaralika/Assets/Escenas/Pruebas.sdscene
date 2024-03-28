@@ -35,6 +35,7 @@ Hierarchy:
         - ref!! a9c0250e-6712-4e86-bc3f-78047f439de2
         - ref!! a54e658d-bb78-4833-b114-e0ad88f4652c
         - ref!! e6ee0047-6726-4c37-bcd8-6f0fb152abbf
+        - ref!! 9778c9f7-ee25-4fad-84cc-397d06ee1a61
     Parts:
         -   Folder: Enemigos
             Entity:
@@ -608,6 +609,37 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
+                Id: 9778c9f7-ee25-4fad-84cc-397d06ee1a61
+                Name: Lava
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: a4d2b804-a80d-4e82-b855-6ff54f95b8cf
+                        Position: {X: 15.0, Y: 0.0, Z: -5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 4.0, Y: 0.5, Z: 4.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! afccf0ce-6856-463c-b8f9-3965a352b7d0
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 05d54835-e18d-4978-98cb-036a25f8dac8
+                        CollisionGroup: StaticFilter
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    b9263919fa13a85f4c7138927c030633: !Bozobaralika.ControladorDa%25C3%25B1oContinuo,Bozobaralika.Proyecto
+                        Id: b68f9ec6-d05e-4aef-a5af-e806786b380b
+        -   Entity:
                 Id: a4e203b8-36fe-425c-ac8c-a03ec4a00ff9
                 Name: "Cámara"
                 Components:
@@ -802,6 +834,20 @@ Hierarchy:
                     29a42a5152c5a4fae2367c086e9374e9: !ModelComponent
                         Id: f0ca9833-aaa4-40ec-bc10-0088ee2eb261
                         Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
+                        Materials: {}
+        -   Entity:
+                Id: cb74dedf-a315-4eb5-a0b0-bf447505f378
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: afccf0ce-6856-463c-b8f9-3965a352b7d0
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 0d7fd1c1-c1eb-4eba-ae14-aa244747a13c
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         Materials: {}
         -   Folder: null
             Entity:
