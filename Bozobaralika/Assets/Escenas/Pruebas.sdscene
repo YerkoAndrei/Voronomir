@@ -1102,9 +1102,7 @@ Hierarchy:
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow: !LightDirectionalShadowMap
                                 Enabled: true
-                                Filter: !LightShadowMapFilterTypePcf
-                                    FilterSize: Filter5x5
-                                Size: Large
+                                Size: XLarge
                                 DepthRange: {}
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                                 ComputeTransmittance: false
