@@ -10,11 +10,9 @@ public class ControladorLlave : AsyncScript
 {
     public Llaves llave;
     public TransformComponent modelo;
-
+    private bool activo;
 
     private StaticColliderComponent cuerpo;
-    private bool animando;
-    private bool rotando;
     private float velocidadRotación;
     private Vector3 posiciónArriba;
     private Vector3 posiciónAbajo;
@@ -26,10 +24,9 @@ public class ControladorLlave : AsyncScript
         posiciónArriba = modelo.Position + new Vector3(0, 0.2f, 0);
         posiciónAbajo = modelo.Position;
 
-        rotando = true;
-        animando = true;
+        activo = true;
         velocidadRotación = 1;
-        Animar(posiciónArriba);
+        AnimarMovimiento(posiciónArriba);
         Rotar();
 
         while (Game.IsRunning)
@@ -53,16 +50,15 @@ public class ControladorLlave : AsyncScript
 
         velocidadRotación = 10;
         cuerpo.Enabled = false;
-        animando = false;
         controlador.GuardarLlave(llave);
-        Destruir();
+        AnimarFin();
 
         // PENDIENTE: efectos
     }
 
     private async void Rotar()
     {
-        while (rotando)
+        while (activo)
         {
             switch (llave)
             {
@@ -77,14 +73,14 @@ public class ControladorLlave : AsyncScript
         }
     }
 
-    private async void Animar(Vector3 objetivo)
+    private async void AnimarMovimiento(Vector3 objetivo)
     {
         var inicio = modelo.Position;
         float duración = 1f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
-        while (tiempoLerp < duración && animando)
+        while (tiempoLerp < duración && activo)
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             modelo.Position = Vector3.Lerp(inicio, objetivo, tiempo);
@@ -93,20 +89,18 @@ public class ControladorLlave : AsyncScript
             await Script.NextFrame();
         }
 
-        if (!animando)
+        if (!activo)
             return;
 
         if (objetivo == posiciónArriba)
-            Animar(posiciónAbajo);
+            AnimarMovimiento(posiciónAbajo);
         else
-            Animar(posiciónArriba);
+            AnimarMovimiento(posiciónArriba);
     }
 
-    private async void Destruir()
+    private async void AnimarFin()
     {
-        var tamañoInicio = modelo.Scale;
-        var posiciónInicio = modelo.Position;
-        var posiciónObjetivo = new Vector3(modelo.Position.X, -0.2f, modelo.Position.Z);
+        var inicio = modelo.Scale;
         float duración = 1f;
         float tiempoLerp = 0;
         float tiempo = 0;
@@ -114,13 +108,12 @@ public class ControladorLlave : AsyncScript
         while (tiempoLerp < duración)
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-            modelo.Scale = Vector3.Lerp(tamañoInicio, Vector3.Zero, tiempo);
-            modelo.Position = Vector3.Lerp(posiciónInicio, posiciónObjetivo, tiempo);
+            modelo.Scale = Vector3.Lerp(inicio, Vector3.Zero, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Script.NextFrame();
         }
 
-        rotando = false;
+        activo = false;
     }
 }

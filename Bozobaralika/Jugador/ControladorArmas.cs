@@ -11,7 +11,7 @@ using static Constantes;
 
 // Filtros:
 // Default      - Disparos
-// Static       - Entorno, llaves
+// Static       - Entorno, puertas, llaves
 // Kinematic    - Enemigos
 // Debris       - Escombros
 // Sensor       - Puertas
