@@ -13,6 +13,7 @@ Hierarchy:
         - ref!! d3476e3f-eee5-41dc-9c59-89b96ac24a2b
         - ref!! dd82e74f-617b-481e-bb36-34773b64d421
         - ref!! 01a3360a-7f24-41b6-9f84-af8196ae98d1
+        - ref!! e4f3ff8e-c37e-4dab-86d3-3a406db63822
         - ref!! 78b543f3-a0d8-4851-99a8-7f64df6948bc
         - ref!! 2c46881f-53e6-4d1d-85df-924007329f46
         - ref!! d471c428-d220-4860-b67e-f0ad26d2d613
@@ -316,6 +317,39 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
+                Id: 30c0c51d-ae3d-4b85-ba30-67af70b3bc39
+                Name: "ArmaMelé"
+                Components:
+                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
+                        Id: 37997c76-6e46-4fe2-a693-34ff25b91683
+                        Position: {X: 0.0, Y: 1.25, Z: 1.8}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 4.0}
+                        Children: {}
+                    67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
+                        Id: 0ab5b0b9-afda-4e53-8a6a-b9cd78ac5568
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ee1f0f8d5ea461771e1abc59d4677dae: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    1fae926b38418a3eb746141717e4e5ab: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
+                        Id: fce7412a-f445-4ff2-9044-e59c827fdaee
+        -   Entity:
                 Id: 311b2d5b-74ee-48ad-bcc9-b44a58714aee
                 Name: "Botón (azul)"
                 Components:
@@ -363,6 +397,21 @@ Hierarchy:
                     29a42a5152c5a4fae2367c086e9374e9: !ModelComponent
                         Id: e1f9fcf2-08b4-4279-be47-ae240eee3778
                         Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 338a2ef2-3311-4a64-88fd-c87d25e1aca6
+                Name: Lanza
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: 5fedfd8f-32b3-4330-b1e7-9cc7e1bada2e
+                        Position: {X: 0.0, Y: 1.82, Z: -2.0}
+                        Rotation: {X: 0.76604444, Y: 0.0, Z: 0.0, W: 0.64278764}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: adcb98c1-b7a4-4f4b-83e7-0d316a33df4d
+                        Model: 4b34d26f-7f32-492d-8a58-e38df8cd8e9e:Modelos/Lancero/Lanza
                         Materials: {}
         -   Entity:
                 Id: 38aeba2e-6668-4c7d-aa3b-820115537c97
@@ -934,6 +983,20 @@ Hierarchy:
                     1fae926b38418a3eb746141717e4e5ab: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
                         Id: a13e9284-0c3f-4cbd-90e6-f62de2f6c8a9
         -   Entity:
+                Id: c055ef64-c5d2-4b56-98db-7ee42fa446c3
+                Name: Modelo
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: 91f37aba-7140-4e8e-b8da-728615f59313
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: 0ded2c18-a233-4616-9c50-e75cb0531f3e
+                        Model: 449f714b-c2f9-4b2d-b6a8-5ed407b77a72:Modelos/Lancero/Lancero
+                        Materials: {}
+        -   Entity:
                 Id: cac42f15-f981-4947-aabf-e201c060a39d
                 Name: Zombi 0
                 Components:
@@ -1151,6 +1214,59 @@ Hierarchy:
                         ejeEscopeta: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
                         ejeMetralleta: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
                         ejeRife: ref!! 8374c3d3-7007-4071-9f10-14045dd1b355
+        -   Folder: null
+            Entity:
+                Id: e4f3ff8e-c37e-4dab-86d3-3a406db63822
+                Name: Enemigo (lancero)
+                Components:
+                    a60cbff727993b50e85c8863a7d8a974: !CharacterComponent
+                        Id: 33f405b7-1cfd-447f-9b7b-c41e518c95eb
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        ColliderShapes:
+                            ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
+                                Length: 1.5
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
+                        Id: 786fbd03-8f4c-4908-9bbe-2588a8c9a331
+                        Position: {X: 5.5063105, Y: 0.0, Z: -1.3296795}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 91f37aba-7140-4e8e-b8da-728615f59313
+                            fba4e7119c23a9bf74d3b644f477681a: ref!! 5fedfd8f-32b3-4330-b1e7-9cc7e1bada2e
+                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! 37997c76-6e46-4fe2-a693-34ff25b91683
+                    bb01368017a9cd5377554e97337d1e5d: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                        Id: da62dbb7-387d-4d49-9b6a-3fef7fa6b682
+                        enemigo: "meléMediano"
+                        "armaMelé": ref!! fce7412a-f445-4ff2-9044-e59c827fdaee
+                    e354cf62048a19fad767c94fcd72a14f: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: a547fb8d-05d3-448a-8ef2-de9679824411
+                    b96e80a04d6c3438bc402c3dc55f77e2: !NavigationComponent
+                        Id: 5d996625-a58c-44f1-b64a-ef1ff8764d02
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
+                    94a313340a8a0b01f1c47d7f9af038c0: !Bozobaralika.AnimadorLancero,Bozobaralika.Proyecto
+                        Id: f09b790f-c1a3-41ab-8da0-3f98a0e4810d
+                        modelo: ref!! 0ded2c18-a233-4616-9c50-e75cb0531f3e
+                        lanza: ref!! 5fedfd8f-32b3-4330-b1e7-9cc7e1bada2e
+                        brazos:
+                            47c2a11bbdfba4a5f129699ad7e976f7: brazo.L
+                            4bba71a1e337f5cf7761c627521ebe90: brazo.R
+                        piernas:
+                            578b123d34bf00410ead04fd3ef88bb4: muslo.L
+                            4ed343cec3bd4f435714d5d58f6d52b9: muslo.R
         -   Folder: null
             Entity:
                 Id: e6ee0047-6726-4c37-bcd8-6f0fb152abbf
