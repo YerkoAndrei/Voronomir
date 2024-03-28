@@ -143,7 +143,7 @@ public class ControladorEnemigo : StartupScript
             case Enemigos.meléLigero:
                 return 0.25f;
             case Enemigos.meléMediano:
-                return 0.2f;
+                return 0.4f;
             case Enemigos.meléPesado:
                 return 0.2f;
             case Enemigos.rangoLigero:
@@ -175,7 +175,7 @@ public class ControladorEnemigo : StartupScript
             case Enemigos.meléLigero:
                 return 0.5f;
             case Enemigos.meléMediano:
-                return 0.5f;
+                return 0.8f;
             case Enemigos.meléPesado:
                 return 0.5f;
             case Enemigos.rangoLigero:

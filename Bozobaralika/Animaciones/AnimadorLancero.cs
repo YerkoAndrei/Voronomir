@@ -1,20 +1,24 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
-using Stride.Rendering;
 using Stride.Engine;
+using Stride.Rendering;
 
 namespace Bozobaralika;
 
-public class AnimadorZombi : StartupScript, IAnimador
+public class AnimadorLancero : StartupScript, IAnimador
 {
     public ModelComponent modelo;
+    public TransformComponent lanza;
     public List<string> brazos = new List<string> { };
     public List<string> piernas = new List<string> { };
 
     private SkeletonUpdater esqueleto;
     private int[] idBrazos;
     private int[] idPiernas;
+
+    private Vector3 pociciónLanzaInicio;
+    private Vector3 pociciónLanzaAtaque;
 
     private Quaternion rotaciónInicio0;
     private Quaternion rotaciónInicio1;
@@ -39,8 +43,12 @@ public class AnimadorZombi : StartupScript, IAnimador
                     idPiernas[ii] = i;
             }
         }
+
         rotaciónInicio0 = esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation;
         rotaciónInicio1 = esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation;
+
+        pociciónLanzaInicio = lanza.Position;
+        pociciónLanzaAtaque = new Vector3(0, 2, -0.2f);
     }
 
     public void Caminar(float velocidad)
@@ -58,13 +66,15 @@ public class AnimadorZombi : StartupScript, IAnimador
     {
         var rotaciónAtaque0 = Quaternion.RotationZ(-90);
         var rotaciónAtaque1 = Quaternion.RotationZ(90);
-        float duración = 0.25f;
+        float duración = 0.4f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
         while (tiempoLerp < duración)
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+
+            lanza.Position = Vector3.Lerp(pociciónLanzaAtaque, pociciónLanzaInicio, tiempo);
 
             esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = Quaternion.Lerp(rotaciónAtaque0, rotaciónInicio0, tiempo);
             esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = Quaternion.Lerp(rotaciónAtaque1, rotaciónInicio1, tiempo);
@@ -74,6 +84,8 @@ public class AnimadorZombi : StartupScript, IAnimador
         }
 
         // Fin
+        lanza.Position = pociciónLanzaInicio;
+
         esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = rotaciónInicio0;
         esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = rotaciónInicio1;
     }
