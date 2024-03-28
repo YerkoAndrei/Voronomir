@@ -38,7 +38,6 @@ public class ControladorLlave : AsyncScript
                 jugador = colisión.ColliderB.Entity.Get<ControladorJugador>();
 
             Obtener(jugador);
-
             await Script.NextFrame();
         }
     }

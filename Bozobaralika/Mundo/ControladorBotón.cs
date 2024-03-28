@@ -4,9 +4,11 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Bozobaralika;
+using static Constantes;
 
 public class ControladorBotón : AsyncScript
 {
+    public Llaves llave;
     public ControladorPuerta puerta;
     public TransformComponent modelo;
 
@@ -35,6 +37,10 @@ public class ControladorBotón : AsyncScript
     private void Activar(ControladorJugador controlador)
     {
         if (controlador == null)
+            return;
+
+        // Llave necesaria
+        if (!controlador.ObtenerLlave(llave))
             return;
 
         cuerpo.Enabled = false;

@@ -28,6 +28,7 @@ public static class Constantes
 
     public enum Llaves
     {
+        nada,
         azul,
         roja
     }

@@ -135,6 +135,21 @@ public class ControladorJugador : SyncScript
         }
     }
 
+    public bool ObtenerLlave(Llaves llave)
+    {
+        switch (llave)
+        {
+            case Llaves.nada:
+                return true;
+            case Llaves.azul:
+                return llaveAzul;
+            case Llaves.roja:
+                return llaveRoja;
+            default:
+                return false;
+        }
+    }
+
     public void VibrarCámara(float fuerza, int iteraciones)
     {
         var duración = 0.01f;
