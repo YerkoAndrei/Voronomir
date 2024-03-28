@@ -110,6 +110,13 @@ Hierarchy:
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     768db3b6ea5a804934dce807b9215ebe: !Bozobaralika.AnimadorZombi,Bozobaralika.Proyecto
                         Id: e9e85dea-0285-413b-9cb6-036b9501f48d
+                        modelo: ref!! 3669b122-5954-419e-a2f1-2ed48e57bb18
+                        brazos:
+                            d5e5d05836e952ab9b8d7b3c1a2be51e: brazo.L
+                            64022d1c494de0222385fdafef680dc4: brazo.R
+                        piernas:
+                            e1fa468402b498fdc635e4bc98c6f42b: muslo.L
+                            980a0b5184eece1987ea9a444454fbc2: muslo.R
         -   Entity:
                 Id: 03bd6f4d-4a01-43c5-b6be-2c6d6c327c81
                 Name: Modelo
@@ -899,7 +906,7 @@ Hierarchy:
                 Components:
                     48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
                         Id: c57c8823-ca8e-4ddc-9555-02c2dd33eae3
-                        Position: {X: 0.0, Y: 1.25, Z: 1.0}
+                        Position: {X: 0.0, Y: 1.25, Z: 0.75}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 2.0}
                         Children: {}
