@@ -8,6 +8,7 @@ using Stride.Input;
 
 namespace Bozobaralika;
 using static Utilidades;
+using static Constantes;
 
 public class ControladorJugador : SyncScript
 {
@@ -23,6 +24,9 @@ public class ControladorJugador : SyncScript
     private bool curando;
     private float vida;
     private float vidaMax;
+
+    private bool llaveAzul;
+    private bool llaveRoja;
 
     public override void Start()
     {
@@ -40,6 +44,9 @@ public class ControladorJugador : SyncScript
         armas.Iniciar(this, movimiento, cámara, interfaz);
 
         posiciónCabeza = cabeza.Position;
+
+        llaveAzul = false;
+        llaveRoja = false;
 
         // Debug
         Input.LockMousePosition(true);
@@ -111,6 +118,21 @@ public class ControladorJugador : SyncScript
     {
         // PENDIENTE: efectos
         interfaz.Morir();
+    }
+
+    public void GuardarLlave(Llaves llave)
+    {
+        interfaz.ActivarLlave(llave);
+
+        switch (llave)
+        {
+            case Llaves.azul:
+                llaveAzul = true;
+                break;
+            case Llaves.roja:
+                llaveRoja= true;
+                break;
+        }
     }
 
     public void VibrarCámara(float fuerza, int iteraciones)

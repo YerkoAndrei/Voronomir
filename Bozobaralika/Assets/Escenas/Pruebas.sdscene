@@ -31,6 +31,8 @@ Hierarchy:
         - ref!! 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
         - ref!! 8b42ea7d-752a-4920-97e2-1646ec7b9189
         - ref!! 5806e859-d7ec-42d4-ac78-edfc026317d2
+        - ref!! 510ed132-3f81-42a5-9c8c-e52f9348ffab
+        - ref!! a9c0250e-6712-4e86-bc3f-78047f439de2
     Parts:
         -   Folder: Enemigos
             Entity:
@@ -322,6 +324,39 @@ Hierarchy:
                         RenderGroup: Group11
                         Materials: {}
         -   Entity:
+                Id: 510ed132-3f81-42a5-9c8c-e52f9348ffab
+                Name: Llave Azul
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 2c28075e-0b8e-49ee-a1ac-9996981dc5bd
+                        Position: {X: 16.0, Y: 0.5, Z: 2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 5dd9166c-961d-48ba-b9dd-efe134b7b2f3
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 5ea21955-55e1-449f-a260-bb06bcb11a1e
+                        CollisionGroup: StaticFilter
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    3f191577081423452935e8cfefe590e4: !Bozobaralika.ControladorLlave,Bozobaralika.Proyecto
+                        Id: 4d4f1fe6-bd3c-473e-bc21-3cdaa3ab41f2
+                        llave: azul
+                        modelo: ref!! 5dd9166c-961d-48ba-b9dd-efe134b7b2f3
+        -   Entity:
                 Id: 524b2fce-11fa-4bb8-83ce-f536073d8cf4
                 Name: EjeEspada
                 Components:
@@ -456,6 +491,20 @@ Hierarchy:
                         Materials: {}
                     c451d691316128e92a2b14a5f0d7c2e0: !Bozobaralika.AnimadorObservaci%25C3%25B3n,Bozobaralika.Proyecto
                         Id: ca508396-8218-42f3-9400-d211bd018c73
+        -   Entity:
+                Id: 86ce93a1-ae39-4e71-92c0-223e2ee4fe62
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 32524af0-94ba-4b91-af3d-fabb7dd890b3
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 9e007192-e377-4754-8f76-f47349581a74
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
         -   Folder: Entorno
             Entity:
                 Id: 8b42ea7d-752a-4920-97e2-1646ec7b9189
@@ -520,6 +569,40 @@ Hierarchy:
                         Id: d6a5e338-afa8-4a79-a142-2586652224f2
                         Model: e5264c9f-ce07-44c3-804e-cfe48eae8f2a:Modelos/Babosa/Babosa
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: a9c0250e-6712-4e86-bc3f-78047f439de2
+                Name: Llave Roja
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: d06c1b2e-e204-4081-b2a8-4f1d9678ef13
+                        Position: {X: 16.0, Y: 0.5, Z: 6.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 32524af0-94ba-4b91-af3d-fabb7dd890b3
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 8670ac47-0f86-4d9e-9cd1-bb1909b46e43
+                        CollisionGroup: StaticFilter
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    3f191577081423452935e8cfefe590e4: !Bozobaralika.ControladorLlave,Bozobaralika.Proyecto
+                        Id: 5be66562-ee7b-46bd-84a6-95074983b64f
+                        llave: roja
+                        modelo: ref!! 32524af0-94ba-4b91-af3d-fabb7dd890b3
         -   Entity:
                 Id: b8b825d3-16a6-410e-9bfd-e4400a802454
                 Name: Modelo
@@ -838,6 +921,20 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: eb67bfca-42e8-4ce6-8c5d-d9e37bd7f436
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 5dd9166c-961d-48ba-b9dd-efe134b7b2f3
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: c736188e-c84f-496a-8dff-88e6c031640f
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
         -   Folder: Enemigos
             Entity:
                 Id: ed574734-d19c-4582-8145-31497e3f514d

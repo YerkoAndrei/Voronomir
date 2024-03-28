@@ -92,9 +92,28 @@ Hierarchy:
                     765854fdc81c94fe90f7e3097e76552f: !Grid ref!! 49b75539-86e0-470d-911a-8690f66615b4
                     41cf4519d3dfe66a586aeac22336564d: !UniformGrid ref!! f9c55e83-016c-4bc2-9420-9cb93cdb0f34
                     1f161687c3c5aec34deca95b5e8044ee: !Grid ref!! 8c8be992-82e9-4fcc-ab56-c94d38eb136d
+                    98024bdca7c7bd9b46acf3f1a0244e25: !ImageElement ref!! 33975fa5-af25-44ed-9082-4926fa943f8f
+                    6140f0fcc2df489994cc1de939da3f69: !ImageElement ref!! dae539b2-e1a4-407c-b2ea-60d5ff1a181e
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 33975fa5-af25-44ed-9082-4926fa943f8f
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 100.0
+                Height: 100.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Bottom
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgLlaveAzul
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 0, G: 0, B: 255, A: 255}
         -   UIElement: !Grid
                 Id: 49b75539-86e0-470d-911a-8690f66615b4
                 DependencyProperties: {}
@@ -322,6 +341,23 @@ Hierarchy:
                     Texture: 06d28cdc-d365-45f3-8be3-8fccc23d4c92:Texturas/Armas/decoArmas
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !ImageElement
+                Id: dae539b2-e1a4-407c-b2ea-60d5ff1a181e
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 100.0
+                Height: 100.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Bottom
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgLlaveRoja
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 0, B: 0, A: 255}
         -   UIElement: !Grid
                 Id: ed970148-9451-495e-8f8b-f4f2099dd023
                 DependencyProperties:

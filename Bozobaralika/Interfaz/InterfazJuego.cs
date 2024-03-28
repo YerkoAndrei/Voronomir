@@ -26,6 +26,8 @@ public class InterfazJuego : StartupScript
     private ImageElement imgMetralleta;
     private ImageElement imgRifle;
 
+    private ImageElement imgLlaveAzul;
+    private ImageElement imgLlaveRoja;
 
     public override void Start()
     {
@@ -44,7 +46,11 @@ public class InterfazJuego : StartupScript
         imgMetralleta = página.FindVisualChildOfType<ImageElement>("imgMetralleta");
         imgRifle = página.FindVisualChildOfType<ImageElement>("imgRifle");
 
+        imgLlaveAzul = página.FindVisualChildOfType<ImageElement>("imgLlaveAzul");
+        imgLlaveRoja = página.FindVisualChildOfType<ImageElement>("imgLlaveRoja");
+
         ApagarMiras();
+        ApagarLlaves();
     }
 
     public void ActualizarVida(float porcentaje)
@@ -116,6 +122,25 @@ public class InterfazJuego : StartupScript
         imgEscopeta.Color = armaNormal;
         imgMetralleta.Color = armaNormal;
         imgRifle.Color = armaNormal;
+    }
+
+    private void ApagarLlaves()
+    {
+        imgLlaveAzul.Visibility = Visibility.Hidden;
+        imgLlaveRoja.Visibility = Visibility.Hidden;
+    }
+
+    public void ActivarLlave(Llaves llave)
+    {
+        switch(llave)
+        {
+            case Llaves.azul:
+                imgLlaveAzul.Visibility = Visibility.Visible;
+                break;
+            case Llaves.roja:
+                imgLlaveRoja.Visibility = Visibility.Visible;
+                break;
+        }
     }
 
     public void Morir()

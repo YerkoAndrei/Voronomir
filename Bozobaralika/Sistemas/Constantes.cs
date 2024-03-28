@@ -26,6 +26,12 @@ public static class Constantes
         rifle
     }
 
+    public enum Llaves
+    {
+        azul,
+        roja
+    }
+
     public enum Enemigos
     {
         meléLigero,     // Esqueleto
