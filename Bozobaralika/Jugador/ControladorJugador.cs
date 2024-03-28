@@ -78,7 +78,7 @@ public class ControladorJugador : SyncScript
         float vidaActual = vida;
         float vidaCurada = vida + ObtnerCura();
 
-        float duración = 0.8f;
+        float duración = 1f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
@@ -102,7 +102,7 @@ public class ControladorJugador : SyncScript
     public float ObtnerCura()
     {
         // PENDIENTE: mejoras
-        return 20;
+        return 10;
     }
 
     public void RecibirDaño(float daño)
