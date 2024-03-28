@@ -48,6 +48,7 @@ public class ControladorPersecusión : SyncScript
                 break;
             }
         }
+        animador.Iniciar();
 
         cuerpo = Entity.Get<CharacterComponent>();
         navegador = Entity.Get<NavigationComponent>();
@@ -121,6 +122,7 @@ public class ControladorPersecusión : SyncScript
             aceleración = MathUtil.SmoothStep(tempoAceleración / tiempoAceleración);
             
             cuerpo.SetVelocity(movimiento * 100 * velocidad * aceleración);
+            animador.Caminar(aceleración);
         }
         else
         {
