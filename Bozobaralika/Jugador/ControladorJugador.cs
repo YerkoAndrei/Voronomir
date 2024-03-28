@@ -109,6 +109,7 @@ public class ControladorJugador : SyncScript
     {
         vida -= daño;
         interfaz.ActualizarVida(vida / vidaMax);
+        VibrarCámara(10, 10);
 
         if (vida <= 0)
             Morir();
