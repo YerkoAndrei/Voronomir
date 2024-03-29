@@ -76,7 +76,7 @@ public class ControladorJugador : SyncScript
         await Task.Delay(200);
 
         float vidaActual = vida;
-        float vidaCurada = vida + ObtnerCura();
+        float vidaCurada = vida + ObtenerCura();
 
         float duración = 1f;
         float tiempoLerp = 0;
@@ -99,7 +99,7 @@ public class ControladorJugador : SyncScript
         curando = false;
     }
 
-    public float ObtnerCura()
+    public float ObtenerCura()
     {
         // PENDIENTE: mejoras
         return 10;
