@@ -89,7 +89,8 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
-                                Length: 1.5
+                                Length: 1.2
+                                Radius: 0.4
                                 LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
@@ -197,6 +198,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: 73baa9ca-539b-47ec-bc25-169e134e42de
                         controlador: ref!! 4f9aa40e-6793-4b0d-bd71-aa164e20f915
+                        multiplicador: 1.0
         -   Folder: Entorno
             Entity:
                 Id: 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
@@ -330,11 +332,11 @@ Hierarchy:
                         Id: f71c0d70-242d-498c-8708-4aeddcd57fd6
                         Position: {X: 0.0, Y: 0.75, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.49, Y: 1.5, Z: 0.49}
+                        Scale: {X: 0.4, Y: 1.5, Z: 0.4}
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: acdbb950-a431-481f-8a7d-525838ed137f
-                        Model: c7f6cc1f-dca4-4efe-802b-421756419e85:Cylinder
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         RenderGroup: Group10
                         Materials: {}
         -   Folder: Muros
@@ -408,6 +410,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: 1c0025d0-c3e0-4e15-8c85-ee7a1745ec7d
                         controlador: ref!! e4f3ff8e-c37e-4dab-86d3-3a406db63822
+                        multiplicador: 1.0
         -   Entity:
                 Id: 30c0c51d-ae3d-4b85-ba30-67af70b3bc39
                 Name: "ArmaMelé"
@@ -599,8 +602,8 @@ Hierarchy:
                         ColliderShapes:
                             907a139209721513cc8f945f981e4ef3: !SphereColliderShapeDesc
                                 Is2D: false
-                                Radius: 0.4
-                                LocalOffset: {X: 0.0, Y: 0.4, Z: 0.0}
+                                Radius: 0.45
+                                LocalOffset: {X: 0.0, Y: 0.45, Z: 0.05}
                     09db92a0e4c509fdd87f9b0ba04c75ed: !NavigationComponent
                         Id: b0c21aa5-6d74-4948-9de4-c13e84e1fb91
                         NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
@@ -839,6 +842,43 @@ Hierarchy:
                     bce51c59597278acc9a0274f9f355047: !Bozobaralika.AnimadorObservaci%25C3%25B3n,Bozobaralika.Proyecto
                         Id: ca508396-8218-42f3-9400-d211bd018c73
         -   Entity:
+                Id: 7d1a0441-295b-4088-91e7-697a09a4f472
+                Name: "Dañable"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: af20a95d-e3a5-4081-a16e-d42859f34d38
+                        Position: {X: 0.0, Y: 0.75, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 8b64a9e7-64a5-400b-8bdd-af7962f3ae7d
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !CapsuleColliderShapeDesc
+                                Length: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: a86c98e9-d19a-4b9c-a4d1-ead407bc67e0
+                        controlador: ref!! dd82e74f-617b-481e-bb36-34773b64d421
+                        multiplicador: 1.0
+        -   Entity:
                 Id: 86ce93a1-ae39-4e71-92c0-223e2ee4fe62
                 Name: Modelo
                 Components:
@@ -935,8 +975,7 @@ Hierarchy:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! afccf0ce-6856-463c-b8f9-3965a352b7d0
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: 05d54835-e18d-4978-98cb-036a25f8dac8
-                        CollisionGroup: StaticFilter
-                        CanCollideWith: CharacterFilter
+                        CanCollideWith: KinematicFilter, CharacterFilter
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.0
@@ -1177,6 +1216,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: d19c9759-d7a1-4ed3-87e1-a3b44a30828e
                         controlador: ref!! 01a3360a-7f24-41b6-9f84-af8196ae98d1
+                        multiplicador: 1.0
         -   Entity:
                 Id: bc63eae8-8aec-4695-b5bd-b88a5444f14a
                 Name: "ArmaMelé"
@@ -1428,19 +1468,22 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: -25.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
-                                Length: 1.0
+                                Length: 0.9
+                                Radius: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.75, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     c76d63ecb77eaca4261abdea69fcd8fe: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
                         Id: c46f69dc-db00-454e-8f32-19c17e5759b2
                         cabeza: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
                         "cámara": ref!! d37efe62-6123-4994-bb6a-66753b20c695
+                        cuerpos: {}
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: d0f0434a-e882-4b76-9c27-cc89cb138ce7
                         Position: {X: 0.0, Y: 0.0, Z: 4.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            68f98fe1dbc16cda2d07f6583a3e2821: ref!! af20a95d-e3a5-4081-a16e-d42859f34d38
                             4f555758721bbf121dfb821111b51961: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
                             30cb10bb707641b055d441b3eb811031: ref!! f71c0d70-242d-498c-8708-4aeddcd57fd6
                     4b89b154b5b3e352d4ed1ee3527f3cf7: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
@@ -1513,7 +1556,8 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
-                                Length: 1.5
+                                Length: 1.2
+                                Radius: 0.5
                                 LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     691c8f9386df01a1270f88b33a2974d5: !NavigationComponent

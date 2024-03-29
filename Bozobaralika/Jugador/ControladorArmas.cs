@@ -10,7 +10,7 @@ using static Utilidades;
 using static Constantes;
 
 // Filtros:
-// Default      - Disparos
+// Default      - Disparos (daño en general)
 // Static       - Entorno, puertas, llaves
 // Kinematic    - Enemigos (navegación y dañable)
 // Debris       - Escombros

@@ -5,6 +5,7 @@ namespace Bozobaralika;
 public class ElementoDañable : StartupScript
 {
     public Entity controlador;
+    public float multiplicador;
 
     private IDañable interfaz;
 
@@ -22,6 +23,6 @@ public class ElementoDañable : StartupScript
 
     public void RecibirDaño(float daño)
     {
-        interfaz.RecibirDaño(daño);
+        interfaz.RecibirDaño(daño * multiplicador);
     }
 }

@@ -35,17 +35,17 @@ public class ControladorDañoContinuo : AsyncScript
 
     private void Dañar(Collision[] colisiones)
     {
+        // También daña enemigos, pero reciben menos daño por el multiplicador de los pies
         foreach (var colisión in colisiones)
         {
-            var jugador = colisión.ColliderA.Entity.Get<ControladorJugador>();
-            if (jugador == null)
-                jugador = colisión.ColliderB.Entity.Get<ControladorJugador>();
+            var dañable = colisión.ColliderA.Entity.Get<ElementoDañable>();
+            if (dañable == null)
+                dañable = colisión.ColliderB.Entity.Get<ElementoDañable>();
 
-            if (jugador == null)
+            if (dañable == null)
                 continue;
 
-            // PENDIENTE: efectos
-            jugador.RecibirDaño(daño);
+            dañable.RecibirDaño(daño);
         }
     }
 }
