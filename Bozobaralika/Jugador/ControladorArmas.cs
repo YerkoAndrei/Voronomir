@@ -363,13 +363,13 @@ public class ControladorArmas : SyncScript
         switch (arma)
         {
             case Armas.espada:
-                return 40;
+                return 50;
             case Armas.escopeta:
-                return 10;
+                return 4;
             case Armas.metralleta:
-                return 5;
+                return 10;
             case Armas.rifle:
-                return 40;
+                return 100;
             default:
                 return 0;
         }

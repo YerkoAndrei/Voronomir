@@ -25,17 +25,17 @@ public class ControladorEnemigo : StartupScript
         switch (enemigo)
         {
             case Enemigos.meléLigero:
-                vida = 100;
+                vida = 80;
                 melé = true;
                 persecusión.Iniciar(this, 0.1f, 7f, 1.5f);
                 break;
             case Enemigos.meléMediano:
-                vida = 400;
+                vida = 200;
                 melé = true;
                 persecusión.Iniciar(this, 0.1f, 4f, 3f);
                 break;
             case Enemigos.meléPesado:
-                vida = 200;
+                vida = 100;
                 melé = true;
                 persecusión.Iniciar(this, 0.5f, 10f, 5f);
                 break;
@@ -113,7 +113,7 @@ public class ControladorEnemigo : StartupScript
             case Enemigos.meléLigero:
                 return 10;
             case Enemigos.meléMediano:
-                return 20;
+                return 25;
             case Enemigos.meléPesado:
                 return 0;
             default:
