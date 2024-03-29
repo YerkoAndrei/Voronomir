@@ -8,59 +8,37 @@ public class ControladorArmaMelé : StartupScript
 {
     private CollisionFilterGroupFlags colisiones;
     private RigidbodyComponent cuerpo;
-    private bool jugador;
 
     public void Iniciar(bool _jugador)
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
-        colisiones = new CollisionFilterGroupFlags();
-        jugador = _jugador;
 
-        if (jugador)
-            colisiones |= CollisionFilterGroupFlags.KinematicFilter;
+        if (_jugador)
+            colisiones = CollisionFilterGroupFlags.KinematicFilter;
         else
-            colisiones |= CollisionFilterGroupFlags.CharacterFilter;
+            colisiones = CollisionFilterGroupFlags.CharacterFilter;
 
         cuerpo.CanCollideWith = colisiones;
     }
 
     public void Atacar(float daño)
     {
-        if (jugador)
-            DañarEnemigos(cuerpo.Collisions.ToArray(), daño);
-        else
-            DañarJugador(cuerpo.Collisions.ToArray(), daño);
+        EnviarDaño(cuerpo.Collisions.ToArray(), daño);
     }
 
-    private void DañarEnemigos(Collision[] colisiones, float daño)
+    private void EnviarDaño(Collision[] colisiones, float daño)
     {
+        // Melé envia daño por todos los elementos
         foreach (var colisión in colisiones)
         {
-            var enemigo = colisión.ColliderA.Entity.Get<ControladorEnemigo>();
-            if (enemigo == null)
-                enemigo = colisión.ColliderB.Entity.Get<ControladorEnemigo>();
+            var dañable = colisión.ColliderA.Entity.Get<ElementoDañable>();
+            if (dañable == null)
+                dañable = colisión.ColliderB.Entity.Get<ElementoDañable>();
 
-            if (enemigo == null)
+            if (dañable == null)
                 continue;
 
-            // Daña enemigo
-            enemigo.RecibirDaño(daño);
-        }
-    }
-
-    private void DañarJugador(Collision[] colisiones, float daño)
-    {
-        foreach (var colisión in colisiones)
-        {
-            var jugador = colisión.ColliderA.Entity.Get<ControladorJugador>();
-            if (jugador == null)
-                jugador = colisión.ColliderB.Entity.Get<ControladorJugador>();
-
-            if (jugador == null)
-                continue;
-
-            // Daña jugador
-            jugador.RecibirDaño(daño);
+            dañable.RecibirDaño(daño);
         }
     }
 }

@@ -12,7 +12,7 @@ using static Constantes;
 // Filtros:
 // Default      - Disparos
 // Static       - Entorno, puertas, llaves
-// Kinematic    - Enemigos
+// Kinematic    - Enemigos (navegación y dañable)
 // Debris       - Escombros
 // Sensor       - Puertas
 // Character    - Jugador
@@ -230,8 +230,8 @@ public class ControladorArmas : SyncScript
             return;
         }
 
-        var enemigo = resultado.Collider.Entity.Get<ControladorEnemigo>();
-        if (enemigo == null)
+        var dañable = resultado.Collider.Entity.Get<ElementoDañable>();
+        if (dañable == null)
             return;
 
         // PENDIENTE: efecto
@@ -248,7 +248,7 @@ public class ControladorArmas : SyncScript
         // Daña enemigo
         var dañoFinal = ObtenerDaño(armaActual) - reducción;
         dañoFinal = MathUtil.Clamp(dañoFinal, dañoMínimo, dañoMáximo);
-        enemigo.RecibirDaño(dañoFinal);
+        dañable.RecibirDaño(dañoFinal);
     }
 
     private void CalcularRayoPenetrante()
@@ -272,8 +272,8 @@ public class ControladorArmas : SyncScript
                 break;
             }
 
-            var enemigo = resultado.Collider.Entity.Get<ControladorEnemigo>();
-            if (enemigo == null)
+            var dañable = resultado.Collider.Entity.Get<ElementoDañable>();
+            if (dañable == null)
                 return;
 
             // Retroalimentación daño
@@ -289,7 +289,7 @@ public class ControladorArmas : SyncScript
             // Daña enemigo
             var dañoFinal = ObtenerDaño(armaActual) + aumento;
             dañoFinal = MathUtil.Clamp(dañoFinal, dañoMínimo, dañoMáximo);
-            enemigo.RecibirDaño(dañoFinal);
+            dañable.RecibirDaño(dañoFinal);
         }
     }
 

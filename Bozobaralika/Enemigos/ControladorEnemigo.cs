@@ -1,18 +1,20 @@
 ﻿using Stride.Engine;
 using Stride.Physics;
+using System.Collections.Generic;
 
 namespace Bozobaralika;
 using static Constantes;
 
-public class ControladorEnemigo : StartupScript
+public class ControladorEnemigo : StartupScript, IDañable
 {
     public Enemigos enemigo;
+    public List<RigidbodyComponent> cuerpos { get => new List<RigidbodyComponent> {  }; set => new List<RigidbodyComponent> { }; }
+
     public ControladorArmaMelé armaMelé;
-    //public ControladorArmaEnemigo armaDisparo;
+    public ControladorArmaRango armaRango;
 
     private CharacterComponent cuerpo;
     private ControladorPersecusión persecusión;
-
     private float vida;
     private bool activo;
     private bool melé;
@@ -37,7 +39,7 @@ public class ControladorEnemigo : StartupScript
             case Enemigos.meléPesado:
                 vida = 100;
                 melé = true;
-                persecusión.Iniciar(this, 0.5f, 10f, 5f);
+                persecusión.Iniciar(this, 0.1f, 10f, 5f);
                 break;
             case Enemigos.rangoLigero:
                 vida = 40;
@@ -70,27 +72,30 @@ public class ControladorEnemigo : StartupScript
                 break;
         }
 
-        if (melé)
+        // Escudo no tiene arma
+        if (melé && armaMelé != null)
             armaMelé.Iniciar(false);
-        //else
-            //armaDisparo.Iniciar();
+
+        else if (!melé && armaRango != null)
+            armaRango.Iniciar();
 
         activo = true;
     }
 
     public void Atacar()
     {
-        if (melé)
+        if (melé && armaMelé != null)
             armaMelé.Atacar(ObtenerDañoMelé());
-        //else
-            //armaDisparo.Atacar(ObtenerDañoDisparo());
+
+        else if (!melé && armaRango != null)
+            armaRango.Atacar(ObtenerDañoRango());
     }
 
     public void RecibirDaño(float daño)
     {
         vida -= daño;
 
-        if (vida <= 0)
+        if (vida <= 0 && activo)
             Morir();
     }
 
@@ -145,7 +150,7 @@ public class ControladorEnemigo : StartupScript
             case Enemigos.meléMediano:
                 return 0.4f;
             case Enemigos.meléPesado:
-                return 0.2f;
+                return 0.5f;
             case Enemigos.rangoLigero:
                 return 0.2f;
             case Enemigos.rangoMediano:

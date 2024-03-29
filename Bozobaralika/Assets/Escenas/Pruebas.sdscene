@@ -14,6 +14,7 @@ Hierarchy:
         - ref!! dd82e74f-617b-481e-bb36-34773b64d421
         - ref!! 01a3360a-7f24-41b6-9f84-af8196ae98d1
         - ref!! e4f3ff8e-c37e-4dab-86d3-3a406db63822
+        - ref!! 4f9aa40e-6793-4b0d-bd71-aa164e20f915
         - ref!! 78b543f3-a0d8-4851-99a8-7f64df6948bc
         - ref!! 2c46881f-53e6-4d1d-85df-924007329f46
         - ref!! d471c428-d220-4860-b67e-f0ad26d2d613
@@ -72,10 +73,10 @@ Hierarchy:
                 Id: 01a3360a-7f24-41b6-9f84-af8196ae98d1
                 Name: Enemigo (zombi)
                 Components:
-                    a60cbff727993b50e85c8863a7d8a974: !CharacterComponent
-                        Id: 74c9977b-d672-4514-98eb-5990b74351e4
+                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
+                        Id: f7cdcd13-8d18-477d-b74f-fc23b30baddb
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -91,26 +92,29 @@ Hierarchy:
                                 Length: 1.5
                                 LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
+                        Id: ee03cd24-a8ce-416c-a3f8-a38dac8d2aa6
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 7f8abd7c-3f6f-44a8-9a41-e132c6b8d12d
-                        Position: {X: 3.0, Y: 0.0, Z: -1.3296795}
+                        Position: {X: 3.0, Y: 0.0, Z: -1.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            f14eafd2887605601cb783e4e612d427: ref!! c2fd7ac1-7956-4285-91ae-12670bec62c6
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 63dd9eef-ba83-4ac2-9b82-4bf6a7670c54
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! c57c8823-ca8e-4ddc-9555-02c2dd33eae3
-                    bb01368017a9cd5377554e97337d1e5d: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                    7f6e66f0d97456bb9a986066b6ffeee1: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: 9c8b7eb6-a941-48c5-96b0-494ced9be529
                         enemigo: "meléLigero"
                         "armaMelé": ref!! a13e9284-0c3f-4cbd-90e6-f62de2f6c8a9
-                    e354cf62048a19fad767c94fcd72a14f: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
-                        Id: be76673d-0fe6-416b-9dad-ca1ea75969a5
-                    b96e80a04d6c3438bc402c3dc55f77e2: !NavigationComponent
-                        Id: 1bc02936-6d2e-4e45-b5db-e67d123aee53
-                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
-                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
-                    768db3b6ea5a804934dce807b9215ebe: !Bozobaralika.AnimadorZombi,Bozobaralika.Proyecto
-                        Id: e9e85dea-0285-413b-9cb6-036b9501f48d
+                        armaRango: null
+                        cuerpos: {}
+                    33ce25eb8ee99f15b44e0a062cbfffd2: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: d6b2ec8f-b235-486d-9cb7-7a97f695e09b
+                    dcfc61066510852ac085b2f68892da9c: !Bozobaralika.AnimadorZombi,Bozobaralika.Proyecto
+                        Id: 808d5371-7d26-4126-8cec-c9de22c4be03
                         modelo: ref!! 3669b122-5954-419e-a2f1-2ed48e57bb18
                         brazos:
                             d5e5d05836e952ab9b8d7b3c1a2be51e: brazo.L
@@ -156,6 +160,43 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: 0d47ce3c-f513-4cd0-9e1a-9057e798ad65
+                Name: "Dañable cerebro"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 9112ce87-93a3-4f3a-bc63-d0c65b33ec31
+                        Position: {X: 0.0, Y: 1.13, Z: 0.16}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 2814ed81-bd8a-481f-9cd5-2622c315012c
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.22
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: 73baa9ca-539b-47ec-bc25-169e134e42de
+                        controlador: ref!! 4f9aa40e-6793-4b0d-bd71-aa164e20f915
         -   Folder: Entorno
             Entity:
                 Id: 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
@@ -254,8 +295,19 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    b91d9702e6c6bb703286b4a5b61d7e39: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
+                    72102bac8ab6d052c1e2045767f143e1: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
                         Id: 72ecda8e-7d43-469a-b3ed-b87cb747013c
+        -   Entity:
+                Id: 1c79989d-ae1f-40d5-a1ec-3c195fff6173
+                Name: "Dañables"
+                Components:
+                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
+                        Id: 96f60fb1-d17c-44a6-af79-6f81f312a282
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            274570ec839d03441939b84ca63d1199: ref!! 0c75af9b-fd81-4c45-8f61-2408c49af5e8
         -   Entity:
                 Id: 26b98ed7-a446-4bee-ba3c-99f5e4f4b3d1
                 Name: Modelo
@@ -318,6 +370,44 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: 2f3db22c-7e39-45a5-bae0-667e65773ada
+                Name: "Dañable torso"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 0c75af9b-fd81-4c45-8f61-2408c49af5e8
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: b655fe73-b15a-4585-b00f-94d4fb5ab81d
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.5, Y: 2.0, Z: 0.5}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: 1c0025d0-c3e0-4e15-8c85-ee7a1745ec7d
+                        controlador: ref!! e4f3ff8e-c37e-4dab-86d3-3a406db63822
         -   Entity:
                 Id: 30c0c51d-ae3d-4b85-ba30-67af70b3bc39
                 Name: "ArmaMelé"
@@ -351,7 +441,7 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    1fae926b38418a3eb746141717e4e5ab: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
+                    4764e3bbc5ced29d8cec24362b6b5f3c: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
                         Id: fce7412a-f445-4ff2-9044-e59c827fdaee
         -   Entity:
                 Id: 311b2d5b-74ee-48ad-bcc9-b44a58714aee
@@ -383,7 +473,7 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    35e853322d2fcfdd48ac7f83ce9f4f95: !Bozobaralika.ControladorBot%25C3%25B3n,Bozobaralika.Proyecto
+                    283716cf9ccfd01e2d2fae0d9c2d57f0: !Bozobaralika.ControladorBot%25C3%25B3n,Bozobaralika.Proyecto
                         Id: 8329641b-64b6-4aba-a3c6-27c3c0a40354
                         llave: azul
                         puerta: ref!! 9194a635-debe-429c-ac9f-bd9febb8be88
@@ -446,6 +536,17 @@ Hierarchy:
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         RenderGroup: Group11
                         Materials: {}
+        -   Entity:
+                Id: 3c326a73-0999-430d-9919-3d8eb58fa920
+                Name: "Dañables"
+                Components:
+                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
+                        Id: c2fd7ac1-7956-4285-91ae-12670bec62c6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            274570ec839d03441939b84ca63d1199: ref!! fc546953-f7a6-4c3f-86f9-d49f2439941b
         -   Folder: Enemigos
             Entity:
                 Id: 41ff8583-2be9-4314-986b-7a66d760d5f7
@@ -476,6 +577,55 @@ Hierarchy:
                         Id: 71bc6db9-9218-42f0-ae1a-8cc1fb6476df
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 4f9aa40e-6793-4b0d-bd71-aa164e20f915
+                Name: Enemigo (escudo)
+                Components:
+                    a60cbff727993b50e85c8863a7d8a974: !CharacterComponent
+                        Id: 1258e0fd-8374-49b2-a635-484142431b4e
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        ColliderShapes:
+                            907a139209721513cc8f945f981e4ef3: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 0.4, Z: 0.0}
+                    09db92a0e4c509fdd87f9b0ba04c75ed: !NavigationComponent
+                        Id: b0c21aa5-6d74-4948-9de4-c13e84e1fb91
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
+                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
+                        Id: 33dc3e78-4c98-4b6b-9367-726429fadfcc
+                        Position: {X: 0.5, Y: 0.0, Z: -1.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            e99fd69243b07ffb3cb8b699d64c5a6b: ref!! 8c741ab1-996c-4071-9647-79f386bce79d
+                            7dfe7c13982333da3b19538a119b193f: ref!! 8f416caf-34df-4dae-befc-57281a706375
+                            761019a922ef7d6aafb4ae49955770df: ref!! 6d174a11-f6b2-46ea-8034-343ee9ea03b4
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! e97b4ec8-4615-4f89-800b-5b19f13a2941
+                    dde0c8ec0d35e0e851f71b7539019f93: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                        Id: 6378f014-59ac-4deb-97ed-43e73eaf0243
+                        enemigo: "meléPesado"
+                        "armaMelé": null
+                        armaRango: null
+                        cuerpos: {}
+                    d7feb748634a3f30f579747ffa6f0e53: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: 5da25a13-aa01-42eb-96c5-c85e91952c5b
+                    302a47570855941e368ac76b00c215ae: !Bozobaralika.AnimadorEscudo,Bozobaralika.Proyecto
+                        Id: 68484801-3e00-42bc-97dc-6b561b4a7eaa
+                        rueda: ref!! 6d174a11-f6b2-46ea-8034-343ee9ea03b4
         -   Entity:
                 Id: 50dd94d4-010c-458e-aa47-1c44e03e0ae6
                 Name: Espada
@@ -520,7 +670,7 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    3f191577081423452935e8cfefe590e4: !Bozobaralika.ControladorLlave,Bozobaralika.Proyecto
+                    a9e5733cc97b45dbb1819630add90a8c: !Bozobaralika.ControladorLlave,Bozobaralika.Proyecto
                         Id: 4d4f1fe6-bd3c-473e-bc21-3cdaa3ab41f2
                         llave: azul
                         modelo: ref!! 5dd9166c-961d-48ba-b9dd-efe134b7b2f3
@@ -601,6 +751,21 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
+                Id: 5f1a6b89-a686-48a5-a9c3-f0ec72d94871
+                Name: Modelo
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: e97b4ec8-4615-4f89-800b-5b19f13a2941
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            890c71fabe814b3eeac9cc8001f4a3e3: ref!! b9ff2587-8364-4989-a356-42d654fafeca
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: 13064331-1b7b-4725-8a0f-666e3a3b74dc
+                        Model: b5a561e9-ee42-4a44-811a-6ce5389471a0:Modelos/Escudo/Escudo
+                        Materials: {}
+        -   Entity:
                 Id: 62e007cb-275f-435c-ad51-f4b80f4f0984
                 Name: Rueda
                 Components:
@@ -642,7 +807,7 @@ Hierarchy:
                         Id: 4088efa0-3799-420a-98a9-e70222ae3942
                         Model: e2c61240-3de0-4c53-821b-1b0e54af2827:Modelos/Dron/Dron
                         Materials: {}
-                    1be0313fce62e2dcb50e1f47f3bf39e4: !Bozobaralika.AnimadorObservaci%25C3%25B3n,Bozobaralika.Proyecto
+                    838a24992a2da9221ddc930350560ac8: !Bozobaralika.AnimadorObservaci%25C3%25B3n,Bozobaralika.Proyecto
                         Id: 3af956bc-6145-46e1-802a-73792909b792
         -   Folder: null
             Entity:
@@ -671,7 +836,7 @@ Hierarchy:
                         Id: 0e6cf4a9-66ed-44b6-9ca1-658c873c8724
                         Model: e2c61240-3de0-4c53-821b-1b0e54af2827:Modelos/Dron/Dron
                         Materials: {}
-                    c451d691316128e92a2b14a5f0d7c2e0: !Bozobaralika.AnimadorObservaci%25C3%25B3n,Bozobaralika.Proyecto
+                    bce51c59597278acc9a0274f9f355047: !Bozobaralika.AnimadorObservaci%25C3%25B3n,Bozobaralika.Proyecto
                         Id: ca508396-8218-42f3-9400-d211bd018c73
         -   Entity:
                 Id: 86ce93a1-ae39-4e71-92c0-223e2ee4fe62
@@ -786,7 +951,7 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    b9263919fa13a85f4c7138927c030633: !Bozobaralika.ControladorDa%25C3%25B1oContinuo,Bozobaralika.Proyecto
+                    c8f96335b6b008a32015b198e8047e13: !Bozobaralika.ControladorDa%25C3%25B1oContinuo,Bozobaralika.Proyecto
                         Id: b68f9ec6-d05e-4aef-a5af-e806786b380b
         -   Entity:
                 Id: a4e203b8-36fe-425c-ac8c-a03ec4a00ff9
@@ -836,7 +1001,7 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    35e853322d2fcfdd48ac7f83ce9f4f95: !Bozobaralika.ControladorBot%25C3%25B3n,Bozobaralika.Proyecto
+                    426564b1b9ac19a951abe600bc6e52b1: !Bozobaralika.ControladorBot%25C3%25B3n,Bozobaralika.Proyecto
                         Id: 0c92f686-cc20-4029-a01a-9d474ff4170e
                         llave: nada
                         puerta: ref!! a2f5bd4f-c7de-4fea-8dc2-ddec61bab421
@@ -856,6 +1021,17 @@ Hierarchy:
                         Id: d6a5e338-afa8-4a79-a142-2586652224f2
                         Model: e5264c9f-ce07-44c3-804e-cfe48eae8f2a:Modelos/Babosa/Babosa
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: a91e05be-6a1c-44d3-b387-126efcd57b9f
+                Name: Rueda
+                Components:
+                    32f4d3a8978134baf0fc408dfeb6f986: !TransformComponent
+                        Id: 6d174a11-f6b2-46ea-8034-343ee9ea03b4
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
         -   Folder: null
             Entity:
                 Id: a9c0250e-6712-4e86-bc3f-78047f439de2
@@ -886,10 +1062,21 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    3f191577081423452935e8cfefe590e4: !Bozobaralika.ControladorLlave,Bozobaralika.Proyecto
+                    e77a1d51920c245d1c754c99f0fa0c30: !Bozobaralika.ControladorLlave,Bozobaralika.Proyecto
                         Id: 5be66562-ee7b-46bd-84a6-95074983b64f
                         llave: roja
                         modelo: ref!! 32524af0-94ba-4b91-af3d-fabb7dd890b3
+        -   Entity:
+                Id: b713b7c1-29e4-482e-bbed-5a10046981a7
+                Name: "Dañables"
+                Components:
+                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
+                        Id: 8c741ab1-996c-4071-9647-79f386bce79d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            274570ec839d03441939b84ca63d1199: ref!! 9112ce87-93a3-4f3a-bc63-d0c65b33ec31
         -   Entity:
                 Id: b8b825d3-16a6-410e-9bfd-e4400a802454
                 Name: Modelo
@@ -915,7 +1102,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 69714a1b-fdeb-46ba-bcc7-8a8f1d584e19
-                    4529e64b0aef884e5430df8848500146: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
+                    288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: 9194a635-debe-429c-ac9f-bd9febb8be88
                         modelo: ref!! 69714a1b-fdeb-46ba-bcc7-8a8f1d584e19
                         "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
@@ -954,6 +1141,43 @@ Hierarchy:
                                 Is2D: false
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
         -   Entity:
+                Id: bb1cbe5f-6211-4f74-95fa-43b7663f0f43
+                Name: "Dañable torso"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: fc546953-f7a6-4c3f-86f9-d49f2439941b
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 677c579a-0300-458d-bc3d-f0e4b12ac16b
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.5, Y: 2.0, Z: 0.5}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: d19c9759-d7a1-4ed3-87e1-a3b44a30828e
+                        controlador: ref!! 01a3360a-7f24-41b6-9f84-af8196ae98d1
+        -   Entity:
                 Id: bc63eae8-8aec-4695-b5bd-b88a5444f14a
                 Name: "ArmaMelé"
                 Components:
@@ -986,7 +1210,7 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    1fae926b38418a3eb746141717e4e5ab: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
+                    3f732cae4db439c6ef0a3d251d2261d5: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
                         Id: a13e9284-0c3f-4cbd-90e6-f62de2f6c8a9
         -   Entity:
                 Id: c055ef64-c5d2-4b56-98db-7ee42fa446c3
@@ -1085,6 +1309,20 @@ Hierarchy:
                     8da989470e5d3482f6697c8ae7b8694b: !Stride.Navigation.NavigationBoundingBoxComponent,Stride.Navigation
                         Id: 42364fca-41df-4490-ba99-fb64dd6d91f6
                         Size: {X: 20.0, Y: 1.5, Z: 20.0}
+        -   Entity:
+                Id: d41becca-41d0-440a-aa8c-ac954aeddba6
+                Name: Rueda
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: b9ff2587-8364-4989-a356-42d654fafeca
+                        Position: {X: 0.0, Y: 0.35, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: 2091dbd7-aefb-43c5-bba3-259d01e03f53
+                        Model: 32e8ed66-1b39-4a3b-bf05-45681e2a1fb7:Modelos/Escudo/Rueda
+                        Materials: {}
         -   Folder: Muros
             Entity:
                 Id: d471c428-d220-4860-b67e-f0ad26d2d613
@@ -1193,7 +1431,7 @@ Hierarchy:
                                 Length: 1.0
                                 LocalOffset: {X: 0.0, Y: 0.75, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    9e57621230258ae69ef72f2076d010bc: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
+                    c76d63ecb77eaca4261abdea69fcd8fe: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
                         Id: c46f69dc-db00-454e-8f32-19c17e5759b2
                         cabeza: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
                         "cámara": ref!! d37efe62-6123-4994-bb6a-66753b20c695
@@ -1205,10 +1443,10 @@ Hierarchy:
                         Children:
                             4f555758721bbf121dfb821111b51961: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
                             30cb10bb707641b055d441b3eb811031: ref!! f71c0d70-242d-498c-8708-4aeddcd57fd6
-                    2aa1d2cac7e27ed165a215fbdcc427d0: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
+                    4b89b154b5b3e352d4ed1ee3527f3cf7: !Bozobaralika.ControladorMovimiento,Bozobaralika.Proyecto
                         Id: 57ced855-0f8a-4092-9133-ae41e2e76b87
                         Priority: 10
-                    b3293f71ab021758a1e67786b5a8f93c: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
+                    54c947a658f979a1a3cbf73596735198: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: cf114505-16b9-4712-a010-c2ba1ce114e1
                         "armaMelé": ref!! 72ecda8e-7d43-469a-b3ed-b87cb747013c
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/MarcaBala
@@ -1220,6 +1458,40 @@ Hierarchy:
                         ejeEscopeta: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
                         ejeMetralleta: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
                         ejeRife: ref!! 8374c3d3-7007-4071-9f10-14045dd1b355
+        -   Entity:
+                Id: df6adba7-34e2-4aca-8f95-33880aa88238
+                Name: Escudo
+                Components:
+                    32f4d3a8978134baf0fc408dfeb6f986: !TransformComponent
+                        Id: 8f416caf-34df-4dae-befc-57281a706375
+                        Position: {X: 0.0, Y: 1.18, Z: 0.45}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    0a1af2486fdb78d719164131845886c3: !RigidbodyComponent
+                        Id: 09de3432-6ff2-4c46-9abb-b3a874e38578
+                        CollisionGroup: StaticFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            0d7f138a96b5b7cb87e0c1dd04da748b: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.65, Z: 0.1}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: e4f3ff8e-c37e-4dab-86d3-3a406db63822
@@ -1244,26 +1516,29 @@ Hierarchy:
                                 Length: 1.5
                                 LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    691c8f9386df01a1270f88b33a2974d5: !NavigationComponent
+                        Id: 06421ebd-b457-4a62-8c6c-882727cccbec
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 786fbd03-8f4c-4908-9bbe-2588a8c9a331
-                        Position: {X: 5.5063105, Y: 0.0, Z: -1.3296795}
+                        Position: {X: 5.5063105, Y: 0.0, Z: -1.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            886187fd130d4c87a9a9d76aed7b7965: ref!! 96f60fb1-d17c-44a6-af79-6f81f312a282
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 91f37aba-7140-4e8e-b8da-728615f59313
                             fba4e7119c23a9bf74d3b644f477681a: ref!! 5fedfd8f-32b3-4330-b1e7-9cc7e1bada2e
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! 37997c76-6e46-4fe2-a693-34ff25b91683
-                    bb01368017a9cd5377554e97337d1e5d: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                    954d0ff008c5bbb1b96abc5e37c5fa11: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: da62dbb7-387d-4d49-9b6a-3fef7fa6b682
                         enemigo: "meléMediano"
                         "armaMelé": ref!! fce7412a-f445-4ff2-9044-e59c827fdaee
-                    e354cf62048a19fad767c94fcd72a14f: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                        armaRango: null
+                        cuerpos: {}
+                    e42c151e94d68ac78484fc9361011f5c: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: a547fb8d-05d3-448a-8ef2-de9679824411
-                    b96e80a04d6c3438bc402c3dc55f77e2: !NavigationComponent
-                        Id: 5d996625-a58c-44f1-b64a-ef1ff8764d02
-                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
-                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
-                    94a313340a8a0b01f1c47d7f9af038c0: !Bozobaralika.AnimadorLancero,Bozobaralika.Proyecto
+                    6731dbc2021f9caf46d335ba7756cfe5: !Bozobaralika.AnimadorLancero,Bozobaralika.Proyecto
                         Id: f09b790f-c1a3-41ab-8da0-3f98a0e4810d
                         modelo: ref!! 0ded2c18-a233-4616-9c50-e75cb0531f3e
                         lanza: ref!! 5fedfd8f-32b3-4330-b1e7-9cc7e1bada2e
@@ -1285,7 +1560,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! d81e440a-1961-4a4e-a979-199e33f30941
-                    4529e64b0aef884e5430df8848500146: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
+                    611d2cce4f9855b7abfb345a00519a60: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: a2f5bd4f-c7de-4fea-8dc2-ddec61bab421
                         modelo: ref!! d81e440a-1961-4a4e-a979-199e33f30941
                         "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
@@ -1433,7 +1708,7 @@ Hierarchy:
                 Id: ff5480c7-125b-4faf-a925-a78b68f1b73b
                 Name: Interfaz
                 Components:
-                    797f24304b23f038e8ac58c4f4df9fc6: !Bozobaralika.InterfazJuego,Bozobaralika.Proyecto
+                    f448ee46efad60e7c7757545da8c471d: !Bozobaralika.InterfazJuego,Bozobaralika.Proyecto
                         Id: ac089fc3-6539-46f3-a199-bf1b524b39f9
                         vidaCompleta: {R: 0, G: 255, B: 0, A: 255}
                         "vidaVacía": {R: 255, G: 0, B: 0, A: 255}

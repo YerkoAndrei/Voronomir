@@ -10,10 +10,11 @@ namespace Bozobaralika;
 
 public class ControladorPersecusión : SyncScript
 {
-    private IAnimador animador;
+    private ControladorEnemigo controlador;
     private CharacterComponent cuerpo;
     private TransformComponent jugador;
     private NavigationComponent navegador;
+    private IAnimador animador;
 
     private List<Vector3> ruta;
     private int índiceRuta;
@@ -23,8 +24,6 @@ public class ControladorPersecusión : SyncScript
     private float distanciaRuta;
     private float distanciaJugador;
     private float distanciaMínima;
-
-    private ControladorEnemigo controlador;
 
     private bool atacando;
     private float velocidad;
