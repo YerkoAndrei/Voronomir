@@ -1,0 +1,21 @@
+!ColliderShapeAsset
+Id: 1c5a6c8a-b0cd-4874-82b6-cd5b81822fec
+SerializedVersion: {Stride: 3.0.0.0}
+Tags: []
+ColliderShapes:
+    dd9ed25fca26f1c27d65dc97766f004f: !ConvexHullColliderShapeDesc
+        ConvexHulls: null
+        ConvexHullsIndices: null
+        Model: 5803bfd9-03f8-40ab-b289-5195d459ddae:Modelos/Escudo/EscudoSolo
+        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        Scaling: {X: 1.0, Y: 1.0, Z: 1.0}
+        Decomposition:
+            Depth: 4
+            PosSampling: 5
+            AngleSampling: 2
+            PosRefine: 5
+            AngleRefine: 5
+            Alpha: 0.01
+            Threshold: 0.01
+            Enabled: true

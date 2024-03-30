@@ -1,0 +1,16 @@
+!Model
+Id: 5803bfd9-03f8-40ab-b289-5195d459ddae
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file EscudoSolo.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    bf3d06ed94da8259798b48d3a8eedc3e:
+        Name: Material
+        MaterialInstance:
+            Material: null
+DeduplicateMaterials: false
+Modifiers: {}
+~SourceHashes:
+    f8e08e0e815b6d997b8547f9e90e34a2~EscudoSolo.glb: 87f2f5b55fe0d5f71ac799827c0724a7
