@@ -72,7 +72,7 @@ public class ControladorEnemigo : StartupScript, IDañable
                 break;
         }
 
-        // Escudo no tiene arma
+        // Cerebro no tiene arma
         if (melé && armaMelé != null)
             armaMelé.Iniciar(false);
 

@@ -1,0 +1,15 @@
+!Model
+Id: 3fb5550c-9e46-454e-a636-e6798f0bac5f
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Escudo.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    c58048e75c1edc1a248675af095fbb5e:
+        Name: Escudo
+        MaterialInstance:
+            Material: 7020b478-a25c-4ca7-8b5e-beb3e7d9bf6c:Modelos/Cerebro/Materiales/Escudo
+Modifiers: {}
+~SourceHashes:
+    cf477f3fcab07ef1be4184f4752cad64~Escudo.glb: 23c864accb5c50bbbb2de1945b335439

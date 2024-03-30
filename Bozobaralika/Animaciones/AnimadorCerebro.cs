@@ -3,7 +3,7 @@ using Stride.Engine;
 
 namespace Bozobaralika;
 
-public class AnimadorEscudo : StartupScript, IAnimador
+public class AnimadorCerebro : StartupScript, IAnimador
 {
     public TransformComponent rueda;
 

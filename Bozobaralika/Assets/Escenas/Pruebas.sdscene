@@ -313,6 +313,21 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             274570ec839d03441939b84ca63d1199: ref!! 0c75af9b-fd81-4c45-8f61-2408c49af5e8
+        -   Folder: null
+            Entity:
+                Id: 1edc8756-d9f1-4d13-b262-f05a161e4fa0
+                Name: Rueda
+                Components:
+                    edd4b7528d34cb166a732686a1d77607: !TransformComponent
+                        Id: 1fe674e5-bdd8-45dc-a4a4-113a7f39b59d
+                        Position: {X: 0.0, Y: 0.35, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    700785a774c66ac413f443f63fd56c96: !ModelComponent
+                        Id: dd794269-8824-4994-9c86-7ee26b13fed0
+                        Model: 42f01256-b2f0-4d1d-b81d-719b59cf45c5:Modelos/Cerebro/Rueda
+                        Materials: {}
         -   Entity:
                 Id: 26b98ed7-a446-4bee-ba3c-99f5e4f4b3d1
                 Name: Modelo
@@ -633,7 +648,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 4f9aa40e-6793-4b0d-bd71-aa164e20f915
-                Name: Enemigo (escudo)
+                Name: Enemigo (cerebro)
                 Components:
                     a60cbff727993b50e85c8863a7d8a974: !CharacterComponent
                         Id: 1258e0fd-8374-49b2-a635-484142431b4e
@@ -667,11 +682,10 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             e99fd69243b07ffb3cb8b699d64c5a6b: ref!! 8c741ab1-996c-4071-9647-79f386bce79d
+                            b98853d48efd39aba09a0bffdc276403: ref!! 42534672-a255-4d6b-9d81-2455f97e475a
+                            4732b4ce95e4cb3bd921ff1f29d5b54a: ref!! 8f416caf-34df-4dae-befc-57281a706375
+                            e40d5481cf1e218611340ca1ddf40eed: ref!! b9ff2587-8364-4989-a356-42d654fafeca
                             65446f9c70abd3a53b8246b4b1dea0f2: ref!! a73bf534-1816-44fe-96b4-d74812db5792
-                            92d34f80883cf71e01f4037299ee9404: ref!! 42534672-a255-4d6b-9d81-2455f97e475a
-                            7dfe7c13982333da3b19538a119b193f: ref!! 8f416caf-34df-4dae-befc-57281a706375
-                            761019a922ef7d6aafb4ae49955770df: ref!! 6d174a11-f6b2-46ea-8034-343ee9ea03b4
-                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! e97b4ec8-4615-4f89-800b-5b19f13a2941
                     dde0c8ec0d35e0e851f71b7539019f93: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: 6378f014-59ac-4deb-97ed-43e73eaf0243
                         enemigo: "meléPesado"
@@ -681,9 +695,9 @@ Hierarchy:
                             5bc86ece30ba2b9277a142cb775b2872: ref!! 2814ed81-bd8a-481f-9cd5-2622c315012c
                     d7feb748634a3f30f579747ffa6f0e53: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: 5da25a13-aa01-42eb-96c5-c85e91952c5b
-                    302a47570855941e368ac76b00c215ae: !Bozobaralika.AnimadorEscudo,Bozobaralika.Proyecto
-                        Id: 68484801-3e00-42bc-97dc-6b561b4a7eaa
-                        rueda: ref!! 6d174a11-f6b2-46ea-8034-343ee9ea03b4
+                    1dd64e1afcd5512cedf9e97ef1931ca5: !Bozobaralika.AnimadorCerebro,Bozobaralika.Proyecto
+                        Id: ec66e591-3e8d-4cd6-92d6-3403b823b743
+                        rueda: ref!! b9ff2587-8364-4989-a356-42d654fafeca
         -   Entity:
                 Id: 50dd94d4-010c-458e-aa47-1c44e03e0ae6
                 Name: Espada
@@ -809,23 +823,8 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
-                Id: 5f1a6b89-a686-48a5-a9c3-f0ec72d94871
-                Name: Modelo
-                Components:
-                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
-                        Id: e97b4ec8-4615-4f89-800b-5b19f13a2941
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            890c71fabe814b3eeac9cc8001f4a3e3: ref!! b9ff2587-8364-4989-a356-42d654fafeca
-                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
-                        Id: 13064331-1b7b-4725-8a0f-666e3a3b74dc
-                        Model: b5a561e9-ee42-4a44-811a-6ce5389471a0:Modelos/Escudo/Escudo
-                        Materials: {}
-        -   Entity:
                 Id: 62e007cb-275f-435c-ad51-f4b80f4f0984
-                Name: Rueda
+                Name: Escudo
                 Components:
                     edd4b7528d34cb166a732686a1d77607: !TransformComponent
                         Id: e52fe427-3509-4c29-bde5-a150fa201cc1
@@ -835,7 +834,7 @@ Hierarchy:
                         Children: {}
                     700785a774c66ac413f443f63fd56c96: !ModelComponent
                         Id: 9020ef6e-4a4a-41c1-a1f2-5405bba99d8f
-                        Model: 32e8ed66-1b39-4a3b-bf05-45681e2a1fb7:Modelos/Escudo/Rueda
+                        Model: 3fb5550c-9e46-454e-a636-e6798f0bac5f:Modelos/Cerebro/Escudo
                         Materials: {}
         -   Entity:
                 Id: 6d280096-1b5d-4f01-b53f-cb7b0f439997
@@ -1151,17 +1150,6 @@ Hierarchy:
                         Materials: {}
         -   Folder: null
             Entity:
-                Id: a91e05be-6a1c-44d3-b387-126efcd57b9f
-                Name: Rueda
-                Components:
-                    32f4d3a8978134baf0fc408dfeb6f986: !TransformComponent
-                        Id: 6d174a11-f6b2-46ea-8034-343ee9ea03b4
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-        -   Folder: null
-            Entity:
                 Id: a9c0250e-6712-4e86-bc3f-78047f439de2
                 Name: Llave Roja
                 Components:
@@ -1450,7 +1438,7 @@ Hierarchy:
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: 2091dbd7-aefb-43c5-bba3-259d01e03f53
-                        Model: 32e8ed66-1b39-4a3b-bf05-45681e2a1fb7:Modelos/Escudo/Rueda
+                        Model: 42f01256-b2f0-4d1d-b81d-719b59cf45c5:Modelos/Cerebro/Rueda
                         Materials: {}
         -   Folder: Muros
             Entity:
@@ -1635,7 +1623,11 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             0d7f138a96b5b7cb87e0c1dd04da748b: !ColliderShapeAssetDesc
-                                Shape: 1c5a6c8a-b0cd-4874-82b6-cd5b81822fec:Modelos/Escudo/ColliderEscudoSolo
+                                Shape: 1c5a6c8a-b0cd-4874-82b6-cd5b81822fec:Modelos/Cerebro/ColliderEscudo
+                    b7a4846150744a3c3a56a84f38277ded: !ModelComponent
+                        Id: 908d5b9c-7310-4607-8503-b3e028995d58
+                        Model: 3fb5550c-9e46-454e-a636-e6798f0bac5f:Modelos/Cerebro/Escudo
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: e4f3ff8e-c37e-4dab-86d3-3a406db63822
@@ -1759,7 +1751,7 @@ Hierarchy:
         -   Folder: Enemigos
             Entity:
                 Id: ed574734-d19c-4582-8145-31497e3f514d
-                Name: Escudo
+                Name: Cerebro
                 Components:
                     e2b0031d964e8fb217d93c961d8c4399: !TransformComponent
                         Id: 82c37e53-c0b6-443a-ba50-890dcc1a9daa
@@ -1768,9 +1760,10 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             4ffa2862c1b66a14061997e1c545fbdc: ref!! e52fe427-3509-4c29-bde5-a150fa201cc1
+                            509eb601ce7c3cefac3e67d1a3ffa0b7: ref!! 1fe674e5-bdd8-45dc-a4a4-113a7f39b59d
                     53a96afedd3d5f8ea54414c34fc2c1a8: !ModelComponent
                         Id: ed92cd6c-1d47-4da5-8225-c558d67b8a66
-                        Model: b5a561e9-ee42-4a44-811a-6ce5389471a0:Modelos/Escudo/Escudo
+                        Model: 3893b25d-a5b1-463e-989f-5c46a73d1a27:Modelos/Cerebro/Cerebro
                         Materials: {}
         -   Folder: Enemigos
             Entity:
@@ -1836,8 +1829,8 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    b03f0b436fe2e26afe9491ab391198c0: !Bozobaralika.ControladorSaltadorEscudo,Bozobaralika.Proyecto
-                        Id: e21f71b6-7b59-403e-9c3e-6f7b95b419d5
+                    3e0bfb97906d7f5fd7db6f9a7a64f901: !Bozobaralika.ControladorSaltadorCerebro,Bozobaralika.Proyecto
+                        Id: 46f98c0d-b522-46d0-a98b-86739df599dd
                         fuerza: 9.0
                         persecutor: ref!! 5da25a13-aa01-42eb-96c5-c85e91952c5b
         -   Folder: Muros
@@ -1888,14 +1881,13 @@ Hierarchy:
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         RenderGroup: Group11
                         Materials: {}
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: fd490f2c-d9fe-4e08-a54a-fe16132750b5
-                Name: Cuerpo
+                Name: Cerebro
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 42534672-a255-4d6b-9d81-2455f97e475a
-                        Position: {X: 0.0, Y: 0.86, Z: 0.15}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1919,8 +1911,12 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             4a6a60577f4d27d2f52788212c4ad9a4: !CapsuleColliderShapeDesc
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalOffset: {X: 0.0, Y: 0.85, Z: 0.15}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    c4f843d881374b6cf192ef203d89b920: !ModelComponent
+                        Id: e34df1da-07ad-42f9-8d23-e19d47bb95df
+                        Model: 3893b25d-a5b1-463e-989f-5c46a73d1a27:Modelos/Cerebro/Cerebro
+                        Materials: {}
         -   Entity:
                 Id: ff5480c7-125b-4faf-a925-a78b68f1b73b
                 Name: Interfaz

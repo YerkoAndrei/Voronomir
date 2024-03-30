@@ -6,10 +6,10 @@ public static class Constantes
 {
     // Filtros:
     // Default      - Disparos (daño en general)
-    // Static       - Entorno, escudo
+    // Static       - Entorno
     // Kinematic    - Enemigos (navegación y dañable)
     // Debris       - Escombros, muertos
-    // Sensor       - Llaves, botones, puertas, saltadores
+    // Sensor       - Llaves, botones, puertas, saltadores, escudo
     // Character    - Jugador
 
     // Color botones
@@ -45,7 +45,7 @@ public static class Constantes
     {
         meléLigero,     // Esqueleto
         meléMediano,    // Lancero
-        meléPesado,     // Escudo
+        meléPesado,     // Cerebro
         rangoLigero,    // Dron
         rangoMediano,   // Babosa
         rangoPesado,    // Araña

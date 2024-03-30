@@ -6,7 +6,7 @@ using Stride.Physics;
 
 namespace Bozobaralika;
 
-public class ControladorSaltadorEscudo : AsyncScript
+public class ControladorSaltadorCerebro : AsyncScript
 {
     public float fuerza;
     public ControladorPersecusión persecutor;
