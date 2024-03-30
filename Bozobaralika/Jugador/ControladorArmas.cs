@@ -1,9 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
+using Stride.Physics;
 using Stride.Input;
 using Stride.Engine;
-using Stride.Physics;
-using System.Collections.Generic;
 
 namespace Bozobaralika;
 using static Utilidades;
@@ -60,7 +61,7 @@ public class ControladorArmas : SyncScript
         interfaz = _interfaz;
 
         dañoMínimo = 1f;
-        dañoMáximo = 60f;
+        dañoMáximo = 200f;
 
         posiciónEjes = new Vector3(0, -0.5f, 0);
 
@@ -258,6 +259,11 @@ public class ControladorArmas : SyncScript
         if (resultados.Count == 0)
             return;
 
+        // Ordena resultados según distancia
+        resultados = resultados.Where(o => o.Succeeded).ToList();
+        resultados = resultados.GroupBy(o => o.Collider).Select(b => b.First()).ToList();
+        resultados = resultados.OrderBy(o => Vector3.Distance(o.Point, cámara.Entity.Transform.WorldMatrix.TranslationVector)).ToList();
+
         foreach (var resultado in resultados)
         {
             if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
@@ -268,7 +274,7 @@ public class ControladorArmas : SyncScript
 
             var dañable = resultado.Collider.Entity.Get<ElementoDañable>();
             if (dañable == null)
-                return;
+                continue;
 
             // Retroalimentación daño
             controlador.VibrarCámara(4f, 4);
