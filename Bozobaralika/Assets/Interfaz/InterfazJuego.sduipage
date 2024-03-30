@@ -48,7 +48,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "ícono"
                 Source: !SpriteFromTexture
-                    Texture: a3381a04-3773-4ee9-9f51-d8fd0cb0f35a:Texturas/Armas/imgPistola
+                    Texture: a3381a04-3773-4ee9-9f51-d8fd0cb0f35a:Texturas/Armas/imgEspada
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
@@ -280,7 +280,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: miraEspada
                 Source: !SpriteFromTexture
-                    Texture: 27f5f360-1f8f-40cc-a19a-728a67fe77b4:Texturas/Miras/miraPistola
+                    Texture: 27f5f360-1f8f-40cc-a19a-728a67fe77b4:Texturas/Miras/miraEspada
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
@@ -386,7 +386,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "ícono"
                 Source: !SpriteFromTexture
-                    Texture: 1f830b4b-c208-4476-8ee3-496236d0724c:Texturas/Armas/imRifle
+                    Texture: 1f830b4b-c208-4476-8ee3-496236d0724c:Texturas/Armas/imgRifle
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !UniformGrid
