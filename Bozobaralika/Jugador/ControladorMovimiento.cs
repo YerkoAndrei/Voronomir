@@ -10,8 +10,10 @@ public class ControladorMovimiento : SyncScript
 {
     private CharacterComponent cuerpo;
     private TransformComponent cabeza;
+    private TransformComponent cámara;
 
     // Movimiento
+    private Vector3 entradas;
     private Vector3 movimiento;
     private float multiplicadorVelocidad;
     private bool caminando;
@@ -20,10 +22,14 @@ public class ControladorMovimiento : SyncScript
 
     // Aceleración
     private float aceleraciónInicial;
+    private float tiempoRotación;
+
     private float tiempoIniciación;
     private float tempoIniciación;
+
     private float tiempoAceleración;
     private float tempoAceleración;
+    
     private float minVelocidad;
     private float maxVelocidad;
     private float aceleración;
@@ -32,11 +38,13 @@ public class ControladorMovimiento : SyncScript
     private float sensibilidad;
     private float rotaciónX;
     private float rotaciónY;
+    private float rotaciónZ;
 
-    public void Iniciar(CharacterComponent _cuerpo, TransformComponent _cabeza)
+    public void Iniciar(CharacterComponent _cuerpo, TransformComponent _cabeza, TransformComponent _cámara)
     {
         cuerpo = _cuerpo;
         cabeza = _cabeza;
+        cámara = _cámara;
 
         minVelocidad = 1f;
         aceleraciónInicial = 0.1f;
@@ -71,19 +79,19 @@ public class ControladorMovimiento : SyncScript
 
     private void Correr()
     {
-        movimiento = new Vector3();
+        entradas = new Vector3();
 
         if (Input.IsKeyDown(Keys.W) || Input.IsKeyDown(Keys.Up))
-            movimiento -= Vector3.UnitZ;
+            entradas -= Vector3.UnitZ;
         if (Input.IsKeyDown(Keys.A) || Input.IsKeyDown(Keys.Left))
-            movimiento -= Vector3.UnitX;
+            entradas -= Vector3.UnitX;
         if (Input.IsKeyDown(Keys.S) || Input.IsKeyDown(Keys.Down))
-            movimiento += Vector3.UnitZ;
+            entradas += Vector3.UnitZ;
         if (Input.IsKeyDown(Keys.D) || Input.IsKeyDown(Keys.Right))
-            movimiento += Vector3.UnitX;
+            entradas += Vector3.UnitX;
 
         // Aceleración
-        if (movimiento == Vector3.Zero || detención || caminando || RevisarColisiones())
+        if (entradas == Vector3.Zero || detención || caminando || RevisarColisiones())
         {
             tempoAceleración = 0;
             tempoIniciación = 0;
@@ -111,7 +119,7 @@ public class ControladorMovimiento : SyncScript
         // Movimiento
         if(!bloqueo)
         {
-            movimiento = Vector3.Transform(movimiento, cuerpo.Orientation);
+            movimiento = Vector3.Transform(entradas, cuerpo.Orientation);
             movimiento.Y = 0;
             movimiento.Normalize();
 
@@ -143,7 +151,11 @@ public class ControladorMovimiento : SyncScript
         rotaciónX -= Input.MouseDelta.Y * sensibilidad;
         rotaciónX = MathUtil.Clamp(rotaciónX, -MathUtil.PiOverTwo, MathUtil.PiOverTwo);
 
+        rotaciónZ = (entradas.X * aceleración) * -0.025f;
+        tiempoRotación = (float)Game.UpdateTime.Elapsed.TotalSeconds * 10;
+
         cabeza.Entity.Transform.Rotation = Quaternion.RotationX(rotaciónX);
+        cámara.Entity.Transform.Rotation = Quaternion.Lerp(cámara.Entity.Transform.Rotation, Quaternion.RotationZ(rotaciónZ), tiempoRotación);
     }
 
     private void Saltar()

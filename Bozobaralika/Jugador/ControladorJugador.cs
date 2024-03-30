@@ -41,7 +41,7 @@ public class ControladorJugador : SyncScript, IDañable
         movimiento = Entity.Get<ControladorMovimiento>();
         armas = Entity.Get<ControladorArmas>();
         
-        movimiento.Iniciar(cuerpo, cabeza);
+        movimiento.Iniciar(cuerpo, cabeza, cámara.Entity.Transform);
         armas.Iniciar(this, movimiento, cámara, interfaz);
 
         posiciónCabeza = cabeza.Position;
@@ -162,7 +162,7 @@ public class ControladorJugador : SyncScript, IDañable
         MoverCámara(duraciónMovimiento, fuerza);
     }
 
-    public async void RotarCámara(float duración, float fuerza, int iteraciones)
+    private async void RotarCámara(float duración, float fuerza, int iteraciones)
     {
         // Vibración se suaviza al final
         var aleatorios = new List<Vector2>();
@@ -208,7 +208,7 @@ public class ControladorJugador : SyncScript, IDañable
         cámara.Entity.Transform.Rotation = rotaciónCabeza;
     }
 
-    public async void MoverCámara(float duración, float fuerza)
+    private async void MoverCámara(float duración, float fuerza)
     {
         var retroceso = posiciónCabeza + (new Vector3(0, 0, 0.012f) * fuerza);
         float tiempoLerp = 0;
