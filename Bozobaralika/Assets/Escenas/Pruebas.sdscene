@@ -171,7 +171,7 @@ Hierarchy:
                 Components:
                     1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
                         Id: 9112ce87-93a3-4f3a-bc63-d0c65b33ec31
-                        Position: {X: 0.0, Y: 1.13, Z: 0.16}
+                        Position: {X: 0.0, Y: 1.125, Z: 0.16}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -196,7 +196,7 @@ Hierarchy:
                         ColliderShapes:
                             fbe76a3afc7b249bfeb4a9f90dc2ad2e: !SphereColliderShapeDesc
                                 Is2D: false
-                                Radius: 0.22
+                                Radius: 0.21
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: 73baa9ca-539b-47ec-bc25-169e134e42de

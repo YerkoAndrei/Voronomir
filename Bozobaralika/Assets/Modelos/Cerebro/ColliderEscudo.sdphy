@@ -16,6 +16,6 @@ ColliderShapes:
             AngleSampling: 2
             PosRefine: 5
             AngleRefine: 5
-            Alpha: 0.01
+            Alpha: 1.0
             Threshold: 0.01
             Enabled: true
