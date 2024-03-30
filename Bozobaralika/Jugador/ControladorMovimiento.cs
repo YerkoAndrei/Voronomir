@@ -95,8 +95,8 @@ public class ControladorMovimiento : SyncScript
         {
             movimiento = Vector3.Transform(movimiento, cuerpo.Orientation);
             movimiento.Y = 0;
-
             movimiento.Normalize();
+
             cuerpo.SetVelocity(movimiento * 10 * multiplicadorVelocidad * aceleración);
         }
 

@@ -113,14 +113,18 @@ public class ControladorPersecusión : SyncScript
         // Movimiento
         if (distanciaRuta > distanciaMínima)
         {
-            movimiento = ruta[índiceRuta] - Entity.Transform.WorldMatrix.TranslationVector;
-            movimiento.Y = 0;
-            movimiento.Normalize();
-            movimiento *= (float)Game.UpdateTime.Elapsed.TotalSeconds;
-
             tempoAceleración += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             aceleración = MathUtil.SmoothStep(tempoAceleración / tiempoAceleración);
-            
+
+            // Mientras salta va directo al jugador
+            if(cuerpo.IsGrounded)
+                movimiento = ruta[índiceRuta] - Entity.Transform.WorldMatrix.TranslationVector;
+            else
+                movimiento = jugador.WorldMatrix.TranslationVector - Entity.Transform.WorldMatrix.TranslationVector;
+
+            movimiento.Normalize();
+            movimiento *= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                        
             cuerpo.SetVelocity(movimiento * 100 * velocidad * aceleración);
             animador.Caminar(aceleración);
         }
@@ -133,12 +137,13 @@ public class ControladorPersecusión : SyncScript
         }
     }
 
-    private async void Atacar()
+    public async void Atacar()
     {
         atacando = true;
         tempoAceleración = 0;
 
         // Delay de preparación de ataque
+        cuerpo.SetVelocity(Vector3.Zero);
         await Task.Delay((int)(controlador.ObtenerPreparaciónAtaque() * 1000));
 
         if (!controlador.ObtenerActivo())
@@ -146,7 +151,6 @@ public class ControladorPersecusión : SyncScript
 
         animador.Atacar();
         controlador.Atacar();
-        cuerpo.SetVelocity(Vector3.Zero);
         await Task.Delay((int)(controlador.ObtenerDescansoAtaque() * 1000));
 
         BuscarJugador();

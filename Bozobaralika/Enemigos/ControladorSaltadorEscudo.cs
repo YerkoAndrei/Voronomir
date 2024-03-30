@@ -9,7 +9,7 @@ namespace Bozobaralika;
 public class ControladorSaltadorEscudo : AsyncScript
 {
     public float fuerza;
-    public ControladorEnemigo controlador;
+    public ControladorPersecusión persecutor;
 
     private Vector3 dirección;
 
@@ -40,9 +40,8 @@ public class ControladorSaltadorEscudo : AsyncScript
             dirección = Entity.Transform.WorldMatrix.Backward * 20;
             dirección.Y = fuerza;
 
+            persecutor.Atacar();
             cuerpo.Jump(dirección);
-
-            controlador.Atacar();
         }
     }
 }

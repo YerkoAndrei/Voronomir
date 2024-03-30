@@ -1841,7 +1841,7 @@ Hierarchy:
                     b03f0b436fe2e26afe9491ab391198c0: !Bozobaralika.ControladorSaltadorEscudo,Bozobaralika.Proyecto
                         Id: e21f71b6-7b59-403e-9c3e-6f7b95b419d5
                         fuerza: 10.0
-                        controlador: ref!! 6378f014-59ac-4deb-97ed-43e73eaf0243
+                        persecutor: ref!! 5da25a13-aa01-42eb-96c5-c85e91952c5b
         -   Folder: Muros
             Entity:
                 Id: f557bc44-8313-4a06-ba9a-35f36f7d42de
