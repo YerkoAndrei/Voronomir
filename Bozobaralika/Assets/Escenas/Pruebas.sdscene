@@ -435,9 +435,9 @@ Hierarchy:
                 Components:
                     48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
                         Id: 37997c76-6e46-4fe2-a693-34ff25b91683
-                        Position: {X: 0.0, Y: 1.0, Z: 2.0}
+                        Position: {X: 0.0, Y: 1.25, Z: 1.75}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 4.0}
+                        Scale: {X: 0.2, Y: 2.5, Z: 3.5}
                         Children: {}
                     67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
                         Id: 0ab5b0b9-afda-4e53-8a6a-b9cd78ac5568
@@ -513,15 +513,14 @@ Hierarchy:
                         Id: e1f9fcf2-08b4-4279-be47-ae240eee3778
                         Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
                         Materials: {}
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 338a2ef2-3311-4a64-88fd-c87d25e1aca6
-                Name: Lanza
+                Name: Modelo
                 Components:
                     e8f9cf0aa966229b689d889367899aac: !TransformComponent
                         Id: 5fedfd8f-32b3-4330-b1e7-9cc7e1bada2e
-                        Position: {X: 0.0, Y: 1.82, Z: -2.0}
-                        Rotation: {X: 0.76604444, Y: 0.0, Z: 0.0, W: 0.64278764}
+                        Position: {X: 0.0, Y: -2.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
@@ -895,6 +894,17 @@ Hierarchy:
                         Materials: {}
                     bce51c59597278acc9a0274f9f355047: !Bozobaralika.AnimadorObservaci%25C3%25B3n,Bozobaralika.Proyecto
                         Id: ca508396-8218-42f3-9400-d211bd018c73
+        -   Entity:
+                Id: 790261a1-c36a-4665-9597-dc85df56bd2b
+                Name: Lanza
+                Components:
+                    7d6278575d58423531c190533685dbb9: !TransformComponent
+                        Id: 8f42ae56-8491-4dc8-a404-edad13d077bd
+                        Position: {X: -0.24, Y: 1.2, Z: 0.0}
+                        Rotation: {X: 0.6739441, Y: 0.051429894, Z: -0.04712676, W: 0.7354818}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            d77362be6afd00a7b8ce8f97c1a2cb57: ref!! 5fedfd8f-32b3-4330-b1e7-9cc7e1bada2e
         -   Entity:
                 Id: 7d1a0441-295b-4088-91e7-697a09a4f472
                 Name: "Dañable"
@@ -1665,7 +1675,7 @@ Hierarchy:
                         Children:
                             886187fd130d4c87a9a9d76aed7b7965: ref!! 96f60fb1-d17c-44a6-af79-6f81f312a282
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 91f37aba-7140-4e8e-b8da-728615f59313
-                            fba4e7119c23a9bf74d3b644f477681a: ref!! 5fedfd8f-32b3-4330-b1e7-9cc7e1bada2e
+                            7346292c898fab08c74db7ea409a4972: ref!! 8f42ae56-8491-4dc8-a404-edad13d077bd
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! 37997c76-6e46-4fe2-a693-34ff25b91683
                     954d0ff008c5bbb1b96abc5e37c5fa11: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: da62dbb7-387d-4d49-9b6a-3fef7fa6b682
@@ -1679,7 +1689,7 @@ Hierarchy:
                     6731dbc2021f9caf46d335ba7756cfe5: !Bozobaralika.AnimadorLancero,Bozobaralika.Proyecto
                         Id: f09b790f-c1a3-41ab-8da0-3f98a0e4810d
                         modelo: ref!! 0ded2c18-a233-4616-9c50-e75cb0531f3e
-                        lanza: ref!! 5fedfd8f-32b3-4330-b1e7-9cc7e1bada2e
+                        lanza: ref!! 8f42ae56-8491-4dc8-a404-edad13d077bd
                         brazos:
                             47c2a11bbdfba4a5f129699ad7e976f7: brazo.L
                             4bba71a1e337f5cf7761c627521ebe90: brazo.R

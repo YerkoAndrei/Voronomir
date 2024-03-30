@@ -34,7 +34,7 @@ public class ControladorEnemigo : StartupScript, IDañable
             case Enemigos.meléMediano:
                 vida = 200;
                 melé = true;
-                persecusión.Iniciar(this, 0.1f, 4f, 3f);
+                persecusión.Iniciar(this, 0.1f, 4f, 2.5f);
                 break;
             case Enemigos.meléPesado:
                 vida = 50;

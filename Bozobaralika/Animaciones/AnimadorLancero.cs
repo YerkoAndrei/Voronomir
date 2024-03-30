@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Rendering;
@@ -13,9 +14,13 @@ public class AnimadorLancero : StartupScript, IAnimador
     public List<string> brazos = new List<string> { };
     public List<string> piernas = new List<string> { };
 
+    private TransformComponent jugador;
     private SkeletonUpdater esqueleto;
     private int[] idBrazos;
     private int[] idPiernas;
+
+    private float ánguloDiferencia;
+    private Quaternion rotaciónLanzaInicial;
 
     private Vector3 pociciónLanzaInicio;
     private Vector3 pociciónLanzaAtaque;
@@ -25,6 +30,8 @@ public class AnimadorLancero : StartupScript, IAnimador
 
     public void Iniciar()
     {
+        jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Get<ControladorJugador>().cabeza;
+
         esqueleto = modelo.Skeleton;
         idBrazos = new int[brazos.Count];
         idPiernas = new int[piernas.Count];
@@ -48,18 +55,29 @@ public class AnimadorLancero : StartupScript, IAnimador
         rotaciónInicio1 = esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation;
 
         pociciónLanzaInicio = lanza.Position;
-        pociciónLanzaAtaque = new Vector3(0, 2, -0.2f);
+        pociciónLanzaAtaque = lanza.Position + new Vector3(0, 0, 1.5f);
+
+        rotaciónLanzaInicial = Quaternion.RotationYawPitchRoll(0, 0, -lanza.RotationEulerXYZ.Y);
     }
 
     public void Caminar(float velocidad)
     {
         esqueleto.NodeTransformations[idPiernas[0]].Transform.Rotation *= Quaternion.RotationY(-0.2f * velocidad);
         esqueleto.NodeTransformations[idPiernas[1]].Transform.Rotation *= Quaternion.RotationY(0.2f * velocidad);
+
+        ApuntarLanza();
     }
 
     public void Atacar()
     {
+        ApuntarLanza();
         AnimarAtaque();
+    }
+
+    private void ApuntarLanza()
+    {
+        ánguloDiferencia = jugador.WorldMatrix.TranslationVector.Y - lanza.WorldMatrix.TranslationVector.Y;
+        lanza.Rotation = rotaciónLanzaInicial * Quaternion.RotationX(MathUtil.DegreesToRadians(85 - (ánguloDiferencia * 10)));
     }
 
     private async void AnimarAtaque()
