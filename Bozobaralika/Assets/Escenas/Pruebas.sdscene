@@ -38,6 +38,8 @@ Hierarchy:
         - ref!! a54e658d-bb78-4833-b114-e0ad88f4652c
         - ref!! e6ee0047-6726-4c37-bcd8-6f0fb152abbf
         - ref!! 9778c9f7-ee25-4fad-84cc-397d06ee1a61
+        - ref!! 8dcfbf63-872c-4767-b5d4-c444770e99f8
+        - ref!! 3e1c62cc-564a-4570-b7d1-37c0f75161c4
         - ref!! 311b2d5b-74ee-48ad-bcc9-b44a58714aee
         - ref!! b9bcaf75-d766-4cdc-9c86-025cf46dd616
     Parts:
@@ -551,6 +553,39 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             274570ec839d03441939b84ca63d1199: ref!! fc546953-f7a6-4c3f-86f9-d49f2439941b
+        -   Folder: null
+            Entity:
+                Id: 3e1c62cc-564a-4570-b7d1-37c0f75161c4
+                Name: Saltador 1
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 0ea62b98-42c0-403e-86da-fcba3597c2f8
+                        Position: {X: -9.650968, Y: 0.0, Z: 8.917251}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 0.5, Z: 2.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! b5172603-3a25-45c5-8692-04e0cff01122
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 5dfbf217-c788-4e7a-81fd-fd22c45a2f4b
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: KinematicFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    ae77dc873a2c3c32c294301875605415: !Bozobaralika.ControladorSaltador,Bozobaralika.Proyecto
+                        Id: 1f851cb4-4db3-45b6-a7dc-aa657a3757a4
+                        fuerza: 15.0
         -   Folder: Enemigos
             Entity:
                 Id: 41ff8583-2be9-4314-986b-7a66d760d5f7
@@ -566,6 +601,20 @@ Hierarchy:
                     a762421e95fb507c86b67f2844233c9c: !ModelComponent
                         Id: 52582927-ef52-4001-a7a1-415ad628ed78
                         Model: 449f714b-c2f9-4b2d-b6a8-5ed407b77a72:Modelos/Lancero/Lancero
+                        Materials: {}
+        -   Entity:
+                Id: 46624e17-7c51-4632-b9eb-fabc06e5cd94
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: d811575a-4b20-4860-9c65-1f82abb729e8
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 70d66efc-b806-4a95-a2c8-358a3736fe28
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         Materials: {}
         -   Entity:
                 Id: 493f8427-a154-46ca-8ace-e04fd91fae79
@@ -616,6 +665,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             e99fd69243b07ffb3cb8b699d64c5a6b: ref!! 8c741ab1-996c-4071-9647-79f386bce79d
+                            65446f9c70abd3a53b8246b4b1dea0f2: ref!! a73bf534-1816-44fe-96b4-d74812db5792
                             7dfe7c13982333da3b19538a119b193f: ref!! 8f416caf-34df-4dae-befc-57281a706375
                             761019a922ef7d6aafb4ae49955770df: ref!! 6d174a11-f6b2-46ea-8034-343ee9ea03b4
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! e97b4ec8-4615-4f89-800b-5b19f13a2941
@@ -926,6 +976,39 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: 8dcfbf63-872c-4767-b5d4-c444770e99f8
+                Name: Saltador 0
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 5f6d0967-5c43-448f-87f9-70e56cdfa1d1
+                        Position: {X: -7.994457, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 0.5, Z: 2.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! d811575a-4b20-4860-9c65-1f82abb729e8
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: d07b5dbf-7b19-4baa-b6dd-e51442cf223e
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: KinematicFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    ae77dc873a2c3c32c294301875605415: !Bozobaralika.ControladorSaltador,Bozobaralika.Proyecto
+                        Id: a5b8bfc9-8139-4c69-8e63-f74fd31d23b1
+                        fuerza: 15.0
         -   Entity:
                 Id: 967b9e0a-c186-4cca-9283-512f6f9c4d7f
                 Name: Modelo
@@ -994,6 +1077,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     c8f96335b6b008a32015b198e8047e13: !Bozobaralika.ControladorDa%25C3%25B1oContinuo,Bozobaralika.Proyecto
                         Id: b68f9ec6-d05e-4aef-a5af-e806786b380b
+                        "daño": 0.0
         -   Entity:
                 Id: a4e203b8-36fe-425c-ac8c-a03ec4a00ff9
                 Name: "Cámara"
@@ -1504,6 +1588,20 @@ Hierarchy:
                         ejeMetralleta: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
                         ejeRife: ref!! 8374c3d3-7007-4071-9f10-14045dd1b355
         -   Entity:
+                Id: def80f8f-5bd9-4eee-b751-4768d1c73622
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: b5172603-3a25-45c5-8692-04e0cff01122
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 9e4f4867-2dc7-44a7-80a7-09efe11fdad5
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+        -   Entity:
                 Id: df6adba7-34e2-4aca-8f95-33880aa88238
                 Name: Escudo
                 Components:
@@ -1703,6 +1801,44 @@ Hierarchy:
                         Id: 57776d4e-51c0-435c-ab5f-0781c786f642
                         Model: e2c61240-3de0-4c53-821b-1b0e54af2827:Modelos/Dron/Dron
                         Materials: {}
+        -   Entity:
+                Id: f3eae609-b65c-4b88-b3c6-017a49dcb889
+                Name: Saltador
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: a73bf534-1816-44fe-96b4-d74812db5792
+                        Position: {X: 0.0, Y: 0.1, Z: -0.65}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.1, Z: 0.5}
+                        Children: {}
+                    e924da3b3cb6f2163855b309ef6e1f13: !RigidbodyComponent
+                        Id: f5a35177-5dc8-4a43-8625-fdd81053b7ff
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: KinematicFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8566ec2ee89d2d4a34d8bcd09eeb9545: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    b03f0b436fe2e26afe9491ab391198c0: !Bozobaralika.ControladorSaltadorEscudo,Bozobaralika.Proyecto
+                        Id: e21f71b6-7b59-403e-9c3e-6f7b95b419d5
+                        fuerza: 10.0
+                        controlador: ref!! 6378f014-59ac-4deb-97ed-43e73eaf0243
         -   Folder: Muros
             Entity:
                 Id: f557bc44-8313-4a06-ba9a-35f36f7d42de
