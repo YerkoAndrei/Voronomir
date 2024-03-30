@@ -29,32 +29,32 @@ public class ControladorEnemigo : StartupScript, IDañable
             case Enemigos.meléLigero:
                 vida = 80;
                 melé = true;
-                persecusión.Iniciar(this, 0.1f, 7f, 1.5f);
+                persecusión.Iniciar(this, 0.1f, 7f, 6f, 1.5f);
                 break;
             case Enemigos.meléMediano:
                 vida = 200;
                 melé = true;
-                persecusión.Iniciar(this, 0.1f, 4f, 2.5f);
+                persecusión.Iniciar(this, 0.1f, 4f, 5f, 2.5f);
                 break;
             case Enemigos.meléPesado:
                 vida = 50;
                 melé = true;
-                persecusión.Iniciar(this, 0.1f, 10f, 5f);
+                persecusión.Iniciar(this, 0.1f, 10f, 4f, 5f);
                 break;
             case Enemigos.rangoLigero:
                 vida = 40;
                 melé = false;
-                persecusión.Iniciar(this, 0.5f, 10f, 2f);
+                persecusión.Iniciar(this, 0.5f, 10f, 5f, 2f);
                 break;
             case Enemigos.rangoMediano:
                 vida = 100;
                 melé = false;
-                persecusión.Iniciar(this, 0.5f, 2f, 10f);
+                persecusión.Iniciar(this, 0.5f, 2f, 5f, 10f);
                 break;
             case Enemigos.rangoPesado:
                 vida = 500;
                 melé = false;
-                persecusión.Iniciar(this, 0.5f, 5f, 12f);
+                persecusión.Iniciar(this, 0.5f, 5f, 5f, 12f);
                 break;
 
             case Enemigos.especialLigero:

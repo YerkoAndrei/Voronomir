@@ -30,13 +30,16 @@ public class ControladorPersecusión : SyncScript
     private float aceleración;
     private float distanciaAtaque;
 
+    private float tiempoRotación;
+    private float velocidadRotación;
+
     private float tempoAceleración;
     private float tiempoAceleración;
 
     private float tempoBusqueda;
     private float tiempoBusqueda;
 
-    public void Iniciar(ControladorEnemigo _controlador, float _tiempoBusqueda, float _velocidad, float _distanciaAtaque)
+    public void Iniciar(ControladorEnemigo _controlador, float _tiempoBusqueda, float _velocidad, float _rotación, float _distanciaAtaque)
     {
         jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Transform;
         foreach (var componente in Entity.Components)
@@ -61,21 +64,28 @@ public class ControladorPersecusión : SyncScript
         tempoBusqueda = tiempoBusqueda;
 
         velocidad = _velocidad;
+        velocidadRotación = _rotación;
         distanciaAtaque = _distanciaAtaque;
     }
 
     public override void Update()
     {
-        if (!controlador.ObtenerActivo() || atacando)
+        if (!controlador.ObtenerActivo())
             return;
+
+        if(atacando)
+        {
+            MirarJugador(velocidadRotación * 0.5f);
+            return;
+        }
 
         // Busca cada cierto tiempo
         tempoBusqueda -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
         if(tempoBusqueda <= 0)
             BuscarJugador();
 
-        MirarJugador();
         Perseguir();
+        MirarJugador(velocidadRotación);
     }
 
     private void BuscarJugador()
@@ -86,13 +96,14 @@ public class ControladorPersecusión : SyncScript
         navegador.TryFindPath(jugador.WorldMatrix.TranslationVector, ruta);
     }
 
-    private void MirarJugador()
+    private void MirarJugador(float velocidad)
     {
         posiciónJugador = jugador.WorldMatrix.TranslationVector - Entity.Transform.WorldMatrix.TranslationVector;
         posiciónJugador.Y = 0f;
         posiciónJugador.Normalize();
 
-        cuerpo.Orientation = Quaternion.LookRotation(posiciónJugador, Vector3.UnitY);
+        tiempoRotación = velocidad * (float)Game.UpdateTime.Elapsed.TotalSeconds;
+        cuerpo.Orientation = Quaternion.Lerp(cuerpo.Orientation, Quaternion.LookRotation(posiciónJugador, Vector3.UnitY), tiempoRotación);
     }
 
     private void Perseguir()
