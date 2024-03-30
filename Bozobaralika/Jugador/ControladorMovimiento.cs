@@ -2,6 +2,7 @@
 using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
+using System.Linq;
 
 namespace Bozobaralika;
 
@@ -11,13 +12,16 @@ public class ControladorMovimiento : SyncScript
     private TransformComponent cabeza;
 
     // Movimiento
+    private Vector3 movimiento;
+    private float multiplicadorVelocidad;
+    private bool caminando;
     private bool detención;
     private bool bloqueo;
-    private bool caminando;
-    private float multiplicadorVelocidad;
-    private Vector3 movimiento;
 
     // Aceleración
+    private float aceleraciónInicial;
+    private float tiempoIniciación;
+    private float tempoIniciación;
     private float tiempoAceleración;
     private float tempoAceleración;
     private float minVelocidad;
@@ -35,6 +39,8 @@ public class ControladorMovimiento : SyncScript
         cabeza = _cabeza;
 
         minVelocidad = 1f;
+        aceleraciónInicial = 0.1f;
+        tiempoIniciación = 0.2f;
         tiempoAceleración = 20f;
         CambiarVelocidadMáxima(false);
 
@@ -77,17 +83,29 @@ public class ControladorMovimiento : SyncScript
             movimiento += Vector3.UnitX;
 
         // Aceleración
-        if (movimiento == Vector3.Zero || detención || caminando || cuerpo.Collisions.Count > 1)
+        if (movimiento == Vector3.Zero || detención || caminando || RevisarColisiones())
         {
             tempoAceleración = 0;
+            tempoIniciación = 0;
             aceleración = minVelocidad;
             detención = false;
         }
         else
         {
-            tempoAceleración += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            aceleración = MathUtil.SmoothStep(tempoAceleración / tiempoAceleración);
-            aceleración = MathUtil.Clamp((aceleración + minVelocidad), minVelocidad, maxVelocidad);
+            if (tempoIniciación < tiempoIniciación)
+            {
+                // Aceleración inicial
+                tempoIniciación += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                aceleración = MathUtil.SmoothStep(tempoIniciación / tiempoIniciación);
+                aceleración = MathUtil.Clamp((aceleración + aceleraciónInicial), aceleraciónInicial, minVelocidad);
+            }
+            else
+            {
+                // Aceleración máxima
+                tempoAceleración += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                aceleración = MathUtil.SmoothStep(tempoAceleración / tiempoAceleración);
+                aceleración = MathUtil.Clamp((aceleración + minVelocidad), minVelocidad, maxVelocidad);
+            }
         }
 
         // Movimiento
@@ -103,6 +121,21 @@ public class ControladorMovimiento : SyncScript
         // Rotación
         rotaciónY -= Input.MouseDelta.X * sensibilidad;
         cuerpo.Orientation = Quaternion.RotationY(rotaciónY);
+    }
+
+    private bool RevisarColisiones()
+    {
+        // 1 enemigo reduce velocidad
+        if (cuerpo.Collisions.Where(o => o.ColliderA.CollisionGroup == CollisionFilterGroups.KinematicFilter ||
+                                         o.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter).Count() > 0)
+            return true;
+
+        // 2 pisos o paredes reducen velocidad
+        if (cuerpo.Collisions.Where(o => o.ColliderA.CollisionGroup == CollisionFilterGroups.StaticFilter ||
+                                         o.ColliderB.CollisionGroup == CollisionFilterGroups.StaticFilter).Count() > 1)
+            return true;
+
+        return false;
     }
 
     private void Mirar()

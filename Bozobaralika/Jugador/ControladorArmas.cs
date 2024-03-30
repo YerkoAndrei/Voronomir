@@ -80,6 +80,7 @@ public class ControladorArmas : SyncScript
         ApagarArmas();
         armaActual = Armas.espada;
         armaAnterior = armaActual;
+        movimiento.CambiarVelocidadMáxima(true);
         interfaz.CambiarMira(armaActual);
         interfaz.CambiarÍcono(armaActual);
 

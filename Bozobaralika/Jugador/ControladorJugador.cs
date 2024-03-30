@@ -110,6 +110,7 @@ public class ControladorJugador : SyncScript, IDañable
     {
         vida -= daño;
         interfaz.ActualizarVida(vida / vidaMax);
+        movimiento.DetenerMovimiento();
         VibrarCámara(10, 10);
 
         if (vida <= 0)
