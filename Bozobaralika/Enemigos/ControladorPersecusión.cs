@@ -83,7 +83,7 @@ public class ControladorPersecusión : SyncScript
         ruta.Clear();
         índiceRuta = 0;
         tempoBusqueda = tiempoBusqueda;
-        navegador.TryFindPath(jugador.Position, ruta);
+        navegador.TryFindPath(jugador.WorldMatrix.TranslationVector, ruta);
     }
 
     private void MirarJugador()
@@ -101,7 +101,7 @@ public class ControladorPersecusión : SyncScript
             return;
 
         distanciaRuta = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ruta[índiceRuta]);
-        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, jugador.Position);
+        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, jugador.WorldMatrix.TranslationVector);
 
         // Ataque
         if (distanciaJugador <= distanciaAtaque)
@@ -114,6 +114,7 @@ public class ControladorPersecusión : SyncScript
         if (distanciaRuta > distanciaMínima)
         {
             movimiento = ruta[índiceRuta] - Entity.Transform.WorldMatrix.TranslationVector;
+            movimiento.Y = 0;
             movimiento.Normalize();
             movimiento *= (float)Game.UpdateTime.Elapsed.TotalSeconds;
 

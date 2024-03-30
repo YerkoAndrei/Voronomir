@@ -7,13 +7,12 @@ namespace Bozobaralika;
 
 public class ControladorDañoContinuo : AsyncScript
 {
+    public float daño;
     private StaticColliderComponent cuerpo;
-    private float daño;
 
     public override async Task Execute()
     {
         cuerpo = Entity.Get<StaticColliderComponent>();
-        daño = 10f;
 
         while (Game.IsRunning)
         {
