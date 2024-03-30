@@ -30,6 +30,7 @@ public class ControladorArmas : SyncScript
     private InterfazJuego interfaz;
 
     private CollisionFilterGroupFlags colisionesDisparo;
+    private CollisionFilterGroupFlags colisionesAtaque;
     private Armas armaActual;
     private Armas armaAnterior;
     private bool bloqueo;
@@ -71,7 +72,8 @@ public class ControladorArmas : SyncScript
         armaMelé.Iniciar(true);
 
         // Filtros disparos
-        colisionesDisparo = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.KinematicFilter;
+        colisionesDisparo = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.KinematicFilter | CollisionFilterGroupFlags.SensorTrigger;
+        colisionesAtaque = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.SensorTrigger;
 
         // Arma por defecto
         ApagarArmas();
@@ -216,7 +218,7 @@ public class ControladorArmas : SyncScript
         if (!resultado.Succeeded)
             return;
 
-        if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
+        if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
         {
             CrearMarca(armaActual, resultado.Point);
             return;
@@ -258,7 +260,7 @@ public class ControladorArmas : SyncScript
 
         foreach (var resultado in resultados)
         {
-            if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
+            if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
                 CrearMarca(armaActual, resultado.Point);
                 break;
@@ -297,7 +299,7 @@ public class ControladorArmas : SyncScript
         var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
                                                      dirección,
                                                      CollisionFilterGroups.DefaultFilter,
-                                                     CollisionFilterGroupFlags.StaticFilter);
+                                                     colisionesAtaque);
         if (resultado.Succeeded)
             CrearMarca(armaActual, resultado.Point);
 

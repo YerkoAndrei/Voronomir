@@ -87,8 +87,8 @@ Hierarchy:
                         CcdSweptSphereRadius: 0.0
                         FallSpeed: 10.0
                         MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 5.0
-                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        JumpSpeed: 10.0
+                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
                                 Length: 1.2
@@ -638,7 +638,7 @@ Hierarchy:
                     a60cbff727993b50e85c8863a7d8a974: !CharacterComponent
                         Id: 1258e0fd-8374-49b2-a635-484142431b4e
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -647,13 +647,15 @@ Hierarchy:
                         CcdSweptSphereRadius: 0.0
                         FallSpeed: 10.0
                         MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 5.0
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        JumpSpeed: 10.0
+                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
                         ColliderShapes:
-                            907a139209721513cc8f945f981e4ef3: !SphereColliderShapeDesc
-                                Is2D: false
-                                Radius: 0.45
-                                LocalOffset: {X: 0.0, Y: 0.45, Z: 0.05}
+                            907a139209721513cc8f945f981e4ef3: !CapsuleColliderShapeDesc
+                                Length: 0.3
+                                Radius: 0.35
+                                Orientation: UpX
+                                LocalOffset: {X: 0.0, Y: 0.35, Z: 0.02}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     09db92a0e4c509fdd87f9b0ba04c75ed: !NavigationComponent
                         Id: b0c21aa5-6d74-4948-9de4-c13e84e1fb91
                         NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
@@ -1077,7 +1079,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     c8f96335b6b008a32015b198e8047e13: !Bozobaralika.ControladorDa%25C3%25B1oContinuo,Bozobaralika.Proyecto
                         Id: b68f9ec6-d05e-4aef-a5af-e806786b380b
-                        "daño": 0.0
+                        "daño": 10.0
         -   Entity:
                 Id: a4e203b8-36fe-425c-ac8c-a03ec4a00ff9
                 Name: "Cámara"
@@ -1562,7 +1564,8 @@ Hierarchy:
                         Id: c46f69dc-db00-454e-8f32-19c17e5759b2
                         cabeza: ref!! a27891ac-33da-4772-9156-fe14a6dc59f1
                         "cámara": ref!! d37efe62-6123-4994-bb6a-66753b20c695
-                        cuerpos: {}
+                        cuerpos:
+                            7390e727d4bb096c99284e317d4920a8: ref!! 8b64a9e7-64a5-400b-8bdd-af7962f3ae7d
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: d0f0434a-e882-4b76-9c27-cc89cb138ce7
                         Position: {X: 0.0, Y: 0.0, Z: 4.0}
@@ -1613,7 +1616,7 @@ Hierarchy:
                         Children: {}
                     0a1af2486fdb78d719164131845886c3: !RigidbodyComponent
                         Id: 09de3432-6ff2-4c46-9abb-b3a874e38578
-                        CollisionGroup: StaticFilter
+                        CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -1652,8 +1655,8 @@ Hierarchy:
                         CcdSweptSphereRadius: 0.0
                         FallSpeed: 10.0
                         MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 5.0
-                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        JumpSpeed: 10.0
+                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
                                 Length: 1.2
@@ -1821,7 +1824,7 @@ Hierarchy:
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
+                        IsTrigger: true
                         IsKinematic: true
                         Mass: 0.0
                         LinearDamping: 0.0
