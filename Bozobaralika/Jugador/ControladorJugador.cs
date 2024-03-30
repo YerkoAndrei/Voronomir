@@ -14,7 +14,7 @@ public class ControladorJugador : SyncScript, IDañable
 {
     public TransformComponent cabeza;
     public CameraComponent cámara;
-    public List<RigidbodyComponent> cuerpos { get => new List<RigidbodyComponent> { }; set => new List<RigidbodyComponent> { }; }
+    public List<RigidbodyComponent> cuerpos { get; set; }
 
     private CharacterComponent cuerpo;
     private ControladorMovimiento movimiento;

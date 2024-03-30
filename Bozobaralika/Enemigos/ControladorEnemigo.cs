@@ -8,7 +8,7 @@ using static Constantes;
 public class ControladorEnemigo : StartupScript, IDañable
 {
     public Enemigos enemigo;
-    public List<RigidbodyComponent> cuerpos { get => new List<RigidbodyComponent> {  }; set => new List<RigidbodyComponent> { }; }
+    public List<RigidbodyComponent> cuerpos { get ; set ; }
 
     public ControladorArmaMelé armaMelé;
     public ControladorArmaRango armaRango;

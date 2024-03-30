@@ -111,7 +111,8 @@ Hierarchy:
                         enemigo: "meléLigero"
                         "armaMelé": ref!! a13e9284-0c3f-4cbd-90e6-f62de2f6c8a9
                         armaRango: null
-                        cuerpos: {}
+                        cuerpos:
+                            ad5f371af09d736586a420c788f25eaf: ref!! 677c579a-0300-458d-bc3d-f0e4b12ac16b
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: d6b2ec8f-b235-486d-9cb7-7a97f695e09b
                     dcfc61066510852ac085b2f68892da9c: !Bozobaralika.AnimadorZombi,Bozobaralika.Proyecto
@@ -588,7 +589,7 @@ Hierarchy:
                     a60cbff727993b50e85c8863a7d8a974: !CharacterComponent
                         Id: 1258e0fd-8374-49b2-a635-484142431b4e
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: StaticFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -623,7 +624,8 @@ Hierarchy:
                         enemigo: "meléPesado"
                         "armaMelé": null
                         armaRango: null
-                        cuerpos: {}
+                        cuerpos:
+                            5bc86ece30ba2b9277a142cb775b2872: ref!! 2814ed81-bd8a-481f-9cd5-2622c315012c
                     d7feb748634a3f30f579747ffa6f0e53: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: 5da25a13-aa01-42eb-96c5-c85e91952c5b
                     302a47570855941e368ac76b00c215ae: !Bozobaralika.AnimadorEscudo,Bozobaralika.Proyecto
@@ -1514,7 +1516,7 @@ Hierarchy:
                     0a1af2486fdb78d719164131845886c3: !RigidbodyComponent
                         Id: 09de3432-6ff2-4c46-9abb-b3a874e38578
                         CollisionGroup: StaticFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -1543,7 +1545,7 @@ Hierarchy:
                     a60cbff727993b50e85c8863a7d8a974: !CharacterComponent
                         Id: 33f405b7-1cfd-447f-9b7b-c41e518c95eb
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -1557,7 +1559,7 @@ Hierarchy:
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
                                 Length: 1.2
-                                Radius: 0.5
+                                Radius: 0.4
                                 LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     691c8f9386df01a1270f88b33a2974d5: !NavigationComponent
@@ -1579,7 +1581,8 @@ Hierarchy:
                         enemigo: "meléMediano"
                         "armaMelé": ref!! fce7412a-f445-4ff2-9044-e59c827fdaee
                         armaRango: null
-                        cuerpos: {}
+                        cuerpos:
+                            c9b14b227e668793819166799f08a25e: ref!! b655fe73-b15a-4585-b00f-94d4fb5ab81d
                     e42c151e94d68ac78484fc9361011f5c: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: a547fb8d-05d3-448a-8ef2-de9679824411
                     6731dbc2021f9caf46d335ba7756cfe5: !Bozobaralika.AnimadorLancero,Bozobaralika.Proyecto
