@@ -9,14 +9,6 @@ namespace Bozobaralika;
 using static Utilidades;
 using static Constantes;
 
-// Filtros:
-// Default      - Disparos (daño en general)
-// Static       - Entorno, puertas, llaves
-// Kinematic    - Enemigos (navegación y dañable)
-// Debris       - Escombros
-// Sensor       - Puertas
-// Character    - Jugador
-
 public class ControladorArmas : SyncScript
 {
     public ControladorArmaMelé armaMelé;

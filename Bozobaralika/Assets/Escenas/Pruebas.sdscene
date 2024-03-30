@@ -140,7 +140,7 @@ Hierarchy:
                         Materials: {}
                     aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
                         Id: 900443f5-849b-4679-8095-3088e1645d91
-                        CollisionGroup: StaticFilter
+                        CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -461,7 +461,7 @@ Hierarchy:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 2652e0ea-30bf-4860-aa19-328ce4dfe79a
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: 385c5c74-51a7-4922-bea2-2608d1956b6c
-                        CollisionGroup: StaticFilter
+                        CollisionGroup: SensorTrigger
                         CanCollideWith: CharacterFilter
                         CanSleep: true
                         Restitution: 0.0
@@ -659,7 +659,7 @@ Hierarchy:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 5dd9166c-961d-48ba-b9dd-efe134b7b2f3
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: 5ea21955-55e1-449f-a260-bb06bcb11a1e
-                        CollisionGroup: StaticFilter
+                        CollisionGroup: SensorTrigger
                         CanCollideWith: CharacterFilter
                         CanSleep: true
                         Restitution: 0.0
@@ -942,7 +942,7 @@ Hierarchy:
                         Materials: {}
                     aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
                         Id: bc4a2a05-5f78-4895-97cb-a3bbd5c643c7
-                        CollisionGroup: StaticFilter
+                        CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -978,7 +978,7 @@ Hierarchy:
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: 05d54835-e18d-4978-98cb-036a25f8dac8
                         CanCollideWith: KinematicFilter, CharacterFilter
-                        CanSleep: true
+                        CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
                         RollingFriction: 0.0
@@ -1026,7 +1026,7 @@ Hierarchy:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 8dc113f6-433a-47f5-bb2b-361334f0bf89
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: 00c4053a-7e9b-4066-9410-37c639bf01d2
-                        CollisionGroup: StaticFilter
+                        CollisionGroup: SensorTrigger
                         CanCollideWith: CharacterFilter
                         CanSleep: true
                         Restitution: 0.0
@@ -1087,7 +1087,7 @@ Hierarchy:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 32524af0-94ba-4b91-af3d-fabb7dd890b3
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: 8670ac47-0f86-4d9e-9cd1-bb1909b46e43
-                        CollisionGroup: StaticFilter
+                        CollisionGroup: SensorTrigger
                         CanCollideWith: CharacterFilter
                         CanSleep: true
                         Restitution: 0.0

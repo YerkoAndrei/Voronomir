@@ -4,6 +4,14 @@ namespace Bozobaralika;
 
 public static class Constantes
 {
+    // Filtros:
+    // Default      - Disparos (daño en general)
+    // Static       - Entorno, escudo
+    // Kinematic    - Enemigos (navegación y dañable)
+    // Debris       - Escombros, muertos
+    // Sensor       - Llaves, botones, puertas
+    // Character    - Jugador
+
     // Color botones
     public static Color colorNormal = new Color(255, 255, 255, 255);
     public static Color colorEnCursor = new Color(200, 200, 200, 250);
@@ -38,7 +46,7 @@ public static class Constantes
         meléLigero,     // Esqueleto
         meléMediano,    // Lancero
         meléPesado,     // Escudo
-        rangoLigero,    // Cubo
+        rangoLigero,    // Dron
         rangoMediano,   // Babosa
         rangoPesado,    // Araña
 
