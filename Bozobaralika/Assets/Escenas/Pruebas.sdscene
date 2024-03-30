@@ -268,41 +268,6 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
-                Id: 15965952-c2b7-4f86-ab9c-64b25b7267e3
-                Name: "ArmaMelé"
-                Components:
-                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
-                        Id: 2ce1f117-06b0-4b85-a82c-b2214ec15f2c
-                        Position: {X: 0.0, Y: -0.4, Z: -1.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 2.0}
-                        Children: {}
-                    67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
-                        Id: b723cfe7-5fbf-42fb-8eb0-51db98ab9086
-                        CanCollideWith: KinematicFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: true
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            ee1f0f8d5ea461771e1abc59d4677dae: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    72102bac8ab6d052c1e2045767f143e1: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
-                        Id: 72ecda8e-7d43-469a-b3ed-b87cb747013c
-        -   Entity:
                 Id: 1c79989d-ae1f-40d5-a1ec-3c195fff6173
                 Name: "Dañables"
                 Components:
@@ -784,7 +749,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             36d3c59ff298eb8b6306d66d61ab4b87: ref!! a032338b-57be-4ac1-baf5-af21df6b2d12
-                            52b6f030c9d852975f4a2cf54f55bc92: ref!! 2ce1f117-06b0-4b85-a82c-b2214ec15f2c
                             b1afc6c1b1145896975e0fcac17906ef: ref!! 0581adaa-618c-4926-bd0c-773cfa32ddae
                             9e1369c97ef88ac60a5436cfb7fa1e6a: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
                             32470a676780800250b81a249ff33f63: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
@@ -1579,7 +1543,6 @@ Hierarchy:
                         Priority: 10
                     54c947a658f979a1a3cbf73596735198: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: cf114505-16b9-4712-a010-c2ba1ce114e1
-                        "armaMelé": ref!! 72ecda8e-7d43-469a-b3ed-b87cb747013c
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/MarcaBala
                         modeloEspada: ref!! c3f3e014-10d4-4345-b491-72cfe4c5a54b
                         modeloEscopeta: ref!! 2f860ba4-41c4-48d5-8d5f-9459560589d7
@@ -1669,7 +1632,7 @@ Hierarchy:
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 786fbd03-8f4c-4908-9bbe-2588a8c9a331
-                        Position: {X: 5.5063105, Y: 0.0, Z: -1.5}
+                        Position: {X: 6.0, Y: 0.0, Z: -1.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:

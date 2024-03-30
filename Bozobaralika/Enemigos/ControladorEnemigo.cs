@@ -74,7 +74,7 @@ public class ControladorEnemigo : StartupScript, IDañable
 
         // Cerebro no tiene arma
         if (melé && armaMelé != null)
-            armaMelé.Iniciar(false);
+            armaMelé.Iniciar();
 
         else if (!melé && armaRango != null)
             armaRango.Iniciar();

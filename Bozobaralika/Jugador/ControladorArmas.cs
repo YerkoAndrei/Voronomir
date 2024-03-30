@@ -12,7 +12,6 @@ using static Constantes;
 
 public class ControladorArmas : SyncScript
 {
-    public ControladorArmaMelé armaMelé;
     public Prefab prefabMarca;
 
     public ModelComponent modeloEspada;
@@ -30,8 +29,8 @@ public class ControladorArmas : SyncScript
     private CameraComponent cámara;
     private InterfazJuego interfaz;
 
+    private List<Vector3> rayosMelé;
     private CollisionFilterGroupFlags colisionesDisparo;
-    private CollisionFilterGroupFlags colisionesAtaque;
     private Armas armaActual;
     private Armas armaAnterior;
     private bool bloqueo;
@@ -69,12 +68,14 @@ public class ControladorArmas : SyncScript
         tiempoAtascamientoMetralleta = 2f;
         tempoMetralleta = tiempoAtascamientoMetralleta;
 
-        // Melé
-        armaMelé.Iniciar(true);
-
         // Filtros disparos
         colisionesDisparo = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.KinematicFilter | CollisionFilterGroupFlags.SensorTrigger;
-        colisionesAtaque = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.SensorTrigger;
+        rayosMelé = new List<Vector3>
+        {
+            new Vector3 (0.4f, 0, 0),
+            new Vector3 (0, 0, 0),
+            new Vector3 (-0.4f, 0, 0)
+        };
 
         // Arma por defecto
         ApagarArmas();
@@ -301,37 +302,35 @@ public class ControladorArmas : SyncScript
         if ((float)Game.UpdateTime.Total.TotalSeconds < tiempoDisparo)
             return;
 
+        // 3 rayos
         // Distancia máxima de disparo: 2
-        var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector + cámara.Entity.Transform.WorldMatrix.Forward * 2;
-        var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
-                                                     dirección,
-                                                     CollisionFilterGroups.DefaultFilter,
-                                                     colisionesAtaque);
-        if (resultado.Succeeded)
-            CrearMarca(armaActual, resultado.Point);
-
-        // Rayo decide si usar colisión
-        var distanciaRayo = Vector3.Distance(resultado.Point, cámara.Entity.Transform.WorldMatrix.TranslationVector);
-        var colisiones = armaMelé.ObtenerColisiones();
-        var contactos = new List<Vector3>();
-        for(int i = 0; i < colisiones.Length; i++)
+        var crearMarca = Vector3.Zero;
+        foreach (var posiciónRayo in rayosMelé)
         {
-            var toques = colisiones[i].Contacts.ToArray();
-            for (int ii = 0; ii < toques.Length; ii++)
+            var dirección = (cámara.Entity.Transform.WorldMatrix.TranslationVector + posiciónRayo) + (cámara.Entity.Transform.WorldMatrix.Forward + (posiciónRayo * 0.5f)) * 2;
+            var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
+                                                         dirección,
+                                                         CollisionFilterGroups.DefaultFilter,
+                                                         colisionesDisparo);
+
+            if (!resultado.Succeeded)
+                continue;
+
+            if (resultado.Collider.CollisionGroup == CollisionFilterGroups.KinematicFilter)
             {
-                contactos.Add(toques[ii].PositionOnA);
-                contactos.Add(toques[ii].PositionOnB);
+                var dañable = resultado.Collider.Entity.Get<ElementoDañable>();
+                if (dañable == null)
+                    return;
+
+                dañable.RecibirDaño(ObtenerDaño(Armas.espada));
+                crearMarca = Vector3.Zero;
             }
+            else
+                crearMarca = resultado.Point;
         }
 
-        var contactoMásCercanoMelé = contactos.OrderBy(o => Vector3.Distance(o, cámara.Entity.Transform.WorldMatrix.TranslationVector)).FirstOrDefault();
-        var menorDistanciaMelé = Vector3.Distance(contactoMásCercanoMelé, cámara.Entity.Transform.WorldMatrix.TranslationVector);
-
-        if (menorDistanciaMelé < distanciaRayo)
-        {
-            // PENDIENTE: efecto
-            armaMelé.Atacar(ObtenerDaño(Armas.espada));
-        }
+        if (crearMarca != Vector3.Zero)
+            CrearMarca(armaActual, crearMarca);
     }
 
     private void CrearMarca(Armas arma, Vector3 posición)
@@ -384,7 +383,7 @@ public class ControladorArmas : SyncScript
         switch (arma)
         {
             case Armas.espada:
-                return 50;
+                return 25; // * 3
             case Armas.escopeta:
                 return 5;
             case Armas.metralleta:

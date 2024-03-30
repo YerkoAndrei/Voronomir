@@ -6,19 +6,11 @@ namespace Bozobaralika;
 
 public class ControladorArmaMelé : StartupScript
 {
-    private CollisionFilterGroupFlags colisiones;
     private RigidbodyComponent cuerpo;
 
-    public void Iniciar(bool _jugador)
+    public void Iniciar()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
-
-        if (_jugador)
-            colisiones = CollisionFilterGroupFlags.KinematicFilter;
-        else
-            colisiones = CollisionFilterGroupFlags.CharacterFilter;
-
-        cuerpo.CanCollideWith = colisiones;
     }
 
     public void Atacar(float daño)
