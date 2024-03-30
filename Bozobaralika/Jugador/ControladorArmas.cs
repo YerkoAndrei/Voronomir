@@ -189,7 +189,8 @@ public class ControladorArmas : SyncScript
                 últimoDisparoEscopeta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
             case Armas.metralleta:
-                CalcularRayo(0.06f);
+                // Metralleta se vuelve impresisa según calentamiento
+                CalcularRayo(((tiempoMaxMetralleta - tempoMetralleta) / tiempoMaxMetralleta) * 0.1f);
                 AnimarDisparo(ejeMetralleta, 0.15f, 0.05f);
                 últimoDisparoMetralleta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
