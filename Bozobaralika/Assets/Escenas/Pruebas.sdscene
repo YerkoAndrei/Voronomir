@@ -668,6 +668,7 @@ Hierarchy:
                         Children:
                             e99fd69243b07ffb3cb8b699d64c5a6b: ref!! 8c741ab1-996c-4071-9647-79f386bce79d
                             65446f9c70abd3a53b8246b4b1dea0f2: ref!! a73bf534-1816-44fe-96b4-d74812db5792
+                            92d34f80883cf71e01f4037299ee9404: ref!! 42534672-a255-4d6b-9d81-2455f97e475a
                             7dfe7c13982333da3b19538a119b193f: ref!! 8f416caf-34df-4dae-befc-57281a706375
                             761019a922ef7d6aafb4ae49955770df: ref!! 6d174a11-f6b2-46ea-8034-343ee9ea03b4
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! e97b4ec8-4615-4f89-800b-5b19f13a2941
@@ -1890,6 +1891,39 @@ Hierarchy:
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         RenderGroup: Group11
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: fd490f2c-d9fe-4e08-a54a-fe16132750b5
+                Name: Cuerpo
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 42534672-a255-4d6b-9d81-2455f97e475a
+                        Position: {X: 0.0, Y: 0.86, Z: 0.15}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e924da3b3cb6f2163855b309ef6e1f13: !RigidbodyComponent
+                        Id: 6dc6cf70-b24f-43a0-88b8-acff56fe0f50
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DebrisFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4a6a60577f4d27d2f52788212c4ad9a4: !CapsuleColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: ff5480c7-125b-4faf-a925-a78b68f1b73b
                 Name: Interfaz
