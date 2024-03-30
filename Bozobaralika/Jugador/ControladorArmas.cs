@@ -310,8 +310,28 @@ public class ControladorArmas : SyncScript
         if (resultado.Succeeded)
             CrearMarca(armaActual, resultado.Point);
 
-        // PENDIENTE: efecto
-        armaMelé.Atacar(ObtenerDaño(Armas.espada));
+        // Rayo decide si usar colisión
+        var distanciaRayo = Vector3.Distance(resultado.Point, cámara.Entity.Transform.WorldMatrix.TranslationVector);
+        var colisiones = armaMelé.ObtenerColisiones();
+        var contactos = new List<Vector3>();
+        for(int i = 0; i < colisiones.Length; i++)
+        {
+            var toques = colisiones[i].Contacts.ToArray();
+            for (int ii = 0; ii < toques.Length; ii++)
+            {
+                contactos.Add(toques[ii].PositionOnA);
+                contactos.Add(toques[ii].PositionOnB);
+            }
+        }
+
+        var contactoMásCercanoMelé = contactos.OrderBy(o => Vector3.Distance(o, cámara.Entity.Transform.WorldMatrix.TranslationVector)).FirstOrDefault();
+        var menorDistanciaMelé = Vector3.Distance(contactoMásCercanoMelé, cámara.Entity.Transform.WorldMatrix.TranslationVector);
+
+        if (menorDistanciaMelé < distanciaRayo)
+        {
+            // PENDIENTE: efecto
+            armaMelé.Atacar(ObtenerDaño(Armas.espada));
+        }
     }
 
     private void CrearMarca(Armas arma, Vector3 posición)

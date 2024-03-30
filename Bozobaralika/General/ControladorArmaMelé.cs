@@ -23,7 +23,12 @@ public class ControladorArmaMelé : StartupScript
 
     public void Atacar(float daño)
     {
-        EnviarDaño(cuerpo.Collisions.ToArray(), daño);
+        EnviarDaño(ObtenerColisiones(), daño);
+    }
+
+    public Collision[] ObtenerColisiones()
+    {
+        return cuerpo.Collisions.ToArray();
     }
 
     private void EnviarDaño(Collision[] colisiones, float daño)
