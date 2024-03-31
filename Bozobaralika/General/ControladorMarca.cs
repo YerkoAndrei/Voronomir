@@ -56,6 +56,6 @@ public class ControladorMarca : StartupScript
         }
 
         Entity.Transform.Position = posición + (normal * 0.001f);
-        Entity.Transform.Rotation = Quaternion.LookRotation(normal, Vector3.UnitY);
+        Entity.Transform.Rotation = Quaternion.LookRotation(normal, posición);
     }
 }
