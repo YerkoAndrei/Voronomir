@@ -111,7 +111,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: imgLlaveAzul
                 Source: !SpriteFromTexture
-                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 0, B: 255, A: 255}
         -   UIElement: !Grid
@@ -355,7 +355,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: imgLlaveRoja
                 Source: !SpriteFromTexture
-                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 0, B: 0, A: 255}
         -   UIElement: !Grid
