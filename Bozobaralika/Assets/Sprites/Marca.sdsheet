@@ -1,0 +1,15 @@
+!SpriteSheet
+Id: a66f70b1-e6fd-434e-b17e-0954b53ea9ba
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Packing: {}
+Sprites:
+    b3d3cb00a685c6a2a6b5962fe053b170:
+        Source: !file "../Texturas/Círculo.png"
+        Name: "Círculo"
+        TextureRegion: {X: 0, Y: 0, Width: 512, Height: 512}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

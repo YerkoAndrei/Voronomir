@@ -224,7 +224,7 @@ public class ControladorArmas : SyncScript
 
         if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
         {
-            CrearMarca(armaActual, resultado.Point);
+            CrearMarca(armaActual, resultado.Point, resultado.Normal, resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger);
             return;
         }
 
@@ -271,7 +271,7 @@ public class ControladorArmas : SyncScript
         {
             if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
-                CrearMarca(armaActual, resultado.Point);
+                CrearMarca(armaActual, resultado.Point, resultado.Normal, resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger);
                 break;
             }
 
@@ -305,7 +305,8 @@ public class ControladorArmas : SyncScript
 
         // 3 rayos
         // Distancia máxima de disparo: 2
-        var crearMarca = Vector3.Zero;
+        var posición = Vector3.Zero;
+        var normal = Vector3.Zero;
         foreach (var posiciónRayo in rayosMelé)
         {
             var dirección = (cámara.Entity.Transform.WorldMatrix.TranslationVector + posiciónRayo) + (cámara.Entity.Transform.WorldMatrix.Forward + (posiciónRayo * 0.5f)) * 2;
@@ -324,26 +325,28 @@ public class ControladorArmas : SyncScript
                     return;
 
                 dañable.RecibirDaño(ObtenerDaño(Armas.espada));
-                crearMarca = Vector3.Zero;
+                posición = Vector3.Zero;
+                normal = Vector3.Zero;
             }
             else
-                crearMarca = resultado.Point;
+            {
+                posición = resultado.Point;
+                normal = resultado.Normal;
+            }
         }
 
-        if (crearMarca != Vector3.Zero)
-            CrearMarca(armaActual, crearMarca);
+        if (posición != Vector3.Zero && normal != Vector3.Zero)
+            CrearMarca(armaActual, posición, normal, false);
     }
 
-    private void CrearMarca(Armas arma, Vector3 posición)
+    private void CrearMarca(Armas arma, Vector3 posición, Vector3 normal, bool soloEfecto)
     {
-        // PENDIENTE: usar piscina
-        // PENDIENTE: efecto
-        // Marca balazo
+        // PENDIENTE: usar piscina o cofre
         var marca = prefabMarca.Instantiate()[0];
-        marca.Transform.Position = posición;
-        Entity.Scene.Entities.Add(marca);
-        return;
+        var controlador = marca.Get<ControladorMarca>();
+        controlador.Iniciar(armaActual, posición, normal, soloEfecto);
 
+        Entity.Scene.Entities.Add(marca);
     }
 
     private int ObtenerCantidadPerdigones()

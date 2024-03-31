@@ -7,16 +7,148 @@ Hierarchy:
         - ref!! 5bfdc32d-ce31-4338-b875-c3ad36cab97c
     Parts:
         -   Entity:
+                Id: 16d8e6ef-fe05-45dc-aa14-7dda05c7bfd0
+                Name: "Partículas"
+                Components:
+                    093b02d926676f161ca771eca86b224b: !TransformComponent
+                        Id: d9367c1b-485e-4b67-9cb6-f0e77d35a20e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9373beae1237271f3b5610a77fea0b07: !ParticleSystemComponent
+                        Id: b5445e9b-dd6f-4afb-86df-92d9a98886c8
+                        Control:
+                            ResetSeconds: 2.0
+                            Control: Play
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                4f568c9f2acf53e703cba1b6000a6173:
+                                    ParticleLifetime: {X: 1.0, Y: 2.0}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        380f21faacc819e40c598247534a5b28: !SpawnerBurst
+                                            LoopCondition: OneShot
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 10
+                                    Initializers:
+                                        ee72ebc2f93cf12825ea2538a284a63f: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.05, Y: 0.1}
+                                        d531158707504cff72daa8e8f8f61784: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -0.5, Y: -0.5, Z: -0.5}
+                                            PositionMax: {X: 0.5, Y: 0.5, Z: 0.5}
+                                            Interpolate: false
+                                        7b6764ebde5a1c451a2898eb923bc60c: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -0.5, Y: 1.0, Z: -0.5}
+                                            VelocityMax: {X: 0.5, Y: 3.0, Z: 0.5}
+                                    Updaters:
+                                        75b073a481ac7c5736754d17befa5b44: !UpdaterForceField
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: true
+                                            FieldShape: null
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: true
+                                            DisplayParticleScaleUniform: false
+                                            FieldFalloff:
+                                                StrengthInside: 1.0
+                                                FalloffStart: 0.1
+                                                StrengthOutside: 1.0
+                                                FalloffEnd: 0.9
+                                            EnergyConservation: 1.0
+                                            ForceDirected: 0.0
+                                            ForceVortex: 0.0
+                                            ForceRepulsive: 0.0
+                                            ForceFixed: {X: 0.0, Y: -9.81, Z: 0.0}
+        -   Entity:
+                Id: 3d265c25-db05-4214-9e4e-dd44e1fae815
+                Name: Textura
+                Components:
+                    9d00e085f3303ca400354a066ad2b2bb: !TransformComponent
+                        Id: 0ce2d2c5-593c-40a6-b5ee-6f4e52114dbe
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.01, Y: 0.01, Z: 0.01}
+                        Children: {}
+                    9338311ecbb3e1b8edbaf2ec6d27e7c9: !SpriteComponent
+                        Id: f1652332-d0d0-47ad-902a-d6f7fb203099
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: a66f70b1-e6fd-434e-b17e-0954b53ea9ba:Sprites/Marca
+                        Color: {R: 0.0, G: 0.0, B: 0.0, A: 1.0}
+        -   Entity:
                 Id: 5bfdc32d-ce31-4338-b875-c3ad36cab97c
-                Name: Hoyo
+                Name: Marca
                 Components:
                     9d00e085f3303ca400354a066ad2b2bb: !TransformComponent
                         Id: 39380bdc-58cb-4772-bfee-6503d118dc26
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
-                        Children: {}
-                    902163abf3f49b3b82c5183f33d508ad: !ModelComponent
-                        Id: a3c282ee-3449-438e-86c4-77fd1ae664d5
-                        Model: 3de091c5-25d4-4c12-8e62-18cbe4432ced:Sphere
-                        Materials: {}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            cf1d25d66147fdd58c11995adf2814ed: ref!! 0ce2d2c5-593c-40a6-b5ee-6f4e52114dbe
+                            0d51d92c1699ed9892c88cf6e08f25d5: ref!! d9367c1b-485e-4b67-9cb6-f0e77d35a20e
+                    42f447e86c24e2acb79d55d30ef54e80: !Bozobaralika.ControladorMarca,Bozobaralika.Proyecto
+                        Id: 4934732c-c16f-46c3-8081-b7dd025d1c0b
+                        textura: ref!! f1652332-d0d0-47ad-902a-d6f7fb203099
+                        marcaEspada: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                        marcaBala: "d177cd46-3416-41d0-8fc8-a1ab38f9265e:Texturas/Círculo"
+                        marcaRifle: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado

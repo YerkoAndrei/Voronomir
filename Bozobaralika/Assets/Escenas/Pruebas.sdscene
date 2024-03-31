@@ -444,7 +444,7 @@ Hierarchy:
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: 385c5c74-51a7-4922-bea2-2608d1956b6c
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: CharacterFilter
+                        CanCollideWith: DefaultFilter, CharacterFilter
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.0
@@ -1087,7 +1087,7 @@ Hierarchy:
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: 00c4053a-7e9b-4066-9410-37c639bf01d2
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: CharacterFilter
+                        CanCollideWith: DefaultFilter, CharacterFilter
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.0
