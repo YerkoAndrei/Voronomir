@@ -1,0 +1,19 @@
+!Model
+Id: 171e2eb7-12ec-414d-8bb4-a6a481b66399
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file AK-47.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    57237433c658fb04b2cfa8e165de7166:
+        Name: Metal
+        MaterialInstance:
+            Material: adc0d7cb-2f88-4ab5-b6c5-d87861d3472f:Modelos/Armas/Metralleta/Materiales/Metal
+    7f34299d2417fe26748898a193879302:
+        Name: Madera
+        MaterialInstance:
+            Material: 5247d6c6-bfc2-45fa-88dc-85aebd1f5822:Modelos/Armas/Metralleta/Materiales/Madera
+Modifiers: {}
+~SourceHashes:
+    71c5716a5adf11b21b28624d7959b89f~AK-47.glb: 8428f999fb5649172680244d08fd5109

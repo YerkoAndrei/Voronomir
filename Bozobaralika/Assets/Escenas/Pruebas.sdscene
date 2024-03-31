@@ -66,7 +66,7 @@ Hierarchy:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 8374c3d3-7007-4071-9f10-14045dd1b355
                         Position: {X: 0.0, Y: -0.4, Z: 0.0}
-                        Rotation: {X: 0.08715574, Y: 0.0, Z: 0.0, W: 0.9961947}
+                        Rotation: {X: 0.0, Y: 0.0, Z: -9.456897E-10, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             dfa71521e15dbf6c3948d9f3fd1c2b8d: ref!! 3f49b083-741f-4e55-8add-88eefa292f0c
@@ -513,12 +513,12 @@ Hierarchy:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 9c8cd132-4d00-4b14-8ba7-704651c1b1ac
                         Position: {X: 0.0, Y: 0.0, Z: -0.75}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.1, Y: 0.1, Z: 0.99999994}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.5, W: 0.8660254}
+                        Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 7f8bc918-bb85-4a3e-83a3-06076b368917
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
                         RenderGroup: Group11
                         Materials: {}
         -   Entity:
@@ -1468,7 +1468,7 @@ Hierarchy:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 3f49b083-741f-4e55-8add-88eefa292f0c
                         Position: {X: 0.0, Y: 0.0, Z: -0.74}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.5, W: 0.8660254}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
@@ -1483,7 +1483,7 @@ Hierarchy:
                     e35a58dffbc4aadd5823f57ed881d54d: !TransformComponent
                         Id: 8578baa7-5062-4910-a926-cef5af77092b
                         Position: {X: 0.0, Y: 5.0, Z: 0.0}
-                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Rotation: {X: 1.4950174E-08, Y: 0.9396926, Z: 0.34202012, W: -4.1075268E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     34c340859588b2f35c268a68055cc5d9: !LightComponent
