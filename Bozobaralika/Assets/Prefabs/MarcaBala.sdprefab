@@ -18,6 +18,7 @@ Hierarchy:
                         Children: {}
                     9373beae1237271f3b5610a77fea0b07: !ParticleSystemComponent
                         Id: b5445e9b-dd6f-4afb-86df-92d9a98886c8
+                        Enabled: false
                         Control:
                             ResetSeconds: 2.0
                             Control: Play
@@ -149,6 +150,9 @@ Hierarchy:
                     42f447e86c24e2acb79d55d30ef54e80: !Bozobaralika.ControladorMarca,Bozobaralika.Proyecto
                         Id: 4934732c-c16f-46c3-8081-b7dd025d1c0b
                         textura: ref!! f1652332-d0d0-47ad-902a-d6f7fb203099
+                        "partículasEspada": ref!! b5445e9b-dd6f-4afb-86df-92d9a98886c8
+                        "partículasBalas": ref!! b5445e9b-dd6f-4afb-86df-92d9a98886c8
+                        "partículasRifle": ref!! b5445e9b-dd6f-4afb-86df-92d9a98886c8
                         marcaEspada: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                         marcaBala: "d177cd46-3416-41d0-8fc8-a1ab38f9265e:Texturas/Círculo"
                         marcaRifle: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado

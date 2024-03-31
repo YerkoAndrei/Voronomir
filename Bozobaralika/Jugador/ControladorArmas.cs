@@ -29,7 +29,7 @@ public class ControladorArmas : SyncScript
     private CameraComponent cámara;
     private InterfazJuego interfaz;
 
-    private List<Vector3> rayosMelé;
+    private Vector3[] rayosMelé;
     private CollisionFilterGroupFlags colisionesDisparo;
     private Armas armaActual;
     private Armas armaAnterior;
@@ -52,6 +52,10 @@ public class ControladorArmas : SyncScript
     private float tiempoMaxMetralleta;
     private float tiempoAtascamientoMetralleta;
 
+    private ControladorMarca[] marcas;
+    private int marcaActual;
+    private int maxMarcas;
+
     public void Iniciar(ControladorJugador _controlador, ControladorMovimiento _movimiento, CameraComponent _cámara, InterfazJuego _interfaz)
     {
         controlador = _controlador;
@@ -70,12 +74,22 @@ public class ControladorArmas : SyncScript
 
         // Filtros disparos
         colisionesDisparo = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.KinematicFilter | CollisionFilterGroupFlags.SensorTrigger;
-        rayosMelé = new List<Vector3>
+        rayosMelé = new Vector3[3]
         {
             new Vector3 (0.4f, 0, 0),
             new Vector3 (0, 0, 0),
             new Vector3 (-0.4f, 0, 0)
         };
+
+        // Cofre marcas
+        maxMarcas = 100;
+        marcas = new ControladorMarca[maxMarcas];
+        for (int i = 0; i < maxMarcas; i++)
+        {
+            var marca = prefabMarca.Instantiate()[0];
+            marcas[i] = marca.Get<ControladorMarca>();
+            Entity.Scene.Entities.Add(marca);
+        }
 
         // Arma por defecto
         ApagarArmas();
@@ -341,12 +355,11 @@ public class ControladorArmas : SyncScript
 
     private void CrearMarca(Armas arma, Vector3 posición, Vector3 normal, bool soloEfecto)
     {
-        // PENDIENTE: usar piscina o cofre
-        var marca = prefabMarca.Instantiate()[0];
-        var controlador = marca.Get<ControladorMarca>();
-        controlador.Iniciar(armaActual, posición, normal, soloEfecto);
+        marcas[marcaActual].Iniciar(armaActual, posición, normal, soloEfecto);
+        marcaActual++;
 
-        Entity.Scene.Entities.Add(marca);
+        if (marcaActual >= maxMarcas)
+            marcaActual = 0;
     }
 
     private int ObtenerCantidadPerdigones()
