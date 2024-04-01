@@ -58,14 +58,13 @@ Hierarchy:
                         Id: 2138665c-fd1c-4a2f-8ad0-6a166a3c81c7
                         Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
                         Materials: {}
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 017c6223-0006-4979-99c2-72b0de8729ea
-                Name: EjeRifle
+                Name: Derecha
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 8374c3d3-7007-4071-9f10-14045dd1b355
-                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Position: {X: 0.4, Y: -0.4, Z: -0.4}
                         Rotation: {X: 0.0, Y: 0.0, Z: -9.456897E-10, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -280,6 +279,22 @@ Hierarchy:
                             274570ec839d03441939b84ca63d1199: ref!! 0c75af9b-fd81-4c45-8f61-2408c49af5e8
         -   Folder: null
             Entity:
+                Id: 1e512c2a-e2bc-455d-8ebb-70faf3dec8a9
+                Name: Rifle
+                Components:
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: 48aa2a42-0470-4daf-9e1c-3815b6d70ad7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.052264232, Y: -0.052264232, Z: 0.002739052, W: 0.9972609}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
+                        Id: 422ce07b-df7b-445b-bb39-e917961c0c17
+                        Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
+                        RenderGroup: Group11
+                        Materials: {}
+        -   Folder: null
+            Entity:
                 Id: 1edc8756-d9f1-4d13-b262-f05a161e4fa0
                 Name: Rueda
                 Components:
@@ -293,6 +308,25 @@ Hierarchy:
                         Id: dd794269-8824-4994-9c86-7ee26b13fed0
                         Model: 42f01256-b2f0-4d1d-b81d-719b59cf45c5:Modelos/Cerebro/Rueda
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 256be215-bd84-4b2f-ae69-178f30243286
+                Name: Escopetas
+                Components:
+                    48c307f85f5b81217c07cf4f5cf355cc: !TransformComponent
+                        Id: f7300ce2-e3aa-4ab2-b570-1088bafc74b6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            4d4e4fc59f39031aec10a602f1a0c109: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
+                            b00c703260ce40e5b633d1ac5cb22b82: ref!! fa07357d-2cdf-4496-9367-230f0f32ad4f
+                    a7dec7769b845b7ba7ae94d727485ec2: !Bozobaralika.AnimadorArma,Bozobaralika.Proyecto
+                        Id: d374c5b4-d428-4a7f-a85e-a9144180fa52
+                        ejeIzquierda: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
+                        ejeDerecha: ref!! fa07357d-2cdf-4496-9367-230f0f32ad4f
+                        modeloIzquierda: ref!! 2f860ba4-41c4-48d5-8d5f-9459560589d7
+                        modeloDerecha: ref!! 2bd12467-d230-49e5-b674-1fc2bd743fec
         -   Entity:
                 Id: 26b98ed7-a446-4bee-ba3c-99f5e4f4b3d1
                 Name: Modelo
@@ -493,6 +527,32 @@ Hierarchy:
                         Model: 4b34d26f-7f32-492d-8a58-e38df8cd8e9e:Modelos/Lancero/Lanza
                         Materials: {}
         -   Entity:
+                Id: 37d7ee19-0ed6-4ff9-bc73-c3d126597e54
+                Name: Izquierda
+                Components:
+                    2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
+                        Id: 8811adc8-e7e3-49a2-8b0b-e42bc011b248
+                        Position: {X: -0.4, Y: -0.4, Z: -0.4}
+                        Rotation: {X: 0.0, Y: 0.0, Z: -9.456897E-10, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            efcb406d919c9bebbb6dbfa9cd90f5e3: ref!! 48aa2a42-0470-4daf-9e1c-3815b6d70ad7
+        -   Entity:
+                Id: 37eee91d-2667-42d0-817c-ae424578a032
+                Name: Espada
+                Components:
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: e90bfeb2-bc8a-4fa4-ab03-912fd74fb9b0
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.258819, Y: -4.453338E-09, Z: 1.6620085E-08, W: 0.9659258}
+                        Scale: {X: 0.009999999, Y: 0.01, Z: 1.5}
+                        Children: {}
+                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
+                        Id: 0bcb9390-3f70-4621-b30d-e1f45692dc9a
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        RenderGroup: Group11
+                        Materials: {}
+        -   Entity:
                 Id: 38aeba2e-6668-4c7d-aa3b-820115537c97
                 Name: Modelo
                 Components:
@@ -505,21 +565,6 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: bd5805ec-3f67-4f48-878b-e3be1559477e
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
-                        Materials: {}
-        -   Entity:
-                Id: 3ae95755-c197-4240-9695-d1e550076239
-                Name: Metralleta
-                Components:
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: 9c8cd132-4d00-4b14-8ba7-704651c1b1ac
-                        Position: {X: 0.0, Y: 0.0, Z: -0.75}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.5, W: 0.8660254}
-                        Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
-                        Children: {}
-                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
-                        Id: 7f8bc918-bb85-4a3e-83a3-06076b368917
-                        Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
-                        RenderGroup: Group11
                         Materials: {}
         -   Entity:
                 Id: 3c326a73-0999-430d-9919-3d8eb58fa920
@@ -668,7 +713,7 @@ Hierarchy:
                 Components:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: f8da5fff-2637-4fbf-a5da-7cc4fd74113d
-                        Position: {X: 0.0, Y: 0.3, Z: -0.8}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.258819, Y: -4.453338E-09, Z: 1.6620085E-08, W: 0.9659258}
                         Scale: {X: 0.009999999, Y: 0.01, Z: 1.5}
                         Children: {}
@@ -712,11 +757,11 @@ Hierarchy:
                         modelo: ref!! 5dd9166c-961d-48ba-b9dd-efe134b7b2f3
         -   Entity:
                 Id: 524b2fce-11fa-4bb8-83ce-f536073d8cf4
-                Name: EjeEspada
+                Name: Izquierda
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 0581adaa-618c-4926-bd0c-773cfa32ddae
-                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
+                        Position: {X: -0.1, Y: -0.2, Z: -0.8}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -749,10 +794,10 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             36d3c59ff298eb8b6306d66d61ab4b87: ref!! a032338b-57be-4ac1-baf5-af21df6b2d12
-                            b1afc6c1b1145896975e0fcac17906ef: ref!! 0581adaa-618c-4926-bd0c-773cfa32ddae
-                            9e1369c97ef88ac60a5436cfb7fa1e6a: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
-                            32470a676780800250b81a249ff33f63: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
-                            334e90ab78c48ae82f0477a8d2a12a34: ref!! 8374c3d3-7007-4071-9f10-14045dd1b355
+                            8452a0c16a9ea414407864b8b8c87048: ref!! ac5d768c-0ef7-4612-835b-0f5bbe9ac446
+                            6a29955c10063a64daa1d56f368541fa: ref!! f7300ce2-e3aa-4ab2-b570-1088bafc74b6
+                            5c814983963e13056fea52f24dc70768: ref!! 4f7735e0-acf0-42df-894e-04ecbf946282
+                            a8c3279d3a24a7d3a0ff3f5b27085e32: ref!! 682594ba-64d0-4992-8616-d0efec91d56b
         -   Folder: Entorno
             Entity:
                 Id: 5806e859-d7ec-42d4-ac78-edfc026317d2
@@ -799,6 +844,18 @@ Hierarchy:
                         Id: 9020ef6e-4a4a-41c1-a1f2-5405bba99d8f
                         Model: 3fb5550c-9e46-454e-a636-e6798f0bac5f:Modelos/Cerebro/Escudo
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 69ab744e-3cef-4fb9-93ad-bdbee1655e07
+                Name: Derecha
+                Components:
+                    2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
+                        Id: fa07357d-2cdf-4496-9367-230f0f32ad4f
+                        Position: {X: 0.25, Y: -0.5, Z: -0.75}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            03cac127b85e429c2515bdcea74b1c68: ref!! 89383549-98e0-42e9-be42-67d0e3e4cc62
         -   Entity:
                 Id: 6d280096-1b5d-4f01-b53f-cb7b0f439997
                 Name: Base
@@ -831,12 +888,30 @@ Hierarchy:
                         Id: 3af956bc-6145-46e1-802a-73792909b792
         -   Folder: null
             Entity:
+                Id: 73128e4a-bded-4d0e-82ad-65606bad50dd
+                Name: Rifles
+                Components:
+                    48c307f85f5b81217c07cf4f5cf355cc: !TransformComponent
+                        Id: 682594ba-64d0-4992-8616-d0efec91d56b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            9ec7f7cd5e42e40010834051d887c79a: ref!! 8811adc8-e7e3-49a2-8b0b-e42bc011b248
+                            c00f4c428de7e6317d9a9b4c6c9f23a1: ref!! 8374c3d3-7007-4071-9f10-14045dd1b355
+                    46d0f4ed5c7dd3d22f56a2e338ce6107: !Bozobaralika.AnimadorArma,Bozobaralika.Proyecto
+                        Id: edd5f6e6-ce3f-4372-b19d-5e81c7718556
+                        ejeIzquierda: ref!! 8811adc8-e7e3-49a2-8b0b-e42bc011b248
+                        ejeDerecha: ref!! 8374c3d3-7007-4071-9f10-14045dd1b355
+                        modeloIzquierda: ref!! 422ce07b-df7b-445b-bb39-e917961c0c17
+                        modeloDerecha: ref!! 5c201108-0f07-4202-a233-3abfcab58dd1
+        -   Entity:
                 Id: 73c71b1c-c65e-4be4-9446-78b82edd8af3
-                Name: EjeEscopeta
+                Name: Izquierda
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 1af2d10c-411f-4942-88a7-224e42c18e97
-                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
+                        Position: {X: -0.25, Y: -0.5, Z: -0.75}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -985,6 +1060,37 @@ Hierarchy:
                     ae77dc873a2c3c32c294301875605415: !Bozobaralika.ControladorSaltador,Bozobaralika.Proyecto
                         Id: a5b8bfc9-8139-4c69-8e63-f74fd31d23b1
                         fuerza: 15.0
+        -   Folder: null
+            Entity:
+                Id: 90d8ccb3-a731-4d28-a085-157ddc85c906
+                Name: Metralleta
+                Components:
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: 900231e9-2e98-4bfb-9db2-e3c959f514ad
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.06915969, Y: -0.13020825, Z: 0.009105046, W: 0.9890298}
+                        Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
+                        Children: {}
+                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
+                        Id: 315393db-bc00-4424-bd02-94d1847930e7
+                        Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
+                        RenderGroup: Group11
+                        Materials: {}
+        -   Entity:
+                Id: 937af5a2-6341-40fb-b960-28871eda5b6b
+                Name: Escopeta
+                Components:
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: 89383549-98e0-42e9-be42-67d0e3e4cc62
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.3, Y: 0.1, Z: 0.99999994}
+                        Children: {}
+                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
+                        Id: 2bd12467-d230-49e5-b674-1fc2bd743fec
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        RenderGroup: Group11
+                        Materials: {}
         -   Entity:
                 Id: 967b9e0a-c186-4cca-9283-512f6f9c4d7f
                 Name: Modelo
@@ -1054,6 +1160,18 @@ Hierarchy:
                     c8f96335b6b008a32015b198e8047e13: !Bozobaralika.ControladorDa%25C3%25B1oContinuo,Bozobaralika.Proyecto
                         Id: b68f9ec6-d05e-4aef-a5af-e806786b380b
                         "daño": 10.0
+        -   Folder: null
+            Entity:
+                Id: 9c8efc9a-0831-4122-a169-2071e5c28611
+                Name: Derecha
+                Components:
+                    2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
+                        Id: ad53e5b2-5afa-4683-ba15-757cf7aead70
+                        Position: {X: 0.1, Y: -0.2, Z: -0.8}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            0eda69cb917f5ccb8823d158d0a0ab1c: ref!! e90bfeb2-bc8a-4fa4-ab03-912fd74fb9b0
         -   Entity:
                 Id: a4e203b8-36fe-425c-ac8c-a03ec4a00ff9
                 Name: "Cámara"
@@ -1156,6 +1274,18 @@ Hierarchy:
                         Id: 5be66562-ee7b-46bd-84a6-95074983b64f
                         llave: roja
                         modelo: ref!! 32524af0-94ba-4b91-af3d-fabb7dd890b3
+        -   Folder: null
+            Entity:
+                Id: b69e7712-0a1f-4ee2-bc19-ae8b4b382737
+                Name: Derecha
+                Components:
+                    2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
+                        Id: 12219ecf-567d-47be-a645-ab96979b0e47
+                        Position: {X: 0.25, Y: -0.2, Z: -0.2}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            54d9233232d55c02a600c6c8a5ad47ff: ref!! cb8b7c02-8937-482e-b5d6-77439268b21f
         -   Entity:
                 Id: b713b7c1-29e4-482e-bbed-5a10046981a7
                 Name: "Dañables"
@@ -1345,18 +1475,17 @@ Hierarchy:
                         Id: 0d7fd1c1-c1eb-4eba-ae14-aa244747a13c
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         Materials: {}
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: cd1986fa-cf35-44f0-aaa5-5532cdf56c75
-                Name: EjeMetralleta
+                Name: Izquierda
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: fc787e65-9a72-4c81-ac8a-e525d2db2214
-                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
+                        Position: {X: -0.25, Y: -0.2, Z: -0.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            54d9233232d55c02a600c6c8a5ad47ff: ref!! 9c8cd132-4d00-4b14-8ba7-704651c1b1ac
+                            18f8ce5a323842e5cd44869c0da3b205: ref!! 900231e9-2e98-4bfb-9db2-e3c959f514ad
         -   Folder: Entorno
             Entity:
                 Id: cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
@@ -1467,13 +1596,28 @@ Hierarchy:
                 Components:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 3f49b083-741f-4e55-8add-88eefa292f0c
-                        Position: {X: 0.0, Y: 0.0, Z: -0.74}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.5, W: 0.8660254}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.052264232, Y: 0.052264232, Z: -0.002739053, W: 0.9972609}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 5c201108-0f07-4202-a233-3abfcab58dd1
                         Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
+                        RenderGroup: Group11
+                        Materials: {}
+        -   Entity:
+                Id: dc3e286a-154c-4c67-94e9-e8df39c2c3cc
+                Name: Metralleta
+                Components:
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: cb8b7c02-8937-482e-b5d6-77439268b21f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.069159694, Y: 0.1302083, Z: -0.00910505, W: 0.98902977}
+                        Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
+                        Children: {}
+                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
+                        Id: 0fde5cbc-8a11-4d95-9b07-daf88b33c8cc
+                        Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
                         RenderGroup: Group11
                         Materials: {}
         -   Entity:
@@ -1544,14 +1688,10 @@ Hierarchy:
                     54c947a658f979a1a3cbf73596735198: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: cf114505-16b9-4712-a010-c2ba1ce114e1
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/MarcaBala
-                        modeloEspada: ref!! c3f3e014-10d4-4345-b491-72cfe4c5a54b
-                        modeloEscopeta: ref!! 2f860ba4-41c4-48d5-8d5f-9459560589d7
-                        modeloMetralleta: ref!! 7f8bc918-bb85-4a3e-83a3-06076b368917
-                        modeloRife: ref!! 5c201108-0f07-4202-a233-3abfcab58dd1
-                        ejeEspada: ref!! 0581adaa-618c-4926-bd0c-773cfa32ddae
-                        ejeEscopeta: ref!! 1af2d10c-411f-4942-88a7-224e42c18e97
-                        ejeMetralleta: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
-                        ejeRife: ref!! 8374c3d3-7007-4071-9f10-14045dd1b355
+                        animadorEspada: ref!! ec6a1e7d-5026-4b82-ac7f-38632ca2f045
+                        animadorEscopeta: ref!! d374c5b4-d428-4a7f-a85e-a9144180fa52
+                        animadorMetralleta: ref!! cc9eecbb-b3c3-4a93-a9ff-f737fe781afd
+                        animadorRife: ref!! edd5f6e6-ce3f-4372-b19d-5e81c7718556
         -   Entity:
                 Id: def80f8f-5bd9-4eee-b751-4768d1c73622
                 Name: Modelo
@@ -1601,6 +1741,24 @@ Hierarchy:
                         Id: 908d5b9c-7310-4607-8503-b3e028995d58
                         Model: 3fb5550c-9e46-454e-a636-e6798f0bac5f:Modelos/Cerebro/Escudo
                         Materials: {}
+        -   Entity:
+                Id: e1b7cca1-3144-4ed6-8f9b-8f6cc2786b6f
+                Name: Espadas
+                Components:
+                    48c307f85f5b81217c07cf4f5cf355cc: !TransformComponent
+                        Id: ac5d768c-0ef7-4612-835b-0f5bbe9ac446
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b6b5b11a3ed11562af7ace66c4924df5: ref!! 0581adaa-618c-4926-bd0c-773cfa32ddae
+                            7edb391256319131033317d606d8a7e8: ref!! ad53e5b2-5afa-4683-ba15-757cf7aead70
+                    940d284617fca29120af0c949063237e: !Bozobaralika.AnimadorArma,Bozobaralika.Proyecto
+                        Id: ec6a1e7d-5026-4b82-ac7f-38632ca2f045
+                        ejeIzquierda: ref!! 0581adaa-618c-4926-bd0c-773cfa32ddae
+                        ejeDerecha: ref!! ad53e5b2-5afa-4683-ba15-757cf7aead70
+                        modeloIzquierda: ref!! c3f3e014-10d4-4345-b491-72cfe4c5a54b
+                        modeloDerecha: ref!! 0bcb9390-3f70-4621-b30d-e1f45692dc9a
         -   Folder: null
             Entity:
                 Id: e4f3ff8e-c37e-4dab-86d3-3a406db63822
@@ -1845,7 +2003,7 @@ Hierarchy:
                 Components:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: fe02ed36-e4ce-4251-9332-6401627e3d29
-                        Position: {X: 0.0, Y: 0.0, Z: -0.75}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.3, Y: 0.1, Z: 0.99999994}
                         Children: {}
@@ -1854,6 +2012,25 @@ Hierarchy:
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         RenderGroup: Group11
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: f775ef9a-484e-4714-b8e4-9d30fcbccff2
+                Name: Metralletas
+                Components:
+                    48c307f85f5b81217c07cf4f5cf355cc: !TransformComponent
+                        Id: 4f7735e0-acf0-42df-894e-04ecbf946282
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3b8a72ae8caca4514be1a83393bab3c6: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
+                            f01a3efb6c538b24d3adcff3dc6e01dc: ref!! 12219ecf-567d-47be-a645-ab96979b0e47
+                    11cd0c9672ff2976f61605609f2d8b4e: !Bozobaralika.AnimadorArma,Bozobaralika.Proyecto
+                        Id: cc9eecbb-b3c3-4a93-a9ff-f737fe781afd
+                        ejeIzquierda: ref!! fc787e65-9a72-4c81-ac8a-e525d2db2214
+                        ejeDerecha: ref!! 12219ecf-567d-47be-a645-ab96979b0e47
+                        modeloIzquierda: ref!! 315393db-bc00-4424-bd02-94d1847930e7
+                        modeloDerecha: ref!! 0fde5cbc-8a11-4d95-9b07-daf88b33c8cc
         -   Entity:
                 Id: fd490f2c-d9fe-4e08-a54a-fe16132750b5
                 Name: Cerebro

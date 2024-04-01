@@ -14,15 +14,10 @@ public class ControladorArmas : SyncScript
 {
     public Prefab prefabMarca;
 
-    public ModelComponent modeloEspada;
-    public ModelComponent modeloEscopeta;
-    public ModelComponent modeloMetralleta;
-    public ModelComponent modeloRife;
-
-    public TransformComponent ejeEspada;
-    public TransformComponent ejeEscopeta;
-    public TransformComponent ejeMetralleta;
-    public TransformComponent ejeRife;
+    public AnimadorArma animadorEspada;
+    public AnimadorArma animadorEscopeta;
+    public AnimadorArma animadorMetralleta;
+    public AnimadorArma animadorRife;
 
     private ControladorJugador controlador;
     private ControladorMovimiento movimiento;
@@ -44,7 +39,6 @@ public class ControladorArmas : SyncScript
 
     private bool cambiandoArma;
     private bool usandoMira;
-    private Vector3 posiciónEjes;
 
     // Metralleta
     private bool metralletaAtascada;
@@ -56,7 +50,7 @@ public class ControladorArmas : SyncScript
     private int marcaActual;
     private int maxMarcas;
 
-    public void Iniciar(ControladorJugador _controlador, ControladorMovimiento _movimiento, CameraComponent _cámara, InterfazJuego _interfaz)
+    public async void Iniciar(ControladorJugador _controlador, ControladorMovimiento _movimiento, CameraComponent _cámara, InterfazJuego _interfaz)
     {
         controlador = _controlador;
         movimiento = _movimiento;
@@ -65,8 +59,6 @@ public class ControladorArmas : SyncScript
 
         dañoMínimo = 1f;
         dañoMáximo = 200f;
-
-        posiciónEjes = new Vector3(0, -0.5f, 0);
 
         tiempoMaxMetralleta = 4f;
         tiempoAtascamientoMetralleta = 2f;
@@ -91,15 +83,24 @@ public class ControladorArmas : SyncScript
             Entity.Scene.Entities.Add(marca);
         }
 
+        animadorEspada.Iniciar();
+        animadorEscopeta.Iniciar();
+        animadorMetralleta.Iniciar();
+        animadorRife.Iniciar();
+
         // Arma por defecto
         ApagarArmas();
         armaActual = Armas.espada;
         armaAnterior = armaActual;
-        movimiento.CambiarVelocidadMáxima(true);
+
         interfaz.CambiarMira(armaActual);
         interfaz.CambiarÍcono(armaActual);
 
-        modeloEspada.Entity.Get<ModelComponent>().Enabled = true;
+        cambiandoArma = true;
+        await Task.Delay(100);
+        await animadorEspada.AnimarEntradaArma();
+        cambiandoArma = false;
+        movimiento.CambiarVelocidadMáxima(true);
     }
 
     public override void Update()
@@ -189,7 +190,7 @@ public class ControladorArmas : SyncScript
         {
             case Armas.espada:
                 Atacar();
-                AnimarAtaque();
+                animadorEspada.AnimarAtaque();
                 últimoDisparoEspada = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
             case Armas.escopeta:
@@ -199,20 +200,20 @@ public class ControladorArmas : SyncScript
                     CalcularRayo(0.25f);
                 }
                 controlador.VibrarCámara(16, 10);
-                AnimarDisparo(ejeEscopeta, 0.5f, 0.2f);
+                animadorEscopeta.AnimarDisparo(0.5f, 0.2f);
                 últimoDisparoEscopeta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
             case Armas.metralleta:
                 // Metralleta se vuelve impresisa según calentamiento
                 CalcularRayo(((tiempoMaxMetralleta - tempoMetralleta) / tiempoMaxMetralleta) * 0.1f);
-                AnimarDisparo(ejeMetralleta, 0.15f, 0.05f);
+                animadorMetralleta.AnimarDisparo(0.1f, 0.05f);
                 últimoDisparoMetralleta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
             case Armas.rifle:
                 movimiento.DetenerMovimiento();
                 CalcularRayoPenetrante();
                 controlador.VibrarCámara(20, 12);
-                AnimarDisparo(ejeRife, 2f, 0.5f);
+                animadorRife.AnimarDisparo(2f, 0.5f);
                 últimoDisparoRifle = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
         }
@@ -395,6 +396,67 @@ public class ControladorArmas : SyncScript
         interfaz.MostrarMiraRifle(acercar);
     }
 
+    private async void CambiarArma(Armas nuevaArma)
+    {
+        if (cambiandoArma || nuevaArma == armaActual || usandoMira)
+            return;
+
+        switch (armaActual)
+        {
+            case Armas.espada:
+                animadorEspada.AnimarSalidaArma();
+                break;
+            case Armas.escopeta:
+                animadorEscopeta.AnimarSalidaArma();
+                break;
+            case Armas.metralleta:
+                animadorMetralleta.AnimarSalidaArma();
+                break;
+            case Armas.rifle:
+                animadorRife.AnimarSalidaArma();
+                break;
+        }
+
+        cambiandoArma = true;
+        armaAnterior = armaActual;
+        armaActual = nuevaArma;
+        movimiento.DetenerMovimiento();
+
+        interfaz.ApagarMiras();
+        interfaz.CambiarÍcono(armaActual);
+
+        switch (armaActual)
+        {
+            case Armas.espada:
+                movimiento.CambiarVelocidadMáxima(true);
+                await animadorEspada.AnimarEntradaArma();
+                break;
+            case Armas.escopeta:
+                movimiento.CambiarVelocidadMáxima(false);
+                await animadorEscopeta.AnimarEntradaArma();
+                break;
+            case Armas.metralleta:
+                movimiento.CambiarVelocidadMáxima(false);
+                await animadorMetralleta.AnimarEntradaArma();
+                break;
+            case Armas.rifle:
+                movimiento.CambiarVelocidadMáxima(false);
+                await animadorRife.AnimarEntradaArma();
+                break;
+        }
+
+        cambiandoArma = false;
+        interfaz.CambiarMira(armaActual);
+    }
+
+    private void ApagarArmas()
+    {
+        animadorEspada.ApagarArma();
+        animadorEscopeta.ApagarArma();
+        animadorMetralleta.ApagarArma();
+        animadorRife.ApagarArma();
+    }
+
     private float ObtenerDaño(Armas arma)
     {
         switch (arma)
@@ -445,146 +507,8 @@ public class ControladorArmas : SyncScript
         }
     }
 
-    private void CambiarArma(Armas nuevaArma)
-    {
-        if (cambiandoArma || nuevaArma == armaActual || usandoMira)
-            return;
-
-        var armaSale = ejeEspada;
-        var modeloSale = modeloEspada;
-        switch (armaActual)
-        {
-            case Armas.espada:
-                armaSale = ejeEspada;
-                modeloSale = modeloEspada;
-                break;
-            case Armas.escopeta:
-                armaSale = ejeEscopeta;
-                modeloSale = modeloEscopeta;
-                break;
-            case Armas.metralleta:
-                armaSale = ejeMetralleta;
-                modeloSale = modeloMetralleta;
-                break;
-            case Armas.rifle:
-                armaSale = ejeRife;
-                modeloSale = modeloRife;
-                break;
-        }
-
-        armaAnterior = armaActual;
-        armaActual = nuevaArma;
-        movimiento.DetenerMovimiento();
-        interfaz.CambiarÍcono(armaActual);
-
-        switch (armaActual)
-        {
-            case Armas.espada:
-                movimiento.CambiarVelocidadMáxima(true);
-                modeloEspada.Entity.Get<ModelComponent>().Enabled = true;
-                AnimarCambioArma(ejeEspada, armaSale, modeloSale);
-                break;
-            case Armas.escopeta:
-                movimiento.CambiarVelocidadMáxima(false);
-                modeloEscopeta.Entity.Get<ModelComponent>().Enabled = true;
-                AnimarCambioArma(ejeEscopeta, armaSale, modeloSale);
-                break;
-            case Armas.metralleta:
-                movimiento.CambiarVelocidadMáxima(false);
-                modeloMetralleta.Entity.Get<ModelComponent>().Enabled = true;
-                AnimarCambioArma(ejeMetralleta, armaSale, modeloSale);
-                break;
-            case Armas.rifle:
-                movimiento.CambiarVelocidadMáxima(false);
-                modeloRife.Entity.Get<ModelComponent>().Enabled = true;
-                AnimarCambioArma(ejeRife, armaSale, modeloSale);
-                break;
-        }
-    }
-
-    private void ApagarArmas()
-    {
-        modeloEspada.Entity.Get<ModelComponent>().Enabled = false;
-        modeloEscopeta.Entity.Get<ModelComponent>().Enabled = false;
-        modeloMetralleta.Entity.Get<ModelComponent>().Enabled = false;
-        modeloRife.Entity.Get<ModelComponent>().Enabled = false;
-    }
-
     public void Bloquear(bool bloquear)
     {
         bloqueo = bloquear;
-    }
-
-    private async void AnimarCambioArma(TransformComponent entra, TransformComponent sale, ModelComponent modeloSale)
-    {
-        cambiandoArma = true;
-        interfaz.ApagarMiras();
-
-        var rotaciónCentro = Quaternion.Identity;
-        var rotaciónEntra = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-90), 0, 0);
-        var rotaciónSale = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(90), 0, 0);
-
-        float duración = 0.1f;
-        float tiempoLerp = 0;
-        float tiempo = 0;
-
-        while (tiempoLerp < duración)
-        {
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-
-            entra.Rotation = Quaternion.Lerp(rotaciónEntra, rotaciónCentro, tiempo);
-            sale.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
-
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Task.Delay(1);
-        }
-        
-        cambiandoArma = false;
-        interfaz.CambiarMira(armaActual);
-
-        modeloSale.Entity.Get<ModelComponent>().Enabled = false;
-    }
-
-    private async void AnimarDisparo(TransformComponent arma, float retroceso, float duración)
-    {
-        float tiempoLerp = 0;
-        float tiempo = 0;
-
-        // Posición rápida
-        var posiciónDisparo = posiciónEjes + new Vector3(0, 0, retroceso);
-        arma.Position = posiciónDisparo;
-
-        while (tiempoLerp < duración)
-        {
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-            arma.Position = Vector3.Lerp(posiciónDisparo, posiciónEjes, tiempo);
-
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Task.Delay(1);
-        }
-
-        arma.Position = posiciónEjes;
-    }
-
-    private async void AnimarAtaque()
-    {
-        float duración = 0.1f;
-        float tiempoLerp = 0;
-        float tiempo = 0;
-
-        // Rotación rápida
-        var rotaciónAtaque = Quaternion.RotationYawPitchRoll(0, MathUtil.DegreesToRadians(-40), 0);
-        ejeEspada.Rotation = rotaciónAtaque;
-
-        while (tiempoLerp < duración)
-        {
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-            ejeEspada.Rotation = Quaternion.Lerp(rotaciónAtaque, Quaternion.Identity, tiempo);
-
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Task.Delay(1);
-        }
-
-        ejeEspada.Rotation = Quaternion.Identity;
     }
 }
