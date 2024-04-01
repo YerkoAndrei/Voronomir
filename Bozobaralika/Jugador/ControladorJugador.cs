@@ -61,7 +61,7 @@ public class ControladorJugador : SyncScript, IDañable
             Curar();
 
         // Debug
-        DebugText.Print(vida + "/" + vidaMax, new Int2(x: 20, y: 140));
+        DebugText.Print(vida + "/" + vidaMax, new Int2(x: 20, y: 120));
         if (Input.IsKeyPressed(Keys.K))
             RecibirDaño(10);
     }

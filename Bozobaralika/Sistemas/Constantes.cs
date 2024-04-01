@@ -41,6 +41,13 @@ public static class Constantes
         roja
     }
 
+    public enum TipoDisparo
+    {
+        espejo,
+        izquierda,
+        derecha
+    }
+
     public enum Enemigos
     {
         meléLigero,     // Esqueleto

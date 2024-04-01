@@ -41,7 +41,9 @@ public class ControladorArmas : SyncScript
     private bool usandoMira;
 
     // Metralleta
+    private TipoDisparo turnoMetralleta;
     private bool metralletaAtascada;
+    private float primerDisparoMetralleta;
     private float tempoMetralleta;
     private float tiempoMaxMetralleta;
     private float tiempoAtascamientoMetralleta;
@@ -68,9 +70,9 @@ public class ControladorArmas : SyncScript
         colisionesDisparo = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.KinematicFilter | CollisionFilterGroupFlags.SensorTrigger;
         rayosMelé = new Vector3[3]
         {
-            new Vector3 (0.4f, 0, 0),
+            new Vector3 (-0.4f, 0, 0),
             new Vector3 (0, 0, 0),
-            new Vector3 (-0.4f, 0, 0)
+            new Vector3 (0.4f, 0, 0)
         };
 
         // Cofre marcas
@@ -97,7 +99,6 @@ public class ControladorArmas : SyncScript
         interfaz.CambiarÍcono(armaActual);
 
         cambiandoArma = true;
-        await Task.Delay(100);
         await animadorEspada.AnimarEntradaArma();
         cambiandoArma = false;
         movimiento.CambiarVelocidadMáxima(true);
@@ -113,7 +114,8 @@ public class ControladorArmas : SyncScript
         {
             Disparar();
 
-            if(tempoMetralleta >= tiempoMaxMetralleta)
+            primerDisparoMetralleta = (float)Game.UpdateTime.Total.TotalSeconds;
+            if (tempoMetralleta >= tiempoMaxMetralleta)
                 metralletaAtascada = false;
         }
 
@@ -121,14 +123,23 @@ public class ControladorArmas : SyncScript
         if (Input.IsMouseButtonDown(MouseButton.Left) && armaActual == Armas.metralleta && !metralletaAtascada)
         {
             tempoMetralleta -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            if (tempoMetralleta > 0)
-                Disparar();
-            else
-                AtascarMetralleta();
+
+            // Permite disparo singular
+            if ((primerDisparoMetralleta + 0.12f) < (float)Game.UpdateTime.Total.TotalSeconds)
+            {
+                if (tempoMetralleta > 0)
+                    Disparar();
+                else
+                    AtascarMetralleta();
+            }
         }
 
         if (!Input.IsMouseButtonDown(MouseButton.Left))
             EnfriarMetralleta();
+
+        // Espadas
+        if (Input.IsMouseButtonPressed(MouseButton.Right) && armaActual == Armas.espada)
+            Disparar(false);
 
         // Rifle
         if (Input.IsMouseButtonPressed(MouseButton.Right) && armaActual == Armas.rifle)
@@ -151,13 +162,12 @@ public class ControladorArmas : SyncScript
             CambiarArma(armaAnterior);
 
         // Debug
-        DebugText.Print(armaActual.ToString(), new Int2(x: 20, y: 60));
-        DebugText.Print(metralletaAtascada.ToString(), new Int2(x: 20, y: 80));
-        DebugText.Print(tempoMetralleta.ToString(), new Int2(x: 20, y: 100));
-        DebugText.Print(Game.UpdateTime.Total.TotalSeconds.ToString(), new Int2(x: 20, y: 120));
+        DebugText.Print(metralletaAtascada.ToString(), new Int2(x: 20, y: 60));
+        DebugText.Print(tempoMetralleta.ToString(), new Int2(x: 20, y: 80));
+        DebugText.Print(Game.UpdateTime.Total.TotalSeconds.ToString(), new Int2(x: 20, y: 100));
     }
 
-    private void Disparar()
+    private void Disparar(bool clicIzquierdo = true)
     {
         if (cambiandoArma)
             return;
@@ -183,13 +193,20 @@ public class ControladorArmas : SyncScript
                 tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoRifle;
                 break;
         }
+
         if ((float)Game.UpdateTime.Total.TotalSeconds < tiempoDisparo)
             return;
+
+        // Metralleta por turnos
+        if (turnoMetralleta != TipoDisparo.izquierda)
+            turnoMetralleta = TipoDisparo.izquierda;
+        else
+            turnoMetralleta = TipoDisparo.derecha;
 
         switch (armaActual)
         {
             case Armas.espada:
-                Atacar();
+                Atacar(clicIzquierdo);
                 animadorEspada.AnimarAtaque();
                 últimoDisparoEspada = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
@@ -200,20 +217,20 @@ public class ControladorArmas : SyncScript
                     CalcularRayo(0.25f);
                 }
                 controlador.VibrarCámara(16, 10);
-                animadorEscopeta.AnimarDisparo(0.5f, 0.2f);
+                animadorEscopeta.AnimarDisparo(0.5f, 0.2f, TipoDisparo.espejo);
                 últimoDisparoEscopeta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
             case Armas.metralleta:
                 // Metralleta se vuelve impresisa según calentamiento
                 CalcularRayo(((tiempoMaxMetralleta - tempoMetralleta) / tiempoMaxMetralleta) * 0.1f);
-                animadorMetralleta.AnimarDisparo(0.1f, 0.05f);
+                animadorMetralleta.AnimarDisparo(0.1f, 0.09f, turnoMetralleta);
                 últimoDisparoMetralleta = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
             case Armas.rifle:
                 movimiento.DetenerMovimiento();
                 CalcularRayoPenetrante();
                 controlador.VibrarCámara(20, 12);
-                animadorRife.AnimarDisparo(2f, 0.5f);
+                animadorRife.AnimarDisparo(2f, 0.5f, TipoDisparo.espejo);
                 últimoDisparoRifle = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
         }
@@ -311,18 +328,22 @@ public class ControladorArmas : SyncScript
         }
     }
 
-    private void Atacar()
+    private void Atacar(bool desdeIzquierda)
     {
         // Cadencia
         var tiempoDisparo = ObtenerCadencia(Armas.espada) + últimoDisparoEspada;
         if ((float)Game.UpdateTime.Total.TotalSeconds < tiempoDisparo)
             return;
 
+        var direccionRayos = rayosMelé;
+        if (!desdeIzquierda)
+            direccionRayos = direccionRayos.Reverse().ToArray();
+
         // 3 rayos
         // Distancia máxima de disparo: 2
         var posición = Vector3.Zero;
         var normal = Vector3.Zero;
-        foreach (var posiciónRayo in rayosMelé)
+        foreach (var posiciónRayo in direccionRayos)
         {
             var dirección = (cámara.Entity.Transform.WorldMatrix.TranslationVector + posiciónRayo) + (cámara.Entity.Transform.WorldMatrix.Forward + (posiciónRayo * 0.5f)) * 2;
             var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,

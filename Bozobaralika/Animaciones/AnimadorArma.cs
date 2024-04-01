@@ -3,6 +3,7 @@ using Stride.Core.Mathematics;
 using Stride.Engine;
 
 namespace Bozobaralika;
+using static Constantes;
 
 public class AnimadorArma : StartupScript
 {
@@ -84,29 +85,79 @@ public class AnimadorArma : StartupScript
     }
 
     // Rango
-    public async void AnimarDisparo(float retroceso, float duración)
+    public async void AnimarDisparo(float retroceso, float duración, TipoDisparo tipoDisparo)
     {
-        float tiempoLerp = 0;
-        float tiempo = 0;
+        float tiempoLerpIzquierda = 0;
+        float tiempoLerpDerecha = 0;
+        float tiempoIzquierda = 0;
+        float tiempoDerecha = 0;
 
         // Posición rápida
         var posiciónDisparoIzquierda = posiciónInicialIzquierda + new Vector3(0, 0, retroceso);
         var posiciónDisparoDerecha = posiciónInicialDerecha + new Vector3(0, 0, retroceso);
-        ejeIzquierda.Position = posiciónDisparoIzquierda;
-        ejeDerecha.Position = posiciónDisparoDerecha;
 
-        while (tiempoLerp < duración)
+        switch(tipoDisparo)
         {
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-            ejeIzquierda.Position = Vector3.Lerp(posiciónDisparoIzquierda, posiciónInicialIzquierda, tiempo);
-            ejeDerecha.Position = Vector3.Lerp(posiciónDisparoDerecha, posiciónInicialDerecha, tiempo);
-
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Task.Delay(1);
+            case TipoDisparo.espejo:
+                ejeIzquierda.Position = posiciónDisparoIzquierda;
+                ejeDerecha.Position = posiciónDisparoDerecha;
+                break;
+            case TipoDisparo.izquierda:
+                ejeIzquierda.Position = posiciónDisparoIzquierda;
+                break;
+            case TipoDisparo.derecha:
+                ejeDerecha.Position = posiciónDisparoDerecha;
+                break;
         }
 
-        ejeIzquierda.Position = posiciónInicialIzquierda;
-        ejeDerecha.Position = posiciónInicialDerecha;
+        // Evita repeticón de animación
+        switch (tipoDisparo)
+        {
+            case TipoDisparo.espejo:
+            case TipoDisparo.izquierda:
+                while (tiempoLerpIzquierda < duración)
+                {
+                    tiempoIzquierda = SistemaAnimación.EvaluarSuave(tiempoLerpIzquierda / duración);
+
+                    switch (tipoDisparo)
+                    {
+                        case TipoDisparo.espejo:
+                            ejeIzquierda.Position = Vector3.Lerp(posiciónDisparoIzquierda, posiciónInicialIzquierda, tiempoIzquierda);
+                            ejeDerecha.Position = Vector3.Lerp(posiciónDisparoDerecha, posiciónInicialDerecha, tiempoIzquierda);
+                            break;
+                        case TipoDisparo.izquierda:
+                            ejeIzquierda.Position = Vector3.Lerp(posiciónDisparoIzquierda, posiciónInicialIzquierda, tiempoIzquierda);
+                            break;
+                    }
+                    tiempoLerpIzquierda += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                    await Task.Delay(1);
+                }
+                break;
+            case TipoDisparo.derecha:
+                while (tiempoLerpDerecha < duración)
+                {
+                    tiempoDerecha = SistemaAnimación.EvaluarSuave(tiempoLerpDerecha / duración);
+
+                    ejeDerecha.Position = Vector3.Lerp(posiciónDisparoDerecha, posiciónInicialDerecha, tiempoDerecha);
+                    tiempoLerpDerecha += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                    await Task.Delay(1);
+                }
+                break;
+        }
+        
+        switch (tipoDisparo)
+        {
+            case TipoDisparo.espejo:
+                ejeIzquierda.Position = posiciónInicialIzquierda;
+                ejeDerecha.Position = posiciónInicialDerecha;
+                break;
+            case TipoDisparo.izquierda:
+                ejeIzquierda.Position = posiciónInicialIzquierda;
+                break;
+            case TipoDisparo.derecha:
+                ejeDerecha.Position = posiciónInicialDerecha;
+                break;
+        }
     }
 
     // Melé
