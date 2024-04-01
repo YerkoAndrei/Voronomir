@@ -70,9 +70,9 @@ public class ControladorArmas : SyncScript
         colisionesDisparo = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.KinematicFilter | CollisionFilterGroupFlags.SensorTrigger;
         rayosMelé = new Vector3[3]
         {
-            new Vector3 (-0.4f, 0, 0),
+            new Vector3 (0.3f, 0, 0),
             new Vector3 (0, 0, 0),
-            new Vector3 (0.4f, 0, 0)
+            new Vector3 (-0.3f, 0, 0)
         };
 
         // Cofre marcas
@@ -345,8 +345,9 @@ public class ControladorArmas : SyncScript
         var normal = Vector3.Zero;
         foreach (var posiciónRayo in direccionRayos)
         {
-            var dirección = (cámara.Entity.Transform.WorldMatrix.TranslationVector + posiciónRayo) + (cámara.Entity.Transform.WorldMatrix.Forward + (posiciónRayo * 0.5f)) * 2;
-            var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
+            var posiciónRayoGlobal = cámara.Entity.Transform.LocalToWorld(posiciónRayo);
+            var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector + cámara.Entity.Transform.WorldMatrix.Forward * 2;
+            var resultado = this.GetSimulation().Raycast(posiciónRayoGlobal,
                                                          dirección,
                                                          CollisionFilterGroups.DefaultFilter,
                                                          colisionesDisparo);
