@@ -50,6 +50,9 @@ public class AnimadorArma : StartupScript
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
         }
+
+        ejeIzquierda.Rotation = rotaciónCentro;
+        ejeDerecha.Rotation = rotaciónCentro;
     }
 
     public async void AnimarSalidaArma()
