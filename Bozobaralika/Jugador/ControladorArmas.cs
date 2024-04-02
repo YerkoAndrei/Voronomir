@@ -481,29 +481,25 @@ public class ControladorArmas : SyncScript
 
     private void AnimarMovimientoArma()
     {
-        duraciónMovimientoCorrer = ((1 - movimiento.ObtenerAceleración()) + 1) + 0.5f;
-
-        DebugText.Print(Game.UpdateTime.Total.TotalSeconds.ToString(), new Int2(x: 20, y: 200));
-        DebugText.Print((últimaAnimaciónCorrer + duraciónMovimientoCorrer).ToString(), new Int2(x: 20, y: 220));
-        DebugText.Print(duraciónMovimientoCorrer.ToString(), new Int2(x: 20, y: 240));
-
-        if ((float)Game.UpdateTime.Total.TotalSeconds < (últimaAnimaciónCorrer + duraciónMovimientoCorrer) || movimiento.ObtenerAceleración() <= 1)
+        duraciónMovimientoCorrer = ((1 - movimiento.ObtenerAceleración()) + 1) * 0.8f;
+        if ((float)Game.UpdateTime.Total.TotalSeconds < (últimaAnimaciónCorrer + duraciónMovimientoCorrer)
+            || movimiento.ObtenerAceleración() <= 1 || !movimiento.ObtenerEnSuelo())
             return;
 
         últimaAnimaciónCorrer = (float)Game.UpdateTime.Total.TotalSeconds;
         switch (armaActual)
         {
             case Armas.espada:
-                animadorEspada.AnimarCorrerArma(duraciónMovimientoCorrer * 0.5f);
+                animadorEspada.AnimarCorrerArma(duraciónMovimientoCorrer * 0.2f);
                 break;
             case Armas.escopeta:
-                animadorEscopeta.AnimarCorrerArma(duraciónMovimientoCorrer * 0.5f);
+                animadorEscopeta.AnimarCorrerArma(duraciónMovimientoCorrer * 0.2f);
                 break;
             case Armas.metralleta:
-                animadorMetralleta.AnimarCorrerArma(duraciónMovimientoCorrer * 0.5f);
+                animadorMetralleta.AnimarCorrerArma(duraciónMovimientoCorrer * 0.2f);
                 break;
             case Armas.rifle:
-                animadorRife.AnimarCorrerArma(duraciónMovimientoCorrer * 0.5f);
+                animadorRife.AnimarCorrerArma(duraciónMovimientoCorrer * 0.2f);
                 break;
         }
     }
