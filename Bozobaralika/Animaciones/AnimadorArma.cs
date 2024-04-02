@@ -30,7 +30,6 @@ public class AnimadorArma : StartupScript
 
     public async Task AnimarEntradaArma()
     {
-        var rotaciónCentro = Quaternion.Identity;
         var rotaciónEntraIzquierda = Quaternion.RotationY(MathUtil.DegreesToRadians(90));
         var rotaciónEntraDerecha = Quaternion.RotationY(MathUtil.DegreesToRadians(-90));
 
@@ -44,23 +43,21 @@ public class AnimadorArma : StartupScript
         while (tiempoLerp < duración)
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-            ejeIzquierda.Rotation = Quaternion.Lerp(rotaciónEntraIzquierda, rotaciónCentro, tiempo);
-            ejeDerecha.Rotation = Quaternion.Lerp(rotaciónEntraDerecha, rotaciónCentro, tiempo);
+            ejeIzquierda.Rotation = Quaternion.Lerp(rotaciónEntraIzquierda, Quaternion.Identity, tiempo);
+            ejeDerecha.Rotation = Quaternion.Lerp(rotaciónEntraDerecha, Quaternion.Identity, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
         }
 
-        ejeIzquierda.Rotation = rotaciónCentro;
-        ejeDerecha.Rotation = rotaciónCentro;
+        ejeIzquierda.Rotation = Quaternion.Identity;
+        ejeDerecha.Rotation = Quaternion.Identity;
     }
 
     public async void AnimarSalidaArma()
     {
         var rotaciónCentro = Quaternion.Identity;
         var rotaciónSale = Quaternion.RotationX(MathUtil.DegreesToRadians(-90));
-        var inicioIzquierda = posiciónInicialIzquierda;
-        var inicioDerecha = posiciónInicialDerecha;
         var pocisiónSalida = Vector3.UnitY * 0.5f;
 
         float duración = 0.1f;
@@ -70,8 +67,8 @@ public class AnimadorArma : StartupScript
         while (tiempoLerp < duración)
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-            ejeIzquierda.Position = Vector3.Lerp(inicioIzquierda, (inicioIzquierda - pocisiónSalida), tiempo);
-            ejeDerecha.Position = Vector3.Lerp(inicioDerecha, (inicioDerecha - pocisiónSalida), tiempo);
+            ejeIzquierda.Position = Vector3.Lerp(posiciónInicialIzquierda, (posiciónInicialIzquierda - pocisiónSalida), tiempo);
+            ejeDerecha.Position = Vector3.Lerp(posiciónInicialDerecha, (posiciónInicialDerecha - pocisiónSalida), tiempo);
 
             ejeIzquierda.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
             ejeDerecha.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
