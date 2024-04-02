@@ -190,6 +190,11 @@ public class ControladorMovimiento : SyncScript
         return cuerpo.IsGrounded;
     }
 
+    public float ObtenerAceleración()
+    {
+        return aceleración;
+    }
+
     public void DetenerMovimiento()
     {
         detención = true;

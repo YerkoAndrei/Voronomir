@@ -84,6 +84,41 @@ public class AnimadorArma : StartupScript
         ejeDerecha.Position = posiciónInicialDerecha;
     }
 
+    public async void AnimarCorrerArma(float duración)
+    {
+        var abajoIzquierda = posiciónInicialIzquierda - (Vector3.UnitY * 0.5f);
+        var abajoDerecha = posiciónInicialDerecha - (Vector3.UnitY * 0.5f);
+
+        float tiempoLerp = 0;
+        float tiempo = 0;
+        while (tiempoLerp < duración)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+
+            ejeIzquierda.Position = Vector3.Lerp(posiciónInicialIzquierda, abajoIzquierda, tiempo);
+            ejeDerecha.Position = Vector3.Lerp(posiciónInicialDerecha, abajoDerecha, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+
+        tiempoLerp = 0;
+        tiempo = 0;
+        while (tiempoLerp < duración)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+
+            ejeIzquierda.Position = Vector3.Lerp(abajoIzquierda, posiciónInicialIzquierda, tiempo);
+            ejeDerecha.Position = Vector3.Lerp(abajoDerecha, posiciónInicialDerecha, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+
+        ejeIzquierda.Position = posiciónInicialIzquierda;
+        ejeDerecha.Position = posiciónInicialDerecha;
+    }
+
     // Rango
     public async void AnimarDisparo(float retroceso, float duración, TipoDisparo tipoDisparo)
     {
