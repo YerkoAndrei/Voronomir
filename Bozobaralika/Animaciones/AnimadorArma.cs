@@ -91,8 +91,8 @@ public class AnimadorArma : StartupScript
 
     public async void AnimarCorrerArma(float duración)
     {
-        var rotaciónIzquierda = rotaciónInicialIzquierda * Quaternion.RotationX(MathUtil.DegreesToRadians(-0.5f)) * Quaternion.RotationZ(MathUtil.DegreesToRadians(-4));
-        var rotaciónDerecha = rotaciónInicialDerecha * Quaternion.RotationX(MathUtil.DegreesToRadians(-0.5f)) * Quaternion.RotationZ(MathUtil.DegreesToRadians(4));
+        var rotaciónIzquierda = rotaciónInicialIzquierda * Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(1f), MathUtil.DegreesToRadians(-2f), MathUtil.DegreesToRadians(2));
+        var rotaciónDerecha = rotaciónInicialDerecha * Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-1f), MathUtil.DegreesToRadians(-2f), MathUtil.DegreesToRadians(-2));
 
         float tiempoLerp = 0;
         float tiempo = 0;
