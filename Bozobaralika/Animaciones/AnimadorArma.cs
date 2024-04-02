@@ -164,7 +164,7 @@ public class AnimadorArma : StartupScript
     }
 
     // Melé
-    public async void AnimarAtaque()
+    public async void AnimarAtaque(TipoDisparo tipoDisparo)
     {
         float duración = 0.1f;
         float tiempoLerp = 0;
@@ -173,20 +173,42 @@ public class AnimadorArma : StartupScript
         // Rotación rápida
         var rotaciónAtaqueIzquierda = Quaternion.RotationX(MathUtil.DegreesToRadians(-40));
         var rotaciónAtaqueDerecha = Quaternion.RotationX(MathUtil.DegreesToRadians(-40));
-        ejeIzquierda.Rotation = rotaciónAtaqueIzquierda;
-        ejeDerecha.Rotation = rotaciónAtaqueDerecha;
+
+        switch (tipoDisparo)
+        {
+            case TipoDisparo.izquierda:
+                ejeIzquierda.Rotation = rotaciónAtaqueIzquierda;
+                break;
+            case TipoDisparo.derecha:
+                ejeDerecha.Rotation = rotaciónAtaqueDerecha;
+                break;
+        }
 
         while (tiempoLerp < duración)
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-            ejeIzquierda.Rotation = Quaternion.Lerp(rotaciónAtaqueIzquierda, Quaternion.Identity, tiempo);
-            ejeDerecha.Rotation = Quaternion.Lerp(rotaciónAtaqueDerecha, Quaternion.Identity, tiempo);
+            switch (tipoDisparo)
+            {
+                case TipoDisparo.izquierda:
+                    ejeIzquierda.Rotation = Quaternion.Lerp(rotaciónAtaqueIzquierda, Quaternion.Identity, tiempo);
+                    break;
+                case TipoDisparo.derecha:
+                    ejeDerecha.Rotation = Quaternion.Lerp(rotaciónAtaqueDerecha, Quaternion.Identity, tiempo);
+                    break;
+            }
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
         }
 
-        ejeIzquierda.Rotation = Quaternion.Identity;
-        ejeDerecha.Rotation = Quaternion.Identity;
+        switch (tipoDisparo)
+        {
+            case TipoDisparo.izquierda:
+                ejeIzquierda.Rotation = Quaternion.Identity;
+                break;
+            case TipoDisparo.derecha:
+                ejeDerecha.Rotation = Quaternion.Identity;
+                break;
+        }
     }
 }

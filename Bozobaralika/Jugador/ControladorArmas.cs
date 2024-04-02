@@ -207,7 +207,10 @@ public class ControladorArmas : SyncScript
         {
             case Armas.espada:
                 Atacar(clicIzquierdo);
-                animadorEspada.AnimarAtaque();
+                if(clicIzquierdo)
+                    animadorEspada.AnimarAtaque(TipoDisparo.izquierda);
+                else
+                    animadorEspada.AnimarAtaque(TipoDisparo.derecha);
                 últimoDisparoEspada = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
             case Armas.escopeta:
