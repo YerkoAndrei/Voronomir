@@ -15,7 +15,6 @@ public class ControladorMarca : StartupScript
     public ParticleSystemComponent partículasRifle;
     public Texture marcaEspada;
     public Texture marcaBala;
-    public Texture marcaRifle;
 
     public override void Start()
     {
@@ -36,7 +35,8 @@ public class ControladorMarca : StartupScript
         {
             case Armas.espada:
                 textura.SpriteProvider = ObtenerSprite(marcaEspada);
-                textura.Entity.Transform.Scale = Vector3.One * 0.2f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.02f;
+                textura.Color = new Color(90, 90, 90);
                 partículasEspada.Enabled = true;
                 partículasEspada.ParticleSystem.ResetSimulation();
                 break;
@@ -44,12 +44,14 @@ public class ControladorMarca : StartupScript
             case Armas.metralleta:
                 textura.SpriteProvider = ObtenerSprite(marcaBala);
                 textura.Entity.Transform.Scale = Vector3.One * 0.01f;
+                textura.Color = new Color(100, 100, 100);
                 partículasBalas.Enabled = true;
                 partículasBalas.ParticleSystem.ResetSimulation();
                 break;
             case Armas.rifle:
-                textura.SpriteProvider = ObtenerSprite(marcaRifle);
-                textura.Entity.Transform.Scale = Vector3.One * 0.6f;
+                textura.SpriteProvider = ObtenerSprite(marcaBala);
+                textura.Entity.Transform.Scale = Vector3.One * 0.03f;
+                textura.Color = new Color(90, 90, 90);
                 partículasRifle.Enabled = true;
                 partículasRifle.ParticleSystem.ResetSimulation();
                 break;
