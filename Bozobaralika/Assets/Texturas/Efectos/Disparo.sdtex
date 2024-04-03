@@ -1,7 +1,7 @@
 !Texture
-Id: 1f830b4b-c208-4476-8ee3-496236d0724c
+Id: 2e8336b0-9037-4c44-8201-0594aa0b8669
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Source: !file imgRifle.png
+Source: !file Disparo.png
 Type: !ColorTextureType
     ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

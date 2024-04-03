@@ -1,7 +1,7 @@
 !Texture
-Id: 1f830b4b-c208-4476-8ee3-496236d0724c
+Id: b07df677-5dac-4acb-b8c7-87df66b9cd87
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Source: !file imgRifle.png
+Source: !file Chispa.png
 Type: !ColorTextureType
     ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

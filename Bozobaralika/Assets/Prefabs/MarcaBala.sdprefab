@@ -36,7 +36,7 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                                            Texture: 1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Humo
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
@@ -128,13 +128,13 @@ Hierarchy:
                         Id: 0ce2d2c5-593c-40a6-b5ee-6f4e52114dbe
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.01, Y: 0.01, Z: 0.01}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
                         Children: {}
                     9338311ecbb3e1b8edbaf2ec6d27e7c9: !SpriteComponent
                         Id: f1652332-d0d0-47ad-902a-d6f7fb203099
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: a66f70b1-e6fd-434e-b17e-0954b53ea9ba:Sprites/Marca
-                        Color: {R: 0.0, G: 0.0, B: 0.0, A: 1.0}
+                            Sheet: 92b3fbe0-bc13-41d6-aaad-6dad4df6b987:Sprites/Marca
+                        Color: {R: 0.3529412, G: 0.3529412, B: 0.3529412, A: 1.0}
         -   Entity:
                 Id: 5bfdc32d-ce31-4338-b875-c3ad36cab97c
                 Name: Marca
@@ -153,6 +153,5 @@ Hierarchy:
                         "partículasEspada": ref!! b5445e9b-dd6f-4afb-86df-92d9a98886c8
                         "partículasBalas": ref!! b5445e9b-dd6f-4afb-86df-92d9a98886c8
                         "partículasRifle": ref!! b5445e9b-dd6f-4afb-86df-92d9a98886c8
-                        marcaEspada: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
-                        marcaBala: "d177cd46-3416-41d0-8fc8-a1ab38f9265e:Texturas/Círculo"
-                        marcaRifle: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                        marcaEspada: ed7453c6-b5c0-4969-8fcd-94ddc3abd506:Texturas/Efectos/Corte
+                        marcaBala: 2e8336b0-9037-4c44-8201-0594aa0b8669:Texturas/Efectos/Disparo
