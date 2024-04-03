@@ -1,0 +1,19 @@
+!Model
+Id: af94209d-bf15-4fe0-be2a-de8f4f8d2b4a
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Shashka.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    1dda876f0a420e98f35b7f5de42da61b:
+        Name: Hoja
+        MaterialInstance:
+            Material: 62fdc9e1-81f9-4fc0-a182-51aeba4c742d:Modelos/Armas/Espada/Materiales/Hoja
+    7f9f5dc3693a2c2f50ce8b307bcade13:
+        Name: "Puño"
+        MaterialInstance:
+            Material: "6b306a2c-6164-44b6-b917-604fac8cd757:Modelos/Armas/Espada/Materiales/Puño"
+Modifiers: {}
+~SourceHashes:
+    a6e78f86ace8bc7eaf80168a811f3543~Shashka.glb: b95b41b58aa9fa125cb468b4084c8a87
