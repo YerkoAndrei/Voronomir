@@ -543,13 +543,13 @@ Hierarchy:
                 Components:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: e90bfeb2-bc8a-4fa4-ab03-912fd74fb9b0
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.258819, Y: -4.453338E-09, Z: 1.6620085E-08, W: 0.9659258}
-                        Scale: {X: 0.009999999, Y: 0.01, Z: 1.5}
+                        Position: {X: 0.0, Y: 0.0, Z: -0.1}
+                        Rotation: {X: 0.42261827, Y: 0.0, Z: 0.0, W: 0.90630776}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 0bcb9390-3f70-4621-b30d-e1f45692dc9a
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Model: af94209d-bf15-4fe0-be2a-de8f4f8d2b4a:Modelos/Armas/Espada/Shashka
                         RenderGroup: Group11
                         Materials: {}
         -   Entity:
@@ -715,13 +715,13 @@ Hierarchy:
                 Components:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: f8da5fff-2637-4fbf-a5da-7cc4fd74113d
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.258819, Y: -4.453338E-09, Z: 1.6620085E-08, W: 0.9659258}
-                        Scale: {X: 0.009999999, Y: 0.01, Z: 1.5}
+                        Position: {X: 0.0, Y: 0.0, Z: -0.1}
+                        Rotation: {X: 0.42261827, Y: 0.0, Z: 0.0, W: 0.90630776}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: c3f3e014-10d4-4345-b491-72cfe4c5a54b
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Model: af94209d-bf15-4fe0-be2a-de8f4f8d2b4a:Modelos/Armas/Espada/Shashka
                         RenderGroup: Group11
                         Materials: {}
         -   Entity:
@@ -763,7 +763,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 0581adaa-618c-4926-bd0c-773cfa32ddae
-                        Position: {X: -0.1, Y: -0.2, Z: -0.8}
+                        Position: {X: -0.52, Y: -0.3, Z: -0.25}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1247,7 +1247,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: ad53e5b2-5afa-4683-ba15-757cf7aead70
-                        Position: {X: 0.1, Y: -0.2, Z: -0.8}
+                        Position: {X: 0.52, Y: -0.3, Z: -0.25}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:

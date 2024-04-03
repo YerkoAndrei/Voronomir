@@ -264,49 +264,39 @@ public class AnimadorArma : AsyncScript
     // Melé
     public async void AnimarAtaque(TipoDisparo tipoDisparo)
     {
-        float duración = 0.1f;
-        float tiempoLerp = 0;
-        float tiempo = 0;
-
-        // Rotación rápida
-        var rotaciónAtaqueIzquierda = Quaternion.RotationX(MathUtil.DegreesToRadians(-40));
-        var rotaciónAtaqueDerecha = Quaternion.RotationX(MathUtil.DegreesToRadians(-40));
+        var rotaciónAtaqueIzquierda = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-40), MathUtil.DegreesToRadians(-80), MathUtil.DegreesToRadians(60));
+        var rotaciónAtaqueDerecha = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(40), MathUtil.DegreesToRadians(-80), MathUtil.DegreesToRadians(-60));
 
         switch (tipoDisparo)
         {
             case TipoDisparo.izquierda:
-                ejeIzquierda.Rotation = rotaciónAtaqueIzquierda;
+                AnimarEspada(ejeIzquierda, rotaciónAtaqueIzquierda, 0.09f);
+                await Task.Delay(60);
+                AnimarEspada(ejeDerecha, rotaciónAtaqueDerecha, 0.1f);
                 break;
             case TipoDisparo.derecha:
-                ejeDerecha.Rotation = rotaciónAtaqueDerecha;
+                AnimarEspada(ejeDerecha, rotaciónAtaqueDerecha, 0.09f);
+                await Task.Delay(60);
+                AnimarEspada(ejeIzquierda, rotaciónAtaqueIzquierda, 0.1f);
                 break;
         }
+    }
+
+    private async void AnimarEspada(TransformComponent espada, Quaternion rotaciónAtaque, float duración)
+    {
+        espada.Rotation = rotaciónAtaque;
+
+        float tiempoLerp = 0;
+        float tiempo = 0;
 
         while (tiempoLerp < duración)
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-            switch (tipoDisparo)
-            {
-                case TipoDisparo.izquierda:
-                    ejeIzquierda.Rotation = Quaternion.Lerp(rotaciónAtaqueIzquierda, Quaternion.Identity, tiempo);
-                    break;
-                case TipoDisparo.derecha:
-                    ejeDerecha.Rotation = Quaternion.Lerp(rotaciónAtaqueDerecha, Quaternion.Identity, tiempo);
-                    break;
-            }
+            espada.Rotation = Quaternion.Lerp(rotaciónAtaque, Quaternion.Identity, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
         }
-
-        switch (tipoDisparo)
-        {
-            case TipoDisparo.izquierda:
-                ejeIzquierda.Rotation = Quaternion.Identity;
-                break;
-            case TipoDisparo.derecha:
-                ejeDerecha.Rotation = Quaternion.Identity;
-                break;
-        }
+        espada.Rotation = Quaternion.Identity;
     }
 }
