@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Bozobaralika;
 using static Constantes;
 
-public class ControladorEnemigo : StartupScript, IDañable
+public class ControladorEnemigo : SyncScript, IDañable
 {
     public Enemigos enemigo;
     public List<RigidbodyComponent> cuerpos { get ; set ; }
@@ -80,6 +80,15 @@ public class ControladorEnemigo : StartupScript, IDañable
             armaRango.Iniciar();
 
         activo = true;
+    }
+
+    public override void Update()
+    {
+        if (!activo)
+            return;
+
+        // Updates
+        persecusión.Actualizar();
     }
 
     public void Atacar()

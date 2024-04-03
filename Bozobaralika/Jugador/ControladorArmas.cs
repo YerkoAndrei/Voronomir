@@ -10,7 +10,7 @@ namespace Bozobaralika;
 using static Utilidades;
 using static Constantes;
 
-public class ControladorArmas : SyncScript
+public class ControladorArmas : StartupScript
 {
     public Prefab prefabMarca;
 
@@ -104,7 +104,7 @@ public class ControladorArmas : SyncScript
         movimiento.CambiarVelocidadMáxima(true);
     }
 
-    public override void Update()
+    public void ActualizarEntradas()
     {
         if (bloqueo)
             return;
@@ -163,11 +163,6 @@ public class ControladorArmas : SyncScript
 
         if (Input.IsKeyPressed(Keys.Q))
             CambiarArma(armaAnterior);
-
-        // Debug
-        DebugText.Print(metralletaAtascada.ToString(), new Int2(x: 20, y: 60));
-        DebugText.Print(tempoMetralleta.ToString(), new Int2(x: 20, y: 80));
-        DebugText.Print(Game.UpdateTime.Total.TotalSeconds.ToString(), new Int2(x: 20, y: 100));
     }
 
     private void Disparar(bool clicIzquierdo = true)

@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Bozobaralika;
 
-public class ControladorMovimiento : SyncScript
+public class ControladorMovimiento : StartupScript
 {
     private CharacterComponent cuerpo;
     private TransformComponent cabeza;
@@ -56,7 +56,7 @@ public class ControladorMovimiento : SyncScript
         multiplicadorVelocidad = ObtenerMultiplicadorVelocidad();
     }
 
-    public override void Update()
+    public void ActualizarEntradas()
     {
         // Correr
         Correr();
@@ -71,10 +71,6 @@ public class ControladorMovimiento : SyncScript
             Caminar();
         if (Input.IsKeyReleased(Keys.LeftShift) || Input.IsKeyReleased(Keys.RightShift))
             DesactivarCaminar();
-
-        // Debug
-        DebugText.Print(cuerpo.LinearVelocity.ToString(), new Int2(x: 20, y: 20));
-        DebugText.Print(aceleración.ToString(), new Int2(x: 20, y: 40));
     }
 
     private void Correr()

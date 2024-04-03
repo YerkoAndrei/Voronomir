@@ -8,7 +8,7 @@ using Stride.Physics;
 
 namespace Bozobaralika;
 
-public class ControladorPersecusión : SyncScript
+public class ControladorPersecusión : StartupScript
 {
     private ControladorEnemigo controlador;
     private CharacterComponent cuerpo;
@@ -68,11 +68,8 @@ public class ControladorPersecusión : SyncScript
         distanciaAtaque = _distanciaAtaque;
     }
 
-    public override void Update()
+    public void Actualizar()
     {
-        if (!controlador.ObtenerActivo())
-            return;
-
         if (atacando)
         {
             MirarJugador(velocidadRotación * 0.5f);

@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using System.Windows;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 
@@ -91,10 +90,6 @@ public class AnimadorArma : AsyncScript
                     tiempo = 0;
                     bajando = !bajando;
                 }
-
-                // Debug
-                DebugText.Print(duraciónAnimación.ToString(), new Int2(x: 20, y: 140));
-                DebugText.Print(fuerzaAnimación.ToString(), new Int2(x: 20, y: 160));
             }
             await Script.NextFrame();
         }

@@ -48,22 +48,17 @@ public class ControladorJugador : SyncScript, IDañable
 
         llaveAzul = false;
         llaveRoja = false;
-
-        // Debug
-        Input.LockMousePosition(true);
-        Game.IsMouseVisible = false;
     }
 
     public override void Update()
     {
+        // Updates
+        movimiento.ActualizarEntradas();
+        armas.ActualizarEntradas();
+
         // Cura
         if (Input.IsKeyPressed(Keys.F))
             Curar();
-
-        // Debug
-        DebugText.Print(vida + "/" + vidaMax, new Int2(x: 20, y: 120));
-        if (Input.IsKeyPressed(Keys.K))
-            RecibirDaño(10);
     }
 
     private async void Curar()
