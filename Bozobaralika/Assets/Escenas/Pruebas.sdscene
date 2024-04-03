@@ -285,7 +285,7 @@ Hierarchy:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 48aa2a42-0470-4daf-9e1c-3815b6d70ad7
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.052136805, Y: -0.08703629, Z: 0.004561378, W: 0.9948294}
+                        Rotation: {X: 0.017385995, Y: -0.08714246, Z: 0.0015210767, W: 0.996043}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
@@ -851,7 +851,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: fa07357d-2cdf-4496-9367-230f0f32ad4f
-                        Position: {X: 0.25, Y: -0.5, Z: -0.75}
+                        Position: {X: 0.15, Y: -0.2, Z: -0.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -911,7 +911,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 1af2d10c-411f-4942-88a7-224e42c18e97
-                        Position: {X: -0.25, Y: -0.5, Z: -0.75}
+                        Position: {X: -0.15, Y: -0.2, Z: -0.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1068,7 +1068,7 @@ Hierarchy:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 900231e9-2e98-4bfb-9db2-e3c959f514ad
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.06915969, Y: -0.13020825, Z: 0.009105046, W: 0.9890298}
+                        Rotation: {X: 0.017303098, Y: -0.13050634, Z: 0.0022779964, W: 0.9912939}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
@@ -1083,12 +1083,12 @@ Hierarchy:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 89383549-98e0-42e9-be42-67d0e3e4cc62
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.3, Y: 0.1, Z: 0.99999994}
+                        Rotation: {X: 0.017385995, Y: 0.0015210772, Z: -0.08714247, W: 0.996043}
+                        Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 2bd12467-d230-49e5-b674-1fc2bd743fec
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Model: 08980e3d-c7cb-48a0-8d63-198c7163f769:Modelos/Armas/Escopeta/MC-6
                         RenderGroup: Group11
                         Materials: {}
         -   Entity:
@@ -1281,7 +1281,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 12219ecf-567d-47be-a645-ab96979b0e47
-                        Position: {X: 0.3, Y: -0.2, Z: -0.2}
+                        Position: {X: 0.36, Y: -0.2, Z: -0.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1481,7 +1481,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: fc787e65-9a72-4c81-ac8a-e525d2db2214
-                        Position: {X: -0.3, Y: -0.2, Z: -0.2}
+                        Position: {X: -0.36, Y: -0.2, Z: -0.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1597,7 +1597,7 @@ Hierarchy:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 3f49b083-741f-4e55-8add-88eefa292f0c
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.052136805, Y: 0.08703629, Z: -0.0045613796, W: 0.9948294}
+                        Rotation: {X: 0.017385995, Y: 0.08714246, Z: -0.001521078, W: 0.996043}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
@@ -1612,7 +1612,7 @@ Hierarchy:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: cb8b7c02-8937-482e-b5d6-77439268b21f
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.069159694, Y: 0.1302083, Z: -0.00910505, W: 0.98902977}
+                        Rotation: {X: 0.017303098, Y: 0.13050638, Z: -0.0022779973, W: 0.99129385}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
@@ -2004,12 +2004,12 @@ Hierarchy:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: fe02ed36-e4ce-4251-9332-6401627e3d29
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.3, Y: 0.1, Z: 0.99999994}
+                        Rotation: {X: 0.017385995, Y: -0.0015210772, Z: 0.08714247, W: 0.996043}
+                        Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 2f860ba4-41c4-48d5-8d5f-9459560589d7
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Model: 08980e3d-c7cb-48a0-8d63-198c7163f769:Modelos/Armas/Escopeta/MC-6
                         RenderGroup: Group11
                         Materials: {}
         -   Folder: null
