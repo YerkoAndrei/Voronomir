@@ -62,8 +62,8 @@ public class AnimadorArma : StartupScript
     public async void AnimarSalidaArma()
     {
         var rotaciónCentro = Quaternion.Identity;
-        var rotaciónSale = Quaternion.RotationX(MathUtil.DegreesToRadians(-90));
-        var pocisiónSalida = Vector3.UnitY * 0.5f;
+        var rotaciónSale = Quaternion.RotationX(MathUtil.DegreesToRadians(-60));
+        var pocisiónSalida = Vector3.UnitZ * -0.1f;
 
         float duración = 0.1f;
         float tiempoLerp = 0;
