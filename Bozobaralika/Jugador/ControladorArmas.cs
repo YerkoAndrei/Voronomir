@@ -37,8 +37,6 @@ public class ControladorArmas : SyncScript
     private float últimoDisparoMetralleta;
     private float últimoDisparoRifle;
 
-    private float duraciónMovimientoCorrer;
-    private float últimaAnimaciónCorrer;
     private bool cambiandoArma;
     private bool usandoMira;
 
@@ -481,25 +479,19 @@ public class ControladorArmas : SyncScript
 
     private void AnimarMovimientoArma()
     {
-        duraciónMovimientoCorrer = ((1 - movimiento.ObtenerAceleración()) + 1) * 0.8f;
-        if ((float)Game.UpdateTime.Total.TotalSeconds < (últimaAnimaciónCorrer + duraciónMovimientoCorrer)
-            || movimiento.ObtenerAceleración() <= 1 || !movimiento.ObtenerEnSuelo())
-            return;
-
-        últimaAnimaciónCorrer = (float)Game.UpdateTime.Total.TotalSeconds;
         switch (armaActual)
         {
             case Armas.espada:
-                animadorEspada.AnimarCorrerArma(duraciónMovimientoCorrer * 0.2f);
+                animadorEspada.AnimarCorrerArma(0.5f, movimiento.ObtenerAceleración() - 0.1f, movimiento.ObtenerEnSuelo());
                 break;
             case Armas.escopeta:
-                animadorEscopeta.AnimarCorrerArma(duraciónMovimientoCorrer * 0.2f);
+                animadorEscopeta.AnimarCorrerArma(1, movimiento.ObtenerAceleración(), movimiento.ObtenerEnSuelo());
                 break;
             case Armas.metralleta:
-                animadorMetralleta.AnimarCorrerArma(duraciónMovimientoCorrer * 0.2f);
+                animadorMetralleta.AnimarCorrerArma(1, movimiento.ObtenerAceleración(), movimiento.ObtenerEnSuelo());
                 break;
             case Armas.rifle:
-                animadorRife.AnimarCorrerArma(duraciónMovimientoCorrer * 0.2f);
+                animadorRife.AnimarCorrerArma(2, movimiento.ObtenerAceleración(), movimiento.ObtenerEnSuelo());
                 break;
         }
     }

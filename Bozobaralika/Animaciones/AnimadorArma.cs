@@ -1,11 +1,12 @@
 ﻿using System.Threading.Tasks;
+using System.Windows;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 
 namespace Bozobaralika;
 using static Constantes;
 
-public class AnimadorArma : StartupScript
+public class AnimadorArma : AsyncScript
 {
     public TransformComponent ejeIzquierda;
     public TransformComponent ejeDerecha;
@@ -16,15 +17,108 @@ public class AnimadorArma : StartupScript
     private Vector3 posiciónInicialIzquierda;
     private Vector3 posiciónInicialDerecha;
 
-    private Quaternion rotaciónInicialIzquierda;
-    private Quaternion rotaciónInicialDerecha;
+    // Animación correr
+    private bool activa;
+    private bool bajando;
+    private float duraciónAnimación;
+    private float fuerzaAnimación;
+    private Quaternion centroIzquierda;
+    private Quaternion centroDerecha;
+    private Quaternion abajoIzquierda;
+    private Quaternion abajoDerecha;
+
+    private Quaternion inicialIzquierda;
+    private Quaternion inicialDerecha;
+    private Quaternion objetivoIzquierda;
+    private Quaternion objetivoDerecha;
 
     public void Iniciar()
     {
         posiciónInicialIzquierda = ejeIzquierda.Position;
         posiciónInicialDerecha = ejeDerecha.Position;
-        rotaciónInicialIzquierda = modeloIzquierda.Entity.Transform.Rotation;
-        rotaciónInicialDerecha = modeloDerecha.Entity.Transform.Rotation;
+
+        bajando = true;
+        duraciónAnimación = 2;
+        fuerzaAnimación = 0.5f;
+
+        centroIzquierda = modeloIzquierda.Entity.Transform.Rotation;
+        centroDerecha = modeloDerecha.Entity.Transform.Rotation;
+        abajoIzquierda = centroIzquierda * Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(1f), MathUtil.DegreesToRadians(-2f), MathUtil.DegreesToRadians(2));
+        abajoDerecha = centroDerecha * Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-1f), MathUtil.DegreesToRadians(-2f), MathUtil.DegreesToRadians(-2));
+
+        inicialIzquierda = centroIzquierda;
+        inicialDerecha = centroDerecha;
+        objetivoIzquierda = abajoIzquierda;
+        objetivoDerecha = abajoDerecha;
+    }
+
+    public override async Task Execute()
+    {
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        // Armas siempre están en animación
+        while (Game.IsRunning)
+        {
+            if (activa)
+            {
+                tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duraciónAnimación);
+
+                modeloIzquierda.Entity.Transform.Rotation = Quaternion.Lerp(inicialIzquierda * fuerzaAnimación, objetivoIzquierda * fuerzaAnimación, tiempo);
+                modeloDerecha.Entity.Transform.Rotation = Quaternion.Lerp(inicialDerecha * fuerzaAnimación, objetivoDerecha * fuerzaAnimación, tiempo);
+
+                tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+
+                // Vuelta
+                if(tiempoLerp >= duraciónAnimación)
+                {
+                    if(bajando)
+                    {
+                        inicialIzquierda = abajoIzquierda;
+                        inicialDerecha = abajoDerecha;
+                        objetivoIzquierda = centroIzquierda;
+                        objetivoDerecha = centroDerecha;
+                    }
+                    else
+                    {
+                        inicialIzquierda = centroIzquierda;
+                        inicialDerecha = centroDerecha;
+                        objetivoIzquierda = abajoIzquierda;
+                        objetivoDerecha = abajoDerecha;
+                    }
+
+                    tiempoLerp = 0;
+                    tiempo = 0;
+                    bajando = !bajando;
+                }
+
+                // Debug
+                DebugText.Print(duraciónAnimación.ToString(), new Int2(x: 20, y: 140));
+                DebugText.Print(fuerzaAnimación.ToString(), new Int2(x: 20, y: 160));
+            }
+            await Script.NextFrame();
+        }
+    }
+
+    public void AnimarCorrerArma(float fuerza, float velocidad, bool enSuelo)
+    {
+        // Reposo
+        if (velocidad <= 1)
+        {
+            duraciónAnimación = 2;
+            fuerzaAnimación = 0.5f;
+            return;
+        }
+
+        duraciónAnimación = ((1 - velocidad) + 1);
+        fuerzaAnimación = velocidad * fuerza;
+
+        // En aire se mueve más lento y más 
+        if (!enSuelo)
+        {
+            duraciónAnimación = (((1 - velocidad) + 1)) * 2;
+            fuerzaAnimación = (duraciónAnimación * fuerza) * 4;
+        }
     }
 
     public void ApagarArma()
@@ -57,10 +151,12 @@ public class AnimadorArma : StartupScript
 
         ejeIzquierda.Rotation = Quaternion.Identity;
         ejeDerecha.Rotation = Quaternion.Identity;
+        activa = true;
     }
 
     public async void AnimarSalidaArma()
     {
+        activa = false;
         var rotaciónCentro = Quaternion.Identity;
         var rotaciónSale = Quaternion.RotationX(MathUtil.DegreesToRadians(-60));
         var pocisiónSalida = Vector3.UnitZ * -0.1f;
@@ -87,41 +183,6 @@ public class AnimadorArma : StartupScript
 
         ejeIzquierda.Position = posiciónInicialIzquierda;
         ejeDerecha.Position = posiciónInicialDerecha;
-    }
-
-    public async void AnimarCorrerArma(float duración)
-    {
-        var rotaciónIzquierda = rotaciónInicialIzquierda * Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(1f), MathUtil.DegreesToRadians(-2f), MathUtil.DegreesToRadians(2));
-        var rotaciónDerecha = rotaciónInicialDerecha * Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-1f), MathUtil.DegreesToRadians(-2f), MathUtil.DegreesToRadians(-2));
-
-        float tiempoLerp = 0;
-        float tiempo = 0;
-        while (tiempoLerp < duración)
-        {
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-
-            modeloIzquierda.Entity.Transform.Rotation = Quaternion.Lerp(rotaciónInicialIzquierda, rotaciónIzquierda, tiempo);
-            modeloDerecha.Entity.Transform.Rotation = Quaternion.Lerp(rotaciónInicialDerecha, rotaciónDerecha, tiempo);
-
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Task.Delay(1);
-        }
-
-        tiempoLerp = 0;
-        tiempo = 0;
-        while (tiempoLerp < duración)
-        {
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-
-            modeloIzquierda.Entity.Transform.Rotation = Quaternion.Lerp(rotaciónIzquierda, rotaciónInicialIzquierda, tiempo);
-            modeloDerecha.Entity.Transform.Rotation = Quaternion.Lerp(rotaciónDerecha, rotaciónInicialDerecha, tiempo);
-
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Task.Delay(1);
-        }
-
-        modeloIzquierda.Entity.Transform.Rotation = rotaciónInicialIzquierda;
-        modeloDerecha.Entity.Transform.Rotation = rotaciónInicialDerecha;
     }
 
     // Rango
