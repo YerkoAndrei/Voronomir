@@ -521,7 +521,7 @@ public class ControladorArmas : SyncScript
             case Armas.escopeta:
                 return 6;
             case Armas.metralleta:
-                return 10;
+                return 8;
             case Armas.rifle:
                 return 100;
             default:
