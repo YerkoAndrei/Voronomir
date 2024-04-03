@@ -73,7 +73,7 @@ public class ControladorPersecusión : SyncScript
         if (!controlador.ObtenerActivo())
             return;
 
-        if(atacando)
+        if (atacando)
         {
             MirarJugador(velocidadRotación * 0.5f);
             return;
