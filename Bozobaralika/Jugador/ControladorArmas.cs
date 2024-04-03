@@ -222,7 +222,7 @@ public class ControladorArmas : SyncScript
                 movimiento.DetenerMovimiento();
                 for (int i = 0; i < ObtenerCantidadPerdigones(); i++)
                 {
-                    CalcularRayo(0.25f);
+                    CalcularRayo(0.2f);
                 }
                 controlador.VibrarCámara(16, 10);
                 animadorEscopeta.AnimarDisparo(0.5f, 0.2f, TipoDisparo.espejo);
@@ -519,7 +519,7 @@ public class ControladorArmas : SyncScript
             case Armas.espada:
                 return 25; // * 3
             case Armas.escopeta:
-                return 5;
+                return 6;
             case Armas.metralleta:
                 return 10;
             case Armas.rifle:
