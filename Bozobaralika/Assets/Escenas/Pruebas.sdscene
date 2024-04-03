@@ -702,6 +702,8 @@ Hierarchy:
                         armaRango: null
                         cuerpos:
                             5bc86ece30ba2b9277a142cb775b2872: ref!! 2814ed81-bd8a-481f-9cd5-2622c315012c
+                            c585672345def0b61e3ccc93ae4d4381: ref!! 50548c56-2bb4-4df3-89b4-4efe0c924c77
+                            1287a0c79734632ee15ff7ad938c580d: ref!! 10cbe19a-f0ee-4166-afb3-13778bc7c101
                     d7feb748634a3f30f579747ffa6f0e53: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: 5da25a13-aa01-42eb-96c5-c85e91952c5b
                     1dd64e1afcd5512cedf9e97ef1931ca5: !Bozobaralika.AnimadorCerebro,Bozobaralika.Proyecto
@@ -916,6 +918,45 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             03cac127b85e429c2515bdcea74b1c68: ref!! fe02ed36-e4ce-4251-9332-6401627e3d29
+        -   Folder: null
+            Entity:
+                Id: 752cb2c9-e1bf-43b2-b94f-399e75dfb9fc
+                Name: "Dañable cuerpo"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 89cc925e-fd76-40f6-b43f-77b2f8fed7bc
+                        Position: {X: 0.0, Y: 0.5, Z: 0.1}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.8, Z: 0.5}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 50548c56-2bb4-4df3-89b4-4efe0c924c77
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: 260641db-47dc-4832-b4d5-35b367ca3ff2
+                        controlador: ref!! 4f9aa40e-6793-4b0d-bd71-aa164e20f915
+                        multiplicador: 0.5
         -   Entity:
                 Id: 78b543f3-a0d8-4851-99a8-7f64df6948bc
                 Name: Dron mirador
@@ -1027,6 +1068,45 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: 8c8bdf5b-ccf3-4b01-b7b9-8e7ee8d26c08
+                Name: "Dañable escudo"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 21e6e203-385f-43b6-ad0f-d3511732c5b1
+                        Position: {X: 0.0, Y: 0.88, Z: 0.45}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 1.0, Z: 0.1}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 10cbe19a-f0ee-4166-afb3-13778bc7c101
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: f9621446-c74b-4b56-be9a-64ed927453e0
+                        controlador: ref!! 4f9aa40e-6793-4b0d-bd71-aa164e20f915
+                        multiplicador: 0.1
         -   Folder: null
             Entity:
                 Id: 8dcfbf63-872c-4767-b5d4-c444770e99f8
@@ -1297,6 +1377,8 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             274570ec839d03441939b84ca63d1199: ref!! 9112ce87-93a3-4f3a-bc63-d0c65b33ec31
+                            a0f4c0b3d6761f42143a603076fd17c9: ref!! 89cc925e-fd76-40f6-b43f-77b2f8fed7bc
+                            35a5cd39af126b9b2038451cbac71599: ref!! 21e6e203-385f-43b6-ad0f-d3511732c5b1
         -   Entity:
                 Id: b8b825d3-16a6-410e-9bfd-e4400a802454
                 Name: Modelo
