@@ -257,7 +257,7 @@ public class ControladorArmas : StartupScript
 
         if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
         {
-            CrearMarca(armaActual, resultado.Point, resultado.Normal, resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger);
+            CrearMarca(resultado.Point, resultado.Normal, resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger);
             return;
         }
 
@@ -272,14 +272,15 @@ public class ControladorArmas : StartupScript
         if(distancia > ObtenerDistanciaMáxima(armaActual))
             reducción = (distancia - ObtenerDistanciaMáxima(armaActual)) * 0.5f;
 
-        // Retroalimentación daño
-        if (armaActual == Armas.metralleta)
-            controlador.VibrarCámara(1f, 4);
-
         // Daña enemigo
         var dañoFinal = ObtenerDaño(armaActual) - reducción;
         dañoFinal = MathUtil.Clamp(dañoFinal, dañoMínimo, dañoMáximo);
         dañable.RecibirDaño(dañoFinal);
+
+        // Retroalimentación daño
+        CrearMarcaDaño(resultado.Point, resultado.Normal, dañable.multiplicador);
+        if (armaActual == Armas.metralleta)
+            controlador.VibrarCámara(1f, 4);
     }
 
     private void CalcularRayoPenetrante()
@@ -304,7 +305,7 @@ public class ControladorArmas : StartupScript
         {
             if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
-                CrearMarca(armaActual, resultado.Point, resultado.Normal, resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger);
+                CrearMarca(resultado.Point, resultado.Normal, resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger);
                 break;
             }
 
@@ -326,6 +327,9 @@ public class ControladorArmas : StartupScript
             var dañoFinal = ObtenerDaño(armaActual) + aumento;
             dañoFinal = MathUtil.Clamp(dañoFinal, dañoMínimo, dañoMáximo);
             dañable.RecibirDaño(dañoFinal);
+
+            // Retroalimentación daño
+            CrearMarcaDaño(resultado.Point, resultado.Normal, dañable.multiplicador);
         }
     }
 
@@ -365,6 +369,8 @@ public class ControladorArmas : StartupScript
                 dañable.RecibirDaño(ObtenerDaño(Armas.espada));
                 posición = Vector3.Zero;
                 normal = Vector3.Zero;
+
+                CrearMarcaDaño(resultado.Point, resultado.Normal, dañable.multiplicador);
             }
             else
             {
@@ -374,12 +380,36 @@ public class ControladorArmas : StartupScript
         }
 
         if (posición != Vector3.Zero && normal != Vector3.Zero)
-            CrearMarca(armaActual, posición, normal, false);
+            CrearMarca(posición, normal, false);
     }
 
-    private void CrearMarca(Armas arma, Vector3 posición, Vector3 normal, bool soloEfecto)
+    private void CrearMarca(Vector3 posición, Vector3 normal, bool soloEfecto)
     {
-        marcas[marcaActual].Iniciar(armaActual, posición, normal, soloEfecto);
+        marcas[marcaActual].IniciarMarca(armaActual, posición, normal, soloEfecto);
+        marcaActual++;
+
+        if (marcaActual >= maxMarcas)
+            marcaActual = 0;
+    }
+
+    private void CrearMarcaDaño(Vector3 posición, Vector3 normal, float multiplicador)
+    {
+        switch (armaActual)
+        {
+            case Armas.espada:
+                multiplicador *= 0.5f;
+                break;
+            case Armas.escopeta:
+                multiplicador *= 0.4f;
+                break;
+            case Armas.metralleta:
+                multiplicador *= 1f;
+                break;
+            case Armas.rifle:
+                multiplicador *= 2f;
+                break;
+        }
+        marcas[marcaActual].IniciarDaño(posición, normal, multiplicador);
         marcaActual++;
 
         if (marcaActual >= maxMarcas)
