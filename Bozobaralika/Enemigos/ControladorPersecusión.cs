@@ -157,9 +157,9 @@ public class ControladorPersecusión : StartupScript
                 dirección = jugador.WorldMatrix.TranslationVector - Entity.Transform.WorldMatrix.TranslationVector;
             
             dirección.Normalize();
-            dirección *= (float)Game.UpdateTime.Elapsed.TotalSeconds;
-                        
+            dirección *= (float)Game.UpdateTime.Elapsed.TotalSeconds;                        
             cuerpo.SetVelocity(dirección * 100 * velocidad * aceleración);
+            animador.Caminar(aceleración);
         }
         else
         {
@@ -180,6 +180,7 @@ public class ControladorPersecusión : StartupScript
         dirección.Normalize();
         dirección *= (float)Game.UpdateTime.Elapsed.TotalSeconds;
         cuerpo.SetVelocity(dirección * 100 * velocidad * distanciaRuta * 0.2f);
+        animador.Caminar(distanciaRuta * 0.2f);
     }
 
     public async void Atacar()
