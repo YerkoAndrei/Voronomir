@@ -98,7 +98,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             armaMelé.Atacar(ObtenerDañoMelé());
 
         else if (!melé && armaRango != null)
-            armaRango.Atacar(ObtenerDañoRango());
+            armaRango.Disparar(ObtenerDañoRango(), ObtenerVelocidadDisparo());
     }
 
     public void RecibirDaño(float daño)
@@ -147,6 +147,21 @@ public class ControladorEnemigo : SyncScript, IDañable
                 return 20;
             case Enemigos.rangoPesado:
                 return 40;
+            default:
+                return 0;
+        }
+    }
+
+    private float ObtenerVelocidadDisparo()
+    {
+        switch (enemigo)
+        {
+            case Enemigos.rangoLigero:
+                return 10;
+            case Enemigos.rangoMediano:
+                return 5;
+            case Enemigos.rangoPesado:
+                return 12;
             default:
                 return 0;
         }
