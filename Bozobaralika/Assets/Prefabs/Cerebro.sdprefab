@@ -202,6 +202,7 @@ Hierarchy:
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
+                        StepHeight: 0.2
                         FallSpeed: 10.0
                         MaxSlope: {Radians: 0.7853982}
                         JumpSpeed: 10.0
