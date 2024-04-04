@@ -205,7 +205,8 @@ public class ControladorPersecusión : StartupScript
 
     public void EliminarPersecutor()
     {
-        persecutor.EliminarPersecutor(this);
+        if (persecutorTrigonométrico)
+            persecutor.EliminarPersecutor(this);
     }
 
     public void ReasignarÍndice(int índice)
