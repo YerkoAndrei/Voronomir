@@ -1266,10 +1266,10 @@ Hierarchy:
                         enemigo: "meléPesado"
                     5d7d60972d62727e06bf9f67509b933b: !Bozobaralika.Depurador,Bozobaralika.Proyecto
                         Id: 8688afb4-7376-419b-a61d-169b36f0c5ab
-                        zombi: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Zombi
-                        lancero: 348ffd0b-1a96-4bdb-bd14-ebd446626828:Prefabs/Lancero
-                        cerebro: f89baa3b-42d2-4588-b0af-916f14d07e34:Prefabs/Cerebro
-                        dron: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Dron
+                        zombi: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                        lancero: 348ffd0b-1a96-4bdb-bd14-ebd446626828:Prefabs/Enemigos/Lancero
+                        cerebro: f89baa3b-42d2-4588-b0af-916f14d07e34:Prefabs/Enemigos/Cerebro
+                        dron: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Enemigos/Dron
         -   Entity:
                 Id: d6469b5e-a04d-4f00-8adf-79e362dcd0f4
                 Name: Lanza
@@ -1381,7 +1381,7 @@ Hierarchy:
                         Id: 57ced855-0f8a-4092-9133-ae41e2e76b87
                     54c947a658f979a1a3cbf73596735198: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: cf114505-16b9-4712-a010-c2ba1ce114e1
-                        prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/MarcaBala
+                        prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/Disparos/MarcaBala
                         animadorEspada: ref!! ec6a1e7d-5026-4b82-ac7f-38632ca2f045
                         animadorEscopeta: ref!! d374c5b4-d428-4a7f-a85e-a9144180fa52
                         animadorMetralleta: ref!! cc9eecbb-b3c3-4a93-a9ff-f737fe781afd
