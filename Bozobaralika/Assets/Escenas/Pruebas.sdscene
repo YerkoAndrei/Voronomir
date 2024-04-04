@@ -6,10 +6,8 @@ ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
-        - ref!! d3476e3f-eee5-41dc-9c59-89b96ac24a2b
         - ref!! ff5480c7-125b-4faf-a925-a78b68f1b73b
         - ref!! d5817381-6a16-4585-b384-72760aaa3d44
-        - ref!! b9375e47-0d3d-4ecf-8904-75f64e879f9f
         - ref!! dd82e74f-617b-481e-bb36-34773b64d421
         - ref!! 00a9628e-10ba-490b-b4de-135740c5d52b
         - ref!! 614f2b4b-5916-4eef-82c7-8951ea902122
@@ -28,6 +26,7 @@ Hierarchy:
         - ref!! 9778c9f7-ee25-4fad-84cc-397d06ee1a61
         - ref!! 8dcfbf63-872c-4767-b5d4-c444770e99f8
         - ref!! 3e1c62cc-564a-4570-b7d1-37c0f75161c4
+        - ref!! 41b0fd2f-d07c-403c-aede-e0508f245dd2
         - ref!! 311b2d5b-74ee-48ad-bcc9-b44a58714aee
         - ref!! b9bcaf75-d766-4cdc-9c86-025cf46dd616
         - ref!! 2c46881f-53e6-4d1d-85df-924007329f46
@@ -37,7 +36,11 @@ Hierarchy:
         - ref!! eb300b4d-c14f-4f40-b4b3-e09e965b69a5
         - ref!! 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
         - ref!! 8b42ea7d-752a-4920-97e2-1646ec7b9189
+        - ref!! 442ecefd-9d8c-4e23-a74a-5b10de50d15d
+        - ref!! 43a0f70d-9590-47d8-8ed8-79ed738a7d35
+        - ref!! b98edd79-ab8c-48c3-918b-dadfca384f26
         - ref!! 5806e859-d7ec-42d4-ac78-edfc026317d2
+        - ref!! d3476e3f-eee5-41dc-9c59-89b96ac24a2b
     Parts:
         -   Folder: MuestraEnemigos
             Entity:
@@ -46,7 +49,7 @@ Hierarchy:
                 Components:
                     c33370e3f98af373ee21dfd537660cbb: !TransformComponent
                         Id: 95499a9b-c54f-415f-b680-2b1e89734b76
-                        Position: {X: -1.0, Y: 0.0, Z: 11.0}
+                        Position: {X: -1.0, Y: 0.0, Z: 15.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 0.75, Y: 0.75, Z: 0.75}
                         Children: {}
@@ -114,7 +117,7 @@ Hierarchy:
                         Materials: {}
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 77584610-80f0-4beb-944e-1361b36a9563
-                        Position: {X: -5.0, Y: 0.01, Z: 4.447}
+                        Position: {X: -10.0, Y: 0.01, Z: 4.447}
                         Rotation: {X: 0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
                         Scale: {X: 2.0, Y: 2.0, Z: 4.5}
                         Children: {}
@@ -280,23 +283,6 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Folder: null
-            Entity:
-                Id: 304fa5e8-e0f6-41b4-a3a0-8af23f5ab437
-                Name: ArmaRango
-                Components:
-                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
-                        Id: e7fcf0d9-0ff7-4f21-a6e4-28a94d656be8
-                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 0.0}
-                        Children: {}
-                    856fb470e4a1b772f510f0cef700d9bb: !Bozobaralika.ControladorArmaRango,Bozobaralika.Proyecto
-                        Id: 55831035-649c-46a5-a2dc-010662d71600
-            Base:
-                BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Dron
-                BasePartId: bf77fc42-44b9-4f29-a8a2-1e60fe58f1f3
-                InstanceId: e874bdd9-8238-4daa-ae53-e07cc3b4c54e
         -   Entity:
                 Id: 311b2d5b-74ee-48ad-bcc9-b44a58714aee
                 Name: "Botón (azul)"
@@ -379,7 +365,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 0ea62b98-42c0-403e-86da-fcba3597c2f8
-                        Position: {X: -9.650968, Y: 0.0, Z: 8.917251}
+                        Position: {X: 7.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 2.0, Y: 0.5, Z: 2.0}
                         Children:
@@ -405,6 +391,39 @@ Hierarchy:
                     ae77dc873a2c3c32c294301875605415: !Bozobaralika.ControladorSaltador,Bozobaralika.Proyecto
                         Id: 1f851cb4-4db3-45b6-a7dc-aa657a3757a4
                         fuerza: 15.0
+        -   Folder: null
+            Entity:
+                Id: 41b0fd2f-d07c-403c-aede-e0508f245dd2
+                Name: Saltador 2
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 3367a09a-f8b6-4fe7-8d25-f8073753f213
+                        Position: {X: 0.0, Y: 0.0, Z: -8.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 0.5, Z: 2.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 4ae2fbba-00a6-46bf-a96f-f24cc2c97f4e
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 33598f42-cd89-4e8c-b2e7-64c617d5d06a
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: KinematicFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    ae77dc873a2c3c32c294301875605415: !Bozobaralika.ControladorSaltador,Bozobaralika.Proyecto
+                        Id: 31859523-f77e-43c5-be6f-d5ca14d27f22
+                        fuerza: 15.0
         -   Folder: MuestraEnemigos
             Entity:
                 Id: 41ff8583-2be9-4314-986b-7a66d760d5f7
@@ -412,7 +431,7 @@ Hierarchy:
                 Components:
                     4fcd2e625dfa4604fbec1d81782ba1f8: !TransformComponent
                         Id: a013da15-69aa-4be7-bdae-ff155fa7c65f
-                        Position: {X: -4.0, Y: 0.0, Z: 12.0}
+                        Position: {X: -4.0, Y: 0.0, Z: 15.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: -0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -421,6 +440,70 @@ Hierarchy:
                         Id: 52582927-ef52-4001-a7a1-415ad628ed78
                         Model: 449f714b-c2f9-4b2d-b6a8-5ed407b77a72:Modelos/Lancero/Lancero
                         Materials: {}
+        -   Folder: "Entorno/Obstáculos"
+            Entity:
+                Id: 43a0f70d-9590-47d8-8ed8-79ed738a7d35
+                Name: Cube
+                Components:
+                    ae0a1c16314df115170f0165e6677708: !ModelComponent
+                        Id: 346200b1-f231-42eb-a1e5-d3ab2c6cc15a
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: 2cac70f4-6ead-44cc-b685-516b63e0b8b2
+                        Position: {X: 10.0, Y: 0.01, Z: 4.447}
+                        Rotation: {X: 0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
+                        Scale: {X: 2.0, Y: 2.0, Z: 4.5}
+                        Children: {}
+                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
+                        Id: dbed9c64-324e-4cbe-997b-6010f7eb6749
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: "Entorno/Obstáculos"
+            Entity:
+                Id: 442ecefd-9d8c-4e23-a74a-5b10de50d15d
+                Name: Cube
+                Components:
+                    ae0a1c16314df115170f0165e6677708: !ModelComponent
+                        Id: 9fb31aca-254d-4a6e-8e4b-3d4edd076bc1
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: e53a5640-5f0c-4ebb-91f9-b3136e89c9f0
+                        Position: {X: 10.0, Y: 0.01, Z: -4.447}
+                        Rotation: {X: -0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
+                        Scale: {X: 2.0, Y: 2.0, Z: 4.5}
+                        Children: {}
+                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
+                        Id: 77086fd5-9e52-4887-832d-cb038a0a1689
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 46624e17-7c51-4632-b9eb-fabc06e5cd94
                 Name: Modelo
@@ -470,7 +553,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 2c28075e-0b8e-49ee-a1ac-9996981dc5bd
-                        Position: {X: 16.0, Y: 0.5, Z: 2.0}
+                        Position: {X: 16.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -548,7 +631,7 @@ Hierarchy:
                 Components:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: dc9ac95a-a725-4ea0-82d2-5a047ae63b5a
-                        Position: {X: 0.0, Y: 1.0, Z: -4.0}
+                        Position: {X: 0.0, Y: 1.0, Z: -5.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 4.0, Y: 2.0, Z: 1.0}
                         Children: {}
@@ -580,7 +663,7 @@ Hierarchy:
                 Components:
                     c33370e3f98af373ee21dfd537660cbb: !TransformComponent
                         Id: cd339641-cdd1-4184-a92f-522780cbe3ac
-                        Position: {X: -1.0, Y: 0.0, Z: 12.0}
+                        Position: {X: -1.0, Y: 0.0, Z: 16.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -695,26 +778,6 @@ Hierarchy:
                         Id: a86c98e9-d19a-4b9c-a4d1-ead407bc67e0
                         controlador: ref!! dd82e74f-617b-481e-bb36-34773b64d421
                         multiplicador: 1.0
-        -   Folder: null
-            Entity:
-                Id: 82498f67-d792-4abd-ba8f-3c37e1cd1d16
-                Name: Modelo
-                Components:
-                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
-                        Id: 0c050d77-491c-44a0-8348-f3632eab864f
-                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            b1cd0eb54b0ddbc8ec48caaef2c6799a: ref!! e43f229b-2778-45d4-a3cb-933c1c1d4bc9
-                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
-                        Id: 3f013060-aa58-43f7-9e22-ac41076cdb96
-                        Model: e2c61240-3de0-4c53-821b-1b0e54af2827:Modelos/Dron/Dron
-                        Materials: {}
-            Base:
-                BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Dron
-                BasePartId: 2e94d3f0-7c64-4ad6-a82c-e93b0cf6854e
-                InstanceId: e874bdd9-8238-4daa-ae53-e07cc3b4c54e
         -   Entity:
                 Id: 86ce93a1-ae39-4e71-92c0-223e2ee4fe62
                 Name: Modelo
@@ -740,7 +803,7 @@ Hierarchy:
                         Materials: {}
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: fa742505-f28a-43fb-9b75-e753aedeaee8
-                        Position: {X: -5.0, Y: 1.0, Z: 0.0}
+                        Position: {X: -10.0, Y: 1.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 2.0, Y: 2.0, Z: 6.0}
                         Children: {}
@@ -768,7 +831,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 5f6d0967-5c43-448f-87f9-70e56cdfa1d1
-                        Position: {X: -7.994457, Y: 0.0, Z: 0.0}
+                        Position: {X: -7.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 2.0, Y: 0.5, Z: 2.0}
                         Children:
@@ -865,13 +928,13 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 9778c9f7-ee25-4fad-84cc-397d06ee1a61
-                Name: Lava
+                Name: Lava 0
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: a4d2b804-a80d-4e82-b855-6ff54f95b8cf
-                        Position: {X: 15.0, Y: 0.0, Z: -5.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -15.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 4.0, Y: 0.5, Z: 4.0}
+                        Scale: {X: 30.0, Y: 0.5, Z: 2.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! afccf0ce-6856-463c-b8f9-3965a352b7d0
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
@@ -966,7 +1029,7 @@ Hierarchy:
                 Components:
                     ebfe5ceaccdf331f90ace23a84d4c1bb: !TransformComponent
                         Id: 3a6d564a-7a5b-4abd-adb3-72da02f11f80
-                        Position: {X: 3.0, Y: 0.0, Z: 12.0}
+                        Position: {X: 3.0, Y: 0.0, Z: 15.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: -0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -981,7 +1044,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: d06c1b2e-e204-4081-b2a8-4f1d9678ef13
-                        Position: {X: 16.0, Y: 0.5, Z: 6.0}
+                        Position: {X: 16.0, Y: 0.5, Z: 5.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1021,56 +1084,51 @@ Hierarchy:
                         Children:
                             54d9233232d55c02a600c6c8a5ad47ff: ref!! cb8b7c02-8937-482e-b5d6-77439268b21f
         -   Entity:
-                Id: b9375e47-0d3d-4ecf-8904-75f64e879f9f
-                Name: Dron
+                Id: b78b3bf7-554c-4fa6-90e0-008c8d904785
+                Name: Modelo
                 Components:
-                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
-                        Id: f18cc638-50ee-4828-9d43-72f292973ec9
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        FallSpeed: 10.0
-                        MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 10.0
-                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
-                        ColliderShapes:
-                            ed72926b10062c3c2c8aad3be9245c95: !SphereColliderShapeDesc
-                                Is2D: false
-                                Radius: 0.4
-                                LocalOffset: {X: 0.0, Y: 0.4, Z: 0.0}
-                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
-                        Id: 0db99625-4e0b-4e10-b33e-1693a208cb00
-                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
-                        GroupId: 2bdbfe22-c886-4059-a832-34043684b804
-                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
-                        Id: c0463d1c-0bdd-4511-a1e2-b48010257227
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 4ae2fbba-00a6-46bf-a96f-f24cc2c97f4e
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 0c050d77-491c-44a0-8348-f3632eab864f
-                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! e7fcf0d9-0ff7-4f21-a6e4-28a94d656be8
-                    7f6e66f0d97456bb9a986066b6ffeee1: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
-                        Id: 8fe5d8cc-99eb-4837-883e-1737f160c582
-                        enemigo: rangoLigero
-                        "armaMelé": null
-                        armaRango: ref!! 55831035-649c-46a5-a2dc-010662d71600
-                        cuerpos:
-                            ad5f371af09d736586a420c788f25eaf: ref!! 65c3fd6c-7e33-4e4d-90df-26c69638ef8b
-                    33ce25eb8ee99f15b44e0a062cbfffd2: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
-                        Id: 8dc22327-9836-4aa0-96bf-010225e8c0d0
-                    f8a8bea51b0be6e7628afcbf94a7d8aa: !Bozobaralika.AnimadorDron,Bozobaralika.Proyecto
-                        Id: 48e8d1dc-2571-49a6-b7fd-2d0bcd0a5b1a
-                        modelo: ref!! 0c050d77-491c-44a0-8348-f3632eab864f
-            Base:
-                BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Dron
-                BasePartId: c9de616d-fc44-4005-a31a-6d8dcd5084c0
-                InstanceId: e874bdd9-8238-4daa-ae53-e07cc3b4c54e
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 57727071-0b3d-430d-b779-98daefe5da7d
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+        -   Folder: "Entorno/Obstáculos"
+            Entity:
+                Id: b98edd79-ab8c-48c3-918b-dadfca384f26
+                Name: Cube
+                Components:
+                    ae0a1c16314df115170f0165e6677708: !ModelComponent
+                        Id: bd150e24-316a-41ba-a47f-77d2bfc5eeb1
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: 32dca679-f463-4c20-9384-6e08dce33363
+                        Position: {X: 10.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 6.0}
+                        Children: {}
+                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
+                        Id: db1e5041-a398-4172-a7ac-660f5c6bcd57
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: b9bcaf75-d766-4cdc-9c86-025cf46dd616
                 Name: Puerta (azul)
@@ -1086,49 +1144,6 @@ Hierarchy:
                         Id: 9194a635-debe-429c-ac9f-bd9febb8be88
                         modelo: ref!! 69714a1b-fdeb-46ba-bcc7-8a8f1d584e19
                         "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
-        -   Folder: null
-            Entity:
-                Id: c9008215-a8ca-46ad-907f-f3a08104c564
-                Name: "Dañable"
-                Components:
-                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
-                        Id: e43f229b-2778-45d4-a3cb-933c1c1d4bc9
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
-                        Children: {}
-                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
-                        Id: 65c3fd6c-7e33-4e4d-90df-26c69638ef8b
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
-                        Id: 736870e0-4cd7-4867-8586-ba815fd2f46e
-                        controlador: ref!! b9375e47-0d3d-4ecf-8904-75f64e879f9f
-                        multiplicador: 1.0
-            Base:
-                BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Dron
-                BasePartId: 3e030e67-ae9e-4de3-8284-c581daed4b81
-                InstanceId: e874bdd9-8238-4daa-ae53-e07cc3b4c54e
         -   Entity:
                 Id: cb74dedf-a315-4eb5-a0b0-bf447505f378
                 Name: Modelo
@@ -1184,7 +1199,8 @@ Hierarchy:
                             23dbc0b2458cddf36f86fa2127a63436: !StaticPlaneColliderShapeDesc
                                 Normal: {X: 0.0, Y: 1.0, Z: 0.0}
                                 Offset: 0.0
-        -   Entity:
+        -   Folder: Entorno
+            Entity:
                 Id: d3476e3f-eee5-41dc-9c59-89b96ac24a2b
                 Name: "Navegación"
                 Components:
@@ -1423,7 +1439,7 @@ Hierarchy:
                         Materials: {}
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 54231152-8e5d-4adf-923f-606314ebce36
-                        Position: {X: -5.0, Y: 0.01, Z: -4.447}
+                        Position: {X: -10.0, Y: 0.01, Z: -4.447}
                         Rotation: {X: -0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
                         Scale: {X: 2.0, Y: 2.0, Z: 4.5}
                         Children: {}
@@ -1465,7 +1481,7 @@ Hierarchy:
                 Components:
                     e2b0031d964e8fb217d93c961d8c4399: !TransformComponent
                         Id: 82c37e53-c0b6-443a-ba50-890dcc1a9daa
-                        Position: {X: -6.0, Y: 0.0, Z: 12.0}
+                        Position: {X: -6.0, Y: 0.0, Z: 15.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: -0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1482,7 +1498,7 @@ Hierarchy:
                 Components:
                     3fd546bbf0bcc195c42a712c4ef0386b: !TransformComponent
                         Id: e72efb76-8024-4580-84cc-70b076829981
-                        Position: {X: 7.0, Y: 0.0, Z: 12.0}
+                        Position: {X: 7.0, Y: 0.0, Z: 15.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: -0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1497,7 +1513,7 @@ Hierarchy:
                 Components:
                     157ba8be7a32f345a137c5e11f70817b: !TransformComponent
                         Id: 9a8de1f5-1d9e-4555-8c75-dfde29dc49d3
-                        Position: {X: 1.0, Y: 2.0000012, Z: 12.0}
+                        Position: {X: 1.0, Y: 2.0000012, Z: 15.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: -0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
