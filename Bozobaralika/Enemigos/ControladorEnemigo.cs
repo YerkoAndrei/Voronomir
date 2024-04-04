@@ -14,7 +14,7 @@ public class ControladorEnemigo : SyncScript, IDañable
     public ControladorArmaRango armaRango;
 
     private CharacterComponent cuerpo;
-    private ControladorPersecusión persecusión;
+    private ControladorPersecusión persecutor;
     private float vida;
     private bool activo;
     private bool melé;
@@ -22,40 +22,40 @@ public class ControladorEnemigo : SyncScript, IDañable
     public override void Start()
     {
         cuerpo = Entity.Get<CharacterComponent>();
-        persecusión = Entity.Get<ControladorPersecusión>();
+        persecutor = Entity.Get<ControladorPersecusión>();
 
         switch (enemigo)
         {
             case Enemigos.meléLigero:
                 vida = 80;
                 melé = true;
-                persecusión.Iniciar(this, 0.1f, 7f, 6f, 1.5f);
+                persecutor.Iniciar(this, 0.1f, 7f, 6f, 1.5f, false);
                 break;
             case Enemigos.meléMediano:
                 vida = 200;
                 melé = true;
-                persecusión.Iniciar(this, 0.1f, 4f, 5f, 2.5f);
+                persecutor.Iniciar(this, 0.1f, 4f, 5f, 2.5f, false);
                 break;
             case Enemigos.meléPesado:
                 vida = 50;
                 melé = true;
-                persecusión.Iniciar(this, 0.1f, 10f, 4f, 5f);
+                persecutor.Iniciar(this, 1f, 10f, 4f, 5f, true);
                 break;
 
             case Enemigos.rangoLigero:
                 vida = 40;
                 melé = false;
-                persecusión.Iniciar(this, 0.5f, 12f, 0f, 6f);
+                persecutor.Iniciar(this, 0.5f, 16f, 0f, 6f, true);
                 break;
             case Enemigos.rangoMediano:
                 vida = 100;
                 melé = false;
-                persecusión.Iniciar(this, 0.5f, 2f, 5f, 10f);
+                persecutor.Iniciar(this, 0.5f, 2f, 5f, 10f, false);
                 break;
             case Enemigos.rangoPesado:
                 vida = 500;
                 melé = false;
-                persecusión.Iniciar(this, 0.5f, 5f, 5f, 12f);
+                persecutor.Iniciar(this, 0.5f, 5f, 5f, 12f, false);
                 break;
 
             case Enemigos.especialLigero:
@@ -89,7 +89,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             return;
 
         // Updates
-        persecusión.Actualizar();
+        persecutor.Actualizar();
     }
 
     public void Atacar()
@@ -118,6 +118,7 @@ public class ControladorEnemigo : SyncScript, IDañable
     {
         activo = false;
         cuerpo.Enabled = false;
+        persecutor.EliminarPersecutor();
         Entity.Scene.Entities.Remove(Entity);
     }
 
