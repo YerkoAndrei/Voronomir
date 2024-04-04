@@ -10,7 +10,6 @@ public class AnimadorDron : StartupScript, IAnimador
 
     private TransformComponent objetivo;
 	private Vector3 dirección;
-	private Quaternion rotación;
 
 	public void Iniciar()
     {
@@ -21,13 +20,7 @@ public class AnimadorDron : StartupScript, IAnimador
     public void Actualizar()
     {
         dirección = Vector3.Normalize(objetivo.WorldMatrix.TranslationVector - modelo.WorldMatrix.TranslationVector);
-        rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
-
-        // Hijo anula rotación padre
-        if (Entity.Transform.Parent != null)
-            rotación *= Quaternion.Invert(Entity.Transform.Parent.Rotation);
-
-        modelo.Rotation = rotación;
+        modelo.Rotation = Quaternion.Lerp(modelo.Rotation, Quaternion.LookRotation(dirección, Vector3.UnitY), 10 * (float)Game.UpdateTime.Elapsed.TotalSeconds);
     }
 
     public void Caminar(float velocidad)
