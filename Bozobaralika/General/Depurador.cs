@@ -2,19 +2,41 @@
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
+using Stride.Input;
 
 namespace Bozobaralika;
 using static Constantes;
 
 public class Depurador : AsyncScript
 {
+    public Prefab zombi;
+    public Prefab lancero;
+    public Prefab cerebro;
+
     public override async Task Execute()
     {
         var jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Get<ControladorJugador>();
         var animaciónArmas = Entity.Scene.Entities.Where(o => o.Get<ControladorArmas>() != null).FirstOrDefault().Get<ControladorArmas>();
 
         while (Game.IsRunning)
-        {/*
+        {
+            if (Input.IsKeyPressed(Keys.Y))
+            {
+                var enemigo = zombi.Instantiate()[0];
+                Entity.Scene.Entities.Add(enemigo);
+            }
+            if (Input.IsKeyPressed(Keys.U))
+            {
+                var enemigo = lancero.Instantiate()[0];
+                Entity.Scene.Entities.Add(enemigo);
+            }
+            if (Input.IsKeyPressed(Keys.I))
+            {
+                var enemigo = cerebro.Instantiate()[0];
+                Entity.Scene.Entities.Add(enemigo);
+            }
+
+            /*
             // Jugador
             DebugText.Print(jugador.vida + "/" + jugador.vidaMax, new Int2(x: 20, y: 20));
 
@@ -45,7 +67,8 @@ public class Depurador : AsyncScript
                     DebugText.Print(jugador.armas.animadorEspada.duraciónAnimación.ToString(), new Int2(x: 20, y: 110));
                     DebugText.Print(jugador.armas.animadorEspada.fuerzaAnimación.ToString(), new Int2(x: 20, y: 120));
                     break;
-            }*/            
+            }
+            */
             await Script.NextFrame();
         }
     }
