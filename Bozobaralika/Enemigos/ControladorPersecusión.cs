@@ -44,9 +44,9 @@ public class ControladorPersecusión : StartupScript
 
     public void Iniciar(ControladorEnemigo _controlador, float _tiempoBusqueda, float _velocidad, float _rotación, float _distanciaAtaque, bool _persecutorTrigonométrico)
     {
-        persecutor = Entity.Scene.Entities.Where(o => o.Get<ControladorPersecusionesTrigonométricas>() != null).FirstOrDefault().Get<ControladorPersecusionesTrigonométricas>();
         jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Transform;
 
+        // Busca animador
         foreach (var componente in Entity.Components)
         {
             if (componente is IAnimador)
@@ -73,7 +73,14 @@ public class ControladorPersecusión : StartupScript
 
         persecutorTrigonométrico = _persecutorTrigonométrico;
         if (persecutorTrigonométrico)
+        {
+            // Busca persecutor trigonométrico
+            var entidad = Entity.Scene.Entities.Where(o => o.Get<ControladorPersecusionesTrigonométricas>() != null).FirstOrDefault();
+            var persecutores = entidad.GetAll<ControladorPersecusionesTrigonométricas>();
+            persecutor = persecutores.Where(o => o.enemigo == controlador.enemigo).FirstOrDefault();
+
             índiceTrigonométrico = persecutor.ObtenerÍndiceTrigonométrico(this);
+        }
     }
 
     public void Actualizar()

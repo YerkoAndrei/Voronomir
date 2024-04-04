@@ -5,17 +5,29 @@ using Stride.Core.Mathematics;
 using Stride.Engine;
 
 namespace Bozobaralika;
+using static Constantes;
 
 public class ControladorPersecusionesTrigonométricas : SyncScript
 {
-    private TransformComponent jugador;
-    private Vector3[] posicionesCirculares;
+    public Enemigos enemigo;
+
     private List<ControladorPersecusión> persecutores;
+    private Vector3[] posicionesCirculares;
+    private TransformComponent jugador;
+    private float radio;
+
+    private Vector3 dirección;
+    private float ángulo;
 
     public override void Start()
     {
         jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Transform;
         persecutores = new List<ControladorPersecusión>();
+
+        // Radio según tipo enemigo
+        var controladorTemp = new ControladorEnemigo();
+        controladorTemp.enemigo = enemigo;
+        radio = controladorTemp.ObtenerDistanciaAtaque() - 1;
     }
 
     public override void Update()
@@ -24,16 +36,13 @@ public class ControladorPersecusionesTrigonométricas : SyncScript
             return;
         
         // Circulizar posiciones con trigonometría
-        var círculoRelativo = 360f / persecutores.Count;
-        var radioEsfera = 4f;
         posicionesCirculares = new Vector3[persecutores.Count];
 
         for (int i = 0; i < persecutores.Count; i++)
         {
-            var ángulo = i * MathUtil.DegreesToRadians(círculoRelativo);
-
-            Vector3 dirección = new Vector3(MathF.Cos(ángulo), 0, MathF.Sin(ángulo));
-            dirección = Vector3.Normalize(dirección) * radioEsfera;
+            ángulo = i * MathUtil.DegreesToRadians(360f / persecutores.Count);
+            dirección = new Vector3(MathF.Cos(ángulo), 0, MathF.Sin(ángulo));
+            dirección = Vector3.Normalize(dirección) * radio;
 
             posicionesCirculares[i] = (jugador.WorldMatrix.TranslationVector + dirección);
         }

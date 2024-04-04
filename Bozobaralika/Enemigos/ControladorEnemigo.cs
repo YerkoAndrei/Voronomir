@@ -29,33 +29,33 @@ public class ControladorEnemigo : SyncScript, IDañable
             case Enemigos.meléLigero:
                 vida = 80;
                 melé = true;
-                persecutor.Iniciar(this, 0.1f, 7f, 6f, 1.5f, false);
+                persecutor.Iniciar(this, 0.1f, 7f, 6f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.meléMediano:
                 vida = 200;
                 melé = true;
-                persecutor.Iniciar(this, 0.1f, 4f, 5f, 2.5f, false);
+                persecutor.Iniciar(this, 0.1f, 4f, 5f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.meléPesado:
                 vida = 50;
                 melé = true;
-                persecutor.Iniciar(this, 1f, 10f, 4f, 5f, true);
+                persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), true);
                 break;
 
             case Enemigos.rangoLigero:
                 vida = 40;
                 melé = false;
-                persecutor.Iniciar(this, 0.5f, 16f, 0f, 6f, true);
+                persecutor.Iniciar(this, 0.5f, 16f, 0f, ObtenerDistanciaAtaque(), true);
                 break;
             case Enemigos.rangoMediano:
                 vida = 100;
                 melé = false;
-                persecutor.Iniciar(this, 0.5f, 2f, 5f, 10f, false);
+                persecutor.Iniciar(this, 0.5f, 2f, 5f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.rangoPesado:
                 vida = 500;
                 melé = false;
-                persecutor.Iniciar(this, 0.5f, 5f, 5f, 12f, false);
+                persecutor.Iniciar(this, 0.5f, 5f, 5f, ObtenerDistanciaAtaque(), false);
                 break;
 
             case Enemigos.especialLigero:
@@ -147,6 +147,38 @@ public class ControladorEnemigo : SyncScript, IDañable
                 return 20;
             case Enemigos.rangoPesado:
                 return 40;
+            default:
+                return 0;
+        }
+    }
+
+    public float ObtenerDistanciaAtaque()
+    {
+        switch (enemigo)
+        {
+            case Enemigos.meléLigero:
+                return 1.5f;
+            case Enemigos.meléMediano:
+                return 2.5f;
+            case Enemigos.meléPesado:
+                return 4f;
+            case Enemigos.rangoLigero:
+                return 6f;
+            case Enemigos.rangoMediano:
+                return 10f;
+            case Enemigos.rangoPesado:
+                return 12f;
+
+            case Enemigos.especialLigero:
+                return 0.2f;
+            case Enemigos.especialPesado:
+                return 0.2f;
+
+            case Enemigos.minijefeMelé:
+                return 0.2f;
+            case Enemigos.minijefeRango:
+                return 0.2f;
+
             default:
                 return 0;
         }
