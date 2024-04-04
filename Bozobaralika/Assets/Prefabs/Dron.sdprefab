@@ -83,12 +83,12 @@ Hierarchy:
                         CollisionGroup: KinematicFilter
                         CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter
                         CanSleep: false
-                        Restitution: 0.0
+                        Restitution: 0.2
                         Friction: 0.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
-                        StepHeight: 0.2
+                        StepHeight: 0.25
                         FallSpeed: 10.0
                         MaxSlope: {Radians: 0.7853982}
                         JumpSpeed: 10.0

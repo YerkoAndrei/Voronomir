@@ -51,16 +51,16 @@ Defaults:
                 Name: Aereo
                 AgentSettings:
                     Height: 2.0
-                    MaxClimb: 2.0
-                    MaxSlope: {Radians: 1.5882496}
+                    MaxClimb: 0.5
+                    MaxSlope: {Radians: 1.7453293}
                     Radius: 0.1
             -   Id: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                 Name: TodoTerreno
                 AgentSettings:
                     Height: 1.0
-                    MaxClimb: 2.0
-                    MaxSlope: {Radians: 1.5882496}
-                    Radius: 1.0
+                    MaxClimb: 0.5
+                    MaxSlope: {Radians: 1.7453293}
+                    Radius: 0.5
 Overrides: []
 PlatformFilters:
     - PowerVR SGX 54[0-9]
