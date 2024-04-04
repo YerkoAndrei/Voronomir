@@ -1,0 +1,123 @@
+!PrefabAsset
+Id: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! c9de616d-fc44-4005-a31a-6d8dcd5084c0
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 2e94d3f0-7c64-4ad6-a82c-e93b0cf6854e
+                Name: Modelo
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: 07e87824-3863-43ff-971b-5642118571c8
+                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b1cd0eb54b0ddbc8ec48caaef2c6799a: ref!! 791cf914-dc78-4cc8-9b21-e41d7ad57013
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: ac260142-919c-4d8b-a867-56b5a16854c7
+                        Model: e2c61240-3de0-4c53-821b-1b0e54af2827:Modelos/Dron/Dron
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 3e030e67-ae9e-4de3-8284-c581daed4b81
+                Name: "Dañable"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 791cf914-dc78-4cc8-9b21-e41d7ad57013
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: b6acb4b1-f705-4fa2-976d-216152784495
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: d75d85ce-c3e7-4d8a-b4eb-3e39a9b85108
+                        controlador: ref!! c9de616d-fc44-4005-a31a-6d8dcd5084c0
+                        multiplicador: 1.0
+        -   Folder: null
+            Entity:
+                Id: bf77fc42-44b9-4f29-a8a2-1e60fe58f1f3
+                Name: ArmaRango
+                Components:
+                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
+                        Id: 7ef7850b-9a81-4423-8140-1b6535743cc8
+                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 0.0}
+                        Children: {}
+                    856fb470e4a1b772f510f0cef700d9bb: !Bozobaralika.ControladorArmaRango,Bozobaralika.Proyecto
+                        Id: 7c0c0baa-c7d8-4edc-bfe9-0f947660bd35
+        -   Entity:
+                Id: c9de616d-fc44-4005-a31a-6d8dcd5084c0
+                Name: Dron
+                Components:
+                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
+                        Id: 8d4fff33-9ccb-4493-a7b1-12b4152ff742
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 10.0
+                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
+                        ColliderShapes:
+                            ed72926b10062c3c2c8aad3be9245c95: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 0.4, Z: 0.0}
+                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
+                        Id: 2fbc4d09-b1c3-4018-9614-373a2aa5121f
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: 2bdbfe22-c886-4059-a832-34043684b804
+                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
+                        Id: 811056ab-1710-41bc-ba2d-c858926a13b7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 07e87824-3863-43ff-971b-5642118571c8
+                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! 7ef7850b-9a81-4423-8140-1b6535743cc8
+                    7f6e66f0d97456bb9a986066b6ffeee1: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                        Id: e54a000a-7d20-48df-898b-5fced74ce053
+                        enemigo: rangoLigero
+                        "armaMelé": null
+                        armaRango: ref!! 7c0c0baa-c7d8-4edc-bfe9-0f947660bd35
+                        cuerpos:
+                            ad5f371af09d736586a420c788f25eaf: ref!! b6acb4b1-f705-4fa2-976d-216152784495
+                    33ce25eb8ee99f15b44e0a062cbfffd2: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: a856b63a-c2d6-4b60-9a27-0727b457357a
+                    f8a8bea51b0be6e7628afcbf94a7d8aa: !Bozobaralika.AnimadorDron,Bozobaralika.Proyecto
+                        Id: d69fa50d-19f7-4b98-a773-c6ee979a51b7
+                        modelo: ref!! 07e87824-3863-43ff-971b-5642118571c8

@@ -70,6 +70,8 @@ public class ControladorPersecusión : StartupScript
 
     public void Actualizar()
     {
+        animador.Actualizar();
+
         if (atacando)
         {
             MirarJugador(velocidadRotación * 0.5f);

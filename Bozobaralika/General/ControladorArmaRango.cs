@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Stride.Engine;
+﻿using Stride.Engine;
 using Stride.Physics;
 
 namespace Bozobaralika;

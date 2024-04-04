@@ -12,6 +12,9 @@ public class Depurador : AsyncScript
     public Prefab zombi;
     public Prefab lancero;
     public Prefab cerebro;
+    public Prefab dron;
+    //public Prefab babosa;
+    //public Prefab araña;
 
     public override async Task Execute()
     {
@@ -20,19 +23,24 @@ public class Depurador : AsyncScript
 
         while (Game.IsRunning)
         {
-            if (Input.IsKeyPressed(Keys.Y))
+            if (Input.IsKeyPressed(Keys.T))
             {
                 var enemigo = zombi.Instantiate()[0];
                 Entity.Scene.Entities.Add(enemigo);
             }
-            if (Input.IsKeyPressed(Keys.U))
+            if (Input.IsKeyPressed(Keys.Y))
             {
                 var enemigo = lancero.Instantiate()[0];
                 Entity.Scene.Entities.Add(enemigo);
             }
-            if (Input.IsKeyPressed(Keys.I))
+            if (Input.IsKeyPressed(Keys.U))
             {
                 var enemigo = cerebro.Instantiate()[0];
+                Entity.Scene.Entities.Add(enemigo);
+            }
+            if (Input.IsKeyPressed(Keys.I))
+            {
+                var enemigo = dron.Instantiate()[0];
                 Entity.Scene.Entities.Add(enemigo);
             }
 

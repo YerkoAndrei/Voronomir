@@ -60,6 +60,11 @@ public class AnimadorLancero : StartupScript, IAnimador
         rotaciónLanzaInicial = Quaternion.RotationYawPitchRoll(0, 0, -lanza.RotationEulerXYZ.Y);
     }
 
+    public void Actualizar()
+    {
+
+    }
+
     public void Caminar(float velocidad)
     {
         esqueleto.NodeTransformations[idPiernas[0]].Transform.Rotation *= Quaternion.RotationY(-0.2f * velocidad);

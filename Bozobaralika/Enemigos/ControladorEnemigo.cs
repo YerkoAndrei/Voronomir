@@ -41,10 +41,11 @@ public class ControladorEnemigo : SyncScript, IDañable
                 melé = true;
                 persecusión.Iniciar(this, 0.1f, 10f, 4f, 5f);
                 break;
+
             case Enemigos.rangoLigero:
                 vida = 40;
                 melé = false;
-                persecusión.Iniciar(this, 0.5f, 10f, 5f, 2f);
+                persecusión.Iniciar(this, 0.5f, 12f, 0f, 6f);
                 break;
             case Enemigos.rangoMediano:
                 vida = 100;

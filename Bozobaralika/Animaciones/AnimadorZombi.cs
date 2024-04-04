@@ -48,6 +48,11 @@ public class AnimadorZombi : StartupScript, IAnimador
         rotaciónInicio1 = esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation;
     }
 
+    public void Actualizar()
+    {
+
+    }
+
     public void Caminar(float velocidad)
     {
         esqueleto.NodeTransformations[idPiernas[0]].Transform.Rotation *= Quaternion.RotationY(-0.2f * velocidad);

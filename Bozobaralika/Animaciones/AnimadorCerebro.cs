@@ -12,6 +12,11 @@ public class AnimadorCerebro : StartupScript, IAnimador
 
     }
 
+    public void Actualizar()
+    {
+
+    }
+
     public void Caminar(float velocidad)
     {
         rueda.Rotation *= Quaternion.RotationY(0.2f * velocidad);

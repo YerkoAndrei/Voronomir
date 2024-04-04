@@ -6,16 +6,11 @@ ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
-        - ref!! 52cd02bd-3165-4aa6-8d1e-7538541119a3
-        - ref!! dca75c2f-3874-4e83-9565-15c148fa0401
-        - ref!! ff5480c7-125b-4faf-a925-a78b68f1b73b
         - ref!! d3476e3f-eee5-41dc-9c59-89b96ac24a2b
+        - ref!! ff5480c7-125b-4faf-a925-a78b68f1b73b
         - ref!! d5817381-6a16-4585-b384-72760aaa3d44
+        - ref!! b9375e47-0d3d-4ecf-8904-75f64e879f9f
         - ref!! dd82e74f-617b-481e-bb36-34773b64d421
-        - ref!! 2c46881f-53e6-4d1d-85df-924007329f46
-        - ref!! d471c428-d220-4860-b67e-f0ad26d2d613
-        - ref!! 1203753a-eca1-4f4a-85e3-0edf0ce91347
-        - ref!! f557bc44-8313-4a06-ba9a-35f36f7d42de
         - ref!! 00a9628e-10ba-490b-b4de-135740c5d52b
         - ref!! 614f2b4b-5916-4eef-82c7-8951ea902122
         - ref!! 41ff8583-2be9-4314-986b-7a66d760d5f7
@@ -24,10 +19,8 @@ Hierarchy:
         - ref!! a9178381-0e65-41e7-b367-ddfb062cebe6
         - ref!! edeff615-c141-4feb-96da-868b5fe6ebc8
         - ref!! cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
-        - ref!! eb300b4d-c14f-4f40-b4b3-e09e965b69a5
-        - ref!! 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
-        - ref!! 8b42ea7d-752a-4920-97e2-1646ec7b9189
-        - ref!! 5806e859-d7ec-42d4-ac78-edfc026317d2
+        - ref!! 52cd02bd-3165-4aa6-8d1e-7538541119a3
+        - ref!! dca75c2f-3874-4e83-9565-15c148fa0401
         - ref!! 510ed132-3f81-42a5-9c8c-e52f9348ffab
         - ref!! a9c0250e-6712-4e86-bc3f-78047f439de2
         - ref!! a54e658d-bb78-4833-b114-e0ad88f4652c
@@ -37,8 +30,16 @@ Hierarchy:
         - ref!! 3e1c62cc-564a-4570-b7d1-37c0f75161c4
         - ref!! 311b2d5b-74ee-48ad-bcc9-b44a58714aee
         - ref!! b9bcaf75-d766-4cdc-9c86-025cf46dd616
+        - ref!! 2c46881f-53e6-4d1d-85df-924007329f46
+        - ref!! d471c428-d220-4860-b67e-f0ad26d2d613
+        - ref!! 1203753a-eca1-4f4a-85e3-0edf0ce91347
+        - ref!! f557bc44-8313-4a06-ba9a-35f36f7d42de
+        - ref!! eb300b4d-c14f-4f40-b4b3-e09e965b69a5
+        - ref!! 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
+        - ref!! 8b42ea7d-752a-4920-97e2-1646ec7b9189
+        - ref!! 5806e859-d7ec-42d4-ac78-edfc026317d2
     Parts:
-        -   Folder: Enemigos
+        -   Folder: MuestraEnemigos
             Entity:
                 Id: 00a9628e-10ba-490b-b4de-135740c5d52b
                 Name: Zombi Min
@@ -102,7 +103,7 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Folder: Entorno
+        -   Folder: "Entorno/Obstáculos"
             Entity:
                 Id: 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
                 Name: Cube
@@ -134,7 +135,7 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Folder: Muros
+        -   Folder: Entorno/Muros
             Entity:
                 Id: 1203753a-eca1-4f4a-85e3-0edf0ce91347
                 Name: Cube
@@ -246,7 +247,7 @@ Hierarchy:
                         Model: 53769a50-21f0-4a6e-a207-518d4b9bbf96:Modelos/Jugador/Geroi
                         RenderGroup: Group10
                         Materials: {}
-        -   Folder: Muros
+        -   Folder: Entorno/Muros
             Entity:
                 Id: 2c46881f-53e6-4d1d-85df-924007329f46
                 Name: Cube
@@ -279,6 +280,23 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: 304fa5e8-e0f6-41b4-a3a0-8af23f5ab437
+                Name: ArmaRango
+                Components:
+                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
+                        Id: e7fcf0d9-0ff7-4f21-a6e4-28a94d656be8
+                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 0.0}
+                        Children: {}
+                    856fb470e4a1b772f510f0cef700d9bb: !Bozobaralika.ControladorArmaRango,Bozobaralika.Proyecto
+                        Id: 55831035-649c-46a5-a2dc-010662d71600
+            Base:
+                BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Dron
+                BasePartId: bf77fc42-44b9-4f29-a8a2-1e60fe58f1f3
+                InstanceId: e874bdd9-8238-4daa-ae53-e07cc3b4c54e
         -   Entity:
                 Id: 311b2d5b-74ee-48ad-bcc9-b44a58714aee
                 Name: "Botón (azul)"
@@ -387,7 +405,7 @@ Hierarchy:
                     ae77dc873a2c3c32c294301875605415: !Bozobaralika.ControladorSaltador,Bozobaralika.Proyecto
                         Id: 1f851cb4-4db3-45b6-a7dc-aa657a3757a4
                         fuerza: 15.0
-        -   Folder: Enemigos
+        -   Folder: MuestraEnemigos
             Entity:
                 Id: 41ff8583-2be9-4314-986b-7a66d760d5f7
                 Name: Lancero
@@ -490,7 +508,8 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             0eda69cb917f5ccb8823d158d0a0ab1c: ref!! f8da5fff-2637-4fbf-a5da-7cc4fd74113d
-        -   Entity:
+        -   Folder: Entorno
+            Entity:
                 Id: 52cd02bd-3165-4aa6-8d1e-7538541119a3
                 Name: Skybox
                 Components:
@@ -522,7 +541,7 @@ Hierarchy:
                             6a29955c10063a64daa1d56f368541fa: ref!! f7300ce2-e3aa-4ab2-b570-1088bafc74b6
                             5c814983963e13056fea52f24dc70768: ref!! 4f7735e0-acf0-42df-894e-04ecbf946282
                             a8c3279d3a24a7d3a0ff3f5b27085e32: ref!! 682594ba-64d0-4992-8616-d0efec91d56b
-        -   Folder: Entorno
+        -   Folder: "Entorno/Obstáculos"
             Entity:
                 Id: 5806e859-d7ec-42d4-ac78-edfc026317d2
                 Name: Cube
@@ -554,7 +573,7 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Folder: Enemigos
+        -   Folder: MuestraEnemigos
             Entity:
                 Id: 614f2b4b-5916-4eef-82c7-8951ea902122
                 Name: Zombi Max
@@ -676,6 +695,26 @@ Hierarchy:
                         Id: a86c98e9-d19a-4b9c-a4d1-ead407bc67e0
                         controlador: ref!! dd82e74f-617b-481e-bb36-34773b64d421
                         multiplicador: 1.0
+        -   Folder: null
+            Entity:
+                Id: 82498f67-d792-4abd-ba8f-3c37e1cd1d16
+                Name: Modelo
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: 0c050d77-491c-44a0-8348-f3632eab864f
+                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b1cd0eb54b0ddbc8ec48caaef2c6799a: ref!! e43f229b-2778-45d4-a3cb-933c1c1d4bc9
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: 3f013060-aa58-43f7-9e22-ac41076cdb96
+                        Model: e2c61240-3de0-4c53-821b-1b0e54af2827:Modelos/Dron/Dron
+                        Materials: {}
+            Base:
+                BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Dron
+                BasePartId: 2e94d3f0-7c64-4ad6-a82c-e93b0cf6854e
+                InstanceId: e874bdd9-8238-4daa-ae53-e07cc3b4c54e
         -   Entity:
                 Id: 86ce93a1-ae39-4e71-92c0-223e2ee4fe62
                 Name: Modelo
@@ -690,7 +729,7 @@ Hierarchy:
                         Id: 9e007192-e377-4754-8f76-f47349581a74
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         Materials: {}
-        -   Folder: Entorno
+        -   Folder: "Entorno/Obstáculos"
             Entity:
                 Id: 8b42ea7d-752a-4920-97e2-1646ec7b9189
                 Name: Cube
@@ -920,7 +959,7 @@ Hierarchy:
                         llave: nada
                         puerta: ref!! a2f5bd4f-c7de-4fea-8dc2-ddec61bab421
                         modelo: ref!! 8dc113f6-433a-47f5-bb2b-361334f0bf89
-        -   Folder: Enemigos
+        -   Folder: MuestraEnemigos
             Entity:
                 Id: a9178381-0e65-41e7-b367-ddfb062cebe6
                 Name: Babosa
@@ -982,6 +1021,57 @@ Hierarchy:
                         Children:
                             54d9233232d55c02a600c6c8a5ad47ff: ref!! cb8b7c02-8937-482e-b5d6-77439268b21f
         -   Entity:
+                Id: b9375e47-0d3d-4ecf-8904-75f64e879f9f
+                Name: Dron
+                Components:
+                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
+                        Id: f18cc638-50ee-4828-9d43-72f292973ec9
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 10.0
+                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
+                        ColliderShapes:
+                            ed72926b10062c3c2c8aad3be9245c95: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 0.4, Z: 0.0}
+                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
+                        Id: 0db99625-4e0b-4e10-b33e-1693a208cb00
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: 2bdbfe22-c886-4059-a832-34043684b804
+                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
+                        Id: c0463d1c-0bdd-4511-a1e2-b48010257227
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 0c050d77-491c-44a0-8348-f3632eab864f
+                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! e7fcf0d9-0ff7-4f21-a6e4-28a94d656be8
+                    7f6e66f0d97456bb9a986066b6ffeee1: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                        Id: 8fe5d8cc-99eb-4837-883e-1737f160c582
+                        enemigo: rangoLigero
+                        "armaMelé": null
+                        armaRango: ref!! 55831035-649c-46a5-a2dc-010662d71600
+                        cuerpos:
+                            ad5f371af09d736586a420c788f25eaf: ref!! 65c3fd6c-7e33-4e4d-90df-26c69638ef8b
+                    33ce25eb8ee99f15b44e0a062cbfffd2: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: 8dc22327-9836-4aa0-96bf-010225e8c0d0
+                    f8a8bea51b0be6e7628afcbf94a7d8aa: !Bozobaralika.AnimadorDron,Bozobaralika.Proyecto
+                        Id: 48e8d1dc-2571-49a6-b7fd-2d0bcd0a5b1a
+                        modelo: ref!! 0c050d77-491c-44a0-8348-f3632eab864f
+            Base:
+                BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Dron
+                BasePartId: c9de616d-fc44-4005-a31a-6d8dcd5084c0
+                InstanceId: e874bdd9-8238-4daa-ae53-e07cc3b4c54e
+        -   Entity:
                 Id: b9bcaf75-d766-4cdc-9c86-025cf46dd616
                 Name: Puerta (azul)
                 Components:
@@ -996,6 +1086,49 @@ Hierarchy:
                         Id: 9194a635-debe-429c-ac9f-bd9febb8be88
                         modelo: ref!! 69714a1b-fdeb-46ba-bcc7-8a8f1d584e19
                         "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
+        -   Folder: null
+            Entity:
+                Id: c9008215-a8ca-46ad-907f-f3a08104c564
+                Name: "Dañable"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: e43f229b-2778-45d4-a3cb-933c1c1d4bc9
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 65c3fd6c-7e33-4e4d-90df-26c69638ef8b
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: 736870e0-4cd7-4867-8586-ba815fd2f46e
+                        controlador: ref!! b9375e47-0d3d-4ecf-8904-75f64e879f9f
+                        multiplicador: 1.0
+            Base:
+                BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Dron
+                BasePartId: 3e030e67-ae9e-4de3-8284-c581daed4b81
+                InstanceId: e874bdd9-8238-4daa-ae53-e07cc3b4c54e
         -   Entity:
                 Id: cb74dedf-a315-4eb5-a0b0-bf447505f378
                 Name: Modelo
@@ -1064,7 +1197,7 @@ Hierarchy:
                     8da989470e5d3482f6697c8ae7b8694b: !Stride.Navigation.NavigationBoundingBoxComponent,Stride.Navigation
                         Id: 42364fca-41df-4490-ba99-fb64dd6d91f6
                         Size: {X: 20.0, Y: 1.5, Z: 20.0}
-        -   Folder: Muros
+        -   Folder: Entorno/Muros
             Entity:
                 Id: d471c428-d220-4860-b67e-f0ad26d2d613
                 Name: Cube
@@ -1114,6 +1247,7 @@ Hierarchy:
                         zombi: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Zombi
                         lancero: 348ffd0b-1a96-4bdb-bd14-ebd446626828:Prefabs/Lancero
                         cerebro: f89baa3b-42d2-4588-b0af-916f14d07e34:Prefabs/Cerebro
+                        dron: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Dron
         -   Entity:
                 Id: d6469b5e-a04d-4f00-8adf-79e362dcd0f4
                 Name: Lanza
@@ -1158,7 +1292,8 @@ Hierarchy:
                         Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
                         RenderGroup: Group11
                         Materials: {}
-        -   Entity:
+        -   Folder: Entorno
+            Entity:
                 Id: dca75c2f-3874-4e83-9565-15c148fa0401
                 Name: Directional light
                 Components:
@@ -1277,7 +1412,7 @@ Hierarchy:
                         Id: a2f5bd4f-c7de-4fea-8dc2-ddec61bab421
                         modelo: ref!! d81e440a-1961-4a4e-a979-199e33f30941
                         "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
-        -   Folder: Entorno
+        -   Folder: "Entorno/Obstáculos"
             Entity:
                 Id: eb300b4d-c14f-4f40-b4b3-e09e965b69a5
                 Name: Cube
@@ -1323,7 +1458,7 @@ Hierarchy:
                         Id: c736188e-c84f-496a-8dff-88e6c031640f
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         Materials: {}
-        -   Folder: Enemigos
+        -   Folder: MuestraEnemigos
             Entity:
                 Id: ed574734-d19c-4582-8145-31497e3f514d
                 Name: Cerebro
@@ -1340,7 +1475,7 @@ Hierarchy:
                         Id: ed92cd6c-1d47-4da5-8225-c558d67b8a66
                         Model: 3893b25d-a5b1-463e-989f-5c46a73d1a27:Modelos/Cerebro/Cerebro
                         Materials: {}
-        -   Folder: Enemigos
+        -   Folder: MuestraEnemigos
             Entity:
                 Id: edeff615-c141-4feb-96da-868b5fe6ebc8
                 Name: "Araña"
@@ -1355,7 +1490,7 @@ Hierarchy:
                         Id: 6404f16f-2cb3-4a91-957d-456dfd08cda6
                         Model: "db867d68-4431-4e52-9abb-f81df0c158eb:Modelos/Araña/Araña"
                         Materials: {}
-        -   Folder: Enemigos
+        -   Folder: MuestraEnemigos
             Entity:
                 Id: f3e301de-3c24-4082-9407-c92be0463470
                 Name: Dron
@@ -1370,7 +1505,7 @@ Hierarchy:
                         Id: 57776d4e-51c0-435c-ab5f-0781c786f642
                         Model: e2c61240-3de0-4c53-821b-1b0e54af2827:Modelos/Dron/Dron
                         Materials: {}
-        -   Folder: Muros
+        -   Folder: Entorno/Muros
             Entity:
                 Id: f557bc44-8313-4a06-ba9a-35f36f7d42de
                 Name: Cube
