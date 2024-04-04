@@ -68,12 +68,13 @@ Hierarchy:
                 Components:
                     48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
                         Id: 7ef7850b-9a81-4423-8140-1b6535743cc8
-                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 3.0, Z: 0.4}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.0}
                         Children: {}
                     856fb470e4a1b772f510f0cef700d9bb: !Bozobaralika.ControladorArmaRango,Bozobaralika.Proyecto
                         Id: 7c0c0baa-c7d8-4edc-bfe9-0f947660bd35
+                        prefabDisparo: null
         -   Entity:
                 Id: c9de616d-fc44-4005-a31a-6d8dcd5084c0
                 Name: Dron
