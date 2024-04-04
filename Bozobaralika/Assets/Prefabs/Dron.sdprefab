@@ -81,7 +81,7 @@ Hierarchy:
                     4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
                         Id: 8d4fff33-9ccb-4493-a7b1-12b4152ff742
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: StaticFilter, KinematicFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -95,8 +95,8 @@ Hierarchy:
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !SphereColliderShapeDesc
                                 Is2D: false
-                                Radius: 0.4
-                                LocalOffset: {X: 0.0, Y: 0.4, Z: 0.0}
+                                Radius: 0.2
+                                LocalOffset: {X: 0.0, Y: 0.2, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 2fbc4d09-b1c3-4018-9614-373a2aa5121f
                         NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
