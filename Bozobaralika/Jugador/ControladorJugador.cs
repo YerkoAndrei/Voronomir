@@ -34,7 +34,7 @@ public class ControladorJugador : SyncScript, IDañable
         vidaMax = 100;
         vida = vidaMax;
 
-        interfaz = Entity.Scene.Entities.Where(o => o.Get<InterfazJuego>() != null).FirstOrDefault().Get<InterfazJuego>();
+        interfaz = ControladorPartida.ObtenerInterfaz();
         interfaz.ActualizarVida(vida / vidaMax);
 
         cuerpo = Entity.Get<CharacterComponent>();
@@ -52,6 +52,9 @@ public class ControladorJugador : SyncScript, IDañable
 
     public override void Update()
     {
+        //if (!ControladorPartida.ObtenerActivo())
+        //    return;
+
         // Updates
         movimiento.ActualizarEntradas();
         armas.ActualizarEntradas();
@@ -115,7 +118,7 @@ public class ControladorJugador : SyncScript, IDañable
     private void Morir()
     {
         // PENDIENTE: efectos
-        interfaz.Morir();
+        ControladorPartida.Perder();
     }
 
     public void GuardarLlave(Llaves llave)

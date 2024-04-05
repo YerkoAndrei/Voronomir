@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Stride.Core.Mathematics;
+﻿using Stride.Core.Mathematics;
 using Stride.UI;
 using Stride.Engine;
 using Stride.UI.Controls;
@@ -13,8 +12,6 @@ public class InterfazJuego : StartupScript
     public Color vidaVacía;
     public Color armaNormal;
     public Color armaSeleccionada;
-
-    private ControladorPartida controlador;
 
     private ImageElement imgVida;
     private float tamañoVida;
@@ -34,7 +31,6 @@ public class InterfazJuego : StartupScript
 
     public override void Start()
     {
-        controlador = Entity.Scene.Entities.Where(o => o.Get<ControladorPartida>() != null).FirstOrDefault().Get<ControladorPartida>();
         var página = Entity.Get<UIComponent>().Page.RootElement;
 
         imgVida = página.FindVisualChildOfType<ImageElement>("imgVida");
@@ -152,10 +148,8 @@ public class InterfazJuego : StartupScript
         imgVida.Color = vidaVacía;
         imgVida.Width = tamañoVida;
 
-        controlador.Perder();
+        var tiempo = ControladorPartida.ObtenerTiempo();
 
-        var tiempo = controlador.ObtenerTiempo();
-
-        // Reiniciar
+        // Menú muerte
     }
 }

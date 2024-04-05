@@ -7,11 +7,13 @@ using static Constantes;
 
 public class ControladorPartida : SyncScript
 {
+    // Singleton por escena
     private static ControladorPartida instancia;
 
     private ControladorPersecusionesTrigonométricas[] persecutoresTrigonométricos;
     private TransformComponent jugador;
     private TransformComponent cabeza;
+    private InterfazJuego interfaz;
 
     private bool activo;
     private float tiempo;
@@ -24,6 +26,13 @@ public class ControladorPartida : SyncScript
         var entidadJugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault();
         cabeza = entidadJugador.Get<ControladorJugador>().cabeza;
         jugador = entidadJugador.Transform;
+
+        // Persecutores
+        var entidad = Entity.Scene.Entities.Where(o => o.Get<ControladorPersecusionesTrigonométricas>() != null).FirstOrDefault();
+        persecutoresTrigonométricos = entidad.GetAll<ControladorPersecusionesTrigonométricas>().ToArray();
+
+        // Interfaz
+        interfaz = Entity.Scene.Entities.Where(o => o.Get<InterfazJuego>() != null).FirstOrDefault().Get<InterfazJuego>();
 
         activo = true;
         tiempo = 0;
@@ -41,14 +50,20 @@ public class ControladorPartida : SyncScript
         tiempo += (float)Game.UpdateTime.Elapsed.TotalSeconds;
     }
 
-    public void Perder()
+    public static bool ObtenerActivo()
     {
-        activo = false;
+        return instancia.activo;
     }
 
-    public float ObtenerTiempo()
+    public static void Perder()
     {
-        return tiempo;
+        instancia.activo = false;
+        instancia.interfaz.Morir();
+    }
+
+    public static float ObtenerTiempo()
+    {
+        return instancia.tiempo;
     }
 
     // Jugador
@@ -60,5 +75,17 @@ public class ControladorPartida : SyncScript
     public static Vector3 ObtenerCabezaJugador()
     {
         return instancia.cabeza.WorldMatrix.TranslationVector;
+    }
+
+    // Persecutores
+    public static ControladorPersecusionesTrigonométricas ObtenerPersecutor(Enemigos enemigo)
+    {
+        return instancia.persecutoresTrigonométricos.Where(o => o.enemigo == enemigo).FirstOrDefault();
+    }
+
+    // Interfaz
+    public static InterfazJuego ObtenerInterfaz()
+    {
+        return instancia.interfaz;
     }
 }

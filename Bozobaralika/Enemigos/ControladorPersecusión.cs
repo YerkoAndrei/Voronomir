@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
@@ -72,10 +71,7 @@ public class ControladorPersecusión : StartupScript
         if (persecutorTrigonométrico)
         {
             // Busca persecutor trigonométrico
-            var entidad = Entity.Scene.Entities.Where(o => o.Get<ControladorPersecusionesTrigonométricas>() != null).FirstOrDefault();
-            var persecutores = entidad.GetAll<ControladorPersecusionesTrigonométricas>();
-            persecutor = persecutores.Where(o => o.enemigo == controlador.enemigo).FirstOrDefault();
-
+            ControladorPartida.ObtenerPersecutor(controlador.enemigo);
             índiceTrigonométrico = persecutor.ObtenerÍndiceTrigonométrico(this);
         }
     }
