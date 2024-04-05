@@ -13,7 +13,7 @@ Hierarchy:
                     32b1f75000d0962d38db272c3c9501f1: !RigidbodyComponent
                         Id: e9a29ae7-eabb-4d8a-b730-dd307a30029c
                         Enabled: false
-                        CanCollideWith: StaticFilter, KinematicFilter, CharacterFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0

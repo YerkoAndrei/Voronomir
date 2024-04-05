@@ -8,7 +8,10 @@ namespace Bozobaralika;
 public class ElementoDisparo: AsyncScript
 {
     public ModelComponent modelo;
+
+    private ControladorEnemigo controlador;
     private RigidbodyComponent cuerpo;
+    private float tempo;
     private float daño;
 
     public override async Task Execute()
@@ -22,6 +25,15 @@ public class ElementoDisparo: AsyncScript
             {
                 var colisión = await cuerpo.NewCollision();
 
+                if (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.StaticFilter ||
+                    colisión.ColliderB.CollisionGroup == CollisionFilterGroups.StaticFilter ||
+                    colisión.ColliderA.CollisionGroup == CollisionFilterGroups.SensorTrigger ||
+                    colisión.ColliderB.CollisionGroup == CollisionFilterGroups.SensorTrigger)
+                {
+                    // PENDIENTE: efecto disparo enemigo
+                    continue;
+                }
+
                 var dañable = colisión.ColliderA.Entity.Get<ElementoDañable>();
                 if (dañable == null)
                     dañable = colisión.ColliderB.Entity.Get<ElementoDañable>();
@@ -29,22 +41,45 @@ public class ElementoDisparo: AsyncScript
                 if (dañable == null)
                     continue;
 
-                // PENDIENTE: Bajar daño a enemigos no dañar disparador
-                //dañable.RecibirDaño(daño);
-                //Apagar();
+                if (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.CharacterFilter ||
+                    colisión.ColliderB.CollisionGroup == CollisionFilterGroups.CharacterFilter )
+                {
+                    // Daña jugador
+                    dañable.RecibirDaño(daño);
+                    Apagar();
+                }
+                else if (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.KinematicFilter ||
+                         colisión.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter)
+                {
+                    // No se daña a sí mismo
+                    var seToca = false;
+                    for(int i=0; i< controlador.cuerpos.Count; i++)
+                    {
+                        if (colisión.ColliderA == controlador.cuerpos[i] || colisión.ColliderB == controlador.cuerpos[i])
+                            seToca = true;
+                    }
+
+                    // Daña enemigo un 25%
+                    if (!seToca)
+                    {
+                        dañable.RecibirDaño(daño * 0.25f);
+                        Apagar();
+                    }
+                }
             }
             await Script.NextFrame();
         }
     }
 
-    public void Apagar()
+    private void Apagar()
     {
         cuerpo.LinearVelocity = Vector3.Zero;
         modelo.Enabled = false;
+        cuerpo.IsKinematic = true;
         cuerpo.Enabled = false;
     }
 
-    public void Iniciar(float _daño, float _velocidad, float _duración, Quaternion _rotación, Vector3 _posición)
+    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, ControladorEnemigo _controlador)
     {
         Apagar();
 
@@ -52,22 +87,30 @@ public class ElementoDisparo: AsyncScript
         Entity.Transform.Rotation = _rotación;
 
         daño = _daño;
-        modelo.Enabled = true;
-        cuerpo.Enabled = true;
+        controlador = _controlador;
 
         // Dirección
+        cuerpo.IsKinematic = false;
         cuerpo.UpdatePhysicsTransformation();
         cuerpo.LinearVelocity = Entity.Transform.WorldMatrix.Forward * _velocidad;
 
-        // Duración máxima
-        ContarVida(_duración);
+        modelo.Enabled = true;
+        cuerpo.Enabled = true;
+
+        // Ningún disparo dura más de 10 segundos
+        tempo = 10f;
+        ContarVida();
     }
 
-    private async void ContarVida(float tiempo)
+    private async void ContarVida()
     {
-        await Task.Delay((int)(tiempo * 1000));
+        while (cuerpo.Enabled)
+        {
+            tempo -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            if (tempo <= 0)
+                Apagar();
 
-        if (cuerpo.Enabled)
-            Apagar();
+            await Task.Delay(1);
+        }
     }
 }
