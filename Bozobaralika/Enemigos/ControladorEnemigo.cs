@@ -142,11 +142,11 @@ public class ControladorEnemigo : SyncScript, IDañable
         switch (enemigo)
         {
             case Enemigos.rangoLigero:
-                return 10;
+                return 5;
             case Enemigos.rangoMediano:
-                return 20;
+                return 10;
             case Enemigos.rangoPesado:
-                return 40;
+                return 25;
             default:
                 return 0;
         }
@@ -161,7 +161,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             case Enemigos.rangoMediano:
                 return 5;
             case Enemigos.rangoPesado:
-                return 12;
+                return 15;
             default:
                 return 0;
         }

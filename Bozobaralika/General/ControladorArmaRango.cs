@@ -17,7 +17,7 @@ public class ControladorArmaRango: StartupScript
     {
         jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Transform;
 
-        maxDisparos = 10;
+        maxDisparos = 8;
         disparos = new ElementoDisparo[maxDisparos];
         for (int i = 0; i < maxDisparos; i++)
         {
@@ -29,9 +29,13 @@ public class ControladorArmaRango: StartupScript
 
     public void Disparar(float daño, float velocidad)
     {
-        var dirección = Vector3.Normalize((jugador.Position + 1.0f) - Entity.Transform.WorldMatrix.TranslationVector);
+        // PENDIENTE: según enemigo
+        var objetivo = (jugador.WorldMatrix.TranslationVector + new Vector3(0, 1, 0));
 
-        disparos[disparoActual].Iniciar(daño, velocidad, dirección, Entity.Transform.WorldMatrix.TranslationVector);
+        var dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - objetivo);
+        var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
+
+        disparos[disparoActual].Iniciar(daño, velocidad, rotación, Entity.Transform.WorldMatrix.TranslationVector);
         disparoActual++;
 
         if (disparoActual >= maxDisparos)

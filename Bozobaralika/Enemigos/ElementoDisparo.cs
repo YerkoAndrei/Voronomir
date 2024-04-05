@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -7,19 +8,18 @@ namespace Bozobaralika;
 
 public class ElementoDisparo: AsyncScript
 {
+    public ModelComponent modelo;
     private RigidbodyComponent cuerpo;
-    private bool activo;
     private float daño;
-    private float velocidad;
-    private Vector3 dirección;
 
     public override async Task Execute()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
+        Apagar();
 
         while (Game.IsRunning)
         {
-            if (activo)
+            if (cuerpo.Enabled)
             {
                 var colisión = await cuerpo.NewCollision();
 
@@ -30,33 +30,45 @@ public class ElementoDisparo: AsyncScript
                 if (dañable == null)
                     continue;
 
-                dañable.RecibirDaño(daño);
-                activo = false;
+                // PENDIENTE: Bajar daño a enemigos no dañar disparador
+                //dañable.RecibirDaño(daño);
+                //Apagar();
             }
             await Script.NextFrame();
         }
     }
 
-    public void Iniciar(float _daño, float _velocidad, Vector3 _dirección, Vector3 inicial)
+    public void Apagar()
     {
-        Entity.Transform.WorldMatrix.TranslationVector = inicial;
-
-        activo = true;
-        daño = _daño;
-        velocidad = _velocidad;
-        dirección = _dirección;
-
-        Mover();
+        cuerpo.LinearVelocity = Vector3.Zero;
+        modelo.Enabled = false;
+        cuerpo.Enabled = false;
     }
 
-    private async void Mover()
+    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición)
     {
-        while (activo)
-        {
-            dirección *= (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            Entity.Transform.WorldMatrix.TranslationVector = (dirección * velocidad);
+        Apagar();
 
-            await Task.Delay(1);
-        }
+        Entity.Transform.Position = _posición;
+        Entity.Transform.Rotation = _rotación;
+
+        daño = _daño;
+        modelo.Enabled = true;
+        cuerpo.Enabled = true;
+
+        // Dirección
+        cuerpo.UpdatePhysicsTransformation();
+        cuerpo.LinearVelocity = Entity.Transform.WorldMatrix.Forward * _velocidad;
+
+        // PENDIENTE: Duración máxima
+        ContarVida(2);
+    }
+
+    private async void ContarVida(float tiempo)
+    {
+        await Task.Delay((int)(tiempo * 1000));
+
+        if (cuerpo.Enabled)
+            Apagar();
     }
 }
