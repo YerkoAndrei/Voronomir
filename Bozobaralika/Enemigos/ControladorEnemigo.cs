@@ -79,7 +79,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             armaMelé.Iniciar();
 
         else if (!melé && armaRango != null)
-            armaRango.Iniciar();
+            armaRango.Iniciar(ObtenerVelocidadDisparo(), cuerpos.ToArray());
 
         activo = true;
     }
@@ -95,11 +95,12 @@ public class ControladorEnemigo : SyncScript, IDañable
 
     public void Atacar()
     {
+        // Daño puede variar en algún momento
         if (melé && armaMelé != null)
             armaMelé.Atacar(ObtenerDañoMelé());
 
         else if (!melé && armaRango != null)
-            armaRango.Disparar(ObtenerDañoRango(), ObtenerVelocidadDisparo(), ObtenerPosiciónDisparo(), this);
+            armaRango.Disparar(ObtenerDañoRango(), ObtenerPosiciónDisparo());
     }
 
     public void RecibirDaño(float daño)

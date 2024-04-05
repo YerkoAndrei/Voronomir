@@ -9,7 +9,7 @@ public class ElementoDisparo: AsyncScript
 {
     public ModelComponent modelo;
 
-    private ControladorEnemigo controlador;
+    private PhysicsComponent[] disparador;
     private RigidbodyComponent cuerpo;
     private float tempo;
     private float daño;
@@ -53,9 +53,9 @@ public class ElementoDisparo: AsyncScript
                 {
                     // No se daña a sí mismo
                     var seToca = false;
-                    for(int i=0; i< controlador.cuerpos.Count; i++)
+                    for(int i=0; i< disparador.Length; i++)
                     {
-                        if (colisión.ColliderA == controlador.cuerpos[i] || colisión.ColliderB == controlador.cuerpos[i])
+                        if (colisión.ColliderA == disparador[i] || colisión.ColliderB == disparador[i])
                             seToca = true;
                     }
 
@@ -79,7 +79,7 @@ public class ElementoDisparo: AsyncScript
         cuerpo.Enabled = false;
     }
 
-    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, ControladorEnemigo _controlador)
+    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, PhysicsComponent[] _disparador)
     {
         Apagar();
 
@@ -87,7 +87,7 @@ public class ElementoDisparo: AsyncScript
         Entity.Transform.Rotation = _rotación;
 
         daño = _daño;
-        controlador = _controlador;
+        disparador = _disparador;
 
         // Dirección
         cuerpo.IsKinematic = false;
