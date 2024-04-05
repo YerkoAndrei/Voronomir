@@ -1,5 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -45,7 +44,7 @@ public class ElementoDisparo: AsyncScript
         cuerpo.Enabled = false;
     }
 
-    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición)
+    public void Iniciar(float _daño, float _velocidad, float _duración, Quaternion _rotación, Vector3 _posición)
     {
         Apagar();
 
@@ -60,8 +59,8 @@ public class ElementoDisparo: AsyncScript
         cuerpo.UpdatePhysicsTransformation();
         cuerpo.LinearVelocity = Entity.Transform.WorldMatrix.Forward * _velocidad;
 
-        // PENDIENTE: Duración máxima
-        ContarVida(2);
+        // Duración máxima
+        ContarVida(_duración);
     }
 
     private async void ContarVida(float tiempo)

@@ -1,6 +1,8 @@
-﻿using Stride.Engine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Stride.Core.Mathematics;
+using Stride.Engine;
 using Stride.Physics;
-using System.Collections.Generic;
 
 namespace Bozobaralika;
 using static Constantes;
@@ -13,6 +15,7 @@ public class ControladorEnemigo : SyncScript, IDañable
     public ControladorArmaMelé armaMelé;
     public ControladorArmaRango armaRango;
 
+    private TransformComponent jugador;
     private CharacterComponent cuerpo;
     private ControladorPersecusión persecutor;
     private float vida;
@@ -21,6 +24,7 @@ public class ControladorEnemigo : SyncScript, IDañable
 
     public override void Start()
     {
+        jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Transform;
         cuerpo = Entity.Get<CharacterComponent>();
         persecutor = Entity.Get<ControladorPersecusión>();
 
@@ -98,7 +102,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             armaMelé.Atacar(ObtenerDañoMelé());
 
         else if (!melé && armaRango != null)
-            armaRango.Disparar(ObtenerDañoRango(), ObtenerVelocidadDisparo());
+            armaRango.Disparar(ObtenerDañoRango(), ObtenerVelocidadDisparo(), ObtenerDuraciónDisparo(), ObtenerPosiciónDisparo());
     }
 
     public void RecibirDaño(float daño)
@@ -152,18 +156,48 @@ public class ControladorEnemigo : SyncScript, IDañable
         }
     }
 
+    private float ObtenerDuraciónDisparo()
+    {
+        switch (enemigo)
+        {
+            case Enemigos.rangoLigero:
+                return 3;
+            case Enemigos.rangoMediano:
+                return 10;
+            case Enemigos.rangoPesado:
+                return 5;
+            default:
+                return 0;
+        }
+    }
+
     private float ObtenerVelocidadDisparo()
     {
         switch (enemigo)
         {
             case Enemigos.rangoLigero:
-                return 10;
+                return 15;
             case Enemigos.rangoMediano:
                 return 5;
             case Enemigos.rangoPesado:
-                return 15;
+                return 20;
             default:
                 return 0;
+        }
+    }
+
+    private Vector3 ObtenerPosiciónDisparo()
+    {
+        switch (enemigo)
+        {
+            case Enemigos.rangoLigero:
+                return jugador.WorldMatrix.TranslationVector + new Vector3(0, 1.25f, 0);
+            case Enemigos.rangoMediano:
+                return jugador.WorldMatrix.TranslationVector + new Vector3(0, 1f, 0);
+            case Enemigos.rangoPesado:
+                return jugador.WorldMatrix.TranslationVector + new Vector3(0, 1.1f, 0);
+            default:
+                return jugador.WorldMatrix.TranslationVector;
         }
     }
 
