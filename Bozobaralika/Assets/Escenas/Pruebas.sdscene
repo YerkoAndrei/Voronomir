@@ -1270,6 +1270,7 @@ Hierarchy:
                         lancero: 348ffd0b-1a96-4bdb-bd14-ebd446626828:Prefabs/Enemigos/Lancero
                         cerebro: f89baa3b-42d2-4588-b0af-916f14d07e34:Prefabs/Enemigos/Cerebro
                         dron: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Enemigos/Dron
+                        babosa: e8ff3d35-f6b5-4e6b-8c5d-8fba8c117327:Prefabs/Enemigos/Babosa
         -   Entity:
                 Id: d6469b5e-a04d-4f00-8adf-79e362dcd0f4
                 Name: Lanza

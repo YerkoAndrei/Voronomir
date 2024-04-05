@@ -46,12 +46,12 @@ public class ControladorEnemigo : SyncScript, IDañable
             case Enemigos.rangoLigero:
                 vida = 40;
                 melé = false;
-                persecutor.Iniciar(this, 0.5f, 16f, 0f, ObtenerDistanciaAtaque(), true);
+                persecutor.Iniciar(this, 1f, 16f, 0f, ObtenerDistanciaAtaque(), true);
                 break;
             case Enemigos.rangoMediano:
-                vida = 100;
+                vida = 400;
                 melé = false;
-                persecutor.Iniciar(this, 0.5f, 2f, 5f, ObtenerDistanciaAtaque(), false);
+                persecutor.Iniciar(this, 0.2f, 2f, 3f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.rangoPesado:
                 vida = 500;
@@ -146,7 +146,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             case Enemigos.rangoLigero:
                 return 5;
             case Enemigos.rangoMediano:
-                return 10;
+                return 20;
             case Enemigos.rangoPesado:
                 return 25;
             default:
@@ -161,7 +161,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             case Enemigos.rangoLigero:
                 return 15;
             case Enemigos.rangoMediano:
-                return 5;
+                return 10;
             case Enemigos.rangoPesado:
                 return 20;
             default:
@@ -228,7 +228,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             case Enemigos.meléPesado:
                 return 0f;
             case Enemigos.rangoLigero:
-                return 0.2f;
+                return 0.1f;
             case Enemigos.rangoMediano:
                 return 0.2f;
             case Enemigos.rangoPesado:
@@ -262,7 +262,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             case Enemigos.rangoLigero:
                 return 0.5f;
             case Enemigos.rangoMediano:
-                return 0.5f;
+                return 1.5f;
             case Enemigos.rangoPesado:
                 return 0.5f;
 
