@@ -71,7 +71,7 @@ public class ControladorPersecusión : StartupScript
         if (persecutorTrigonométrico)
         {
             // Busca persecutor trigonométrico
-            ControladorPartida.ObtenerPersecutor(controlador.enemigo);
+            persecutor = ControladorPartida.ObtenerPersecutor(controlador.enemigo);
             índiceTrigonométrico = persecutor.ObtenerÍndiceTrigonométrico(this);
         }
     }
