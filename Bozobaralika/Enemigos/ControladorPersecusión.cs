@@ -13,7 +13,6 @@ public class ControladorPersecusión : StartupScript
     private ControladorPersecusionesTrigonométricas persecutor;
     private ControladorEnemigo controlador;
     private CharacterComponent cuerpo;
-    private TransformComponent jugador;
     private NavigationComponent navegador;
     private IAnimador animador;
 
@@ -44,8 +43,6 @@ public class ControladorPersecusión : StartupScript
 
     public void Iniciar(ControladorEnemigo _controlador, float _tiempoBusqueda, float _velocidad, float _rotación, float _distanciaAtaque, bool _persecutorTrigonométrico)
     {
-        jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Transform;
-
         // Busca animador
         foreach (var componente in Entity.Components)
         {
@@ -116,12 +113,12 @@ public class ControladorPersecusión : StartupScript
         if(persecutorTrigonométrico && persecutor.PosibleRodearJugador())
             navegador.TryFindPath(persecutor.ObtenerPosiciónCircular(índiceTrigonométrico), ruta);
         else
-            navegador.TryFindPath(jugador.WorldMatrix.TranslationVector, ruta);
+            navegador.TryFindPath(ControladorPartida.ObtenerPosiciónJugador(), ruta);
     }
 
     private void MirarJugador(float velocidad)
     {
-        direciónJugador = jugador.WorldMatrix.TranslationVector - Entity.Transform.WorldMatrix.TranslationVector;
+        direciónJugador = ControladorPartida.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector;
         direciónJugador.Y = 0f;
         direciónJugador.Normalize();
 
@@ -135,7 +132,7 @@ public class ControladorPersecusión : StartupScript
             return;
 
         distanciaRuta = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ruta[índiceRuta]);
-        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, jugador.WorldMatrix.TranslationVector);
+        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerPosiciónJugador());
         
         // Ataque
         if (distanciaJugador <= distanciaAtaque)
@@ -154,7 +151,7 @@ public class ControladorPersecusión : StartupScript
             if(cuerpo.IsGrounded)
                 dirección = ruta[índiceRuta] - Entity.Transform.WorldMatrix.TranslationVector;
             else
-                dirección = jugador.WorldMatrix.TranslationVector - Entity.Transform.WorldMatrix.TranslationVector;
+                dirección = ControladorPartida.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector;
             
             dirección.Normalize();
             dirección *= (float)Game.UpdateTime.Elapsed.TotalSeconds;                        

@@ -13,7 +13,6 @@ public class ControladorPersecusionesTrigonométricas : SyncScript
 
     private List<ControladorPersecusión> persecutores;
     private Vector3[] posicionesCirculares;
-    private TransformComponent jugador;
     private float radio;
 
     private Vector3 dirección;
@@ -21,7 +20,6 @@ public class ControladorPersecusionesTrigonométricas : SyncScript
 
     public override void Start()
     {
-        jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Transform;
         persecutores = new List<ControladorPersecusión>();
 
         // Radio según tipo enemigo
@@ -44,7 +42,7 @@ public class ControladorPersecusionesTrigonométricas : SyncScript
             dirección = new Vector3(MathF.Cos(ángulo), 0, MathF.Sin(ángulo));
             dirección = Vector3.Normalize(dirección) * radio;
 
-            posicionesCirculares[i] = (jugador.WorldMatrix.TranslationVector + dirección);
+            posicionesCirculares[i] = (ControladorPartida.ObtenerPosiciónJugador() + dirección);
         }
     }
 
@@ -52,7 +50,7 @@ public class ControladorPersecusionesTrigonométricas : SyncScript
     {
         // Persecutores pueden descordinarse por 1 cuadro
         if (índice >= posicionesCirculares.Count())
-            return jugador.WorldMatrix.TranslationVector;
+            return ControladorPartida.ObtenerPosiciónJugador();
 
         return posicionesCirculares[índice];
     }

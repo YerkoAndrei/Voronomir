@@ -17,10 +17,10 @@ public class Depurador : AsyncScript
     //public Prefab araña;
 
     public override async Task Execute()
-    {
+    {/*
         var jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Get<ControladorJugador>();
         var animaciónArmas = Entity.Scene.Entities.Where(o => o.Get<ControladorArmas>() != null).FirstOrDefault().Get<ControladorArmas>();
-
+        */
         while (Game.IsRunning)
         {
             if (Input.IsKeyPressed(Keys.T))

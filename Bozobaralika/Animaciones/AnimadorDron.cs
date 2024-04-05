@@ -8,18 +8,16 @@ public class AnimadorDron : StartupScript, IAnimador
 {
     public TransformComponent modelo;
 
-    private TransformComponent objetivo;
 	private Vector3 dirección;
 
 	public void Iniciar()
     {
-		var jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Get<ControladorJugador>();
-		objetivo = jugador.cámara.Entity.Transform;
+
 	}
 
     public void Actualizar()
     {
-        dirección = Vector3.Normalize(objetivo.WorldMatrix.TranslationVector - modelo.WorldMatrix.TranslationVector);
+        dirección = Vector3.Normalize(ControladorPartida.ObtenerCabezaJugador() - modelo.WorldMatrix.TranslationVector);
         modelo.Rotation = Quaternion.Lerp(modelo.Rotation, Quaternion.LookRotation(dirección, Vector3.UnitY), 10 * (float)Game.UpdateTime.Elapsed.TotalSeconds);
     }
 

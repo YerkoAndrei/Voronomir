@@ -15,7 +15,6 @@ public class ControladorEnemigo : SyncScript, IDañable
     public ControladorArmaMelé armaMelé;
     public ControladorArmaRango armaRango;
 
-    private TransformComponent jugador;
     private CharacterComponent cuerpo;
     private ControladorPersecusión persecutor;
     private float vida;
@@ -24,7 +23,6 @@ public class ControladorEnemigo : SyncScript, IDañable
 
     public override void Start()
     {
-        jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Transform;
         cuerpo = Entity.Get<CharacterComponent>();
         persecutor = Entity.Get<ControladorPersecusión>();
 
@@ -188,16 +186,17 @@ public class ControladorEnemigo : SyncScript, IDañable
 
     private Vector3 ObtenerPosiciónDisparo()
     {
+        // Jugador mide 160cm, tiene los ojos en 150cm
         switch (enemigo)
         {
             case Enemigos.rangoLigero:
-                return jugador.WorldMatrix.TranslationVector + new Vector3(0, 1.25f, 0);
+                return ControladorPartida.ObtenerPosiciónJugador() + new Vector3(0, 1.25f, 0);
             case Enemigos.rangoMediano:
-                return jugador.WorldMatrix.TranslationVector + new Vector3(0, 1f, 0);
+                return ControladorPartida.ObtenerPosiciónJugador() + new Vector3(0, 1f, 0);
             case Enemigos.rangoPesado:
-                return jugador.WorldMatrix.TranslationVector + new Vector3(0, 1.1f, 0);
+                return ControladorPartida.ObtenerPosiciónJugador() + new Vector3(0, 1.1f, 0);
             default:
-                return jugador.WorldMatrix.TranslationVector;
+                return ControladorPartida.ObtenerPosiciónJugador();
         }
     }
 

@@ -14,7 +14,6 @@ public class AnimadorLancero : StartupScript, IAnimador
     public List<string> brazos = new List<string> { };
     public List<string> piernas = new List<string> { };
 
-    private TransformComponent jugador;
     private SkeletonUpdater esqueleto;
     private int[] idBrazos;
     private int[] idPiernas;
@@ -30,8 +29,6 @@ public class AnimadorLancero : StartupScript, IAnimador
 
     public void Iniciar()
     {
-        jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Get<ControladorJugador>().cabeza;
-
         esqueleto = modelo.Skeleton;
         idBrazos = new int[brazos.Count];
         idPiernas = new int[piernas.Count];
@@ -81,7 +78,7 @@ public class AnimadorLancero : StartupScript, IAnimador
 
     private void ApuntarLanza()
     {
-        ánguloDiferencia = jugador.WorldMatrix.TranslationVector.Y - lanza.WorldMatrix.TranslationVector.Y;
+        ánguloDiferencia = ControladorPartida.ObtenerCabezaJugador().Y - lanza.WorldMatrix.TranslationVector.Y;
         lanza.Rotation = rotaciónLanzaInicial * Quaternion.RotationX(MathUtil.DegreesToRadians(85 - (ánguloDiferencia * 10)));
     }
 
