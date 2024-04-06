@@ -219,7 +219,7 @@ public class ControladorArmas : StartupScript
                 movimiento.DetenerMovimiento();
                 for (int i = 0; i < ObtenerCantidadPerdigones(); i++)
                 {
-                    CalcularRayo(0.15f);
+                    CalcularRayo(0.12f);
                 }
                 controlador.VibrarCámara(16, 10);
                 animadorEscopeta.AnimarDisparo(0.5f, 0.2f, TipoDisparo.espejo);
@@ -235,7 +235,7 @@ public class ControladorArmas : StartupScript
                 movimiento.DetenerMovimiento();
                 CalcularRayoPenetrante();
                 controlador.VibrarCámara(20, 12);
-                animadorRife.AnimarDisparo(2f, 0.5f, TipoDisparo.espejo);
+                animadorRife.AnimarDisparo(2f, 0.4f, TipoDisparo.espejo);
                 últimoDisparoRifle = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
         }
@@ -577,7 +577,7 @@ public class ControladorArmas : StartupScript
             case Armas.metralleta:
                 return 0.05f;
             case Armas.rifle:
-                return 2f;
+                return 1.6f;
             default:
                 return 0;
         }
