@@ -9,7 +9,7 @@ using static Constantes;
 public class ControladorEnemigo : SyncScript, IDañable
 {
     public Enemigos enemigo;
-    public List<RigidbodyComponent> cuerpos { get ; set ; }
+    public List<RigidbodyComponent> cuerpos { get; set; }
 
     public ControladorArmaMelé armaMelé;
     public ControladorArmaRango armaRango;

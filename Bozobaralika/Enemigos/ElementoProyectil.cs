@@ -1,13 +1,15 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
 
 namespace Bozobaralika;
 
-public class ElementoProyectil: AsyncScript
+public class ElementoProyectil: AsyncScript, IDañable
 {
     public ModelComponent modelo;
+    public List<RigidbodyComponent> cuerpos { get; set; }
 
     private PhysicsComponent[] disparador;
     private RigidbodyComponent cuerpo;
@@ -17,6 +19,7 @@ public class ElementoProyectil: AsyncScript
     private float velocidad;
     private float tempo;
     private float daño;
+    private float vida;
 
     public override async Task Execute()
     {
@@ -91,6 +94,7 @@ public class ElementoProyectil: AsyncScript
         Entity.Transform.Position = _posición;
         Entity.Transform.Rotation = _rotación;
 
+        vida = _daño;
         daño = _daño;
         disparador = _disparador;
         velocidad = _velocidad;
@@ -131,5 +135,12 @@ public class ElementoProyectil: AsyncScript
 
             await Task.Delay(1);
         }
+    }
+
+    public void RecibirDaño(float daño)
+    {
+        vida -= daño;
+        if (vida <= 0)
+            Apagar();
     }
 }
