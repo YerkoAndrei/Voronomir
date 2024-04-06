@@ -97,10 +97,10 @@ public class ControladorEnemigo : SyncScript, IDañable
     {
         // Daño puede variar en algún momento
         if (melé && armaMelé != null)
-            armaMelé.Atacar(ObtenerDañoMelé());
+            armaMelé.Atacar(ObtenerDaño());
 
         else if (!melé && armaRango != null)
-            armaRango.Disparar(ObtenerDañoRango());
+            armaRango.Disparar(ObtenerDaño());
     }
 
     public void RecibirDaño(float daño)
@@ -125,79 +125,37 @@ public class ControladorEnemigo : SyncScript, IDañable
         Entity.Scene.Entities.Remove(Entity);
     }
 
-    private float ObtenerDañoMelé()
+    private float ObtenerDaño()
     {
         switch (enemigo)
         {
+            // Melé
             case Enemigos.meléLigero:
                 return 10;
             case Enemigos.meléMediano:
                 return 25;
             case Enemigos.meléPesado:
                 return 0;
-            default:
-                return 0;
-        }
-    }
-
-    private float ObtenerDañoRango()
-    {
-        switch (enemigo)
-        {
+            // Proyectil
             case Enemigos.rangoLigero:
                 return 5;
             case Enemigos.rangoMediano:
                 return 20;
             case Enemigos.rangoPesado:
                 return 25;
-            default:
-                return 0;
-        }
-    }
+            // Melé especial
+            case Enemigos.especialLigero:
+                return 1f;
+            case Enemigos.especialPesado:
+                return 1f;
 
-    private float ObtenerVelocidadProyectil()
-    {
-        switch (enemigo)
-        {
-            case Enemigos.rangoLigero:
-                return 15;
-            case Enemigos.rangoMediano:
-                return 10;
-            case Enemigos.rangoPesado:
-                return 20;
-            default:
-                return 0;
-        }
-    }
+            case Enemigos.minijefeMelé:
+                return 1f;
+            case Enemigos.minijefeRango:
+                return 1f;
 
-    private float ObtenerVelocidadSeguimientoProyectil()
-    {
-        switch (enemigo)
-        {
-            case Enemigos.rangoLigero:
-                return 0;
-            case Enemigos.rangoMediano:
-                return 5;
-            case Enemigos.rangoPesado:
-                return 0;
             default:
                 return 0;
-        }
-    }
-
-    private Vector3 ObtenerObjetivoProyectil()
-    {
-        // Jugador mide 160cm, tiene los ojos en 150cm
-        switch (enemigo)
-        {
-            case Enemigos.rangoLigero:
-                return Vector3.UnitY * 1.4f;
-            case Enemigos.rangoMediano:
-                return Vector3.UnitY * 0.6f;
-            case Enemigos.rangoPesado:
-                return Vector3.UnitY * 1f;
-            default:
-                return Vector3.UnitY;
         }
     }
 
@@ -214,58 +172,26 @@ public class ControladorEnemigo : SyncScript, IDañable
             case Enemigos.rangoLigero:
                 return 6f;
             case Enemigos.rangoMediano:
-                return 10f;
+                return 12f;
             case Enemigos.rangoPesado:
                 return 12f;
 
             case Enemigos.especialLigero:
-                return 0.2f;
+                return 1f;
             case Enemigos.especialPesado:
-                return 0.2f;
+                return 1f;
 
             case Enemigos.minijefeMelé:
-                return 0.2f;
+                return 1f;
             case Enemigos.minijefeRango:
-                return 0.2f;
+                return 1f;
 
             default:
                 return 0;
         }
     }
 
-    public float ObtenerPreparaciónAtaque()
-    {
-        switch (enemigo)
-        {
-            case Enemigos.meléLigero:
-                return 0.25f;
-            case Enemigos.meléMediano:
-                return 0.4f;
-            case Enemigos.meléPesado:
-                return 0f;
-            case Enemigos.rangoLigero:
-                return 0.1f;
-            case Enemigos.rangoMediano:
-                return 0.2f;
-            case Enemigos.rangoPesado:
-                return 0.2f;
-
-            case Enemigos.especialLigero:
-                return 0.2f;
-            case Enemigos.especialPesado:
-                return 0.2f;
-
-            case Enemigos.minijefeMelé:
-                return 0.2f;
-            case Enemigos.minijefeRango:
-                return 0.2f;
-
-            default:
-                return 0;
-        }
-    }
-
-    public float ObtenerDescansoAtaque()
+    public float ObtenerCadenciaAtaque()
     {
         switch (enemigo)
         {
@@ -294,6 +220,61 @@ public class ControladorEnemigo : SyncScript, IDañable
 
             default:
                 return 0;
+        }
+    }
+
+    public float ObtenerPreparaciónAtaqueMelé()
+    {
+        switch (enemigo)
+        {
+            case Enemigos.meléLigero:
+                return 0.25f;
+            case Enemigos.meléMediano:
+                return 0.4f;
+            default:
+                return 0;
+        }
+    }
+
+    private float ObtenerVelocidadProyectil()
+    {
+        switch (enemigo)
+        {
+            case Enemigos.rangoLigero:
+                return 15;
+            case Enemigos.rangoMediano:
+                return 10;
+            case Enemigos.rangoPesado:
+                return 20;
+            default:
+                return 0;
+        }
+    }
+
+    private float ObtenerVelocidadSeguimientoProyectil()
+    {
+        switch (enemigo)
+        {
+            case Enemigos.rangoMediano:
+                return 5;
+            default:
+                return 0;
+        }
+    }
+
+    private Vector3 ObtenerObjetivoProyectil()
+    {
+        // Jugador mide 160cm, tiene los ojos en 150cm
+        switch (enemigo)
+        {
+            case Enemigos.rangoLigero:
+                return Vector3.UnitY * 1.4f;
+            case Enemigos.rangoMediano:
+                return Vector3.UnitY * 0.6f;
+            case Enemigos.rangoPesado:
+                return Vector3.UnitY * 1f;
+            default:
+                return Vector3.UnitY;
         }
     }
 }

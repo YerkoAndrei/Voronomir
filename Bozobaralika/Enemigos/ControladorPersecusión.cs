@@ -180,19 +180,20 @@ public class ControladorPersecusión : StartupScript
     {
         atacando = true;
         tempoAceleración = 0;
-
-        // Delay de preparación de ataque
         cuerpo.SetVelocity(Vector3.Zero);
-        await Task.Delay((int)(controlador.ObtenerPreparaciónAtaque() * 1000));
+
+        // Delay de preparación de ataque melé
+        if (controlador.ObtenerPreparaciónAtaqueMelé() > 0)
+            await Task.Delay((int)(controlador.ObtenerPreparaciónAtaqueMelé() * 1000));
 
         if (!controlador.ObtenerActivo())
             return;
 
         animador.Atacar();
         controlador.Atacar();
-        await Task.Delay((int)(controlador.ObtenerDescansoAtaque() * 1000));
+        await Task.Delay((int)(controlador.ObtenerCadenciaAtaque() * 1000));
 
-        BuscarObjetivo();
+        tempoBusqueda = 0;
         atacando = false;
     }
 
