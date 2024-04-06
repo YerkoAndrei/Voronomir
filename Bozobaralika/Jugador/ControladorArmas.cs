@@ -245,8 +245,7 @@ public class ControladorArmas : StartupScript
     {
         var aleatorioX = RangoAleatorio(-(imprecisión), imprecisión);
         var aleatorioY = RangoAleatorio(-(imprecisión), imprecisión);
-        var aleatorioZ = RangoAleatorio(-(imprecisión), imprecisión);
-        var aleatorio = new Vector3(aleatorioX, aleatorioY, aleatorioZ);
+        var aleatorio = new Vector3(aleatorioX, aleatorioY, 0);
 
         // Distancia máxima de disparo: 500
         var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector +
