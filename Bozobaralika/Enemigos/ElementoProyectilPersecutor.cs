@@ -112,7 +112,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IDañable
         cuerpoDañable.Enabled = true;
 
         // Proyectiles persecutores duran 30 segundos
-        tempo = 10f;
+        tempo = 30f;
         ContarVida();
     }
 
