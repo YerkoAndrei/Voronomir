@@ -8,6 +8,7 @@ namespace Bozobaralika;
 public class ControladorDañoContinuo : AsyncScript
 {
     public float daño;
+
     private PhysicsComponent cuerpo;
 
     public override async Task Execute()

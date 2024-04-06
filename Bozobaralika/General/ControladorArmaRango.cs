@@ -3,7 +3,7 @@ using Stride.Engine;
 
 namespace Bozobaralika;
 
-public class ControladorArmaRango: StartupScript
+public class ControladorArmaRango : StartupScript
 {
     public Prefab prefabProyectil;
 

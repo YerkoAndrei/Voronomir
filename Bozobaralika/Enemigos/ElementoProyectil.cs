@@ -6,7 +6,7 @@ using Stride.Physics;
 
 namespace Bozobaralika;
 
-public class ElementoProyectil: AsyncScript
+public class ElementoProyectil : AsyncScript
 {
     public ModelComponent modelo;
     public Prefab prefabEfecto;
