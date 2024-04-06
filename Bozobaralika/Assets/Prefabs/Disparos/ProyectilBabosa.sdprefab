@@ -23,7 +23,7 @@ Hierarchy:
                         Materials: {}
         -   Entity:
                 Id: 86c20c07-f561-40f8-a878-11b31ee66fe1
-                Name: DisparoBabosa
+                Name: ProyectilBabosa
                 Components:
                     32b1f75000d0962d38db272c3c9501f1: !RigidbodyComponent
                         Id: 87415d60-4e07-4aa5-9f45-edd6286021fd
@@ -54,6 +54,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             a0c928adfb0b853df190278b93d21157: ref!! fd28c507-07c9-43f7-b810-0487e99b9df0
-                    bf11e917467a24701241c3b399921cc9: !Bozobaralika.ElementoDisparo,Bozobaralika.Proyecto
-                        Id: 394ccf7a-ec12-4354-8f91-dd5a402f1753
+                    cbf0cd13ea1dd1f3f6fdc736c2317c05: !Bozobaralika.ElementoProyectil,Bozobaralika.Proyecto
+                        Id: 6b1b584f-d6e7-49fd-b1db-2defcc82c827
                         modelo: ref!! eeb480e6-0db7-41cf-8266-e568b75ac14b

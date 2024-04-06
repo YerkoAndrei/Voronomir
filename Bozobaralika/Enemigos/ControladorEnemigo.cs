@@ -79,7 +79,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             armaMelé.Iniciar();
 
         else if (!melé && armaRango != null)
-            armaRango.Iniciar(ObtenerVelocidadDisparo(), ObtenerVelocidadSeguimientoDisparo(), ObtenerAlturaDisparo(), cuerpos.ToArray());
+            armaRango.Iniciar(ObtenerVelocidadProyectil(), ObtenerVelocidadSeguimientoProyectil(), ObtenerObjetivoProyectil(), cuerpos.ToArray());
 
         activo = true;
     }
@@ -154,7 +154,7 @@ public class ControladorEnemigo : SyncScript, IDañable
         }
     }
 
-    private float ObtenerVelocidadDisparo()
+    private float ObtenerVelocidadProyectil()
     {
         switch (enemigo)
         {
@@ -169,7 +169,7 @@ public class ControladorEnemigo : SyncScript, IDañable
         }
     }
 
-    private float ObtenerVelocidadSeguimientoDisparo()
+    private float ObtenerVelocidadSeguimientoProyectil()
     {
         switch (enemigo)
         {
@@ -184,7 +184,7 @@ public class ControladorEnemigo : SyncScript, IDañable
         }
     }
 
-    private Vector3 ObtenerAlturaDisparo()
+    private Vector3 ObtenerObjetivoProyectil()
     {
         // Jugador mide 160cm, tiene los ojos en 150cm
         switch (enemigo)

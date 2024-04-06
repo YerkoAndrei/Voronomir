@@ -5,43 +5,43 @@ namespace Bozobaralika;
 
 public class ControladorArmaRango: StartupScript
 {
-    public Prefab prefabDisparo;
+    public Prefab prefabProyectil;
 
     private PhysicsComponent[] cuerposDisparador;
 
-    private ElementoDisparo[] disparos;
-    private Vector3 altura;
+    private ElementoProyectil[] proyectiles;
+    private Vector3 alturaObjetivo;
     private float velocidadSeguimiento;
     private float velocidad;
-    private int disparoActual;
-    private int maxDisparos;
+    private int proyectilActual;
+    private int maxProyectiles;
 
-    public void Iniciar(float _velocidad, float _velocidadSeguimiento, Vector3 _altura, PhysicsComponent[] _cuerposDisparador)
+    public void Iniciar(float _velocidad, float _velocidadSeguimiento, Vector3 _alturaObjetivo, PhysicsComponent[] _cuerposDisparador)
     {
-        altura = _altura;
+        alturaObjetivo = _alturaObjetivo;
         velocidad = _velocidad;
         velocidadSeguimiento = _velocidadSeguimiento;
         cuerposDisparador = _cuerposDisparador;
 
-        maxDisparos = 4;
-        disparos = new ElementoDisparo[maxDisparos];
-        for (int i = 0; i < maxDisparos; i++)
+        maxProyectiles = 4;
+        proyectiles = new ElementoProyectil[maxProyectiles];
+        for (int i = 0; i < maxProyectiles; i++)
         {
-            var marca = prefabDisparo.Instantiate()[0];
-            disparos[i] = marca.Get<ElementoDisparo>();
+            var marca = prefabProyectil.Instantiate()[0];
+            proyectiles[i] = marca.Get<ElementoProyectil>();
             Entity.Scene.Entities.Add(marca);
         }
     }
 
     public void Disparar(float daño)
     {
-        var dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorPartida.ObtenerPosiciónJugador() + altura));
+        var dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorPartida.ObtenerPosiciónJugador() + alturaObjetivo));
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
-        disparos[disparoActual].Iniciar(daño, velocidad, velocidadSeguimiento, rotación, altura, Entity.Transform.WorldMatrix.TranslationVector, cuerposDisparador);
-        disparoActual++;
+        proyectiles[proyectilActual].Iniciar(daño, velocidad, velocidadSeguimiento, rotación, alturaObjetivo, Entity.Transform.WorldMatrix.TranslationVector, cuerposDisparador);
+        proyectilActual++;
 
-        if (disparoActual >= maxDisparos)
-            disparoActual = 0;
+        if (proyectilActual >= maxProyectiles)
+            proyectilActual = 0;
     }
 }

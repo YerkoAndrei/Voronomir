@@ -5,7 +5,7 @@ using Stride.Physics;
 
 namespace Bozobaralika;
 
-public class ElementoDisparo: AsyncScript
+public class ElementoProyectil: AsyncScript
 {
     public ModelComponent modelo;
 
@@ -105,7 +105,7 @@ public class ElementoDisparo: AsyncScript
         modelo.Enabled = true;
         cuerpo.Enabled = true;
 
-        // Ningún disparo dura más de 10 segundos
+        // Ningún proyectil dura más de 10 segundos
         tempo = 10f;
         ContarVida();
     }
