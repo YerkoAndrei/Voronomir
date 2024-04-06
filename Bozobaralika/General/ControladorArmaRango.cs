@@ -10,13 +10,17 @@ public class ControladorArmaRango: StartupScript
     private PhysicsComponent[] cuerposDisparador;
 
     private ElementoDisparo[] disparos;
+    private Vector3 altura;
+    private float velocidadSeguimiento;
     private float velocidad;
     private int disparoActual;
     private int maxDisparos;
 
-    public void Iniciar(float _velocidad, PhysicsComponent[] _cuerposDisparador)
+    public void Iniciar(float _velocidad, float _velocidadSeguimiento, Vector3 _altura, PhysicsComponent[] _cuerposDisparador)
     {
+        altura = _altura;
         velocidad = _velocidad;
+        velocidadSeguimiento = _velocidadSeguimiento;
         cuerposDisparador = _cuerposDisparador;
 
         maxDisparos = 4;
@@ -29,12 +33,12 @@ public class ControladorArmaRango: StartupScript
         }
     }
 
-    public void Disparar(float daño, Vector3 objetivo)
+    public void Disparar(float daño)
     {
-        var dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - objetivo);
+        var dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorPartida.ObtenerPosiciónJugador() + altura));
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
-        disparos[disparoActual].Iniciar(daño, velocidad, rotación, Entity.Transform.WorldMatrix.TranslationVector, cuerposDisparador);
+        disparos[disparoActual].Iniciar(daño, velocidad, velocidadSeguimiento, rotación, altura, Entity.Transform.WorldMatrix.TranslationVector, cuerposDisparador);
         disparoActual++;
 
         if (disparoActual >= maxDisparos)

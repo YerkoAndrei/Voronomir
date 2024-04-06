@@ -11,6 +11,10 @@ public class ElementoDisparo: AsyncScript
 
     private PhysicsComponent[] disparador;
     private RigidbodyComponent cuerpo;
+    private Vector3 altura;
+    private Vector3 dirección;
+    private float velocidadSeguimiento;
+    private float velocidad;
     private float tempo;
     private float daño;
 
@@ -31,6 +35,7 @@ public class ElementoDisparo: AsyncScript
                     colisión.ColliderB.CollisionGroup == CollisionFilterGroups.SensorTrigger)
                 {
                     // PENDIENTE: efecto disparo enemigo
+                    Apagar();
                     continue;
                 }
 
@@ -79,7 +84,7 @@ public class ElementoDisparo: AsyncScript
         cuerpo.Enabled = false;
     }
 
-    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, PhysicsComponent[] _disparador)
+    public void Iniciar(float _daño, float _velocidad, float _velocidadSeguimiento, Quaternion _rotación, Vector3 _altura, Vector3 _posición, PhysicsComponent[] _disparador)
     {
         Apagar();
 
@@ -88,11 +93,14 @@ public class ElementoDisparo: AsyncScript
 
         daño = _daño;
         disparador = _disparador;
+        velocidad = _velocidad;
+        altura = _altura;
+        velocidadSeguimiento = _velocidadSeguimiento;
 
         // Dirección
         cuerpo.IsKinematic = false;
         cuerpo.UpdatePhysicsTransformation();
-        cuerpo.LinearVelocity = Entity.Transform.WorldMatrix.Forward * _velocidad;
+        cuerpo.LinearVelocity = Entity.Transform.WorldMatrix.Forward * velocidad;
 
         modelo.Enabled = true;
         cuerpo.Enabled = true;
@@ -106,6 +114,17 @@ public class ElementoDisparo: AsyncScript
     {
         while (cuerpo.Enabled)
         {
+            // Sigue jugador
+            if (velocidadSeguimiento > 0)
+            {
+                dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorPartida.ObtenerPosiciónJugador() + altura));
+                Entity.Transform.Rotation = Quaternion.Lerp(Entity.Transform.Rotation, Quaternion.LookRotation(dirección, Vector3.UnitY), velocidadSeguimiento * (float)Game.UpdateTime.Elapsed.TotalSeconds);
+
+                Entity.Transform.UpdateWorldMatrix();
+                cuerpo.UpdatePhysicsTransformation();
+                cuerpo.LinearVelocity = Entity.Transform.WorldMatrix.Forward * velocidad;
+            }
+
             tempo -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
             if (tempo <= 0)
                 Apagar();

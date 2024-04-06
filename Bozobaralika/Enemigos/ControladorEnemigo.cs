@@ -79,7 +79,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             armaMelé.Iniciar();
 
         else if (!melé && armaRango != null)
-            armaRango.Iniciar(ObtenerVelocidadDisparo(), cuerpos.ToArray());
+            armaRango.Iniciar(ObtenerVelocidadDisparo(), ObtenerVelocidadSeguimientoDisparo(), ObtenerAlturaDisparo(), cuerpos.ToArray());
 
         activo = true;
     }
@@ -100,7 +100,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             armaMelé.Atacar(ObtenerDañoMelé());
 
         else if (!melé && armaRango != null)
-            armaRango.Disparar(ObtenerDañoRango(), ObtenerPosiciónDisparo());
+            armaRango.Disparar(ObtenerDañoRango());
     }
 
     public void RecibirDaño(float daño)
@@ -169,19 +169,34 @@ public class ControladorEnemigo : SyncScript, IDañable
         }
     }
 
-    private Vector3 ObtenerPosiciónDisparo()
+    private float ObtenerVelocidadSeguimientoDisparo()
+    {
+        switch (enemigo)
+        {
+            case Enemigos.rangoLigero:
+                return 0;
+            case Enemigos.rangoMediano:
+                return 5;
+            case Enemigos.rangoPesado:
+                return 0;
+            default:
+                return 0;
+        }
+    }
+
+    private Vector3 ObtenerAlturaDisparo()
     {
         // Jugador mide 160cm, tiene los ojos en 150cm
         switch (enemigo)
         {
             case Enemigos.rangoLigero:
-                return ControladorPartida.ObtenerPosiciónJugador() + new Vector3(0, 1.25f, 0);
+                return Vector3.UnitY * 1.4f;
             case Enemigos.rangoMediano:
-                return ControladorPartida.ObtenerPosiciónJugador() + new Vector3(0, 1f, 0);
+                return Vector3.UnitY * 0.6f;
             case Enemigos.rangoPesado:
-                return ControladorPartida.ObtenerPosiciónJugador() + new Vector3(0, 1.1f, 0);
+                return Vector3.UnitY * 1f;
             default:
-                return ControladorPartida.ObtenerPosiciónJugador();
+                return Vector3.UnitY;
         }
     }
 
