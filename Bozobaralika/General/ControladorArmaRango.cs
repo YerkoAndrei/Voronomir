@@ -19,7 +19,7 @@ public class ControladorArmaRango: StartupScript
     private int proyectilActual;
     private int maxProyectiles;
 
-    public void Iniciar( float _velocidad, float _velocidadRotación, Vector3 _alturaObjetivo, PhysicsComponent[] _cuerposDisparador)
+    public void Iniciar(float _velocidad, float _velocidadRotación, Vector3 _alturaObjetivo, PhysicsComponent[] _cuerposDisparador)
     {
         alturaObjetivo = _alturaObjetivo;
         velocidad = _velocidad;

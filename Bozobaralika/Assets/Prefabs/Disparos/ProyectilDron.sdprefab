@@ -45,6 +45,7 @@ Hierarchy:
                     d89d9ac3376980af442c0249a81121fd: !Bozobaralika.ElementoProyectil,Bozobaralika.Proyecto
                         Id: ce6bb3b4-2d26-4681-bfb3-6c61ec27a02e
                         modelo: ref!! bf833ccc-6866-473d-957e-6701119d2237
+                        prefabEfecto: null
         -   Folder: null
             Entity:
                 Id: f7cd993f-4814-497e-947f-18f5abd49d93
