@@ -79,7 +79,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             armaMelé.Iniciar();
 
         else if (!melé && armaRango != null)
-            armaRango.Iniciar(ObtenerVelocidadProyectil(), ObtenerVelocidadSeguimientoProyectil(), ObtenerObjetivoProyectil(), cuerpos.ToArray());
+            armaRango.Iniciar(ObtenerVelocidadProyectil(), ObtenerRotaciónProyectil(), ObtenerObjetivoProyectil(), cuerpos.ToArray());
 
         activo = true;
     }
@@ -251,7 +251,7 @@ public class ControladorEnemigo : SyncScript, IDañable
         }
     }
 
-    private float ObtenerVelocidadSeguimientoProyectil()
+    private float ObtenerRotaciónProyectil()
     {
         switch (enemigo)
         {

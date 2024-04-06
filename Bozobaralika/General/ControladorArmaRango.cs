@@ -13,19 +13,19 @@ public class ControladorArmaRango: StartupScript
     private ElementoProyectilPersecutor[] proyectilesPersecutores;
 
     private Vector3 alturaObjetivo;
-    private float velocidadSeguimiento;
+    private float velocidadRotación;
     private float velocidad;
     private bool persecutor;
     private int proyectilActual;
     private int maxProyectiles;
 
-    public void Iniciar( float _velocidad, float _velocidadSeguimiento, Vector3 _alturaObjetivo, PhysicsComponent[] _cuerposDisparador)
+    public void Iniciar( float _velocidad, float _velocidadRotación, Vector3 _alturaObjetivo, PhysicsComponent[] _cuerposDisparador)
     {
         alturaObjetivo = _alturaObjetivo;
         velocidad = _velocidad;
-        velocidadSeguimiento = _velocidadSeguimiento;
+        velocidadRotación = _velocidadRotación;
         cuerposDisparador = _cuerposDisparador;
-        persecutor = (velocidadSeguimiento > 0);
+        persecutor = (velocidadRotación > 0);
 
         maxProyectiles = 4;
 
@@ -57,7 +57,7 @@ public class ControladorArmaRango: StartupScript
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
         if (persecutor)
-            proyectilesPersecutores[proyectilActual].Iniciar(daño, velocidad, velocidadSeguimiento, rotación, alturaObjetivo, Entity.Transform.WorldMatrix.TranslationVector, cuerposDisparador);
+            proyectilesPersecutores[proyectilActual].Iniciar(daño, velocidad, velocidadRotación, rotación, alturaObjetivo, Entity.Transform.WorldMatrix.TranslationVector, cuerposDisparador);
         else
             proyectiles[proyectilActual].Iniciar(daño, velocidad, rotación, Entity.Transform.WorldMatrix.TranslationVector, cuerposDisparador);
         

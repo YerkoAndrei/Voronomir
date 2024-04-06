@@ -16,7 +16,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IDañable
     private RigidbodyComponent cuerpo;
     private Vector3 altura;
     private Vector3 dirección;
-    private float velocidadSeguimiento;
+    private float velocidadRotación;
     private float velocidad;
     private float tempo;
     private float daño;
@@ -88,7 +88,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IDañable
         cuerpoDañable.Enabled = false;
     }
 
-    public void Iniciar(float _daño, float _velocidad, float _velocidadSeguimiento, Quaternion _rotación, Vector3 _altura, Vector3 _posición, PhysicsComponent[] _disparador)
+    public void Iniciar(float _daño, float _velocidad, float _velocidadRotación, Quaternion _rotación, Vector3 _altura, Vector3 _posición, PhysicsComponent[] _disparador)
     {
         Apagar();
 
@@ -100,7 +100,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IDañable
         altura = _altura;
         velocidad = _velocidad;
         disparador = _disparador;
-        velocidadSeguimiento = _velocidadSeguimiento;
+        velocidadRotación = _velocidadRotación;
 
         // Dirección
         cuerpo.IsKinematic = false;
@@ -121,14 +121,17 @@ public class ElementoProyectilPersecutor: AsyncScript, IDañable
         while (cuerpo.Enabled)
         {
             // Sigue jugador
-            if (velocidadSeguimiento > 0)
+            if (velocidadRotación > 0)
             {
                 dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorPartida.ObtenerPosiciónJugador() + altura));
-                Entity.Transform.Rotation = Quaternion.Lerp(Entity.Transform.Rotation, Quaternion.LookRotation(dirección, Vector3.UnitY), velocidadSeguimiento * (float)Game.UpdateTime.Elapsed.TotalSeconds);
+                Entity.Transform.Rotation = Quaternion.Lerp(Entity.Transform.Rotation, Quaternion.LookRotation(dirección, Vector3.UnitY), velocidadRotación * (float)Game.UpdateTime.Elapsed.TotalSeconds);
 
                 Entity.Transform.UpdateWorldMatrix();
                 cuerpo.UpdatePhysicsTransformation();
                 cuerpo.LinearVelocity = Entity.Transform.WorldMatrix.Forward * velocidad;
+
+                // Mientras más tiempo, más se acerca al jugador 
+                velocidadRotación += 0.01f;
             }
 
             tempo -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
