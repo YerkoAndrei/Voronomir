@@ -5,12 +5,14 @@ namespace Bozobaralika;
 public static class Constantes
 {
     // Filtros:
-    // Default      - Disparos (daño en general)
+    // Default      - Disparos jugador, daño ambiente
     // Static       - Entorno
     // Kinematic    - Enemigos (navegación y dañable)
     // Debris       - Escombros, muertos
     // Sensor       - Llaves, botones, puertas, saltadores, escudo
     // Character    - Jugador
+    // Custom1      - Proyectiles enemigos simples
+    // Custom2      - Proyectiles enemigos persecutores
 
     // Color botones
     public static Color colorNormal = new Color(255, 255, 255, 255);

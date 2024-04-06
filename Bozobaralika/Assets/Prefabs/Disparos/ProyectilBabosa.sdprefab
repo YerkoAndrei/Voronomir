@@ -6,8 +6,7 @@ Hierarchy:
     RootParts:
         - ref!! 86c20c07-f561-40f8-a878-11b31ee66fe1
     Parts:
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 7acdeb63-32ca-47ff-85a8-cf31c90248ae
                 Name: Modelo
                 Components:
@@ -27,14 +26,16 @@ Hierarchy:
                 Components:
                     32b1f75000d0962d38db272c3c9501f1: !RigidbodyComponent
                         Id: 87415d60-4e07-4aa5-9f45-edd6286021fd
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter
+                        Enabled: false
+                        CollisionGroup: CustomFilter2
+                        CanCollideWith: StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
+                        IsTrigger: true
                         IsKinematic: false
                         Mass: 0.0
                         LinearDamping: 0.0
@@ -53,13 +54,48 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            a0c928adfb0b853df190278b93d21157: ref!! fd28c507-07c9-43f7-b810-0487e99b9df0
-                    cbf0cd13ea1dd1f3f6fdc736c2317c05: !Bozobaralika.ElementoProyectil,Bozobaralika.Proyecto
-                        Id: 6b1b584f-d6e7-49fd-b1db-2defcc82c827
+                            b975fd3571e49ed9dba1103c53e29d95: ref!! 610e8283-9251-4010-b1c7-d4e5931744c4
+                            f9fb1c017133e252879f1d0117ae26c5: ref!! fd28c507-07c9-43f7-b810-0487e99b9df0
+                    173a5f3fa09d1e96ac2e0527202772f7: !Bozobaralika.ElementoProyectilPersecutor,Bozobaralika.Proyecto
+                        Id: e05b5d43-1198-4b60-802c-d82945a4ae9f
                         modelo: ref!! eeb480e6-0db7-41cf-8266-e568b75ac14b
+                        "cuerpoDañable": ref!! ca4626ef-f3fd-47be-8ccd-ba4de24b1dfd
                         cuerpos:
-                            5ec3fdebe3aa9fa17965652369dc116d: ref!! 87415d60-4e07-4aa5-9f45-edd6286021fd
-                    9060e5be50023e328225771978d395be: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
-                        Id: 7cdbddf7-1f46-4c09-a7a4-56454fabc551
+                            b95b2994645466f7a73e3ca7deb24c0d: ref!! 87415d60-4e07-4aa5-9f45-edd6286021fd
+        -   Entity:
+                Id: fe3fbc5c-a4d9-49bf-bb5a-795caf0665db
+                Name: "Dañable"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 610e8283-9251-4010-b1c7-d4e5931744c4
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: ca4626ef-f3fd-47be-8ccd-ba4de24b1dfd
+                        CollisionGroup: CustomFilter2
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.26
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: 8fefcde3-1523-49ee-b3a1-61d002d1cde7
                         controlador: ref!! 86c20c07-f561-40f8-a878-11b31ee66fe1
                         multiplicador: 1.0

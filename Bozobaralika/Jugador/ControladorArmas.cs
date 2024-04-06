@@ -67,7 +67,11 @@ public class ControladorArmas : StartupScript
         tempoMetralleta = tiempoAtascamientoMetralleta;
 
         // Filtros disparos
-        colisionesDisparo = CollisionFilterGroupFlags.DefaultFilter | CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.KinematicFilter | CollisionFilterGroupFlags.SensorTrigger;
+        colisionesDisparo = CollisionFilterGroupFlags.StaticFilter | 
+                            CollisionFilterGroupFlags.KinematicFilter | 
+                            CollisionFilterGroupFlags.SensorTrigger |
+                            CollisionFilterGroupFlags.CustomFilter2;
+
         rayosMelé = new Vector3[3]
         {
             new Vector3 (0.3f, 0, 0),

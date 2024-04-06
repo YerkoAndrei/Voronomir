@@ -20,7 +20,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: 9a4a09b7-f892-4fdc-82e9-115129733547
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -124,7 +124,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: c6a9bd0b-a22b-4f96-9a70-d6f1f3fd3ea1
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -163,7 +163,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: d2e9ed88-e4b2-4015-b3dc-9474001dffc7
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0

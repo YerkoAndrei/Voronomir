@@ -1,19 +1,26 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
 
 namespace Bozobaralika;
 
-public class ElementoProyectil: AsyncScript
+public class ElementoProyectilPersecutor: AsyncScript, IDañable
 {
     public ModelComponent modelo;
+    public RigidbodyComponent cuerpoDañable;
+    public List<RigidbodyComponent> cuerpos { get; set; }
 
     private PhysicsComponent[] disparador;
     private RigidbodyComponent cuerpo;
+    private Vector3 altura;
+    private Vector3 dirección;
+    private float velocidadSeguimiento;
     private float velocidad;
     private float tempo;
     private float daño;
+    private float vida;
 
     public override async Task Execute()
     {
@@ -78,18 +85,22 @@ public class ElementoProyectil: AsyncScript
         modelo.Enabled = false;
         cuerpo.IsKinematic = true;
         cuerpo.Enabled = false;
+        cuerpoDañable.Enabled = false;
     }
 
-    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, PhysicsComponent[] _disparador)
+    public void Iniciar(float _daño, float _velocidad, float _velocidadSeguimiento, Quaternion _rotación, Vector3 _altura, Vector3 _posición, PhysicsComponent[] _disparador)
     {
         Apagar();
 
         Entity.Transform.Position = _posición;
         Entity.Transform.Rotation = _rotación;
 
+        vida = _daño;
         daño = _daño;
-        disparador = _disparador;
+        altura = _altura;
         velocidad = _velocidad;
+        disparador = _disparador;
+        velocidadSeguimiento = _velocidadSeguimiento;
 
         // Dirección
         cuerpo.IsKinematic = false;
@@ -98,8 +109,9 @@ public class ElementoProyectil: AsyncScript
 
         modelo.Enabled = true;
         cuerpo.Enabled = true;
+        cuerpoDañable.Enabled = true;
 
-        // Proyectiles simples duran 10 segundos
+        // Proyectiles persecutores duran 30 segundos
         tempo = 10f;
         ContarVida();
     }
@@ -108,11 +120,29 @@ public class ElementoProyectil: AsyncScript
     {
         while (cuerpo.Enabled)
         {
+            // Sigue jugador
+            if (velocidadSeguimiento > 0)
+            {
+                dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorPartida.ObtenerPosiciónJugador() + altura));
+                Entity.Transform.Rotation = Quaternion.Lerp(Entity.Transform.Rotation, Quaternion.LookRotation(dirección, Vector3.UnitY), velocidadSeguimiento * (float)Game.UpdateTime.Elapsed.TotalSeconds);
+
+                Entity.Transform.UpdateWorldMatrix();
+                cuerpo.UpdatePhysicsTransformation();
+                cuerpo.LinearVelocity = Entity.Transform.WorldMatrix.Forward * velocidad;
+            }
+
             tempo -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
             if (tempo <= 0)
                 Apagar();
 
             await Task.Delay(1);
         }
+    }
+
+    public void RecibirDaño(float daño)
+    {
+        vida -= daño;
+        if (vida <= 0)
+            Apagar();
     }
 }

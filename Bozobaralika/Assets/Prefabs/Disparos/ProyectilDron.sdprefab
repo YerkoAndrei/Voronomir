@@ -13,7 +13,8 @@ Hierarchy:
                     32b1f75000d0962d38db272c3c9501f1: !RigidbodyComponent
                         Id: e9a29ae7-eabb-4d8a-b730-dd307a30029c
                         Enabled: false
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter
+                        CollisionGroup: CustomFilter1
+                        CanCollideWith: StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -44,12 +45,6 @@ Hierarchy:
                     d89d9ac3376980af442c0249a81121fd: !Bozobaralika.ElementoProyectil,Bozobaralika.Proyecto
                         Id: ce6bb3b4-2d26-4681-bfb3-6c61ec27a02e
                         modelo: ref!! bf833ccc-6866-473d-957e-6701119d2237
-                        cuerpos:
-                            5d1d084406c2a7c13d15fbd1d02a4bc6: ref!! e9a29ae7-eabb-4d8a-b730-dd307a30029c
-                    a4119f8d4ebfa5e939b77e3ae4e011e6: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
-                        Id: 79787f7f-d382-41c2-990a-dbf8531abfa4
-                        controlador: ref!! b5e7a671-aabc-4e15-bad5-e7c32d6f0e7d
-                        multiplicador: 0.0
         -   Folder: null
             Entity:
                 Id: f7cd993f-4814-497e-947f-18f5abd49d93
