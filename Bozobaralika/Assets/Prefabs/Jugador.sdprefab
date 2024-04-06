@@ -13,7 +13,7 @@ Hierarchy:
                 Components:
                     1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
                         Id: 55f0a1d5-0c3b-4158-8cdb-a59ed204774c
-                        Position: {X: 0.0, Y: 0.75, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -37,7 +37,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             fbe76a3afc7b249bfeb4a9f90dc2ad2e: !CapsuleColliderShapeDesc
-                                Length: 1.0
+                                Length: 1.1
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
@@ -83,9 +83,9 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: -25.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
-                                Length: 0.9
+                                Length: 1.0
                                 Radius: 0.3
-                                LocalOffset: {X: 0.0, Y: 0.75, Z: 0.0}
+                                LocalOffset: {X: 0.0, Y: 0.8, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     c76d63ecb77eaca4261abdea69fcd8fe: !Bozobaralika.ControladorJugador,Bozobaralika.Proyecto
                         Id: 7697bae4-e288-40f2-bf34-020e8b7344f8
@@ -95,7 +95,7 @@ Hierarchy:
                             7390e727d4bb096c99284e317d4920a8: ref!! 46a8499f-bade-47ce-b262-c1612fe5be71
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 0f68b383-7401-4067-8520-9e9ff0ddfc18
-                        Position: {X: 0.0, Y: 0.0, Z: 4.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
