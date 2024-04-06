@@ -14,7 +14,7 @@ public class Depurador : AsyncScript
     public Prefab cerebro;
     public Prefab dron;
     public Prefab babosa;
-    //public Prefab araña;
+    public Prefab araña;
 
     public override async Task Execute()
     {/*
@@ -46,6 +46,11 @@ public class Depurador : AsyncScript
             if (Input.IsKeyPressed(Keys.O))
             {
                 var enemigo = babosa.Instantiate()[0];
+                Entity.Scene.Entities.Add(enemigo);
+            }
+            if (Input.IsKeyPressed(Keys.P))
+            {
+                var enemigo = araña.Instantiate()[0];
                 Entity.Scene.Entities.Add(enemigo);
             }
 

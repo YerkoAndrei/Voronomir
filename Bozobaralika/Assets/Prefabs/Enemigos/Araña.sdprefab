@@ -1,0 +1,180 @@
+!PrefabAsset
+Id: 9aa19048-03e4-4927-8465-80862da8cc48
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! b12a1fec-9e79-4bf7-b177-44705a334650
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 0a3dba4a-7030-46df-b487-36753cda63a3
+                Name: "Dañable poto"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 777c3a8f-f9d2-4dc3-bb44-13d99a293b4e
+                        Position: {X: 0.0, Y: 1.0, Z: -1.6}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 0.3, Z: 3.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: da9e9a18-1567-4d94-b286-973cb2c0ed1d
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.5, Y: 2.0, Z: 0.5}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: bf0f2e81-39b4-4d97-957e-4d8103dd3fb0
+                        controlador: ref!! b12a1fec-9e79-4bf7-b177-44705a334650
+                        multiplicador: 1.0
+        -   Folder: null
+            Entity:
+                Id: 2062be4f-0e73-42c2-8f24-0d92af73c195
+                Name: "Dañable torso"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 9dfce3ae-ad8a-42fa-9db4-893b7d4348de
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 3.0, Y: 0.3, Z: 3.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 2b72a648-b657-475b-9b27-d8e7bcabde3b
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.5, Y: 2.0, Z: 0.5}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: db1c9016-61ea-48a7-895b-c830459b8c83
+                        controlador: ref!! b12a1fec-9e79-4bf7-b177-44705a334650
+                        multiplicador: 1.0
+        -   Folder: null
+            Entity:
+                Id: 451a45ff-968a-4fe0-b2da-91446eb2c0ee
+                Name: ArmaRango
+                Components:
+                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
+                        Id: 74cd8091-e66e-4cc5-abe8-17b896e8a1f6
+                        Position: {X: 0.0, Y: 1.0, Z: 1.1}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 0.0}
+                        Children: {}
+                    8aaa7191e7878108ae185c5897831675: !Bozobaralika.ControladorArmaRango,Bozobaralika.Proyecto
+                        Id: 4a9ca052-67a5-4cf2-a972-753ae99d4102
+                        prefabProyectil: "4e523c66-cad9-49d9-8baf-b22243566c31:Prefabs/Disparos/ProyectilAraña"
+        -   Entity:
+                Id: b12a1fec-9e79-4bf7-b177-44705a334650
+                Name: "Araña"
+                Components:
+                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
+                        Id: adfda20d-46da-40f5-89e8-70bce8e3e033
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        StepHeight: 0.25
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 10.0
+                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
+                        ColliderShapes:
+                            ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
+                                Length: 1.5
+                                Radius: 1.0
+                                Orientation: UpZ
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: -0.6}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
+                        Id: 8d784fb6-1a9e-4642-8e81-61848c599f9d
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
+                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
+                        Id: cc1cf7a1-72e0-4ac4-b4b3-7b978d19bfa6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f14eafd2887605601cb783e4e612d427: ref!! 203a4aa6-f179-48fc-970b-3d624fe8b835
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 9caed9bb-330a-4fb9-aff4-4e6297d27893
+                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! 74cd8091-e66e-4cc5-abe8-17b896e8a1f6
+                    7f6e66f0d97456bb9a986066b6ffeee1: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                        Id: 0de03905-32b0-4217-b129-041f1d024130
+                        enemigo: rangoPesado
+                        "armaMelé": null
+                        armaRango: ref!! 4a9ca052-67a5-4cf2-a972-753ae99d4102
+                        cuerpos:
+                            ad5f371af09d736586a420c788f25eaf: ref!! 2b72a648-b657-475b-9b27-d8e7bcabde3b
+                            ea08a84d5f3dde506286584b8fd64d67: ref!! da9e9a18-1567-4d94-b286-973cb2c0ed1d
+                    33ce25eb8ee99f15b44e0a062cbfffd2: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: 4ba9a486-b7da-4603-8605-cda247797342
+                    cf6666cbb1a2454c7a6f90087da66b05: !Bozobaralika.AnimadorAra%25C3%25B1a,Bozobaralika.Proyecto
+                        Id: cd89fd3f-a948-44ec-a75a-1baf05f96db9
+                        modelo: ref!! a499c6d7-b229-4995-a0cb-d00b50d65824
+        -   Folder: null
+            Entity:
+                Id: c89d458b-f954-4d3f-9032-14652b88b729
+                Name: Modelo
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: 9caed9bb-330a-4fb9-aff4-4e6297d27893
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: a499c6d7-b229-4995-a0cb-d00b50d65824
+                        Model: "db867d68-4431-4e52-9abb-f81df0c158eb:Modelos/Araña/Araña"
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: f2712ac4-ca08-476b-9167-c65b4594cf09
+                Name: "Dañables"
+                Components:
+                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
+                        Id: 203a4aa6-f179-48fc-970b-3d624fe8b835
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            eb99b1e64a4f9fdca4c26543319c89fb: ref!! 9dfce3ae-ad8a-42fa-9db4-893b7d4348de
+                            b3f6cdf00baa9359d2b32841a2e4f4a7: ref!! 777c3a8f-f9d2-4dc3-bb44-13d99a293b4e

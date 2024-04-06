@@ -1,17 +1,32 @@
 !PrefabAsset
-Id: af640d43-9c24-4ebd-83e0-38d09e4f84c0
+Id: 4e523c66-cad9-49d9-8baf-b22243566c31
 SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 Hierarchy:
     RootParts:
-        - ref!! b5e7a671-aabc-4e15-bad5-e7c32d6f0e7d
+        - ref!! bae73870-af2e-47f5-a745-a2709d6c0e07
     Parts:
+        -   Folder: null
+            Entity:
+                Id: 2f63916c-71cd-4b6f-8d7c-e58f55bf396d
+                Name: Modelo
+                Components:
+                    4434603cbafdaa05f2732041b413b98b: !TransformComponent
+                        Id: 140e589e-caf9-4b52-a39c-1682bf96f0a9
+                        Position: {X: 0.0, Y: 0.0, Z: -0.2}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.2, Y: 0.4, Z: 0.2}
+                        Children: {}
+                    79c97683a9b44b1d2aa39475a8794065: !ModelComponent
+                        Id: b66e1be6-ccde-4b15-9517-6760b1933c23
+                        Model: c7f6cc1f-dca4-4efe-802b-421756419e85:Cylinder
+                        Materials: {}
         -   Entity:
-                Id: b5e7a671-aabc-4e15-bad5-e7c32d6f0e7d
-                Name: ProyectilDron
+                Id: bae73870-af2e-47f5-a745-a2709d6c0e07
+                Name: "ProyectilAraña"
                 Components:
                     32b1f75000d0962d38db272c3c9501f1: !RigidbodyComponent
-                        Id: e9a29ae7-eabb-4d8a-b730-dd307a30029c
+                        Id: 5d68bbaf-fb05-461b-8bd1-e42f83bc8c1e
                         Enabled: false
                         CollisionGroup: CustomFilter1
                         CanCollideWith: StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter
@@ -36,27 +51,12 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: -0.25}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     15bec10d30d73bc28a393fa9974edf68: !TransformComponent
-                        Id: fc4b84fd-b8a2-4c1e-97eb-053c237f4756
+                        Id: 0b9a42c7-3820-4dc3-a1a8-a7a21b36f2d6
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            a0c928adfb0b853df190278b93d21157: ref!! ba51a424-c637-4fd8-a262-fc896d917666
+                            a0c928adfb0b853df190278b93d21157: ref!! 140e589e-caf9-4b52-a39c-1682bf96f0a9
                     d89d9ac3376980af442c0249a81121fd: !Bozobaralika.ElementoProyectil,Bozobaralika.Proyecto
-                        Id: ce6bb3b4-2d26-4681-bfb3-6c61ec27a02e
-                        modelo: ref!! bf833ccc-6866-473d-957e-6701119d2237
-        -   Folder: null
-            Entity:
-                Id: f7cd993f-4814-497e-947f-18f5abd49d93
-                Name: Modelo
-                Components:
-                    4434603cbafdaa05f2732041b413b98b: !TransformComponent
-                        Id: ba51a424-c637-4fd8-a262-fc896d917666
-                        Position: {X: 0.0, Y: 0.0, Z: -0.25}
-                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.1, Y: 0.5, Z: 0.1}
-                        Children: {}
-                    79c97683a9b44b1d2aa39475a8794065: !ModelComponent
-                        Id: bf833ccc-6866-473d-957e-6701119d2237
-                        Model: c7f6cc1f-dca4-4efe-802b-421756419e85:Cylinder
-                        Materials: {}
+                        Id: b191e3df-d606-40f6-a143-b620592096ce
+                        modelo: ref!! b66e1be6-ccde-4b15-9517-6760b1933c23

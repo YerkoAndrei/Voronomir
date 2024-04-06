@@ -18,7 +18,6 @@ public class ControladorEnemigo : SyncScript, IDañable
     private ControladorPersecusión persecutor;
     private float vida;
     private bool activo;
-    private bool melé;
 
     public override void Start()
     {
@@ -29,34 +28,28 @@ public class ControladorEnemigo : SyncScript, IDañable
         {
             case Enemigos.meléLigero:
                 vida = 80;
-                melé = true;
                 persecutor.Iniciar(this, 0.1f, 7f, 6f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.meléMediano:
                 vida = 200;
-                melé = true;
                 persecutor.Iniciar(this, 0.1f, 4f, 5f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.meléPesado:
                 vida = 50;
-                melé = true;
                 persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), true);
                 break;
 
             case Enemigos.rangoLigero:
                 vida = 40;
-                melé = false;
                 persecutor.Iniciar(this, 1f, 16f, 0f, ObtenerDistanciaAtaque(), true);
                 break;
             case Enemigos.rangoMediano:
                 vida = 400;
-                melé = false;
                 persecutor.Iniciar(this, 0.2f, 2f, 3f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.rangoPesado:
-                vida = 500;
-                melé = false;
-                persecutor.Iniciar(this, 0.5f, 5f, 5f, ObtenerDistanciaAtaque(), false);
+                vida = 600;
+                persecutor.Iniciar(this, 0.2f, 8f, 6f, ObtenerDistanciaAtaque(), false);
                 break;
 
             case Enemigos.especialLigero:
@@ -74,11 +67,9 @@ public class ControladorEnemigo : SyncScript, IDañable
                 break;
         }
 
-        // Cerebro no tiene arma
-        if (melé && armaMelé != null)
+        if (armaMelé != null)
             armaMelé.Iniciar();
-
-        else if (!melé && armaRango != null)
+        else if (armaRango != null)
             armaRango.Iniciar(ObtenerVelocidadProyectil(), ObtenerRotaciónProyectil(), ObtenerObjetivoProyectil(), cuerpos.ToArray());
 
         activo = true;
@@ -96,10 +87,10 @@ public class ControladorEnemigo : SyncScript, IDañable
     public void Atacar()
     {
         // Daño puede variar en algún momento
-        if (melé && armaMelé != null)
+        if (armaMelé != null)
             armaMelé.Atacar(ObtenerDaño());
 
-        else if (!melé && armaRango != null)
+        else if (armaRango != null)
             armaRango.Disparar(ObtenerDaño());
     }
 
@@ -174,7 +165,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             case Enemigos.rangoMediano:
                 return 12f;
             case Enemigos.rangoPesado:
-                return 12f;
+                return 16f;
 
             case Enemigos.especialLigero:
                 return 1f;
@@ -204,9 +195,9 @@ public class ControladorEnemigo : SyncScript, IDañable
             case Enemigos.rangoLigero:
                 return 0.5f;
             case Enemigos.rangoMediano:
-                return 1.5f;
+                return 2f;
             case Enemigos.rangoPesado:
-                return 0.5f;
+                return 1f;
 
             case Enemigos.especialLigero:
                 return 0.5f;
@@ -245,7 +236,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             case Enemigos.rangoMediano:
                 return 10;
             case Enemigos.rangoPesado:
-                return 20;
+                return 25;
             default:
                 return 0;
         }
@@ -272,7 +263,7 @@ public class ControladorEnemigo : SyncScript, IDañable
             case Enemigos.rangoMediano:
                 return Vector3.UnitY * 0.6f;
             case Enemigos.rangoPesado:
-                return Vector3.UnitY * 1f;
+                return Vector3.UnitY * 0.2f;
             default:
                 return Vector3.UnitY;
         }
