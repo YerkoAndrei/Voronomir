@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
-using Stride.Physics;
 
 namespace Bozobaralika;
 using static Constantes;
@@ -12,14 +11,14 @@ public class ControladorLlave : AsyncScript
     public TransformComponent modelo;
     private bool activo;
 
-    private StaticColliderComponent cuerpo;
+    private PhysicsComponent cuerpo;
     private float velocidadRotación;
     private Vector3 posiciónArriba;
     private Vector3 posiciónAbajo;
 
     public override async Task Execute()
     {
-        cuerpo = Entity.Get<StaticColliderComponent>();
+        cuerpo = Entity.Get<PhysicsComponent>();
 
         posiciónArriba = modelo.Position + new Vector3(0, 0.2f, 0);
         posiciónAbajo = modelo.Position;

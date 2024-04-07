@@ -15,7 +15,7 @@ public class ControladorSaltadorCerebro : AsyncScript
 
     public override async Task Execute()
     {
-        var cuerpo = Entity.Get<RigidbodyComponent>();
+        var cuerpo = Entity.Get<PhysicsComponent>();
 
         while (Game.IsRunning)
         {

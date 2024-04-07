@@ -13,7 +13,7 @@ public class ControladorSaltador : AsyncScript
 
     public override async Task Execute()
     {
-        var cuerpo = Entity.Get<StaticColliderComponent>();
+        var cuerpo = Entity.Get<PhysicsComponent>();
         dirección = new Vector3(0, fuerza, 0);
 
         while (Game.IsRunning)
