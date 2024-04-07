@@ -89,11 +89,11 @@ Hierarchy:
                         Materials: {}
         -   Entity:
                 Id: 5a07eb28-4ef8-4e99-8edf-3fe2a4495759
-                Name: Ojo
+                Name: OjoIIzq
                 Components:
                     7f50e0862aa64c64b624858b643ede4a: !TransformComponent
                         Id: f1cf5d44-d5f9-4dc5-b7ee-27e957d6fe66
-                        Position: {X: 0.0, Y: 1.9, Z: 0.0}
+                        Position: {X: 0.2, Y: 1.9, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -146,6 +146,7 @@ Hierarchy:
                             886187fd130d4c87a9a9d76aed7b7965: ref!! 3f934412-131c-46ab-b2c9-e699254a28b0
                             f53a57a6b067e6ee93b450b9677cc263: ref!! 7144186d-b962-4877-832b-4a5acf0e4726
                             98b2fbf71a5cfafbf7eb81d64dc09137: ref!! f1cf5d44-d5f9-4dc5-b7ee-27e957d6fe66
+                            6d3eb683bcf2fe51f0c93cafe3af4268: ref!! a5a79d80-4d40-4f5c-a9bb-3fc2a23d252f
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 4ee0fa72-da51-4fc4-85d9-347ee2fc3b58
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! ed6871da-b990-4be5-ac45-d7c7dd876677
                     954d0ff008c5bbb1b96abc5e37c5fa11: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
@@ -159,6 +160,7 @@ Hierarchy:
                         Id: 4c39d3ae-0407-4623-abb7-a16af17cdafd
                         ojos:
                             d690adabbf7f2cdae08e3cea590890f4: ref!! f1cf5d44-d5f9-4dc5-b7ee-27e957d6fe66
+                            46db9bbd737517563d412dfb1480cd92: ref!! a5a79d80-4d40-4f5c-a9bb-3fc2a23d252f
                     6731dbc2021f9caf46d335ba7756cfe5: !Bozobaralika.AnimadorLancero,Bozobaralika.Proyecto
                         Id: 099538ca-7eff-4097-b7e6-48ba06f09c12
                         modelo: ref!! b237a84c-cf40-4a01-a1a8-d03e00dbe523
@@ -169,6 +171,17 @@ Hierarchy:
                         piernas:
                             578b123d34bf00410ead04fd3ef88bb4: muslo.L
                             4ed343cec3bd4f435714d5d58f6d52b9: muslo.R
+        -   Folder: null
+            Entity:
+                Id: cd3d5485-fe2b-409c-962e-09b2e6e7f341
+                Name: OjoDer
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: a5a79d80-4d40-4f5c-a9bb-3fc2a23d252f
+                        Position: {X: -0.2, Y: 1.9, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
         -   Folder: null
             Entity:
                 Id: d770ab0b-cf84-4c1c-b35b-6c63b81f004c
