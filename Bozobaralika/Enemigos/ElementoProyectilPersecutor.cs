@@ -6,7 +6,7 @@ using Stride.Physics;
 
 namespace Bozobaralika;
 
-public class ElementoProyectilPersecutor: AsyncScript, IDañable
+public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
 {
     public ModelComponent modelo;
     public RigidbodyComponent cuerpoDañable;
@@ -88,7 +88,13 @@ public class ElementoProyectilPersecutor: AsyncScript, IDañable
         cuerpoDañable.Enabled = false;
     }
 
-    public void Iniciar(float _daño, float _velocidad, float _velocidadRotación, Quaternion _rotación, Vector3 _altura, Vector3 _posición, PhysicsComponent[] _disparador)
+    public void IniciarPersecutor(float _velocidadRotación, Vector3 _altura)
+    {
+        altura = _altura;
+        velocidadRotación = _velocidadRotación;
+    }
+
+    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, PhysicsComponent[] _disparador)
     {
         Apagar();
 
@@ -97,10 +103,8 @@ public class ElementoProyectilPersecutor: AsyncScript, IDañable
 
         vida = _daño;
         daño = _daño;
-        altura = _altura;
         velocidad = _velocidad;
         disparador = _disparador;
-        velocidadRotación = _velocidadRotación;
 
         // Dirección
         cuerpo.IsKinematic = false;

@@ -7,7 +7,7 @@ using Stride.Physics;
 
 namespace Bozobaralika;
 
-public class ElementoProyectil : AsyncScript
+public class ElementoProyectil : AsyncScript, IProyectil
 {
     public ModelComponent modelo;
 
@@ -90,6 +90,11 @@ public class ElementoProyectil : AsyncScript
     public void AsignarEfecto(Action<Vector3> _crearEfecto)
     {
         crearEfecto = _crearEfecto;
+    }
+
+    public void IniciarPersecutor(float _velocidadRotación, Vector3 _altura)
+    {
+
     }
 
     public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, PhysicsComponent[] _disparador)

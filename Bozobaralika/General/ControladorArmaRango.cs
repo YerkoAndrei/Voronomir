@@ -11,8 +11,7 @@ public class ControladorArmaRango : StartupScript
     private PhysicsComponent[] cuerposDisparador;
 
     private ElementoVeneno[] efectosVeneno;
-    private ElementoProyectil[] proyectiles;
-    private ElementoProyectilPersecutor[] proyectilesPersecutores;
+    private IProyectil[] proyectiles;
 
     private Vector3 alturaObjetivo;
     private float velocidadRotación;
@@ -34,29 +33,24 @@ public class ControladorArmaRango : StartupScript
         maxProyectiles = 4;
         maxEfectos = maxProyectiles * 2;
 
-        if (persecutor)
+        // Proyectiles
+        proyectiles = new IProyectil[maxProyectiles];
+        for (int i = 0; i < maxProyectiles; i++)
         {
-            proyectilesPersecutores = new ElementoProyectilPersecutor[maxProyectiles];
-            for (int i = 0; i < maxProyectiles; i++)
+            var proyectil = prefabProyectil.Instantiate()[0];
+            foreach (var componente in proyectil.Components)
             {
-                var proyectil = prefabProyectil.Instantiate()[0];
-                proyectilesPersecutores[i] = proyectil.Get<ElementoProyectilPersecutor>();
-                Entity.Scene.Entities.Add(proyectil);
+                if (componente is IProyectil)
+                {
+                    proyectiles[i] = (IProyectil)componente;
+                    break;
+                }
             }
-        }
-        else
-        {
-            proyectiles = new ElementoProyectil[maxProyectiles];
-            for (int i = 0; i < maxProyectiles; i++)
-            {
-                var proyectil = prefabProyectil.Instantiate()[0];
-                proyectiles[i] = proyectil.Get<ElementoProyectil>();
-                Entity.Scene.Entities.Add(proyectil);
+            Entity.Scene.Entities.Add(proyectil);
 
-                // Efectos son explosiones o veneno
-                if (prefabEfecto != null)
-                    proyectil.Get<ElementoProyectil>().AsignarEfecto(IniciarEfecto);
-            }
+            // Efectos son explosiones o veneno
+            if (prefabEfecto != null)
+                proyectil.Get<ElementoProyectil>().AsignarEfecto(IniciarEfecto);
         }
 
         // Efectos
@@ -78,9 +72,9 @@ public class ControladorArmaRango : StartupScript
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
         if (persecutor)
-            proyectilesPersecutores[proyectilActual].Iniciar(daño, velocidad, velocidadRotación, rotación, alturaObjetivo, Entity.Transform.WorldMatrix.TranslationVector, cuerposDisparador);
-        else
-            proyectiles[proyectilActual].Iniciar(daño, velocidad, rotación, Entity.Transform.WorldMatrix.TranslationVector, cuerposDisparador);
+            proyectiles[proyectilActual].IniciarPersecutor(velocidadRotación, alturaObjetivo);
+        
+        proyectiles[proyectilActual].Iniciar(daño, velocidad, rotación, Entity.Transform.WorldMatrix.TranslationVector, cuerposDisparador);
         
         proyectilActual++;
         if (proyectilActual >= maxProyectiles)
