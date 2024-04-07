@@ -4,15 +4,15 @@ using System.Threading.Tasks;
 
 namespace Bozobaralika;
 
-public class ControladorPuerta : StartupScript
+public class ControladorPuerta : StartupScript, IActivable
 {
     public TransformComponent modelo;
     public Vector3 posiciónAbierta;
 
-    public void Mover()
+    public void Activar()
     {
-        AnimarPuerta();
         // PENDIENTE: efectos
+        AnimarPuerta();
     }
 
     private async void AnimarPuerta()

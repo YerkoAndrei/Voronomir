@@ -6,7 +6,7 @@ using Stride.Physics;
 namespace Bozobaralika;
 using static Constantes;
 
-public class ControladorEnemigo : SyncScript, IDañable
+public class ControladorEnemigo : SyncScript, IDañable, IActivable
 {
     public Enemigos enemigo;
     public List<RigidbodyComponent> cuerpos { get; set; }
@@ -23,55 +23,51 @@ public class ControladorEnemigo : SyncScript, IDañable
     {
         cuerpo = Entity.Get<CharacterComponent>();
         persecutor = Entity.Get<ControladorPersecusión>();
-
-        switch (enemigo)
-        {
-            case Enemigos.meléLigero:
-                vida = 80;
-                persecutor.Iniciar(this, 0.1f, 7f, 6f, ObtenerDistanciaAtaque(), false);
-                break;
-            case Enemigos.meléMediano:
-                vida = 200;
-                persecutor.Iniciar(this, 0.1f, 4f, 5f, ObtenerDistanciaAtaque(), false);
-                break;
-            case Enemigos.meléPesado:
-                vida = 50;
-                persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), true);
-                break;
-
-            case Enemigos.rangoLigero:
-                vida = 40;
-                persecutor.Iniciar(this, 1f, 16f, 0f, ObtenerDistanciaAtaque(), true);
-                break;
-            case Enemigos.rangoMediano:
-                vida = 400;
-                persecutor.Iniciar(this, 0.2f, 2f, 3f, ObtenerDistanciaAtaque(), false);
-                break;
-            case Enemigos.rangoPesado:
-                vida = 600;
-                persecutor.Iniciar(this, 0.2f, 8f, 6f, ObtenerDistanciaAtaque(), false);
-                break;
-
-            case Enemigos.especialLigero:
-                vida = 100;
-                break;
-            case Enemigos.especialPesado:
-                vida = 1000;
-                break;
-
-            case Enemigos.minijefeMelé:
-                vida = 5000;
-                break;
-            case Enemigos.minijefeRango:
-                vida = 3000;
-                break;
-        }
+        vida = ObtenerVida();
+        activo = false;
 
         if (armaMelé != null)
             armaMelé.Iniciar();
         else if (armaRango != null)
             armaRango.Iniciar(ObtenerVelocidadProyectil(), ObtenerRotaciónProyectil(), ObtenerObjetivoProyectil(), cuerpos.ToArray());
 
+        switch (enemigo)
+        {
+            case Enemigos.meléLigero:
+                persecutor.Iniciar(this, 0.1f, 7f, 6f, ObtenerDistanciaAtaque(), false);
+                break;
+            case Enemigos.meléMediano:
+                persecutor.Iniciar(this, 0.1f, 4f, 5f, ObtenerDistanciaAtaque(), false);
+                break;
+            case Enemigos.meléPesado:
+                persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), true);
+                break;
+            case Enemigos.rangoLigero:
+                persecutor.Iniciar(this, 1f, 16f, 0f, ObtenerDistanciaAtaque(), true);
+                break;
+            case Enemigos.rangoMediano:
+                persecutor.Iniciar(this, 0.2f, 2f, 3f, ObtenerDistanciaAtaque(), false);
+                break;
+            case Enemigos.rangoPesado:
+                persecutor.Iniciar(this, 0.2f, 8f, 6f, ObtenerDistanciaAtaque(), false);
+                break;
+            case Enemigos.especialLigero:
+                persecutor.Iniciar(this, 1f, 1f, 1f, ObtenerDistanciaAtaque(), false);
+                break;
+            case Enemigos.especialPesado:
+                persecutor.Iniciar(this, 1f, 1f, 1f, ObtenerDistanciaAtaque(), false);
+                break;
+            case Enemigos.minijefeMelé:
+                persecutor.Iniciar(this, 1f, 1f, 1f, ObtenerDistanciaAtaque(), false);
+                break;
+            case Enemigos.minijefeRango:
+                persecutor.Iniciar(this, 1f, 1f, 1f, ObtenerDistanciaAtaque(), false);
+                break;
+        }
+    }
+
+    public void Activar()
+    {
         activo = true;
     }
 
@@ -114,6 +110,35 @@ public class ControladorEnemigo : SyncScript, IDañable
         persecutor.EliminarPersecutor();
         // PENDIENTE: ragdoll
         Entity.Scene.Entities.Remove(Entity);
+    }
+
+    private int ObtenerVida()
+    {
+        switch (enemigo)
+        {
+            case Enemigos.meléLigero:
+                return 80;
+            case Enemigos.meléMediano:
+                return 200;
+            case Enemigos.meléPesado:
+                return 100;
+            case Enemigos.rangoLigero:
+                return 40;
+            case Enemigos.rangoMediano:
+                return 400;
+            case Enemigos.rangoPesado:
+                return 600;
+            case Enemigos.especialLigero:
+                return 100;
+            case Enemigos.especialPesado:
+                return 1000;
+            case Enemigos.minijefeMelé:
+                return 5000;
+            case Enemigos.minijefeRango:
+                return 3000;
+            default:
+                return 0;
+        }
     }
 
     private float ObtenerDaño()

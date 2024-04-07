@@ -9,7 +9,7 @@ public static class Constantes
     // Static       - Entorno
     // Kinematic    - Enemigos (navegación y dañable)
     // Debris       - Escombros, muertos
-    // Sensor       - Llaves, botones, puertas, saltadores, escudo
+    // Sensor       - Llaves, botones, puertas, activadores, saltadores, escudo
     // Character    - Jugador
     // Custom1      - Proyectiles enemigos simples
     // Custom2      - Proyectiles enemigos persecutores

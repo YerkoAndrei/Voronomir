@@ -41,6 +41,10 @@ Hierarchy:
         - ref!! b98edd79-ab8c-48c3-918b-dadfca384f26
         - ref!! 5806e859-d7ec-42d4-ac78-edfc026317d2
         - ref!! d3476e3f-eee5-41dc-9c59-89b96ac24a2b
+        - ref!! a77ffa41-2529-4f4e-90a0-1235895d75a0
+        - ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
+        - ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
+        - ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
     Parts:
         -   Folder: MuestraEnemigos
             Entity:
@@ -137,6 +141,49 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 3d235512-23a1-4ed3-85ab-4cfa16a22cee
                 InstanceId: 2ad3a86b-ba33-4953-ba94-6c4b0a6b813b
+        -   Folder: null
+            Entity:
+                Id: 08fc2677-0f04-4037-909f-2cc3e7811ef1
+                Name: "Dañable torso"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: eba11905-eac7-4d02-9bcd-f872ccc3b33a
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 74fdb046-7a71-4173-8795-18dd6dce0e8b
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.5, Y: 2.0, Z: 0.5}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: 9cb61b7b-8dc9-49c6-a12e-2dc1fdbe6635
+                        controlador: ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
+                        multiplicador: 1.0
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
+                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
         -   Folder: "Entorno/Obstáculos"
             Entity:
                 Id: 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
@@ -169,6 +216,70 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
+                Name*: Zombi 2
+                Components:
+                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
+                        Id: 51e1af36-28b1-4e6f-ab4b-07e1b3481c94
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        StepHeight: 0.25
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 10.0
+                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
+                        ColliderShapes:
+                            ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
+                                Length: 1.2
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
+                        Id: 8d29016e-2edd-4555-80a3-cf93db3163f7
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
+                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
+                        Id: 064c01ad-fbc4-4abd-8fb6-b658da9d0ebb
+                        Position*: {X: 2.0, Y: 0.0, Z: -3.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f14eafd2887605601cb783e4e612d427: ref!! 10b96e19-8814-46c1-bc55-9c2171c819ad
+                            b0616bd3e59c50d54fa88ad23e8366f7: ref!! 2bf3f90e-2146-4e67-9bb0-db4fda703230
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 4e4cc16a-55d4-4eb3-97d6-33016a35e30c
+                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! dd2cba02-7e76-418b-b527-6fb6c885c15e
+                    7f6e66f0d97456bb9a986066b6ffeee1: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                        Id: 9cde4a2f-82be-42ef-8bc1-62b5d6c3399a
+                        enemigo: "meléLigero"
+                        "armaMelé": ref!! 0a27d0de-50df-46fe-afb5-0621eb2f636e
+                        armaRango: null
+                        cuerpos:
+                            ad5f371af09d736586a420c788f25eaf: ref!! e14ba89c-246f-4513-a694-5bee9ca9d27d
+                    33ce25eb8ee99f15b44e0a062cbfffd2: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: 90e841ff-0145-412d-9ff5-5c44bfe97d31
+                        ojos:
+                            44e390ec37f8924a7039eeab0e0141fc: ref!! 2bf3f90e-2146-4e67-9bb0-db4fda703230
+                    dcfc61066510852ac085b2f68892da9c: !Bozobaralika.AnimadorZombi,Bozobaralika.Proyecto
+                        Id: 4943d905-f50c-49a4-a2eb-283bd74ace12
+                        modelo: ref!! 733a460c-1f9a-4401-b759-12d9b996c64f
+                        brazos:
+                            d5e5d05836e952ab9b8d7b3c1a2be51e: brazo.L
+                            64022d1c494de0222385fdafef680dc4: brazo.R
+                        piernas:
+                            e1fa468402b498fdc635e4bc98c6f42b: muslo.L
+                            980a0b5184eece1987ea9a444454fbc2: muslo.R
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
+                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
         -   Folder: Entorno/Muros
             Entity:
                 Id: 1203753a-eca1-4f4a-85e3-0edf0ce91347
@@ -220,6 +331,49 @@ Hierarchy:
                 InstanceId: 2ad3a86b-ba33-4953-ba94-6c4b0a6b813b
         -   Folder: null
             Entity:
+                Id: 1e2b7127-3ce7-4e63-bff3-3ab670ff9699
+                Name: "Dañable torso"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: e7ca49a4-37b2-4c2e-a5a7-eeba4ebf152a
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 64de43ef-79d6-4568-8ab0-2b80c3cdf7aa
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.5, Y: 2.0, Z: 0.5}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: 283e1a13-5282-4cc9-81be-e952acd02ca7
+                        controlador: ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
+                        multiplicador: 1.0
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
+                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
+        -   Folder: null
+            Entity:
                 Id: 1edc8756-d9f1-4d13-b262-f05a161e4fa0
                 Name: Rueda
                 Components:
@@ -263,6 +417,69 @@ Hierarchy:
                         Id: 14f69133-4b5b-4a0f-8991-dea0547c1b8a
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         Materials: {}
+        -   Entity:
+                Id: 2707f98b-4945-4cfb-9a7a-6ae13692cab4
+                Name*: Zombi 0
+                Components:
+                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
+                        Id: 5105a398-1adc-4764-a9dd-09826af890ea
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        StepHeight: 0.25
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 10.0
+                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
+                        ColliderShapes:
+                            ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
+                                Length: 1.2
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
+                        Id: b601a98a-357d-41b6-a814-7eca9a54aee3
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
+                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
+                        Id: 3717bf1d-1943-4fef-80a5-17de44b70f40
+                        Position*: {X: -2.0, Y: 0.0, Z: -3.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f14eafd2887605601cb783e4e612d427: ref!! 3e1ca9ec-8acc-4b13-b485-8f93d3eee5b0
+                            b0616bd3e59c50d54fa88ad23e8366f7: ref!! a6361536-a82e-4d00-8e42-1dacfd083523
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 6380311c-6925-4c1b-b125-8e472fc62b47
+                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! 20dec4b6-d581-4481-8eb7-3e977c7f0089
+                    7f6e66f0d97456bb9a986066b6ffeee1: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                        Id: 88ff69db-fc94-4595-bcde-e5707bfe8b97
+                        enemigo: "meléLigero"
+                        "armaMelé": ref!! 7fd9ec35-6b91-41d4-9f2d-d58306892cef
+                        armaRango: null
+                        cuerpos:
+                            ad5f371af09d736586a420c788f25eaf: ref!! 74fdb046-7a71-4173-8795-18dd6dce0e8b
+                    33ce25eb8ee99f15b44e0a062cbfffd2: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: fa5ef297-d82b-4431-91e0-c67ddaeaf110
+                        ojos:
+                            44e390ec37f8924a7039eeab0e0141fc: ref!! a6361536-a82e-4d00-8e42-1dacfd083523
+                    dcfc61066510852ac085b2f68892da9c: !Bozobaralika.AnimadorZombi,Bozobaralika.Proyecto
+                        Id: f46c0389-4eb3-42d9-bac6-d5951496d8f3
+                        modelo: ref!! 017900b6-b60c-4b05-9c9b-be825d6ff4fa
+                        brazos:
+                            d5e5d05836e952ab9b8d7b3c1a2be51e: brazo.L
+                            64022d1c494de0222385fdafef680dc4: brazo.R
+                        piernas:
+                            e1fa468402b498fdc635e4bc98c6f42b: muslo.L
+                            980a0b5184eece1987ea9a444454fbc2: muslo.R
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
+                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
         -   Folder: Entorno/Muros
             Entity:
                 Id: 2c46881f-53e6-4d1d-85df-924007329f46
@@ -548,6 +765,20 @@ Hierarchy:
                 BasePartId: ae26fb61-6490-4523-8dc8-10162f73c79a
                 InstanceId: 2ad3a86b-ba33-4953-ba94-6c4b0a6b813b
         -   Entity:
+                Id: 462326ab-42df-41f7-8f4a-252f4df065e4
+                Name: Ojo
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: 2bf3f90e-2146-4e67-9bb0-db4fda703230
+                        Position: {X: 0.0, Y: 1.6, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4c24f93d-e3a0-4825-833e-e2a97128dba9
+                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
+        -   Entity:
                 Id: 46624e17-7c51-4632-b9eb-fabc06e5cd94
                 Name: Modelo
                 Components:
@@ -784,6 +1015,22 @@ Hierarchy:
                         Materials: {}
         -   Folder: null
             Entity:
+                Id: 645651a4-8cf8-4f3e-9e19-bc42e8984c16
+                Name: "Dañables"
+                Components:
+                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
+                        Id: 10b96e19-8814-46c1-bc55-9c2171c819ad
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            274570ec839d03441939b84ca63d1199: ref!! 1e75411b-d789-4f89-8329-aaf9c3095298
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
+                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
+        -   Folder: null
+            Entity:
                 Id: 65cbef1f-d377-4b75-a18b-e6e4b92270c3
                 Name: Espada
                 Components:
@@ -802,6 +1049,86 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 855d46ad-e0df-46e0-a435-46753f797211
                 InstanceId: 2ad3a86b-ba33-4953-ba94-6c4b0a6b813b
+        -   Folder: null
+            Entity:
+                Id: 6688a175-b604-4b9a-b9fe-ddd707d59e0a
+                Name: "ArmaMelé"
+                Components:
+                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
+                        Id: 20dec4b6-d581-4481-8eb7-3e977c7f0089
+                        Position: {X: 0.0, Y: 1.0, Z: 1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 2.0}
+                        Children: {}
+                    67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
+                        Id: 1ebfb6a3-9c62-4c1a-aaad-24ff5e3e6e47
+                        CanCollideWith: CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ee1f0f8d5ea461771e1abc59d4677dae: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    3f732cae4db439c6ef0a3d251d2261d5: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
+                        Id: 7fd9ec35-6b91-41d4-9f2d-d58306892cef
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
+                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
+        -   Folder: null
+            Entity:
+                Id: 6adfca37-5386-486c-ac13-c14d22099770
+                Name: "ArmaMelé"
+                Components:
+                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
+                        Id: d227dbe4-1e91-49a6-8274-2c4b07edb0db
+                        Position: {X: 0.0, Y: 1.0, Z: 1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 2.0}
+                        Children: {}
+                    67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
+                        Id: 0542c400-a4d5-433f-8a96-cd922ca33cd2
+                        CanCollideWith: CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ee1f0f8d5ea461771e1abc59d4677dae: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    3f732cae4db439c6ef0a3d251d2261d5: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
+                        Id: 0bb36b1b-0609-4ae8-9c0c-85288f5de32f
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
+                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
         -   Folder: null
             Entity:
                 Id: 6c438225-ea80-4669-87c0-005313085981
@@ -892,6 +1219,22 @@ Hierarchy:
                         Id: 9e007192-e377-4754-8f76-f47349581a74
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 893511a5-8fd4-4d43-b50c-6fec6cbd1cb1
+                Name: "Dañables"
+                Components:
+                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
+                        Id: cb4f0327-92a0-43f9-a4de-6d3f40093b0e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            274570ec839d03441939b84ca63d1199: ref!! e7ca49a4-37b2-4c2e-a5a7-eeba4ebf152a
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
+                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
         -   Folder: "Entorno/Obstáculos"
             Entity:
                 Id: 8b42ea7d-752a-4920-97e2-1646ec7b9189
@@ -924,6 +1267,25 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: 8da821bb-04d5-4008-9a51-56dae4802a6e
+                Name: Modelo
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: 8852e3d3-e0b4-45b8-8429-62375100362d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: 7cb6b6f1-18a3-4116-9725-7d349401abc3
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
+                        Materials: {}
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
+                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
         -   Folder: null
             Entity:
                 Id: 8dcfbf63-872c-4767-b5d4-c444770e99f8
@@ -1064,6 +1426,49 @@ Hierarchy:
                 InstanceId: 2ad3a86b-ba33-4953-ba94-6c4b0a6b813b
         -   Folder: null
             Entity:
+                Id: a2baa5cc-4c65-4c8c-929d-f62fca0df386
+                Name: "Dañable torso"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 1e75411b-d789-4f89-8329-aaf9c3095298
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: e14ba89c-246f-4513-a694-5bee9ca9d27d
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.5, Y: 2.0, Z: 0.5}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
+                        Id: 546d67b6-8ea7-4100-92aa-ea4bb0d5c110
+                        controlador: ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
+                        multiplicador: 1.0
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
+                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
+        -   Folder: null
+            Entity:
                 Id: a54e658d-bb78-4833-b114-e0ad88f4652c
                 Name: "Botón"
                 Components:
@@ -1098,6 +1503,80 @@ Hierarchy:
                         llave: nada
                         puerta: ref!! a2f5bd4f-c7de-4fea-8dc2-ddec61bab421
                         modelo: ref!! 8dc113f6-433a-47f5-bb2b-361334f0bf89
+        -   Folder: null
+            Entity:
+                Id: a678a339-d21e-4ddd-9b32-9a09750dd8ea
+                Name: "ArmaMelé"
+                Components:
+                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
+                        Id: dd2cba02-7e76-418b-b527-6fb6c885c15e
+                        Position: {X: 0.0, Y: 1.0, Z: 1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 2.0}
+                        Children: {}
+                    67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
+                        Id: aa328668-b0b9-4756-a3ea-099c71441d43
+                        CanCollideWith: CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ee1f0f8d5ea461771e1abc59d4677dae: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    3f732cae4db439c6ef0a3d251d2261d5: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
+                        Id: 0a27d0de-50df-46fe-afb5-0621eb2f636e
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
+                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
+        -   Entity:
+                Id: a77ffa41-2529-4f4e-90a0-1235895d75a0
+                Name: Activador
+                Components:
+                    b91c14479af4b1d70ede6f87899477bd: !TransformComponent
+                        Id: 10f36ae8-fc4e-470e-97d3-d007c522b6ac
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 4.0, Y: 0.5, Z: 1.0}
+                        Children: {}
+                    a0d4995e2cf26d899352b37e46d0ae0b: !StaticColliderComponent
+                        Id: e729d4d8-b03a-4f2e-b68a-1d0a97cddc97
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            f5049ee61306e7a6812910763597dbc2: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    6b8d5cb4a8a7b9862a81bc486360f411: !Bozobaralika.ControladorActivador,Bozobaralika.Proyecto
+                        Id: 00d62a29-7211-43fc-9374-758663e3651f
+                        activables:
+                            1a84e458c5d9f986c6cf80a9262dd01e: ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
+                            d14befc0c61f553ddedcc72f70dd56aa: ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
+                            d7633df85cc7d09af10051ca2b599e60: ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
         -   Entity:
                 Id: a86c44fa-f71e-440f-8e38-ecfb7dc86391
                 Name: Jugador
@@ -1200,6 +1679,20 @@ Hierarchy:
                         Id: 5be66562-ee7b-46bd-84a6-95074983b64f
                         llave: roja
                         modelo: ref!! 32524af0-94ba-4b91-af3d-fabb7dd890b3
+        -   Entity:
+                Id: af86748a-5f1b-4654-930f-3c40030c6306
+                Name: Ojo
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: a6361536-a82e-4d00-8e42-1dacfd083523
+                        Position: {X: 0.0, Y: 1.6, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4c24f93d-e3a0-4825-833e-e2a97128dba9
+                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
         -   Folder: null
             Entity:
                 Id: b41a556d-1e30-493d-8e77-a1a04952a97c
@@ -1284,6 +1777,20 @@ Hierarchy:
                         Id: 9194a635-debe-429c-ac9f-bd9febb8be88
                         modelo: ref!! 69714a1b-fdeb-46ba-bcc7-8a8f1d584e19
                         "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
+        -   Entity:
+                Id: b9c6d541-e9a1-4aa2-9548-eb141f13b39e
+                Name: Ojo
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: 1be93bf2-df2b-451e-a9ae-227b417a60bb
+                        Position: {X: 0.0, Y: 1.6, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4c24f93d-e3a0-4825-833e-e2a97128dba9
+                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
         -   Entity:
                 Id: cb74dedf-a315-4eb5-a0b0-bf447505f378
                 Name: Modelo
@@ -1405,6 +1912,25 @@ Hierarchy:
                     8da989470e5d3482f6697c8ae7b8694b: !Stride.Navigation.NavigationBoundingBoxComponent,Stride.Navigation
                         Id: 42364fca-41df-4490-ba99-fb64dd6d91f6
                         Size: {X: 20.0, Y: 1.5, Z: 20.0}
+        -   Folder: null
+            Entity:
+                Id: d3c8523f-a505-470a-9186-a32e93319e5d
+                Name: Modelo
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: 6380311c-6925-4c1b-b125-8e472fc62b47
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: 017900b6-b60c-4b05-9c9b-be825d6ff4fa
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
+                        Materials: {}
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
+                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
         -   Folder: Entorno/Muros
             Entity:
                 Id: d471c428-d220-4860-b67e-f0ad26d2d613
@@ -1478,6 +2004,22 @@ Hierarchy:
                         Id: b3bf6a25-6f4d-4bd3-a2e3-e743dbe83c7f
                         Model: 4b34d26f-7f32-492d-8a58-e38df8cd8e9e:Modelos/Lancero/Lanza
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: dade0e81-b5cd-472f-bf2a-1d3264a8119f
+                Name: "Dañables"
+                Components:
+                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
+                        Id: 3e1ca9ec-8acc-4b13-b485-8f93d3eee5b0
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            274570ec839d03441939b84ca63d1199: ref!! eba11905-eac7-4d02-9bcd-f872ccc3b33a
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
+                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
         -   Folder: Entorno
             Entity:
                 Id: dca75c2f-3874-4e83-9565-15c148fa0401
@@ -1516,6 +2058,70 @@ Hierarchy:
                         Id: 9e4f4867-2dc7-44a7-80a7-09efe11fdad5
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: e3650bf2-48a3-47c0-a058-52246042dfc9
+                Name*: Zombi 1
+                Components:
+                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
+                        Id: 012661f5-b54b-47a2-b4bf-a9053d843e93
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        StepHeight: 0.25
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 10.0
+                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
+                        ColliderShapes:
+                            ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
+                                Length: 1.2
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
+                        Id: 99269a54-0c4a-44a9-b96d-816f0a3dcb0b
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
+                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
+                        Id: 4c213ffb-3b99-4b21-8e85-9a573cfe36c8
+                        Position*: {X: 0.0, Y: 0.0, Z: -3.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f14eafd2887605601cb783e4e612d427: ref!! cb4f0327-92a0-43f9-a4de-6d3f40093b0e
+                            b0616bd3e59c50d54fa88ad23e8366f7: ref!! 1be93bf2-df2b-451e-a9ae-227b417a60bb
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 8852e3d3-e0b4-45b8-8429-62375100362d
+                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! d227dbe4-1e91-49a6-8274-2c4b07edb0db
+                    7f6e66f0d97456bb9a986066b6ffeee1: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
+                        Id: dceff8dd-5792-46e3-8a58-c917bddf362d
+                        enemigo: "meléLigero"
+                        "armaMelé": ref!! 0bb36b1b-0609-4ae8-9c0c-85288f5de32f
+                        armaRango: null
+                        cuerpos:
+                            ad5f371af09d736586a420c788f25eaf: ref!! 64de43ef-79d6-4568-8ab0-2b80c3cdf7aa
+                    33ce25eb8ee99f15b44e0a062cbfffd2: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: 91aa0eec-5f1e-4e86-bdcd-11807483163f
+                        ojos:
+                            44e390ec37f8924a7039eeab0e0141fc: ref!! 1be93bf2-df2b-451e-a9ae-227b417a60bb
+                    dcfc61066510852ac085b2f68892da9c: !Bozobaralika.AnimadorZombi,Bozobaralika.Proyecto
+                        Id: 4d63f6ba-601b-4a50-bf94-642f96a55d1b
+                        modelo: ref!! 7cb6b6f1-18a3-4116-9725-7d349401abc3
+                        brazos:
+                            d5e5d05836e952ab9b8d7b3c1a2be51e: brazo.L
+                            64022d1c494de0222385fdafef680dc4: brazo.R
+                        piernas:
+                            e1fa468402b498fdc635e4bc98c6f42b: muslo.L
+                            980a0b5184eece1987ea9a444454fbc2: muslo.R
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
+                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
         -   Folder: null
             Entity:
                 Id: e6ee0047-6726-4c37-bcd8-6f0fb152abbf
@@ -1626,6 +2232,25 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 6670f41a-7467-4bbf-89b7-753fdb7341f1
                 InstanceId: 2ad3a86b-ba33-4953-ba94-6c4b0a6b813b
+        -   Folder: null
+            Entity:
+                Id: f2e00024-7ed8-44c7-b274-832a1836771a
+                Name: Modelo
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: 4e4cc16a-55d4-4eb3-97d6-33016a35e30c
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: 733a460c-1f9a-4401-b759-12d9b996c64f
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
+                        Materials: {}
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
+                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
         -   Folder: MuestraEnemigos
             Entity:
                 Id: f3e301de-3c24-4082-9407-c92be0463470

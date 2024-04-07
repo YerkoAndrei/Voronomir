@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Input;
@@ -21,37 +20,44 @@ public class Depurador : AsyncScript
         var jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Get<ControladorJugador>();
         var animaciónArmas = Entity.Scene.Entities.Where(o => o.Get<ControladorArmas>() != null).FirstOrDefault().Get<ControladorArmas>();
         */
+
         while (Game.IsRunning)
         {
             if (Input.IsKeyPressed(Keys.T))
             {
                 var enemigo = zombi.Instantiate()[0];
                 Entity.Scene.Entities.Add(enemigo);
+                Activar(enemigo);
             }
             if (Input.IsKeyPressed(Keys.Y))
             {
                 var enemigo = lancero.Instantiate()[0];
                 Entity.Scene.Entities.Add(enemigo);
+                Activar(enemigo);
             }
             if (Input.IsKeyPressed(Keys.U))
             {
                 var enemigo = cerebro.Instantiate()[0];
                 Entity.Scene.Entities.Add(enemigo);
+                Activar(enemigo);
             }
             if (Input.IsKeyPressed(Keys.I))
             {
                 var enemigo = dron.Instantiate()[0];
                 Entity.Scene.Entities.Add(enemigo);
+                Activar(enemigo);
             }
             if (Input.IsKeyPressed(Keys.O))
             {
                 var enemigo = babosa.Instantiate()[0];
                 Entity.Scene.Entities.Add(enemigo);
+                Activar(enemigo);
             }
             if (Input.IsKeyPressed(Keys.P))
             {
                 var enemigo = araña.Instantiate()[0];
                 Entity.Scene.Entities.Add(enemigo);
+                Activar(enemigo);
             }
 
             /*
@@ -88,6 +94,20 @@ public class Depurador : AsyncScript
             }
             */
             await Script.NextFrame();
+        }
+    }
+
+    private async void Activar(Entity entidad)
+    {
+        await Task.Delay(1);
+        foreach (var componente in entidad.Components)
+        {
+            if (componente is IActivable)
+            {
+                var temp = (IActivable)componente;
+                temp.Activar();
+                break;
+            }
         }
     }
 }

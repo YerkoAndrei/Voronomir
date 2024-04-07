@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
-using Stride.Physics;
 
 namespace Bozobaralika;
 using static Constantes;
@@ -12,12 +11,12 @@ public class ControladorBotón : AsyncScript
     public ControladorPuerta puerta;
     public TransformComponent modelo;
 
-    private StaticColliderComponent cuerpo;
+    private PhysicsComponent cuerpo;
     private Vector3 posiciónActivado;
 
     public override async Task Execute()
     {
-        cuerpo = Entity.Get<StaticColliderComponent>();
+        cuerpo = Entity.Get<PhysicsComponent>();
         posiciónActivado = modelo.Position + new Vector3(0, -0.5f, 0);
 
         while (Game.IsRunning)
@@ -44,7 +43,7 @@ public class ControladorBotón : AsyncScript
             return;
 
         cuerpo.Enabled = false;
-        puerta.Mover();
+        puerta.Activar();
         AnimarActivación();
 
         // PENDIENTE: efectos
