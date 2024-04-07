@@ -57,6 +57,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             a0c928adfb0b853df190278b93d21157: ref!! 140e589e-caf9-4b52-a39c-1682bf96f0a9
-                    d89d9ac3376980af442c0249a81121fd: !Bozobaralika.ElementoProyectil,Bozobaralika.Proyecto
-                        Id: b191e3df-d606-40f6-a143-b620592096ce
+                    449ebeeb02b58b0c3a84ceebf03c07d2: !Bozobaralika.ElementoProyectilSimple,Bozobaralika.Proyecto
+                        Id: 8b43936a-f16a-4661-9d1c-bd482e28e0b5
                         modelo: ref!! b66e1be6-ccde-4b15-9517-6760b1933c23

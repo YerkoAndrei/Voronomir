@@ -98,7 +98,7 @@ Hierarchy:
                     8aaa7191e7878108ae185c5897831675: !Bozobaralika.ControladorArmaRango,Bozobaralika.Proyecto
                         Id: 4a9ca052-67a5-4cf2-a972-753ae99d4102
                         prefabProyectil: "4e523c66-cad9-49d9-8baf-b22243566c31:Prefabs/Disparos/ProyectilAraña"
-                        prefabEfecto: 0813580a-18cd-48ee-b40d-7d72977e10c5:Prefabs/Disparos/EfectoVeneno
+                        prefabImpacto: 0813580a-18cd-48ee-b40d-7d72977e10c5:Prefabs/Disparos/ImpactoVeneno
         -   Entity:
                 Id: a2d52ea3-1fed-47ae-928e-c28bfc64ff7e
                 Name: Veneno

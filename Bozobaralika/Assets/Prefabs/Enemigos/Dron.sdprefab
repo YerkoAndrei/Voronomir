@@ -75,7 +75,7 @@ Hierarchy:
                     856fb470e4a1b772f510f0cef700d9bb: !Bozobaralika.ControladorArmaRango,Bozobaralika.Proyecto
                         Id: 7c0c0baa-c7d8-4edc-bfe9-0f947660bd35
                         prefabProyectil: af640d43-9c24-4ebd-83e0-38d09e4f84c0:Prefabs/Disparos/ProyectilDron
-                        prefabEfecto: null
+                        prefabImpacto: null
         -   Entity:
                 Id: c9de616d-fc44-4005-a31a-6d8dcd5084c0
                 Name: Dron

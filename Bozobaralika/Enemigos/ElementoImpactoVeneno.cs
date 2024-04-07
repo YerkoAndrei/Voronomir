@@ -4,7 +4,7 @@ using Stride.Engine;
 
 namespace Bozobaralika;
 
-public class ElementoVeneno : StartupScript
+public class ElementoImpactoVeneno : StartupScript, IImpacto
 {
     public float tiempoVida;
     public ModelComponent modelo;

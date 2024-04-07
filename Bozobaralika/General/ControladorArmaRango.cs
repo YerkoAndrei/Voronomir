@@ -6,21 +6,20 @@ namespace Bozobaralika;
 public class ControladorArmaRango : StartupScript
 {
     public Prefab prefabProyectil;
-    public Prefab prefabEfecto;
+    public Prefab prefabImpacto;
 
     private PhysicsComponent[] cuerposDisparador;
 
-    private ElementoVeneno[] efectosVeneno;
     private IProyectil[] proyectiles;
+    private IImpacto[] impactos;
 
     private Vector3 alturaObjetivo;
     private float velocidadRotación;
     private float velocidad;
-    private bool persecutor;
     private int proyectilActual;
-    private int efectoActual;
+    private int impactoActual;
     private int maxProyectiles;
-    private int maxEfectos;
+    private int maxImpactos;
 
     public void Iniciar(float _velocidad, float _velocidadRotación, Vector3 _alturaObjetivo, PhysicsComponent[] _cuerposDisparador)
     {
@@ -28,10 +27,9 @@ public class ControladorArmaRango : StartupScript
         velocidad = _velocidad;
         velocidadRotación = _velocidadRotación;
         cuerposDisparador = _cuerposDisparador;
-        persecutor = (velocidadRotación > 0);
 
         maxProyectiles = 4;
-        maxEfectos = maxProyectiles * 2;
+        maxImpactos = maxProyectiles * 2;
 
         // Proyectiles
         proyectiles = new IProyectil[maxProyectiles];
@@ -48,20 +46,27 @@ public class ControladorArmaRango : StartupScript
             }
             Entity.Scene.Entities.Add(proyectil);
 
-            // Efectos son explosiones o veneno
-            if (prefabEfecto != null)
-                proyectil.Get<ElementoProyectil>().AsignarEfecto(IniciarEfecto);
+            // Impactos son explosiones o veneno
+            if (prefabImpacto != null)
+                proyectiles[i].AsignarImpacto(IniciarImpacto);
         }
 
-        // Efectos
-        if (prefabEfecto != null)
+        // Impactos
+        if (prefabImpacto != null)
         {
-            efectosVeneno = new ElementoVeneno[maxEfectos];
-            for (int i = 0; i < maxEfectos; i++)
+            impactos = new IImpacto[maxImpactos];
+            for (int i = 0; i < maxImpactos; i++)
             {
-                var efecto = prefabEfecto.Instantiate()[0];
-                efectosVeneno[i] = efecto.Get<ElementoVeneno>();
-                Entity.Scene.Entities.Add(efecto);
+                var impacto = prefabImpacto.Instantiate()[0];
+                foreach (var componente in impacto.Components)
+                {
+                    if (componente is IImpacto)
+                    {
+                        impactos[i] = (IImpacto)componente;
+                        break;
+                    }
+                }
+                Entity.Scene.Entities.Add(impacto);
             }
         }
     }
@@ -71,7 +76,7 @@ public class ControladorArmaRango : StartupScript
         var dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorPartida.ObtenerPosiciónJugador() + alturaObjetivo));
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
-        if (persecutor)
+        if (velocidadRotación > 0)
             proyectiles[proyectilActual].IniciarPersecutor(velocidadRotación, alturaObjetivo);
         
         proyectiles[proyectilActual].Iniciar(daño, velocidad, rotación, Entity.Transform.WorldMatrix.TranslationVector, cuerposDisparador);
@@ -81,12 +86,12 @@ public class ControladorArmaRango : StartupScript
             proyectilActual = 0;
     }
 
-    public void IniciarEfecto(Vector3 posición)
+    public void IniciarImpacto(Vector3 posición)
     {
-        efectosVeneno[efectoActual].Iniciar(posición);
+        impactos[impactoActual].Iniciar(posición);
 
-        efectoActual++;
-        if (efectoActual >= maxEfectos)
-            efectoActual = 0;
+        impactoActual++;
+        if (impactoActual >= maxImpactos)
+            impactoActual = 0;
     }
 }
