@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
@@ -86,6 +87,11 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
         cuerpo.IsKinematic = true;
         cuerpo.Enabled = false;
         cuerpoDañable.Enabled = false;
+    }
+
+    public void AsignarImpacto(Action<Vector3> _iniciarImpacto)
+    {
+
     }
 
     public void IniciarPersecutor(float _velocidadRotación, Vector3 _altura)

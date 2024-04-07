@@ -1,10 +1,12 @@
-﻿using Stride.Core.Mathematics;
+﻿using System;
+using Stride.Core.Mathematics;
 using Stride.Engine;
 
 namespace Bozobaralika;
 
 public interface IProyectil
 {
-    void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, PhysicsComponent[] _disparador);
-    void IniciarPersecutor(float _velocidadRotación, Vector3 _altura);
+    void Iniciar(float daño, float velocidad, Quaternion rotación, Vector3 posición, PhysicsComponent[] disparador);
+    void IniciarPersecutor(float velocidadRotación, Vector3 altura);
+    void AsignarImpacto(Action<Vector3> inciarImpacto);
 }

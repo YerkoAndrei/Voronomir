@@ -7,13 +7,13 @@ using Stride.Physics;
 
 namespace Bozobaralika;
 
-public class ElementoProyectil : AsyncScript, IProyectil
+public class ElementoProyectilSimple : AsyncScript, IProyectil
 {
     public ModelComponent modelo;
 
     private PhysicsComponent[] disparador;
     private RigidbodyComponent cuerpo;
-    private Action<Vector3> crearEfecto;
+    private Action<Vector3> iniciarImpacto;
     private float velocidad;
     private float tempo;
     private float daño;
@@ -34,9 +34,9 @@ public class ElementoProyectil : AsyncScript, IProyectil
                 colisión.ColliderA.CollisionGroup == CollisionFilterGroups.SensorTrigger ||
                 colisión.ColliderB.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
-                // Efectos
-                if (crearEfecto != null)
-                    crearEfecto.Invoke(colisión.Contacts.ToArray()[0].PositionOnB);
+                // Impacto
+                if (iniciarImpacto != null)
+                    iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnB);
 
                 // PENDIENTE: efecto disparo enemigo
                 Apagar();
@@ -87,9 +87,9 @@ public class ElementoProyectil : AsyncScript, IProyectil
         cuerpo.Enabled = false;
     }
 
-    public void AsignarEfecto(Action<Vector3> _crearEfecto)
+    public void AsignarImpacto(Action<Vector3> _iniciarImpacto)
     {
-        crearEfecto = _crearEfecto;
+        iniciarImpacto = _iniciarImpacto;
     }
 
     public void IniciarPersecutor(float _velocidadRotación, Vector3 _altura)
