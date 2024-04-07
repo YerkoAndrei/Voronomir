@@ -134,6 +134,16 @@ Hierarchy:
                         Id: 6070622f-47e2-412b-a3ff-5fbb8313765d
                         "daño": 5.0
         -   Entity:
+                Id: a70293eb-ea08-40ce-9709-46a651abe306
+                Name: OjoDer
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: 196a4786-30d5-4101-a773-ac5f2372ea0f
+                        Position: {X: -1.0, Y: 1.2, Z: 1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
                 Id: b12a1fec-9e79-4bf7-b177-44705a334650
                 Name: "Araña"
                 Components:
@@ -170,6 +180,8 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f14eafd2887605601cb783e4e612d427: ref!! 203a4aa6-f179-48fc-970b-3d624fe8b835
+                            11833be0183d0b9317328640ace22723: ref!! cedfb71a-e8d0-42bb-9ca2-313994b8d025
+                            f94019d0892a360ba431a6c900cfa6e8: ref!! 196a4786-30d5-4101-a773-ac5f2372ea0f
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 9caed9bb-330a-4fb9-aff4-4e6297d27893
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! 74cd8091-e66e-4cc5-abe8-17b896e8a1f6
                             5b6527eafb880c4b6737281c09adc4e9: ref!! d75465bf-f13c-4de1-a697-cb7c9be6b48f
@@ -183,6 +195,9 @@ Hierarchy:
                             ea08a84d5f3dde506286584b8fd64d67: ref!! da9e9a18-1567-4d94-b286-973cb2c0ed1d
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: 4ba9a486-b7da-4603-8605-cda247797342
+                        ojos:
+                            2824235e2bd7176f130bad5360091c8c: ref!! cedfb71a-e8d0-42bb-9ca2-313994b8d025
+                            918aa9027aa51d125f664f54e4209f9e: ref!! 196a4786-30d5-4101-a773-ac5f2372ea0f
                     cf6666cbb1a2454c7a6f90087da66b05: !Bozobaralika.AnimadorAra%25C3%25B1a,Bozobaralika.Proyecto
                         Id: cd89fd3f-a948-44ec-a75a-1baf05f96db9
                         modelo: ref!! a499c6d7-b229-4995-a0cb-d00b50d65824
@@ -201,6 +216,16 @@ Hierarchy:
                         Id: a499c6d7-b229-4995-a0cb-d00b50d65824
                         Model: "db867d68-4431-4e52-9abb-f81df0c158eb:Modelos/Araña/Araña"
                         Materials: {}
+        -   Entity:
+                Id: e75ac34a-8466-40b4-951a-42c112056cba
+                Name: OjoIzq
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: cedfb71a-e8d0-42bb-9ca2-313994b8d025
+                        Position: {X: 1.0, Y: 1.2, Z: 1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
         -   Folder: null
             Entity:
                 Id: f2712ac4-ca08-476b-9167-c65b4594cf09

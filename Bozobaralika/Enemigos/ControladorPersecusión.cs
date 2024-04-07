@@ -9,12 +9,15 @@ namespace Bozobaralika;
 
 public class ControladorPersecusión : StartupScript
 {
+    public List<TransformComponent> ojos = new List<TransformComponent> { };
+
     private ControladorPersecusionesTrigonométricas persecutor;
     private ControladorEnemigo controlador;
     private CharacterComponent cuerpo;
     private NavigationComponent navegador;
     private IAnimador animador;
 
+    private CollisionFilterGroupFlags colisionesMirada;
     private List<Vector3> ruta;
     private int índiceRuta;
 
@@ -53,6 +56,7 @@ public class ControladorPersecusión : StartupScript
         }
         animador.Iniciar();
 
+        colisionesMirada = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.CharacterFilter;
         cuerpo = Entity.Get<CharacterComponent>();
         navegador = Entity.Get<NavigationComponent>();
         ruta = new List<Vector3>();
@@ -133,8 +137,11 @@ public class ControladorPersecusión : StartupScript
         // Ataque
         if (distanciaJugador <= distanciaAtaque)
         {
-            Atacar();
-            return;
+            if (MirarJugador())
+            {
+                Atacar();
+                return;
+            }
         }
         
         // Movimiento
@@ -174,6 +181,36 @@ public class ControladorPersecusión : StartupScript
         dirección *= (float)Game.UpdateTime.Elapsed.TotalSeconds;
         cuerpo.SetVelocity(dirección * 100 * velocidad * distanciaRuta * 0.2f);
         animador.Caminar(distanciaRuta * 0.2f);
+    }
+
+    private bool MirarJugador()
+    {
+        // Si todos los ojos ven al jugador, entonces ataca
+        var mirando = new bool[ojos.Count];
+        for(int i=0; i< ojos.Count; i++)
+        {
+            var resultado = this.GetSimulation().Raycast(ojos[i].WorldMatrix.TranslationVector,
+                                                         ControladorPartida.ObtenerCabezaJugador(),
+                                                         CollisionFilterGroups.KinematicFilter,
+                                                         colisionesMirada);
+
+            if (resultado.Succeeded)
+                mirando[i] = (resultado.Collider.CollisionGroup == CollisionFilterGroups.CharacterFilter);
+            else
+                mirando[i] = false;
+        }
+
+        var observando = true;
+        for (int i = 0; i < mirando.Length; i++)
+        {
+            if (!mirando[i])
+            {
+                observando = false;
+                break;
+            }
+        }
+
+        return observando;
     }
 
     public async void Atacar()

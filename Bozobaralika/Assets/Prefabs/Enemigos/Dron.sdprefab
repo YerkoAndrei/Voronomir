@@ -63,6 +63,16 @@ Hierarchy:
                         controlador: ref!! c9de616d-fc44-4005-a31a-6d8dcd5084c0
                         multiplicador: 1.0
         -   Entity:
+                Id: 843d491e-23cf-4253-99bf-2135d35629eb
+                Name: Ojo
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: 58cad4ee-090a-49ea-89ec-2267b4ae444b
+                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
                 Id: bf77fc42-44b9-4f29-a8a2-1e60fe58f1f3
                 Name: ArmaRango
                 Components:
@@ -110,6 +120,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            0a5042c5122b96b7568d7bafd42c2219: ref!! 58cad4ee-090a-49ea-89ec-2267b4ae444b
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 07e87824-3863-43ff-971b-5642118571c8
                     7f6e66f0d97456bb9a986066b6ffeee1: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
                         Id: e54a000a-7d20-48df-898b-5fced74ce053
@@ -120,6 +131,8 @@ Hierarchy:
                             ad5f371af09d736586a420c788f25eaf: ref!! b6acb4b1-f705-4fa2-976d-216152784495
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: a856b63a-c2d6-4b60-9a27-0727b457357a
+                        ojos:
+                            4db60a51e1f224185a1f775371f2eeb2: ref!! 58cad4ee-090a-49ea-89ec-2267b4ae444b
                     f8a8bea51b0be6e7628afcbf94a7d8aa: !Bozobaralika.AnimadorDron,Bozobaralika.Proyecto
                         Id: d69fa50d-19f7-4b98-a773-c6ee979a51b7
                         modelo: ref!! 07e87824-3863-43ff-971b-5642118571c8

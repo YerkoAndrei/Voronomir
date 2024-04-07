@@ -225,6 +225,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             e99fd69243b07ffb3cb8b699d64c5a6b: ref!! f351aac3-baa2-4941-9565-feb3cbc9e8a3
+                            90a7e5f1db7e84c8ee409bc4ec194c69: ref!! 84b963ff-9a5c-435c-ab48-c14129d1909e
                             b98853d48efd39aba09a0bffdc276403: ref!! b2edc07b-41e7-42f5-acc0-d56498828145
                             4732b4ce95e4cb3bd921ff1f29d5b54a: ref!! 76e2a775-7afe-484e-a5df-b8b85b4dc932
                             e40d5481cf1e218611340ca1ddf40eed: ref!! 2f42f099-981c-463c-967d-0db778a7ebba
@@ -240,6 +241,8 @@ Hierarchy:
                             1287a0c79734632ee15ff7ad938c580d: ref!! d2e9ed88-e4b2-4015-b3dc-9474001dffc7
                     d7feb748634a3f30f579747ffa6f0e53: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: b402af8c-3273-4944-89bf-bb71b6503b90
+                        ojos:
+                            6fd99f5023c59d1fdf773e9f843b22ef: ref!! 84b963ff-9a5c-435c-ab48-c14129d1909e
                     1dd64e1afcd5512cedf9e97ef1931ca5: !Bozobaralika.AnimadorCerebro,Bozobaralika.Proyecto
                         Id: a63307c3-bda5-4b9a-9601-55a51fc27887
                         rueda: ref!! 2f42f099-981c-463c-967d-0db778a7ebba
@@ -282,6 +285,16 @@ Hierarchy:
                         Id: 2ad39b0a-e7f8-45af-adc2-fbe9155812a3
                         fuerza: 9.0
                         persecutor: ref!! b402af8c-3273-4944-89bf-bb71b6503b90
+        -   Entity:
+                Id: fd794d06-dc18-4652-a310-00e8d8a5f8de
+                Name: Ojo
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: 84b963ff-9a5c-435c-ab48-c14129d1909e
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
         -   Folder: null
             Entity:
                 Id: fdcabb40-b9a7-4016-9adc-adfb1e4dc4e9

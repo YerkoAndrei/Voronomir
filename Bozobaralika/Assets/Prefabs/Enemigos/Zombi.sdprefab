@@ -97,6 +97,16 @@ Hierarchy:
                     3f732cae4db439c6ef0a3d251d2261d5: !Bozobaralika.ControladorArmaMel%25C3%25A9,Bozobaralika.Proyecto
                         Id: 8fa829d1-ea79-497a-86a7-36f886836356
         -   Entity:
+                Id: 4c24f93d-e3a0-4825-833e-e2a97128dba9
+                Name: Ojo
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: 3589340e-1e65-4811-93ff-1643242f91cf
+                        Position: {X: 0.0, Y: 1.6, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
                 Id: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
                 Name: Zombi
                 Components:
@@ -132,6 +142,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f14eafd2887605601cb783e4e612d427: ref!! 85423668-5318-4816-8aa2-30469b4caf7d
+                            b0616bd3e59c50d54fa88ad23e8366f7: ref!! 3589340e-1e65-4811-93ff-1643242f91cf
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 40e3eefc-72ba-4452-83db-cb396350749b
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! 34a63037-f545-48f5-ae28-e0c5e06fc95f
                     7f6e66f0d97456bb9a986066b6ffeee1: !Bozobaralika.ControladorEnemigo,Bozobaralika.Proyecto
@@ -143,6 +154,8 @@ Hierarchy:
                             ad5f371af09d736586a420c788f25eaf: ref!! c9e8139f-9d0c-4754-95e0-2a4119f586b2
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Bozobaralika.ControladorPersecusi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: 53bb4bc4-517c-4420-b135-b5c27330ae8f
+                        ojos:
+                            44e390ec37f8924a7039eeab0e0141fc: ref!! 3589340e-1e65-4811-93ff-1643242f91cf
                     dcfc61066510852ac085b2f68892da9c: !Bozobaralika.AnimadorZombi,Bozobaralika.Proyecto
                         Id: f8b79f70-e007-4ab0-b6cb-00959c2928d5
                         modelo: ref!! 60dcb0cd-113b-46f6-952b-fb29e7f9d891
