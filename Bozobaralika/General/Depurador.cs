@@ -99,7 +99,7 @@ public class Depurador : AsyncScript
 
     private async void Activar(Entity entidad)
     {
-        await Task.Delay(1);
+        await Task.Delay(2);
         foreach (var componente in entidad.Components)
         {
             if (componente is IActivable)

@@ -26,8 +26,8 @@ public class AnimadorZombi : StartupScript, IAnimador
         idBrazos = new int[brazos.Count];
         idPiernas = new int[piernas.Count];
 
-        // Tamaño aleatorio entre 150cm a 200cm
-        var aleatorio = RangoAleatorio(0.75f, 1f);
+        // Tamaño aleatorio entre 160cm a 200cm
+        var aleatorio = RangoAleatorio(0.8f, 1f);
         Entity.Transform.Scale *= aleatorio;
 
         // Encuentra huesos por nombre
