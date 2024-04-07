@@ -7,6 +7,42 @@ Hierarchy:
         - ref!! b5e7a671-aabc-4e15-bad5-e7c32d6f0e7d
     Parts:
         -   Entity:
+                Id: 0b39c00a-68e5-4c57-9f1c-a8f6b8b38869
+                Name: Desviable
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: b98da837-d9bc-44e2-b324-b0227d4f5872
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 3d5af1a1-8dae-49c2-a3e6-8d1682306de3
+                        CollisionGroup: CustomFilter1
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    8b8fa68a6668b111f69c9e8d1ce91309: !Bozobaralika.ElementoDesviable,Bozobaralika.Proyecto
+                        Id: f4363585-0966-4f2a-b8f1-7e9c6c39c98f
+                        controlador: ref!! b5e7a671-aabc-4e15-bad5-e7c32d6f0e7d
+        -   Entity:
                 Id: b5e7a671-aabc-4e15-bad5-e7c32d6f0e7d
                 Name: ProyectilDron
                 Components:
@@ -14,7 +50,7 @@ Hierarchy:
                         Id: e9a29ae7-eabb-4d8a-b730-dd307a30029c
                         Enabled: false
                         CollisionGroup: CustomFilter1
-                        CanCollideWith: StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -41,6 +77,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            77448b22a175de93c85c2a36ef6756e6: ref!! b98da837-d9bc-44e2-b324-b0227d4f5872
                             a0c928adfb0b853df190278b93d21157: ref!! ba51a424-c637-4fd8-a262-fc896d917666
                     2f7c3e8089300ae2e8806e507c594375: !Bozobaralika.ElementoProyectilSimple,Bozobaralika.Proyecto
                         Id: 78fbd8bc-666c-4d97-adc1-9acc9095314f

@@ -100,6 +100,11 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
         velocidadRotación = _velocidadRotación;
     }
 
+    public void Desviar(Vector3 dirección)
+    {
+
+    }
+
     public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, PhysicsComponent[] _disparador)
     {
         Apagar();

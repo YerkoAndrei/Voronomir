@@ -22,6 +22,42 @@ Hierarchy:
                         Model: c7f6cc1f-dca4-4efe-802b-421756419e85:Cylinder
                         Materials: {}
         -   Entity:
+                Id: 5afc61dd-3f83-43ce-b22c-11ab1c13095e
+                Name: Desviable
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 90941b5b-369d-4f2f-a225-764b682c586b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: ccbd813f-e37b-4f71-b9b6-b9fbc11e7fef
+                        CollisionGroup: CustomFilter1
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    8b8fa68a6668b111f69c9e8d1ce91309: !Bozobaralika.ElementoDesviable,Bozobaralika.Proyecto
+                        Id: 4b9f0ae5-49fd-4500-8b05-18632809c57c
+                        controlador: ref!! bae73870-af2e-47f5-a745-a2709d6c0e07
+        -   Entity:
                 Id: bae73870-af2e-47f5-a745-a2709d6c0e07
                 Name: "ProyectilAraña"
                 Components:
@@ -29,7 +65,7 @@ Hierarchy:
                         Id: 5d68bbaf-fb05-461b-8bd1-e42f83bc8c1e
                         Enabled: false
                         CollisionGroup: CustomFilter1
-                        CanCollideWith: StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -56,6 +92,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            63b438478ae4f7791a390eb12c235ac4: ref!! 90941b5b-369d-4f2f-a225-764b682c586b
                             a0c928adfb0b853df190278b93d21157: ref!! 140e589e-caf9-4b52-a39c-1682bf96f0a9
                     449ebeeb02b58b0c3a84ceebf03c07d2: !Bozobaralika.ElementoProyectilSimple,Bozobaralika.Proyecto
                         Id: 8b43936a-f16a-4661-9d1c-bd482e28e0b5

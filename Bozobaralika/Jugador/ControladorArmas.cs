@@ -70,6 +70,7 @@ public class ControladorArmas : StartupScript
         colisionesDisparo = CollisionFilterGroupFlags.StaticFilter | 
                             CollisionFilterGroupFlags.KinematicFilter | 
                             CollisionFilterGroupFlags.SensorTrigger |
+                            CollisionFilterGroupFlags.CustomFilter1 |
                             CollisionFilterGroupFlags.CustomFilter2;
 
         rayosMelé = new Vector3[3]
@@ -364,7 +365,8 @@ public class ControladorArmas : StartupScript
             if (!resultado.Succeeded)
                 continue;
 
-            if (resultado.Collider.CollisionGroup == CollisionFilterGroups.KinematicFilter)
+            if (resultado.Collider.CollisionGroup == CollisionFilterGroups.KinematicFilter ||
+                resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter2)
             {
                 var dañable = resultado.Collider.Entity.Get<ElementoDañable>();
                 if (dañable == null)
@@ -375,6 +377,18 @@ public class ControladorArmas : StartupScript
                 normal = Vector3.Zero;
 
                 CrearMarcaDaño(resultado.Point, resultado.Normal, dañable.multiplicador);
+            }
+            else if (resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter1)
+            {
+                var desviable = resultado.Collider.Entity.Get<ElementoDesviable>();
+                if (desviable == null)
+                    return;
+
+                desviable.Desviar(dirección);
+                posición = Vector3.Zero;
+                normal = Vector3.Zero;
+
+                CrearMarcaDaño(resultado.Point, resultado.Normal, 1);
             }
             else
             {
