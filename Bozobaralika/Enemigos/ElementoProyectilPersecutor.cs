@@ -69,10 +69,10 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
                         tocaDisparador = true;
                 }
 
-                // Daña enemigo un 25%
+                // Daña enemigo un 50%
                 if (!tocaDisparador)
                 {
-                    dañable.RecibirDaño(daño * 0.25f);
+                    dañable.RecibirDaño(daño * 0.5f);
                     Apagar();
                 }
             }
