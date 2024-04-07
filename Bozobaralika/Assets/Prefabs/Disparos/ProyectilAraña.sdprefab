@@ -60,4 +60,3 @@ Hierarchy:
                     d89d9ac3376980af442c0249a81121fd: !Bozobaralika.ElementoProyectil,Bozobaralika.Proyecto
                         Id: b191e3df-d606-40f6-a143-b620592096ce
                         modelo: ref!! b66e1be6-ccde-4b15-9517-6760b1933c23
-                        prefabEfecto: 0813580a-18cd-48ee-b40d-7d72977e10c5:Prefabs/Disparos/RastroVeneno

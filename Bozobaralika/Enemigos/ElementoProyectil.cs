@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
@@ -9,10 +10,10 @@ namespace Bozobaralika;
 public class ElementoProyectil : AsyncScript
 {
     public ModelComponent modelo;
-    public Prefab prefabEfecto;
 
     private PhysicsComponent[] disparador;
     private RigidbodyComponent cuerpo;
+    private Action<Vector3> crearEfecto;
     private float velocidad;
     private float tempo;
     private float daño;
@@ -33,13 +34,9 @@ public class ElementoProyectil : AsyncScript
                 colisión.ColliderA.CollisionGroup == CollisionFilterGroups.SensorTrigger ||
                 colisión.ColliderB.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
-                // Explosiones o veneno
-                if (prefabEfecto != null)
-                {
-                    var efecto = prefabEfecto.Instantiate()[0];
-                    efecto.Transform.Position = colisión.Contacts.ToArray()[0].PositionOnB;
-                    Entity.Scene.Entities.Add(efecto);
-                }
+                // Efectos
+                if (crearEfecto != null)
+                    crearEfecto.Invoke(colisión.Contacts.ToArray()[0].PositionOnB);
 
                 // PENDIENTE: efecto disparo enemigo
                 Apagar();
@@ -88,6 +85,11 @@ public class ElementoProyectil : AsyncScript
         modelo.Enabled = false;
         cuerpo.IsKinematic = true;
         cuerpo.Enabled = false;
+    }
+
+    public void AsignarEfecto(Action<Vector3> _crearEfecto)
+    {
+        crearEfecto = _crearEfecto;
     }
 
     public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, PhysicsComponent[] _disparador)

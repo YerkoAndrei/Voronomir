@@ -7,6 +7,7 @@ namespace Bozobaralika;
 public class ElementoVeneno : StartupScript
 {
     public float tiempoVida;
+    public ModelComponent modelo;
 
     private PhysicsComponent cuerpo;
     private Vector3 escalaInicial;
@@ -15,6 +16,15 @@ public class ElementoVeneno : StartupScript
     {
         cuerpo = Entity.Get<PhysicsComponent>();
         escalaInicial = Entity.Transform.Scale;
+        modelo.Enabled = false;
+        cuerpo.Enabled = false;
+    }
+
+    public void Iniciar(Vector3 posición)
+    {
+        Entity.Transform.Scale = escalaInicial;
+        Entity.Transform.Position = posición;
+        modelo.Enabled = true;
         cuerpo.Enabled = true;
 
         ContarVida();
@@ -35,7 +45,7 @@ public class ElementoVeneno : StartupScript
             await Task.Delay(1);
         }
 
+        modelo.Enabled = false;
         cuerpo.Enabled = false;
-        Entity.Scene.Entities.Remove(Entity);
     }
 }

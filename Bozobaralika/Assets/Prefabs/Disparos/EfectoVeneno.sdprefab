@@ -8,7 +8,7 @@ Hierarchy:
     Parts:
         -   Entity:
                 Id: 08f774f9-4724-4628-871a-1d698cb3bc3c
-                Name: RastroVeneno
+                Name: EfectoVeneno
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 74f91258-436f-43d9-97b5-e0eb2eeb7813
@@ -27,7 +27,7 @@ Hierarchy:
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
                         IsTrigger: true
-                        IsKinematic: false
+                        IsKinematic: true
                         Mass: 0.0
                         LinearDamping: 0.0
                         AngularDamping: 0.0
@@ -41,6 +41,7 @@ Hierarchy:
                     42d6a1650a898b60ce6e5097547ff058: !Bozobaralika.ElementoVeneno,Bozobaralika.Proyecto
                         Id: 2c9fbc09-96b7-4d3d-9625-889424deb8cd
                         tiempoVida: 2.0
+                        modelo: ref!! e27e83ea-8886-45fc-a94b-0ffa1911247d
                     5403813724e8bf6c595801c51a35eccc: !Bozobaralika.ControladorDa%25C3%25B1oContinuo,Bozobaralika.Proyecto
                         Id: 905fe00e-a57d-4efc-a16f-cc79f7af56fa
                         "daño": 5.0
