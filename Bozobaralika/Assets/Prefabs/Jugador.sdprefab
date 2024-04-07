@@ -107,10 +107,13 @@ Hierarchy:
                     54c947a658f979a1a3cbf73596735198: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: 5ddd3ae2-5b5a-47a7-87bb-8ed208a45e94
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/Disparos/MarcaBala
+                        prefabGranada: a3c696d3-259b-49a3-94e8-945c1671282a:Prefabs/Disparos/Granada
+                        "prefabExplosión": "3db0a6bf-02b6-4061-8734-ac74c0c26780:Prefabs/Disparos/Explosión"
                         animadorEspada: ref!! 6e47034e-06ff-4d6d-8d24-3d7a54ede024
                         animadorEscopeta: ref!! a987c147-00a8-4c90-a952-1f55e2e28f57
                         animadorMetralleta: ref!! 79103401-ecc7-4eea-a7f6-810ffb5ce5de
                         animadorRife: ref!! 536d9770-3b08-44ca-9e72-5a49a2855db8
+                        animadorLanzagranadas: ref!! 3336648f-8c60-475d-ab7b-7680480ac971
         -   Folder: null
             Entity:
                 Id: 4712e9b1-87fa-41b6-b2b3-d403e75a85ec
@@ -123,6 +126,22 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             03cac127b85e429c2515bdcea74b1c68: ref!! e5e3ee43-2ce4-459f-b270-18f5df7b6b0d
+        -   Folder: null
+            Entity:
+                Id: 47bc28de-2e3e-4e1b-87b1-cd9d7fd618a6
+                Name: Lanzagranada
+                Components:
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: 793d5b87-8559-40bc-9c2e-a352de9e4eb2
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: -0.00076126325, Y: -0.043612745, Z: 0.017435795, W: 0.99889606}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
+                        Id: 902ecc99-78d0-4fbf-b52e-71753fdb6035
+                        Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
+                        RenderGroup: Group11
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 4b476576-1ceb-49a5-807d-388a9c60eb3d
@@ -216,6 +235,34 @@ Hierarchy:
                         Materials: {}
         -   Folder: null
             Entity:
+                Id: 7d8701f0-6c58-4fdd-8dc2-750170946402
+                Name: Derecha
+                Components:
+                    2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
+                        Id: 21d403bb-b7ad-4307-85bc-31e073b99e61
+                        Position: {X: 0.45, Y: -0.3, Z: -0.3}
+                        Rotation: {X: 0.0, Y: 0.0, Z: -9.456897E-10, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            dfa71521e15dbf6c3948d9f3fd1c2b8d: ref!! 909cc643-1abb-4e20-a31c-ea2ef5c644d5
+        -   Folder: null
+            Entity:
+                Id: 8199f0f5-a433-4c15-af08-df601bb2d528
+                Name: Lanzagranada
+                Components:
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: 909cc643-1abb-4e20-a31c-ea2ef5c644d5
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: -0.0007612632, Y: 0.043612745, Z: -0.017435795, W: 0.99889606}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
+                        Id: 9c7b75ed-ffe4-4446-a9c9-f88d9d20dd31
+                        Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
+                        RenderGroup: Group11
+                        Materials: {}
+        -   Folder: null
+            Entity:
                 Id: 855d46ad-e0df-46e0-a435-46753f797211
                 Name: Espada
                 Components:
@@ -260,6 +307,18 @@ Hierarchy:
                         Materials: {}
         -   Folder: null
             Entity:
+                Id: 8e7f38a8-957a-47a8-884a-af79891eadbe
+                Name: Izquierda
+                Components:
+                    2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
+                        Id: 0822e4ff-3bd9-4bce-b2a7-7aa7baa59d3e
+                        Position: {X: -0.45, Y: -0.3, Z: -0.3}
+                        Rotation: {X: 0.0, Y: 0.0, Z: -9.456897E-10, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            efcb406d919c9bebbb6dbfa9cd90f5e3: ref!! 793d5b87-8559-40bc-9c2e-a352de9e4eb2
+        -   Folder: null
+            Entity:
                 Id: 94fd931a-0823-45a7-a8df-8da017664b5a
                 Name: Cabeza
                 Components:
@@ -274,6 +333,7 @@ Hierarchy:
                             6a29955c10063a64daa1d56f368541fa: ref!! 6064f21e-a27c-4b3c-9b56-0b5f2a872e10
                             5c814983963e13056fea52f24dc70768: ref!! f232d96c-e174-4590-82b0-2e79eb23e39d
                             a8c3279d3a24a7d3a0ff3f5b27085e32: ref!! 34aa5fd3-a0f7-44df-8724-5f62c9f6c13a
+                            a8aa11a972a17e397655da3161c7b8e7: ref!! 7bfc0445-9495-45bc-b6f4-0e80dd5aaaa6
         -   Folder: null
             Entity:
                 Id: ae26fb61-6490-4523-8dc8-10162f73c79a
@@ -424,6 +484,24 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             0eda69cb917f5ccb8823d158d0a0ab1c: ref!! 74ff9550-a062-4943-a3cd-8ff5286da3b8
+        -   Entity:
+                Id: f4f81536-6702-4abd-a6b3-088819af3788
+                Name: Lanzagranadas
+                Components:
+                    48c307f85f5b81217c07cf4f5cf355cc: !TransformComponent
+                        Id: 7bfc0445-9495-45bc-b6f4-0e80dd5aaaa6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            9ec7f7cd5e42e40010834051d887c79a: ref!! 0822e4ff-3bd9-4bce-b2a7-7aa7baa59d3e
+                            c00f4c428de7e6317d9a9b4c6c9f23a1: ref!! 21d403bb-b7ad-4307-85bc-31e073b99e61
+                    46d0f4ed5c7dd3d22f56a2e338ce6107: !Bozobaralika.AnimadorArma,Bozobaralika.Proyecto
+                        Id: 3336648f-8c60-475d-ab7b-7680480ac971
+                        ejeIzquierda: ref!! 0822e4ff-3bd9-4bce-b2a7-7aa7baa59d3e
+                        ejeDerecha: ref!! 21d403bb-b7ad-4307-85bc-31e073b99e61
+                        modeloIzquierda: ref!! 902ecc99-78d0-4fbf-b52e-71753fdb6035
+                        modeloDerecha: ref!! 9c7b75ed-ffe4-4446-a9c9-f88d9d20dd31
         -   Folder: null
             Entity:
                 Id: fd468b26-6c42-4010-8266-2ec5a5170898

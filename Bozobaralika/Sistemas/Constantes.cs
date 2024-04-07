@@ -33,7 +33,8 @@ public static class Constantes
         espada,
         escopeta,
         metralleta,
-        rifle
+        rifle,
+        lanzagranadas
     }
 
     public enum Llaves

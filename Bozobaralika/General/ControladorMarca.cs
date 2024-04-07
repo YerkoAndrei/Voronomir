@@ -64,6 +64,15 @@ public class ControladorMarca : StartupScript
                 partículasRifle.Enabled = true;
                 partículasRifle.ParticleSystem.ResetSimulation();
                 break;
+            case Armas.lanzagranadas:
+                textura.SpriteProvider = ObtenerSprite(marcaBala);
+                textura.Entity.Transform.Scale = Vector3.One * 0.03f;
+                textura.Color = new Color(20, 20, 20);
+
+                partículasRifle.Entity.Transform.Scale = Vector3.One * 1f;
+                partículasRifle.Enabled = true;
+                partículasRifle.ParticleSystem.ResetSimulation();
+                break;
         }
 
         Entity.Transform.Position = posición + (normal * 0.001f);

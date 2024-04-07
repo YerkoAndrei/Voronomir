@@ -1,0 +1,60 @@
+!PrefabAsset
+Id: 3db0a6bf-02b6-4061-8734-ac74c0c26780
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 2b6d0427-1d0b-4033-96de-347336edf79a
+    Parts:
+        -   Entity:
+                Id: 2b6d0427-1d0b-4033-96de-347336edf79a
+                Name: "Explosión"
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: ea877685-dec3-48c9-9110-ba6c527900e1
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 4.0, Y: 4.0, Z: 4.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! b096e351-d9f1-454e-9e39-3267daf05ebf
+                    10febf0414810204af56e165b5692877: !RigidbodyComponent
+                        Id: c8e7910c-24b6-4494-a4ff-81ffb95cc1ac
+                        CanCollideWith: StaticFilter, KinematicFilter, SensorTrigger
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            eb2df2f2c5b62278c12757f37fb0f20f: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    750b639c6b3d77d3902007bf26a44a44: !Bozobaralika.ElementoExplosi%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: f06106f8-50a4-4ed7-b05a-163d5a30e5a0
+                        "distanciaMínima": 2.0
+                        "distanciaMáxima": 4.0
+                        modelo: ref!! cd0c3638-672d-4583-bb9c-041faa557c2d
+        -   Folder: null
+            Entity:
+                Id: 83881dd6-c20d-4776-917a-0b57733758dc
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: b096e351-d9f1-454e-9e39-3267daf05ebf
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: cd0c3638-672d-4583-bb9c-041faa557c2d
+                        Model: 3de091c5-25d4-4c12-8e62-18cbe4432ced:Sphere
+                        Materials: {}

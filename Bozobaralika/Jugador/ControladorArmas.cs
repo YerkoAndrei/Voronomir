@@ -13,11 +13,14 @@ using static Constantes;
 public class ControladorArmas : StartupScript
 {
     public Prefab prefabMarca;
+    public Prefab prefabGranada;
+    public Prefab prefabExplosión;
 
     public AnimadorArma animadorEspada;
     public AnimadorArma animadorEscopeta;
     public AnimadorArma animadorMetralleta;
     public AnimadorArma animadorRife;
+    public AnimadorArma animadorLanzagranadas;
 
     private ControladorJugador controlador;
     private ControladorMovimiento movimiento;
@@ -36,6 +39,7 @@ public class ControladorArmas : StartupScript
     private float últimoDisparoEscopeta;
     private float últimoDisparoMetralleta;
     private float últimoDisparoRifle;
+    private float últimoDisparoLanzagranadas;
 
     private bool cambiandoArma;
     private bool usandoMira;
@@ -47,6 +51,14 @@ public class ControladorArmas : StartupScript
     private float tempoMetralleta;
     private float tiempoMaxMetralleta;
     private float tiempoAtascamientoMetralleta;
+
+    // Lanzagranadas
+    private IProyectil[] granadas;
+    private IImpacto[] explosiones;
+    private int granadaActual;
+    private int explosiónActual;
+    private int maxGranadas;
+    private int maxExplosiones;
 
     private ControladorMarca[] marcas;
     private int marcaActual;
@@ -80,6 +92,44 @@ public class ControladorArmas : StartupScript
             new Vector3 (-0.3f, 0, 0)
         };
 
+        // Cofre granadas
+        maxGranadas = 4;
+        granadas = new IProyectil[maxGranadas];
+        for (int i = 0; i < maxGranadas; i++)
+        {
+            var granada = prefabGranada.Instantiate()[0];
+            foreach (var componente in granada.Components)
+            {
+                if (componente is IProyectil)
+                {
+                    granadas[i] = (IProyectil)componente;
+                    break;
+                }
+            }
+            Entity.Scene.Entities.Add(granada);
+
+            // Impactos son explosiones o veneno
+            if (prefabExplosión != null)
+                granadas[i].AsignarImpacto(IniciarExplosión);
+        }
+
+        // Cofre explosiones
+        maxExplosiones = 4;
+        explosiones = new IImpacto[maxExplosiones];
+        for (int i = 0; i < maxExplosiones; i++)
+        {
+            var explosión = prefabExplosión.Instantiate()[0];
+            foreach (var componente in explosión.Components)
+            {
+                if (componente is IImpacto)
+                {
+                    explosiones[i] = (IImpacto)componente;
+                    break;
+                }
+            }
+            Entity.Scene.Entities.Add(explosión);
+        }
+
         // Cofre marcas
         maxMarcas = 100;
         marcas = new ControladorMarca[maxMarcas];
@@ -94,6 +144,7 @@ public class ControladorArmas : StartupScript
         animadorEscopeta.Iniciar();
         animadorMetralleta.Iniciar();
         animadorRife.Iniciar();
+        animadorLanzagranadas.Iniciar();
 
         // Arma por defecto
         ApagarArmas();
@@ -165,6 +216,8 @@ public class ControladorArmas : StartupScript
             CambiarArma(Armas.metralleta);
         if (Input.IsKeyPressed(Keys.D4) || Input.IsKeyPressed(Keys.NumPad4))
             CambiarArma(Armas.rifle);
+        if (Input.IsKeyPressed(Keys.D5) || Input.IsKeyPressed(Keys.NumPad5))
+            CambiarArma(Armas.lanzagranadas);
 
         if (Input.IsKeyPressed(Keys.Q))
             CambiarArma(armaAnterior);
@@ -194,6 +247,9 @@ public class ControladorArmas : StartupScript
                 break;
             case Armas.rifle:
                 tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoRifle;
+                break;
+            case Armas.lanzagranadas:
+                tiempoDisparo = ObtenerCadencia(armaActual) + últimoDisparoLanzagranadas;
                 break;
         }
 
@@ -238,6 +294,13 @@ public class ControladorArmas : StartupScript
                 controlador.VibrarCámara(20, 12);
                 animadorRife.AnimarDisparo(2f, 0.4f, TipoDisparo.espejo);
                 últimoDisparoRifle = (float)Game.UpdateTime.Total.TotalSeconds;
+                break;
+            case Armas.lanzagranadas:
+                movimiento.DetenerMovimiento();
+                DispararGranada(0.2f);
+                controlador.VibrarCámara(16, 20);
+                animadorLanzagranadas.AnimarDisparo(2f, 0.4f, TipoDisparo.espejo);
+                últimoDisparoLanzagranadas = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
         }
     }
@@ -338,6 +401,44 @@ public class ControladorArmas : StartupScript
         }
     }
 
+    private void DispararGranada(float imprecisión)
+    {
+        var aleatorioX = RangoAleatorio(-(imprecisión), imprecisión);
+        var aleatorioY = RangoAleatorio(-(imprecisión), imprecisión);
+        var aleatorioZ = RangoAleatorio(-(imprecisión), imprecisión);
+        var aleatorio = new Vector3(aleatorioX, aleatorioY, aleatorioZ);
+
+        // Distancia máxima de disparo: 1000
+        var posición = cámara.Entity.Transform.WorldMatrix.TranslationVector - (Vector3.UnitY * 0.65f);
+        var direcciónRayo = posición + (cámara.Entity.Transform.WorldMatrix.Forward + aleatorio) * 1000;
+
+        var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
+                                                     direcciónRayo,
+                                                     CollisionFilterGroups.DefaultFilter,
+                                                     colisionesDisparo);
+        if (!resultado.Succeeded)
+            return;
+
+        // Granada sigue punto de rayo
+        var dirección = Vector3.Normalize(posición - resultado.Point);
+        var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
+
+        granadas[granadaActual].Iniciar(0, 20, rotación, posición, null);
+
+        granadaActual++;
+        if (granadaActual >= maxGranadas)
+            granadaActual = 0;
+    }
+
+    private void IniciarExplosión(Vector3 posición)
+    {
+        explosiones[explosiónActual].Iniciar(posición, ObtenerDaño(armaActual));
+
+        explosiónActual++;
+        if (explosiónActual >= maxExplosiones)
+            explosiónActual = 0;
+    }
+
     private void Atacar(bool desdeIzquierda)
     {
         // Cadencia
@@ -426,6 +527,9 @@ public class ControladorArmas : StartupScript
             case Armas.rifle:
                 multiplicador *= 2f;
                 break;
+            case Armas.lanzagranadas:
+                multiplicador *= 2f;
+                break;
         }
         marcas[marcaActual].IniciarDaño(posición, normal, multiplicador);
         marcaActual++;
@@ -486,6 +590,9 @@ public class ControladorArmas : StartupScript
             case Armas.rifle:
                 animadorRife.AnimarSalidaArma();
                 break;
+            case Armas.lanzagranadas:
+                animadorLanzagranadas.AnimarSalidaArma();
+                break;
         }
 
         cambiandoArma = true;
@@ -514,6 +621,10 @@ public class ControladorArmas : StartupScript
                 movimiento.CambiarVelocidadMáxima(false);
                 await animadorRife.AnimarEntradaArma();
                 break;
+            case Armas.lanzagranadas:
+                movimiento.CambiarVelocidadMáxima(false);
+                await animadorLanzagranadas.AnimarEntradaArma();
+                break;
         }
 
         cambiandoArma = false;
@@ -536,6 +647,9 @@ public class ControladorArmas : StartupScript
             case Armas.rifle:
                 animadorRife.AnimarCorrerArma(2, movimiento.ObtenerAceleración(), movimiento.ObtenerEnSuelo());
                 break;
+            case Armas.lanzagranadas:
+                animadorLanzagranadas.AnimarCorrerArma(2, movimiento.ObtenerAceleración(), movimiento.ObtenerEnSuelo());
+                break;
         }
     }
 
@@ -545,6 +659,7 @@ public class ControladorArmas : StartupScript
         animadorEscopeta.ApagarArma();
         animadorMetralleta.ApagarArma();
         animadorRife.ApagarArma();
+        animadorLanzagranadas.ApagarArma();
     }
 
     private float ObtenerDaño(Armas arma)
@@ -559,6 +674,8 @@ public class ControladorArmas : StartupScript
                 return 8;
             case Armas.rifle:
                 return 100;
+            case Armas.lanzagranadas:
+                return 200;
             default:
                 return 0;
         }
@@ -577,6 +694,8 @@ public class ControladorArmas : StartupScript
                 return 10;
             case Armas.rifle:
                 return 10;
+            case Armas.lanzagranadas:
+                return 10;
         }
     }
 
@@ -592,6 +711,8 @@ public class ControladorArmas : StartupScript
                 return 0.05f;
             case Armas.rifle:
                 return 1.6f;
+            case Armas.lanzagranadas:
+                return 2.5f;
             default:
                 return 0;
         }

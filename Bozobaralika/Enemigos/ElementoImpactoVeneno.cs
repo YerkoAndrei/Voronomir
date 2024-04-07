@@ -20,7 +20,7 @@ public class ElementoImpactoVeneno : StartupScript, IImpacto
         cuerpo.Enabled = false;
     }
 
-    public void Iniciar(Vector3 posición)
+    public void Iniciar(Vector3 posición, float daño)
     {
         Entity.Transform.Scale = escalaInicial;
         Entity.Transform.Position = posición;
