@@ -6,6 +6,7 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Bozobaralika;
+using static Constantes;
 
 public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
 {
@@ -13,7 +14,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
     public RigidbodyComponent cuerpoDañable;
     public List<RigidbodyComponent> cuerpos { get; set; }
 
-    private PhysicsComponent[] disparador;
+    private Enemigos disparador;
     private RigidbodyComponent cuerpo;
     private Vector3 altura;
     private Vector3 dirección;
@@ -39,8 +40,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
                 colisión.ColliderA.CollisionGroup == CollisionFilterGroups.SensorTrigger ||
                 colisión.ColliderB.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
-                // PENDIENTE: efecto disparo enemigo
-                Apagar();
+                Destruir();
                 continue;
             }
 
@@ -56,28 +56,27 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
             {
                 // Daña jugador
                 dañable.RecibirDaño(daño);
-                Apagar();
+                Destruir();
             }
             else if (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.KinematicFilter ||
-                        colisión.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter)
+                     colisión.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter)
             {
-                // No se daña a sí mismo
-                var tocaDisparador = false;
-                for(int i=0; i< disparador.Length; i++)
-                {
-                    if (colisión.ColliderA == disparador[i] || colisión.ColliderB == disparador[i])
-                        tocaDisparador = true;
-                }
+                // No daña a su mismo tipo
+                if (disparador == dañable.controlador.Get<ControladorEnemigo>().enemigo)
+                    continue;
 
-                // Daña enemigo un 50%
-                if (!tocaDisparador)
-                {
-                    dañable.RecibirDaño(daño * 0.5f);
-                    Apagar();
-                }
+                // Daña enemigos un 50%
+                dañable.RecibirDaño(daño * 0.5f);
+                Destruir();
             }
             await Script.NextFrame();
         }
+    }
+
+    public void Destruir()
+    {
+        // PENDIENTE: efecto disparo enemigo
+        Apagar();
     }
 
     private void Apagar()
@@ -100,14 +99,9 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
         velocidadRotación = _velocidadRotación;
     }
 
-    public void Desviar(Vector3 dirección)
+    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, Enemigos _disparador)
     {
-
-    }
-
-    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, PhysicsComponent[] _disparador)
-    {
-        Apagar();
+        Destruir();
 
         Entity.Transform.Position = _posición;
         Entity.Transform.Rotation = _rotación;
@@ -151,7 +145,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
 
             tempo -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
             if (tempo <= 0)
-                Apagar();
+                Destruir();
 
             await Task.Delay(1);
         }
@@ -161,6 +155,6 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
     {
         vida -= daño;
         if (vida <= 0)
-            Apagar();
+            Destruir();
     }
 }

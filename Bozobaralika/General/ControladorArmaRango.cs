@@ -2,14 +2,14 @@
 using Stride.Engine;
 
 namespace Bozobaralika;
+using static Constantes;
 
 public class ControladorArmaRango : StartupScript
 {
     public Prefab prefabProyectil;
     public Prefab prefabImpacto;
 
-    private PhysicsComponent[] cuerposDisparador;
-
+    private Enemigos disparador;
     private IProyectil[] proyectiles;
     private IImpacto[] impactos;
 
@@ -22,12 +22,12 @@ public class ControladorArmaRango : StartupScript
     private int maxProyectiles;
     private int maxImpactos;
 
-    public void Iniciar(float _velocidad, float _velocidadRotación, Vector3 _alturaObjetivo, PhysicsComponent[] _cuerposDisparador)
+    public void Iniciar(float _velocidad, float _velocidadRotación, Vector3 _alturaObjetivo, Enemigos _disparador)
     {
         alturaObjetivo = _alturaObjetivo;
         velocidad = _velocidad;
         velocidadRotación = _velocidadRotación;
-        cuerposDisparador = _cuerposDisparador;
+        disparador = _disparador;
 
         maxProyectiles = 4;
         maxImpactos = maxProyectiles * 2;
@@ -81,7 +81,7 @@ public class ControladorArmaRango : StartupScript
         if (velocidadRotación > 0)
             proyectiles[proyectilActual].IniciarPersecutor(velocidadRotación, alturaObjetivo);
         
-        proyectiles[proyectilActual].Iniciar(daño, velocidad, rotación, Entity.Transform.WorldMatrix.TranslationVector, cuerposDisparador);
+        proyectiles[proyectilActual].Iniciar(daño, velocidad, rotación, Entity.Transform.WorldMatrix.TranslationVector, disparador);
         
         proyectilActual++;
         if (proyectilActual >= maxProyectiles)

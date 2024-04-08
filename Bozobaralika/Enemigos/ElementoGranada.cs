@@ -6,6 +6,7 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Bozobaralika;
+using static Constantes;
 
 public class ElementoGranada : AsyncScript, IProyectil
 {
@@ -22,7 +23,7 @@ public class ElementoGranada : AsyncScript, IProyectil
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
         colisionesMarca = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.SensorTrigger;
-        Apagar();
+        Destruir();
 
         while (Game.IsRunning)
         {
@@ -30,23 +31,13 @@ public class ElementoGranada : AsyncScript, IProyectil
             if (!cuerpo.Enabled)
                 continue;
 
-            // Crea pequeño rayo para crear marca
-            var dirección = cola.WorldMatrix.TranslationVector + cola.Entity.Transform.WorldMatrix.Forward;
-            var resultado = this.GetSimulation().Raycast(cola.WorldMatrix.TranslationVector,
-                                                         dirección,
-                                                         CollisionFilterGroups.DefaultFilter,
-                                                         colisionesMarca);
-            if(resultado.Succeeded)
-                iniciarImpacto.Invoke(resultado.Point, resultado.Normal, false);
-            else
-                iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA, Vector3.Zero, false);
-
-            Apagar();
+            CrearImpacto(colisión);
+            Destruir();
             await Script.NextFrame();
         }
     }
 
-    private void Apagar()
+    public void Destruir()
     {
         cuerpo.LinearVelocity = Vector3.Zero;
         modelo.Enabled = false;
@@ -64,14 +55,9 @@ public class ElementoGranada : AsyncScript, IProyectil
 
     }
 
-    public void Desviar(Vector3 dirección)
+    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, Enemigos _disparador)
     {
-
-    }
-
-    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, PhysicsComponent[] _disparador)
-    {
-        Apagar();
+        Destruir();
 
         Entity.Transform.Position = _posición;
         Entity.Transform.Rotation = _rotación;
@@ -97,9 +83,23 @@ public class ElementoGranada : AsyncScript, IProyectil
         {
             tempo -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
             if (tempo <= 0)
-                Apagar();
+                Destruir();
 
             await Task.Delay(1);
         }
+    }
+
+    private void CrearImpacto(Collision colisión)
+    {
+        // Crea pequeño rayo para crear marca
+        var dirección = cola.WorldMatrix.TranslationVector + cola.Entity.Transform.WorldMatrix.Forward;
+        var resultado = this.GetSimulation().Raycast(cola.WorldMatrix.TranslationVector,
+                                                     dirección,
+                                                     CollisionFilterGroups.DefaultFilter,
+                                                     colisionesMarca);
+        if (resultado.Succeeded)
+            iniciarImpacto.Invoke(resultado.Point, resultado.Normal, false);
+        else
+            iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA, Vector3.Zero, false);
     }
 }

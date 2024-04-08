@@ -53,6 +53,7 @@ public static class Constantes
 
     public enum Enemigos
     {
+        nada,
         meléLigero,     // Esqueleto
         meléMediano,    // Lancero
         meléPesado,     // Cerebro

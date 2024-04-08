@@ -436,7 +436,7 @@ public class ControladorArmas : StartupScript
         var dirección = Vector3.Normalize(posición - resultado.Point);
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
-        granadas[granadaActual].Iniciar(0, 35, rotación, posición, null);
+        granadas[granadaActual].Iniciar(0, 35, rotación, posición, Enemigos.nada);
 
         granadaActual++;
         if (granadaActual >= maxGranadas)
@@ -497,14 +497,16 @@ public class ControladorArmas : StartupScript
             }
             else if (resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter1)
             {
-                var desviable = resultado.Collider.Entity.Get<ElementoDesviable>();
-                if (desviable == null)
-                    return;
-
-                desviable.Desviar(dirección);
-                posición = Vector3.Zero;
-                normal = Vector3.Zero;
-
+                // Destruye proyectiles simples
+                foreach (var componente in resultado.Collider.Entity.Components)
+                {
+                    if (componente is IProyectil)
+                    {
+                        var interfaz = (IProyectil)componente;
+                        interfaz.Destruir();
+                        break;
+                    }
+                }
                 CrearMarcaDaño(resultado.Point, resultado.Normal, 1);
             }
             else

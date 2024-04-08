@@ -29,7 +29,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         if (armaMelé != null)
             armaMelé.Iniciar();
         else if (armaRango != null)
-            armaRango.Iniciar(ObtenerVelocidadProyectil(), ObtenerRotaciónProyectil(), ObtenerObjetivoProyectil(), cuerpos.ToArray());
+            armaRango.Iniciar(ObtenerVelocidadProyectil(), ObtenerRotaciónProyectil(), ObtenerObjetivoProyectil(), enemigo);
 
         switch (enemigo)
         {

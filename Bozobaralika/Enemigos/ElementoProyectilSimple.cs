@@ -6,17 +6,17 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Bozobaralika;
+using static Constantes;
 
 public class ElementoProyectilSimple : AsyncScript, IProyectil
 {
     public ModelComponent modelo;
     public TransformComponent cola;
 
-    private PhysicsComponent[] disparador;
+    private Enemigos disparador;
     private RigidbodyComponent cuerpo;
     private CollisionFilterGroupFlags colisionesMarca;
     private Action<Vector3, Vector3, bool> iniciarImpacto;
-    private bool desviado;
     private float velocidad;
     private float tempo;
     private float daño;
@@ -39,30 +39,15 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
                 colisión.ColliderB.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
                 // Impacto
-                if (iniciarImpacto == null)
+                if (iniciarImpacto != null)
                 {
-                    Apagar();
-                    continue;
-                }
-
-                // Crea pequeño rayo para crear Impacto
-                if (cola != null)
-                {
-                    var dirección = cola.WorldMatrix.TranslationVector + cola.Entity.Transform.WorldMatrix.Forward;
-                    var resultado = this.GetSimulation().Raycast(cola.WorldMatrix.TranslationVector,
-                                                                 dirección,
-                                                                 CollisionFilterGroups.DefaultFilter,
-                                                                 colisionesMarca);
-                    if (resultado.Succeeded)
-                        iniciarImpacto.Invoke(resultado.Point, resultado.Normal, false);
+                    if (cola != null)
+                        CrearImpacto(colisión);
                     else
-                        iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnB, Vector3.Zero, false);
+                        iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA, Vector3.Zero, false);
                 }
-                else
-                    iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA, Vector3.Zero, false);
 
-                // PENDIENTE: efecto disparo enemigo
-                Apagar();
+                Destruir();
                 continue;
             }
 
@@ -78,45 +63,31 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
             {
                 // Daña jugador
                 dañable.RecibirDaño(daño);
-                Apagar();
+                Destruir();
             }
             else if (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.KinematicFilter ||
                      colisión.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter)
             {
-                // No se daña a sí mismo
-                var tocaDisparador = false;
-                for(int i=0; i< disparador.Length; i++)
-                {
-                    if (colisión.ColliderA == disparador[i] || colisión.ColliderB == disparador[i])
-                        tocaDisparador = true;
-                }
+                // No daña a su mismo tipo
+                if (disparador == dañable.controlador.Get<ControladorEnemigo>().enemigo)
+                    continue;
 
-                if (tocaDisparador && desviado)
-                {
-                    // Daña 400% si se lo devuelven
-                    dañable.RecibirDaño(daño * 4f);
-                    Apagar();
-                }
-                else if (!tocaDisparador && desviado)
-                {
-                    // Daña enemigo un 200% si va desviado
-                    dañable.RecibirDaño(daño * 2f);
-                    Apagar();
-                }
-                else if (!tocaDisparador && !desviado)
-                {
-                    // Daña enemigo un 100%
-                    dañable.RecibirDaño(daño);
-                    Apagar();
-                }
+                // Daña enemigos un 50%
+                dañable.RecibirDaño(daño * 0.5f);
+                Destruir();
             }
             await Script.NextFrame();
         }
     }
 
+    public void Destruir()
+    {
+        // PENDIENTE: efecto disparo enemigo
+        Apagar();
+    }
+
     private void Apagar()
     {
-        desviado = false;
         cuerpo.LinearVelocity = Vector3.Zero;
         modelo.Enabled = false;
         cuerpo.IsKinematic = true;
@@ -133,22 +104,9 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
 
     }
 
-    public void Desviar(Vector3 dirección)
+    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, Enemigos _disparador)
     {
-        cuerpo.LinearVelocity = Vector3.Zero;
-        cuerpo.Enabled = false;
-        cuerpo.IsKinematic = true;
-
-        var nuevaDirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - dirección);
-        var rotación = Quaternion.LookRotation(nuevaDirección, Vector3.UnitY);
-
-        desviado = true;
-        Iniciar(daño, velocidad, rotación, Entity.Transform.Position, disparador);
-    }
-
-    public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, PhysicsComponent[] _disparador)
-    {
-        Apagar();
+        Destruir();
 
         Entity.Transform.Position = _posición;
         Entity.Transform.Rotation = _rotación;
@@ -176,9 +134,23 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
         {
             tempo -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
             if (tempo <= 0)
-                Apagar();
+                Destruir();
 
             await Task.Delay(1);
         }
+    }
+
+    private void CrearImpacto(Collision colisión)
+    {
+        // Crea pequeño rayo para crear marca
+        var dirección = cola.WorldMatrix.TranslationVector + cola.Entity.Transform.WorldMatrix.Forward;
+        var resultado = this.GetSimulation().Raycast(cola.WorldMatrix.TranslationVector,
+                                                     dirección,
+                                                     CollisionFilterGroups.DefaultFilter,
+                                                     colisionesMarca);
+        if (resultado.Succeeded)
+            iniciarImpacto.Invoke(resultado.Point, resultado.Normal, false);
+        else
+            iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA, Vector3.Zero, false);
     }
 }
