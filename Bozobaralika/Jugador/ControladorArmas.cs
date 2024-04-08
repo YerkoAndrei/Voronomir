@@ -158,7 +158,7 @@ public class ControladorArmas : StartupScript
         cambiandoArma = true;
         await animadorEspada.AnimarEntradaArma();
         cambiandoArma = false;
-        movimiento.CambiarVelocidadMáxima(true);
+        movimiento.CambiarVelocidadMáxima(armaActual);
     }
 
     public void ActualizarEntradas()
@@ -613,28 +613,25 @@ public class ControladorArmas : StartupScript
         switch (armaActual)
         {
             case Armas.espada:
-                movimiento.CambiarVelocidadMáxima(true);
                 await animadorEspada.AnimarEntradaArma();
                 break;
             case Armas.escopeta:
-                movimiento.CambiarVelocidadMáxima(false);
                 await animadorEscopeta.AnimarEntradaArma();
                 break;
             case Armas.metralleta:
-                movimiento.CambiarVelocidadMáxima(false);
                 await animadorMetralleta.AnimarEntradaArma();
                 break;
             case Armas.rifle:
-                movimiento.CambiarVelocidadMáxima(false);
                 await animadorRife.AnimarEntradaArma();
                 break;
             case Armas.lanzagranadas:
-                movimiento.CambiarVelocidadMáxima(false);
                 await animadorLanzagranadas.AnimarEntradaArma();
                 break;
         }
 
         cambiandoArma = false;
+
+        movimiento.CambiarVelocidadMáxima(armaActual);
         interfaz.CambiarMira(armaActual);
     }
 

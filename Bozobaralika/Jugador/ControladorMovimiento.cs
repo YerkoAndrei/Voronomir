@@ -5,6 +5,7 @@ using Stride.Physics;
 using System.Linq;
 
 namespace Bozobaralika;
+using static Constantes;
 
 public class ControladorMovimiento : StartupScript
 {
@@ -50,7 +51,7 @@ public class ControladorMovimiento : StartupScript
         aceleraciónInicial = 0.1f;
         tiempoIniciación = 0.2f;
         tiempoAceleración = 20f;
-        CambiarVelocidadMáxima(false);
+        maxVelocidad = 1.5f;
 
         CambiarSensiblidad(false);
         multiplicadorVelocidad = ObtenerMultiplicadorVelocidad();
@@ -203,12 +204,24 @@ public class ControladorMovimiento : StartupScript
         cuerpo.SetVelocity(Vector3.Zero);
     }
 
-    public void CambiarVelocidadMáxima(bool melé)
+    public void CambiarVelocidadMáxima(Armas arma)
     {
-        if (melé)
-            maxVelocidad = 2.0f;
-        else
-            maxVelocidad = 1.5f;
+        switch (arma)
+        {
+            case Armas.espada:
+                maxVelocidad = 2.0f;
+                break;
+            case Armas.escopeta:
+            case Armas.metralleta:
+                maxVelocidad = 1.5f;
+                break;
+            case Armas.rifle:
+                maxVelocidad = 1.4f;
+                break;
+            case Armas.lanzagranadas:
+                maxVelocidad = 1.2f;
+                break;
+        }
     }
 
     public void CambiarSensiblidad(bool reducir)
