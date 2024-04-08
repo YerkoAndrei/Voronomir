@@ -426,8 +426,13 @@ public class ControladorArmas : StartupScript
         if (!resultado.Succeeded)
             resultado.Point = (cámara.Entity.Transform.WorldMatrix.Forward + aleatorio) * 1000;
 
-        // Granada sigue punto de rayo
-        var posición = cámara.Entity.Transform.WorldMatrix.TranslationVector - (Vector3.UnitY * 0.6f);
+        // Granada sigue punto de rayo desde el hombro
+        var posición = Vector3.Zero;
+        if (turnoLanzagranadas == TipoDisparo.izquierda)
+            posición = animadorLanzagranadas.ejeIzquierda.WorldMatrix.TranslationVector;
+        else
+            posición = animadorLanzagranadas.ejeDerecha.WorldMatrix.TranslationVector;
+
         var dirección = Vector3.Normalize(posición - resultado.Point);
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
