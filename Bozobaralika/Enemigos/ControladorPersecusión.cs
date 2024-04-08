@@ -6,6 +6,7 @@ using Stride.Navigation;
 using Stride.Physics;
 
 namespace Bozobaralika;
+using static Utilidades;
 
 public class ControladorPersecusión : StartupScript
 {
@@ -46,14 +47,7 @@ public class ControladorPersecusión : StartupScript
     public void Iniciar(ControladorEnemigo _controlador, float _tiempoBusqueda, float _velocidad, float _rotación, float _distanciaAtaque, bool _persecutorTrigonométrico)
     {
         // Busca animador
-        foreach (var componente in Entity.Components)
-        {
-            if (componente is IAnimador)
-            {
-                animador = (IAnimador)componente;
-                break;
-            }
-        }
+        animador = ObtenerInterfaz<IAnimador>(Entity);
         animador.Iniciar();
 
         colisionesMirada = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.CharacterFilter;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Stride.Core.Mathematics;
 using Stride.Engine;
@@ -44,6 +45,18 @@ public static class Utilidades
     public static bool TocaEnemigo(Collision colisión)
     {
         return (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.KinematicFilter || colisión.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter);
+    }
+
+    public static T ObtenerInterfaz<T>(Entity entidad)
+    {
+        foreach (var componente in entidad.Components)
+        {
+            if (componente is T)
+            {
+                return (T)(object)componente;
+            }
+        }
+        return default;
     }
 
     // Interfaz

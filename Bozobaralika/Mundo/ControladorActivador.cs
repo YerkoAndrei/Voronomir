@@ -3,17 +3,24 @@ using System.Threading.Tasks;
 using Stride.Engine;
 
 namespace Bozobaralika;
+using static Utilidades;
 
 public class ControladorActivador : AsyncScript
 {
     public List<Entity> activables = new List<Entity> { };
 
+    private IActivable[] interfaces;
     private PhysicsComponent cuerpo;
     private bool activado;
 
     public override async Task Execute()
     {
         cuerpo = Entity.Get<PhysicsComponent>();
+        interfaces = new IActivable[activables.Count];
+        for (int i=0; i < activables.Count; i++)
+        {
+            interfaces[i] = ObtenerInterfaz<IActivable>(activables[i]);
+        }
 
         while (Game.IsRunning)
         {
@@ -34,17 +41,9 @@ public class ControladorActivador : AsyncScript
     private void Activar()
     {
         activado = true;
-        foreach (var activable in activables)
+        foreach (var activable in interfaces)
         {
-            foreach (var componente in activable.Components)
-            {
-                if (componente is IActivable)
-                {
-                    var temp = (IActivable)componente;
-                    temp.Activar();
-                    break;
-                }
-            }
+            activable.Activar();
         }
     }
 }

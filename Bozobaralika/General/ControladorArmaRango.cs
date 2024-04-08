@@ -2,6 +2,7 @@
 using Stride.Engine;
 
 namespace Bozobaralika;
+using static Utilidades;
 using static Constantes;
 
 public class ControladorArmaRango : StartupScript
@@ -37,14 +38,7 @@ public class ControladorArmaRango : StartupScript
         for (int i = 0; i < maxProyectiles; i++)
         {
             var proyectil = prefabProyectil.Instantiate()[0];
-            foreach (var componente in proyectil.Components)
-            {
-                if (componente is IProyectil)
-                {
-                    proyectiles[i] = (IProyectil)componente;
-                    break;
-                }
-            }
+            proyectiles[i] = ObtenerInterfaz<IProyectil>(proyectil);
             Entity.Scene.Entities.Add(proyectil);
 
             // Impactos son explosiones o veneno
@@ -59,14 +53,7 @@ public class ControladorArmaRango : StartupScript
             for (int i = 0; i < maxImpactos; i++)
             {
                 var impacto = prefabImpacto.Instantiate()[0];
-                foreach (var componente in impacto.Components)
-                {
-                    if (componente is IImpacto)
-                    {
-                        impactos[i] = (IImpacto)componente;
-                        break;
-                    }
-                }
+                impactos[i] = ObtenerInterfaz<IImpacto>(impacto);
                 Entity.Scene.Entities.Add(impacto);
             }
         }

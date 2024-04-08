@@ -99,14 +99,7 @@ public class ControladorArmas : StartupScript
         for (int i = 0; i < maxGranadas; i++)
         {
             var granada = prefabGranada.Instantiate()[0];
-            foreach (var componente in granada.Components)
-            {
-                if (componente is IProyectil)
-                {
-                    granadas[i] = (IProyectil)componente;
-                    break;
-                }
-            }
+            granadas[i] = ObtenerInterfaz<IProyectil>(granada);
             Entity.Scene.Entities.Add(granada);
 
             // Impactos son explosiones o veneno
@@ -120,14 +113,7 @@ public class ControladorArmas : StartupScript
         for (int i = 0; i < maxExplosiones; i++)
         {
             var explosión = prefabExplosión.Instantiate()[0];
-            foreach (var componente in explosión.Components)
-            {
-                if (componente is IImpacto)
-                {
-                    explosiones[i] = (IImpacto)componente;
-                    break;
-                }
-            }
+            explosiones[i] = ObtenerInterfaz<IImpacto>(explosión);
             Entity.Scene.Entities.Add(explosión);
         }
 
@@ -498,15 +484,8 @@ public class ControladorArmas : StartupScript
             else if (resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter1)
             {
                 // Destruye proyectiles simples
-                foreach (var componente in resultado.Collider.Entity.Components)
-                {
-                    if (componente is IProyectil)
-                    {
-                        var interfaz = (IProyectil)componente;
-                        interfaz.Destruir();
-                        break;
-                    }
-                }
+                var interfaz = ObtenerInterfaz<IProyectil>(resultado.Collider.Entity);
+                interfaz.Destruir();
                 CrearMarcaDaño(resultado.Point, resultado.Normal, 1);
             }
             else

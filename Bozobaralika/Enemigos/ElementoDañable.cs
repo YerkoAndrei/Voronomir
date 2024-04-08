@@ -1,6 +1,7 @@
 ﻿using Stride.Engine;
 
 namespace Bozobaralika;
+using static Utilidades;
 
 public class ElementoDañable : StartupScript
 {
@@ -11,14 +12,7 @@ public class ElementoDañable : StartupScript
 
     public override void Start()
     {
-        foreach (var componente in controlador.Components)
-        {
-            if (componente is IDañable)
-            {
-                interfaz = (IDañable)componente;
-                break;
-            }
-        }
+        interfaz = ObtenerInterfaz<IDañable>(controlador);
     }
 
     public void RecibirDaño(float daño)

@@ -4,7 +4,7 @@ using Stride.Engine;
 using Stride.Input;
 
 namespace Bozobaralika;
-using static Constantes;
+using static Utilidades;
 
 public class Depurador : AsyncScript
 {
@@ -100,14 +100,7 @@ public class Depurador : AsyncScript
     private async void Activar(Entity entidad)
     {
         await Task.Delay(2);
-        foreach (var componente in entidad.Components)
-        {
-            if (componente is IActivable)
-            {
-                var temp = (IActivable)componente;
-                temp.Activar();
-                break;
-            }
-        }
+        var temp = ObtenerInterfaz<IActivable>(entidad);
+        temp.Activar();
     }
 }
