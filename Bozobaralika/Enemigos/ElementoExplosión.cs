@@ -39,7 +39,7 @@ public class ElementoExplosión : StartupScript, IImpacto
 
     private async void Apagar()
     {
-        float duración = 0.25f;
+        float duración = 0.2f;
         float tiempoLerp = 0;
         float tiempo = 0;
 

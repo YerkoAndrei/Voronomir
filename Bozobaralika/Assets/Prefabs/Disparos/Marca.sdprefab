@@ -156,7 +156,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 1b0a14c5-0de3-4740-90c9-b38ad2c59190
-                Name: "PartículasRifle"
+                Name: "PartículasExplosión"
                 Components:
                     093b02d926676f161ca771eca86b224b: !TransformComponent
                         Id: 3cd5ba88-4d00-43cc-b241-391ef5bdee42
@@ -334,10 +334,10 @@ Hierarchy:
                         Id: 4934732c-c16f-46c3-8081-b7dd025d1c0b
                         textura: ref!! f1652332-d0d0-47ad-902a-d6f7fb203099
                         "partículasBala": ref!! b5445e9b-dd6f-4afb-86df-92d9a98886c8
-                        "partículasRifle": ref!! 970469b9-f998-4e28-b141-385b5d6a1d32
+                        "partículasExplosión": ref!! 970469b9-f998-4e28-b141-385b5d6a1d32
                         "partículasDaño": ref!! 584cc3b4-631e-4c47-a4cd-69c6c31a37c3
-                        marcaEspada: ed7453c6-b5c0-4969-8fcd-94ddc3abd506:Texturas/Efectos/Corte
                         marcaBala: 2e8336b0-9037-4c44-8201-0594aa0b8669:Texturas/Efectos/Disparo
+                        "marcaExplosión": "ed7453c6-b5c0-4969-8fcd-94ddc3abd506:Texturas/Efectos/Explosión"
         -   Entity:
                 Id: ad41a997-4988-4265-97ea-8ff0c2732a53
                 Name: "PartículasDaño"

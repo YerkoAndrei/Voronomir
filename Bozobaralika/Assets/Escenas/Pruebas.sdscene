@@ -144,7 +144,7 @@ Hierarchy:
                         Id: 853d3c97-8a0e-4048-a57c-1704945b8595
                     54c947a658f979a1a3cbf73596735198: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: ee03a1fb-1cae-4679-9cfb-758a1f99f1ee
-                        prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/Disparos/MarcaBala
+                        prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/Disparos/Marca
                         prefabGranada: a3c696d3-259b-49a3-94e8-945c1671282a:Prefabs/Disparos/Granada
                         "prefabExplosión": "3db0a6bf-02b6-4061-8734-ac74c0c26780:Prefabs/Disparos/Explosión"
                         animadorEspada: ref!! 353e3563-85b9-4e95-8cde-b449d5a03217

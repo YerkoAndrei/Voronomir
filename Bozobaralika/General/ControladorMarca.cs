@@ -11,10 +11,10 @@ public class ControladorMarca : StartupScript
 {
     public SpriteComponent textura;
     public ParticleSystemComponent partículasBala;
-    public ParticleSystemComponent partículasRifle;
+    public ParticleSystemComponent partículasExplosión;
     public ParticleSystemComponent partículasDaño;
-    public Texture marcaEspada;
     public Texture marcaBala;
+    public Texture marcaExplosión;
 
     public override void Start()
     {
@@ -29,7 +29,7 @@ public class ControladorMarca : StartupScript
         switch (arma)
         {
             case Armas.espada:
-                textura.SpriteProvider = ObtenerSprite(marcaEspada);
+                textura.SpriteProvider = ObtenerSprite(marcaExplosión);
                 textura.Entity.Transform.Scale = Vector3.One * 0.02f;
                 textura.Color = new Color(90, 90, 90);
 
@@ -48,7 +48,7 @@ public class ControladorMarca : StartupScript
                 break;
             case Armas.metralleta:
                 textura.SpriteProvider = ObtenerSprite(marcaBala);
-                textura.Entity.Transform.Scale = Vector3.One * 0.01f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.012f;
                 textura.Color = new Color(100, 100, 100);
 
                 partículasBala.Entity.Transform.Scale = Vector3.One * 0.4f;
@@ -57,21 +57,21 @@ public class ControladorMarca : StartupScript
                 break;
             case Armas.rifle:
                 textura.SpriteProvider = ObtenerSprite(marcaBala);
-                textura.Entity.Transform.Scale = Vector3.One * 0.03f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.04f;
                 textura.Color = new Color(90, 90, 90);
 
-                partículasRifle.Entity.Transform.Scale = Vector3.One * 0.5f;
-                partículasRifle.Enabled = true;
-                partículasRifle.ParticleSystem.ResetSimulation();
+                partículasExplosión.Entity.Transform.Scale = Vector3.One * 0.5f;
+                partículasExplosión.Enabled = true;
+                partículasExplosión.ParticleSystem.ResetSimulation();
                 break;
             case Armas.lanzagranadas:
-                textura.SpriteProvider = ObtenerSprite(marcaBala);
-                textura.Entity.Transform.Scale = Vector3.One * 0.03f;
-                textura.Color = new Color(20, 20, 20);
+                textura.SpriteProvider = ObtenerSprite(marcaExplosión);
+                textura.Entity.Transform.Scale = Vector3.One * 0.2f;
+                textura.Color = new Color(80, 80, 80, 200);
 
-                partículasRifle.Entity.Transform.Scale = Vector3.One * 1f;
-                partículasRifle.Enabled = true;
-                partículasRifle.ParticleSystem.ResetSimulation();
+                partículasExplosión.Entity.Transform.Scale = Vector3.One * 0.6f;
+                partículasExplosión.Enabled = true;
+                partículasExplosión.ParticleSystem.ResetSimulation();
                 break;
         }
 
@@ -95,7 +95,7 @@ public class ControladorMarca : StartupScript
     {
         textura.Enabled = false;
         partículasBala.Enabled = false;
-        partículasRifle.Enabled = false;
+        partículasExplosión.Enabled = false;
         partículasDaño.Enabled = false;
     }
 }
