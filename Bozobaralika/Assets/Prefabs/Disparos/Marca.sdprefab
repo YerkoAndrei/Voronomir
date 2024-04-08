@@ -330,7 +330,7 @@ Hierarchy:
                             0d51d92c1699ed9892c88cf6e08f25d5: ref!! d9367c1b-485e-4b67-9cb6-f0e77d35a20e
                             bbf7431c69bf6b0f3813219f1215fc43: ref!! 3cd5ba88-4d00-43cc-b241-391ef5bdee42
                             10ddf9460e9d77a6d0c9adb31886ff25: ref!! f3d22f26-12df-49a6-845e-2b9db733109b
-                    42f447e86c24e2acb79d55d30ef54e80: !Bozobaralika.ControladorMarca,Bozobaralika.Proyecto
+                    42f447e86c24e2acb79d55d30ef54e80: !Bozobaralika.ElementoMarca,Bozobaralika.Proyecto
                         Id: 4934732c-c16f-46c3-8081-b7dd025d1c0b
                         textura: ref!! f1652332-d0d0-47ad-902a-d6f7fb203099
                         "partículasBala": ref!! b5445e9b-dd6f-4afb-86df-92d9a98886c8

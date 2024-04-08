@@ -413,7 +413,7 @@ Hierarchy:
                         Children:
                             4d4e4fc59f39031aec10a602f1a0c109: ref!! 187bdd87-f1d4-4de7-ab0b-33288525ae03
                             b00c703260ce40e5b633d1ac5cb22b82: ref!! d7cfa473-fa37-4dd9-96ec-103d45581de3
-                    a7dec7769b845b7ba7ae94d727485ec2: !Bozobaralika.AnimadorArma,Bozobaralika.Proyecto
+                    a7dec7769b845b7ba7ae94d727485ec2: !Bozobaralika.AnimadorArmas,Bozobaralika.Proyecto
                         Id: b4f31a54-c2e1-4a93-86d7-6ec5585a30e8
                         ejeIzquierda: ref!! 187bdd87-f1d4-4de7-ab0b-33288525ae03
                         ejeDerecha: ref!! d7cfa473-fa37-4dd9-96ec-103d45581de3
@@ -1174,7 +1174,7 @@ Hierarchy:
                         Children:
                             9ec7f7cd5e42e40010834051d887c79a: ref!! c9ad1ff2-3e52-4632-8219-8e16f66661fd
                             c00f4c428de7e6317d9a9b4c6c9f23a1: ref!! 56df525a-d108-444c-8588-1b23fdbabaed
-                    1d2872fa0a254e1c4dbdaaba19f1a4f1: !Bozobaralika.AnimadorArma,Bozobaralika.Proyecto
+                    1d2872fa0a254e1c4dbdaaba19f1a4f1: !Bozobaralika.AnimadorArmas,Bozobaralika.Proyecto
                         Id: c2e86204-8221-47ef-87a2-505fe469f482
                         ejeIzquierda: ref!! c9ad1ff2-3e52-4632-8219-8e16f66661fd
                         ejeDerecha: ref!! 56df525a-d108-444c-8588-1b23fdbabaed
@@ -1797,7 +1797,7 @@ Hierarchy:
                         Children:
                             b6b5b11a3ed11562af7ace66c4924df5: ref!! 2e808d1e-675f-450a-ac29-c36208cab35a
                             7edb391256319131033317d606d8a7e8: ref!! 3c545399-11ff-475c-bba2-ef70d8a16eca
-                    940d284617fca29120af0c949063237e: !Bozobaralika.AnimadorArma,Bozobaralika.Proyecto
+                    940d284617fca29120af0c949063237e: !Bozobaralika.AnimadorArmas,Bozobaralika.Proyecto
                         Id: 353e3563-85b9-4e95-8cde-b449d5a03217
                         ejeIzquierda: ref!! 2e808d1e-675f-450a-ac29-c36208cab35a
                         ejeDerecha: ref!! 3c545399-11ff-475c-bba2-ef70d8a16eca
@@ -1850,7 +1850,7 @@ Hierarchy:
                         Children:
                             3b8a72ae8caca4514be1a83393bab3c6: ref!! 3baaef54-2b52-4a42-b624-63c70f1ed5c3
                             f01a3efb6c538b24d3adcff3dc6e01dc: ref!! 94861604-8435-4c58-8f2d-c16399f334f8
-                    11cd0c9672ff2976f61605609f2d8b4e: !Bozobaralika.AnimadorArma,Bozobaralika.Proyecto
+                    11cd0c9672ff2976f61605609f2d8b4e: !Bozobaralika.AnimadorArmas,Bozobaralika.Proyecto
                         Id: 14b56ce5-0534-48dd-aca3-9cc3154d2023
                         ejeIzquierda: ref!! 3baaef54-2b52-4a42-b624-63c70f1ed5c3
                         ejeDerecha: ref!! 94861604-8435-4c58-8f2d-c16399f334f8
@@ -2086,7 +2086,7 @@ Hierarchy:
                         Children:
                             9ec7f7cd5e42e40010834051d887c79a: ref!! 9b241c6d-e8b1-40b7-a073-045c76e26626
                             c00f4c428de7e6317d9a9b4c6c9f23a1: ref!! 65a29250-f0ff-40e5-887e-f2772447a9fc
-                    46d0f4ed5c7dd3d22f56a2e338ce6107: !Bozobaralika.AnimadorArma,Bozobaralika.Proyecto
+                    46d0f4ed5c7dd3d22f56a2e338ce6107: !Bozobaralika.AnimadorArmas,Bozobaralika.Proyecto
                         Id: 21cbd8c8-eaeb-4b28-957b-877607cf99d8
                         ejeIzquierda: ref!! 9b241c6d-e8b1-40b7-a073-045c76e26626
                         ejeDerecha: ref!! 65a29250-f0ff-40e5-887e-f2772447a9fc
