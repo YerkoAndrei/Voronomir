@@ -1,0 +1,19 @@
+!Model
+Id: 8446cdd3-3139-4136-a668-41cb01e8aa8c
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file RPG-2.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    d504d2bfb4de4a778ec254cf9d6b2517:
+        Name: Metal
+        MaterialInstance:
+            Material: d323c042-a802-4dc3-80cd-289e546113a7:Modelos/Armas/Lanzagranadas/Materiales/Metal
+    df03644ddb215ca736ea97b61e7519cf:
+        Name: Madera
+        MaterialInstance:
+            Material: 2f136e0b-5957-4a79-abe1-bba9bc206f26:Modelos/Armas/Lanzagranadas/Materiales/Madera
+Modifiers: {}
+~SourceHashes:
+    bf7aa83bcd5232b1f1a885429b9b6f74~RPG-2.glb: a1b8e6e4a66b924c075a05591fa7bd18
