@@ -146,6 +146,21 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 456bce48-7ade-4476-ade0-4a483375e395
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 100.0
+                Height: 100.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: miraLanzagranadas
+                Source: !SpriteFromTexture
+                    Texture: bcc1ca00-3c90-4c4e-8713-9e2a2c14c1a6:Texturas/Miras/miraLanzagranadas
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !Grid
                 Id: 49b75539-86e0-470d-911a-8690f66615b4
                 DependencyProperties: {}
@@ -160,6 +175,7 @@ Hierarchy:
                     611464a46bf4be8ddfe8aeeb853c25ca: !ImageElement ref!! ad9d9f28-8a91-42d4-9074-6c62ccd28aa3
                     98046954a4c112afb241308e71200511: !ImageElement ref!! 85d08406-1342-4f61-a088-e86ee449acd8
                     6ed5a00e82f98e2cadc3b8895cb7fd20: !ImageElement ref!! 9cd2d46b-af16-4a8a-a534-5079740eb5eb
+                    51b4271c5f1f215b473e4d4e980aed47: !ImageElement ref!! 456bce48-7ade-4476-ade0-4a483375e395
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}

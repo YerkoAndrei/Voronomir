@@ -20,6 +20,7 @@ public class InterfazJuego : StartupScript
     private ImageElement miraEscopeta;
     private ImageElement miraMetralleta;
     private ImageElement miraRifle;
+    private ImageElement miraLanzagranadas;
 
     private ImageElement imgEspada;
     private ImageElement imgEscopeta;
@@ -41,6 +42,7 @@ public class InterfazJuego : StartupScript
         miraEscopeta = página.FindVisualChildOfType<ImageElement>("miraEscopeta");
         miraMetralleta = página.FindVisualChildOfType<ImageElement>("miraMetralleta");
         miraRifle = página.FindVisualChildOfType<ImageElement>("miraRifle");
+        miraLanzagranadas = página.FindVisualChildOfType<ImageElement>("miraLanzagranadas");
 
         imgEspada = página.FindVisualChildOfType<ImageElement>("imgEspada");
         imgEscopeta = página.FindVisualChildOfType<ImageElement>("imgEscopeta");
@@ -99,7 +101,9 @@ public class InterfazJuego : StartupScript
                 miraMetralleta.Visibility = Visibility.Visible;
                 break;
             case Armas.rifle:
+                break;
             case Armas.lanzagranadas:
+                miraLanzagranadas.Visibility = Visibility.Visible;
                 break;
         }
     }
@@ -120,6 +124,7 @@ public class InterfazJuego : StartupScript
         miraEscopeta.Visibility = Visibility.Hidden;
         miraMetralleta.Visibility = Visibility.Hidden;
         miraRifle.Visibility = Visibility.Hidden;
+        miraLanzagranadas.Visibility = Visibility.Hidden;
     }
 
     public void ApagarÍconos()
