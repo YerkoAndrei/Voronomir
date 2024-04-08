@@ -5,7 +5,7 @@ using Stride.Engine;
 namespace Bozobaralika;
 using static Constantes;
 
-public class AnimadorArma : AsyncScript
+public class AnimadorArmas : AsyncScript
 {
     public TransformComponent ejeIzquierda;
     public TransformComponent ejeDerecha;

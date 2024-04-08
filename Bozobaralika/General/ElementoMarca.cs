@@ -7,7 +7,7 @@ namespace Bozobaralika;
 using static Utilidades;
 using static Constantes;
 
-public class ControladorMarca : StartupScript
+public class ElementoMarca : StartupScript
 {
     public SpriteComponent textura;
     public ParticleSystemComponent partículasBala;

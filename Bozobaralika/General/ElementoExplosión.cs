@@ -40,7 +40,11 @@ public class ElementoExplosión : StartupScript, IImpacto
 
     private void CalcularDaños(float daño)
     {
+        // Encuentra tocados por exploción
 
+        // Calcula distancia
+
+        // Daña
     }
 
     private async void Apagar()

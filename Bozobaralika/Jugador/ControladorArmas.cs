@@ -16,11 +16,11 @@ public class ControladorArmas : StartupScript
     public Prefab prefabGranada;
     public Prefab prefabExplosión;
 
-    public AnimadorArma animadorEspada;
-    public AnimadorArma animadorEscopeta;
-    public AnimadorArma animadorMetralleta;
-    public AnimadorArma animadorRife;
-    public AnimadorArma animadorLanzagranadas;
+    public AnimadorArmas animadorEspada;
+    public AnimadorArmas animadorEscopeta;
+    public AnimadorArmas animadorMetralleta;
+    public AnimadorArmas animadorRife;
+    public AnimadorArmas animadorLanzagranadas;
 
     private ControladorJugador controlador;
     private ControladorMovimiento movimiento;
@@ -61,7 +61,7 @@ public class ControladorArmas : StartupScript
     private int maxGranadas;
     private int maxExplosiones;
 
-    private ControladorMarca[] marcas;
+    private ElementoMarca[] marcas;
     private int marcaActual;
     private int maxMarcas;
 
@@ -119,11 +119,11 @@ public class ControladorArmas : StartupScript
 
         // Cofre marcas
         maxMarcas = 100;
-        marcas = new ControladorMarca[maxMarcas];
+        marcas = new ElementoMarca[maxMarcas];
         for (int i = 0; i < maxMarcas; i++)
         {
             var marca = prefabMarca.Instantiate()[0];
-            marcas[i] = marca.Get<ControladorMarca>();
+            marcas[i] = marca.Get<ElementoMarca>();
             Entity.Scene.Entities.Add(marca);
         }
 
