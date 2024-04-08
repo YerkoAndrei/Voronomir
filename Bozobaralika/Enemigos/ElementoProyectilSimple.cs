@@ -13,7 +13,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
 
     private PhysicsComponent[] disparador;
     private RigidbodyComponent cuerpo;
-    private Action<Vector3> iniciarImpacto;
+    private Action<Vector3, Vector3, bool> iniciarImpacto;
     private bool desviado;
     private float velocidad;
     private float tempo;
@@ -37,7 +37,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
             {
                 // Impacto
                 if (iniciarImpacto != null)
-                    iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnB);
+                    iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnB, colisión.Contacts.ToArray()[0].PositionOnA, false);
 
                 // PENDIENTE: efecto disparo enemigo
                 Apagar();
@@ -101,7 +101,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
         cuerpo.Enabled = false;
     }
 
-    public void AsignarImpacto(Action<Vector3> _iniciarImpacto)
+    public void AsignarImpacto(Action<Vector3, Vector3, bool> _iniciarImpacto)
     {
         iniciarImpacto = _iniciarImpacto;
     }

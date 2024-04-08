@@ -10,15 +10,18 @@ namespace Bozobaralika;
 public class ElementoGranada : AsyncScript, IProyectil
 {
     public ModelComponent modelo;
+    public TransformComponent cola;
 
     private RigidbodyComponent cuerpo;
-    private Action<Vector3> iniciarImpacto;
+    private CollisionFilterGroupFlags colisionesMarca; 
+    private Action<Vector3, Vector3, bool> iniciarImpacto;
     private float velocidad;
     private float tempo;
 
     public override async Task Execute()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
+        colisionesMarca = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.SensorTrigger;
         Apagar();
 
         while (Game.IsRunning)
@@ -27,9 +30,18 @@ public class ElementoGranada : AsyncScript, IProyectil
             if (!cuerpo.Enabled)
                 continue;
 
-            iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA);
-            Apagar();
+            // Crea pequeño rayo para crear marca
+            var dirección = cola.WorldMatrix.TranslationVector + cola.Entity.Transform.WorldMatrix.Forward;
+            var resultado = this.GetSimulation().Raycast(cola.WorldMatrix.TranslationVector,
+                                                         dirección,
+                                                         CollisionFilterGroups.DefaultFilter,
+                                                         colisionesMarca);
+            if(resultado.Succeeded)
+                iniciarImpacto.Invoke(resultado.Point, resultado.Normal, false);
+            else
+                iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA, Vector3.Zero, false);
 
+            Apagar();
             await Script.NextFrame();
         }
     }
@@ -42,7 +54,7 @@ public class ElementoGranada : AsyncScript, IProyectil
         cuerpo.Enabled = false;
     }
 
-    public void AsignarImpacto(Action<Vector3> _iniciarImpacto)
+    public void AsignarImpacto(Action<Vector3, Vector3, bool> _iniciarImpacto)
     {
         iniciarImpacto = _iniciarImpacto;
     }

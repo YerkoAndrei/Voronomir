@@ -89,7 +89,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
         cuerpoDañable.Enabled = false;
     }
 
-    public void AsignarImpacto(Action<Vector3> _iniciarImpacto)
+    public void AsignarImpacto(Action<Vector3, Vector3, bool> _iniciarImpacto)
     {
 
     }

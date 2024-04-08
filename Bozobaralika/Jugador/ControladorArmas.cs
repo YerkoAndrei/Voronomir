@@ -443,9 +443,12 @@ public class ControladorArmas : StartupScript
             granadaActual = 0;
     }
 
-    private void IniciarExplosión(Vector3 posición)
+    private void IniciarExplosión(Vector3 posición, Vector3 normal, bool soloEfecto)
     {
         explosiones[explosiónActual].Iniciar(posición, ObtenerDaño(armaActual));
+
+        if(normal != Vector3.Zero)
+            CrearMarca(posición, normal, soloEfecto);
 
         explosiónActual++;
         if (explosiónActual >= maxExplosiones)
