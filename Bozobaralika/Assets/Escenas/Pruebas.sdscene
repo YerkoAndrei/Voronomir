@@ -33,6 +33,7 @@ Hierarchy:
         - ref!! d471c428-d220-4860-b67e-f0ad26d2d613
         - ref!! 1203753a-eca1-4f4a-85e3-0edf0ce91347
         - ref!! f557bc44-8313-4a06-ba9a-35f36f7d42de
+        - ref!! dfbee328-9e17-4814-912e-92e7281c5a1c
         - ref!! eb300b4d-c14f-4f40-b4b3-e09e965b69a5
         - ref!! 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
         - ref!! 8b42ea7d-752a-4920-97e2-1646ec7b9189
@@ -182,7 +183,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: c9ad1ff2-3e52-4632-8219-8e16f66661fd
-                        Position: {X: -0.25, Y: -0.02, Z: -0.12}
+                        Position: {X: -0.25, Y: -0.02, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: -9.456897E-10, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -357,7 +358,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 56df525a-d108-444c-8588-1b23fdbabaed
-                        Position: {X: 0.25, Y: -0.02, Z: -0.12}
+                        Position: {X: 0.25, Y: -0.02, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: -9.456897E-10, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -850,7 +851,7 @@ Hierarchy:
                 Components:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 4ddb17c8-979c-4d86-a19c-764296468067
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -0.12}
                         Rotation: {X: -0.08189959, Y: -0.029809013, Z: -0.34071866, W: 0.9361168}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1093,7 +1094,7 @@ Hierarchy:
                 Components:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 0d3098e2-8e8a-4099-b65a-1812a4d959f5
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -0.12}
                         Rotation: {X: -0.08189959, Y: 0.029809007, Z: 0.34071863, W: 0.9361168}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -2109,6 +2110,39 @@ Hierarchy:
                         Id: 9e4f4867-2dc7-44a7-80a7-09efe11fdad5
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         Materials: {}
+        -   Folder: Entorno/Muros
+            Entity:
+                Id: dfbee328-9e17-4814-912e-92e7281c5a1c
+                Name: Cube
+                Components:
+                    ae0a1c16314df115170f0165e6677708: !ModelComponent
+                        Id: 4bd7776d-e89a-4c43-9f9c-c3142712f549
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials:
+                            11fd6d3218ccdf65782cb6628451632b~0: 5cae3548-e7fb-4d32-b143-3a2b1598d56e:Ground Material
+                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
+                        Id: c22d49d3-5d4d-4e03-a73a-959d22a960a0
+                        Position: {X: 0.0, Y: 25.0, Z: 40.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 40.0, Y: 50.0, Z: 1.0}
+                        Children: {}
+                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
+                        Id: aa953773-da1f-4037-bd2d-a9802d454de7
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: e3650bf2-48a3-47c0-a058-52246042dfc9

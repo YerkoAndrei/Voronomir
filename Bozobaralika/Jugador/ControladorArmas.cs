@@ -304,7 +304,7 @@ public class ControladorArmas : StartupScript
                 break;
             case Armas.lanzagranadas:
                 movimiento.DetenerMovimiento();
-                DispararGranada(0.1f);
+                DispararGranada(0.08f);
                 controlador.VibrarCámara(16, 20);
                 animadorLanzagranadas.AnimarDisparo(0.5f, 0.8f, turnoLanzagranadas);
                 últimoDisparoLanzagranadas = (float)Game.UpdateTime.Total.TotalSeconds;
@@ -430,7 +430,7 @@ public class ControladorArmas : StartupScript
         var dirección = Vector3.Normalize(posición - resultado.Point);
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
-        granadas[granadaActual].Iniciar(0, 20, rotación, posición, null);
+        granadas[granadaActual].Iniciar(0, 35, rotación, posición, null);
 
         granadaActual++;
         if (granadaActual >= maxGranadas)
