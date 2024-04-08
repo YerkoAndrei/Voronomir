@@ -13,7 +13,7 @@ Hierarchy:
                 Components:
                     4434603cbafdaa05f2732041b413b98b: !TransformComponent
                         Id: 140e589e-caf9-4b52-a39c-1682bf96f0a9
-                        Position: {X: 0.0, Y: 0.0, Z: -0.2}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.2}
                         Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
                         Scale: {X: 0.2, Y: 0.4, Z: 0.2}
                         Children: {}
@@ -57,6 +57,17 @@ Hierarchy:
                     8b8fa68a6668b111f69c9e8d1ce91309: !Bozobaralika.ElementoDesviable,Bozobaralika.Proyecto
                         Id: 4b9f0ae5-49fd-4500-8b05-18632809c57c
                         controlador: ref!! bae73870-af2e-47f5-a745-a2709d6c0e07
+        -   Folder: null
+            Entity:
+                Id: 86d7594e-a646-4f48-b770-da51d79c7422
+                Name: Cola
+                Components:
+                    4434603cbafdaa05f2732041b413b98b: !TransformComponent
+                        Id: a56d924e-9f03-4dc3-888a-1e111c15c24e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
         -   Entity:
                 Id: bae73870-af2e-47f5-a745-a2709d6c0e07
                 Name: "ProyectilAraña"
@@ -83,8 +94,8 @@ Hierarchy:
                         ColliderShapes:
                             53ccf4e4443413d37984cd184ebc6033: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 0.1, Y: 0.1, Z: 0.5}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: -0.25}
+                                Size: {X: 0.15, Y: 0.15, Z: 0.4}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.2}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     15bec10d30d73bc28a393fa9974edf68: !TransformComponent
                         Id: 0b9a42c7-3820-4dc3-a1a8-a7a21b36f2d6
@@ -94,6 +105,8 @@ Hierarchy:
                         Children:
                             63b438478ae4f7791a390eb12c235ac4: ref!! 90941b5b-369d-4f2f-a225-764b682c586b
                             a0c928adfb0b853df190278b93d21157: ref!! 140e589e-caf9-4b52-a39c-1682bf96f0a9
+                            4e81370ba8eb98e41c7b25bb892b96c6: ref!! a56d924e-9f03-4dc3-888a-1e111c15c24e
                     449ebeeb02b58b0c3a84ceebf03c07d2: !Bozobaralika.ElementoProyectilSimple,Bozobaralika.Proyecto
                         Id: 8b43936a-f16a-4661-9d1c-bd482e28e0b5
                         modelo: ref!! b66e1be6-ccde-4b15-9517-6760b1933c23
+                        cola: ref!! a56d924e-9f03-4dc3-888a-1e111c15c24e

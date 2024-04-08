@@ -69,7 +69,7 @@ Hierarchy:
                             53ccf4e4443413d37984cd184ebc6033: !BoxColliderShapeDesc
                                 Is2D: false
                                 Size: {X: 0.1, Y: 0.1, Z: 0.5}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: -0.25}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.25}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     15bec10d30d73bc28a393fa9974edf68: !TransformComponent
                         Id: fc4b84fd-b8a2-4c1e-97eb-053c237f4756
@@ -82,6 +82,7 @@ Hierarchy:
                     2f7c3e8089300ae2e8806e507c594375: !Bozobaralika.ElementoProyectilSimple,Bozobaralika.Proyecto
                         Id: 78fbd8bc-666c-4d97-adc1-9acc9095314f
                         modelo: ref!! bf833ccc-6866-473d-957e-6701119d2237
+                        cola: null
         -   Folder: null
             Entity:
                 Id: f7cd993f-4814-497e-947f-18f5abd49d93
@@ -89,7 +90,7 @@ Hierarchy:
                 Components:
                     4434603cbafdaa05f2732041b413b98b: !TransformComponent
                         Id: ba51a424-c637-4fd8-a262-fc896d917666
-                        Position: {X: 0.0, Y: 0.0, Z: -0.25}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.25}
                         Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
                         Scale: {X: 0.1, Y: 0.5, Z: 0.1}
                         Children: {}

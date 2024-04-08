@@ -21,10 +21,16 @@ public class ElementoExplosión : StartupScript, IImpacto
         cuerpo.Enabled = false;
     }
 
-    public void Iniciar(Vector3 posición, float daño)
+    public void Iniciar(Vector3 posición, Vector3 normal, float daño)
     {
         Entity.Transform.Scale = escalaInicial;
         Entity.Transform.Position = posición;
+
+        if (normal != Vector3.Zero)
+            Entity.Transform.Rotation = Quaternion.LookRotation(normal, posición);
+        else
+            Entity.Transform.Rotation = Quaternion.Identity;
+
         modelo.Enabled = true;
         cuerpo.Enabled = true;
 

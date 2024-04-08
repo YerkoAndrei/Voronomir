@@ -10,9 +10,11 @@ namespace Bozobaralika;
 public class ElementoProyectilSimple : AsyncScript, IProyectil
 {
     public ModelComponent modelo;
+    public TransformComponent cola;
 
     private PhysicsComponent[] disparador;
     private RigidbodyComponent cuerpo;
+    private CollisionFilterGroupFlags colisionesMarca;
     private Action<Vector3, Vector3, bool> iniciarImpacto;
     private bool desviado;
     private float velocidad;
@@ -22,6 +24,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
     public override async Task Execute()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
+        colisionesMarca = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.SensorTrigger;
         Apagar();
 
         while (Game.IsRunning)
@@ -36,8 +39,27 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
                 colisión.ColliderB.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
                 // Impacto
-                if (iniciarImpacto != null)
-                    iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnB, colisión.Contacts.ToArray()[0].PositionOnA, false);
+                if (iniciarImpacto == null)
+                {
+                    Apagar();
+                    continue;
+                }
+
+                // Crea pequeño rayo para crear Impacto
+                if (cola != null)
+                {
+                    var dirección = cola.WorldMatrix.TranslationVector + cola.Entity.Transform.WorldMatrix.Forward;
+                    var resultado = this.GetSimulation().Raycast(cola.WorldMatrix.TranslationVector,
+                                                                 dirección,
+                                                                 CollisionFilterGroups.DefaultFilter,
+                                                                 colisionesMarca);
+                    if (resultado.Succeeded)
+                        iniciarImpacto.Invoke(resultado.Point, resultado.Normal, false);
+                    else
+                        iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnB, Vector3.Zero, false);
+                }
+                else
+                    iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA, Vector3.Zero, false);
 
                 // PENDIENTE: efecto disparo enemigo
                 Apagar();
@@ -81,7 +103,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
                     dañable.RecibirDaño(daño * 2f);
                     Apagar();
                 }
-                else
+                else if (!tocaDisparador && !desviado)
                 {
                     // Daña enemigo un 100%
                     dañable.RecibirDaño(daño);
