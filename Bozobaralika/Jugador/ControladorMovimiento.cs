@@ -5,6 +5,7 @@ using Stride.Physics;
 using System.Linq;
 
 namespace Bozobaralika;
+using static Utilidades;
 using static Constantes;
 
 public class ControladorMovimiento : StartupScript
@@ -131,8 +132,7 @@ public class ControladorMovimiento : StartupScript
     private bool RevisarColisiones()
     {
         // 1 enemigo reduce velocidad
-        if (cuerpo.Collisions.Where(o => o.ColliderA.CollisionGroup == CollisionFilterGroups.KinematicFilter ||
-                                         o.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter).Count() > 0)
+        if (cuerpo.Collisions.Where(TocaEnemigo).Count() > 0)
             return true;
 
         // 2 pisos o paredes reducen velocidad

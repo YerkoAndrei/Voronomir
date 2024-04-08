@@ -6,6 +6,7 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Bozobaralika;
+using static Utilidades;
 using static Constantes;
 
 public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
@@ -35,10 +36,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
             if (!cuerpo.Enabled)
                 continue;
 
-            if (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.StaticFilter ||
-                colisión.ColliderB.CollisionGroup == CollisionFilterGroups.StaticFilter ||
-                colisión.ColliderA.CollisionGroup == CollisionFilterGroups.SensorTrigger ||
-                colisión.ColliderB.CollisionGroup == CollisionFilterGroups.SensorTrigger)
+            if (TocaEntorno(colisión))
             {
                 Destruir();
                 continue;
@@ -51,15 +49,13 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
             if (dañable == null)
                 continue;
 
-            if (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.CharacterFilter ||
-                colisión.ColliderB.CollisionGroup == CollisionFilterGroups.CharacterFilter )
+            if (TocaJugador(colisión))
             {
                 // Daña jugador
                 dañable.RecibirDaño(daño);
                 Destruir();
             }
-            else if (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.KinematicFilter ||
-                     colisión.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter)
+            else if (TocaEnemigo(colisión))
             {
                 // No daña a su mismo tipo
                 if (disparador == dañable.controlador.Get<ControladorEnemigo>().enemigo)

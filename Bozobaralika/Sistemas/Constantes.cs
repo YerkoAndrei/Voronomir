@@ -1,6 +1,4 @@
-﻿using Stride.Core.Mathematics;
-
-namespace Bozobaralika;
+﻿namespace Bozobaralika;
 
 public static class Constantes
 {
@@ -13,12 +11,6 @@ public static class Constantes
     // Character    - Jugador
     // Custom1      - Proyectiles enemigos simples
     // Custom2      - Proyectiles enemigos persecutores
-
-    // Color botones
-    public static Color colorNormal = new Color(255, 255, 255, 255);
-    public static Color colorEnCursor = new Color(200, 200, 200, 250);
-    public static Color colorEnClic = new Color(155, 155, 155, 250);
-    public static Color colorBloqueado = new Color(155, 155, 155, 155);
 
     // Juego
     public enum Escenas

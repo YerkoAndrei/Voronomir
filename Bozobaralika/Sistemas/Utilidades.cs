@@ -3,17 +3,23 @@ using System.Linq;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Graphics;
+using Stride.Physics;
 using Stride.Rendering.Sprites;
 using Stride.UI;
 using Stride.UI.Controls;
 using Stride.UI.Panels;
 
 namespace Bozobaralika;
-using static Constantes;
 
 public static class Utilidades
 {
-    private const string ISO8006 = "yyyy-MM-ddThh:mm:ss";
+    // Color botones
+    private static Color colorNormal = new Color(255, 255, 255, 255);
+    private static Color colorEnCursor = new Color(200, 200, 200, 250);
+    private static Color colorEnClic = new Color(155, 155, 155, 250);
+    private static Color colorBloqueado = new Color(155, 155, 155, 155);
+
+    public static CollisionFilterGroupFlags colisionesMarca = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.SensorTrigger;
 
     public static float RangoAleatorio(float min, float max)
     {
@@ -22,6 +28,25 @@ public static class Utilidades
         return (float)valor;
     }
 
+    public static bool TocaEntorno(Collision colisión)
+    {
+        return (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.StaticFilter ||
+                colisión.ColliderB.CollisionGroup == CollisionFilterGroups.StaticFilter ||
+                colisión.ColliderA.CollisionGroup == CollisionFilterGroups.SensorTrigger ||
+                colisión.ColliderB.CollisionGroup == CollisionFilterGroups.SensorTrigger);
+    }
+
+    public static bool TocaJugador(Collision colisión)
+    {
+        return (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.CharacterFilter || colisión.ColliderB.CollisionGroup == CollisionFilterGroups.CharacterFilter);
+    }
+
+    public static bool TocaEnemigo(Collision colisión)
+    {
+        return (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.KinematicFilter || colisión.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter);
+    }
+
+    // Interfaz
     public static ISpriteProvider ObtenerSprite(Texture textura)
     {
         var sprite = new SpriteFromTexture
@@ -150,7 +175,8 @@ public static class Utilidades
 
     public static string FormatearFechaEstándar(DateTime fecha)
     {
-        var fechaHora = fecha.ToString(ISO8006);
+        //ISO8006;
+        var fechaHora = fecha.ToString("yyyy-MM-ddThh:mm:ss");
         return fechaHora;
     }
 }

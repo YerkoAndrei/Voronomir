@@ -6,6 +6,7 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Bozobaralika;
+using static Utilidades;
 using static Constantes;
 
 public class ElementoProyectilSimple : AsyncScript, IProyectil
@@ -15,7 +16,6 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
 
     private Enemigos disparador;
     private RigidbodyComponent cuerpo;
-    private CollisionFilterGroupFlags colisionesMarca;
     private Action<Vector3, Vector3, bool> iniciarImpacto;
     private float velocidad;
     private float tempo;
@@ -24,7 +24,6 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
     public override async Task Execute()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
-        colisionesMarca = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.SensorTrigger;
         Apagar();
 
         while (Game.IsRunning)
@@ -33,10 +32,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
             if (!cuerpo.Enabled)
                 continue;
 
-            if (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.StaticFilter ||
-                colisión.ColliderB.CollisionGroup == CollisionFilterGroups.StaticFilter ||
-                colisión.ColliderA.CollisionGroup == CollisionFilterGroups.SensorTrigger ||
-                colisión.ColliderB.CollisionGroup == CollisionFilterGroups.SensorTrigger)
+            if (TocaEntorno(colisión))
             {
                 // Impacto
                 if (iniciarImpacto != null)
@@ -58,15 +54,13 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
             if (dañable == null)
                 continue;
 
-            if (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.CharacterFilter ||
-                colisión.ColliderB.CollisionGroup == CollisionFilterGroups.CharacterFilter )
+            if (TocaJugador(colisión))
             {
                 // Daña jugador
                 dañable.RecibirDaño(daño);
                 Destruir();
             }
-            else if (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.KinematicFilter ||
-                     colisión.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter)
+            else if (TocaEnemigo(colisión))
             {
                 // No daña a su mismo tipo
                 if (disparador == dañable.controlador.Get<ControladorEnemigo>().enemigo)

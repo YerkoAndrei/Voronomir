@@ -6,6 +6,7 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Bozobaralika;
+using static Utilidades;
 using static Constantes;
 
 public class ElementoGranada : AsyncScript, IProyectil
@@ -14,7 +15,6 @@ public class ElementoGranada : AsyncScript, IProyectil
     public TransformComponent cola;
 
     private RigidbodyComponent cuerpo;
-    private CollisionFilterGroupFlags colisionesMarca; 
     private Action<Vector3, Vector3, bool> iniciarImpacto;
     private float velocidad;
     private float tempo;
@@ -22,7 +22,6 @@ public class ElementoGranada : AsyncScript, IProyectil
     public override async Task Execute()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
-        colisionesMarca = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.SensorTrigger;
         Destruir();
 
         while (Game.IsRunning)
@@ -72,7 +71,7 @@ public class ElementoGranada : AsyncScript, IProyectil
         modelo.Enabled = true;
         cuerpo.Enabled = true;
 
-        // Proyectiles simples duran 10 segundos
+        // Granadas duran 10 segundos
         tempo = 10f;
         ContarVida();
     }
