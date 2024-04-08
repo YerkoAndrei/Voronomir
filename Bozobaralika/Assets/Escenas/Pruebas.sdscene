@@ -150,7 +150,7 @@ Hierarchy:
                         animadorEscopeta: ref!! b4f31a54-c2e1-4a93-86d7-6ec5585a30e8
                         animadorMetralleta: ref!! 14b56ce5-0534-48dd-aca3-9cc3154d2023
                         animadorRife: ref!! 21cbd8c8-eaeb-4b28-957b-877607cf99d8
-                        animadorLanzagranadas: ref!! 1b787f12-01a0-4ac0-b00f-f987e00b2f82
+                        animadorLanzagranadas: ref!! c2e86204-8221-47ef-87a2-505fe469f482
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 4286558c-21f8-4c73-8ce1-d58ae4daec5d
@@ -182,7 +182,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: c9ad1ff2-3e52-4632-8219-8e16f66661fd
-                        Position: {X: -0.45, Y: -0.3, Z: -0.3}
+                        Position: {X: -0.25, Y: -0.02, Z: -0.12}
                         Rotation: {X: 0.0, Y: 0.0, Z: -9.456897E-10, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -357,7 +357,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 56df525a-d108-444c-8588-1b23fdbabaed
-                        Position: {X: 0.45, Y: -0.3, Z: -0.3}
+                        Position: {X: 0.25, Y: -0.02, Z: -0.12}
                         Rotation: {X: 0.0, Y: 0.0, Z: -9.456897E-10, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -851,13 +851,12 @@ Hierarchy:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 4ddb17c8-979c-4d86-a19c-764296468067
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: -0.00076126325, Y: -0.043612745, Z: 0.017435795, W: 0.99889606}
+                        Rotation: {X: -0.08189959, Y: -0.029809013, Z: -0.34071866, W: 0.9361168}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: c983ceb7-7b9d-4ce7-95f0-5da0322022a6
-                        Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
-                        RenderGroup: Group11
+                        Model: 8446cdd3-3139-4136-a668-41cb01e8aa8c:Modelos/Armas/Lanzagranadas/RPG-2
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -1095,13 +1094,12 @@ Hierarchy:
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 0d3098e2-8e8a-4099-b65a-1812a4d959f5
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: -0.0007612632, Y: 0.043612745, Z: -0.017435795, W: 0.99889606}
+                        Rotation: {X: -0.08189959, Y: 0.029809007, Z: 0.34071863, W: 0.9361168}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 13a45c8e-0f44-45b3-ba71-5fc80a58c07a
-                        Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
-                        RenderGroup: Group11
+                        Model: 8446cdd3-3139-4136-a668-41cb01e8aa8c:Modelos/Armas/Lanzagranadas/RPG-2
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -1175,8 +1173,8 @@ Hierarchy:
                         Children:
                             9ec7f7cd5e42e40010834051d887c79a: ref!! c9ad1ff2-3e52-4632-8219-8e16f66661fd
                             c00f4c428de7e6317d9a9b4c6c9f23a1: ref!! 56df525a-d108-444c-8588-1b23fdbabaed
-                    46d0f4ed5c7dd3d22f56a2e338ce6107: !Bozobaralika.AnimadorArma,Bozobaralika.Proyecto
-                        Id: 1b787f12-01a0-4ac0-b00f-f987e00b2f82
+                    1d2872fa0a254e1c4dbdaaba19f1a4f1: !Bozobaralika.AnimadorArma,Bozobaralika.Proyecto
+                        Id: c2e86204-8221-47ef-87a2-505fe469f482
                         ejeIzquierda: ref!! c9ad1ff2-3e52-4632-8219-8e16f66661fd
                         ejeDerecha: ref!! 56df525a-d108-444c-8588-1b23fdbabaed
                         modeloIzquierda: ref!! c983ceb7-7b9d-4ce7-95f0-5da0322022a6

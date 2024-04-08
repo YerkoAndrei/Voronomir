@@ -53,6 +53,7 @@ public class ControladorArmas : StartupScript
     private float tiempoAtascamientoMetralleta;
 
     // Lanzagranadas
+    private TipoDisparo turnoLanzagranadas;
     private IProyectil[] granadas;
     private IImpacto[] explosiones;
     private int granadaActual;
@@ -262,6 +263,12 @@ public class ControladorArmas : StartupScript
         else
             turnoMetralleta = TipoDisparo.derecha;
 
+        // Lanzagranadas por turnos
+        if (turnoLanzagranadas != TipoDisparo.izquierda)
+            turnoLanzagranadas = TipoDisparo.izquierda;
+        else
+            turnoLanzagranadas = TipoDisparo.derecha;
+
         switch (armaActual)
         {
             case Armas.espada:
@@ -297,9 +304,9 @@ public class ControladorArmas : StartupScript
                 break;
             case Armas.lanzagranadas:
                 movimiento.DetenerMovimiento();
-                DispararGranada(0.2f);
+                DispararGranada(0.1f);
                 controlador.VibrarCámara(16, 20);
-                animadorLanzagranadas.AnimarDisparo(2f, 0.4f, TipoDisparo.espejo);
+                animadorLanzagranadas.AnimarDisparo(0.5f, 0.8f, turnoLanzagranadas);
                 últimoDisparoLanzagranadas = (float)Game.UpdateTime.Total.TotalSeconds;
                 break;
         }
@@ -410,7 +417,7 @@ public class ControladorArmas : StartupScript
 
         // Distancia máxima de disparo: 1000
         var posición = cámara.Entity.Transform.WorldMatrix.TranslationVector - (Vector3.UnitY * 0.65f);
-        var direcciónRayo = posición + (cámara.Entity.Transform.WorldMatrix.Forward + aleatorio) * 1000;
+        var direcciónRayo = cámara.Entity.Transform.WorldMatrix.TranslationVector + (cámara.Entity.Transform.WorldMatrix.Forward + aleatorio) * 1000;
 
         var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
                                                      direcciónRayo,
@@ -710,9 +717,9 @@ public class ControladorArmas : StartupScript
             case Armas.metralleta:
                 return 0.05f;
             case Armas.rifle:
-                return 1.6f;
+                return 1.4f;
             case Armas.lanzagranadas:
-                return 2.5f;
+                return 1f;
             default:
                 return 0;
         }
