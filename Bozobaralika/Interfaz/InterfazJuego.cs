@@ -25,6 +25,7 @@ public class InterfazJuego : StartupScript
     private ImageElement imgEscopeta;
     private ImageElement imgMetralleta;
     private ImageElement imgRifle;
+    private ImageElement imgLanzagranadas;
 
     private ImageElement imgLlaveAzul;
     private ImageElement imgLlaveRoja;
@@ -45,6 +46,7 @@ public class InterfazJuego : StartupScript
         imgEscopeta = página.FindVisualChildOfType<ImageElement>("imgEscopeta");
         imgMetralleta = página.FindVisualChildOfType<ImageElement>("imgMetralleta");
         imgRifle = página.FindVisualChildOfType<ImageElement>("imgRifle");
+        imgLanzagranadas = página.FindVisualChildOfType<ImageElement>("imgLanzagranadas");
 
         imgLlaveAzul = página.FindVisualChildOfType<ImageElement>("imgLlaveAzul");
         imgLlaveRoja = página.FindVisualChildOfType<ImageElement>("imgLlaveRoja");
@@ -77,6 +79,9 @@ public class InterfazJuego : StartupScript
             case Armas.rifle:
                 imgRifle.Color = armaSeleccionada;
                 break;
+            case Armas.lanzagranadas:
+                imgLanzagranadas.Color = armaSeleccionada;
+                break;
         }
     }
 
@@ -94,6 +99,7 @@ public class InterfazJuego : StartupScript
                 miraMetralleta.Visibility = Visibility.Visible;
                 break;
             case Armas.rifle:
+            case Armas.lanzagranadas:
                 break;
         }
     }

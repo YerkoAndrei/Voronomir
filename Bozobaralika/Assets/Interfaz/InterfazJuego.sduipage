@@ -114,6 +114,38 @@ Hierarchy:
                     Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 0, B: 255, A: 255}
+        -   UIElement: !ImageElement
+                Id: 36c4a342-2d35-4f1c-945e-c0179cabf38d
+                DependencyProperties:
+                    32fba0cee5fbd5ff73855a76273a654f~GridBase.ColumnPropertyKey: 0
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.5
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgLanzagranadas
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !Grid
+                Id: 42fcb295-de85-418a-af42-2570ba39e531
+                DependencyProperties:
+                    9802bd0f45500b87c078b59b27829606~GridBase.ColumnPropertyKey: 4
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Lanzagranadas
+                Children:
+                    fb64a390b75173a459ddcd168e9e5679: !ImageElement ref!! 36c4a342-2d35-4f1c-945e-c0179cabf38d
+                    f01254d4dd9bbc7eaedfcfadaeacfaf8: !ImageElement ref!! 54399583-ed5c-4bf5-a156-a3d393a50b8a
+                    2a47c64493937fd41d681af758b3a117: !ImageElement ref!! bfdd7d6f-be8e-4f4c-a216-592fdf81d819
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !Grid
                 Id: 49b75539-86e0-470d-911a-8690f66615b4
                 DependencyProperties: {}
@@ -131,6 +163,20 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 54399583-ed5c-4bf5-a156-a3d393a50b8a
+                DependencyProperties:
+                    2514505e8aa838431836cf5eb3c6a829~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: deco
+                Source: !SpriteFromTexture
+                    Texture: 06d28cdc-d365-45f3-8be3-8fccc23d4c92:Texturas/Armas/decoArmas
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !Grid
                 Id: 5bf22f2b-fbd6-4c93-be86-14c327c74897
                 DependencyProperties:
@@ -328,6 +374,20 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
+                Id: bfdd7d6f-be8e-4f4c-a216-592fdf81d819
+                DependencyProperties:
+                    e05d112425e2b0a57a1419e1969e1e5b~Panel.ZIndexPropertyKey: 2
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "ícono"
+                Source: !SpriteFromTexture
+                    Texture: e3a40c8b-0854-4eba-a189-6d0a63768bba:Texturas/Armas/imgLanzagrandas
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !ImageElement
                 Id: da97b4cc-aca5-4668-9280-c12700792b56
                 DependencyProperties:
                     44ba59351756fa80c1fc22fa633f4cc9~Panel.ZIndexPropertyKey: 1
@@ -406,7 +466,8 @@ Hierarchy:
                     8e089739d10c5eeef97387e457e6f558: !Grid ref!! 8fb2adda-0b36-4562-bd03-41e0a4ff0ad3
                     1c6ca0ce29ac1c790b2ae7f4184d46c0: !Grid ref!! ed970148-9451-495e-8f8b-f4f2099dd023
                     01fb0be672109c432771d146aa6d2d83: !Grid ref!! 5bf22f2b-fbd6-4c93-be86-14c327c74897
-                Columns: 4
+                    48a57472808588be1961e21f50401aa1: !Grid ref!! 42fcb295-de85-418a-af42-2570ba39e531
+                Columns: 5
         -   UIElement: !ImageElement
                 Id: f9f18285-e035-4323-bb74-deee2aa75369
                 DependencyProperties:
