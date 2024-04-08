@@ -1,0 +1,15 @@
+!Model
+Id: 1b890f23-24b7-41b7-81b4-4de2bdf73297
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Granada.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    14b0995df9f44ccdb31da431e1f9f3d8:
+        Name: Granada
+        MaterialInstance:
+            Material: a5f24322-169c-4ff4-a929-1564ec4cdce3:Modelos/Armas/Lanzagranadas/Materiales/Granada
+Modifiers: {}
+~SourceHashes:
+    d5daa1ad6fc297b6e6184f820c2cf793~Granada.glb: d0a562b0695f64fa7c4f8a15cac7beb8
