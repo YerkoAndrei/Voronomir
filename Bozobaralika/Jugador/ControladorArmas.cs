@@ -416,17 +416,18 @@ public class ControladorArmas : StartupScript
         var aleatorio = new Vector3(aleatorioX, aleatorioY, aleatorioZ);
 
         // Distancia máxima de disparo: 1000
-        var posición = cámara.Entity.Transform.WorldMatrix.TranslationVector - (Vector3.UnitY * 0.65f);
         var direcciónRayo = cámara.Entity.Transform.WorldMatrix.TranslationVector + (cámara.Entity.Transform.WorldMatrix.Forward + aleatorio) * 1000;
-
         var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
                                                      direcciónRayo,
                                                      CollisionFilterGroups.DefaultFilter,
                                                      colisionesDisparo);
+
+        // Si rayo no toca nada, entonces tira hacia la máxima distancia
         if (!resultado.Succeeded)
-            return;
+            resultado.Point = (cámara.Entity.Transform.WorldMatrix.Forward + aleatorio) * 1000;
 
         // Granada sigue punto de rayo
+        var posición = cámara.Entity.Transform.WorldMatrix.TranslationVector - (Vector3.UnitY * 0.6f);
         var dirección = Vector3.Normalize(posición - resultado.Point);
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
