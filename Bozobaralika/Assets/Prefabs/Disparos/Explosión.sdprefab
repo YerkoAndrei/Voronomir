@@ -19,6 +19,7 @@ Hierarchy:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! b096e351-d9f1-454e-9e39-3267daf05ebf
                     10febf0414810204af56e165b5692877: !RigidbodyComponent
                         Id: c8e7910c-24b6-4494-a4ff-81ffb95cc1ac
+                        Enabled: false
                         CanCollideWith: KinematicFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
