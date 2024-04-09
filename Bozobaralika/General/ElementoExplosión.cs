@@ -1,6 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
+using Stride.Physics;
 
 namespace Bozobaralika;
 
@@ -10,11 +12,17 @@ public class ElementoExplosión : StartupScript, IImpacto
     public float distanciaMáxima;
     public ModelComponent modelo;
 
+    public static CollisionFilterGroupFlags colisionesExplosión;
     private PhysicsComponent cuerpo;
     private Vector3 escalaInicial;
 
     public override void Start()
     {
+        colisionesExplosión = CollisionFilterGroupFlags.StaticFilter |
+                              CollisionFilterGroupFlags.SensorTrigger |
+                              CollisionFilterGroupFlags.KinematicFilter |
+                              CollisionFilterGroupFlags.CharacterFilter;
+
         cuerpo = Entity.Get<PhysicsComponent>();
         escalaInicial = Entity.Transform.Scale;
         modelo.Enabled = false;
@@ -31,6 +39,8 @@ public class ElementoExplosión : StartupScript, IImpacto
         else
             Entity.Transform.Rotation = Quaternion.Identity;
 
+        Entity.Transform.UpdateWorldMatrix();
+        cuerpo.UpdatePhysicsTransformation();
         modelo.Enabled = true;
         cuerpo.Enabled = true;
 
@@ -40,15 +50,42 @@ public class ElementoExplosión : StartupScript, IImpacto
 
     private void CalcularDaños(float daño)
     {
-        // Encuentra tocados por exploción
+        // Encuentra tocados por explosión
+        var colisiones = cuerpo.Collisions.ToArray();
 
-        // Calcula distancia
+        foreach (var colisión in colisiones)
+        {
+            // Encuentra dañables
+            var dañable = colisión.ColliderA.Entity.Get<ElementoDañable>();
+            if (dañable == null)
+                dañable = colisión.ColliderB.Entity.Get<ElementoDañable>();
 
-        // Daña
+            if (dañable == null)
+                continue;
+
+            // Calcula distancia con rayo para evitar obstáculos
+            // Desde explosión hasta cintura (1m)
+            var dirección = Entity.Transform.WorldMatrix.TranslationVector + (dañable.Entity.Transform.WorldMatrix.Forward + Vector3.UnitY) * distanciaMáxima;
+            var resultado = this.GetSimulation().Raycast(Entity.Transform.WorldMatrix.TranslationVector,
+                                                         dirección,
+                                                         CollisionFilterGroups.DefaultFilter,
+                                                         colisionesExplosión);
+
+            if (!resultado.Succeeded || resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
+                continue;
+
+            // Daña según distancia
+            var distancia = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
+            var multiplicador = 1f - ((distancia - distanciaMínima) / (distanciaMáxima - distanciaMínima));
+            multiplicador = MathUtil.Clamp(multiplicador, 0, 1);
+            dañable.RecibirDaño(daño * multiplicador);
+        }
     }
 
     private async void Apagar()
     {
+        cuerpo.Enabled = false;
+
         float duración = 0.2f;
         float tiempoLerp = 0;
         float tiempo = 0;
@@ -64,6 +101,5 @@ public class ElementoExplosión : StartupScript, IImpacto
         }
 
         modelo.Enabled = false;
-        cuerpo.Enabled = false;
     }
 }
