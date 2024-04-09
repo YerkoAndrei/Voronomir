@@ -8,7 +8,6 @@ namespace Bozobaralika;
 
 public class ElementoExplosión : StartupScript, IImpacto
 {
-    public float distanciaMínima;
     public float distanciaMáxima;
     public ModelComponent modelo;
 
@@ -29,15 +28,11 @@ public class ElementoExplosión : StartupScript, IImpacto
         cuerpo.Enabled = false;
     }
 
-    public void Iniciar(Vector3 posición, Vector3 normal, float daño)
+    public void Iniciar(Vector3 posición, Quaternion rotación, float daño)
     {
-        Entity.Transform.Scale = escalaInicial;
         Entity.Transform.Position = posición;
-
-        if (normal != Vector3.Zero)
-            Entity.Transform.Rotation = Quaternion.LookRotation(normal, posición);
-        else
-            Entity.Transform.Rotation = Quaternion.Identity;
+        Entity.Transform.Rotation = rotación;
+        Entity.Transform.Scale = escalaInicial;
 
         Entity.Transform.UpdateWorldMatrix();
         cuerpo.UpdatePhysicsTransformation();
@@ -65,7 +60,7 @@ public class ElementoExplosión : StartupScript, IImpacto
 
             // Calcula distancia con rayo para evitar obstáculos
             // Desde explosión hasta cintura (1m)
-            var dirección = Entity.Transform.WorldMatrix.TranslationVector + (dañable.Entity.Transform.WorldMatrix.Forward + Vector3.UnitY) * distanciaMáxima;
+            var dirección = (Entity.Transform.WorldMatrix.TranslationVector + (Vector3.UnitY * 0.1f)) + (dañable.Entity.Transform.WorldMatrix.TranslationVector + Vector3.UnitY) * distanciaMáxima;
             var resultado = this.GetSimulation().Raycast(Entity.Transform.WorldMatrix.TranslationVector,
                                                          dirección,
                                                          CollisionFilterGroups.DefaultFilter,
@@ -76,8 +71,7 @@ public class ElementoExplosión : StartupScript, IImpacto
 
             // Daña según distancia
             var distancia = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
-            var multiplicador = 1f - ((distancia - distanciaMínima) / (distanciaMáxima - distanciaMínima));
-            multiplicador = MathUtil.Clamp(multiplicador, 0, 1);
+            var multiplicador = 1f - (distancia / distanciaMáxima);
             dañable.RecibirDaño(daño * multiplicador);
         }
     }

@@ -19,7 +19,6 @@ Hierarchy:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! b096e351-d9f1-454e-9e39-3267daf05ebf
                     10febf0414810204af56e165b5692877: !RigidbodyComponent
                         Id: c8e7910c-24b6-4494-a4ff-81ffb95cc1ac
-                        Enabled: false
                         CanCollideWith: KinematicFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -41,8 +40,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                     750b639c6b3d77d3902007bf26a44a44: !Bozobaralika.ElementoExplosi%25C3%25B3n,Bozobaralika.Proyecto
                         Id: f06106f8-50a4-4ed7-b05a-163d5a30e5a0
-                        "distanciaMínima": 2.0
-                        "distanciaMáxima": 8.0
+                        "distanciaMáxima": 4.0
                         modelo: ref!! cd0c3638-672d-4583-bb9c-041faa557c2d
         -   Folder: null
             Entity:
