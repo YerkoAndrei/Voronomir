@@ -15,7 +15,7 @@ public class ElementoGranada : AsyncScript, IProyectil
     public TransformComponent cola;
 
     private RigidbodyComponent cuerpo;
-    private Action<Vector3, Vector3, bool> iniciarImpacto;
+    private Action<Vector3, Quaternion, bool> iniciarImpacto;
     private float velocidad;
     private float tempo;
 
@@ -44,7 +44,7 @@ public class ElementoGranada : AsyncScript, IProyectil
         cuerpo.Enabled = false;
     }
 
-    public void AsignarImpacto(Action<Vector3, Vector3, bool> _iniciarImpacto)
+    public void AsignarImpacto(Action<Vector3, Quaternion, bool> _iniciarImpacto)
     {
         iniciarImpacto = _iniciarImpacto;
     }
@@ -97,8 +97,8 @@ public class ElementoGranada : AsyncScript, IProyectil
                                                      CollisionFilterGroups.DefaultFilter,
                                                      colisionesMarca);
         if (resultado.Succeeded)
-            iniciarImpacto.Invoke(resultado.Point, resultado.Normal, false);
+            iniciarImpacto.Invoke(resultado.Point, Quaternion.LookRotation(resultado.Normal, resultado.Point), false);
         else
-            iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA, Vector3.Zero, false);
+            iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA, Quaternion.Identity, false);
     }
 }

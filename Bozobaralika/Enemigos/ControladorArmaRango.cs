@@ -75,9 +75,9 @@ public class ControladorArmaRango : StartupScript
             proyectilActual = 0;
     }
 
-    public void IniciarImpacto(Vector3 posición, Vector3 normal, bool soloEfecto)
+    public void IniciarImpacto(Vector3 posición, Quaternion rotación, bool soloEfecto)
     {
-        impactos[impactoActual].Iniciar(posición, normal, daño);
+        impactos[impactoActual].Iniciar(posición, rotación, daño);
 
         impactoActual++;
         if (impactoActual >= maxImpactos)

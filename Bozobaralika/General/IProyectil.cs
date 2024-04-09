@@ -8,6 +8,6 @@ public interface IProyectil
 {
     void Iniciar(float daño, float velocidad, Quaternion rotación, Vector3 posición, Enemigos disparador);
     void IniciarPersecutor(float velocidadRotación, Vector3 altura);
-    void AsignarImpacto(Action<Vector3, Vector3, bool> inciarImpacto);
+    void AsignarImpacto(Action<Vector3, Quaternion, bool> inciarImpacto);
     void Destruir();
 }

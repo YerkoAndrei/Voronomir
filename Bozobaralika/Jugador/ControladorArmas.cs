@@ -5,6 +5,7 @@ using Stride.Core.Mathematics;
 using Stride.Physics;
 using Stride.Input;
 using Stride.Engine;
+using System.Windows.Media.Imaging;
 
 namespace Bozobaralika;
 using static Utilidades;
@@ -429,12 +430,15 @@ public class ControladorArmas : StartupScript
             granadaActual = 0;
     }
 
-    private void IniciarExplosión(Vector3 posición, Vector3 normal, bool soloEfecto)
+    private void IniciarExplosión(Vector3 posición, Quaternion rotación, bool soloEfecto)
     {
-        explosiones[explosiónActual].Iniciar(posición, normal, ObtenerDaño(armaActual));
+        explosiones[explosiónActual].Iniciar(posición, rotación, ObtenerDaño(armaActual));
 
-        if(normal != Vector3.Zero)
+        if (rotación != Quaternion.Identity)
+        {
+            var normal = Vector3.Transform(posición, rotación);
             CrearMarca(posición, normal, soloEfecto);
+        }
 
         explosiónActual++;
         if (explosiónActual >= maxExplosiones)
@@ -669,7 +673,7 @@ public class ControladorArmas : StartupScript
             case Armas.rifle:
                 return 100;
             case Armas.lanzagranadas:
-                return 200;
+                return 80;
             default:
                 return 0;
         }

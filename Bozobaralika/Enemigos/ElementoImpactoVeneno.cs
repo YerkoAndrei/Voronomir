@@ -20,16 +20,12 @@ public class ElementoImpactoVeneno : StartupScript, IImpacto
         cuerpo.Enabled = false;
     }
 
-    public void Iniciar(Vector3 posición, Vector3 normal, float daño)
+    public void Iniciar(Vector3 posición, Quaternion rotación, float daño)
     {
-        Entity.Transform.Scale = escalaInicial;
         Entity.Transform.Position = posición;
-        
-        if (normal != Vector3.Zero)
-            Entity.Transform.Rotation = Quaternion.LookRotation(normal, posición) * Quaternion.RotationY(MathUtil.DegreesToRadians(90));
-        else
-            Entity.Transform.Rotation = Quaternion.Identity;
-        
+        Entity.Transform.Rotation = rotación * Quaternion.RotationY(MathUtil.DegreesToRadians(90));
+        Entity.Transform.Scale = escalaInicial;
+
         modelo.Enabled = true;
         cuerpo.Enabled = true;
 
