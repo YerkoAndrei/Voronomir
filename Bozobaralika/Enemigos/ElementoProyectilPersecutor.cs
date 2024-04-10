@@ -84,6 +84,11 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
         cuerpoDañable.Enabled = false;
     }
 
+    public void AsignarImpacto(Action<Vector3, Vector3, bool> _iniciarImpacto)
+    {
+
+    }
+
     public void AsignarImpacto(Action<Vector3, Quaternion, bool> _iniciarImpacto)
     {
 

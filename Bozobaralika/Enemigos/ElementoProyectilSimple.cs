@@ -88,6 +88,11 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
         cuerpo.Enabled = false;
     }
 
+    public void AsignarImpacto(Action<Vector3, Vector3, bool> _iniciarImpacto)
+    {
+
+    }
+
     public void AsignarImpacto(Action<Vector3, Quaternion, bool> _iniciarImpacto)
     {
         iniciarImpacto = _iniciarImpacto;
