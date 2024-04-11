@@ -35,11 +35,10 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            eb2df2f2c5b62278c12757f37fb0f20f: !CylinderColliderShapeDesc
-                                Height: 0.2
+                            eb2df2f2c5b62278c12757f37fb0f20f: !SphereColliderShapeDesc
+                                Is2D: false
                                 Radius: 0.8
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     838a52d0bb01a681f08bc68170530cff: !Bozobaralika.ElementoImpactoVeneno,Bozobaralika.Proyecto
                         Id: 456aa210-37c7-42dd-9cb1-99b228f1634e
                         tiempoVida: 2.0
