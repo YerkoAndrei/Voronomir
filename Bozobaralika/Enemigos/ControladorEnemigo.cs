@@ -17,6 +17,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
     private CharacterComponent cuerpo;
     private ControladorPersecusión persecutor;
     private float vida;
+    private bool despierto;
     private bool activo;
 
     public override void Start()
@@ -24,6 +25,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         cuerpo = Entity.Get<CharacterComponent>();
         persecutor = Entity.Get<ControladorPersecusión>();
         vida = ObtenerVida();
+        despierto = false;
         activo = false;
 
         if (armaMelé != null)
@@ -68,6 +70,10 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
 
     public void Activar()
     {
+        if (despierto)
+            return;
+
+        despierto = true;
         activo = true;
     }
 
@@ -92,6 +98,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
 
     public void RecibirDaño(float daño)
     {
+        Activar();
         vida -= daño;
 
         if (vida <= 0 && activo)
