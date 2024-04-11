@@ -31,6 +31,11 @@ public class AnimadorArmas : AsyncScript
     private Quaternion objetivoIzquierda;
     private Quaternion objetivoDerecha;
 
+    private float tiempoLerp;
+    private float tiempo;
+    private float tempDuración;
+    private float tempFuerza;
+
     public void Iniciar()
     {
         posiciónInicialIzquierda = ejeIzquierda.Position;
@@ -53,9 +58,6 @@ public class AnimadorArmas : AsyncScript
 
     public override async Task Execute()
     {
-        float tiempoLerp = 0;
-        float tiempo = 0;
-
         // Armas siempre están en animación
         while (Game.IsRunning)
         {
@@ -69,30 +71,35 @@ public class AnimadorArmas : AsyncScript
                 tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
                 // Vuelta
-                if(tiempoLerp >= duraciónAnimación)
-                {
-                    if(bajando)
-                    {
-                        inicialIzquierda = abajoIzquierda;
-                        inicialDerecha = abajoDerecha;
-                        objetivoIzquierda = centroIzquierda;
-                        objetivoDerecha = centroDerecha;
-                    }
-                    else
-                    {
-                        inicialIzquierda = centroIzquierda;
-                        inicialDerecha = centroDerecha;
-                        objetivoIzquierda = abajoIzquierda;
-                        objetivoDerecha = abajoDerecha;
-                    }
-
-                    tiempoLerp = 0;
-                    tiempo = 0;
-                    bajando = !bajando;
-                }
+                if (tiempoLerp >= duraciónAnimación)
+                    CambiarAnimación();
             }
             await Script.NextFrame();
         }
+    }
+
+    private void CambiarAnimación()
+    {
+        if (bajando)
+        {
+            inicialIzquierda = abajoIzquierda;
+            inicialDerecha = abajoDerecha;
+            objetivoIzquierda = centroIzquierda;
+            objetivoDerecha = centroDerecha;
+        }
+        else
+        {
+            inicialIzquierda = centroIzquierda;
+            inicialDerecha = centroDerecha;
+            objetivoIzquierda = abajoIzquierda;
+            objetivoDerecha = abajoDerecha;
+        }
+
+        tiempoLerp = 0;
+        tiempo = 0;
+        bajando = !bajando;
+        duraciónAnimación = tempDuración;
+        fuerzaAnimación = tempFuerza;
     }
 
     public void AnimarCorrerArma(float fuerza, float velocidad, bool enSuelo)
@@ -100,19 +107,19 @@ public class AnimadorArmas : AsyncScript
         // Reposo
         if (velocidad <= 1)
         {
-            duraciónAnimación = 2;
-            fuerzaAnimación = 0.5f;
+            tempDuración = 2;
+            tempFuerza = 0.5f;
             return;
         }
 
-        duraciónAnimación = ((1 - velocidad) + 1);
-        fuerzaAnimación = velocidad * fuerza;
+        tempDuración = ((1 - velocidad) + 1);
+        tempFuerza = velocidad * fuerza;
 
         // En aire se mueve más lento y más 
         if (!enSuelo)
         {
-            duraciónAnimación = (((1 - velocidad) + 1)) * 2;
-            fuerzaAnimación = (duraciónAnimación * fuerza) * 4;
+            tempDuración = (((1 - velocidad) + 1)) * 2;
+            tempFuerza = (tempDuración * fuerza) * 4;
         }
     }
 
