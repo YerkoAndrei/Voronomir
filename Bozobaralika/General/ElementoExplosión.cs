@@ -28,10 +28,10 @@ public class ElementoExplosión : StartupScript, IImpacto
         cuerpo.Enabled = false;
     }
 
-    public void Iniciar(Vector3 posición, Quaternion rotación, float daño)
+    public void Iniciar(Vector3 posición, Vector3 normal, float daño)
     {
         Entity.Transform.Position = posición;
-        Entity.Transform.Rotation = rotación;
+        Entity.Transform.Rotation = Quaternion.Identity;
         Entity.Transform.Scale = escalaInicial;
 
         Entity.Transform.UpdateWorldMatrix();

@@ -431,7 +431,7 @@ public class ControladorArmas : StartupScript
 
     private void IniciarExplosión(Vector3 posición, Vector3 normal, bool soloEfecto)
     {
-        explosiones[explosiónActual].Iniciar(posición, Quaternion.Identity, ObtenerDaño(armaActual));
+        explosiones[explosiónActual].Iniciar(posición, normal, ObtenerDaño(armaActual));
 
         if (normal != Vector3.Zero)
             CrearMarca(posición, normal, soloEfecto);
