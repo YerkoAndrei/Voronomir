@@ -133,6 +133,7 @@ public class InterfazJuego : StartupScript
         imgEscopeta.Color = armaNormal;
         imgMetralleta.Color = armaNormal;
         imgRifle.Color = armaNormal;
+        imgLanzagranadas.Color = armaNormal;
     }
 
     private void ApagarLlaves()
