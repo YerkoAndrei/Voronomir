@@ -12,6 +12,7 @@ Hierarchy:
                 Components:
                     32b1f75000d0962d38db272c3c9501f1: !RigidbodyComponent
                         Id: abfdf334-a4dc-4a7c-8902-fd6b9533bf4a
+                        Enabled: false
                         CanCollideWith: StaticFilter, KinematicFilter, SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
@@ -51,8 +52,8 @@ Hierarchy:
                 Components:
                     4434603cbafdaa05f2732041b413b98b: !TransformComponent
                         Id: 95c5a446-dce7-481a-9fca-664498512723
-                        Position: {X: 0.0, Y: 0.0, Z: 0.75}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: 0.0, Y: 0.1, Z: 0.7}
+                        Rotation: {X: -0.06975647, Y: 0.0, Z: 0.0, W: 0.9975641}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
         -   Entity:

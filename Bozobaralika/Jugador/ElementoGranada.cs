@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
@@ -26,11 +25,11 @@ public class ElementoGranada : AsyncScript, IProyectil
 
         while (Game.IsRunning)
         {
-            var colisión = await cuerpo.NewCollision();
+            await cuerpo.NewCollision();
             if (!cuerpo.Enabled)
                 continue;
 
-            CrearImpacto(colisión);
+            CrearImpacto();
             Destruir();
             await Script.NextFrame();
         }
@@ -65,20 +64,18 @@ public class ElementoGranada : AsyncScript, IProyectil
 
         Entity.Transform.Position = _posición;
         Entity.Transform.Rotation = _rotación;
-
         velocidad = _velocidad;
 
         // Dirección
         cuerpo.IsKinematic = false;
         cuerpo.UpdatePhysicsTransformation();
         cuerpo.LinearVelocity = Entity.Transform.WorldMatrix.Forward * velocidad;
-
         modelo.Enabled = true;
-        cuerpo.Enabled = true;
 
         // Granadas duran 10 segundos
         tempo = 10f;
         ContarVida();
+        cuerpo.Enabled = true;
     }
 
     private async void ContarVida()
@@ -93,10 +90,10 @@ public class ElementoGranada : AsyncScript, IProyectil
         }
     }
 
-    private void CrearImpacto(Collision colisión)
+    private void CrearImpacto()
     {
-        // Crea pequeño rayo para crear marca
-        var dirección = cola.WorldMatrix.TranslationVector + cola.Entity.Transform.WorldMatrix.Forward;
+        // Rayo para crear marca
+        var dirección = cola.WorldMatrix.TranslationVector + cola.WorldMatrix.Forward * 2;
         var resultado = this.GetSimulation().Raycast(cola.WorldMatrix.TranslationVector,
                                                      dirección,
                                                      CollisionFilterGroups.DefaultFilter,
@@ -104,6 +101,6 @@ public class ElementoGranada : AsyncScript, IProyectil
         if (resultado.Succeeded)
             iniciarImpacto.Invoke(resultado.Point, resultado.Normal, false);
         else
-            iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA, Vector3.Zero, false);
+            iniciarImpacto.Invoke(Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero, false);
     }
 }
