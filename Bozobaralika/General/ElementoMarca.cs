@@ -66,8 +66,8 @@ public class ElementoMarca : StartupScript
                 break;
             case Armas.lanzagranadas:
                 textura.SpriteProvider = ObtenerSprite(marcaExplosión);
-                textura.Entity.Transform.Scale = Vector3.One * 0.2f;
-                textura.Color = new Color(80, 80, 80, 200);
+                textura.Entity.Transform.Scale = Vector3.One * 0.05f;
+                textura.Color = new Color(80, 80, 80);
 
                 partículasExplosión.Entity.Transform.Scale = Vector3.One * 0.6f;
                 partículasExplosión.Enabled = true;
