@@ -295,7 +295,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.rangoMediano:
                 return Vector3.UnitY * 0.6f;
             case Enemigos.rangoPesado:
-                return Vector3.UnitY * 0.2f;
+                return Vector3.UnitY * 0.33f;
             default:
                 return Vector3.UnitY;
         }

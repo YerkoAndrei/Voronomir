@@ -61,9 +61,9 @@ public class ControladorArmaRango : StartupScript
 
     public void Disparar(float _daño)
     {
-        daño = _daño;
         var dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorPartida.ObtenerPosiciónJugador() + alturaObjetivo));
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
+        daño = _daño;
 
         if (velocidadRotación > 0)
             proyectiles[proyectilActual].IniciarPersecutor(velocidadRotación, alturaObjetivo);
@@ -75,9 +75,9 @@ public class ControladorArmaRango : StartupScript
             proyectilActual = 0;
     }
 
-    public void IniciarImpacto(Vector3 posición, Quaternion rotación, bool soloEfecto)
+    public void IniciarImpacto(Vector3 posición, Vector3 normal, bool soloEfecto)
     {
-        impactos[impactoActual].Iniciar(posición, rotación, daño);
+        impactos[impactoActual].Iniciar(posición, Quaternion.LookRotation(normal, posición), daño);
 
         impactoActual++;
         if (impactoActual >= maxImpactos)

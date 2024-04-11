@@ -16,7 +16,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
 
     private Enemigos disparador;
     private RigidbodyComponent cuerpo;
-    private Action<Vector3, Quaternion, bool> iniciarImpacto;
+    private Action<Vector3, Vector3, bool> iniciarImpacto;
     private float velocidad;
     private float tempo;
     private float daño;
@@ -38,9 +38,9 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
                 if (iniciarImpacto != null)
                 {
                     if (cola != null)
-                        CrearImpacto(colisión);
+                        CrearImpacto();
                     else
-                        iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA, Quaternion.Identity, false);
+                        iniciarImpacto.Invoke(Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero, false);
                 }
 
                 Destruir();
@@ -90,11 +90,6 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
 
     public void AsignarImpacto(Action<Vector3, Vector3, bool> _iniciarImpacto)
     {
-
-    }
-
-    public void AsignarImpacto(Action<Vector3, Quaternion, bool> _iniciarImpacto)
-    {
         iniciarImpacto = _iniciarImpacto;
     }
 
@@ -139,17 +134,17 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
         }
     }
 
-    private void CrearImpacto(Collision colisión)
+    private void CrearImpacto()
     {
-        // Crea pequeño rayo para crear marca
-        var dirección = cola.WorldMatrix.TranslationVector + cola.Entity.Transform.WorldMatrix.Forward;
+        // Rayo para crear marca
+        var dirección = cola.WorldMatrix.TranslationVector + cola.WorldMatrix.Forward * 2;
         var resultado = this.GetSimulation().Raycast(cola.WorldMatrix.TranslationVector,
                                                      dirección,
                                                      CollisionFilterGroups.DefaultFilter,
                                                      colisionesMarca);
         if (resultado.Succeeded)
-            iniciarImpacto.Invoke(resultado.Point, Quaternion.LookRotation(resultado.Normal, resultado.Point), false);
+            iniciarImpacto.Invoke(resultado.Point, resultado.Normal, false);
         else
-            iniciarImpacto.Invoke(colisión.Contacts.ToArray()[0].PositionOnA, Quaternion.Identity, false);
+            iniciarImpacto.Invoke(Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero, false);
     }
 }

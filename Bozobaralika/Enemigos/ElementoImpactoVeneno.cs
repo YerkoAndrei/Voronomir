@@ -10,12 +10,10 @@ public class ElementoImpactoVeneno : StartupScript, IImpacto
     public ModelComponent modelo;
 
     private PhysicsComponent cuerpo;
-    private Vector3 escalaInicial;
 
     public override void Start()
     {
         cuerpo = Entity.Get<PhysicsComponent>();
-        escalaInicial = Entity.Transform.Scale;
         modelo.Enabled = false;
         cuerpo.Enabled = false;
     }
@@ -24,7 +22,7 @@ public class ElementoImpactoVeneno : StartupScript, IImpacto
     {
         Entity.Transform.Position = posición;
         Entity.Transform.Rotation = rotación * Quaternion.RotationY(MathUtil.DegreesToRadians(90));
-        Entity.Transform.Scale = escalaInicial;
+        Entity.Transform.Scale = Vector3.One;
 
         modelo.Enabled = true;
         cuerpo.Enabled = true;
@@ -41,7 +39,7 @@ public class ElementoImpactoVeneno : StartupScript, IImpacto
         while (tiempoLerp < tiempoVida)
         {
             tiempo = tiempoLerp / tiempoVida;
-            Entity.Transform.Scale = Vector3.Lerp(escalaInicial, Vector3.Zero, tiempo);
+            Entity.Transform.Scale = Vector3.Lerp(Vector3.One, Vector3.Zero, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);

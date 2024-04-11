@@ -48,11 +48,6 @@ public class ElementoGranada : AsyncScript, IProyectil
         iniciarImpacto = _iniciarImpacto;
     }
 
-    public void AsignarImpacto(Action<Vector3, Quaternion, bool> _iniciarImpacto)
-    {
-
-    }
-
     public void IniciarPersecutor(float _velocidadRotación, Vector3 _altura)
     {
 
