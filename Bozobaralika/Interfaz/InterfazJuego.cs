@@ -31,6 +31,10 @@ public class InterfazJuego : StartupScript
     private ImageElement imgLlaveAzul;
     private ImageElement imgLlaveRoja;
 
+    private ImageElement imgDaño;
+    private ImageElement imgInvencibilidad;
+    private ImageElement imgRapidez;
+
     public override void Start()
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
@@ -53,8 +57,13 @@ public class InterfazJuego : StartupScript
         imgLlaveAzul = página.FindVisualChildOfType<ImageElement>("imgLlaveAzul");
         imgLlaveRoja = página.FindVisualChildOfType<ImageElement>("imgLlaveRoja");
 
+        imgDaño = página.FindVisualChildOfType<ImageElement>("imgDaño");
+        imgInvencibilidad = página.FindVisualChildOfType<ImageElement>("imgInvencibilidad");
+        imgRapidez = página.FindVisualChildOfType<ImageElement>("imgRapidez");
+
         ApagarMiras();
         ApagarLlaves();
+        ApagarPoderes();
     }
 
     public void ActualizarVida(float porcentaje)
@@ -153,6 +162,38 @@ public class InterfazJuego : StartupScript
                 imgLlaveRoja.Visibility = Visibility.Visible;
                 break;
         }
+    }
+
+    public void ActivarPoder(Poderes poder, bool activar)
+    {
+        switch (poder)
+        {
+            case Poderes.daño:
+                if(activar)
+                    imgDaño.Visibility = Visibility.Visible;
+                else
+                    imgDaño.Visibility = Visibility.Hidden;
+                break;
+            case Poderes.invencibilidad:
+                if (activar)
+                    imgInvencibilidad.Visibility = Visibility.Visible;
+                else
+                    imgInvencibilidad.Visibility = Visibility.Hidden;
+                break;
+            case Poderes.rapidez:
+                if (activar)
+                    imgRapidez.Visibility = Visibility.Visible;
+                else
+                    imgRapidez.Visibility = Visibility.Hidden;
+                break;
+        }
+    }
+
+    private void ApagarPoderes()
+    {
+        imgDaño.Visibility = Visibility.Hidden;
+        imgInvencibilidad.Visibility = Visibility.Hidden;
+        imgRapidez.Visibility = Visibility.Hidden;
     }
 
     public void Morir()

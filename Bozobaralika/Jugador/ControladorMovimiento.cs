@@ -10,6 +10,7 @@ using static Constantes;
 
 public class ControladorMovimiento : StartupScript
 {
+    private ControladorJugador controlador;
     private CharacterComponent cuerpo;
     private TransformComponent cabeza;
     private TransformComponent cámara;
@@ -42,8 +43,9 @@ public class ControladorMovimiento : StartupScript
     private float rotaciónY;
     private float rotaciónZ;
 
-    public void Iniciar(CharacterComponent _cuerpo, TransformComponent _cabeza, TransformComponent _cámara)
+    public void Iniciar(ControladorJugador _controlador, CharacterComponent _cuerpo, TransformComponent _cabeza, TransformComponent _cámara)
     {
+        controlador = _controlador;
         cuerpo = _cuerpo;
         cabeza = _cabeza;
         cámara = _cámara;
@@ -117,6 +119,9 @@ public class ControladorMovimiento : StartupScript
         // Movimiento
         if(!bloqueo)
         {
+            if (controlador.ObtenerPoder(Poderes.rapidez))
+                aceleración = maxVelocidad;
+
             movimiento = Vector3.Transform(entradas, cuerpo.Orientation);
             movimiento.Y = 0;
             movimiento.Normalize();

@@ -36,6 +36,14 @@ public static class Constantes
         roja
     }
 
+    public enum Poderes
+    {
+        nada,
+        daño,
+        invencibilidad,
+        rapidez
+    }
+
     public enum TipoDisparo
     {
         espejo,

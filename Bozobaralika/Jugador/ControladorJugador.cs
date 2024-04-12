@@ -26,8 +26,14 @@ public class ControladorJugador : SyncScript, IDañable
     private float vida;
     private float vidaMax;
 
+    // Laves
     private bool llaveAzul;
     private bool llaveRoja;
+
+    // Poderes
+    private float tiempoDaño;
+    private float tiempoInvencibilidad;
+    private float tiempoRapidez;
 
     public override void Start()
     {
@@ -41,7 +47,7 @@ public class ControladorJugador : SyncScript, IDañable
         movimiento = Entity.Get<ControladorMovimiento>();
         armas = Entity.Get<ControladorArmas>();
         
-        movimiento.Iniciar(cuerpo, cabeza, cámara.Entity.Transform);
+        movimiento.Iniciar(this, cuerpo, cabeza, cámara.Entity.Transform);
         armas.Iniciar(this, movimiento, cámara, interfaz);
 
         posiciónCabeza = cabeza.Position;
@@ -62,6 +68,21 @@ public class ControladorJugador : SyncScript, IDañable
         // Cura
         if (Input.IsKeyPressed(Keys.F))
             Curar();
+
+        // Poderes        
+        if (tiempoDaño > 0)
+            tiempoDaño -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+        if (tiempoInvencibilidad > 0)
+            tiempoInvencibilidad -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+        if (tiempoRapidez > 0)
+            tiempoRapidez -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+
+        if(tiempoDaño <= 0)
+            interfaz.ActivarPoder(Poderes.daño, false);
+        if (tiempoRapidez <= 0)
+            interfaz.ActivarPoder(Poderes.invencibilidad, false);
+        if (tiempoRapidez <= 0)
+            interfaz.ActivarPoder(Poderes.rapidez, false);
     }
 
     private async void Curar()
@@ -106,10 +127,14 @@ public class ControladorJugador : SyncScript, IDañable
 
     public void RecibirDaño(float daño)
     {
-        vida -= daño;
-        interfaz.ActualizarVida(vida / vidaMax);
         movimiento.DetenerMovimiento();
         VibrarCámara(10, 10);
+
+        if (ObtenerPoder(Poderes.invencibilidad))
+            return;
+
+        vida -= daño;
+        interfaz.ActualizarVida(vida / vidaMax);
 
         if (vida <= 0)
             Morir();
@@ -147,6 +172,39 @@ public class ControladorJugador : SyncScript, IDañable
             case Llaves.roja:
                 return llaveRoja;
             default:
+                return false;
+        }
+    }
+
+    public void ActivarPoder(Poderes poder)
+    {
+        interfaz.ActivarPoder(poder, true);
+        switch (poder)
+        {
+            case Poderes.daño:
+                tiempoDaño = 30;
+                break;
+            case Poderes.invencibilidad:
+                vida = vidaMax;
+                tiempoInvencibilidad = 30;
+                break;
+            case Poderes.rapidez:
+                tiempoRapidez = 30;
+                break;
+        }
+    }
+
+    public bool ObtenerPoder(Poderes poder)
+    {
+        switch (poder)
+        {
+            case Poderes.daño:
+                return tiempoDaño > 0;
+            case Poderes.invencibilidad:
+                return tiempoInvencibilidad > 0;
+            case Poderes.rapidez:
+                return tiempoRapidez > 0;
+             default:
                 return false;
         }
     }

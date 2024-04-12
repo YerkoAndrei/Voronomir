@@ -43,6 +43,9 @@ Hierarchy:
         - ref!! 5806e859-d7ec-42d4-ac78-edfc026317d2
         - ref!! d3476e3f-eee5-41dc-9c59-89b96ac24a2b
         - ref!! a77ffa41-2529-4f4e-90a0-1235895d75a0
+        - ref!! c09a25df-9c1e-4257-b2c0-5d9036000031
+        - ref!! 13515e4b-abd3-4110-8493-464d7ceea6ed
+        - ref!! 5f2be316-c335-4e47-94e2-616f939d5d8c
         - ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
         - ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
         - ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
@@ -423,6 +426,40 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: be33c8de-5ac2-44b8-a446-61d76ba7a173
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
+        -   Folder: null
+            Entity:
+                Id: 13515e4b-abd3-4110-8493-464d7ceea6ed
+                Name: Poder (invencibilidad)
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 5f6da2b2-6a39-4fd5-9992-32554bb64aee
+                        Position: {X: -16.0, Y: 0.5, Z: 14.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 2f292ff2-68d1-4939-884c-78cab4160835
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: a7db1318-82fe-4438-b8da-e56e97ae6437
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    d4a6cfb5e8fa7e584de806c4e1719eb6: !Bozobaralika.ControladorPoder,Bozobaralika.Proyecto
+                        Id: 76000af6-530a-4496-a8c8-2bdb1f851f4d
+                        poder: invencibilidad
+                        modelo: ref!! 2f292ff2-68d1-4939-884c-78cab4160835
         -   Folder: null
             Entity:
                 Id: 1bc8d1d3-5e50-45cc-aeee-0935b943549a
@@ -948,6 +985,21 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
+                Id: 5b24899e-8636-4163-9093-972b68ba7137
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 2f292ff2-68d1-4939-884c-78cab4160835
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: d369ede9-6d45-4d27-b849-76bfeb9b714f
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+        -   Folder: null
+            Entity:
                 Id: 5c4054d7-b540-4748-8ecb-242d980701ce
                 Name: Izquierda
                 Components:
@@ -962,6 +1014,40 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 62a7baa8-3145-43f2-9629-a24f718c9fe0
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
+        -   Folder: null
+            Entity:
+                Id: 5f2be316-c335-4e47-94e2-616f939d5d8c
+                Name: Poder (rapidez)
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: d49822e4-2d66-485e-ba72-1585f1b7face
+                        Position: {X: -16.0, Y: 0.5, Z: 18.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 411e04b7-e116-4fb4-8bf5-773513c77a48
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: e615fbda-3023-46e3-8414-56df71382bc9
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    d4a6cfb5e8fa7e584de806c4e1719eb6: !Bozobaralika.ControladorPoder,Bozobaralika.Proyecto
+                        Id: e338d37c-0b12-45b8-9a6d-e44c76aba139
+                        poder: rapidez
+                        modelo: ref!! 411e04b7-e116-4fb4-8bf5-773513c77a48
         -   Folder: MuestraEnemigos
             Entity:
                 Id: 614f2b4b-5916-4eef-82c7-8951ea902122
@@ -1268,6 +1354,21 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: 8d787fb5-da5d-42b2-9c3b-775b1286defb
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 6f497df9-acb3-4047-b451-d4d070ad90c1
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: f7e225b5-b554-40f4-8efe-2bde601df476
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 8da821bb-04d5-4008-9a51-56dae4802a6e
@@ -1768,6 +1869,39 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 855d46ad-e0df-46e0-a435-46753f797211
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
+        -   Entity:
+                Id: c09a25df-9c1e-4257-b2c0-5d9036000031
+                Name: "Poder (daño)"
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: bb9be785-1c98-4f92-85ce-64bca6ccc946
+                        Position: {X: -16.0, Y: 0.5, Z: 9.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 6f497df9-acb3-4047-b451-d4d070ad90c1
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 0a59cf5c-9f46-4197-bcf7-66b0083f4855
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    d4a6cfb5e8fa7e584de806c4e1719eb6: !Bozobaralika.ControladorPoder,Bozobaralika.Proyecto
+                        Id: 03d82c87-9ba5-4331-ac47-210b06b25758
+                        poder: "daño"
+                        modelo: ref!! 6f497df9-acb3-4047-b451-d4d070ad90c1
         -   Folder: null
             Entity:
                 Id: c0c9e26c-4243-4272-80da-f03869b3aa18
@@ -1835,6 +1969,21 @@ Hierarchy:
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 0d7fd1c1-c1eb-4eba-ae14-aa244747a13c
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: ce25aa8d-94e1-4e17-8f57-12e6abf642ae
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 411e04b7-e116-4fb4-8bf5-773513c77a48
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 5bb9c309-214d-47aa-a23a-47a0827dd6d3
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
                         Materials: {}
         -   Folder: null

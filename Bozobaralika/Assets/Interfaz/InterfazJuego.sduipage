@@ -94,6 +94,9 @@ Hierarchy:
                     1f161687c3c5aec34deca95b5e8044ee: !Grid ref!! 8c8be992-82e9-4fcc-ab56-c94d38eb136d
                     98024bdca7c7bd9b46acf3f1a0244e25: !ImageElement ref!! 33975fa5-af25-44ed-9082-4926fa943f8f
                     6140f0fcc2df489994cc1de939da3f69: !ImageElement ref!! dae539b2-e1a4-407c-b2ea-60d5ff1a181e
+                    ab8555c01a609895b20de0cdebe08abc: !ImageElement ref!! 684c4b95-1fe3-4442-85cb-e45c794fd669
+                    c3ab9c00c1c977526a45cca61f7e1f34: !ImageElement ref!! b4c60a5e-d56f-4528-ba04-2460b44b7bd0
+                    a7641914524a2fefa8630603be8f73f6: !ImageElement ref!! a7e91ecc-496e-4549-8754-9a5682d39bbf
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -224,6 +227,23 @@ Hierarchy:
                     Texture: 24f096cb-35fd-437d-9baf-31d9b23b5236:Texturas/Armas/imgMetralleta
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !ImageElement
+                Id: 684c4b95-1fe3-4442-85cb-e45c794fd669
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 100.0
+                Height: 100.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Top
+                Margin: {Top: 177.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "imgDaño"
+                Source: !SpriteFromTexture
+                    Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 0, B: 0, A: 255}
         -   UIElement: !Grid
                 Id: 7fc30d7a-5eb8-457c-8c7e-1440a15f8da5
                 DependencyProperties: {}
@@ -360,6 +380,23 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
+                Id: a7e91ecc-496e-4549-8754-9a5682d39bbf
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 100.0
+                Height: 100.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Bottom
+                Margin: {Bottom: 243.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgRapidez
+                Source: !SpriteFromTexture
+                    Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 0, A: 255}
+        -   UIElement: !ImageElement
                 Id: ad9d9f28-8a91-42d4-9074-6c62ccd28aa3
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -374,6 +411,22 @@ Hierarchy:
                     Texture: 745c9413-b336-4886-b905-c1d82c3a53b4:Texturas/Miras/miraEscopeta
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 255, B: 0, A: 255}
+        -   UIElement: !ImageElement
+                Id: b4c60a5e-d56f-4528-ba04-2460b44b7bd0
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 100.0
+                Height: 100.0
+                HorizontalAlignment: Right
+                Margin: {Top: 277.0, Bottom: 343.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgInvencibilidad
+                Source: !SpriteFromTexture
+                    Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 0, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
                 Id: baf2a7ef-6afe-469f-9263-cc969e1cc31e
                 DependencyProperties:

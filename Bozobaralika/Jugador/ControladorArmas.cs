@@ -658,21 +658,30 @@ public class ControladorArmas : StartupScript
 
     private float ObtenerDaño(Armas arma)
     {
+        var daño = 0f;
         switch (arma)
         {
             case Armas.espada:
-                return 25; // * 3
+                daño = 25; // * 3
+                break;
             case Armas.escopeta:
-                return 6;
+                daño = 6;
+                break;
             case Armas.metralleta:
-                return 8;
+                daño = 8;
+                break;
             case Armas.rifle:
-                return 100;
+                daño = 100;
+                break;
             case Armas.lanzagranadas:
-                return 80;
-            default:
-                return 0;
+                daño = 80;
+                break;
         }
+
+        if (controlador.ObtenerPoder(Poderes.daño))
+            daño *= 3;
+
+        return daño;
     }
 
     private float ObtenerDistanciaMáxima(Armas arma)
