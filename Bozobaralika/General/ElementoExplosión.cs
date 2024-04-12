@@ -23,7 +23,7 @@ public class ElementoExplosión : StartupScript, IImpacto
                               CollisionFilterGroupFlags.CharacterFilter;
 
         cuerpo = Entity.Get<RigidbodyComponent>();
-        escalaInicial = Entity.Transform.Scale;
+        escalaInicial = modelo.Entity.Transform.Scale;
         modelo.Enabled = false;
         cuerpo.Enabled = false;
     }
@@ -32,12 +32,14 @@ public class ElementoExplosión : StartupScript, IImpacto
     {
         Entity.Transform.Position = posición;
         Entity.Transform.Rotation = Quaternion.Identity;
-        Entity.Transform.Scale = escalaInicial;
-
         Entity.Transform.UpdateWorldMatrix();
-        cuerpo.UpdatePhysicsTransformation();
+
+        modelo.Entity.Transform.Scale = escalaInicial;
         modelo.Enabled = true;
+
         cuerpo.Enabled = true;
+        cuerpo.UpdatePhysicsTransformation(true);
+        cuerpo.Activate(true);
 
         CalcularDaños(daño);
         Apagar();
@@ -47,6 +49,7 @@ public class ElementoExplosión : StartupScript, IImpacto
     {
         // Encuentra tocados por explosión
         var colisiones = cuerpo.Collisions.ToArray();
+        cuerpo.Enabled = false;
 
         foreach (var colisión in colisiones)
         {
@@ -78,8 +81,6 @@ public class ElementoExplosión : StartupScript, IImpacto
 
     private async void Apagar()
     {
-        cuerpo.Enabled = false;
-
         float duración = 0.2f;
         float tiempoLerp = 0;
         float tiempo = 0;
@@ -88,7 +89,7 @@ public class ElementoExplosión : StartupScript, IImpacto
         while (tiempoLerp < duración)
         {
             tiempo = tiempoLerp / duración;
-            Entity.Transform.Scale = Vector3.Lerp(escalaInicial, Vector3.Zero, tiempo);
+            modelo.Entity.Transform.Scale = Vector3.Lerp(escalaInicial, Vector3.Zero, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
