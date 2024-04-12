@@ -59,7 +59,7 @@ public class ElementoExplosión : StartupScript, IImpacto
                 continue;
 
             // Calcula distancia con rayo para evitar obstáculos
-            // Desde explosión hasta cintura (1m)
+            // Desde explosión (10cm) hasta cintura (1m)
             var dirección = (Entity.Transform.WorldMatrix.TranslationVector + (Vector3.UnitY * 0.1f)) + (dañable.Entity.Transform.WorldMatrix.TranslationVector + Vector3.UnitY) * distanciaMáxima;
             var resultado = this.GetSimulation().Raycast(Entity.Transform.WorldMatrix.TranslationVector,
                                                          dirección,
