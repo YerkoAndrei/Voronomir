@@ -57,4 +57,6 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: cd0c3638-672d-4583-bb9c-041faa557c2d
                         Model: 3de091c5-25d4-4c12-8e62-18cbe4432ced:Sphere
-                        Materials: {}
+                        IsShadowCaster: false
+                        Materials:
+                            c1279363285008d1af008868cf3d4e80~0: "35202574-c679-4709-ba2e-e9ab184fa8fb:Materiales/Explosión"
