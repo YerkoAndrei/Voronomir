@@ -12,7 +12,7 @@ public class ElementoExplosión : StartupScript, IImpacto
     public ModelComponent modelo;
 
     public static CollisionFilterGroupFlags colisionesExplosión;
-    private PhysicsComponent cuerpo;
+    private RigidbodyComponent cuerpo;
     private Vector3 escalaInicial;
 
     public override void Start()
@@ -22,7 +22,7 @@ public class ElementoExplosión : StartupScript, IImpacto
                               CollisionFilterGroupFlags.KinematicFilter |
                               CollisionFilterGroupFlags.CharacterFilter;
 
-        cuerpo = Entity.Get<PhysicsComponent>();
+        cuerpo = Entity.Get<RigidbodyComponent>();
         escalaInicial = Entity.Transform.Scale;
         modelo.Enabled = false;
         cuerpo.Enabled = false;
