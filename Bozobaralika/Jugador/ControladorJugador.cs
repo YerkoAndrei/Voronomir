@@ -58,8 +58,8 @@ public class ControladorJugador : SyncScript, IDañable
 
     public override void Update()
     {
-        //if (!ControladorPartida.ObtenerActivo())
-        //    return;
+        if (!ControladorPartida.ObtenerActivo())
+            return;
 
         // Updates
         movimiento.ActualizarEntradas();

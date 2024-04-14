@@ -7,6 +7,8 @@ using static Constantes;
 
 public class ControladorPartida : SyncScript
 {
+    public Escenas escena;
+
     // Singleton por escena
     private static ControladorPartida instancia;
 
@@ -36,10 +38,6 @@ public class ControladorPartida : SyncScript
 
         activo = true;
         tiempo = 0;
-
-        // Debug
-        Input.LockMousePosition(true);
-        Game.IsMouseVisible = false;
     }
 
     public override void Update()
@@ -48,6 +46,11 @@ public class ControladorPartida : SyncScript
             return;
 
         tiempo += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+    }
+
+    public static void Pausar(bool activo)
+    {
+        instancia.activo = activo;
     }
 
     public static bool ObtenerActivo()
@@ -61,9 +64,20 @@ public class ControladorPartida : SyncScript
         instancia.interfaz.Morir();
     }
 
+    public static void Ganar()
+    {
+        instancia.activo = false;
+        instancia.interfaz.Finalizar();
+    }
+
     public static float ObtenerTiempo()
     {
         return instancia.tiempo;
+    }
+
+    public static Escenas ObtenerEscena()
+    {
+        return instancia.escena;
     }
 
     // Jugador

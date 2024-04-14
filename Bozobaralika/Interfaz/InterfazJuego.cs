@@ -2,11 +2,14 @@
 using Stride.UI;
 using Stride.Engine;
 using Stride.UI.Controls;
+using Stride.UI.Panels;
+using Stride.Input;
 
 namespace Bozobaralika;
+using static Utilidades;
 using static Constantes;
 
-public class InterfazJuego : StartupScript
+public class InterfazJuego : SyncScript
 {
     public Color vidaCompleta;
     public Color vidaVacía;
@@ -35,6 +38,10 @@ public class InterfazJuego : StartupScript
     private ImageElement imgInvencibilidad;
     private ImageElement imgRapidez;
 
+    private Grid panelPausa;
+    private Grid panelMuerte;
+    private Grid panelFinal;
+
     public override void Start()
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
@@ -61,9 +68,79 @@ public class InterfazJuego : StartupScript
         imgInvencibilidad = página.FindVisualChildOfType<ImageElement>("imgInvencibilidad");
         imgRapidez = página.FindVisualChildOfType<ImageElement>("imgRapidez");
 
+        panelPausa = página.FindVisualChildOfType<Grid>("PanelPausa");
+        panelMuerte = página.FindVisualChildOfType<Grid>("PanelMuerte");
+        panelFinal = página.FindVisualChildOfType<Grid>("panelFinal");
+
+        panelPausa.Visibility = Visibility.Hidden;
+        panelMuerte.Visibility = Visibility.Hidden;
+
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReanudar"), Pausar);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReintentar"), EnClicReintentar);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnContinuar"), EnClicContinuar);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnPausaSalir"), EnClicSalir);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnMuerteSalir"), EnClicSalir);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnFinalSalir"), EnClicSalir);
+
         ApagarMiras();
         ApagarLlaves();
         ApagarPoderes();
+
+        // Bloqueo
+        BloquearInterfaz(false);
+    }
+
+    public override void Update()
+    {
+        if (Input.IsKeyPressed(Keys.Escape))
+            Pausar();
+    }
+
+    private void Pausar()
+    {
+        ControladorPartida.Pausar(!ControladorPartida.ObtenerActivo());
+
+        if(ControladorPartida.ObtenerActivo())
+        {
+            BloquearInterfaz(false);
+            panelPausa.Visibility = Visibility.Hidden;
+        }
+        else
+        {
+            BloquearInterfaz(true);
+            panelPausa.Visibility = Visibility.Visible;
+        }
+    }
+
+    private void BloquearInterfaz(bool bloquear)
+    {
+        if (bloquear)
+        {
+            Input.UnlockMousePosition();
+            Game.IsMouseVisible = true;
+            Game.UpdateTime.Factor = 0;
+        }
+        else
+        {
+            Input.LockMousePosition(true);
+            Game.IsMouseVisible = false;
+            Game.UpdateTime.Factor = 1;
+        }
+    }
+
+    private void EnClicReintentar()
+    {
+        //SistemaEscenas.RecargarEscena();
+    }
+
+    private void EnClicContinuar()
+    {
+        //SistemaEscenas
+    }
+
+    private void EnClicSalir()
+    {
+
     }
 
     public void ActualizarVida(float porcentaje)
@@ -201,8 +278,23 @@ public class InterfazJuego : StartupScript
         imgVida.Color = vidaVacía;
         imgVida.Width = tamañoVida;
 
+        // Datos
         var tiempo = ControladorPartida.ObtenerTiempo();
 
-        // Menú muerte
+        ControladorPartida.Pausar(false);
+        BloquearInterfaz(true);
+
+        panelMuerte.Visibility = Visibility.Visible;
+    }
+
+    public void Finalizar()
+    {
+        // Datos
+        var tiempo = ControladorPartida.ObtenerTiempo();
+
+        ControladorPartida.Pausar(false);
+        BloquearInterfaz(true);
+
+        panelFinal.Visibility = Visibility.Visible;
     }
 }

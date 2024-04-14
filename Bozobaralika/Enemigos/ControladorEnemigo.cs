@@ -79,6 +79,9 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
 
     public override void Update()
     {
+        if (!ControladorPartida.ObtenerActivo())
+            return;
+
         if (!activo)
             return;
 
