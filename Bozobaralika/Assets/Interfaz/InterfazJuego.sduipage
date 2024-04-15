@@ -414,7 +414,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtMuerte
-                Text: morido
+                Text: muerte
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 90.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
