@@ -67,7 +67,7 @@ public class ControladorLlave : AsyncScript
                     modelo.Rotation *= Quaternion.RotationY(-0.01f * velocidadRotación);
                     break;
             }
-            await Script.NextFrame();
+            await Task.Delay(1);
         }
     }
 
@@ -84,7 +84,7 @@ public class ControladorLlave : AsyncScript
             modelo.Position = Vector3.Lerp(inicio, objetivo, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Script.NextFrame();
+            await Task.Delay(1);
         }
 
         if (!activo)
@@ -109,7 +109,7 @@ public class ControladorLlave : AsyncScript
             modelo.Scale = Vector3.Lerp(inicio, Vector3.Zero, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Script.NextFrame();
+            await Task.Delay(1);
         }
 
         activo = false;

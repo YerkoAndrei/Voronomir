@@ -62,7 +62,7 @@ public class ControladorBotón : AsyncScript
             modelo.Position = Vector3.Lerp(inicio, posiciónActivado, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Script.NextFrame();
+            await Task.Delay(1);
         }
     }
 }
