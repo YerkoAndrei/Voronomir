@@ -1,0 +1,28 @@
+{
+  "nombreJuego": "Bozobaralika",
+
+  "comenzar": "Start!",
+  "reanudar": "Resume",
+  "reiniciar": "Restart",
+  "cancelar": "Cancel",
+  "volver": "Back",
+  "salir": "Exit",
+  "pausa": "Pause",
+  "opciones": "Options",
+  "sí": "Yes",
+  "no": "No",
+
+  "idioma": "Languaje",
+  "gráficos": "Graphics",
+  "sonidos": "Sounds",
+  "red": "Network",
+  "calidad": "Quality",
+  "sombras": "Shadows",
+  "vSync": "v Sync",
+  "pantallaCompleta": "Fullscreen",
+  "resolución": "Resolution",
+  "reinicio": "(Requires restart)",
+  "volumenGeneral": "General volume",
+  "volumenMúsica": "Music volume",
+  "volumenEfectos": "Effects volume"
+}

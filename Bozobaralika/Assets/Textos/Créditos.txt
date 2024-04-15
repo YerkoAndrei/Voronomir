@@ -1,0 +1,13 @@
+YerkoAndrei:
+Programación, diseño, arte, modelado, shaders, música, sonidos y traducción.
+
+Fuente :
+
+VSTs:
+
+Software usado:
+Stride
+Blender
+Krita
+LMMS
+Audacity
