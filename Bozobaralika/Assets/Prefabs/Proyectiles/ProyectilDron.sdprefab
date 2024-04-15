@@ -6,6 +6,21 @@ Hierarchy:
     RootParts:
         - ref!! b5e7a671-aabc-4e15-bad5-e7c32d6f0e7d
     Parts:
+        -   Folder: null
+            Entity:
+                Id: 36f8316d-b399-4145-a929-4abe33580c81
+                Name: Modelo
+                Components:
+                    4434603cbafdaa05f2732041b413b98b: !TransformComponent
+                        Id: e4d4e89f-ee45-4a51-9dcb-28942f9d14ca
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.2, Y: 0.5, Z: 0.2}
+                        Children: {}
+                    79c97683a9b44b1d2aa39475a8794065: !ModelComponent
+                        Id: 39bd3370-36d4-4e32-8db2-7ef710753930
+                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Proyectiles/Cilindro/Cilindro
+                        Materials: {}
         -   Entity:
                 Id: b5e7a671-aabc-4e15-bad5-e7c32d6f0e7d
                 Name: ProyectilDron
@@ -41,23 +56,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            a0c928adfb0b853df190278b93d21157: ref!! ba51a424-c637-4fd8-a262-fc896d917666
+                            65bcef327949f5b575d0c1ec2a98f9a3: ref!! e4d4e89f-ee45-4a51-9dcb-28942f9d14ca
                     2f7c3e8089300ae2e8806e507c594375: !Bozobaralika.ElementoProyectilSimple,Bozobaralika.Proyecto
                         Id: 78fbd8bc-666c-4d97-adc1-9acc9095314f
-                        modelo: ref!! bf833ccc-6866-473d-957e-6701119d2237
+                        modelo: ref!! 39bd3370-36d4-4e32-8db2-7ef710753930
                         cola: null
-        -   Folder: null
-            Entity:
-                Id: f7cd993f-4814-497e-947f-18f5abd49d93
-                Name: Modelo
-                Components:
-                    4434603cbafdaa05f2732041b413b98b: !TransformComponent
-                        Id: ba51a424-c637-4fd8-a262-fc896d917666
-                        Position: {X: 0.0, Y: 0.0, Z: 0.25}
-                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.1, Y: 0.5, Z: 0.1}
-                        Children: {}
-                    79c97683a9b44b1d2aa39475a8794065: !ModelComponent
-                        Id: bf833ccc-6866-473d-957e-6701119d2237
-                        Model: c7f6cc1f-dca4-4efe-802b-421756419e85:Cylinder
-                        Materials: {}

@@ -57,7 +57,7 @@ Hierarchy:
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: 76401dda-ec5b-441f-98c0-f55928eb29b9
-                        Model: 42f01256-b2f0-4d1d-b81d-719b59cf45c5:Modelos/Cerebro/Rueda
+                        Model: 42f01256-b2f0-4d1d-b81d-719b59cf45c5:Modelos/Enemigos/Cerebro/Rueda
                         Materials: {}
         -   Folder: null
             Entity:
@@ -94,7 +94,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     c4f843d881374b6cf192ef203d89b920: !ModelComponent
                         Id: fac3214c-fe70-406b-a095-bed2c63fd8fb
-                        Model: 3893b25d-a5b1-463e-989f-5c46a73d1a27:Modelos/Cerebro/Cerebro
+                        Model: 3893b25d-a5b1-463e-989f-5c46a73d1a27:Modelos/Enemigos/Cerebro/Cerebro
                         Materials: {}
         -   Folder: null
             Entity:
@@ -326,8 +326,8 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             0d7f138a96b5b7cb87e0c1dd04da748b: !ColliderShapeAssetDesc
-                                Shape: 1c5a6c8a-b0cd-4874-82b6-cd5b81822fec:Modelos/Cerebro/ColliderEscudo
+                                Shape: 1c5a6c8a-b0cd-4874-82b6-cd5b81822fec:Modelos/Enemigos/Cerebro/ColliderEscudo
                     b7a4846150744a3c3a56a84f38277ded: !ModelComponent
                         Id: 6ebf5e89-67f5-48e6-a778-fab520d51d82
-                        Model: 3fb5550c-9e46-454e-a636-e6798f0bac5f:Modelos/Cerebro/Escudo
+                        Model: 3fb5550c-9e46-454e-a636-e6798f0bac5f:Modelos/Enemigos/Cerebro/Escudo
                         Materials: {}

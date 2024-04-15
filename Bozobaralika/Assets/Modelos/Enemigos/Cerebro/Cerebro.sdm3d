@@ -9,15 +9,15 @@ Materials:
     70b90e4a056f2096fea3d8bdf9a8587d:
         Name: Cerebro
         MaterialInstance:
-            Material: 9b4fa3a2-2733-4e6c-b7fa-cab83123dec6:Modelos/Cerebro/Materiales/Cerebro
+            Material: 9b4fa3a2-2733-4e6c-b7fa-cab83123dec6:Modelos/Enemigos/Cerebro/Materiales/Cerebro
     61812a46648dc77bc2fd029a957627c2:
         Name: Metal
         MaterialInstance:
-            Material: b44d6f8d-4512-43bf-9e76-c20ef45a226e:Modelos/Cerebro/Materiales/Metal
+            Material: b44d6f8d-4512-43bf-9e76-c20ef45a226e:Modelos/Enemigos/Cerebro/Materiales/Metal
     a855c16ddeb32b35fdaab756f483d422:
         Name: Deco
         MaterialInstance:
-            Material: f2b215e3-52d7-435a-a611-6867a29ce8fb:Modelos/Cerebro/Materiales/Deco
+            Material: f2b215e3-52d7-435a-a611-6867a29ce8fb:Modelos/Enemigos/Cerebro/Materiales/Deco
 Modifiers: {}
 ~SourceHashes:
     563e10099352e22b6ea06651c37171aa~Cerebro.glb: 7c0b60d7c2ca52e6b05cec170625ad43

@@ -3,21 +3,21 @@ Id: e5264c9f-ce07-44c3-804e-cfe48eae8f2a
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Source: !file Babosa.glb
-Skeleton: dca256e8-9683-4a51-b804-38239426f6a4:Modelos/Babosa/Babosa Skeleton
+Skeleton: dca256e8-9683-4a51-b804-38239426f6a4:Modelos/Enemigos/Babosa/Babosa Skeleton
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Materials:
     484048e860f4d1997e2cce80399c8c11:
         Name: Babosa
         MaterialInstance:
-            Material: 76420913-9681-4324-8714-751c0f7e5f5e:Modelos/Babosa/Materiales/Babosa
+            Material: 76420913-9681-4324-8714-751c0f7e5f5e:Modelos/Enemigos/Babosa/Materiales/Babosa
     65558d044de168695d57682cd6f604cb:
         Name: "Cañon"
         MaterialInstance:
-            Material: "853cfe45-3c49-4365-b4d5-3321eaa578aa:Modelos/Babosa/Materiales/Cañon"
+            Material: "853cfe45-3c49-4365-b4d5-3321eaa578aa:Modelos/Enemigos/Babosa/Materiales/Cañon"
     62615dcc441fbdb0e0fcc14408ed6ed7:
         Name: Carne
         MaterialInstance:
-            Material: 2e6b79b3-444f-480e-991b-87f3e1349d2c:Modelos/Babosa/Materiales/Carne
+            Material: 2e6b79b3-444f-480e-991b-87f3e1349d2c:Modelos/Enemigos/Babosa/Materiales/Carne
 Modifiers: {}
 ~SourceHashes:
     cf5ae6101ef2dd1e8c521b5e62ee8fb6~Babosa.glb: 13fed0975c3da3df2c8729013c8e20c7

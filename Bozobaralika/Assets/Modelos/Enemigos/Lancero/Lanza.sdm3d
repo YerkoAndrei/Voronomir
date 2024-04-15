@@ -9,11 +9,11 @@ Materials:
     4e023b73846236c1e575a05e5aa1b3c8:
         Name: Madera
         MaterialInstance:
-            Material: c9e345af-f8ab-4681-ade2-f0d720365241:Modelos/Lancero/Materiales/Madera
+            Material: c9e345af-f8ab-4681-ade2-f0d720365241:Modelos/Enemigos/Lancero/Materiales/Madera
     edd03eeffa6177d259beb853873d774a:
         Name: Metal
         MaterialInstance:
-            Material: 82f556af-20d8-4e33-998c-5cd032c90a03:Modelos/Lancero/Materiales/Metal
+            Material: 82f556af-20d8-4e33-998c-5cd032c90a03:Modelos/Enemigos/Lancero/Materiales/Metal
 Modifiers: {}
 ~SourceHashes:
     9d43ded286b44756515702b254422bfa~Lanza.glb: b3442b4ab43ba250e52b00447e7371c1

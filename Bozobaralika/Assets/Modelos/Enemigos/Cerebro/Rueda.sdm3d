@@ -9,7 +9,7 @@ Materials:
     e55dca1de46c51280d0ffba49734e94a:
         Name: Rueda
         MaterialInstance:
-            Material: cac303be-3ec2-42c3-b983-4c1b3931a098:Modelos/Cerebro/Materiales/Rueda
+            Material: cac303be-3ec2-42c3-b983-4c1b3931a098:Modelos/Enemigos/Cerebro/Materiales/Rueda
 Modifiers: {}
 ~SourceHashes:
     8825d28ccbd2de1e048c8f3b7cb87de9~Rueda.glb: 51c732ae4eac1bcc40bf8ae1e1c74ac7

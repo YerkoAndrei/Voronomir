@@ -9,7 +9,7 @@ Materials:
     c58048e75c1edc1a248675af095fbb5e:
         Name: Escudo
         MaterialInstance:
-            Material: 7020b478-a25c-4ca7-8b5e-beb3e7d9bf6c:Modelos/Cerebro/Materiales/Escudo
+            Material: 7020b478-a25c-4ca7-8b5e-beb3e7d9bf6c:Modelos/Enemigos/Cerebro/Materiales/Escudo
 Modifiers: {}
 ~SourceHashes:
     60aab2231ba2fb5941e7d64101595ced~Escudo.glb: 036bc5135bbc1d625d1dcaba1e737cc6

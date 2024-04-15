@@ -9,11 +9,11 @@ Materials:
     7f21754e1ad28ca05663f91e825c2cf5:
         Name: Metal
         MaterialInstance:
-            Material: 0f8a9ed7-dcb3-414c-a153-6818e484ac89:Modelos/Dron/Materiales/Metal
+            Material: 0f8a9ed7-dcb3-414c-a153-6818e484ac89:Modelos/Enemigos/Dron/Materiales/Metal
     75439c7fe282e32b419bbba884e37490:
         Name: Deco
         MaterialInstance:
-            Material: 6a92c8d5-9b8b-4c7d-ac7d-885b65539ca4:Modelos/Dron/Materiales/Deco
+            Material: 6a92c8d5-9b8b-4c7d-ac7d-885b65539ca4:Modelos/Enemigos/Dron/Materiales/Deco
 Modifiers: {}
 ~SourceHashes:
     eb1594c95f32dab9cfb103083092480b~Dron.glb: 7b7e5b8d385fc837d5aa0d68a383c96b

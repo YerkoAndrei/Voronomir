@@ -6,20 +6,19 @@ Hierarchy:
     RootParts:
         - ref!! bae73870-af2e-47f5-a745-a2709d6c0e07
     Parts:
-        -   Folder: null
-            Entity:
-                Id: 2f63916c-71cd-4b6f-8d7c-e58f55bf396d
+        -   Entity:
+                Id: 69f58330-8b02-40c0-8bc2-be3999f2a0c7
                 Name: Modelo
                 Components:
                     4434603cbafdaa05f2732041b413b98b: !TransformComponent
-                        Id: 140e589e-caf9-4b52-a39c-1682bf96f0a9
-                        Position: {X: 0.0, Y: 0.0, Z: 0.2}
+                        Id: 2175c9d1-17a3-4daa-9242-8f24e7736e99
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.2, Y: 0.4, Z: 0.2}
+                        Scale: {X: 0.4, Y: 0.4, Z: 0.4}
                         Children: {}
                     79c97683a9b44b1d2aa39475a8794065: !ModelComponent
-                        Id: b66e1be6-ccde-4b15-9517-6760b1933c23
-                        Model: c7f6cc1f-dca4-4efe-802b-421756419e85:Cylinder
+                        Id: eb71238a-255c-40a5-8764-29f4756f08c6
+                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Proyectiles/Cilindro/Cilindro
                         Materials: {}
         -   Entity:
                 Id: 86d7594e-a646-4f48-b770-da51d79c7422
@@ -66,9 +65,9 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            a0c928adfb0b853df190278b93d21157: ref!! 140e589e-caf9-4b52-a39c-1682bf96f0a9
+                            0b335534c64dd0779773c5269e18e1da: ref!! 2175c9d1-17a3-4daa-9242-8f24e7736e99
                             be27b1076021f3295f61c2d4c2f01f1d: ref!! a56d924e-9f03-4dc3-888a-1e111c15c24e
                     449ebeeb02b58b0c3a84ceebf03c07d2: !Bozobaralika.ElementoProyectilSimple,Bozobaralika.Proyecto
                         Id: 8b43936a-f16a-4661-9d1c-bd482e28e0b5
-                        modelo: ref!! b66e1be6-ccde-4b15-9517-6760b1933c23
+                        modelo: ref!! eb71238a-255c-40a5-8764-29f4756f08c6
                         cola: ref!! a56d924e-9f03-4dc3-888a-1e111c15c24e

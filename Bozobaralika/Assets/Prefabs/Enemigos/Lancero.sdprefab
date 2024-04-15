@@ -70,7 +70,7 @@ Hierarchy:
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: b237a84c-cf40-4a01-a1a8-d03e00dbe523
-                        Model: 449f714b-c2f9-4b2d-b6a8-5ed407b77a72:Modelos/Lancero/Lancero
+                        Model: 449f714b-c2f9-4b2d-b6a8-5ed407b77a72:Modelos/Enemigos/Lancero/Lancero
                         Materials: {}
         -   Folder: null
             Entity:
@@ -85,7 +85,7 @@ Hierarchy:
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: 6692d722-47a8-43e8-aae4-13a906c898d9
-                        Model: 4b34d26f-7f32-492d-8a58-e38df8cd8e9e:Modelos/Lancero/Lanza
+                        Model: 4b34d26f-7f32-492d-8a58-e38df8cd8e9e:Modelos/Enemigos/Lancero/Lanza
                         Materials: {}
         -   Entity:
                 Id: 5a07eb28-4ef8-4e99-8edf-3fe2a4495759

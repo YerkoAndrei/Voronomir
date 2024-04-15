@@ -122,7 +122,7 @@ Hierarchy:
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: 4c4cba65-7576-43a9-8e06-ed3870fa32f5
-                        Model: e5264c9f-ce07-44c3-804e-cfe48eae8f2a:Modelos/Babosa/Babosa
+                        Model: e5264c9f-ce07-44c3-804e-cfe48eae8f2a:Modelos/Enemigos/Babosa/Babosa
                         Materials: {}
         -   Entity:
                 Id: 9c01c5c5-5d3a-405c-b244-2393c762057f
@@ -205,7 +205,7 @@ Hierarchy:
                         Children: {}
                     c2755b36878a560282a863adea320430: !Bozobaralika.ControladorArmaRango,Bozobaralika.Proyecto
                         Id: d7fc863f-43cd-4879-a47f-ea890762fdc2
-                        prefabProyectil: 950b1dd4-c019-4d1b-950c-b9d49b6d11f9:Prefabs/Disparos/ProyectilBabosa
+                        prefabProyectil: 950b1dd4-c019-4d1b-950c-b9d49b6d11f9:Prefabs/Proyectiles/ProyectilBabosa
                         prefabImpacto: null
         -   Folder: null
             Entity:

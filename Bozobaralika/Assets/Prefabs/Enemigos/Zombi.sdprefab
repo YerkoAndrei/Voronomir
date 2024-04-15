@@ -58,7 +58,7 @@ Hierarchy:
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: 60dcb0cd-113b-46f6-952b-fb29e7f9d891
-                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
         -   Folder: null
             Entity:

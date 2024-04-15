@@ -21,7 +21,7 @@ Hierarchy:
                             d0754153efaf8048a5bbd0589f30e79f: ref!! 7ef7850b-9a81-4423-8140-1b6535743cc8
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: ac260142-919c-4d8b-a867-56b5a16854c7
-                        Model: e2c61240-3de0-4c53-821b-1b0e54af2827:Modelos/Dron/Dron
+                        Model: e2c61240-3de0-4c53-821b-1b0e54af2827:Modelos/Enemigos/Dron/Dron
                         Materials: {}
         -   Folder: null
             Entity:
@@ -84,7 +84,7 @@ Hierarchy:
                         Children: {}
                     856fb470e4a1b772f510f0cef700d9bb: !Bozobaralika.ControladorArmaRango,Bozobaralika.Proyecto
                         Id: 7c0c0baa-c7d8-4edc-bfe9-0f947660bd35
-                        prefabProyectil: af640d43-9c24-4ebd-83e0-38d09e4f84c0:Prefabs/Disparos/ProyectilDron
+                        prefabProyectil: af640d43-9c24-4ebd-83e0-38d09e4f84c0:Prefabs/Proyectiles/ProyectilDron
                         prefabImpacto: null
         -   Entity:
                 Id: c9de616d-fc44-4005-a31a-6d8dcd5084c0
