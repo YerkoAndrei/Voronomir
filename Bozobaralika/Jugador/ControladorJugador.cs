@@ -143,7 +143,7 @@ public class ControladorJugador : SyncScript, IDañable
     private void Morir()
     {
         // PENDIENTE: efectos
-        ControladorPartida.Perder();
+        ControladorPartida.Morir();
     }
 
     public void GuardarLlave(Llaves llave)

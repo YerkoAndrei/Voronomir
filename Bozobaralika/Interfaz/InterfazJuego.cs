@@ -70,7 +70,7 @@ public class InterfazJuego : SyncScript
 
         panelPausa = página.FindVisualChildOfType<Grid>("PanelPausa");
         panelMuerte = página.FindVisualChildOfType<Grid>("PanelMuerte");
-        panelFinal = página.FindVisualChildOfType<Grid>("panelFinal");
+        panelFinal = página.FindVisualChildOfType<Grid>("PanelFinal");
 
         panelPausa.Visibility = Visibility.Hidden;
         panelMuerte.Visibility = Visibility.Hidden;
@@ -135,7 +135,7 @@ public class InterfazJuego : SyncScript
 
     private void EnClicContinuar()
     {
-        //SistemaEscenas
+        SistemaEscenas.CambiarEscena(ControladorPartida.ObtenerSiguienteEscena());
     }
 
     private void EnClicSalir()

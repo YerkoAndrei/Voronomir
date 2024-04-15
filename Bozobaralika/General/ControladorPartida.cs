@@ -8,6 +8,7 @@ using static Constantes;
 public class ControladorPartida : SyncScript
 {
     public Escenas escena;
+    public Escenas siguienteEscena;
 
     // Singleton por escena
     private static ControladorPartida instancia;
@@ -58,13 +59,13 @@ public class ControladorPartida : SyncScript
         return instancia.activo;
     }
 
-    public static void Perder()
+    public static void Morir()
     {
         instancia.activo = false;
         instancia.interfaz.Morir();
     }
 
-    public static void Ganar()
+    public static void Finalizar()
     {
         instancia.activo = false;
         instancia.interfaz.Finalizar();
@@ -78,6 +79,11 @@ public class ControladorPartida : SyncScript
     public static Escenas ObtenerEscena()
     {
         return instancia.escena;
+    }
+
+    public static Escenas ObtenerSiguienteEscena()
+    {
+        return instancia.siguienteEscena;
     }
 
     // Jugador

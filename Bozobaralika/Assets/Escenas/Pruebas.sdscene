@@ -24,6 +24,7 @@ Hierarchy:
         - ref!! a54e658d-bb78-4833-b114-e0ad88f4652c
         - ref!! e6ee0047-6726-4c37-bcd8-6f0fb152abbf
         - ref!! 9778c9f7-ee25-4fad-84cc-397d06ee1a61
+        - ref!! 192aae67-88cf-46cd-9a6b-79fdb36cf312
         - ref!! 8dcfbf63-872c-4767-b5d4-c444770e99f8
         - ref!! 3e1c62cc-564a-4570-b7d1-37c0f75161c4
         - ref!! 41b0fd2f-d07c-403c-aede-e0508f245dd2
@@ -258,6 +259,20 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: ae26fb61-6490-4523-8dc8-10162f73c79a
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
+        -   Entity:
+                Id: 0fea7eb5-f3a0-4f2f-8f6a-460c88d65c5c
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 10d535a9-9220-46bf-a275-7182fafdb40f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 2ce028c1-762b-437e-ae48-987baa2a4903
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cube
+                        Materials: {}
         -   Folder: "Entorno/Obstáculos"
             Entity:
                 Id: 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
@@ -460,6 +475,37 @@ Hierarchy:
                         Id: 76000af6-530a-4496-a8c8-2bdb1f851f4d
                         poder: invencibilidad
                         modelo: ref!! 2f292ff2-68d1-4939-884c-78cab4160835
+        -   Entity:
+                Id: 192aae67-88cf-46cd-9a6b-79fdb36cf312
+                Name: Fin
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 45866c4b-ac96-4261-b9b4-ade63415ca34
+                        Position: {X: -9.0, Y: 0.0, Z: 18.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 0.5, Z: 2.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 10d535a9-9220-46bf-a275-7182fafdb40f
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: b377d2a5-712f-4b3f-95eb-cad3960276f2
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: KinematicFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    0f06abcfd5b41f788b9b239b398b138c: !Bozobaralika.ControladorFin,Bozobaralika.Proyecto
+                        Id: 0d8a3722-6d3d-48f6-8837-4e15c72d7b67
         -   Folder: null
             Entity:
                 Id: 1bc8d1d3-5e50-45cc-aeee-0935b943549a
@@ -2128,6 +2174,7 @@ Hierarchy:
                     5cb52a5c65430d2569b779dae13d4ecd: !Bozobaralika.ControladorPartida,Bozobaralika.Proyecto
                         Id: 54081697-9976-4321-80a2-1d5877652fd9
                         escena: "menú"
+                        siguienteEscena: "menú"
                     7107c19923448b964ecd9d41fe2771bf: !TransformComponent
                         Id: d22b2c10-5f6a-4267-ae92-9812dfaf0ed5
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
