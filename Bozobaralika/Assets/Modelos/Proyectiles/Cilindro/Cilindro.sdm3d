@@ -1,0 +1,16 @@
+!Model
+Id: 4e2549b4-1cf5-4162-9f14-1a8757e5494a
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Cilindro.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    44f79dc9d6218772307cf8e182cf2491:
+        Name: Material
+        MaterialInstance:
+            Material: null
+DeduplicateMaterials: false
+Modifiers: {}
+~SourceHashes:
+    d75d068806fecd3416a2914fc096fd00~Cilindro.glb: f6aa0cc5f88f5551a1b7a89823f2e1af

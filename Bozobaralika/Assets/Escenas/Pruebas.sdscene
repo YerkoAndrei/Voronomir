@@ -63,7 +63,7 @@ Hierarchy:
                         Children: {}
                     29a42a5152c5a4fae2367c086e9374e9: !ModelComponent
                         Id: 2138665c-fd1c-4a2f-8ad0-6a166a3c81c7
-                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
         -   Entity:
                 Id: 03bd6f4d-4a01-43c5-b6be-2c6d6c327c81
@@ -147,9 +147,9 @@ Hierarchy:
                         Id: 853d3c97-8a0e-4048-a57c-1704945b8595
                     54c947a658f979a1a3cbf73596735198: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: ee03a1fb-1cae-4679-9cfb-758a1f99f1ee
-                        prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/Disparos/Marca
-                        prefabGranada: a3c696d3-259b-49a3-94e8-945c1671282a:Prefabs/Disparos/Granada
-                        "prefabExplosión": "3db0a6bf-02b6-4061-8734-ac74c0c26780:Prefabs/Disparos/Explosión"
+                        prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/Proyectiles/Marca
+                        prefabGranada: a3c696d3-259b-49a3-94e8-945c1671282a:Prefabs/Proyectiles/Granada
+                        "prefabExplosión": "3db0a6bf-02b6-4061-8734-ac74c0c26780:Prefabs/Proyectiles/Explosión"
                         animadorEspada: ref!! 353e3563-85b9-4e95-8cde-b449d5a03217
                         animadorEscopeta: ref!! b4f31a54-c2e1-4a93-86d7-6ec5585a30e8
                         animadorMetralleta: ref!! 14b56ce5-0534-48dd-aca3-9cc3154d2023
@@ -532,7 +532,7 @@ Hierarchy:
                         Children: {}
                     700785a774c66ac413f443f63fd56c96: !ModelComponent
                         Id: dd794269-8824-4994-9c86-7ee26b13fed0
-                        Model: 42f01256-b2f0-4d1d-b81d-719b59cf45c5:Modelos/Cerebro/Rueda
+                        Model: 42f01256-b2f0-4d1d-b81d-719b59cf45c5:Modelos/Enemigos/Cerebro/Rueda
                         Materials: {}
         -   Entity:
                 Id: 26b98ed7-a446-4bee-ba3c-99f5e4f4b3d1
@@ -773,7 +773,7 @@ Hierarchy:
                             30d5cc5388f6100c2dbe7caa24ca980d: ref!! 76c62b11-afb8-4e5c-92ae-ff55a380487c
                     a762421e95fb507c86b67f2844233c9c: !ModelComponent
                         Id: 52582927-ef52-4001-a7a1-415ad628ed78
-                        Model: 449f714b-c2f9-4b2d-b6a8-5ed407b77a72:Modelos/Lancero/Lancero
+                        Model: 449f714b-c2f9-4b2d-b6a8-5ed407b77a72:Modelos/Enemigos/Lancero/Lancero
                         Materials: {}
         -   Folder: "Entorno/Obstáculos"
             Entity:
@@ -1061,7 +1061,7 @@ Hierarchy:
                         Children: {}
                     29a42a5152c5a4fae2367c086e9374e9: !ModelComponent
                         Id: d3cf42eb-8d2a-45c3-9723-4a456f5c3d47
-                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
         -   Entity:
                 Id: 62e007cb-275f-435c-ad51-f4b80f4f0984
@@ -1075,7 +1075,7 @@ Hierarchy:
                         Children: {}
                     700785a774c66ac413f443f63fd56c96: !ModelComponent
                         Id: 9020ef6e-4a4a-41c1-a1f2-5405bba99d8f
-                        Model: 3fb5550c-9e46-454e-a636-e6798f0bac5f:Modelos/Cerebro/Escudo
+                        Model: 3fb5550c-9e46-454e-a636-e6798f0bac5f:Modelos/Enemigos/Cerebro/Escudo
                         Materials: {}
         -   Folder: null
             Entity:
@@ -1382,7 +1382,7 @@ Hierarchy:
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: 7cb6b6f1-18a3-4116-9725-7d349401abc3
-                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -1676,7 +1676,7 @@ Hierarchy:
                         Children: {}
                     ad9e9aa14763b668352f33b50b29d123: !ModelComponent
                         Id: d6a5e338-afa8-4a79-a142-2586652224f2
-                        Model: e5264c9f-ce07-44c3-804e-cfe48eae8f2a:Modelos/Babosa/Babosa
+                        Model: e5264c9f-ce07-44c3-804e-cfe48eae8f2a:Modelos/Enemigos/Babosa/Babosa
                         Materials: {}
         -   Folder: null
             Entity:
@@ -2082,7 +2082,7 @@ Hierarchy:
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: 017900b6-b60c-4b05-9c9b-be825d6ff4fa
-                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -2160,7 +2160,7 @@ Hierarchy:
                         Children: {}
                     f7bd20995a59196d1086d8b24d46a452: !ModelComponent
                         Id: b3bf6a25-6f4d-4bd3-a2e3-e743dbe83c7f
-                        Model: 4b34d26f-7f32-492d-8a58-e38df8cd8e9e:Modelos/Lancero/Lanza
+                        Model: 4b34d26f-7f32-492d-8a58-e38df8cd8e9e:Modelos/Enemigos/Lancero/Lanza
                         Materials: {}
         -   Folder: null
             Entity:
@@ -2494,7 +2494,7 @@ Hierarchy:
                             509eb601ce7c3cefac3e67d1a3ffa0b7: ref!! 1fe674e5-bdd8-45dc-a4a4-113a7f39b59d
                     53a96afedd3d5f8ea54414c34fc2c1a8: !ModelComponent
                         Id: ed92cd6c-1d47-4da5-8225-c558d67b8a66
-                        Model: 3893b25d-a5b1-463e-989f-5c46a73d1a27:Modelos/Cerebro/Cerebro
+                        Model: 3893b25d-a5b1-463e-989f-5c46a73d1a27:Modelos/Enemigos/Cerebro/Cerebro
                         Materials: {}
         -   Folder: MuestraEnemigos
             Entity:
@@ -2509,7 +2509,7 @@ Hierarchy:
                         Children: {}
                     818d2b15beb58c637493a9d06bc8c8e8: !ModelComponent
                         Id: 6404f16f-2cb3-4a91-957d-456dfd08cda6
-                        Model: "db867d68-4431-4e52-9abb-f81df0c158eb:Modelos/Araña/Araña"
+                        Model: "db867d68-4431-4e52-9abb-f81df0c158eb:Modelos/Enemigos/Araña/Araña"
                         Materials: {}
         -   Folder: null
             Entity:
@@ -2524,7 +2524,7 @@ Hierarchy:
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: 733a460c-1f9a-4401-b759-12d9b996c64f
-                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Zombi/Zombi
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -2543,7 +2543,7 @@ Hierarchy:
                         Children: {}
                     8582277bd57dbba6c462cdd864595875: !ModelComponent
                         Id: 57776d4e-51c0-435c-ab5f-0781c786f642
-                        Model: e2c61240-3de0-4c53-821b-1b0e54af2827:Modelos/Dron/Dron
+                        Model: e2c61240-3de0-4c53-821b-1b0e54af2827:Modelos/Enemigos/Dron/Dron
                         Materials: {}
         -   Folder: Entorno/Muros
             Entity:

@@ -1,0 +1,16 @@
+!Model
+Id: 7adde463-1cce-45fb-b6f0-a375b43e6bf4
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Craneo.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    dc282a34981230ba7117a7be891111f5:
+        Name: Material
+        MaterialInstance:
+            Material: null
+DeduplicateMaterials: false
+Modifiers: {}
+~SourceHashes:
+    514a2f330f68961377df5d7218adbe85~Craneo.glb: 21ca6fe63bf1273969e12297f07da05d
