@@ -14,10 +14,10 @@ namespace Bozobaralika;
 public static class Utilidades
 {
     // Color botones
-    private static Color colorNormal = new Color(255, 255, 255, 255);
-    private static Color colorEnCursor = new Color(200, 200, 200, 250);
-    private static Color colorEnClic = new Color(155, 155, 155, 250);
-    private static Color colorBloqueado = new Color(155, 155, 155, 155);
+    private static Color colorNormal =      new Color(255, 255, 255, 255);
+    private static Color colorEnCursor =    new Color(200, 200, 200, 250);
+    private static Color colorEnClic =      new Color(155, 155, 155, 250);
+    private static Color colorBloqueado =   new Color(155, 155, 155, 155);
 
     public static CollisionFilterGroupFlags colisionesMarca = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.SensorTrigger;
 

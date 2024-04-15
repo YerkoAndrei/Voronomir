@@ -1,0 +1,30 @@
+!UIPageAsset
+Id: 332c8334-a4ec-41e0-9ce9-f970181eaade
+SerializedVersion: {Stride: 2.1.0.1}
+Tags: []
+Design:
+    Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+Hierarchy:
+    RootParts:
+        - !Grid ref!! a0c880f9-1ca3-40aa-90f5-c0321eaa6f28
+    Parts:
+        -   UIElement: !Grid
+                Id: a0c880f9-1ca3-40aa-90f5-c0321eaa6f28
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                Children:
+                    b5dd14726eef777167d29b19127f1567: !Grid ref!! c73d2998-7e5d-433c-9749-140001324a88
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
+                Id: c73d2998-7e5d-433c-9749-140001324a88
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                Name: PanelOscuro
+                Children: {}
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}

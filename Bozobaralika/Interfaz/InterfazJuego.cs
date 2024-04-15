@@ -130,7 +130,7 @@ public class InterfazJuego : SyncScript
 
     private void EnClicReintentar()
     {
-        //SistemaEscenas.RecargarEscena();
+        SistemaEscenas.RecargarEscena();
     }
 
     private void EnClicContinuar()

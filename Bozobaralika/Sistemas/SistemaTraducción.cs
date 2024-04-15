@@ -3,7 +3,6 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using Stride.Engine;
-using Stride.Graphics;
 using Newtonsoft.Json;
 using Stride.Core.Serialization;
 
@@ -22,9 +21,6 @@ public class SistemaTraducción : StartupScript
 
     public UrlReference textosEspañol;
     public UrlReference textosInglés;
-
-    public SpriteFont fuentePrincipal;
-    public SpriteFont fuenteRespaldo;
 
     public override void Start()
     {
@@ -45,7 +41,7 @@ public class SistemaTraducción : StartupScript
                 jsonInglés = reader.ReadToEnd();
             }
         }
-
+        /*
         // Usa guardada o idioma de sistema la primera vez
         var idiomaGuardado = (Idiomas)Enum.Parse(typeof(Idiomas), SistemaMemoria.ObtenerConfiguración(Configuraciones.idioma));
         if (idiomaGuardado == Idiomas.sistema)
@@ -64,17 +60,7 @@ public class SistemaTraducción : StartupScript
             }
         }
         else
-            CambiarIdioma(idiomaGuardado, false);
-    }
-
-    public static SpriteFont VerificarFuente(string texto)
-    {
-        foreach (char c in texto)
-        {
-            if (!instancia.fuentePrincipal.IsCharPresent(c))
-                return instancia.fuenteRespaldo;
-        }
-        return instancia.fuentePrincipal;
+            CambiarIdioma(idiomaGuardado, false);*/
     }
 
     public static void CambiarIdioma(Idiomas nuevoIdioma, bool actualizar = true)

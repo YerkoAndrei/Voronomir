@@ -13,9 +13,6 @@ using static Constantes;
 public class SistemaEscenas : SyncScript
 {
     public UrlReference<Scene> escenaMenú;
-    public UrlReference<Scene> escenaCreación;
-    public UrlReference<Scene> escenaLocal;
-    public UrlReference<Scene> escenaRemota;
 
     public GraphicsCompositor compositorBajo;
     public GraphicsCompositor compositorMedio;
@@ -42,16 +39,17 @@ public class SistemaEscenas : SyncScript
 
         // Pantalla completa
         Game.Window.AllowUserResizing = false;
-        Game.Window.Title = SistemaTraducción.ObtenerTraducción("nombreJuego");
+        //Game.Window.Title = SistemaTraducción.ObtenerTraducción("nombreJuego");
 
         // Resolución
+        /*
         var resolución = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Split('x');
         var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
 
         var ancho = int.Parse(resolución[0]);
         var alto = int.Parse(resolución[1]);
         CambiarPantalla(pantallaCompleta, ancho, alto);
-
+        */
         // Predeterminado
         duraciónLerp = 0.2f;
 
@@ -62,17 +60,17 @@ public class SistemaEscenas : SyncScript
         Entity.Scene.Children.Add(escenaActual);
 
         // Traduciones
-        SistemaTraducción.ActualizarTextosEscena();
+        //SistemaTraducción.ActualizarTextosEscena();
 
         // Cursor
-        Game.Window.IsMouseVisible = false;
-        imgCursor = página.FindVisualChildOfType<ImageElement>("imgCursor");
+        //Game.Window.IsMouseVisible = false;
+        //imgCursor = página.FindVisualChildOfType<ImageElement>("imgCursor");
     }
 
     public override void Update()
     {
         // Cursor es una imagen
-        PosicionarCursor();
+        //PosicionarCursor();
 
         if (ocultando)
         {
