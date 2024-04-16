@@ -79,7 +79,7 @@ public class ControladorJugador : SyncScript, IDañable
 
         if(tiempoDaño <= 0)
             interfaz.ActivarPoder(Poderes.daño, false);
-        if (tiempoRapidez <= 0)
+        if (tiempoInvencibilidad <= 0)
             interfaz.ActivarPoder(Poderes.invencibilidad, false);
         if (tiempoRapidez <= 0)
             interfaz.ActivarPoder(Poderes.rapidez, false);

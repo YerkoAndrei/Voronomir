@@ -74,7 +74,6 @@ public static class Utilidades
         {
             Texture = textura
         };
-
         return sprite;
     }
 
@@ -100,7 +99,7 @@ public static class Utilidades
         // Cambios color
         var colorBase = imagen.Color;
 
-        // Guarda colores iniciales. Se usa en bloqueo. Podría mejorar.
+        // Guarda colores iniciales. Se usa en bloqueo.
         grid.Children.Add(new Grid()
         {
             Name = "colorInicialBotón",

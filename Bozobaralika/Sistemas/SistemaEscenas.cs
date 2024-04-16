@@ -10,7 +10,7 @@ using Stride.UI.Panels;
 namespace Bozobaralika;
 using static Constantes;
 
-public class SistemaEscenas : SyncScript
+public class SistemaEscenas : AsyncScript
 {
     public UrlReference<Scene> escenaMenú;
 
@@ -22,18 +22,15 @@ public class SistemaEscenas : SyncScript
 
     private static Escenas siguienteEscena;
     private static Scene escenaActual;
-    private static bool ocultando;
-    private static bool abriendo;
+    private static bool animando;
 
     // Lerp
     private float duraciónLerp;
-    private float tiempoDelta;
-    private float tiempo;
 
     private Grid panelOscuro;
     private ImageElement imgCursor;
 
-    public override void Start()
+    public override async Task Execute()
     {
         instancia = this;
 
@@ -65,37 +62,12 @@ public class SistemaEscenas : SyncScript
         // Cursor
         //Game.Window.IsMouseVisible = false;
         //imgCursor = página.FindVisualChildOfType<ImageElement>("imgCursor");
-    }
 
-    public override void Update()
-    {
-        // Cursor es una imagen
-        //PosicionarCursor();
-
-        if (ocultando)
+        while (Game.IsRunning)
         {
-            tiempoDelta += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónLerp);
-            panelOscuro.BackgroundColor = Color.Lerp(Color.Transparent, Color.Black, tiempo);
-
-            // Fin
-            if (tiempoDelta >= duraciónLerp)
-                CargarEscena();
-        }
-
-        if (abriendo)
-        {
-            tiempoDelta += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónLerp);
-            panelOscuro.BackgroundColor = Color.Lerp(Color.Black, Color.Transparent, tiempo);
-
-            // Fin
-            if (tiempoDelta >= duraciónLerp)
-            {
-                panelOscuro.BackgroundColor = Color.Transparent;
-                panelOscuro.CanBeHitByUser = false;
-                abriendo = false;
-            }
+            // Cursor es una imagen
+            //PosicionarCursor();
+            await Script.NextFrame();
         }
     }
 
@@ -140,25 +112,34 @@ public class SistemaEscenas : SyncScript
 
     public static void CambiarEscena(Escenas escena)
     {
-        if (ocultando || abriendo)
+        if (animando)
             return;
 
-        instancia.tiempo = 0;
-        instancia.tiempoDelta = 0;
         instancia.panelOscuro.BackgroundColor = Color.Transparent;
         instancia.panelOscuro.CanBeHitByUser = true;
 
         siguienteEscena = escena;
-        ocultando = true;
-        abriendo = false;
+        animando = true;
+
+        instancia.CargarEscena();
     }
 
     private async void CargarEscena()
     {
-        ocultando = false;
+        // Panel oscuro
+        float tiempoLerp = 0;
+        float tiempo = 0;
 
-        tiempo = 0;
-        tiempoDelta = 0;
+        while (tiempoLerp < duraciónLerp)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duraciónLerp);
+            panelOscuro.BackgroundColor = Color.Lerp(Color.Transparent, Color.Black, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+
+        // Fin Lerp
         panelOscuro.BackgroundColor = Color.Black;
 
         // Descarga
@@ -178,10 +159,26 @@ public class SistemaEscenas : SyncScript
         // Retraso predeterminado
         await Task.Delay(200);
 
+        // Panel oscuro
+        tiempoLerp = 0;
+        tiempo = 0;
+
+        while (tiempoLerp < duraciónLerp)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duraciónLerp);
+            panelOscuro.BackgroundColor = Color.Lerp(Color.Transparent, Color.Black, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+
         // Traduciones
         SistemaTraducción.ActualizarTextosEscena();
 
-        abriendo = true;
+        // Fin Lerp
+        panelOscuro.BackgroundColor = Color.Transparent;
+        panelOscuro.CanBeHitByUser = false;
+        animando = false;
     }
 
     public static GraphicsCompositor ObtenerGráficos(NivelesConfiguración nivel)
