@@ -2,9 +2,9 @@
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
+using Stride.Core.Serialization;
 using Stride.Engine;
 using Newtonsoft.Json;
-using Stride.Core.Serialization;
 
 namespace Bozobaralika;
 using static Constantes;
@@ -41,7 +41,7 @@ public class SistemaTraducción : StartupScript
                 jsonInglés = reader.ReadToEnd();
             }
         }
-        /*
+
         // Usa guardada o idioma de sistema la primera vez
         var idiomaGuardado = (Idiomas)Enum.Parse(typeof(Idiomas), SistemaMemoria.ObtenerConfiguración(Configuraciones.idioma));
         if (idiomaGuardado == Idiomas.sistema)
@@ -60,7 +60,7 @@ public class SistemaTraducción : StartupScript
             }
         }
         else
-            CambiarIdioma(idiomaGuardado, false);*/
+            CambiarIdioma(idiomaGuardado, false);
     }
 
     public static void CambiarIdioma(Idiomas nuevoIdioma, bool actualizar = true)

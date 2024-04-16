@@ -24,11 +24,9 @@ public class SistemaEscenas : AsyncScript
     private static Scene escenaActual;
     private static bool animando;
 
-    // Lerp
-    private float duraciónLerp;
-
     private Grid panelOscuro;
     private ImageElement imgCursor;
+    private float duraciónLerp;
 
     public override async Task Execute()
     {
@@ -36,10 +34,9 @@ public class SistemaEscenas : AsyncScript
 
         // Pantalla completa
         Game.Window.AllowUserResizing = false;
-        //Game.Window.Title = SistemaTraducción.ObtenerTraducción("nombreJuego");
-
-        // Resolución
+        Game.Window.Title = SistemaTraducción.ObtenerTraducción("nombreJuego");
         /*
+        // Resolución
         var resolución = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Split('x');
         var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
 
@@ -57,7 +54,7 @@ public class SistemaEscenas : AsyncScript
         Entity.Scene.Children.Add(escenaActual);
 
         // Traduciones
-        //SistemaTraducción.ActualizarTextosEscena();
+        SistemaTraducción.ActualizarTextosEscena();
 
         // Cursor
         //Game.Window.IsMouseVisible = false;

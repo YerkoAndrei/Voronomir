@@ -1,4 +1,4 @@
 !RawAsset
 Id: adb9b7ae-d3e7-482a-a5a2-47e5f402d77a
 Tags: []
-Source: !file "Textos/TextosInglés.json"
+Source: !file "TextosInglés.json"

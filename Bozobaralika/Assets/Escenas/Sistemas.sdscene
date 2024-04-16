@@ -103,5 +103,5 @@ Hierarchy:
                         Children: {}
                     74df27f190b8dbdcac02e613682d5d88: !Bozobaralika.SistemaTraducci%25C3%25B3n,Bozobaralika.Proyecto
                         Id: 1f3991f5-e598-4785-b4d6-a93b177455c4
-                        "textosEspañol": "302f6bd6-251a-4f65-b982-98fa94597caa:TextosEspañol"
-                        "textosInglés": "adb9b7ae-d3e7-482a-a5a2-47e5f402d77a:TextosInglés"
+                        "textosEspañol": "302f6bd6-251a-4f65-b982-98fa94597caa:Textos/TextosEspañol"
+                        "textosInglés": "adb9b7ae-d3e7-482a-a5a2-47e5f402d77a:Textos/TextosInglés"

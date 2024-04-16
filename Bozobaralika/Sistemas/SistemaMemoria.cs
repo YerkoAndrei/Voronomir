@@ -15,7 +15,6 @@ public class SistemaMemoria : StartupScript
     private static string producto = "Bozobaralika";
 
     private static string archivoConfiguración = "Configuración";
-
     private static string rutaConfiguración;
 
     public override void Start()
@@ -40,13 +39,20 @@ public class SistemaMemoria : StartupScript
         if (File.Exists(rutaConfiguración))
             return;
 
+        // Guarda valores predeterminados
+        var json = JsonConvert.SerializeObject(ObtenerConfiguraciónPredeterminada(ancho, alto));
+        var encriptado = DesEncriptar(json);
+        File.WriteAllText(rutaConfiguración, encriptado);
+    }
+
+    private static Dictionary<string, string> ObtenerConfiguraciónPredeterminada(int ancho, int alto)
+    {
         // Resolución original
         var resolución = "1280x720";
         if (ancho > 0 && alto > 0)
             resolución = ancho.ToString() + "x" + alto.ToString();
 
-        // Valores predeterminados
-        var diccionario = new Dictionary<string, string>
+        return new Dictionary<string, string>
         {
             { Configuraciones.idioma.ToString(),            Idiomas.sistema.ToString() },
             { Configuraciones.gráficos.ToString(),          NivelesConfiguración.alto.ToString() },
@@ -58,11 +64,6 @@ public class SistemaMemoria : StartupScript
             { Configuraciones.pantallaCompleta.ToString(),  true.ToString() },
             { Configuraciones.resolución.ToString(),        resolución }
         };
-
-        // Guarda archivo
-        var json = JsonConvert.SerializeObject(diccionario);
-        var encriptado = DesEncriptar(json);
-        File.WriteAllText(rutaConfiguración, encriptado);
     }
 
     public static void GuardarConfiguración(Configuraciones configuración, string valor)
@@ -83,7 +84,7 @@ public class SistemaMemoria : StartupScript
         if (!Directory.Exists(carpetaPersistente))
             Directory.CreateDirectory(carpetaPersistente);
 
-        var configuraciones = new Dictionary<string, string>();
+        var configuraciones = ObtenerConfiguraciónPredeterminada(1280, 720);
 
         // Lee archivo
         if (File.Exists(rutaConfiguración))

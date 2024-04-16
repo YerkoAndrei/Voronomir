@@ -1,4 +1,4 @@
 !RawAsset
 Id: 302f6bd6-251a-4f65-b982-98fa94597caa
 Tags: []
-Source: !file "Textos/TextosEspañol.json"
+Source: !file "TextosEspañol.json"
