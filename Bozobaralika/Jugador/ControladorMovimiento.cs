@@ -103,14 +103,14 @@ public class ControladorMovimiento : StartupScript
             if (tempoIniciación < tiempoIniciación)
             {
                 // Aceleración inicial
-                tempoIniciación += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                tempoIniciación += SistemaAnimación.TiempoTranscurrido();
                 aceleración = MathUtil.SmoothStep(tempoIniciación / tiempoIniciación);
                 aceleración = MathUtil.Clamp((aceleración + aceleraciónInicial), aceleraciónInicial, minVelocidad);
             }
             else
             {
                 // Aceleración máxima
-                tempoAceleración += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                tempoAceleración += SistemaAnimación.TiempoTranscurrido();
                 aceleración = MathUtil.SmoothStep(tempoAceleración / tiempoAceleración);
                 aceleración = MathUtil.Clamp((aceleración + minVelocidad), minVelocidad, maxVelocidad);
             }
@@ -154,7 +154,7 @@ public class ControladorMovimiento : StartupScript
         rotaciónX = MathUtil.Clamp(rotaciónX, -MathUtil.PiOverTwo, MathUtil.PiOverTwo);
 
         rotaciónZ = (entradas.X * aceleración) * -0.025f;
-        tiempoRotación = (float)Game.UpdateTime.Elapsed.TotalSeconds * 10;
+        tiempoRotación = SistemaAnimación.TiempoTranscurrido() * 10;
 
         cabeza.Entity.Transform.Rotation = Quaternion.RotationX(rotaciónX);
         cámara.Entity.Transform.Rotation = Quaternion.Lerp(cámara.Entity.Transform.Rotation, Quaternion.RotationZ(rotaciónZ), tiempoRotación);

@@ -90,7 +90,7 @@ public class ControladorPersecusión : StartupScript
         }
 
         // Busca cada cierto tiempo
-        tempoBusqueda -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+        tempoBusqueda -= SistemaAnimación.TiempoTranscurrido();
         if(tempoBusqueda <= 0)
             BuscarObjetivo();
 
@@ -116,7 +116,7 @@ public class ControladorPersecusión : StartupScript
         direciónJugador.Y = 0f;
         direciónJugador.Normalize();
 
-        tiempoRotación = velocidad * (float)Game.UpdateTime.Elapsed.TotalSeconds;
+        tiempoRotación = velocidad * SistemaAnimación.TiempoTranscurrido();
         cuerpo.Orientation = Quaternion.Lerp(cuerpo.Orientation, Quaternion.LookRotation(direciónJugador, Vector3.UnitY), tiempoRotación);
     }
 
@@ -141,7 +141,7 @@ public class ControladorPersecusión : StartupScript
         // Movimiento
         if (distanciaRuta > 0.1f)
         {
-            tempoAceleración += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tempoAceleración += SistemaAnimación.TiempoTranscurrido();
             aceleración = MathUtil.SmoothStep(tempoAceleración / tiempoAceleración);
             
             // Mientras salta va directo al jugador
@@ -151,7 +151,7 @@ public class ControladorPersecusión : StartupScript
                 dirección = ControladorPartida.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector;
             
             dirección.Normalize();
-            dirección *= (float)Game.UpdateTime.Elapsed.TotalSeconds;                        
+            dirección *= SistemaAnimación.TiempoTranscurrido();                        
             cuerpo.SetVelocity(dirección * 100 * velocidad * aceleración);
             animador.Caminar(aceleración);
         }
@@ -172,7 +172,7 @@ public class ControladorPersecusión : StartupScript
 
         dirección = persecutor.ObtenerPosiciónCircular(índiceTrigonométrico) - Entity.Transform.WorldMatrix.TranslationVector;
         dirección.Normalize();
-        dirección *= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+        dirección *= SistemaAnimación.TiempoTranscurrido();
         cuerpo.SetVelocity(dirección * 100 * velocidad * distanciaRuta * 0.2f);
         animador.Caminar(distanciaRuta * 0.2f);
     }

@@ -3,6 +3,7 @@ using Stride.Core.Mathematics;
 using Stride.Engine;
 
 namespace Bozobaralika;
+using static Utilidades;
 using static Constantes;
 
 public class ControladorPoder : AsyncScript
@@ -31,12 +32,11 @@ public class ControladorPoder : AsyncScript
         while (Game.IsRunning)
         {
             var colisión = await cuerpo.NewCollision();
+            var jugador = RetornaJugador(colisión);
 
-            var jugador = colisión.ColliderA.Entity.Get<ControladorJugador>();
-            if (jugador == null)
-                jugador = colisión.ColliderB.Entity.Get<ControladorJugador>();
+            if (jugador != null)
+                Obtener(jugador);
 
-            Obtener(jugador);
             await Script.NextFrame();
         }
     }
@@ -58,7 +58,7 @@ public class ControladorPoder : AsyncScript
     {
         while (activo)
         {
-            modelo.Rotation *= Quaternion.RotationY(0.01f * velocidadRotación);
+            modelo.Rotation *= Quaternion.RotationY(velocidadRotación * SistemaAnimación.TiempoTranscurrido());
             await Task.Delay(1);
         }
     }
@@ -75,7 +75,7 @@ public class ControladorPoder : AsyncScript
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             modelo.Position = Vector3.Lerp(inicio, objetivo, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
             await Task.Delay(1);
         }
 
@@ -100,7 +100,7 @@ public class ControladorPoder : AsyncScript
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             modelo.Scale = Vector3.Lerp(inicio, Vector3.Zero, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
             await Task.Delay(1);
         }
 

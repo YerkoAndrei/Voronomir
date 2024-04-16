@@ -27,12 +27,8 @@ public class ControladorActivador : AsyncScript
             if (!activado)
             {
                 var colisión = await cuerpo.NewCollision();
-
-                var jugador = colisión.ColliderA.Entity.Get<ControladorJugador>();
-                if (jugador == null)
-                    jugador = colisión.ColliderB.Entity.Get<ControladorJugador>();
-
-                Activar();
+                if(TocaJugador(colisión))
+                    Activar();
             }
             await Script.NextFrame();
         }

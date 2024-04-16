@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
@@ -126,7 +125,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
     {
         while (cuerpo.Enabled)
         {
-            tempo -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tempo -= SistemaAnimación.TiempoTranscurrido();
             if (tempo <= 0)
                 Destruir();
 

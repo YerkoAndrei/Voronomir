@@ -74,7 +74,7 @@ public class SistemaEscenas : SyncScript
 
         if (ocultando)
         {
-            tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoDelta += SistemaAnimación.TiempoTranscurrido();
             tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónLerp);
             panelOscuro.BackgroundColor = Color.Lerp(Color.Transparent, Color.Black, tiempo);
 
@@ -85,7 +85,7 @@ public class SistemaEscenas : SyncScript
 
         if (abriendo)
         {
-            tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoDelta += SistemaAnimación.TiempoTranscurrido();
             tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónLerp);
             panelOscuro.BackgroundColor = Color.Lerp(Color.Black, Color.Transparent, tiempo);
 

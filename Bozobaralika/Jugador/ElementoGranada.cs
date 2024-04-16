@@ -77,7 +77,7 @@ public class ElementoGranada : AsyncScript, IProyectil
     {
         while (cuerpo.Enabled)
         {
-            tempo -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tempo -= SistemaAnimación.TiempoTranscurrido();
             if (tempo <= 0)
                 Destruir();
 

@@ -3,6 +3,7 @@ using Stride.Core.Mathematics;
 using Stride.Engine;
 
 namespace Bozobaralika;
+using static Utilidades;
 using static Constantes;
 
 public class ControladorBotón : AsyncScript
@@ -22,12 +23,10 @@ public class ControladorBotón : AsyncScript
         while (Game.IsRunning)
         {
             var colisión = await cuerpo.NewCollision();
+            var jugador = RetornaJugador(colisión);
 
-            var jugador = colisión.ColliderA.Entity.Get<ControladorJugador>();
-            if (jugador == null)
-                jugador = colisión.ColliderB.Entity.Get<ControladorJugador>();
-
-            Activar(jugador);
+            if (jugador != null)
+                Activar(jugador);
 
             await Script.NextFrame();            
         }
@@ -61,7 +60,7 @@ public class ControladorBotón : AsyncScript
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             modelo.Position = Vector3.Lerp(inicio, posiciónActivado, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
             await Task.Delay(1);
         }
     }

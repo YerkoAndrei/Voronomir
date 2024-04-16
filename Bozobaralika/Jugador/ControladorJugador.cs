@@ -71,11 +71,11 @@ public class ControladorJugador : SyncScript, IDañable
 
         // Poderes        
         if (tiempoDaño > 0)
-            tiempoDaño -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoDaño -= SistemaAnimación.TiempoTranscurrido();
         if (tiempoInvencibilidad > 0)
-            tiempoInvencibilidad -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoInvencibilidad -= SistemaAnimación.TiempoTranscurrido();
         if (tiempoRapidez > 0)
-            tiempoRapidez -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoRapidez -= SistemaAnimación.TiempoTranscurrido();
 
         if(tiempoDaño <= 0)
             interfaz.ActivarPoder(Poderes.daño, false);
@@ -109,7 +109,7 @@ public class ControladorJugador : SyncScript, IDañable
             vida = MathUtil.Clamp(vida, 0, vidaMax);
             interfaz.ActualizarVida(vida / vidaMax);
 
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
             await Task.Delay(1);
         }
 
@@ -257,7 +257,7 @@ public class ControladorJugador : SyncScript, IDañable
                 tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
                 cámara.Entity.Transform.Rotation = Quaternion.Lerp(inicial, objetivo, tiempo);
 
-                tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                tiempoLerp += SistemaAnimación.TiempoTranscurrido();
                 await Task.Delay(1);
             }
         }
@@ -275,7 +275,7 @@ public class ControladorJugador : SyncScript, IDañable
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             cabeza.Position = Vector3.Lerp(retroceso, posiciónCabeza, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
             await Task.Delay(1);
         }
         cabeza.Position = posiciónCabeza;

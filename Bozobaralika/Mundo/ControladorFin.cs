@@ -2,6 +2,7 @@
 using Stride.Engine;
 
 namespace Bozobaralika;
+using static Utilidades;
 
 public class ControladorFin : AsyncScript
 {
@@ -14,15 +15,11 @@ public class ControladorFin : AsyncScript
         while (Game.IsRunning)
         {
             var colisión = await cuerpo.NewCollision();
+            var jugador = RetornaJugador(colisión);
 
-            var jugador = colisión.ColliderA.Entity.Get<ControladorJugador>();
-            if (jugador == null)
-                jugador = colisión.ColliderB.Entity.Get<ControladorJugador>();
+            if (jugador != null)
+                Finalizar();
 
-            if (jugador == null)
-                continue;
-
-            Finalizar();
             await Script.NextFrame();
         }
     }

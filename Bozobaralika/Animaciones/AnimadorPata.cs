@@ -139,7 +139,7 @@ public class AnimadorPata : SyncScript
             else
                 objetivo.Position = baseIzq + Vector3.Lerp(objetivoKI0, objetivoKI1, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
             await Task.Delay(1);
         }
 
@@ -166,7 +166,7 @@ public class AnimadorPata : SyncScript
             else
                 Entity.Transform.Position = Vector3.Lerp(objetivoPrueba0, objetivoPrueba1, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
             await Task.Delay(1);
         }
 

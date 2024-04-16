@@ -68,7 +68,7 @@ public class AnimadorArmas : AsyncScript
                 modeloIzquierda.Entity.Transform.Rotation = Quaternion.Lerp(inicialIzquierda * fuerzaAnimación, objetivoIzquierda * fuerzaAnimación, tiempo);
                 modeloDerecha.Entity.Transform.Rotation = Quaternion.Lerp(inicialDerecha * fuerzaAnimación, objetivoDerecha * fuerzaAnimación, tiempo);
 
-                tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                tiempoLerp += SistemaAnimación.TiempoTranscurrido();
 
                 // Vuelta
                 if (tiempoLerp >= duraciónAnimación)
@@ -147,7 +147,7 @@ public class AnimadorArmas : AsyncScript
             ejeIzquierda.Rotation = Quaternion.Lerp(rotaciónEntraIzquierda, Quaternion.Identity, tiempo);
             ejeDerecha.Rotation = Quaternion.Lerp(rotaciónEntraDerecha, Quaternion.Identity, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
             await Task.Delay(1);
         }
 
@@ -176,7 +176,7 @@ public class AnimadorArmas : AsyncScript
             ejeIzquierda.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
             ejeDerecha.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
             await Task.Delay(1);
         }
 
@@ -232,7 +232,7 @@ public class AnimadorArmas : AsyncScript
                             ejeIzquierda.Position = Vector3.Lerp(posiciónDisparoIzquierda, posiciónInicialIzquierda, tiempoIzquierda);
                             break;
                     }
-                    tiempoLerpIzquierda += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                    tiempoLerpIzquierda += SistemaAnimación.TiempoTranscurrido();
                     await Task.Delay(1);
                 }
                 break;
@@ -242,7 +242,7 @@ public class AnimadorArmas : AsyncScript
                     tiempoDerecha = SistemaAnimación.EvaluarSuave(tiempoLerpDerecha / duración);
 
                     ejeDerecha.Position = Vector3.Lerp(posiciónDisparoDerecha, posiciónInicialDerecha, tiempoDerecha);
-                    tiempoLerpDerecha += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                    tiempoLerpDerecha += SistemaAnimación.TiempoTranscurrido();
                     await Task.Delay(1);
                 }
                 break;
@@ -296,7 +296,7 @@ public class AnimadorArmas : AsyncScript
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             espada.Rotation = Quaternion.Lerp(rotaciónAtaque, Quaternion.Identity, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
             await Task.Delay(1);
         }
         espada.Rotation = Quaternion.Identity;

@@ -129,7 +129,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
             if (velocidadRotación > 0)
             {
                 dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorPartida.ObtenerPosiciónJugador() + altura));
-                Entity.Transform.Rotation = Quaternion.Lerp(Entity.Transform.Rotation, Quaternion.LookRotation(dirección, Vector3.UnitY), velocidadRotación * (float)Game.UpdateTime.Elapsed.TotalSeconds);
+                Entity.Transform.Rotation = Quaternion.Lerp(Entity.Transform.Rotation, Quaternion.LookRotation(dirección, Vector3.UnitY), velocidadRotación * SistemaAnimación.TiempoTranscurrido());
 
                 Entity.Transform.UpdateWorldMatrix();
                 cuerpo.UpdatePhysicsTransformation();
@@ -139,7 +139,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
                 velocidadRotación += 0.01f;
             }
 
-            tempo -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tempo -= SistemaAnimación.TiempoTranscurrido();
             if (tempo <= 0)
                 Destruir();
 

@@ -36,14 +36,23 @@ public static class Utilidades
                 colisión.ColliderB.CollisionGroup == CollisionFilterGroups.SensorTrigger);
     }
 
+    public static bool TocaEnemigo(Collision colisión)
+    {
+        return (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.KinematicFilter || colisión.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter);
+    }
+
     public static bool TocaJugador(Collision colisión)
     {
         return (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.CharacterFilter || colisión.ColliderB.CollisionGroup == CollisionFilterGroups.CharacterFilter);
     }
 
-    public static bool TocaEnemigo(Collision colisión)
+    public static ControladorJugador RetornaJugador(Collision colisión)
     {
-        return (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.KinematicFilter || colisión.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter);
+        var jugador = colisión.ColliderA.Entity.Get<ControladorJugador>();
+        if (jugador == null)
+            jugador = colisión.ColliderB.Entity.Get<ControladorJugador>();
+
+        return jugador;
     }
 
     public static T ObtenerInterfaz<T>(Entity entidad)
