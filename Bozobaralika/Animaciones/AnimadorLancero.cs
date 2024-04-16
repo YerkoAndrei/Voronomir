@@ -64,8 +64,8 @@ public class AnimadorLancero : StartupScript, IAnimador
 
     public void Caminar(float velocidad)
     {
-        esqueleto.NodeTransformations[idPiernas[0]].Transform.Rotation *= Quaternion.RotationY(-0.2f * velocidad);
-        esqueleto.NodeTransformations[idPiernas[1]].Transform.Rotation *= Quaternion.RotationY(0.2f * velocidad);
+        esqueleto.NodeTransformations[idPiernas[0]].Transform.Rotation *= Quaternion.RotationY(-velocidad * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
+        esqueleto.NodeTransformations[idPiernas[1]].Transform.Rotation *= Quaternion.RotationY(velocidad * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
 
         ApuntarLanza();
     }

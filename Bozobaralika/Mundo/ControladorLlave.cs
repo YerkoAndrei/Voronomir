@@ -61,7 +61,7 @@ public class ControladorLlave : AsyncScript
             switch (llave)
             {
                 case Llaves.azul:
-                    modelo.Rotation *= Quaternion.RotationY(velocidadRotación * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
+                    modelo.Rotation *= Quaternion.RotationY(-velocidadRotación * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
                     break;
                 case Llaves.roja:
                     modelo.Rotation *= Quaternion.RotationY(velocidadRotación * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
