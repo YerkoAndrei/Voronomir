@@ -18,14 +18,14 @@ public class ControladorBotón : AsyncScript
     public override async Task Execute()
     {
         cuerpo = Entity.Get<PhysicsComponent>();
-        posiciónActivado = modelo.Position + new Vector3(0, -0.5f, 0);
+        posiciónActivado = modelo.Position + new Vector3(0, -0.4f, 0);
 
         while (Game.IsRunning)
         {
             var colisión = await cuerpo.NewCollision();
             var jugador = RetornaJugador(colisión);
 
-            if (jugador != null)
+            if (jugador != null && cuerpo.Enabled)
                 Activar(jugador);
 
             await Script.NextFrame();            
@@ -34,9 +34,6 @@ public class ControladorBotón : AsyncScript
 
     private void Activar(ControladorJugador controlador)
     {
-        if (controlador == null)
-            return;
-
         // Llave necesaria
         if (!controlador.ObtenerLlave(llave))
             return;
@@ -51,7 +48,7 @@ public class ControladorBotón : AsyncScript
     private async void AnimarActivación()
     {
         var inicio = modelo.Position;
-        float duración = 0.5f;
+        float duración = 0.4f;
         float tiempoLerp = 0;
         float tiempo = 0;
 

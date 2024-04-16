@@ -25,7 +25,7 @@ public class ControladorPoder : AsyncScript
         posiciónAbajo = modelo.Position;
 
         activo = true;
-        velocidadRotación = 1;
+        velocidadRotación = 2;
         AnimarMovimiento(posiciónArriba);
         Rotar();
 
@@ -34,7 +34,7 @@ public class ControladorPoder : AsyncScript
             var colisión = await cuerpo.NewCollision();
             var jugador = RetornaJugador(colisión);
 
-            if (jugador != null)
+            if (jugador != null && cuerpo.Enabled)
                 Obtener(jugador);
 
             await Script.NextFrame();
@@ -43,11 +43,8 @@ public class ControladorPoder : AsyncScript
 
     private void Obtener(ControladorJugador controlador)
     {
-        if (controlador == null)
-            return;
-
-        velocidadRotación = 10;
         cuerpo.Enabled = false;
+        velocidadRotación = 30;
         controlador.ActivarPoder(poder);
         AnimarFin();
 
@@ -66,7 +63,7 @@ public class ControladorPoder : AsyncScript
     private async void AnimarMovimiento(Vector3 objetivo)
     {
         var inicio = modelo.Position;
-        float duración = 1f;
+        float duración = 0.5f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
@@ -91,7 +88,7 @@ public class ControladorPoder : AsyncScript
     private async void AnimarFin()
     {
         var inicio = modelo.Scale;
-        float duración = 1f;
+        float duración = 0.5f;
         float tiempoLerp = 0;
         float tiempo = 0;
 

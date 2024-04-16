@@ -26,11 +26,12 @@ public class ElementoGranada : AsyncScript, IProyectil
         while (Game.IsRunning)
         {
             await cuerpo.NewCollision();
-            if (!cuerpo.Enabled)
-                continue;
+            if (cuerpo.Enabled)
+            {
+                CrearImpacto();
+                Destruir();
+            }
 
-            CrearImpacto();
-            Destruir();
             await Script.NextFrame();
         }
     }

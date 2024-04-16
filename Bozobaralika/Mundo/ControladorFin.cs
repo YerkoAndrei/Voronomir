@@ -17,7 +17,7 @@ public class ControladorFin : AsyncScript
             var colisión = await cuerpo.NewCollision();
             var jugador = RetornaJugador(colisión);
 
-            if (jugador != null)
+            if (jugador != null && cuerpo.Enabled)
                 Finalizar();
 
             await Script.NextFrame();
@@ -26,6 +26,7 @@ public class ControladorFin : AsyncScript
 
     private void Finalizar()
     {
+        cuerpo.Enabled = false;
         ControladorPartida.Finalizar();
     }
 }

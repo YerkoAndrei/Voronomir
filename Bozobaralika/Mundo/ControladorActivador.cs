@@ -11,7 +11,6 @@ public class ControladorActivador : AsyncScript
 
     private IActivable[] interfaces;
     private PhysicsComponent cuerpo;
-    private bool activado;
 
     public override async Task Execute()
     {
@@ -24,19 +23,18 @@ public class ControladorActivador : AsyncScript
 
         while (Game.IsRunning)
         {
-            if (!activado)
-            {
-                var colisión = await cuerpo.NewCollision();
-                if(TocaJugador(colisión))
-                    Activar();
-            }
+            var colisión = await cuerpo.NewCollision();
+
+            if (TocaJugador(colisión) && cuerpo.Enabled)
+                Activar();
+
             await Script.NextFrame();
         }
     }
 
     private void Activar()
     {
-        activado = true;
+        cuerpo.Enabled = false;
         foreach (var activable in interfaces)
         {
             activable.Activar();

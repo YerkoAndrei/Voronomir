@@ -21,11 +21,11 @@ public class ControladorLlave : AsyncScript
     {
         cuerpo = Entity.Get<PhysicsComponent>();
 
-        posiciónArriba = modelo.Position + new Vector3(0, 0.2f, 0);
+        posiciónArriba = modelo.Position + new Vector3(0, 0.4f, 0);
         posiciónAbajo = modelo.Position;
 
         activo = true;
-        velocidadRotación = 1;
+        velocidadRotación = 2;
         AnimarMovimiento(posiciónArriba);
         Rotar();
 
@@ -34,7 +34,7 @@ public class ControladorLlave : AsyncScript
             var colisión = await cuerpo.NewCollision();
             var jugador = RetornaJugador(colisión);
 
-            if (jugador != null)
+            if (jugador != null && cuerpo.Enabled)
                 Obtener(jugador);
 
             await Script.NextFrame();
@@ -43,11 +43,8 @@ public class ControladorLlave : AsyncScript
 
     private void Obtener(ControladorJugador controlador)
     {
-        if (controlador == null)
-            return;
-
-        velocidadRotación = 10;
         cuerpo.Enabled = false;
+        velocidadRotación = 30;
         controlador.GuardarLlave(llave);
         AnimarFin();
 
@@ -74,7 +71,7 @@ public class ControladorLlave : AsyncScript
     private async void AnimarMovimiento(Vector3 objetivo)
     {
         var inicio = modelo.Position;
-        float duración = 1f;
+        float duración = 0.5f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
@@ -99,7 +96,7 @@ public class ControladorLlave : AsyncScript
     private async void AnimarFin()
     {
         var inicio = modelo.Scale;
-        float duración = 1f;
+        float duración = 0.5f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
