@@ -71,11 +71,11 @@ public class ControladorJugador : SyncScript, IDañable
 
         // Poderes        
         if (tiempoDaño > 0)
-            tiempoDaño -= SistemaAnimación.TiempoTranscurrido();
+            tiempoDaño -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
         if (tiempoInvencibilidad > 0)
-            tiempoInvencibilidad -= SistemaAnimación.TiempoTranscurrido();
+            tiempoInvencibilidad -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
         if (tiempoRapidez > 0)
-            tiempoRapidez -= SistemaAnimación.TiempoTranscurrido();
+            tiempoRapidez -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
 
         if(tiempoDaño <= 0)
             interfaz.ActivarPoder(Poderes.daño, false);
@@ -109,7 +109,7 @@ public class ControladorJugador : SyncScript, IDañable
             vida = MathUtil.Clamp(vida, 0, vidaMax);
             interfaz.ActualizarVida(vida / vidaMax);
 
-            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
 
@@ -257,7 +257,7 @@ public class ControladorJugador : SyncScript, IDañable
                 tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
                 cámara.Entity.Transform.Rotation = Quaternion.Lerp(inicial, objetivo, tiempo);
 
-                tiempoLerp += SistemaAnimación.TiempoTranscurrido();
+                tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
                 await Task.Delay(1);
             }
         }
@@ -275,7 +275,7 @@ public class ControladorJugador : SyncScript, IDañable
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             cabeza.Position = Vector3.Lerp(retroceso, posiciónCabeza, tiempo);
 
-            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
         cabeza.Position = posiciónCabeza;

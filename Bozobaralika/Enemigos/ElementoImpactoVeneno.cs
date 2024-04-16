@@ -46,7 +46,7 @@ public class ElementoImpactoVeneno : StartupScript, IImpacto
             tiempo = tiempoLerp / tiempoVida;
             Entity.Transform.Scale = Vector3.Lerp(Vector3.One, Vector3.Zero, tiempo);
 
-            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
 

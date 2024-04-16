@@ -99,7 +99,7 @@ public class AnimadorLancero : StartupScript, IAnimador
             esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = Quaternion.Lerp(rotaciónAtaque0, rotaciónInicio0, tiempo);
             esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = Quaternion.Lerp(rotaciónAtaque1, rotaciónInicio1, tiempo);
 
-            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
 

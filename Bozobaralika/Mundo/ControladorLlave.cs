@@ -61,10 +61,10 @@ public class ControladorLlave : AsyncScript
             switch (llave)
             {
                 case Llaves.azul:
-                    modelo.Rotation *= Quaternion.RotationY(0.01f * velocidadRotación);
+                    modelo.Rotation *= Quaternion.RotationY(velocidadRotación * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
                     break;
                 case Llaves.roja:
-                    modelo.Rotation *= Quaternion.RotationY(-0.01f * velocidadRotación);
+                    modelo.Rotation *= Quaternion.RotationY(velocidadRotación * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
                     break;
             }
             await Task.Delay(1);
@@ -83,7 +83,7 @@ public class ControladorLlave : AsyncScript
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             modelo.Position = Vector3.Lerp(inicio, objetivo, tiempo);
 
-            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
 
@@ -108,7 +108,7 @@ public class ControladorLlave : AsyncScript
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             modelo.Scale = Vector3.Lerp(inicio, Vector3.Zero, tiempo);
 
-            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
 

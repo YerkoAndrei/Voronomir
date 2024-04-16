@@ -46,7 +46,7 @@ public class ControladorPartida : SyncScript
         if (!activo)
             return;
 
-        tiempo += SistemaAnimación.TiempoTranscurrido();
+        tiempo += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
     }
 
     public static void Pausar(bool activo)

@@ -18,7 +18,7 @@ public class AnimadorDron : StartupScript, IAnimador
     public void Actualizar()
     {
         dirección = Vector3.Normalize(ControladorPartida.ObtenerCabezaJugador() - modelo.WorldMatrix.TranslationVector);
-        modelo.Rotation = Quaternion.Lerp(modelo.Rotation, Quaternion.LookRotation(dirección, Vector3.UnitY), 10 * SistemaAnimación.TiempoTranscurrido());
+        modelo.Rotation = Quaternion.Lerp(modelo.Rotation, Quaternion.LookRotation(dirección, Vector3.UnitY), 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
     }
 
     public void Caminar(float velocidad)

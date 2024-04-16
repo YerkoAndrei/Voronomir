@@ -40,11 +40,6 @@ public class SistemaAnimación : SyncScript
             Animar();
     }
 
-    public static float TiempoTranscurrido()
-    {
-        return (float)instancia.Game.UpdateTime.Elapsed.TotalSeconds * (float)instancia.Game.UpdateTime.Factor;
-    }
-
     public static float EvaluarSuave(float tiempo)
     {
         return MathUtil.SmoothStep(tiempo);
@@ -117,7 +112,7 @@ public class SistemaAnimación : SyncScript
 
     private void Animar()
     {
-        tiempoDelta += SistemaAnimación.TiempoTranscurrido();
+        tiempoDelta += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
         switch (tipoCurva)
         {
             case TipoCurva.nada:

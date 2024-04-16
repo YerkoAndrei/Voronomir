@@ -58,7 +58,7 @@ public class ControladorPoder : AsyncScript
     {
         while (activo)
         {
-            modelo.Rotation *= Quaternion.RotationY(velocidadRotación * SistemaAnimación.TiempoTranscurrido());
+            modelo.Rotation *= Quaternion.RotationY(velocidadRotación * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
             await Task.Delay(1);
         }
     }
@@ -75,7 +75,7 @@ public class ControladorPoder : AsyncScript
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             modelo.Position = Vector3.Lerp(inicio, objetivo, tiempo);
 
-            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
 
@@ -100,7 +100,7 @@ public class ControladorPoder : AsyncScript
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             modelo.Scale = Vector3.Lerp(inicio, Vector3.Zero, tiempo);
 
-            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
 

@@ -168,7 +168,7 @@ public class ControladorArmas : StartupScript
         // Metralleta
         if (Input.IsMouseButtonDown(MouseButton.Left) && armaActual == Armas.metralleta && !metralletaAtascada)
         {
-            tempoMetralleta -= SistemaAnimación.TiempoTranscurrido();
+            tempoMetralleta -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
 
             // Permite disparo singular
             if ((primerDisparoMetralleta + 0.12f) < (float)Game.UpdateTime.Total.TotalSeconds)
@@ -544,7 +544,7 @@ public class ControladorArmas : StartupScript
     private void EnfriarMetralleta()
     {
         if (tempoMetralleta < tiempoMaxMetralleta)
-            tempoMetralleta += SistemaAnimación.TiempoTranscurrido();
+            tempoMetralleta += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
     }
 
     private async void AtascarMetralleta()

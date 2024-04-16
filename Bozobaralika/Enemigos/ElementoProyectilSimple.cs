@@ -125,7 +125,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
     {
         while (cuerpo.Enabled)
         {
-            tempo -= SistemaAnimación.TiempoTranscurrido();
+            tempo -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             if (tempo <= 0)
                 Destruir();
 

@@ -29,7 +29,7 @@ public class ControladorPuerta : StartupScript, IActivable
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             modelo.Position = Vector3.Lerp(inicio, posiciónAbierta, tiempo);
 
-            tiempoLerp += SistemaAnimación.TiempoTranscurrido();
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
     }
