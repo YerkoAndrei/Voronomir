@@ -45,7 +45,8 @@ public class ElementoExplosión : StartupScript, IImpacto
 
     private async void EsperarCuadro()
     {
-        await Task.Delay(10);
+        // 1 frame de física
+        await Task.Delay(17);
         CalcularDaños();
         Apagar();
     }
