@@ -8,12 +8,12 @@ namespace Bozobaralika;
 
 public class ElementoExplosión : StartupScript, IImpacto
 {
-    public float distanciaMáxima;
     public ModelComponent modelo;
 
     public static CollisionFilterGroupFlags colisionesExplosión;
     private RigidbodyComponent cuerpo;
     private Vector3 escalaInicial;
+    private float daño;
 
     public override void Start()
     {
@@ -28,24 +28,29 @@ public class ElementoExplosión : StartupScript, IImpacto
         cuerpo.Enabled = false;
     }
 
-    public void Iniciar(Vector3 posición, Vector3 normal, float daño)
+    public void Iniciar(Vector3 posición, Vector3 normal, float _daño)
     {
+        daño = _daño;
         Entity.Transform.Position = posición;
-        Entity.Transform.Rotation = Quaternion.Identity;
         Entity.Transform.UpdateWorldMatrix();
 
         modelo.Entity.Transform.Scale = escalaInicial;
         modelo.Enabled = true;
 
         cuerpo.Enabled = true;
-        cuerpo.UpdatePhysicsTransformation(true);
-        cuerpo.Activate(true);
+        cuerpo.UpdatePhysicsTransformation();
 
-        CalcularDaños(daño);
+        EsperarCuadro();
+    }
+
+    private async void EsperarCuadro()
+    {
+        await Task.Delay(10);
+        CalcularDaños();
         Apagar();
     }
 
-    private void CalcularDaños(float daño)
+    private void CalcularDaños()
     {
         // Encuentra tocados por explosión
         var colisiones = cuerpo.Collisions.ToArray();
@@ -61,27 +66,13 @@ public class ElementoExplosión : StartupScript, IImpacto
             if (dañable == null)
                 continue;
 
-            // Calcula distancia con rayo para evitar obstáculos
-            // Desde explosión (10cm) hasta cintura (1m)
-            var dirección = (Entity.Transform.WorldMatrix.TranslationVector + (Vector3.UnitY * 0.1f)) + (dañable.Entity.Transform.WorldMatrix.TranslationVector + Vector3.UnitY) * distanciaMáxima;
-            var resultado = this.GetSimulation().Raycast(Entity.Transform.WorldMatrix.TranslationVector,
-                                                         dirección,
-                                                         CollisionFilterGroups.DefaultFilter,
-                                                         colisionesExplosión);
-
-            if (!resultado.Succeeded || resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
-                continue;
-
-            // Daña según distancia
-            var distancia = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
-            var multiplicador = 1f - (distancia / distanciaMáxima);
-            dañable.RecibirDaño(daño * multiplicador);
+            dañable.RecibirDaño(daño);
         }
     }
 
     private async void Apagar()
     {
-        float duración = 0.2f;
+        float duración = 0.1f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
@@ -94,7 +85,6 @@ public class ElementoExplosión : StartupScript, IImpacto
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
-
         modelo.Enabled = false;
     }
 }
