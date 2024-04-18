@@ -8,20 +8,16 @@ using static Constantes;
 public class ControladorArmaRango : StartupScript
 {
     public Prefab prefabProyectil;
-    public Prefab prefabImpacto;
 
     private Enemigos disparador;
     private IProyectil[] proyectiles;
-    private IImpacto[] impactos;
 
     private Vector3 alturaObjetivo;
     private float velocidadRotación;
     private float velocidad;
     private float daño;
     private int proyectilActual;
-    private int impactoActual;
     private int maxProyectiles;
-    private int maxImpactos;
 
     public void Iniciar(float _velocidad, float _velocidadRotación, Vector3 _alturaObjetivo, Enemigos _disparador)
     {
@@ -31,7 +27,6 @@ public class ControladorArmaRango : StartupScript
         disparador = _disparador;
 
         maxProyectiles = 4;
-        maxImpactos = maxProyectiles * 2;
 
         // Proyectiles
         proyectiles = new IProyectil[maxProyectiles];
@@ -40,22 +35,6 @@ public class ControladorArmaRango : StartupScript
             var proyectil = prefabProyectil.Instantiate()[0];
             proyectiles[i] = ObtenerInterfaz<IProyectil>(proyectil);
             Entity.Scene.Entities.Add(proyectil);
-
-            // Impactos son explosiones o veneno
-            if (prefabImpacto != null)
-                proyectiles[i].AsignarImpacto(IniciarImpacto);
-        }
-
-        // Impactos
-        if (prefabImpacto != null)
-        {
-            impactos = new IImpacto[maxImpactos];
-            for (int i = 0; i < maxImpactos; i++)
-            {
-                var impacto = prefabImpacto.Instantiate()[0];
-                impactos[i] = ObtenerInterfaz<IImpacto>(impacto);
-                Entity.Scene.Entities.Add(impacto);
-            }
         }
     }
 
@@ -73,14 +52,5 @@ public class ControladorArmaRango : StartupScript
         proyectilActual++;
         if (proyectilActual >= maxProyectiles)
             proyectilActual = 0;
-    }
-
-    public void IniciarImpacto(Vector3 posición, Vector3 normal)
-    {
-        impactos[impactoActual].Iniciar(posición, normal, daño);
-
-        impactoActual++;
-        if (impactoActual >= maxImpactos)
-            impactoActual = 0;
     }
 }

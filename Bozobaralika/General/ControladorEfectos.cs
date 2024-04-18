@@ -14,6 +14,8 @@ public class ControladorEfectos : StartupScript
     public Prefab prefabGranada;
     public Prefab prefabExplosión;
 
+    public Prefab prefabImpactoAraña;
+
     // Marcas
     private ElementoMarca[] marcas;
     private int marcaActual;
@@ -32,9 +34,10 @@ public class ControladorEfectos : StartupScript
     private int maxGranadas;
     private int maxExplosiones;
 
-    // marcas
-    // efectos
-    // impactos
+    // Araña
+    private IImpacto[] impactosAraña;
+    private int impactoArañaActual;
+    private int maxImpactosAraña;
 
     public override void Start()
     {
@@ -80,7 +83,18 @@ public class ControladorEfectos : StartupScript
             Entity.Scene.Entities.Add(explosión);
         }
 
-        // Cofre proyectiles enemigos
+        // PENDIENTE: buscar arañas
+        // Cofre impactos enemigos
+
+        // Araña
+        maxImpactosAraña = 10;
+        impactosAraña = new IImpacto[maxImpactosAraña];
+        for (int i = 0; i < maxImpactosAraña; i++)
+        {
+            var impacto = prefabImpactoAraña.Instantiate()[0];
+            impactosAraña[i] = ObtenerInterfaz<IImpacto>(impacto);
+            Entity.Scene.Entities.Add(impacto);
+        }
     }
 
     public static void IniciarEfectoEntorno(Armas arma, Vector3 posición, Vector3 normal)
@@ -164,6 +178,15 @@ public class ControladorEfectos : StartupScript
     }
 
     // Enemigos
+    public static void IniciarEfectoEnemigo(Enemigos enemigo, Vector3 posición, Vector3 normal)
+    {
+        instancia.efectos[instancia.efectoActual].IniciarEfectoEnemigo(enemigo, 1, posición, normal);
+        instancia.efectoActual++;
+
+        if (instancia.efectoActual >= instancia.maxEfectos)
+            instancia.efectoActual = 0;
+    }
+
     public static void IniciarProyectil(Enemigos enemigo, float daño, Vector3 posición, Vector3 normal)
     {
 
@@ -171,6 +194,15 @@ public class ControladorEfectos : StartupScript
 
     public static void IniciarImpacto(Enemigos enemigo, float daño, Vector3 posición, Vector3 normal)
     {
+        switch (enemigo)
+        {
+            case Enemigos.rangoPesado:
+                instancia.impactosAraña[instancia.impactoArañaActual].Iniciar(posición, normal, daño);
 
+                instancia.impactoArañaActual++;
+                if (instancia.impactoArañaActual >= instancia.maxImpactosAraña)
+                    instancia.impactoArañaActual = 0;
+                break;
+        }
     }
 }

@@ -206,7 +206,6 @@ Hierarchy:
                     c2755b36878a560282a863adea320430: !Bozobaralika.ControladorArmaRango,Bozobaralika.Proyecto
                         Id: d7fc863f-43cd-4879-a47f-ea890762fdc2
                         prefabProyectil: 950b1dd4-c019-4d1b-950c-b9d49b6d11f9:Prefabs/Proyectiles/ProyectilBabosa
-                        prefabImpacto: null
         -   Folder: null
             Entity:
                 Id: cbb09c9d-4595-4383-b865-2b7620927711

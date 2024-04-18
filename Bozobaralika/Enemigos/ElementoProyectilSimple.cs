@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Stride.Core;
 using Stride.Core.Mathematics;
 using Stride.Engine;
@@ -18,7 +17,6 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
     public Enemigos disparador;
 
     private RigidbodyComponent cuerpo;
-    private Action<Vector3, Vector3> iniciarImpacto;
     private float velocidad;
     private float tempo;
     private float daño;
@@ -36,15 +34,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
 
             if (TocaEntorno(colisión))
             {
-                // Impacto
-                if (iniciarImpacto != null)
-                {
-                    if (cola != null)
-                        CrearImpacto();
-                    else
-                        iniciarImpacto.Invoke(Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
-                }
-
+                CrearImpacto();
                 Destruir();
                 continue;
             }
@@ -78,7 +68,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
 
     public void Destruir()
     {
-        // PENDIENTE: efecto disparo enemigo
+        ControladorEfectos.IniciarEfectoEnemigo(disparador, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
         Apagar();
     }
 
@@ -90,11 +80,6 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
         cuerpo.Enabled = false;
     }
 
-    public void AsignarImpacto(Action<Vector3, Vector3> _iniciarImpacto)
-    {
-        iniciarImpacto = _iniciarImpacto;
-    }
-
     public void IniciarPersecutor(float _velocidadRotación, Vector3 _altura)
     {
 
@@ -102,7 +87,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
 
     public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, Enemigos _disparador)
     {
-        Destruir();
+        Apagar();
 
         Entity.Transform.Position = _posición;
         Entity.Transform.Rotation = _rotación;
@@ -138,6 +123,9 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
 
     private void CrearImpacto()
     {
+        if (cola == null)
+            return;
+
         // Rayo para crear marca
         var dirección = cola.WorldMatrix.TranslationVector + cola.WorldMatrix.Forward * 2;
         var resultado = this.GetSimulation().Raycast(cola.WorldMatrix.TranslationVector,
@@ -145,8 +133,8 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
                                                      CollisionFilterGroups.DefaultFilter,
                                                      colisionesMarca);
         if (resultado.Succeeded)
-            iniciarImpacto.Invoke(resultado.Point, resultado.Normal);
+            ControladorEfectos.IniciarImpacto(disparador, daño, resultado.Point, resultado.Normal);
         else
-            iniciarImpacto.Invoke(Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
+            ControladorEfectos.IniciarImpacto(disparador, daño, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
     }
 }

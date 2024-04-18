@@ -71,7 +71,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
 
     public void Destruir()
     {
-        // PENDIENTE: efecto disparo enemigo
+        ControladorEfectos.IniciarEfectoEnemigo(disparador, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
         Apagar();
     }
 
@@ -84,11 +84,6 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
         cuerpoDañable.Enabled = false;
     }
 
-    public void AsignarImpacto(Action<Vector3, Vector3> _iniciarImpacto)
-    {
-
-    }
-
     public void IniciarPersecutor(float _velocidadRotación, Vector3 _altura)
     {
         altura = _altura;
@@ -97,7 +92,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
 
     public void Iniciar(float _daño, float _velocidad, Quaternion _rotación, Vector3 _posición, Enemigos _disparador)
     {
-        Destruir();
+        Apagar();
 
         Entity.Transform.Position = _posición;
         Entity.Transform.Rotation = _rotación;

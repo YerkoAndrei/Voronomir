@@ -44,11 +44,6 @@ public class ElementoGranada : AsyncScript, IProyectil
         cuerpo.Enabled = false;
     }
 
-    public void AsignarImpacto(Action<Vector3, Vector3> _iniciarImpacto)
-    {
-
-    }
-
     public void IniciarPersecutor(float _velocidadRotación, Vector3 _altura)
     {
 
