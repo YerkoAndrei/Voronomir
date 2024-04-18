@@ -68,7 +68,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
 
     public void Destruir()
     {
-        ControladorEfectos.IniciarEfectoEnemigo(disparador, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
+        ControladorCofres.IniciarEfectoEnemigo(disparador, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
         Apagar();
     }
 
@@ -133,8 +133,8 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
                                                      CollisionFilterGroups.DefaultFilter,
                                                      colisionesMarca);
         if (resultado.Succeeded)
-            ControladorEfectos.IniciarImpacto(disparador, daño, resultado.Point, resultado.Normal);
+            ControladorCofres.IniciarImpacto(disparador, daño, resultado.Point, resultado.Normal);
         else
-            ControladorEfectos.IniciarImpacto(disparador, daño, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
+            ControladorCofres.IniciarImpacto(disparador, daño, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
     }
 }

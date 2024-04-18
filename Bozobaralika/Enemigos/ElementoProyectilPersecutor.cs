@@ -70,7 +70,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
 
     public void Destruir()
     {
-        ControladorEfectos.IniciarEfectoEnemigo(disparador, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
+        ControladorCofres.IniciarEfectoEnemigo(disparador, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
         Apagar();
     }
 

@@ -27,7 +27,7 @@ public class ControladorArmaRango : StartupScript
         var dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorPartida.ObtenerPosiciónJugador() + alturaObjetivo));
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
-        ControladorEfectos.IniciarProyectil(disparador, daño, velocidad, Entity.Transform.WorldMatrix.TranslationVector, rotación, 
+        ControladorCofres.IniciarProyectil(disparador, daño, velocidad, Entity.Transform.WorldMatrix.TranslationVector, rotación, 
                                             velocidadRotación, alturaObjetivo);
     }
 }

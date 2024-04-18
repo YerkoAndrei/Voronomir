@@ -270,7 +270,7 @@ public class ControladorArmas : StartupScript
 
         if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
         {
-            ControladorEfectos.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal, (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter));
+            ControladorCofres.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal, (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter));
             return;
         }
 
@@ -291,7 +291,7 @@ public class ControladorArmas : StartupScript
         dañable.RecibirDaño(dañoFinal);
 
         // Retroalimentación daño
-        ControladorEfectos.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
+        ControladorCofres.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
 
         if (armaActual == Armas.metralleta)
             controlador.VibrarCámara(1f, 4);
@@ -319,7 +319,7 @@ public class ControladorArmas : StartupScript
         {
             if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
-                ControladorEfectos.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal, (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter));
+                ControladorCofres.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal, (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter));
                 return;
             }
 
@@ -343,7 +343,7 @@ public class ControladorArmas : StartupScript
             dañable.RecibirDaño(dañoFinal);
 
             // Retroalimentación daño
-            ControladorEfectos.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
+            ControladorCofres.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
         }
     }
 
@@ -375,7 +375,7 @@ public class ControladorArmas : StartupScript
         var dirección = Vector3.Normalize(posición - resultado.Point);
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
-        ControladorEfectos.IniciarGranada(ObtenerDaño(armaActual), 35, posición, rotación);
+        ControladorCofres.IniciarGranada(ObtenerDaño(armaActual), 35, posición, rotación);
     }
 
     private void Atacar(bool desdeIzquierda)
@@ -416,7 +416,7 @@ public class ControladorArmas : StartupScript
                 posición = Vector3.Zero;
                 normal = Vector3.Zero;
 
-                ControladorEfectos.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
+                ControladorCofres.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
             }
             else if (resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter1)
             {
@@ -425,7 +425,7 @@ public class ControladorArmas : StartupScript
                 interfaz.Destruir();
 
                 var enemigo = resultado.Collider.Entity.Get<ElementoProyectilSimple>().disparador;
-                ControladorEfectos.IniciarEfectoDaño(armaActual, enemigo, 0.5f, resultado.Point, resultado.Normal);
+                ControladorCofres.IniciarEfectoDaño(armaActual, enemigo, 0.5f, resultado.Point, resultado.Normal);
             }
             else
             {
@@ -435,7 +435,7 @@ public class ControladorArmas : StartupScript
         }
 
         if (posición != Vector3.Zero && normal != Vector3.Zero)
-            ControladorEfectos.IniciarEfectoEntorno(armaActual, posición, normal, false);
+            ControladorCofres.IniciarEfectoEntorno(armaActual, posición, normal, false);
     }
 
     private void EnfriarMetralleta()

@@ -5,7 +5,7 @@ namespace Bozobaralika;
 using static Utilidades;
 using static Constantes;
 
-public class ControladorEfectos : StartupScript
+public class ControladorCofres : StartupScript
 {
     public Prefab prefabMarca;
     public Prefab prefabEfecto;
