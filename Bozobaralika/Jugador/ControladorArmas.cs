@@ -435,7 +435,7 @@ public class ControladorArmas : StartupScript
         }
 
         if (posición != Vector3.Zero && normal != Vector3.Zero)
-            ControladorCofres.IniciarEfectoEntorno(armaActual, posición, normal, false);
+            ControladorCofres.IniciarEfectoEntorno(armaActual, posición, normal, true);
     }
 
     private void EnfriarMetralleta()
