@@ -25,28 +25,28 @@ public class ElementoMarca : StartupScript
         {
             case Armas.espada:
                 textura.SpriteProvider = ObtenerSprite(marcaFuerte);
-                textura.Entity.Transform.Scale = Vector3.One * 0.02f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.08f;
                 textura.Color = new Color(90, 90, 90);
                 break;
             case Armas.escopeta:
                 textura.SpriteProvider = ObtenerSprite(marcaSuave);
-                textura.Entity.Transform.Scale = Vector3.One * 0.01f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.04f;
                 textura.Color = new Color(100, 100, 100);
                 break;
             case Armas.metralleta:
                 textura.SpriteProvider = ObtenerSprite(marcaSuave);
-                textura.Entity.Transform.Scale = Vector3.One * 0.012f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.05f;
                 textura.Color = new Color(100, 100, 100);
                 break;
             case Armas.rifle:
                 textura.SpriteProvider = ObtenerSprite(marcaSuave);
-                textura.Entity.Transform.Scale = Vector3.One * 0.04f;
-                textura.Color = new Color(90, 90, 90);
+                textura.Entity.Transform.Scale = Vector3.One * 0.15f;
+                textura.Color = new Color(80, 80, 80);
                 break;
             case Armas.lanzagranadas:
                 textura.SpriteProvider = ObtenerSprite(marcaFuerte);
-                textura.Entity.Transform.Scale = Vector3.One * 0.05f;
-                textura.Color = new Color(80, 80, 80);
+                textura.Entity.Transform.Scale = Vector3.One * 0.2f;
+                textura.Color = new Color(60, 60, 60);
                 break;
         }
 

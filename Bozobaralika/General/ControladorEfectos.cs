@@ -97,14 +97,17 @@ public class ControladorEfectos : StartupScript
         }
     }
 
-    public static void IniciarEfectoEntorno(Armas arma, Vector3 posición, Vector3 normal)
+    public static void IniciarEfectoEntorno(Armas arma, Vector3 posición, Vector3 normal, bool iniciarMarca)
     {
         // Marca
-        instancia.marcas[instancia.marcaActual].IniciarMarca(arma, posición, normal);
-        instancia.marcaActual++;
+        if (iniciarMarca)
+        {
+            instancia.marcas[instancia.marcaActual].IniciarMarca(arma, posición, normal);
+            instancia.marcaActual++;
 
-        if (instancia.marcaActual >= instancia.maxMarcas)
-            instancia.marcaActual = 0;
+            if (instancia.marcaActual >= instancia.maxMarcas)
+                instancia.marcaActual = 0;
+        }
 
         // Efecto
         instancia.efectos[instancia.efectoActual].IniciarEfectoEntorno(arma, posición, normal);
@@ -119,19 +122,19 @@ public class ControladorEfectos : StartupScript
         switch (arma)
         {
             case Armas.espada:
-                multiplicadorDaño *= 0.5f;
+                multiplicadorDaño *= 0.2f;
                 break;
             case Armas.escopeta:
-                multiplicadorDaño *= 0.4f;
+                multiplicadorDaño *= 0.1f;
                 break;
             case Armas.metralleta:
-                multiplicadorDaño *= 1f;
+                multiplicadorDaño *= 0.2f;
                 break;
             case Armas.rifle:
-                multiplicadorDaño *= 2f;
+                multiplicadorDaño *= 0.5f;
                 break;
             case Armas.lanzagranadas:
-                multiplicadorDaño *= 2f;
+                multiplicadorDaño *= 0.5f;
                 break;
         }
 
@@ -160,27 +163,13 @@ public class ControladorEfectos : StartupScript
             instancia.explosiónActual = 0;
 
         // Marca solo en entorno
-        if (normal != Vector3.Zero)
-        {
-            instancia.marcas[instancia.marcaActual].IniciarMarca(Armas.lanzagranadas, posición, normal);
-            instancia.marcaActual++;
-
-            if (instancia.marcaActual >= instancia.maxMarcas)
-                instancia.marcaActual = 0;
-        }
-
-        // Efecto
-        instancia.efectos[instancia.efectoActual].IniciarEfectoEntorno(Armas.lanzagranadas, posición, normal);
-        instancia.efectoActual++;
-
-        if (instancia.efectoActual >= instancia.maxEfectos)
-            instancia.efectoActual = 0;
+        IniciarEfectoEntorno(Armas.lanzagranadas, posición, normal, (normal != Vector3.Zero));
     }
 
     // Enemigos
     public static void IniciarEfectoEnemigo(Enemigos enemigo, Vector3 posición, Vector3 normal)
     {
-        instancia.efectos[instancia.efectoActual].IniciarEfectoEnemigo(enemigo, 1, posición, normal);
+        instancia.efectos[instancia.efectoActual].IniciarEfectoEnemigo(enemigo, 0.5f, posición, normal);
         instancia.efectoActual++;
 
         if (instancia.efectoActual >= instancia.maxEfectos)

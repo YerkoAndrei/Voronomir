@@ -1,15 +1,15 @@
 !SpriteSheet
-Id: 92b3fbe0-bc13-41d6-aaad-6dad4df6b987
+Id: 33aaf645-1bf7-4c25-9752-ef8ad7783e8b
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Packing: {}
 Sprites:
-    2438d8db9a95f8e5f5669212ccbfb636:
-        Source: !file ../Texturas/Efectos/Disparo.png
-        Name: Disparo
-        TextureRegion: {X: 0, Y: 0, Width: 512, Height: 512}
+    ae04b3207f9c5281456138ae07ecf8a7:
+        Source: !file ../Texturas/Efectos/Suave.png
+        Name: Suave
+        TextureRegion: {X: 0, Y: 0, Width: 128, Height: 128}
         Center: {X: 0.0, Y: 0.0}
         Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}

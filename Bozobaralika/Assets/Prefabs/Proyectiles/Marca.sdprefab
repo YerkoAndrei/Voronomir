@@ -14,12 +14,12 @@ Hierarchy:
                         Id: 0ce2d2c5-593c-40a6-b5ee-6f4e52114dbe
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     9338311ecbb3e1b8edbaf2ec6d27e7c9: !SpriteComponent
                         Id: f1652332-d0d0-47ad-902a-d6f7fb203099
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 92b3fbe0-bc13-41d6-aaad-6dad4df6b987:Sprites/Marca
+                            Sheet: 33aaf645-1bf7-4c25-9752-ef8ad7783e8b:Sprites/Marca
                         Color: {R: 0.3529412, G: 0.3529412, B: 0.3529412, A: 1.0}
         -   Entity:
                 Id: 5bfdc32d-ce31-4338-b875-c3ad36cab97c

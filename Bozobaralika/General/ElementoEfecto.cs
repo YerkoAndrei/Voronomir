@@ -48,7 +48,7 @@ public class ElementoEfecto : StartupScript
                 rifle.ParticleSystem.ResetSimulation();
                 break;
             case Armas.lanzagranadas:
-                granada.Entity.Transform.Scale = Vector3.One * 1.5f;
+                granada.Entity.Transform.Scale = Vector3.One * 1.2f;
                 granada.Enabled = true;
                 granada.ParticleSystem.ResetSimulation();
                 break;

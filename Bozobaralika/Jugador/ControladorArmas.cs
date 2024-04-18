@@ -270,9 +270,7 @@ public class ControladorArmas : StartupScript
 
         if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
         {
-            if(resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
-                ControladorEfectos.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal);
-
+            ControladorEfectos.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal, (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter));
             return;
         }
 
@@ -321,9 +319,7 @@ public class ControladorArmas : StartupScript
         {
             if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
-                if(resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
-                    ControladorEfectos.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal);
-
+                ControladorEfectos.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal, (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter));
                 return;
             }
 
@@ -439,7 +435,7 @@ public class ControladorArmas : StartupScript
         }
 
         if (posición != Vector3.Zero && normal != Vector3.Zero)
-            ControladorEfectos.IniciarEfectoEntorno(armaActual, posición, normal);
+            ControladorEfectos.IniciarEfectoEntorno(armaActual, posición, normal, false);
     }
 
     private void EnfriarMetralleta()

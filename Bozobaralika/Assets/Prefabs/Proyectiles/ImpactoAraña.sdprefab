@@ -131,8 +131,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            PositionMin: {X: -0.4, Y: 0.0, Z: -0.4}
-                                            PositionMax: {X: 0.4, Y: 0.0, Z: 0.4}
+                                            PositionMin: {X: -0.5, Y: 0.0, Z: -0.5}
+                                            PositionMax: {X: 0.5, Y: 0.0, Z: 0.5}
                                             Interpolate: false
                                         b663f69a05042540ff539d253be0dea8: !InitialVelocitySeed
                                             InheritPosition: true
