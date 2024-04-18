@@ -75,7 +75,7 @@ public class ControladorArmaRango : StartupScript
             proyectilActual = 0;
     }
 
-    public void IniciarImpacto(Vector3 posición, Vector3 normal, bool soloEfecto)
+    public void IniciarImpacto(Vector3 posición, Vector3 normal)
     {
         impactos[impactoActual].Iniciar(posición, normal, daño);
 

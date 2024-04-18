@@ -12,9 +12,7 @@ using static Constantes;
 
 public class ControladorArmas : StartupScript
 {
-    public Prefab prefabMarca;
     public Prefab prefabGranada;
-    public Prefab prefabExplosión;
 
     public AnimadorArmas animadorEspada;
     public AnimadorArmas animadorEscopeta;
@@ -61,10 +59,6 @@ public class ControladorArmas : StartupScript
     private int maxGranadas;
     private int maxExplosiones;
 
-    private ElementoMarca[] marcas;
-    private int marcaActual;
-    private int maxMarcas;
-
     public async void Iniciar(ControladorJugador _controlador, ControladorMovimiento _movimiento, CameraComponent _cámara, InterfazJuego _interfaz)
     {
         controlador = _controlador;
@@ -101,30 +95,6 @@ public class ControladorArmas : StartupScript
             var granada = prefabGranada.Instantiate()[0];
             granadas[i] = ObtenerInterfaz<IProyectil>(granada);
             Entity.Scene.Entities.Add(granada);
-
-            // Impactos son explosiones o veneno
-            if (prefabExplosión != null)
-                granadas[i].AsignarImpacto(IniciarExplosión);
-        }
-
-        // Cofre explosiones
-        maxExplosiones = 4;
-        explosiones = new IImpacto[maxExplosiones];
-        for (int i = 0; i < maxExplosiones; i++)
-        {
-            var explosión = prefabExplosión.Instantiate()[0];
-            explosiones[i] = ObtenerInterfaz<IImpacto>(explosión);
-            Entity.Scene.Entities.Add(explosión);
-        }
-
-        // Cofre marcas
-        maxMarcas = 100;
-        marcas = new ElementoMarca[maxMarcas];
-        for (int i = 0; i < maxMarcas; i++)
-        {
-            var marca = prefabMarca.Instantiate()[0];
-            marcas[i] = marca.Get<ElementoMarca>();
-            Entity.Scene.Entities.Add(marca);
         }
 
         animadorEspada.Iniciar();
@@ -267,7 +237,7 @@ public class ControladorArmas : StartupScript
                 break;
             case Armas.escopeta:
                 movimiento.DetenerMovimiento();
-                for (int i = 0; i < ObtenerCantidadPerdigones(); i++)
+                for (int i = 0; i < 20; i++)
                 {
                     CalcularRayo(0.12f);
                 }
@@ -318,7 +288,9 @@ public class ControladorArmas : StartupScript
 
         if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
         {
-            CrearMarca(resultado.Point, resultado.Normal, resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger);
+            if(resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
+                ControladorEfectos.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal);
+
             return;
         }
 
@@ -339,7 +311,8 @@ public class ControladorArmas : StartupScript
         dañable.RecibirDaño(dañoFinal);
 
         // Retroalimentación daño
-        CrearMarcaDaño(resultado.Point, resultado.Normal, dañable.multiplicador);
+        ControladorEfectos.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
+
         if (armaActual == Armas.metralleta)
             controlador.VibrarCámara(1f, 4);
     }
@@ -366,8 +339,10 @@ public class ControladorArmas : StartupScript
         {
             if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
-                CrearMarca(resultado.Point, resultado.Normal, resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger);
-                break;
+            if(resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
+                ControladorEfectos.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal);
+
+            return;
             }
 
             var dañable = resultado.Collider.Entity.Get<ElementoDañable>();
@@ -390,7 +365,7 @@ public class ControladorArmas : StartupScript
             dañable.RecibirDaño(dañoFinal);
 
             // Retroalimentación daño
-            CrearMarcaDaño(resultado.Point, resultado.Normal, dañable.multiplicador);
+            ControladorEfectos.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
         }
     }
 
@@ -422,19 +397,19 @@ public class ControladorArmas : StartupScript
         var dirección = Vector3.Normalize(posición - resultado.Point);
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
-        granadas[granadaActual].Iniciar(0, 35, rotación, posición, Enemigos.nada);
+        granadas[granadaActual].Iniciar(ObtenerDaño(armaActual), 35, rotación, posición, Enemigos.nada);
 
         granadaActual++;
         if (granadaActual >= maxGranadas)
             granadaActual = 0;
     }
 
-    private void IniciarExplosión(Vector3 posición, Vector3 normal, bool soloEfecto)
+    private void IniciarExplosión(Vector3 posición, Vector3 normal)
     {
         explosiones[explosiónActual].Iniciar(posición, normal, ObtenerDaño(armaActual));
 
         if (normal != Vector3.Zero)
-            CrearMarca(posición, normal, soloEfecto);
+            ControladorEfectos.IniciarEfectoEntorno(armaActual, posición, normal);
 
         explosiónActual++;
         if (explosiónActual >= maxExplosiones)
@@ -479,14 +454,16 @@ public class ControladorArmas : StartupScript
                 posición = Vector3.Zero;
                 normal = Vector3.Zero;
 
-                CrearMarcaDaño(resultado.Point, resultado.Normal, dañable.multiplicador);
+                ControladorEfectos.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
             }
             else if (resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter1)
             {
                 // Destruye proyectiles simples
                 var interfaz = ObtenerInterfaz<IProyectil>(resultado.Collider.Entity);
                 interfaz.Destruir();
-                CrearMarcaDaño(resultado.Point, resultado.Normal, 1);
+
+                var enemigo = resultado.Collider.Entity.Get<ElementoProyectilSimple>().disparador;
+                ControladorEfectos.IniciarEfectoDaño(armaActual, enemigo, 1, resultado.Point, resultado.Normal);
             }
             else
             {
@@ -496,49 +473,7 @@ public class ControladorArmas : StartupScript
         }
 
         if (posición != Vector3.Zero && normal != Vector3.Zero)
-            CrearMarca(posición, normal, false);
-    }
-
-    private void CrearMarca(Vector3 posición, Vector3 normal, bool soloEfecto)
-    {
-        marcas[marcaActual].IniciarMarca(armaActual, posición, normal, soloEfecto);
-        marcaActual++;
-
-        if (marcaActual >= maxMarcas)
-            marcaActual = 0;
-    }
-
-    private void CrearMarcaDaño(Vector3 posición, Vector3 normal, float multiplicador)
-    {
-        switch (armaActual)
-        {
-            case Armas.espada:
-                multiplicador *= 0.5f;
-                break;
-            case Armas.escopeta:
-                multiplicador *= 0.4f;
-                break;
-            case Armas.metralleta:
-                multiplicador *= 1f;
-                break;
-            case Armas.rifle:
-                multiplicador *= 2f;
-                break;
-            case Armas.lanzagranadas:
-                multiplicador *= 2f;
-                break;
-        }
-        marcas[marcaActual].IniciarDaño(posición, normal, multiplicador);
-        marcaActual++;
-
-        if (marcaActual >= maxMarcas)
-            marcaActual = 0;
-    }
-
-    private int ObtenerCantidadPerdigones()
-    {
-        // PENDIENTE: mejoras
-        return 20;
+            ControladorEfectos.IniciarEfectoEntorno(armaActual, posición, normal);
     }
 
     private void EnfriarMetralleta()

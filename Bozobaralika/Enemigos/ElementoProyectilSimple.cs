@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Stride.Core;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -13,9 +14,11 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
     public ModelComponent modelo;
     public TransformComponent cola;
 
-    private Enemigos disparador;
+    [DataMemberIgnore]
+    public Enemigos disparador;
+
     private RigidbodyComponent cuerpo;
-    private Action<Vector3, Vector3, bool> iniciarImpacto;
+    private Action<Vector3, Vector3> iniciarImpacto;
     private float velocidad;
     private float tempo;
     private float daño;
@@ -39,7 +42,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
                     if (cola != null)
                         CrearImpacto();
                     else
-                        iniciarImpacto.Invoke(Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero, false);
+                        iniciarImpacto.Invoke(Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
                 }
 
                 Destruir();
@@ -87,7 +90,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
         cuerpo.Enabled = false;
     }
 
-    public void AsignarImpacto(Action<Vector3, Vector3, bool> _iniciarImpacto)
+    public void AsignarImpacto(Action<Vector3, Vector3> _iniciarImpacto)
     {
         iniciarImpacto = _iniciarImpacto;
     }
@@ -142,8 +145,8 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
                                                      CollisionFilterGroups.DefaultFilter,
                                                      colisionesMarca);
         if (resultado.Succeeded)
-            iniciarImpacto.Invoke(resultado.Point, resultado.Normal, false);
+            iniciarImpacto.Invoke(resultado.Point, resultado.Normal);
         else
-            iniciarImpacto.Invoke(Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero, false);
+            iniciarImpacto.Invoke(Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
     }
 }

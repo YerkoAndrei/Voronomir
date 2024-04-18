@@ -14,7 +14,7 @@ public class ElementoGranada : AsyncScript, IProyectil
     public TransformComponent cola;
 
     private RigidbodyComponent cuerpo;
-    private Action<Vector3, Vector3, bool> iniciarImpacto;
+    private float dañoImpacto;
     private float velocidad;
     private float tempo;
 
@@ -44,9 +44,9 @@ public class ElementoGranada : AsyncScript, IProyectil
         cuerpo.Enabled = false;
     }
 
-    public void AsignarImpacto(Action<Vector3, Vector3, bool> _iniciarImpacto)
+    public void AsignarImpacto(Action<Vector3, Vector3> _iniciarImpacto)
     {
-        iniciarImpacto = _iniciarImpacto;
+
     }
 
     public void IniciarPersecutor(float _velocidadRotación, Vector3 _altura)
@@ -58,6 +58,7 @@ public class ElementoGranada : AsyncScript, IProyectil
     {
         Destruir();
 
+        dañoImpacto = _daño;
         Entity.Transform.Position = _posición;
         Entity.Transform.Rotation = _rotación;
         velocidad = _velocidad;
@@ -94,9 +95,10 @@ public class ElementoGranada : AsyncScript, IProyectil
                                                      dirección,
                                                      CollisionFilterGroups.DefaultFilter,
                                                      colisionesMarca);
+
         if (resultado.Succeeded)
-            iniciarImpacto.Invoke(resultado.Point, resultado.Normal, false);
+            ControladorEfectos.IniciarImpactoGranada(resultado.Point, resultado.Normal, dañoImpacto);
         else
-            iniciarImpacto.Invoke(Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero, false);
+            ControladorEfectos.IniciarImpactoGranada(Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero, dañoImpacto);
     }
 }

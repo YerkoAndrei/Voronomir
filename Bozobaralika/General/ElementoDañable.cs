@@ -1,18 +1,29 @@
-﻿using Stride.Engine;
+﻿using Stride.Core;
+using Stride.Engine;
 
 namespace Bozobaralika;
 using static Utilidades;
+using static Constantes;
 
 public class ElementoDañable : StartupScript
 {
     public Entity controlador;
     public float multiplicador;
 
+    [DataMemberIgnore]
+    public Enemigos enemigo;
+
     private IDañable interfaz;
 
     public override void Start()
     {
         interfaz = ObtenerInterfaz<IDañable>(controlador);
+
+        // Enemigo / Jugador
+        if (controlador.Get<ControladorEnemigo>() != null)
+            enemigo = controlador.Get<ControladorEnemigo>().enemigo;
+        else
+            enemigo = Enemigos.nada;
     }
 
     public void RecibirDaño(float daño)
