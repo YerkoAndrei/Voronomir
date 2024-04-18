@@ -80,7 +80,7 @@ Hierarchy:
                         Control:
                             ResetSeconds: 5.0
                             Control: Play
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 0.0, G: 1.0, B: 0.0, A: 0.39215687}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
@@ -88,13 +88,18 @@ Hierarchy:
                             Emitters:
                                 ae4b47162b3b6e5ef84edf610c3b9a9c:
                                     ParticleLifetime: {X: 1.0, Y: 2.0}
-                                    ShapeBuilder: !ShapeBuilderHexagon
+                                    ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null
                                         SamplerSize: null
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
-                                        ComputeColor: !ComputeColor
-                                            Value: {R: 0.0, G: 1.0, B: 0.0, A: 0.39215687}
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
                                         UVBuilder: null
                                         ForceTexCoords: false
                                     Spawners:
