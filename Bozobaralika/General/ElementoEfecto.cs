@@ -8,14 +8,14 @@ using static Constantes;
 public class ElementoEfecto : StartupScript
 {
     // Efectos entorno
-    public ParticleSystemComponent partículasBala;
-    public ParticleSystemComponent partículasRifle;
-    public ParticleSystemComponent partículasGranada;
+    public ParticleSystemComponent bala;
+    public ParticleSystemComponent rifle;
+    public ParticleSystemComponent granada;
 
     // Efectos enemigos
-    public ParticleSystemComponent partículasSangre;
-    public ParticleSystemComponent partículasRayos;
-    public ParticleSystemComponent partículasHemolinfa;
+    public ParticleSystemComponent sangre;
+    public ParticleSystemComponent rayos;
+    public ParticleSystemComponent hemolinfa;
 
     public override void Start()
     {
@@ -28,34 +28,33 @@ public class ElementoEfecto : StartupScript
         switch (arma)
         {
             case Armas.espada:
-                partículasBala.Entity.Transform.Scale = Vector3.One * 0.2f;
-                partículasBala.Enabled = true;
-                partículasBala.ParticleSystem.ResetSimulation();
+                bala.Entity.Transform.Scale = Vector3.One * 0.2f;
+                bala.Enabled = true;
+                bala.ParticleSystem.ResetSimulation();
                 break;
             case Armas.escopeta:
-                partículasBala.Entity.Transform.Scale = Vector3.One * 0.25f;
-                partículasBala.Enabled = true;
-                partículasBala.ParticleSystem.ResetSimulation();
+                bala.Entity.Transform.Scale = Vector3.One * 0.25f;
+                bala.Enabled = true;
+                bala.ParticleSystem.ResetSimulation();
                 break;
             case Armas.metralleta:
-                partículasBala.Entity.Transform.Scale = Vector3.One * 0.4f;
-                partículasBala.Enabled = true;
-                partículasBala.ParticleSystem.ResetSimulation();
+                bala.Entity.Transform.Scale = Vector3.One * 0.4f;
+                bala.Enabled = true;
+                bala.ParticleSystem.ResetSimulation();
                 break;
             case Armas.rifle:
-                partículasRifle.Entity.Transform.Scale = Vector3.One * 0.5f;
-                partículasRifle.Enabled = true;
-                partículasRifle.ParticleSystem.ResetSimulation();
+                rifle.Entity.Transform.Scale = Vector3.One * 0.8f;
+                rifle.Enabled = true;
+                rifle.ParticleSystem.ResetSimulation();
                 break;
             case Armas.lanzagranadas:
-                partículasGranada.Entity.Transform.Scale = Vector3.One * 0.6f;
-                partículasGranada.Enabled = true;
-                partículasGranada.ParticleSystem.ResetSimulation();
+                granada.Entity.Transform.Scale = Vector3.One * 1.5f;
+                granada.Enabled = true;
+                granada.ParticleSystem.ResetSimulation();
                 break;
         }
 
         Entity.Transform.Position = posición + (normal * 0.01f);
-        Entity.Transform.Rotation = Quaternion.LookRotation(normal, posición);
     }
 
     public void IniciarEfectoEnemigo(Enemigos enemigo, float multiplicadorDaño, Vector3 posición, Vector3 normal)
@@ -64,49 +63,48 @@ public class ElementoEfecto : StartupScript
         switch (enemigo)
         {
             case Enemigos.meléLigero:
-                partículasSangre.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
-                partículasSangre.Enabled = true;
-                partículasSangre.ParticleSystem.ResetSimulation();
+                sangre.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
+                sangre.Enabled = true;
+                sangre.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.meléMediano:
-                partículasSangre.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
-                partículasSangre.Enabled = true;
-                partículasSangre.ParticleSystem.ResetSimulation();
+                sangre.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
+                sangre.Enabled = true;
+                sangre.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.meléPesado:
-                partículasRayos.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
-                partículasRayos.Enabled = true;
-                partículasRayos.ParticleSystem.ResetSimulation();
+                rayos.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
+                rayos.Enabled = true;
+                rayos.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.rangoLigero:
-                partículasRayos.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
-                partículasRayos.Enabled = true;
-                partículasRayos.ParticleSystem.ResetSimulation();
+                rayos.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
+                rayos.Enabled = true;
+                rayos.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.rangoMediano:
-                partículasSangre.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
-                partículasSangre.Enabled = true;
-                partículasSangre.ParticleSystem.ResetSimulation();
+                sangre.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
+                sangre.Enabled = true;
+                sangre.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.rangoPesado:
-                partículasHemolinfa.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
-                partículasHemolinfa.Enabled = true;
-                partículasHemolinfa.ParticleSystem.ResetSimulation();
+                hemolinfa.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
+                hemolinfa.Enabled = true;
+                hemolinfa.ParticleSystem.ResetSimulation();
                 break;
         }
 
         Entity.Transform.Position = posición + (normal * 0.01f);
-        Entity.Transform.Rotation = Quaternion.LookRotation(normal, posición);
     }
 
     private void Apagar()
     {
-        partículasBala.Enabled = false;
-        partículasRifle.Enabled = false;
-        partículasGranada.Enabled = false;
+        bala.Enabled = false;
+        rifle.Enabled = false;
+        granada.Enabled = false;
 
-        partículasSangre.Enabled = false;
-        partículasRayos.Enabled = false;
-        partículasHemolinfa.Enabled = false;
+        sangre.Enabled = false;
+        rayos.Enabled = false;
+        hemolinfa.Enabled = false;
     }
 }

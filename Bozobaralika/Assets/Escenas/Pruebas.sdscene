@@ -148,9 +148,7 @@ Hierarchy:
                         Id: 853d3c97-8a0e-4048-a57c-1704945b8595
                     54c947a658f979a1a3cbf73596735198: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: ee03a1fb-1cae-4679-9cfb-758a1f99f1ee
-                        prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/Proyectiles/Marca
                         prefabGranada: a3c696d3-259b-49a3-94e8-945c1671282a:Prefabs/Proyectiles/Granada
-                        "prefabExplosión": "3db0a6bf-02b6-4061-8734-ac74c0c26780:Prefabs/Proyectiles/Explosión"
                         animadorEspada: ref!! 353e3563-85b9-4e95-8cde-b449d5a03217
                         animadorEscopeta: ref!! b4f31a54-c2e1-4a93-86d7-6ec5585a30e8
                         animadorMetralleta: ref!! 14b56ce5-0534-48dd-aca3-9cc3154d2023
@@ -2181,6 +2179,12 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
+                    0e0d6b05a21cc4b97f364ff49e6728e5: !Bozobaralika.ControladorEfectos,Bozobaralika.Proyecto
+                        Id: b56be47b-3d93-4831-86f0-13b3a2b3d9aa
+                        prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/Proyectiles/Marca
+                        prefabEfecto: fb5fb3aa-991f-4954-94e8-6ddbde24eb1f:Prefabs/Proyectiles/Efecto
+                        prefabGranada: a3c696d3-259b-49a3-94e8-945c1671282a:Prefabs/Proyectiles/Granada
+                        "prefabExplosión": "3db0a6bf-02b6-4061-8734-ac74c0c26780:Prefabs/Proyectiles/Explosión"
                     3ba19ac87f450380cffa251b6434761f: !Bozobaralika.ControladorPersecusionesTrigonom%25C3%25A9tricas,Bozobaralika.Proyecto
                         Id: 41c4e19c-0c5b-4c55-b8b8-d2a4e05dd1f1
                         enemigo: rangoLigero
