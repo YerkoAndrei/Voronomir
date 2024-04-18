@@ -7,44 +7,62 @@ using static Constantes;
 
 public class ControladorEfectos : StartupScript
 {
-    private static ControladorEfectos instancia;
-
     public Prefab prefabMarca;
     public Prefab prefabEfecto;
     public Prefab prefabGranada;
     public Prefab prefabExplosión;
 
+    public Prefab prefabProyectilDron;
+    public Prefab prefabProyectilBabosa;
+    public Prefab prefabProyectilAraña;
     public Prefab prefabImpactoAraña;
 
     // Marcas
-    private ElementoMarca[] marcas;
-    private int marcaActual;
-    private int maxMarcas;
+    private static ElementoMarca[] marcas;
+    private static int marcaActual;
+    private static int maxMarcas;
 
     // Efectos
-    private ElementoEfecto[] efectos;
-    private int efectoActual;
-    private int maxEfectos;
+    private static ElementoEfecto[] efectos;
+    private static int efectoActual;
+    private static int maxEfectos;
 
     // Lanzagranadas
-    private IProyectil[] granadas;
-    private IImpacto[] explosiones;
-    private int granadaActual;
-    private int explosiónActual;
-    private int maxGranadas;
-    private int maxExplosiones;
+    private static IProyectil[] granadas;
+    private static IImpacto[] explosiones;
+    private static int granadaActual;
+    private static int explosiónActual;
+    private static int maxGranadas;
+    private static int maxExplosiones;
+
+    // Dron
+    private static IProyectil[] proyectilesDron;
+    private static int proyectilDronActual;
+    private static int maxProyectilesDron;
+
+    // Babosa
+    private static IProyectil[] proyectilesBabosa;
+    private static int proyectilBabosaActual;
+    private static int maxProyectilesBabosa;
 
     // Araña
-    private IImpacto[] impactosAraña;
-    private int impactoArañaActual;
-    private int maxImpactosAraña;
+    private static IProyectil[] proyectilesAraña;
+    private static int proyectilArañaActual;
+    private static int maxProyectilesAraña;
+
+    private static IImpacto[] impactosAraña;
+    private static int impactoArañaActual;
+    private static int maxImpactosAraña;
 
     public override void Start()
     {
-        instancia = this;
-
-        // Cofre marcas
+        // Cofre jugador / efectos
         maxMarcas = 100;
+        maxEfectos = 100;
+        maxGranadas = 4;
+        maxExplosiones = 4;
+
+        // Marcas
         marcas = new ElementoMarca[maxMarcas];
         for (int i = 0; i < maxMarcas; i++)
         {
@@ -53,8 +71,7 @@ public class ControladorEfectos : StartupScript
             Entity.Scene.Entities.Add(marca);
         }
 
-        // Cofre efectos
-        maxEfectos = 100;
+        // Efectos
         efectos = new ElementoEfecto[maxEfectos];
         for (int i = 0; i < maxEfectos; i++)
         {
@@ -63,8 +80,7 @@ public class ControladorEfectos : StartupScript
             Entity.Scene.Entities.Add(efecto);
         }
 
-        // Cofre granadas
-        maxGranadas = 4;
+        // Granadas
         granadas = new IProyectil[maxGranadas];
         for (int i = 0; i < maxGranadas; i++)
         {
@@ -73,8 +89,7 @@ public class ControladorEfectos : StartupScript
             Entity.Scene.Entities.Add(granada);
         }
 
-        // Cofre explosiones
-        maxExplosiones = 4;
+        // Explosiones
         explosiones = new IImpacto[maxExplosiones];
         for (int i = 0; i < maxExplosiones; i++)
         {
@@ -83,11 +98,39 @@ public class ControladorEfectos : StartupScript
             Entity.Scene.Entities.Add(explosión);
         }
 
-        // PENDIENTE: buscar arañas
-        // Cofre impactos enemigos
+        // PENDIENTE: buscar cantidad enemigos
+        // Cofre enemigos
+        maxProyectilesDron = 20;
+        maxProyectilesBabosa = 20;
+        maxProyectilesAraña = 20;
+        maxImpactosAraña = maxProyectilesAraña * 2;
+
+        // Dron
+        proyectilesDron = new IProyectil[maxProyectilesDron];
+        for (int i = 0; i < maxProyectilesDron; i++)
+        {
+            var impacto = prefabProyectilDron.Instantiate()[0];
+            proyectilesDron[i] = ObtenerInterfaz<IProyectil>(impacto);
+            Entity.Scene.Entities.Add(impacto);
+        }
+
+        // Dron
+        proyectilesBabosa = new IProyectil[maxProyectilesBabosa];
+        for (int i = 0; i < maxProyectilesBabosa; i++)
+        {
+            var impacto = prefabProyectilBabosa.Instantiate()[0];
+            proyectilesBabosa[i] = ObtenerInterfaz<IProyectil>(impacto);
+            Entity.Scene.Entities.Add(impacto);
+        }
 
         // Araña
-        maxImpactosAraña = 10;
+        proyectilesAraña = new IProyectil[maxProyectilesAraña];
+        for (int i = 0; i < maxProyectilesAraña; i++)
+        {
+            var impacto = prefabProyectilAraña.Instantiate()[0];
+            proyectilesAraña[i] = ObtenerInterfaz<IProyectil>(impacto);
+            Entity.Scene.Entities.Add(impacto);
+        }
         impactosAraña = new IImpacto[maxImpactosAraña];
         for (int i = 0; i < maxImpactosAraña; i++)
         {
@@ -102,19 +145,19 @@ public class ControladorEfectos : StartupScript
         // Marca
         if (iniciarMarca)
         {
-            instancia.marcas[instancia.marcaActual].IniciarMarca(arma, posición, normal);
-            instancia.marcaActual++;
+            marcas[marcaActual].IniciarMarca(arma, posición, normal);
+            marcaActual++;
 
-            if (instancia.marcaActual >= instancia.maxMarcas)
-                instancia.marcaActual = 0;
+            if (marcaActual >= maxMarcas)
+                marcaActual = 0;
         }
 
         // Efecto
-        instancia.efectos[instancia.efectoActual].IniciarEfectoEntorno(arma, posición, normal);
-        instancia.efectoActual++;
+        efectos[efectoActual].IniciarEfectoEntorno(arma, posición, normal);
+        efectoActual++;
 
-        if (instancia.efectoActual >= instancia.maxEfectos)
-            instancia.efectoActual = 0;
+        if (efectoActual >= maxEfectos)
+            efectoActual = 0;
     }
 
     public static void IniciarEfectoDaño(Armas arma, Enemigos enemigo, float multiplicadorDaño, Vector3 posición, Vector3 normal)
@@ -138,29 +181,29 @@ public class ControladorEfectos : StartupScript
                 break;
         }
 
-        instancia.efectos[instancia.efectoActual].IniciarEfectoEnemigo(enemigo, multiplicadorDaño, posición, normal);
-        instancia.efectoActual++;
+        efectos[efectoActual].IniciarEfectoEnemigo(enemigo, multiplicadorDaño, posición, normal);
+        efectoActual++;
 
-        if (instancia.efectoActual >= instancia.maxEfectos)
-            instancia.efectoActual = 0;
+        if (efectoActual >= maxEfectos)
+            efectoActual = 0;
     }
 
     public static void IniciarGranada(float daño, float velocidad, Vector3 posición, Quaternion rotación)
     {
-        instancia.granadas[instancia.granadaActual].Iniciar(daño, velocidad, rotación, posición, Enemigos.nada);
+        granadas[granadaActual].Iniciar(daño, velocidad, rotación, posición, Enemigos.nada);
 
-        instancia.granadaActual++;
-        if (instancia.granadaActual >= instancia.maxGranadas)
-            instancia.granadaActual = 0;
+        granadaActual++;
+        if (granadaActual >= maxGranadas)
+            granadaActual = 0;
     }
 
     public static void IniciarImpactoGranada(float daño, Vector3 posición, Vector3 normal)
     {
-        instancia.explosiones[instancia.explosiónActual].Iniciar(posición, normal, daño);
+        explosiones[explosiónActual].Iniciar(posición, normal, daño);
 
-        instancia.explosiónActual++;
-        if (instancia.explosiónActual >= instancia.maxExplosiones)
-            instancia.explosiónActual = 0;
+        explosiónActual++;
+        if (explosiónActual >= maxExplosiones)
+            explosiónActual = 0;
 
         // Marca solo en entorno
         IniciarEfectoEntorno(Armas.lanzagranadas, posición, normal, (normal != Vector3.Zero));
@@ -169,16 +212,40 @@ public class ControladorEfectos : StartupScript
     // Enemigos
     public static void IniciarEfectoEnemigo(Enemigos enemigo, Vector3 posición, Vector3 normal)
     {
-        instancia.efectos[instancia.efectoActual].IniciarEfectoEnemigo(enemigo, 0.5f, posición, normal);
-        instancia.efectoActual++;
+        efectos[efectoActual].IniciarEfectoEnemigo(enemigo, 0.5f, posición, normal);
+        efectoActual++;
 
-        if (instancia.efectoActual >= instancia.maxEfectos)
-            instancia.efectoActual = 0;
+        if (efectoActual >= maxEfectos)
+            efectoActual = 0;
     }
 
-    public static void IniciarProyectil(Enemigos enemigo, float daño, Vector3 posición, Vector3 normal)
+    public static void IniciarProyectil(Enemigos enemigo, float daño, float velocidad, Vector3 posición, Quaternion rotación, float velocidadRotación, Vector3 alturaObjetivo)
     {
+        switch (enemigo)
+        {
+            case Enemigos.rangoLigero:
+                proyectilesDron[proyectilDronActual].Iniciar(daño, velocidad, rotación, posición, enemigo);
 
+                proyectilDronActual++;
+                if (proyectilDronActual >= maxProyectilesDron)
+                    proyectilDronActual = 0;
+                break;
+            case Enemigos.rangoMediano:
+                proyectilesBabosa[proyectilBabosaActual].IniciarPersecutor(velocidadRotación, alturaObjetivo);
+                proyectilesBabosa[proyectilBabosaActual].Iniciar(daño, velocidad, rotación, posición, enemigo);
+
+                proyectilBabosaActual++;
+                if (proyectilBabosaActual >= maxProyectilesBabosa)
+                    proyectilBabosaActual = 0;
+                break;
+            case Enemigos.rangoPesado:
+                proyectilesAraña[proyectilArañaActual].Iniciar(daño, velocidad, rotación, posición, enemigo);
+
+                proyectilArañaActual++;
+                if (proyectilArañaActual >= maxProyectilesAraña)
+                    proyectilArañaActual = 0;
+                break;
+        }
     }
 
     public static void IniciarImpacto(Enemigos enemigo, float daño, Vector3 posición, Vector3 normal)
@@ -186,11 +253,11 @@ public class ControladorEfectos : StartupScript
         switch (enemigo)
         {
             case Enemigos.rangoPesado:
-                instancia.impactosAraña[instancia.impactoArañaActual].Iniciar(posición, normal, daño);
+                impactosAraña[impactoArañaActual].Iniciar(posición, normal, daño);
 
-                instancia.impactoArañaActual++;
-                if (instancia.impactoArañaActual >= instancia.maxImpactosAraña)
-                    instancia.impactoArañaActual = 0;
+                impactoArañaActual++;
+                if (impactoArañaActual >= maxImpactosAraña)
+                    impactoArañaActual = 0;
                 break;
         }
     }

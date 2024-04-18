@@ -7,13 +7,15 @@ namespace Bozobaralika;
 public class ControladorArmaMelé : StartupScript
 {
     private RigidbodyComponent cuerpo;
+    private float daño;
 
-    public void Iniciar()
+    public void Iniciar(float _daño)
     {
+        daño = _daño;
         cuerpo = Entity.Get<RigidbodyComponent>();
     }
 
-    public void Atacar(float daño)
+    public void Atacar()
     {
         EnviarDaño(ObtenerColisiones(), daño);
     }

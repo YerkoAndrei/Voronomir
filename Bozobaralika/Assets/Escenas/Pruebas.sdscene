@@ -2184,6 +2184,9 @@ Hierarchy:
                         prefabEfecto: fb5fb3aa-991f-4954-94e8-6ddbde24eb1f:Prefabs/Proyectiles/Efecto
                         prefabGranada: a3c696d3-259b-49a3-94e8-945c1671282a:Prefabs/Proyectiles/Granada
                         "prefabExplosión": "3db0a6bf-02b6-4061-8734-ac74c0c26780:Prefabs/Proyectiles/Explosión"
+                        prefabProyectilDron: af640d43-9c24-4ebd-83e0-38d09e4f84c0:Prefabs/Proyectiles/ProyectilDron
+                        prefabProyectilBabosa: 950b1dd4-c019-4d1b-950c-b9d49b6d11f9:Prefabs/Proyectiles/ProyectilBabosa
+                        "prefabProyectilAraña": "4e523c66-cad9-49d9-8baf-b22243566c31:Prefabs/Proyectiles/ProyectilAraña"
                         "prefabImpactoAraña": "0813580a-18cd-48ee-b40d-7d72977e10c5:Prefabs/Proyectiles/ImpactoAraña"
                     3ba19ac87f450380cffa251b6434761f: !Bozobaralika.ControladorPersecusionesTrigonom%25C3%25A9tricas,Bozobaralika.Proyecto
                         Id: 41c4e19c-0c5b-4c55-b8b8-d2a4e05dd1f1
