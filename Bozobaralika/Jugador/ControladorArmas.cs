@@ -294,7 +294,7 @@ public class ControladorArmas : StartupScript
         ControladorCofres.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
 
         if (armaActual == Armas.metralleta)
-            controlador.VibrarCámara(1f, 4);
+            controlador.VibrarCámara(0.8f, 4);
     }
 
     private void CalcularRayoPenetrante()
@@ -632,9 +632,9 @@ public class ControladorArmas : StartupScript
             case Armas.metralleta:
                 return 0.05f;
             case Armas.rifle:
-                return 1.4f;
+                return 1.2f;
             case Armas.lanzagranadas:
-                return 1f;
+                return 1.4f;
             default:
                 return 0;
         }

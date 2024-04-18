@@ -83,7 +83,7 @@ public class ElementoExplosión : StartupScript, IImpacto
             tiempo = tiempoLerp / duración;
             modelo.Entity.Transform.Scale = Vector3.Lerp(escalaInicial, Vector3.Zero, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
         }
         modelo.Enabled = false;
