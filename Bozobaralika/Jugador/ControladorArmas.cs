@@ -425,7 +425,7 @@ public class ControladorArmas : StartupScript
                 interfaz.Destruir();
 
                 var enemigo = resultado.Collider.Entity.Get<ElementoProyectilSimple>().disparador;
-                ControladorEfectos.IniciarEfectoDaño(armaActual, enemigo, 1, resultado.Point, resultado.Normal);
+                ControladorEfectos.IniciarEfectoDaño(armaActual, enemigo, 0.5f, resultado.Point, resultado.Normal);
             }
             else
             {

@@ -596,8 +596,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: da36a1d4-20a4-4045-8862-27ba561b8c9b
                 Name: Rayo
                 Components:
@@ -606,8 +605,7 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            c52aff53d95b9f989640b48e939bc0bc: ref!! a3720b17-6726-4017-adcb-f72ebcd44051
+                        Children: {}
                     9373beae1237271f3b5610a77fea0b07: !ParticleSystemComponent
                         Id: f040fab0-a7d6-428f-8237-adc9e237824b
                         Enabled: false
@@ -658,7 +656,7 @@ Hierarchy:
                                             DisplayParticleRotation: false
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            RandomSize: {X: 0.05, Y: 0.1}
+                                            RandomSize: {X: 0.1, Y: 0.2}
                                         ee36a124bd63837e4ca5e0d598bd6848: !InitialPositionSeed
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -837,7 +835,8 @@ Hierarchy:
                             0d51d92c1699ed9892c88cf6e08f25d5: ref!! 8d0f6108-df59-4bb4-af90-a1b5ecd089d7
                             bbf7431c69bf6b0f3813219f1215fc43: ref!! ba7cfce2-15b1-4d93-a038-d375c1bec4ba
                             5c4a0f2c3f8124c46de30b2633dbc045: ref!! a63799b6-8bdb-487b-bb5e-05d059b80419
-                            b9fdca51f78d59cf6812c62232815c86: ref!! ce25b7d5-556e-48c1-9d4a-0bc009a5f74c
+                            8f17bd2bf14174a4ca0f927988bbb8c1: ref!! a3720b17-6726-4017-adcb-f72ebcd44051
+                            89d4bbb888b07499eebf173f5d46f3ca: ref!! ce25b7d5-556e-48c1-9d4a-0bc009a5f74c
                             e6c5f447f086523882c4ed4c65cb6d74: ref!! d88d401a-c601-47b9-8fc4-780063f4c0ac
                     fdb5a30677b89d06a6187d2576e7c862: !Bozobaralika.ElementoEfecto,Bozobaralika.Proyecto
                         Id: eb3326c0-0268-41c0-a1e8-35019e65bb6e
