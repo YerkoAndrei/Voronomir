@@ -78,11 +78,11 @@ public class ControladorJugador : SyncScript, IDañable
             tiempoRapidez -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
 
         if(tiempoDaño <= 0)
-            interfaz.ActivarPoder(Poderes.daño, false);
+            ApagarPoder(Poderes.daño);
         if (tiempoInvencibilidad <= 0)
-            interfaz.ActivarPoder(Poderes.invencibilidad, false);
+            ApagarPoder(Poderes.invencibilidad);
         if (tiempoRapidez <= 0)
-            interfaz.ActivarPoder(Poderes.rapidez, false);
+            ApagarPoder(Poderes.rapidez);
     }
 
     private async void Curar()
@@ -190,6 +190,23 @@ public class ControladorJugador : SyncScript, IDañable
                 break;
             case Poderes.rapidez:
                 tiempoRapidez = 30;
+                break;
+        }
+    }
+
+    private void ApagarPoder(Poderes poder)
+    {
+        interfaz.ActivarPoder(poder, false);
+        switch (poder)
+        {
+            case Poderes.daño:
+                tiempoDaño = 0;
+                break;
+            case Poderes.invencibilidad:
+                tiempoInvencibilidad = 0;
+                break;
+            case Poderes.rapidez:
+                tiempoRapidez = 0;
                 break;
         }
     }
