@@ -2,6 +2,6 @@
 Id: ed7453c6-b5c0-4969-8fcd-94ddc3abd506
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Source: !file Corte.png
+Source: !file Fuerte.png
 Type: !ColorTextureType
     ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

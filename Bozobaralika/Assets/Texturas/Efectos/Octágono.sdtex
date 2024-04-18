@@ -2,6 +2,6 @@
 Id: 1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Source: !file Humo.png
+Source: !file "Octágono.png"
 Type: !ColorTextureType
     ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
