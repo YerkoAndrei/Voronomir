@@ -1,0 +1,15 @@
+!Model
+Id: 5b896984-0486-4a70-abf8-1a52f64f29a7
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Llave.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    b3711862cdbaf0d879499233784c6696:
+        Name: Material
+        MaterialInstance:
+            Material: null
+Modifiers: {}
+~SourceHashes:
+    ed16846fbd5045f5132dba65c9a924d2~Llave.glb: 76e59575449f008ea9d190b78e7034aa
