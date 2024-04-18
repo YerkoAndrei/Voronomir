@@ -1,0 +1,19 @@
+!Model
+Id: a8db6d9b-4574-4dfd-8104-d5fc6b55a011
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Saltador.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    997eef17363bfbb24adc6f249fb22cd1:
+        Name: Saltador
+        MaterialInstance:
+            Material: fd9342ec-11b1-4350-ab92-42d669c2681b:Modelos/Entorno/Saltador/Materiales/Saltador
+    9fa20c4a7280d721f0618feeaadee627:
+        Name: Deco
+        MaterialInstance:
+            Material: 5de2f794-beb3-4b95-8721-5db623ef51c8:Modelos/Entorno/Saltador/Materiales/Deco
+Modifiers: {}
+~SourceHashes:
+    7265cbaae683b76a16f06043dbb2d607~Saltador.glb: 23d2c0b0d03aa3e1a242816ca44ff9e5

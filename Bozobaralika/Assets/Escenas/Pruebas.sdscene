@@ -908,7 +908,7 @@ Hierarchy:
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 70d66efc-b806-4a95-a2c8-358a3736fe28
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
+                        Model: a8db6d9b-4574-4dfd-8104-d5fc6b55a011:Modelos/Entorno/Saltador/Saltador
                         Materials: {}
         -   Entity:
                 Id: 493f8427-a154-46ca-8ace-e04fd91fae79
@@ -1453,7 +1453,7 @@ Hierarchy:
                         Id: 5f6d0967-5c43-448f-87f9-70e56cdfa1d1
                         Position: {X: -7.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.0, Y: 0.5, Z: 2.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! d811575a-4b20-4860-9c65-1f82abb729e8
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
@@ -1471,7 +1471,7 @@ Hierarchy:
                         ColliderShapes:
                             ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                Size: {X: 2.0, Y: 1.0, Z: 2.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     ae77dc873a2c3c32c294301875605415: !Bozobaralika.ControladorSaltador,Bozobaralika.Proyecto
