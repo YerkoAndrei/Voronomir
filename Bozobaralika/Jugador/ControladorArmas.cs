@@ -12,8 +12,6 @@ using static Constantes;
 
 public class ControladorArmas : StartupScript
 {
-    public Prefab prefabGranada;
-
     public AnimadorArmas animadorEspada;
     public AnimadorArmas animadorEscopeta;
     public AnimadorArmas animadorMetralleta;
@@ -52,12 +50,6 @@ public class ControladorArmas : StartupScript
 
     // Lanzagranadas
     private TipoDisparo turnoLanzagranadas;
-    private IProyectil[] granadas;
-    private IImpacto[] explosiones;
-    private int granadaActual;
-    private int explosiónActual;
-    private int maxGranadas;
-    private int maxExplosiones;
 
     public async void Iniciar(ControladorJugador _controlador, ControladorMovimiento _movimiento, CameraComponent _cámara, InterfazJuego _interfaz)
     {
@@ -86,16 +78,6 @@ public class ControladorArmas : StartupScript
             new Vector3 (0, 0, 0),
             new Vector3 (-0.3f, 0, 0)
         };
-
-        // Cofre granadas
-        maxGranadas = 4;
-        granadas = new IProyectil[maxGranadas];
-        for (int i = 0; i < maxGranadas; i++)
-        {
-            var granada = prefabGranada.Instantiate()[0];
-            granadas[i] = ObtenerInterfaz<IProyectil>(granada);
-            Entity.Scene.Entities.Add(granada);
-        }
 
         animadorEspada.Iniciar();
         animadorEscopeta.Iniciar();
@@ -339,10 +321,10 @@ public class ControladorArmas : StartupScript
         {
             if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
-            if(resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
-                ControladorEfectos.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal);
+                if(resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
+                    ControladorEfectos.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal);
 
-            return;
+                return;
             }
 
             var dañable = resultado.Collider.Entity.Get<ElementoDañable>();
@@ -397,23 +379,7 @@ public class ControladorArmas : StartupScript
         var dirección = Vector3.Normalize(posición - resultado.Point);
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
-        granadas[granadaActual].Iniciar(ObtenerDaño(armaActual), 35, rotación, posición, Enemigos.nada);
-
-        granadaActual++;
-        if (granadaActual >= maxGranadas)
-            granadaActual = 0;
-    }
-
-    private void IniciarExplosión(Vector3 posición, Vector3 normal)
-    {
-        explosiones[explosiónActual].Iniciar(posición, normal, ObtenerDaño(armaActual));
-
-        if (normal != Vector3.Zero)
-            ControladorEfectos.IniciarEfectoEntorno(armaActual, posición, normal);
-
-        explosiónActual++;
-        if (explosiónActual >= maxExplosiones)
-            explosiónActual = 0;
+        ControladorEfectos.IniciarGranada(ObtenerDaño(armaActual), 35, posición, rotación);
     }
 
     private void Atacar(bool desdeIzquierda)

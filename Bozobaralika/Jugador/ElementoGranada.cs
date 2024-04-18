@@ -25,10 +25,10 @@ public class ElementoGranada : AsyncScript, IProyectil
 
         while (Game.IsRunning)
         {
-            await cuerpo.NewCollision();
+            var colisión = await cuerpo.NewCollision();
             if (cuerpo.Enabled)
             {
-                CrearImpacto();
+                CrearImpacto(colisión);
                 Destruir();
             }
 
@@ -87,18 +87,23 @@ public class ElementoGranada : AsyncScript, IProyectil
         }
     }
 
-    private void CrearImpacto()
+    private void CrearImpacto(Collision colisión)
     {
-        // Rayo para crear marca
-        var dirección = cola.WorldMatrix.TranslationVector + cola.WorldMatrix.Forward * 2;
-        var resultado = this.GetSimulation().Raycast(cola.WorldMatrix.TranslationVector,
-                                                     dirección,
-                                                     CollisionFilterGroups.DefaultFilter,
-                                                     colisionesMarca);
+        if (TocaEntorno(colisión))
+        {
+            // Rayo para crear marca
+            var dirección = cola.WorldMatrix.TranslationVector + cola.WorldMatrix.Forward * 2;
+            var resultado = this.GetSimulation().Raycast(cola.WorldMatrix.TranslationVector,
+                                                         dirección,
+                                                         CollisionFilterGroups.DefaultFilter,
+                                                         colisionesMarca);
 
-        if (resultado.Succeeded)
-            ControladorEfectos.IniciarImpactoGranada(resultado.Point, resultado.Normal, dañoImpacto);
+            if (resultado.Succeeded)
+                ControladorEfectos.IniciarImpactoGranada(dañoImpacto, resultado.Point, resultado.Normal);
+            else
+                ControladorEfectos.IniciarImpactoGranada(dañoImpacto, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
+        }
         else
-            ControladorEfectos.IniciarImpactoGranada(Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero, dañoImpacto);
+            ControladorEfectos.IniciarImpactoGranada(dañoImpacto, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
     }
 }

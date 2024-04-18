@@ -148,7 +148,6 @@ Hierarchy:
                         Id: 853d3c97-8a0e-4048-a57c-1704945b8595
                     54c947a658f979a1a3cbf73596735198: !Bozobaralika.ControladorArmas,Bozobaralika.Proyecto
                         Id: ee03a1fb-1cae-4679-9cfb-758a1f99f1ee
-                        prefabGranada: a3c696d3-259b-49a3-94e8-945c1671282a:Prefabs/Proyectiles/Granada
                         animadorEspada: ref!! 353e3563-85b9-4e95-8cde-b449d5a03217
                         animadorEscopeta: ref!! b4f31a54-c2e1-4a93-86d7-6ec5585a30e8
                         animadorMetralleta: ref!! 14b56ce5-0534-48dd-aca3-9cc3154d2023

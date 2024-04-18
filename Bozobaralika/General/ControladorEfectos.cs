@@ -127,21 +127,49 @@ public class ControladorEfectos : StartupScript
         if (instancia.efectoActual >= instancia.maxEfectos)
             instancia.efectoActual = 0;
     }
-    
-    
-    public static void IniciarImpactoGranada(Vector3 posición, Vector3 normal, float daño)
+
+    public static void IniciarGranada(float daño, float velocidad, Vector3 posición, Quaternion rotación)
+    {
+        instancia.granadas[instancia.granadaActual].Iniciar(daño, velocidad, rotación, posición, Enemigos.nada);
+
+        instancia.granadaActual++;
+        if (instancia.granadaActual >= instancia.maxGranadas)
+            instancia.granadaActual = 0;
+    }
+
+    public static void IniciarImpactoGranada(float daño, Vector3 posición, Vector3 normal)
     {
         instancia.explosiones[instancia.explosiónActual].Iniciar(posición, normal, daño);
-
-        if (normal != Vector3.Zero)
-            IniciarEfectoEntorno(Armas.lanzagranadas, posición, normal);
 
         instancia.explosiónActual++;
         if (instancia.explosiónActual >= instancia.maxExplosiones)
             instancia.explosiónActual = 0;
+
+        // Marca solo en entorno
+        if (normal != Vector3.Zero)
+        {
+            instancia.marcas[instancia.marcaActual].IniciarMarca(Armas.lanzagranadas, posición, normal);
+            instancia.marcaActual++;
+
+            if (instancia.marcaActual >= instancia.maxMarcas)
+                instancia.marcaActual = 0;
+        }
+
+        // Efecto
+        instancia.efectos[instancia.efectoActual].IniciarEfectoEntorno(Armas.lanzagranadas, posición, normal);
+        instancia.efectoActual++;
+
+        if (instancia.efectoActual >= instancia.maxEfectos)
+            instancia.efectoActual = 0;
     }
-    
-    public static void IniciarImpacto(Enemigos enemigo, Vector3 posición, Vector3 normal, float daño)
+
+    // Enemigos
+    public static void IniciarProyectil(Enemigos enemigo, float daño, Vector3 posición, Vector3 normal)
+    {
+
+    }
+
+    public static void IniciarImpacto(Enemigos enemigo, float daño, Vector3 posición, Vector3 normal)
     {
 
     }
