@@ -9,7 +9,7 @@ public class ElementoEfecto : StartupScript
 {
     // Efectos entorno
     public ParticleSystemComponent bala;
-    public ParticleSystemComponent rifle;
+    public ParticleSystemComponent explosión;
     public ParticleSystemComponent granada;
 
     // Efectos enemigos
@@ -43,12 +43,16 @@ public class ElementoEfecto : StartupScript
                 bala.ParticleSystem.ResetSimulation();
                 break;
             case Armas.rifle:
-                rifle.Entity.Transform.Scale = Vector3.One * 0.8f;
-                rifle.Enabled = true;
-                rifle.ParticleSystem.ResetSimulation();
+                explosión.Entity.Transform.Scale = Vector3.One * 0.8f;
+                explosión.Enabled = true;
+                explosión.ParticleSystem.ResetSimulation();
                 break;
             case Armas.lanzagranadas:
-                granada.Entity.Transform.Scale = Vector3.One * 1.2f;
+                explosión.Entity.Transform.Scale = Vector3.One * 1.2f;
+                explosión.Enabled = true;
+                explosión.ParticleSystem.ResetSimulation();
+
+                granada.Entity.Transform.Scale = Vector3.One * 0.4f;
                 granada.Enabled = true;
                 granada.ParticleSystem.ResetSimulation();
                 break;
@@ -100,7 +104,7 @@ public class ElementoEfecto : StartupScript
     private void Apagar()
     {
         bala.Enabled = false;
-        rifle.Enabled = false;
+        explosión.Enabled = false;
         granada.Enabled = false;
 
         sangre.Enabled = false;

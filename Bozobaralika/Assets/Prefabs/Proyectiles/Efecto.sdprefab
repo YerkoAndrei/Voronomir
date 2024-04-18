@@ -156,7 +156,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 4ca8692f-c53e-445e-8890-259b9fffb928
-                Name: Rifle
+                Name: "Explosión"
                 Components:
                     093b02d926676f161ca771eca86b224b: !TransformComponent
                         Id: ba7cfce2-15b1-4d93-a038-d375c1bec4ba
@@ -451,7 +451,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 77595d60-ca7d-4904-a636-70471c8c0f54
-                Name: Granadas
+                Name: Granada
                 Components:
                     093b02d926676f161ca771eca86b224b: !TransformComponent
                         Id: a63799b6-8bdb-487b-bb5e-05d059b80419
@@ -465,13 +465,13 @@ Hierarchy:
                         Control:
                             ResetSeconds: 2.0
                             Control: Play
-                        Color: {R: 0.78431374, G: 0.7058824, B: 0.0, A: 0.39215687}
+                        Color: {R: 1.0, G: 0.0, B: 0.0, A: 0.39215687}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
                             BoundingShape: null
                             Emitters:
-                                4f568c9f2acf53e703cba1b6000a6173:
+                                354399268ecb80863fbcd44a7de54c62:
                                     ParticleLifetime: {X: 0.8, Y: 1.0}
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null
@@ -479,7 +479,7 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            Texture: b07df677-5dac-4acb-b8c7-87df66b9cd87:Texturas/Efectos/Chispa
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
@@ -507,7 +507,7 @@ Hierarchy:
                                             DisplayParticleRotation: false
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            RandomSize: {X: 0.1, Y: 0.2}
+                                            RandomSize: {X: 0.04, Y: 0.08}
                                         d531158707504cff72daa8e8f8f61784: !InitialPositionSeed
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -537,8 +537,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            VelocityMin: {X: -3.0, Y: 2.0, Z: -3.0}
-                                            VelocityMax: {X: 3.0, Y: 4.0, Z: 3.0}
+                                            VelocityMin: {X: -4.0, Y: -2.0, Z: -4.0}
+                                            VelocityMax: {X: 4.0, Y: 8.0, Z: 4.0}
                                     Updaters:
                                         75b073a481ac7c5736754d17befa5b44: !UpdaterForceField
                                             InheritPosition: true
@@ -691,7 +691,7 @@ Hierarchy:
                         Control:
                             ResetSeconds: 2.0
                             Control: Play
-                        Color: {R: 0.0, G: 0.7058824, B: 0.0, A: 0.39215687}
+                        Color: {R: 0.0, G: 0.39215687, B: 0.0, A: 0.39215687}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
@@ -841,7 +841,7 @@ Hierarchy:
                     fdb5a30677b89d06a6187d2576e7c862: !Bozobaralika.ElementoEfecto,Bozobaralika.Proyecto
                         Id: eb3326c0-0268-41c0-a1e8-35019e65bb6e
                         bala: ref!! 7f5faf81-1878-462c-a00f-c0f0d529ab31
-                        rifle: ref!! 95411ba9-c66e-4641-9336-33a186e96a21
+                        "explosión": ref!! 95411ba9-c66e-4641-9336-33a186e96a21
                         granada: ref!! 750be063-e6c5-4786-9dd4-4fedc756bc6d
                         sangre: ref!! 6b2918ac-7f8b-4b8d-9766-d37889aff734
                         rayos: ref!! f040fab0-a7d6-428f-8237-adc9e237824b
