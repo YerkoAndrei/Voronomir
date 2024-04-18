@@ -147,7 +147,7 @@ public class AnimadorArmas : AsyncScript
             ejeIzquierda.Rotation = Quaternion.Lerp(rotaciónEntraIzquierda, Quaternion.Identity, tiempo);
             ejeDerecha.Rotation = Quaternion.Lerp(rotaciónEntraDerecha, Quaternion.Identity, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
         }
 
@@ -176,7 +176,7 @@ public class AnimadorArmas : AsyncScript
             ejeIzquierda.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
             ejeDerecha.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
         }
 

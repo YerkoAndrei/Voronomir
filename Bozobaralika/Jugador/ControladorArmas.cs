@@ -544,6 +544,28 @@ public class ControladorArmas : StartupScript
         }
     }
 
+    public void GuardarArma()
+    {
+        switch (armaActual)
+        {
+            case Armas.espada:
+                animadorEspada.AnimarSalidaArma();
+                break;
+            case Armas.escopeta:
+                animadorEscopeta.AnimarSalidaArma();
+                break;
+            case Armas.metralleta:
+                animadorMetralleta.AnimarSalidaArma();
+                break;
+            case Armas.rifle:
+                animadorRife.AnimarSalidaArma();
+                break;
+            case Armas.lanzagranadas:
+                animadorLanzagranadas.AnimarSalidaArma();
+                break;
+        }
+    }
+
     private void ApagarArmas()
     {
         animadorEspada.ApagarArma();

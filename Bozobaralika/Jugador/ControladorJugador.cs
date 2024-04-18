@@ -127,6 +127,9 @@ public class ControladorJugador : SyncScript, IDañable
 
     public void RecibirDaño(float daño)
     {
+        if (!ControladorPartida.ObtenerActivo())
+            return;
+
         movimiento.DetenerMovimiento();
         VibrarCámara(10, 10);
 
@@ -143,6 +146,8 @@ public class ControladorJugador : SyncScript, IDañable
     private void Morir()
     {
         // PENDIENTE: efectos
+        armas.GuardarArma();
+        AnimarMuerte();
         ControladorPartida.Morir();
     }
 
@@ -274,7 +279,7 @@ public class ControladorJugador : SyncScript, IDañable
                 tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
                 cámara.Entity.Transform.Rotation = Quaternion.Lerp(inicial, objetivo, tiempo);
 
-                tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+                tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
                 await Task.Delay(1);
             }
         }
@@ -292,9 +297,28 @@ public class ControladorJugador : SyncScript, IDañable
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             cabeza.Position = Vector3.Lerp(retroceso, posiciónCabeza, tiempo);
 
-            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
         }
         cabeza.Position = posiciónCabeza;
+    }
+
+    private async void AnimarMuerte()
+    {
+        var inicio = posiciónCabeza;
+        var objetivo = posiciónCabeza + (Vector3.UnitY * -1.3f);
+        float duración = 0.25f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+            cabeza.Position = Vector3.Lerp(inicio, objetivo, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+        cabeza.Position = objetivo;
     }
 }
