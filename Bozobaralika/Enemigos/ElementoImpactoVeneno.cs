@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
+using Stride.Particles.Components;
 using Stride.Engine;
 
 namespace Bozobaralika;
@@ -8,6 +9,7 @@ public class ElementoImpactoVeneno : StartupScript, IImpacto
 {
     public float tiempoVida;
     public ModelComponent modelo;
+    public ParticleSystemComponent partículas;
 
     private PhysicsComponent cuerpo;
 
@@ -16,6 +18,7 @@ public class ElementoImpactoVeneno : StartupScript, IImpacto
         cuerpo = Entity.Get<PhysicsComponent>();
         modelo.Enabled = false;
         cuerpo.Enabled = false;
+        partículas.Enabled = false;
     }
 
     public void Iniciar(Vector3 posición, Vector3 normal, float daño)
@@ -31,6 +34,8 @@ public class ElementoImpactoVeneno : StartupScript, IImpacto
 
         modelo.Enabled = true;
         cuerpo.Enabled = true;
+        partículas.Enabled = true;
+        partículas.ParticleSystem.ResetSimulation();
 
         ContarVida();
     }
@@ -52,5 +57,6 @@ public class ElementoImpactoVeneno : StartupScript, IImpacto
 
         modelo.Enabled = false;
         cuerpo.Enabled = false;
+        partículas.Enabled = false;
     }
 }
