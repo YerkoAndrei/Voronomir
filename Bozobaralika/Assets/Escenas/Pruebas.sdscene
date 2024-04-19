@@ -408,9 +408,9 @@ Hierarchy:
                             28c3dc5c37d7986dd7eca9cf30a03595~0: 5cae3548-e7fb-4d32-b143-3a2b1598d56e:Opaco
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 324561d4-8967-40e9-bd6d-3e0c4ed3b251
-                        Position: {X: 0.0, Y: 1.5, Z: -20.0}
+                        Position: {X: 0.0, Y: 3.0, Z: -20.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 40.0, Y: 3.0, Z: 1.0}
+                        Scale: {X: 40.0, Y: 6.0, Z: 1.0}
                         Children: {}
                     0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
                         Id: fa87a99e-2772-4eea-baf5-5a7ee755d00d
@@ -716,9 +716,9 @@ Hierarchy:
                             72067199462976b4ea042d495be06f12~0: 5cae3548-e7fb-4d32-b143-3a2b1598d56e:Opaco
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 56178e94-747f-4fbc-a1f8-fe489855cd99
-                        Position: {X: -20.0, Y: 1.5, Z: 0.0}
+                        Position: {X: -20.0, Y: 3.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 3.0, Z: 40.0}
+                        Scale: {X: 1.0, Y: 6.0, Z: 40.0}
                         Children: {}
                     0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
                         Id: b334cb6d-4dbf-49ee-80d0-3bd7b9851274
@@ -2506,9 +2506,9 @@ Hierarchy:
                             49d7d2a3f790877c3fdb7eb6c73612bd~0: 5cae3548-e7fb-4d32-b143-3a2b1598d56e:Opaco
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: 55b0cb1d-8f86-4329-b2c4-e582dc024795
-                        Position: {X: 20.0, Y: 1.5, Z: 0.0}
+                        Position: {X: 20.0, Y: 3.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 3.0, Z: 40.0}
+                        Scale: {X: 1.0, Y: 6.0, Z: 40.0}
                         Children: {}
                     0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
                         Id: 075c1757-649c-4a19-8bc5-afce4602a703
@@ -3210,9 +3210,9 @@ Hierarchy:
                             11fd6d3218ccdf65782cb6628451632b~0: 5cae3548-e7fb-4d32-b143-3a2b1598d56e:Opaco
                     bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
                         Id: a4261350-d80e-49ce-9ab7-b724439a707e
-                        Position: {X: 0.0, Y: 1.5, Z: 20.0}
+                        Position: {X: 0.0, Y: 3.0, Z: 20.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 40.0, Y: 3.0, Z: 1.0}
+                        Scale: {X: 40.0, Y: 6.0, Z: 1.0}
                         Children: {}
                     0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
                         Id: 0d2f722f-2501-4812-b5f4-702542d935fb
