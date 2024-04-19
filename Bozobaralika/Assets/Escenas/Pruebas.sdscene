@@ -945,7 +945,7 @@ Hierarchy:
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Entity:
                 Id: 510ed132-3f81-42a5-9c8c-e52f9348ffab
-                Name: Llave Azul
+                Name: Llave (Azul)
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 2c28075e-0b8e-49ee-a1ac-9996981dc5bd
@@ -1033,13 +1033,13 @@ Hierarchy:
                 Components:
                     fe7fedc306aeffcc4f309968002ca983: !TransformComponent
                         Id: 2f292ff2-68d1-4939-884c-78cab4160835
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: d369ede9-6d45-4d27-b849-76bfeb9b714f
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
+                        Model: e8d3d766-24dd-46d2-b345-9d5ba829b473:Modelos/Entorno/PoderInvencibilidad/Invencibilidad
                         Materials: {}
         -   Folder: null
             Entity:
@@ -1361,7 +1361,8 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 9e007192-e377-4754-8f76-f47349581a74
                         Model: 5b896984-0486-4a70-abf8-1a52f64f29a7:Modelos/Entorno/Llave/Llave
-                        Materials: {}
+                        Materials:
+                            29052f4076ada5a695dba44b47be1ac7~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
         -   Folder: null
             Entity:
                 Id: 893511a5-8fd4-4d43-b50c-6fec6cbd1cb1
@@ -1417,13 +1418,13 @@ Hierarchy:
                 Components:
                     fe7fedc306aeffcc4f309968002ca983: !TransformComponent
                         Id: 6f497df9-acb3-4047-b451-d4d070ad90c1
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: f7e225b5-b554-40f4-8efe-2bde601df476
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
+                        Model: "47c1c69d-2581-453c-a307-453e8ac0f6f7:Modelos/Entorno/PoderDaño/Daño"
                         Materials: {}
         -   Folder: null
             Entity:
@@ -1737,7 +1738,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: a9c0250e-6712-4e86-bc3f-78047f439de2
-                Name: Llave Roja
+                Name: Llave (Roja)
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: d06c1b2e-e204-4081-b2a8-4f1d9678ef13
@@ -2034,13 +2035,13 @@ Hierarchy:
                 Components:
                     fe7fedc306aeffcc4f309968002ca983: !TransformComponent
                         Id: 411e04b7-e116-4fb4-8bf5-773513c77a48
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 5bb9c309-214d-47aa-a23a-47a0827dd6d3
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
+                        Model: 440cbaed-3492-4a7f-8695-02ab886f0bfe:Modelos/Entorno/PoderRapidez/Rapidez
                         Materials: {}
         -   Folder: null
             Entity:
@@ -2677,7 +2678,8 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: c736188e-c84f-496a-8dff-88e6c031640f
                         Model: 5b896984-0486-4a70-abf8-1a52f64f29a7:Modelos/Entorno/Llave/Llave
-                        Materials: {}
+                        Materials:
+                            790347199cd46b2dc25cec73548ae265~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
         -   Folder: null
             Entity:
                 Id: ebc6d88a-6505-43f1-a97b-876ae9986c9a

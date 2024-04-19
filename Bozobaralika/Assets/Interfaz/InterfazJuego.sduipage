@@ -519,7 +519,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 255, G: 0, B: 0, A: 255}
+                Color: {R: 255, G: 0, B: 255, A: 255}
         -   UIElement: !TextBlock
                 Id: 74a1247f-bbc0-4c13-a84a-c0360f3c84db
                 DependencyProperties:
