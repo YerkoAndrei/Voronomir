@@ -9,7 +9,7 @@ Materials:
     a7fd6caccedd165637ec4cb591dd2043:
         Name: Material
         MaterialInstance:
-            Material: null
+            Material: "b7e056c4-b8af-47da-855f-2941d34898ee:Modelos/Entorno/Botón/Materiales/Botón"
 Modifiers: {}
 ~SourceHashes:
     "2959517a6844adf3d20c947a34c2cf30~Botón.glb": 88ec29a7c4960a91019c0090c4c38ada

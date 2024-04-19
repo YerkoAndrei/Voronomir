@@ -19,17 +19,11 @@ Hierarchy:
         - ref!! cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
         - ref!! 52cd02bd-3165-4aa6-8d1e-7538541119a3
         - ref!! dca75c2f-3874-4e83-9565-15c148fa0401
-        - ref!! 510ed132-3f81-42a5-9c8c-e52f9348ffab
-        - ref!! a9c0250e-6712-4e86-bc3f-78047f439de2
-        - ref!! a54e658d-bb78-4833-b114-e0ad88f4652c
-        - ref!! e6ee0047-6726-4c37-bcd8-6f0fb152abbf
         - ref!! 713070be-902c-4072-88c3-994978523f77
         - ref!! 192aae67-88cf-46cd-9a6b-79fdb36cf312
         - ref!! 8dcfbf63-872c-4767-b5d4-c444770e99f8
         - ref!! 3e1c62cc-564a-4570-b7d1-37c0f75161c4
         - ref!! 41b0fd2f-d07c-403c-aede-e0508f245dd2
-        - ref!! 311b2d5b-74ee-48ad-bcc9-b44a58714aee
-        - ref!! b9bcaf75-d766-4cdc-9c86-025cf46dd616
         - ref!! 2c46881f-53e6-4d1d-85df-924007329f46
         - ref!! d471c428-d220-4860-b67e-f0ad26d2d613
         - ref!! 1203753a-eca1-4f4a-85e3-0edf0ce91347
@@ -50,6 +44,16 @@ Hierarchy:
         - ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
         - ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
         - ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
+        - ref!! 510ed132-3f81-42a5-9c8c-e52f9348ffab
+        - ref!! a9c0250e-6712-4e86-bc3f-78047f439de2
+        - ref!! 2d2f9340-9336-4bf9-9a2e-f190e3a0c39d
+        - ref!! ed76a3c4-1b42-4f8a-ad18-81fe00ea9578
+        - ref!! 299ccfb5-4943-40a8-973b-7b78a695f370
+        - ref!! 2d1d60ef-4177-4807-8d97-77ab67d3dc09
+        - ref!! 8bf65f1a-e9d0-457c-a88e-4f15d5465421
+        - ref!! 80d1c850-1705-4153-9ecb-a041c143066c
+        - ref!! 97f111ef-4039-4184-9d8e-a54c9fc69849
+        - ref!! b93ca2ab-97db-4f06-8c7f-d3bfc2f8f36e
     Parts:
         -   Folder: MuestraEnemigos
             Entity:
@@ -66,44 +70,6 @@ Hierarchy:
                         Id: 2138665c-fd1c-4a2f-8ad0-6a166a3c81c7
                         Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
-        -   Entity:
-                Id: 03bd6f4d-4a01-43c5-b6be-2c6d6c327c81
-                Name: Modelo
-                Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 69714a1b-fdeb-46ba-bcc7-8a8f1d584e19
-                        Position: {X: -0.25, Y: 1.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 3.0, Z: 2.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: f19225f7-4069-4895-a38c-950ed74a230b
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: 900443f5-849b-4679-8095-3088e1645d91
-                        CollisionGroup: SensorTrigger
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: true
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 03d7dac1-3bdd-4638-b544-75e00b4e55ec
                 Name: Jugador
@@ -441,7 +407,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 13515e4b-abd3-4110-8493-464d7ceea6ed
-                Name: Poder (invencibilidad)
+                Name: Poder (Invencibilidad)
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 5f6da2b2-6a39-4fd5-9992-32554bb64aee
@@ -578,20 +544,6 @@ Hierarchy:
                         Model: 42f01256-b2f0-4d1d-b81d-719b59cf45c5:Modelos/Enemigos/Cerebro/Rueda
                         Materials: {}
         -   Entity:
-                Id: 26b98ed7-a446-4bee-ba3c-99f5e4f4b3d1
-                Name: Modelo
-                Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 8dc113f6-433a-47f5-bb2b-361334f0bf89
-                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 14f69133-4b5b-4a0f-8991-dea0547c1b8a
-                        Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
-                        Materials: {}
-        -   Entity:
                 Id: 2707f98b-4945-4cfb-9a7a-6ae13692cab4
                 Name*: Zombi 0
                 Components:
@@ -654,6 +606,47 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
                 InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
+        -   Folder: Puertas
+            Entity:
+                Id: 299ccfb5-4943-40a8-973b-7b78a695f370
+                Name: "Botón (Azul)"
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: f0c26d4d-d697-4d35-9575-de28a0b83601
+                        Position*: {X: 16.0, Y: 0.5, Z: 13.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3788e322f260de9e64a1e85455890478: ref!! 887e6c3e-cbb2-4599-8771-eb455ea1d0d5
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! a66043dc-a864-4c3e-98ca-d8b34b7be902
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 59d66d1f-1a43-425d-b02d-363ccf82f317
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    426564b1b9ac19a951abe600bc6e52b1: !Bozobaralika.ControladorBot%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: ffc40fdc-a0a7-4ac1-915d-db372fd7fdb3
+                        llave: azul
+                        activables:
+                            d1fc62a73d53a88eae62a77c2f026b26*: ref!! 97f111ef-4039-4184-9d8e-a54c9fc69849
+                        modelo: ref!! a66043dc-a864-4c3e-98ca-d8b34b7be902
+            Base:
+                BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/Entorno/Botón (Azul)"
+                BasePartId: 4dd8d50e-34b1-443c-ae29-c80da6cfeba3
+                InstanceId: 1b4230e3-9a3b-4a38-bd20-539a23aeec6f
         -   Folder: Entorno/Muros
             Entity:
                 Id: 2c46881f-53e6-4d1d-85df-924007329f46
@@ -687,23 +680,24 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Entity:
-                Id: 311b2d5b-74ee-48ad-bcc9-b44a58714aee
-                Name: "Botón (azul)"
+        -   Folder: Puertas
+            Entity:
+                Id: 2d1d60ef-4177-4807-8d97-77ab67d3dc09
+                Name: "Botón (Rojo)"
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
-                        Id: 63c7d48f-f104-4581-81ed-62826a592dd4
-                        Position: {X: 16.0, Y: 0.5, Z: 15.0}
+                        Id: 9d1b49b1-8afa-4f2d-be00-e8d501940c52
+                        Position*: {X: 16.0, Y: 0.5, Z: 17.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            3788e322f260de9e64a1e85455890478: ref!! 8bccdbd6-e82e-44ba-9d12-fe6b409b3258
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 2652e0ea-30bf-4860-aa19-328ce4dfe79a
+                            3788e322f260de9e64a1e85455890478: ref!! 89679771-4e23-4c5c-8033-ca2cd1bb2b77
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! ac832d4b-851e-42ca-bc38-6c24245d3d13
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: 385c5c74-51a7-4922-bea2-2608d1956b6c
+                        Id: 4b9bb8cc-37a9-412e-adb1-16d8b1473738
                         CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, CharacterFilter
-                        CanSleep: false
+                        CanSleep: true
                         Restitution: 0.0
                         Friction: 0.0
                         RollingFriction: 0.0
@@ -717,25 +711,57 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    283716cf9ccfd01e2d2fae0d9c2d57f0: !Bozobaralika.ControladorBot%25C3%25B3n,Bozobaralika.Proyecto
-                        Id: 8329641b-64b6-4aba-a3c6-27c3c0a40354
-                        llave: azul
-                        puerta: ref!! 9194a635-debe-429c-ac9f-bd9febb8be88
-                        modelo: ref!! 2652e0ea-30bf-4860-aa19-328ce4dfe79a
-        -   Entity:
-                Id: 38aeba2e-6668-4c7d-aa3b-820115537c97
-                Name: Modelo
+                    426564b1b9ac19a951abe600bc6e52b1: !Bozobaralika.ControladorBot%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: 17f72142-e775-4c65-87ff-8dea054ae8ac
+                        llave: roja
+                        activables:
+                            cfbb85a3aa65f135adf45935583de32e*: ref!! b93ca2ab-97db-4f06-8c7f-d3bfc2f8f36e
+                        modelo: ref!! ac832d4b-851e-42ca-bc38-6c24245d3d13
+            Base:
+                BasePartAsset: "73f16069-e6ab-4eae-a431-2bbd98bb2fe6:Prefabs/Entorno/Botón (Rojo)"
+                BasePartId: ac76f714-74d1-46fa-9972-1b87615dc7d7
+                InstanceId: edff4fe5-e8a9-44f4-954a-564b4b402372
+        -   Folder: Puertas
+            Entity:
+                Id: 2d2f9340-9336-4bf9-9a2e-f190e3a0c39d
+                Name*: "Botón (Alto)"
                 Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 2652e0ea-30bf-4860-aa19-328ce4dfe79a
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: bd5805ec-3f67-4f48-878b-e3be1559477e
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 644156b2-19ad-4852-881a-5a7959f227d6
+                        Position*: {X: 19.0, Y: 4.0, Z: 2.5}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.70710677, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3788e322f260de9e64a1e85455890478: ref!! 45c55a1f-8784-4a61-86dc-9660e1ef02c2
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 28551bc2-d945-48b7-bd70-76da627ab51e
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 379e9626-d146-4902-8a81-7fc3925be559
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    426564b1b9ac19a951abe600bc6e52b1: !Bozobaralika.ControladorBot%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: 53b26329-5caf-41c3-aa74-b5c51a70191d
+                        llave: nada
+                        activables:
+                            2690a8a8fa7ae2b18c044d1a8c7cfbdd*: ref!! 8bf65f1a-e9d0-457c-a88e-4f15d5465421
+                        modelo: ref!! 28551bc2-d945-48b7-bd70-76da627ab51e
+            Base:
+                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Vacío)"
+                BasePartId: 220d4dae-6c4d-4310-8098-a5a1691a7d8b
+                InstanceId: 7437680e-a8f3-48e4-8fa2-e8989c84c4d0
         -   Folder: null
             Entity:
                 Id: 3e1c62cc-564a-4570-b7d1-37c0f75161c4
@@ -769,6 +795,24 @@ Hierarchy:
                     ae77dc873a2c3c32c294301875605415: !Bozobaralika.ControladorSaltador,Bozobaralika.Proyecto
                         Id: 1f851cb4-4db3-45b6-a7dc-aa657a3757a4
                         fuerza: 15.0
+        -   Entity:
+                Id: 3ec0146f-96c2-48b2-8543-33953943f31c
+                Name: Base
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 887e6c3e-cbb2-4599-8771-eb455ea1d0d5
+                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 14d1ae00-e273-494b-970d-6fa0740dfa36
+                        Model: "afa430e3-cc52-406b-afb3-f5d65198d0f8:Modelos/Entorno/Botón/Base"
+                        Materials: {}
+            Base:
+                BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/Entorno/Botón (Azul)"
+                BasePartId: 9ed46e5c-e8aa-4d32-ad0e-34ea6d159d4c
+                InstanceId: 1b4230e3-9a3b-4a38-bd20-539a23aeec6f
         -   Folder: null
             Entity:
                 Id: 41b0fd2f-d07c-403c-aede-e0508f245dd2
@@ -818,6 +862,24 @@ Hierarchy:
                         Id: 52582927-ef52-4001-a7a1-415ad628ed78
                         Model: 449f714b-c2f9-4b2d-b6a8-5ed407b77a72:Modelos/Enemigos/Lancero/Lancero
                         Materials: {}
+        -   Entity:
+                Id: 4216c907-6b55-4907-a59b-fa676cc0806a
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 28551bc2-d945-48b7-bd70-76da627ab51e
+                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 08212f3e-eb74-47ca-a107-6d0a21487125
+                        Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
+                        Materials: {}
+            Base:
+                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Vacío)"
+                BasePartId: ef75cf51-4305-4d0f-b9ea-22eb5c6a1996
+                InstanceId: 7437680e-a8f3-48e4-8fa2-e8989c84c4d0
         -   Folder: "Entorno/Obstáculos"
             Entity:
                 Id: 43a0f70d-9590-47d8-8ed8-79ed738a7d35
@@ -910,20 +972,6 @@ Hierarchy:
                         Id: 70d66efc-b806-4a95-a2c8-358a3736fe28
                         Model: a8db6d9b-4574-4dfd-8104-d5fc6b55a011:Modelos/Entorno/Saltador/Saltador
                         Materials: {}
-        -   Entity:
-                Id: 493f8427-a154-46ca-8ace-e04fd91fae79
-                Name: Base
-                Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 2285adc4-26fd-4934-969e-4c6522ec773f
-                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 71bc6db9-9218-42f0-ae1a-8cc1fb6476df
-                        Model: "afa430e3-cc52-406b-afb3-f5d65198d0f8:Modelos/Entorno/Botón/Base"
-                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 4aa76dc1-86b2-4971-a4d3-97da711e18ba
@@ -943,19 +991,20 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 47bc28de-2e3e-4e1b-87b1-cd9d7fd618a6
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
-        -   Entity:
+        -   Folder: Puertas
+            Entity:
                 Id: 510ed132-3f81-42a5-9c8c-e52f9348ffab
                 Name: Llave (Azul)
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 2c28075e-0b8e-49ee-a1ac-9996981dc5bd
-                        Position: {X: 16.0, Y: 0.5, Z: 0.0}
+                        Position*: {X: 16.0, Y: 0.5, Z: -2.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 5dd9166c-961d-48ba-b9dd-efe134b7b2f3
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: 5ea21955-55e1-449f-a260-bb06bcb11a1e
+                        Id: c24a51b3-4179-4dba-94d3-faf9213a4ebb
                         CollisionGroup: SensorTrigger
                         CanCollideWith: CharacterFilter
                         CanSleep: true
@@ -973,9 +1022,13 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     a9e5733cc97b45dbb1819630add90a8c: !Bozobaralika.ControladorLlave,Bozobaralika.Proyecto
-                        Id: 4d4f1fe6-bd3c-473e-bc21-3cdaa3ab41f2
+                        Id: 323a5a3e-2c5d-407f-8c73-08f940eeb60f
                         llave: azul
                         modelo: ref!! 5dd9166c-961d-48ba-b9dd-efe134b7b2f3
+            Base:
+                BasePartAsset: f104c990-42cd-4a37-ac04-9c9181fbe8ed:Prefabs/Entorno/Llave (Azul)
+                BasePartId: 60a17964-ae87-420b-b6c7-baa54dd9ac8a
+                InstanceId: 78864342-0445-470e-b845-5cde3769de17
         -   Folder: Entorno
             Entity:
                 Id: 52cd02bd-3165-4aa6-8d1e-7538541119a3
@@ -1060,7 +1113,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 5f2be316-c335-4e47-94e2-616f939d5d8c
-                Name: Poder (rapidez)
+                Name: Poder (Rapidez)
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: d49822e4-2d66-485e-ba72-1585f1b7face
@@ -1176,6 +1229,24 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
                 InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
+        -   Entity:
+                Id: 671e9621-45bb-407a-bcfe-d85b250e7816
+                Name: Base
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 89679771-4e23-4c5c-8033-ca2cd1bb2b77
+                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 0ba95a8b-f616-4460-8818-564708f9903e
+                        Model: "afa430e3-cc52-406b-afb3-f5d65198d0f8:Modelos/Entorno/Botón/Base"
+                        Materials: {}
+            Base:
+                BasePartAsset: "73f16069-e6ab-4eae-a431-2bbd98bb2fe6:Prefabs/Entorno/Botón (Rojo)"
+                BasePartId: 233c6a74-4ed3-4f45-9b13-717901d3fe86
+                InstanceId: edff4fe5-e8a9-44f4-954a-564b4b402372
         -   Folder: null
             Entity:
                 Id: 6adfca37-5386-486c-ac13-c14d22099770
@@ -1236,19 +1307,24 @@ Hierarchy:
                 BasePartId: 8199f0f5-a433-4c15-af08-df601bb2d528
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Entity:
-                Id: 6d280096-1b5d-4f01-b53f-cb7b0f439997
-                Name: Base
+                Id: 6e70d1fe-aa00-43f4-a327-c0195da891fa
+                Name: Modelo
                 Components:
                     fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 8bccdbd6-e82e-44ba-9d12-fe6b409b3258
-                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Id: a66043dc-a864-4c3e-98ca-d8b34b7be902
+                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: e0993495-c129-481d-a327-28de518728aa
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
+                        Id: c485710b-d8f1-4870-9edf-8cc3968eba5c
+                        Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
+                        Materials:
+                            67871fe64f68385cdb392243a8eaa836~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
+            Base:
+                BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/Entorno/Botón (Azul)"
+                BasePartId: 6ba9d529-deb5-41b0-a29a-42e3547040f8
+                InstanceId: 1b4230e3-9a3b-4a38-bd20-539a23aeec6f
         -   Folder: null
             Entity:
                 Id: 70a551b9-78f1-488b-8264-cccdbe1b0f55
@@ -1348,6 +1424,44 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 3d235512-23a1-4ed3-85ab-4cfa16a22cee
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
+        -   Folder: Puertas
+            Entity:
+                Id: 80d1c850-1705-4153-9ecb-a041c143066c
+                Name*: "Puerta (Vacía)"
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: e0be6fbe-2f81-499a-8205-ee10aac36ea1
+                        Position*: {X: 19.5, Y: 0.0, Z: 9.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! e3798312-4076-4b5d-80e4-4c4dcbb1a545
+                    288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
+                        Id: 476bf0f6-4204-44df-8129-c02ee709279b
+                        modelo: ref!! e3798312-4076-4b5d-80e4-4c4dcbb1a545
+                        "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: 10396d09-c3d0-4716-b888-450afcf55538
+        -   Entity:
+                Id: 85327795-eaed-4f0c-87b9-687550552b19
+                Name: Base
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: ff5cfc03-9491-4ee6-96a4-a585dadb23bd
+                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: f9ae40bb-705c-4c65-be93-480f19307baa
+                        Model: "afa430e3-cc52-406b-afb3-f5d65198d0f8:Modelos/Entorno/Botón/Base"
+                        Materials: {}
+            Base:
+                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Vacío)"
+                BasePartId: 33d94d5f-9c78-4548-88fc-74a17c50d5a7
+                InstanceId: d03a1744-4d1c-4530-bcf7-15ba60d2d8a9
         -   Entity:
                 Id: 86ce93a1-ae39-4e71-92c0-223e2ee4fe62
                 Name: Modelo
@@ -1359,10 +1473,33 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 9e007192-e377-4754-8f76-f47349581a74
+                        Id: 4ea54491-3fb9-46ce-82a1-2d2bf29cf3ef
                         Model: 5b896984-0486-4a70-abf8-1a52f64f29a7:Modelos/Entorno/Llave/Llave
                         Materials:
                             29052f4076ada5a695dba44b47be1ac7~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
+            Base:
+                BasePartAsset: 2c6736d1-0a31-4e49-b281-0e17303b2b12:Prefabs/Entorno/Llave (Roja)
+                BasePartId: 815d72ca-0660-4eba-8cae-00e9b57fa989
+                InstanceId: 2f150493-58d6-47fe-bd21-512bf82fc32d
+        -   Entity:
+                Id: 88a3ab5c-4356-4c31-be55-4769ebdbb0c1
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: ac832d4b-851e-42ca-bc38-6c24245d3d13
+                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: e4386080-cdf2-4d42-b693-1840fc08bd04
+                        Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
+                        Materials:
+                            d2b19c308a18a23717508b2aeb6c19bb~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
+            Base:
+                BasePartAsset: "73f16069-e6ab-4eae-a431-2bbd98bb2fe6:Prefabs/Entorno/Botón (Rojo)"
+                BasePartId: a95bdd9a-d4b5-4794-93a1-c91229340c52
+                InstanceId: edff4fe5-e8a9-44f4-954a-564b4b402372
         -   Folder: null
             Entity:
                 Id: 893511a5-8fd4-4d43-b50c-6fec6cbd1cb1
@@ -1411,6 +1548,26 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: Puertas
+            Entity:
+                Id: 8bf65f1a-e9d0-457c-a88e-4f15d5465421
+                Name*: Puerta (Alto)
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 648b51c6-1800-457a-bfdf-8aa35142affd
+                        Position*: {X: 19.5, Y: 0.0, Z: 5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 02e802eb-b53f-4068-bed0-b0e63b08f2ff
+                    288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
+                        Id: bb0f9e8f-4daa-4b4d-994b-41b4a02a3183
+                        modelo: ref!! 02e802eb-b53f-4068-bed0-b0e63b08f2ff
+                        "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: 814853e4-d0ae-458c-a2bf-8a7b59346bdc
         -   Folder: null
             Entity:
                 Id: 8d787fb5-da5d-42b2-9c3b-775b1286defb
@@ -1479,23 +1636,23 @@ Hierarchy:
                         Id: a5b8bfc9-8139-4c69-8e63-f74fd31d23b1
                         fuerza: 15.0
         -   Entity:
-                Id: 967b9e0a-c186-4cca-9283-512f6f9c4d7f
+                Id: 909b19e5-b46b-4cf9-895d-3b9ea24cdeb3
                 Name: Modelo
                 Components:
                     fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: d81e440a-1961-4a4e-a979-199e33f30941
-                        Position: {X: -0.25, Y: 1.5, Z: 0.0}
+                        Id: 02e802eb-b53f-4068-bed0-b0e63b08f2ff
+                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 3.0, Z: 2.0}
+                        Scale: {X: 0.5, Y: 3.0, Z: 3.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: ac7eae0a-7b36-4ce6-b27e-86a5a5869b2c
+                        Id: b759d36a-fafa-4abd-b1ea-2f8cbf95c1ce
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
                         Materials: {}
                     aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: bc4a2a05-5f78-4895-97cb-a3bbd5c643c7
+                        Id: 16960875-9d24-4b82-9bb1-2946db6bed34
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 1.0
@@ -1516,6 +1673,10 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: fd1eb265-dd05-409d-a535-dde956ce68ed
+                InstanceId: 814853e4-d0ae-458c-a2bf-8a7b59346bdc
         -   Entity:
                 Id: 9778c9f7-ee25-4fad-84cc-397d06ee1a61
                 Name: Lava
@@ -1547,6 +1708,26 @@ Hierarchy:
                     c8f96335b6b008a32015b198e8047e13: !Bozobaralika.ControladorDa%25C3%25B1oContinuo,Bozobaralika.Proyecto
                         Id: b68f9ec6-d05e-4aef-a5af-e806786b380b
                         "daño": 10.0
+        -   Folder: Puertas
+            Entity:
+                Id: 97f111ef-4039-4184-9d8e-a54c9fc69849
+                Name*: Puerta (Azul)
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: dbeb15de-586b-427a-890c-9b4fb51a9e56
+                        Position*: {X: 19.5, Y: 0.0, Z: 13.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! e6d6d2ee-3c2c-4aa9-90ba-73c90e740358
+                    288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
+                        Id: c12cc01a-94f6-4aa1-a67a-42c0fd535afa
+                        modelo: ref!! e6d6d2ee-3c2c-4aa9-90ba-73c90e740358
+                        "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: b7aa5ff0-129f-49d4-b606-fd1b945a7c67
         -   Folder: null
             Entity:
                 Id: a2baa5cc-4c65-4c8c-929d-f62fca0df386
@@ -1590,42 +1771,6 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
                 InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
-        -   Folder: null
-            Entity:
-                Id: a54e658d-bb78-4833-b114-e0ad88f4652c
-                Name: "Botón"
-                Components:
-                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
-                        Id: 2946d0d0-181b-4946-ae6c-60034e46bee8
-                        Position: {X: 16.0, Y: 0.5, Z: 10.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3788e322f260de9e64a1e85455890478: ref!! 2285adc4-26fd-4934-969e-4c6522ec773f
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 8dc113f6-433a-47f5-bb2b-361334f0bf89
-                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: 00c4053a-7e9b-4066-9410-37c639bf01d2
-                        CollisionGroup: SensorTrigger
-                        CanCollideWith: DefaultFilter, CharacterFilter
-                        CanSleep: true
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: true
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    426564b1b9ac19a951abe600bc6e52b1: !Bozobaralika.ControladorBot%25C3%25B3n,Bozobaralika.Proyecto
-                        Id: 0c92f686-cc20-4029-a01a-9d474ff4170e
-                        llave: nada
-                        puerta: ref!! a2f5bd4f-c7de-4fea-8dc2-ddec61bab421
-                        modelo: ref!! 8dc113f6-433a-47f5-bb2b-361334f0bf89
         -   Folder: null
             Entity:
                 Id: a678a339-d21e-4ddd-9b32-9a09750dd8ea
@@ -1735,20 +1880,20 @@ Hierarchy:
                         Id: d6a5e338-afa8-4a79-a142-2586652224f2
                         Model: e5264c9f-ce07-44c3-804e-cfe48eae8f2a:Modelos/Enemigos/Babosa/Babosa
                         Materials: {}
-        -   Folder: null
+        -   Folder: Puertas
             Entity:
                 Id: a9c0250e-6712-4e86-bc3f-78047f439de2
                 Name: Llave (Roja)
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: d06c1b2e-e204-4081-b2a8-4f1d9678ef13
-                        Position: {X: 16.0, Y: 0.5, Z: 5.0}
+                        Position*: {X: 16.0, Y: 0.5, Z: 2.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 32524af0-94ba-4b91-af3d-fabb7dd890b3
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: 8670ac47-0f86-4d9e-9cd1-bb1909b46e43
+                        Id: d48becce-513c-4054-b703-9b6eca059507
                         CollisionGroup: SensorTrigger
                         CanCollideWith: CharacterFilter
                         CanSleep: true
@@ -1766,9 +1911,13 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e77a1d51920c245d1c754c99f0fa0c30: !Bozobaralika.ControladorLlave,Bozobaralika.Proyecto
-                        Id: 5be66562-ee7b-46bd-84a6-95074983b64f
+                        Id: 97394957-ca25-42fe-a50d-5b5fb68faeb9
                         llave: roja
                         modelo: ref!! 32524af0-94ba-4b91-af3d-fabb7dd890b3
+            Base:
+                BasePartAsset: 2c6736d1-0a31-4e49-b281-0e17303b2b12:Prefabs/Entorno/Llave (Roja)
+                BasePartId: 276dc3fe-34c9-4bdd-8eb3-33c3400fb4e0
+                InstanceId: 2f150493-58d6-47fe-bd21-512bf82fc32d
         -   Entity:
                 Id: af86748a-5f1b-4654-930f-3c40030c6306
                 Name: Ojo
@@ -1832,6 +1981,48 @@ Hierarchy:
                 BasePartId: dc8e25b1-fd36-455c-9e7a-eb960c416884
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Entity:
+                Id: b57e56f4-844c-4c6e-aa99-98f1fced0f94
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 6a4a82c0-7764-4fe4-8ab9-499710fff4ad
+                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 3.0, Z: 3.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 5ee0d00b-2bb3-4efe-87b8-1ed989c3cac8
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
+                        Materials: {}
+                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
+                        Id: 7fbfb462-35f7-42bb-b8a9-96768dc2e825
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: fd1eb265-dd05-409d-a535-dde956ce68ed
+                InstanceId: affaa42e-d400-469e-97e5-dcc905234d2f
+        -   Entity:
                 Id: b78b3bf7-554c-4fa6-90e0-008c8d904785
                 Name: Modelo
                 Components:
@@ -1845,6 +2036,44 @@ Hierarchy:
                         Id: 57727071-0b3d-430d-b779-98daefe5da7d
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
                         Materials: {}
+        -   Entity:
+                Id: b8b1eba2-82a4-43a7-b698-f29e4d133565
+                Name: Base
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 45c55a1f-8784-4a61-86dc-9660e1ef02c2
+                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: d128907c-984e-45bd-93d4-aa9126927e8f
+                        Model: "afa430e3-cc52-406b-afb3-f5d65198d0f8:Modelos/Entorno/Botón/Base"
+                        Materials: {}
+            Base:
+                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Vacío)"
+                BasePartId: 33d94d5f-9c78-4548-88fc-74a17c50d5a7
+                InstanceId: 7437680e-a8f3-48e4-8fa2-e8989c84c4d0
+        -   Folder: Puertas
+            Entity:
+                Id: b93ca2ab-97db-4f06-8c7f-d3bfc2f8f36e
+                Name*: Puerta (Roja)
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 43c4a4a0-baaa-407f-840e-685e5ab2f3dd
+                        Position*: {X: 19.5, Y: 0.0, Z: 17.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 6a4a82c0-7764-4fe4-8ab9-499710fff4ad
+                    288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
+                        Id: fca2c93f-8884-470f-a142-ec80ddfa1e26
+                        modelo: ref!! 6a4a82c0-7764-4fe4-8ab9-499710fff4ad
+                        "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: affaa42e-d400-469e-97e5-dcc905234d2f
         -   Folder: "Entorno/Obstáculos"
             Entity:
                 Id: b98edd79-ab8c-48c3-918b-dadfca384f26
@@ -1877,21 +2106,6 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Entity:
-                Id: b9bcaf75-d766-4cdc-9c86-025cf46dd616
-                Name: Puerta (azul)
-                Components:
-                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
-                        Id: 31d0b0ab-9dc2-40be-a926-63585c84d53b
-                        Position: {X: 19.5, Y: 0.0, Z: 15.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 69714a1b-fdeb-46ba-bcc7-8a8f1d584e19
-                    288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
-                        Id: 9194a635-debe-429c-ac9f-bd9febb8be88
-                        modelo: ref!! 69714a1b-fdeb-46ba-bcc7-8a8f1d584e19
-                        "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
         -   Entity:
                 Id: b9c6d541-e9a1-4aa2-9548-eb141f13b39e
                 Name: Ojo
@@ -1927,8 +2141,26 @@ Hierarchy:
                 BasePartId: 855d46ad-e0df-46e0-a435-46753f797211
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Entity:
+                Id: c08ff0dc-d581-4b65-af67-32b698414cb3
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: ce66321f-8ac1-4d09-869e-2ff4938bbf53
+                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: edf3b88d-6663-45c7-ba3a-668448c529a2
+                        Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
+                        Materials: {}
+            Base:
+                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Vacío)"
+                BasePartId: ef75cf51-4305-4d0f-b9ea-22eb5c6a1996
+                InstanceId: d03a1744-4d1c-4530-bcf7-15ba60d2d8a9
+        -   Entity:
                 Id: c09a25df-9c1e-4257-b2c0-5d9036000031
-                Name: "Poder (daño)"
+                Name: "Poder (Daño)"
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: bb9be785-1c98-4f92-85ce-64bca6ccc946
@@ -2513,6 +2745,48 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: e32884d1-3922-4de3-afe1-5a5b19dd7a43
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: e6d6d2ee-3c2c-4aa9-90ba-73c90e740358
+                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 3.0, Z: 3.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 238cfd47-7371-44b9-9447-e081f97d2ce4
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
+                        Materials: {}
+                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
+                        Id: 4fe2c4df-5d2c-46df-9b5b-5cbe209ec672
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: fd1eb265-dd05-409d-a535-dde956ce68ed
+                InstanceId: b7aa5ff0-129f-49d4-b606-fd1b945a7c67
         -   Folder: null
             Entity:
                 Id: e3650bf2-48a3-47c0-a058-52246042dfc9
@@ -2599,22 +2873,6 @@ Hierarchy:
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Folder: null
             Entity:
-                Id: e6ee0047-6726-4c37-bcd8-6f0fb152abbf
-                Name: Puerta
-                Components:
-                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
-                        Id: 11a29f1d-3016-4fad-998c-3fdc24285fcb
-                        Position: {X: 19.5, Y: 0.0, Z: 10.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! d81e440a-1961-4a4e-a979-199e33f30941
-                    611d2cce4f9855b7abfb345a00519a60: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
-                        Id: a2f5bd4f-c7de-4fea-8dc2-ddec61bab421
-                        modelo: ref!! d81e440a-1961-4a4e-a979-199e33f30941
-                        "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
-        -   Folder: null
-            Entity:
                 Id: e918d14d-9e57-4aae-ad19-0b7b94080418
                 Name: Espada
                 Components:
@@ -2676,10 +2934,14 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: c736188e-c84f-496a-8dff-88e6c031640f
+                        Id: 0d043740-baf2-4744-bae0-4b0013d046db
                         Model: 5b896984-0486-4a70-abf8-1a52f64f29a7:Modelos/Entorno/Llave/Llave
                         Materials:
                             790347199cd46b2dc25cec73548ae265~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
+            Base:
+                BasePartAsset: f104c990-42cd-4a37-ac04-9c9181fbe8ed:Prefabs/Entorno/Llave (Azul)
+                BasePartId: 0ab9e326-c37c-4666-aaa8-5d30bfd12c45
+                InstanceId: 78864342-0445-470e-b845-5cde3769de17
         -   Folder: null
             Entity:
                 Id: ebc6d88a-6505-43f1-a97b-876ae9986c9a
@@ -2717,6 +2979,47 @@ Hierarchy:
                         Id: ed92cd6c-1d47-4da5-8225-c558d67b8a66
                         Model: 3893b25d-a5b1-463e-989f-5c46a73d1a27:Modelos/Enemigos/Cerebro/Cerebro
                         Materials: {}
+        -   Folder: Puertas
+            Entity:
+                Id: ed76a3c4-1b42-4f8a-ad18-81fe00ea9578
+                Name: "Botón (Vacío)"
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 40468aa6-7901-4b66-87e7-519055ef9ee0
+                        Position*: {X: 16.0, Y: 0.5, Z: 9.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3788e322f260de9e64a1e85455890478: ref!! ff5cfc03-9491-4ee6-96a4-a585dadb23bd
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! ce66321f-8ac1-4d09-869e-2ff4938bbf53
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 859c972a-3765-4a03-9583-1b8cb5e163b8
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    426564b1b9ac19a951abe600bc6e52b1: !Bozobaralika.ControladorBot%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: 03ddba0a-7276-426f-a5aa-1f38be5abb55
+                        llave: nada
+                        activables:
+                            aeda593c2d4b1f3231a4b99c3a362ae2*: ref!! 80d1c850-1705-4153-9ecb-a041c143066c
+                        modelo: ref!! ce66321f-8ac1-4d09-869e-2ff4938bbf53
+            Base:
+                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Vacío)"
+                BasePartId: 220d4dae-6c4d-4310-8098-a5a1691a7d8b
+                InstanceId: d03a1744-4d1c-4530-bcf7-15ba60d2d8a9
         -   Folder: MuestraEnemigos
             Entity:
                 Id: edeff615-c141-4feb-96da-868b5fe6ebc8
@@ -2799,6 +3102,48 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: fc40bf24-57b0-48ee-beb9-f32144816dd4
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: e3798312-4076-4b5d-80e4-4c4dcbb1a545
+                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 3.0, Z: 3.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 95b55b69-d4d9-4db6-bbe0-3e081782cc9b
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
+                        Materials: {}
+                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
+                        Id: df38d1dc-b8a3-4c25-85a4-201976b5d1e4
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: fd1eb265-dd05-409d-a535-dde956ce68ed
+                InstanceId: 10396d09-c3d0-4716-b888-450afcf55538
         -   Folder: null
             Entity:
                 Id: fdaa8bc9-a3aa-48d7-9c5f-52a0da545bc8

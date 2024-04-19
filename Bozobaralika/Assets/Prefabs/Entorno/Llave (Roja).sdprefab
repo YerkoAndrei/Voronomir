@@ -1,0 +1,57 @@
+!PrefabAsset
+Id: 2c6736d1-0a31-4e49-b281-0e17303b2b12
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 276dc3fe-34c9-4bdd-8eb3-33c3400fb4e0
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 276dc3fe-34c9-4bdd-8eb3-33c3400fb4e0
+                Name: Llave (Roja)
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 7cc20fd7-80c2-4c9a-97c5-2cca9608b2fb
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! bb065f2b-fd67-44d8-a59a-7ade1947e648
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: e650c9d1-6831-4955-95a7-50aa1b753230
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    e77a1d51920c245d1c754c99f0fa0c30: !Bozobaralika.ControladorLlave,Bozobaralika.Proyecto
+                        Id: e31e0c01-b8f7-4855-a89f-052bc587e71a
+                        llave: roja
+                        modelo: ref!! bb065f2b-fd67-44d8-a59a-7ade1947e648
+        -   Entity:
+                Id: 815d72ca-0660-4eba-8cae-00e9b57fa989
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: bb065f2b-fd67-44d8-a59a-7ade1947e648
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: b85fe614-efc6-4d17-96e4-be02b8880f86
+                        Model: 5b896984-0486-4a70-abf8-1a52f64f29a7:Modelos/Entorno/Llave/Llave
+                        Materials:
+                            29052f4076ada5a695dba44b47be1ac7~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja

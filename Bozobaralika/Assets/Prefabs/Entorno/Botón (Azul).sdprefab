@@ -1,0 +1,72 @@
+!PrefabAsset
+Id: 42c3308d-cdee-4c52-b089-84ae70a08179
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 4dd8d50e-34b1-443c-ae29-c80da6cfeba3
+    Parts:
+        -   Entity:
+                Id: 4dd8d50e-34b1-443c-ae29-c80da6cfeba3
+                Name: "Botón (Azul)"
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 270d7ee1-90fb-4da0-ad32-313335ab9e8a
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3788e322f260de9e64a1e85455890478: ref!! 11dc1d00-513f-4e94-9a71-c82908895ae5
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 60299527-65a4-4458-bd11-933f1483e201
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: d63a28b4-e41e-4e41-8d1b-2b49554b578c
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    426564b1b9ac19a951abe600bc6e52b1: !Bozobaralika.ControladorBot%25C3%25B3n,Bozobaralika.Proyecto
+                        Id: 52e252e4-4669-463c-bfd8-6c30ae1ce259
+                        llave: azul
+                        activables: {}
+                        modelo: ref!! 60299527-65a4-4458-bd11-933f1483e201
+        -   Entity:
+                Id: 6ba9d529-deb5-41b0-a29a-42e3547040f8
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 60299527-65a4-4458-bd11-933f1483e201
+                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: a2c27460-eea3-4916-9348-a3f49363350a
+                        Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
+                        Materials:
+                            67871fe64f68385cdb392243a8eaa836~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
+        -   Entity:
+                Id: 9ed46e5c-e8aa-4d32-ad0e-34ea6d159d4c
+                Name: Base
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 11dc1d00-513f-4e94-9a71-c82908895ae5
+                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 30b4c7ae-d125-457c-bf41-7ccd44d725bb
+                        Model: "afa430e3-cc52-406b-afb3-f5d65198d0f8:Modelos/Entorno/Botón/Base"
+                        Materials: {}
