@@ -43,6 +43,7 @@ Hierarchy:
         - ref!! 80d1c850-1705-4153-9ecb-a041c143066c
         - ref!! 97f111ef-4039-4184-9d8e-a54c9fc69849
         - ref!! b93ca2ab-97db-4f06-8c7f-d3bfc2f8f36e
+        - ref!! ce84b75e-da89-4592-80ee-86f56fe1921a
         - ref!! c09a25df-9c1e-4257-b2c0-5d9036000031
         - ref!! 13515e4b-abd3-4110-8493-464d7ceea6ed
         - ref!! 5f2be316-c335-4e47-94e2-616f939d5d8c
@@ -460,7 +461,7 @@ Hierarchy:
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: 6dffb4c6-a77e-45c7-ba4c-5e41e6ecb570
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: KinematicFilter, CharacterFilter
+                        CanCollideWith: CharacterFilter
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.0
@@ -2309,6 +2310,42 @@ Hierarchy:
                 BasePartAsset: "9ff047a9-a9e8-4838-af1b-5b0a91f53265:Prefabs/EntornoDinámico/Poder (Rapidez)"
                 BasePartId: 90ffcfac-272e-49e3-a6c6-2369dd4081fd
                 InstanceId: 5052427c-e218-49aa-a78d-885da28e66a6
+        -   Folder: Secretos
+            Entity:
+                Id: ce84b75e-da89-4592-80ee-86f56fe1921a
+                Name: Secreto
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 51976648-e668-4ebf-ac73-c8eb5cab8bfa
+                        Position*: {X: -18.5, Y: 0.25, Z: 18.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 0.5, Z: 2.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 40e6bd67-be00-4033-8f62-4d55cfedf637
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: eca279d7-0162-4433-a25a-e7b5055da3ef
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    5fdbf293971470194dde6fc608a8a334: !Bozobaralika.ControladorSecreto,Bozobaralika.Proyecto
+                        Id: e994447a-e489-4917-a92c-0f44e5c50cdc
+            Base:
+                BasePartAsset: "d5058dbe-b40f-4ad7-b603-b31e795ab1f4:Prefabs/EntornoDinámico/Secreto"
+                BasePartId: 72adb0e4-c869-4909-be91-02f39498b109
+                InstanceId: 516bfc01-3907-4530-a490-bc3359ecb776
         -   Folder: null
             Entity:
                 Id: cf86dfbb-e3d9-4101-a038-f580b99a59af
@@ -3059,6 +3096,26 @@ Hierarchy:
                         Id: 6404f16f-2cb3-4a91-957d-456dfd08cda6
                         Model: "db867d68-4431-4e52-9abb-f81df0c158eb:Modelos/Enemigos/Araña/Araña"
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: f28503d1-d30c-41bf-92a3-9d86c9629069
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 40e6bd67-be00-4033-8f62-4d55cfedf637
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: bfce63cf-f011-49e7-8407-0ef152133901
+                        Enabled*: true
+                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: "d5058dbe-b40f-4ad7-b603-b31e795ab1f4:Prefabs/EntornoDinámico/Secreto"
+                BasePartId: 31ac85c4-45ee-471c-a957-2959f7c007c3
+                InstanceId: 516bfc01-3907-4530-a490-bc3359ecb776
         -   Folder: null
             Entity:
                 Id: f2e00024-7ed8-44c7-b274-832a1836771a

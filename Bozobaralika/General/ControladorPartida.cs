@@ -21,6 +21,9 @@ public class ControladorPartida : SyncScript
     private bool activo;
     private float tiempo;
 
+    private int secretos;
+    private int maxSecretos;
+
     public override void Start()
     {
         instancia = this;
@@ -95,6 +98,11 @@ public class ControladorPartida : SyncScript
     public static Vector3 ObtenerCabezaJugador()
     {
         return instancia.cabeza.WorldMatrix.TranslationVector;
+    }
+
+    public static void EncontrarSecreto()
+    {
+        instancia.secretos++;
     }
 
     // Persecutores

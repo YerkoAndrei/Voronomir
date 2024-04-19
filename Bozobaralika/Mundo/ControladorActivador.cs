@@ -23,8 +23,8 @@ public class ControladorActivador : AsyncScript
 
         while (Game.IsRunning)
         {
-            var colisión = await cuerpo.NewCollision();
-            if (TocaJugador(colisión) && cuerpo.Enabled)
+            await cuerpo.NewCollision();
+            if (cuerpo.Enabled)
                 Activar();
 
             await Script.NextFrame();
