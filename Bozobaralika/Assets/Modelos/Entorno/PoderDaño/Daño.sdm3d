@@ -1,0 +1,19 @@
+!Model
+Id: 47c1c69d-2581-453c-a307-453e8ac0f6f7
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file "Daño.glb"
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    da580c8265e84bebe1b8246db14d38ec:
+        Name: "Daño"
+        MaterialInstance:
+            Material: "2e09401e-e624-44b6-a5e8-ce245a41b1b0:Modelos/Entorno/PoderDaño/Materiales/Daño"
+    932540b18517b5a3ea907496385ad7bc:
+        Name: Anillo
+        MaterialInstance:
+            Material: 1d2bad36-6ad0-469b-89af-5007737a3b10:Materiales/Anillo
+Modifiers: {}
+~SourceHashes:
+    "b9d53a9bd1c1c7322738f8bb783e06f1~Daño.glb": ae034d055f601f8c9ac93b5ce9598910

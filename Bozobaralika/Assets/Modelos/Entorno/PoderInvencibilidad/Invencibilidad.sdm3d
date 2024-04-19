@@ -1,0 +1,19 @@
+!Model
+Id: e8d3d766-24dd-46d2-b345-9d5ba829b473
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Invencibilidad.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    e919b6762d0d70155a00d3287a2caa2b:
+        Name: Invencibilidad
+        MaterialInstance:
+            Material: 77f191e6-61ce-4120-8c2b-767f15ff076a:Modelos/Entorno/PoderInvencibilidad/Materiales/Invencibilidad
+    744e0bc154769f4411f008a49711f043:
+        Name: Anillo
+        MaterialInstance:
+            Material: 1d2bad36-6ad0-469b-89af-5007737a3b10:Materiales/Anillo
+Modifiers: {}
+~SourceHashes:
+    edb54218a6307e8dfcd22cd976261f69~Invencibilidad.glb: e6f216758765eefb8f27418e80f94b76
