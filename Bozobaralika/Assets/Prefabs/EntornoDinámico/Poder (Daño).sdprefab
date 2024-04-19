@@ -1,0 +1,56 @@
+!PrefabAsset
+Id: 3058a8fb-6fd5-4bc9-8df4-19fe486ca86e
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 135ae145-305c-4c0e-a9fb-bcb9860bb7db
+    Parts:
+        -   Entity:
+                Id: 135ae145-305c-4c0e-a9fb-bcb9860bb7db
+                Name: "Poder (Daño)"
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 9e51bd83-698e-4584-8633-ce3054cd8b13
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 5932cbf9-75c3-4bdd-8a55-d9d3540692ad
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: a669705e-d652-40d0-bf9e-34eeeb68d692
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    d4a6cfb5e8fa7e584de806c4e1719eb6: !Bozobaralika.ControladorPoder,Bozobaralika.Proyecto
+                        Id: 3f506256-4ff3-4f9f-8910-db24f3a62e62
+                        poder: "daño"
+                        modelo: ref!! 5932cbf9-75c3-4bdd-8a55-d9d3540692ad
+        -   Folder: null
+            Entity:
+                Id: 560a1261-7bf4-4110-a706-95b81d281962
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 5932cbf9-75c3-4bdd-8a55-d9d3540692ad
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 901cbd90-142d-468e-87f1-3ecd1536f95c
+                        Model: "47c1c69d-2581-453c-a307-453e8ac0f6f7:Modelos/Entorno/PoderDaño/Daño"
+                        Materials: {}

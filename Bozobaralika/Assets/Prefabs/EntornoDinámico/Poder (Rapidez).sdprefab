@@ -1,0 +1,57 @@
+!PrefabAsset
+Id: 9ff047a9-a9e8-4838-af1b-5b0a91f53265
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! a5bbf80c-25f8-4ffa-bbdf-0a6f4f966fa9
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 90ffcfac-272e-49e3-a6c6-2369dd4081fd
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 8489cd7c-e803-4c64-9421-bdefb11ac9be
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 98100479-7008-45fa-a57b-62ef2a318b62
+                        Model: 440cbaed-3492-4a7f-8695-02ab886f0bfe:Modelos/Entorno/PoderRapidez/Rapidez
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: a5bbf80c-25f8-4ffa-bbdf-0a6f4f966fa9
+                Name: Poder (Rapidez)
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 41a0e868-ed87-49a1-b39a-918417405046
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 8489cd7c-e803-4c64-9421-bdefb11ac9be
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 1245960a-d298-4c4d-b102-5833a4b4eb51
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    d4a6cfb5e8fa7e584de806c4e1719eb6: !Bozobaralika.ControladorPoder,Bozobaralika.Proyecto
+                        Id: 547e1e13-cc56-48b4-929e-a92fe8d9e2ef
+                        poder: rapidez
+                        modelo: ref!! 8489cd7c-e803-4c64-9421-bdefb11ac9be

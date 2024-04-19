@@ -9,6 +9,7 @@ Hierarchy:
         - ref!! ff5480c7-125b-4faf-a925-a78b68f1b73b
         - ref!! d5817381-6a16-4585-b384-72760aaa3d44
         - ref!! 03d7dac1-3bdd-4638-b544-75e00b4e55ec
+        - ref!! 192aae67-88cf-46cd-9a6b-79fdb36cf312
         - ref!! 00a9628e-10ba-490b-b4de-135740c5d52b
         - ref!! 614f2b4b-5916-4eef-82c7-8951ea902122
         - ref!! 41ff8583-2be9-4314-986b-7a66d760d5f7
@@ -16,14 +17,8 @@ Hierarchy:
         - ref!! f3e301de-3c24-4082-9407-c92be0463470
         - ref!! a9178381-0e65-41e7-b367-ddfb062cebe6
         - ref!! edeff615-c141-4feb-96da-868b5fe6ebc8
-        - ref!! cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
         - ref!! 52cd02bd-3165-4aa6-8d1e-7538541119a3
         - ref!! dca75c2f-3874-4e83-9565-15c148fa0401
-        - ref!! 713070be-902c-4072-88c3-994978523f77
-        - ref!! 192aae67-88cf-46cd-9a6b-79fdb36cf312
-        - ref!! 8dcfbf63-872c-4767-b5d4-c444770e99f8
-        - ref!! 3e1c62cc-564a-4570-b7d1-37c0f75161c4
-        - ref!! 41b0fd2f-d07c-403c-aede-e0508f245dd2
         - ref!! 2c46881f-53e6-4d1d-85df-924007329f46
         - ref!! d471c428-d220-4860-b67e-f0ad26d2d613
         - ref!! 1203753a-eca1-4f4a-85e3-0edf0ce91347
@@ -37,13 +32,7 @@ Hierarchy:
         - ref!! b98edd79-ab8c-48c3-918b-dadfca384f26
         - ref!! 5806e859-d7ec-42d4-ac78-edfc026317d2
         - ref!! d3476e3f-eee5-41dc-9c59-89b96ac24a2b
-        - ref!! a77ffa41-2529-4f4e-90a0-1235895d75a0
-        - ref!! c09a25df-9c1e-4257-b2c0-5d9036000031
-        - ref!! 13515e4b-abd3-4110-8493-464d7ceea6ed
-        - ref!! 5f2be316-c335-4e47-94e2-616f939d5d8c
-        - ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
-        - ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
-        - ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
+        - ref!! cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
         - ref!! 510ed132-3f81-42a5-9c8c-e52f9348ffab
         - ref!! a9c0250e-6712-4e86-bc3f-78047f439de2
         - ref!! 2d2f9340-9336-4bf9-9a2e-f190e3a0c39d
@@ -54,6 +43,16 @@ Hierarchy:
         - ref!! 80d1c850-1705-4153-9ecb-a041c143066c
         - ref!! 97f111ef-4039-4184-9d8e-a54c9fc69849
         - ref!! b93ca2ab-97db-4f06-8c7f-d3bfc2f8f36e
+        - ref!! c09a25df-9c1e-4257-b2c0-5d9036000031
+        - ref!! 13515e4b-abd3-4110-8493-464d7ceea6ed
+        - ref!! 5f2be316-c335-4e47-94e2-616f939d5d8c
+        - ref!! 347bd0cd-f2ad-4c4b-a987-27846fe13532
+        - ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
+        - ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
+        - ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
+        - ref!! 713070be-902c-4072-88c3-994978523f77
+        - ref!! 8dcfbf63-872c-4767-b5d4-c444770e99f8
+        - ref!! 75824380-1882-4be8-8052-13cb0667f063
     Parts:
         -   Folder: MuestraEnemigos
             Entity:
@@ -233,10 +232,15 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 2ce028c1-762b-437e-ae48-987baa2a4903
+                        Id: f72a0336-acea-4e4e-a1ce-4feb8f7500d3
+                        Enabled*: true
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
                         Materials: {}
-        -   Folder: "Entorno/Obstáculos"
+            Base:
+                BasePartAsset: "ba20a406-510b-45d3-8837-e5839f7f9e4e:Prefabs/EntornoDinámico/Fin"
+                BasePartId: 8337edb7-9783-4e91-839c-fa93b4e591b2
+                InstanceId: bc71f645-4720-4972-8946-16796ac03b3f
+        -   Folder: "EntornoEstático/Obstáculos"
             Entity:
                 Id: 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
                 Name: Cube
@@ -268,7 +272,7 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Folder: null
+        -   Folder: Grupo01
             Entity:
                 Id: 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
                 Name*: Zombi 2
@@ -348,7 +352,7 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 7d8701f0-6c58-4fdd-8dc2-750170946402
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
-        -   Folder: Entorno/Muros
+        -   Folder: "EntornoEstático/Muros"
             Entity:
                 Id: 1203753a-eca1-4f4a-85e3-0edf0ce91347
                 Name: Cube
@@ -404,20 +408,20 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: be33c8de-5ac2-44b8-a446-61d76ba7a173
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
-        -   Folder: null
+        -   Folder: Secretos
             Entity:
                 Id: 13515e4b-abd3-4110-8493-464d7ceea6ed
                 Name: Poder (Invencibilidad)
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 5f6da2b2-6a39-4fd5-9992-32554bb64aee
-                        Position: {X: -16.0, Y: 0.5, Z: 14.0}
+                        Position*: {X: -16.0, Y: 0.5, Z: 12.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 2f292ff2-68d1-4939-884c-78cab4160835
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: a7db1318-82fe-4438-b8da-e56e97ae6437
+                        Id: c90830d7-e60d-4d46-8b61-d88f1b9681ce
                         CollisionGroup: SensorTrigger
                         CanCollideWith: CharacterFilter
                         CanSleep: true
@@ -435,25 +439,29 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     d4a6cfb5e8fa7e584de806c4e1719eb6: !Bozobaralika.ControladorPoder,Bozobaralika.Proyecto
-                        Id: 76000af6-530a-4496-a8c8-2bdb1f851f4d
+                        Id: 1ef6478f-93fb-4fff-b9a4-10f8e1722ee5
                         poder: invencibilidad
                         modelo: ref!! 2f292ff2-68d1-4939-884c-78cab4160835
+            Base:
+                BasePartAsset: "64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/EntornoDinámico/Poder (Invencibilidad)"
+                BasePartId: ee35195a-1513-4fb3-9e69-a6ad7040a4f5
+                InstanceId: 938b33c4-b6af-4165-953d-b183bb31a5c8
         -   Entity:
                 Id: 192aae67-88cf-46cd-9a6b-79fdb36cf312
                 Name: Fin
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 45866c4b-ac96-4261-b9b4-ade63415ca34
-                        Position: {X: -9.0, Y: 0.0, Z: 18.0}
+                        Position*: {X: 0.0, Y: 0.25, Z: 19.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.0, Y: 0.5, Z: 2.0}
+                        Scale*: {X: 3.0, Y: 0.5, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 10d535a9-9220-46bf-a275-7182fafdb40f
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: b377d2a5-712f-4b3f-95eb-cad3960276f2
+                        Id: 6dffb4c6-a77e-45c7-ba4c-5e41e6ecb570
                         CollisionGroup: SensorTrigger
                         CanCollideWith: KinematicFilter, CharacterFilter
-                        CanSleep: false
+                        CanSleep: true
                         Restitution: 0.0
                         Friction: 0.0
                         RollingFriction: 0.0
@@ -468,7 +476,11 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     0f06abcfd5b41f788b9b239b398b138c: !Bozobaralika.ControladorFin,Bozobaralika.Proyecto
-                        Id: 0d8a3722-6d3d-48f6-8837-4e15c72d7b67
+                        Id: 597d3040-185f-4af5-b564-ad015762e800
+            Base:
+                BasePartAsset: "ba20a406-510b-45d3-8837-e5839f7f9e4e:Prefabs/EntornoDinámico/Fin"
+                BasePartId: ffaf0f04-a1a7-474a-8e05-7f0c7c41f485
+                InstanceId: bc71f645-4720-4972-8946-16796ac03b3f
         -   Folder: null
             Entity:
                 Id: 1bc8d1d3-5e50-45cc-aeee-0935b943549a
@@ -543,7 +555,8 @@ Hierarchy:
                         Id: dd794269-8824-4994-9c86-7ee26b13fed0
                         Model: 42f01256-b2f0-4d1d-b81d-719b59cf45c5:Modelos/Enemigos/Cerebro/Rueda
                         Materials: {}
-        -   Entity:
+        -   Folder: Grupo01
+            Entity:
                 Id: 2707f98b-4945-4cfb-9a7a-6ae13692cab4
                 Name*: Zombi 0
                 Components:
@@ -644,10 +657,10 @@ Hierarchy:
                             d1fc62a73d53a88eae62a77c2f026b26*: ref!! 97f111ef-4039-4184-9d8e-a54c9fc69849
                         modelo: ref!! a66043dc-a864-4c3e-98ca-d8b34b7be902
             Base:
-                BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/Entorno/Botón (Azul)"
+                BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/EntornoDinámico/Botón (Azul)"
                 BasePartId: 4dd8d50e-34b1-443c-ae29-c80da6cfeba3
                 InstanceId: 1b4230e3-9a3b-4a38-bd20-539a23aeec6f
-        -   Folder: Entorno/Muros
+        -   Folder: "EntornoEstático/Muros"
             Entity:
                 Id: 2c46881f-53e6-4d1d-85df-924007329f46
                 Name: Cube
@@ -718,7 +731,7 @@ Hierarchy:
                             cfbb85a3aa65f135adf45935583de32e*: ref!! b93ca2ab-97db-4f06-8c7f-d3bfc2f8f36e
                         modelo: ref!! ac832d4b-851e-42ca-bc38-6c24245d3d13
             Base:
-                BasePartAsset: "73f16069-e6ab-4eae-a431-2bbd98bb2fe6:Prefabs/Entorno/Botón (Rojo)"
+                BasePartAsset: "73f16069-e6ab-4eae-a431-2bbd98bb2fe6:Prefabs/EntornoDinámico/Botón (Rojo)"
                 BasePartId: ac76f714-74d1-46fa-9972-1b87615dc7d7
                 InstanceId: edff4fe5-e8a9-44f4-954a-564b4b402372
         -   Folder: Puertas
@@ -759,26 +772,25 @@ Hierarchy:
                             2690a8a8fa7ae2b18c044d1a8c7cfbdd*: ref!! 8bf65f1a-e9d0-457c-a88e-4f15d5465421
                         modelo: ref!! 28551bc2-d945-48b7-bd70-76da627ab51e
             Base:
-                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Vacío)"
+                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/EntornoDinámico/Botón (Vacío)"
                 BasePartId: 220d4dae-6c4d-4310-8098-a5a1691a7d8b
                 InstanceId: 7437680e-a8f3-48e4-8fa2-e8989c84c4d0
-        -   Folder: null
+        -   Folder: Grupo01
             Entity:
-                Id: 3e1c62cc-564a-4570-b7d1-37c0f75161c4
-                Name: Saltador 1
+                Id: 347bd0cd-f2ad-4c4b-a987-27846fe13532
+                Name: Activador
                 Components:
-                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
-                        Id: 0ea62b98-42c0-403e-86da-fcba3597c2f8
-                        Position: {X: 7.0, Y: 0.0, Z: 0.0}
+                    b0f10699d65ec41b687f59ee363befd6: !TransformComponent
+                        Id: 9042f63b-d633-449f-a7db-dbcee37d7de9
+                        Position*: {X: 0.0, Y: 0.0, Z: -1.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.0, Y: 0.5, Z: 2.0}
-                        Children:
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! b5172603-3a25-45c5-8692-04e0cff01122
-                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: 5dfbf217-c788-4e7a-81fd-fd22c45a2f4b
+                        Scale: {X: 4.0, Y: 1.0, Z: 2.0}
+                        Children: {}
+                    45bb46cc8e08e3285f9b30cf4b79af13: !StaticColliderComponent
+                        Id: 5f28f2bb-d164-421d-a905-99aa8e4d31a6
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: KinematicFilter, CharacterFilter
-                        CanSleep: false
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
                         Restitution: 0.0
                         Friction: 0.0
                         RollingFriction: 0.0
@@ -787,14 +799,39 @@ Hierarchy:
                         IsTrigger: true
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                            deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    ae77dc873a2c3c32c294301875605415: !Bozobaralika.ControladorSaltador,Bozobaralika.Proyecto
-                        Id: 1f851cb4-4db3-45b6-a7dc-aa657a3757a4
-                        fuerza: 15.0
+                    e680e31a6c74c52f698f67703af2b423: !Bozobaralika.ControladorActivador,Bozobaralika.Proyecto
+                        Id: 6fb2ce7d-6840-4e48-827c-896af4749d68
+                        activables:
+                            252cd8a586cd04f09fff927492fe857d*: ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
+                            e97626f945ff1d822bb25b6e2b268ec4*: ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
+                            732e7ad64096d4b835203683a3c35ac1*: ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
+            Base:
+                BasePartAsset: "2566113e-21c9-42ef-94ea-b6ba54bf4188:Prefabs/EntornoDinámico/Activador"
+                BasePartId: d050dde3-78be-4c83-b124-1ec2abdb06e5
+                InstanceId: 01ac6709-3342-4ff7-8214-52129e40de96
+        -   Entity:
+                Id: 3936279f-2486-4147-a64a-f0b6df5cd428
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 71fe88b4-39ee-48cc-9226-8fdc0619f6d3
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: d96fa9cd-c640-4b4a-9549-1f87d78f2326
+                        Model: a8db6d9b-4574-4dfd-8104-d5fc6b55a011:Modelos/Entorno/Saltador/Saltador
+                        Materials: {}
+            Base:
+                BasePartAsset: "e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/EntornoDinámico/Saltador"
+                BasePartId: b2babcbf-d484-41a4-955b-9edbb720c9dd
+                InstanceId: 30b2e4fe-e6bd-49ef-9a1c-6cdcb9e5bac1
         -   Entity:
                 Id: 3ec0146f-96c2-48b2-8543-33953943f31c
                 Name: Base
@@ -810,42 +847,9 @@ Hierarchy:
                         Model: "afa430e3-cc52-406b-afb3-f5d65198d0f8:Modelos/Entorno/Botón/Base"
                         Materials: {}
             Base:
-                BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/Entorno/Botón (Azul)"
+                BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/EntornoDinámico/Botón (Azul)"
                 BasePartId: 9ed46e5c-e8aa-4d32-ad0e-34ea6d159d4c
                 InstanceId: 1b4230e3-9a3b-4a38-bd20-539a23aeec6f
-        -   Folder: null
-            Entity:
-                Id: 41b0fd2f-d07c-403c-aede-e0508f245dd2
-                Name: Saltador 2
-                Components:
-                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
-                        Id: 3367a09a-f8b6-4fe7-8d25-f8073753f213
-                        Position: {X: 0.0, Y: 0.0, Z: -8.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.0, Y: 0.5, Z: 2.0}
-                        Children:
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 4ae2fbba-00a6-46bf-a96f-f24cc2c97f4e
-                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: 33598f42-cd89-4e8c-b2e7-64c617d5d06a
-                        CollisionGroup: SensorTrigger
-                        CanCollideWith: KinematicFilter, CharacterFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: true
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    ae77dc873a2c3c32c294301875605415: !Bozobaralika.ControladorSaltador,Bozobaralika.Proyecto
-                        Id: 31859523-f77e-43c5-be6f-d5ca14d27f22
-                        fuerza: 15.0
         -   Folder: MuestraEnemigos
             Entity:
                 Id: 41ff8583-2be9-4314-986b-7a66d760d5f7
@@ -877,10 +881,10 @@ Hierarchy:
                         Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
                         Materials: {}
             Base:
-                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Vacío)"
+                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/EntornoDinámico/Botón (Vacío)"
                 BasePartId: ef75cf51-4305-4d0f-b9ea-22eb5c6a1996
                 InstanceId: 7437680e-a8f3-48e4-8fa2-e8989c84c4d0
-        -   Folder: "Entorno/Obstáculos"
+        -   Folder: "EntornoEstático/Obstáculos"
             Entity:
                 Id: 43a0f70d-9590-47d8-8ed8-79ed738a7d35
                 Name: Cube
@@ -912,7 +916,7 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Folder: "Entorno/Obstáculos"
+        -   Folder: "EntornoEstático/Obstáculos"
             Entity:
                 Id: 442ecefd-9d8c-4e23-a74a-5b10de50d15d
                 Name: Cube
@@ -969,9 +973,13 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 70d66efc-b806-4a95-a2c8-358a3736fe28
+                        Id: f49abdb7-e1f6-48ec-90cb-1e38ba36e022
                         Model: a8db6d9b-4574-4dfd-8104-d5fc6b55a011:Modelos/Entorno/Saltador/Saltador
                         Materials: {}
+            Base:
+                BasePartAsset: "e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/EntornoDinámico/Saltador"
+                BasePartId: b2babcbf-d484-41a4-955b-9edbb720c9dd
+                InstanceId: 9a9ab826-c1a2-484c-87b5-e01fd29e4113
         -   Folder: null
             Entity:
                 Id: 4aa76dc1-86b2-4971-a4d3-97da711e18ba
@@ -1026,10 +1034,10 @@ Hierarchy:
                         llave: azul
                         modelo: ref!! 5dd9166c-961d-48ba-b9dd-efe134b7b2f3
             Base:
-                BasePartAsset: f104c990-42cd-4a37-ac04-9c9181fbe8ed:Prefabs/Entorno/Llave (Azul)
+                BasePartAsset: "f104c990-42cd-4a37-ac04-9c9181fbe8ed:Prefabs/EntornoDinámico/Llave (Azul)"
                 BasePartId: 60a17964-ae87-420b-b6c7-baa54dd9ac8a
                 InstanceId: 78864342-0445-470e-b845-5cde3769de17
-        -   Folder: Entorno
+        -   Folder: "EntornoEstático"
             Entity:
                 Id: 52cd02bd-3165-4aa6-8d1e-7538541119a3
                 Name: Skybox
@@ -1047,7 +1055,7 @@ Hierarchy:
                         Id: 5948d7fd-40c3-40e2-a1c1-18a6ff9489d8
                         Type: !LightSkybox
                             Skybox: fa0474ca-0906-42ca-8deb-fbe7df071b66:Skybox
-        -   Folder: "Entorno/Obstáculos"
+        -   Folder: "EntornoEstático/Obstáculos"
             Entity:
                 Id: 5806e859-d7ec-42d4-ac78-edfc026317d2
                 Name: Cube
@@ -1091,9 +1099,13 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: d369ede9-6d45-4d27-b849-76bfeb9b714f
+                        Id: da35a6da-7ed4-4144-8bca-76197c53aa93
                         Model: e8d3d766-24dd-46d2-b345-9d5ba829b473:Modelos/Entorno/PoderInvencibilidad/Invencibilidad
                         Materials: {}
+            Base:
+                BasePartAsset: "64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/EntornoDinámico/Poder (Invencibilidad)"
+                BasePartId: 75e85694-c129-4841-a288-0597b6172a4d
+                InstanceId: 938b33c4-b6af-4165-953d-b183bb31a5c8
         -   Folder: null
             Entity:
                 Id: 5c4054d7-b540-4748-8ecb-242d980701ce
@@ -1110,20 +1122,20 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 62a7baa8-3145-43f2-9629-a24f718c9fe0
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
-        -   Folder: null
+        -   Folder: Secretos
             Entity:
                 Id: 5f2be316-c335-4e47-94e2-616f939d5d8c
                 Name: Poder (Rapidez)
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: d49822e4-2d66-485e-ba72-1585f1b7face
-                        Position: {X: -16.0, Y: 0.5, Z: 18.0}
+                        Position*: {X: -16.0, Y: 0.5, Z: 16.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 411e04b7-e116-4fb4-8bf5-773513c77a48
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: e615fbda-3023-46e3-8414-56df71382bc9
+                        Id: afcbe468-e143-4a47-85bd-85fd78989504
                         CollisionGroup: SensorTrigger
                         CanCollideWith: CharacterFilter
                         CanSleep: true
@@ -1141,9 +1153,13 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     d4a6cfb5e8fa7e584de806c4e1719eb6: !Bozobaralika.ControladorPoder,Bozobaralika.Proyecto
-                        Id: e338d37c-0b12-45b8-9a6d-e44c76aba139
+                        Id: 2bccf3a4-174f-4ef5-a635-d5a40ce87c02
                         poder: rapidez
                         modelo: ref!! 411e04b7-e116-4fb4-8bf5-773513c77a48
+            Base:
+                BasePartAsset: "9ff047a9-a9e8-4838-af1b-5b0a91f53265:Prefabs/EntornoDinámico/Poder (Rapidez)"
+                BasePartId: a5bbf80c-25f8-4ffa-bbdf-0a6f4f966fa9
+                InstanceId: 5052427c-e218-49aa-a78d-885da28e66a6
         -   Folder: MuestraEnemigos
             Entity:
                 Id: 614f2b4b-5916-4eef-82c7-8951ea902122
@@ -1244,7 +1260,7 @@ Hierarchy:
                         Model: "afa430e3-cc52-406b-afb3-f5d65198d0f8:Modelos/Entorno/Botón/Base"
                         Materials: {}
             Base:
-                BasePartAsset: "73f16069-e6ab-4eae-a431-2bbd98bb2fe6:Prefabs/Entorno/Botón (Rojo)"
+                BasePartAsset: "73f16069-e6ab-4eae-a431-2bbd98bb2fe6:Prefabs/EntornoDinámico/Botón (Rojo)"
                 BasePartId: 233c6a74-4ed3-4f45-9b13-717901d3fe86
                 InstanceId: edff4fe5-e8a9-44f4-954a-564b4b402372
         -   Folder: null
@@ -1322,7 +1338,7 @@ Hierarchy:
                         Materials:
                             67871fe64f68385cdb392243a8eaa836~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
             Base:
-                BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/Entorno/Botón (Azul)"
+                BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/EntornoDinámico/Botón (Azul)"
                 BasePartId: 6ba9d529-deb5-41b0-a29a-42e3547040f8
                 InstanceId: 1b4230e3-9a3b-4a38-bd20-539a23aeec6f
         -   Folder: null
@@ -1367,19 +1383,60 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 10b3a234-e528-4bb2-8fab-1cf3f54da3b2
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
-        -   Folder: null
+        -   Folder: "EntornoDinámico"
             Entity:
                 Id: 713070be-902c-4072-88c3-994978523f77
                 Name: "DañadorContinuo"
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 32514c17-9cce-47ed-8854-4787ed56cceb
-                        Position: {X: 0.0, Y: 0.0, Z: -15.0}
+                        Position*: {X: 0.0, Y: 0.0, Z: -16.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             43b09c3691a2b208be723d279cc1c458: ref!! a4d2b804-a80d-4e82-b855-6ff54f95b8cf
                             267e640bf66d52f92b80726762aab5ea: ref!! f9c38d0a-8a6c-4513-9ba5-17b8b6b828d7
+            Base:
+                BasePartAsset: "45ea8175-4bdb-46b4-998a-9c398b65c48d:Prefabs/EntornoDinámico/DañadorContinuo"
+                BasePartId: b0b6ec13-c6d4-4236-af90-cb6c3b025efd
+                InstanceId: 11b71e64-cf95-4a63-80ff-a1a7ddc3354f
+        -   Folder: "EntornoDinámico"
+            Entity:
+                Id: 75824380-1882-4be8-8052-13cb0667f063
+                Name: Saltador
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 2434a800-e580-494d-b192-3e7ee8330d32
+                        Position*: {X: 7.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 71fe88b4-39ee-48cc-9226-8fdc0619f6d3
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: d66402d2-3c24-49c4-b386-5312c8345162
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, KinematicFilter, CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 2.0, Y: 0.5, Z: 2.0}
+                                LocalOffset: {X: 0.0, Y: 0.25, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    ae77dc873a2c3c32c294301875605415: !Bozobaralika.ControladorSaltador,Bozobaralika.Proyecto
+                        Id: 9ef3ffac-aaf1-4f75-8cc8-de4615f21913
+                        fuerza: 15.0
+            Base:
+                BasePartAsset: "e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/EntornoDinámico/Saltador"
+                BasePartId: 0e6fc922-4c0b-44c8-af46-097632041c0b
+                InstanceId: 30b2e4fe-e6bd-49ef-9a1c-6cdcb9e5bac1
         -   Entity:
                 Id: 7b1899ce-8864-4aff-9488-779cbcb41ea8
                 Name: Lanzagranadas
@@ -1441,7 +1498,7 @@ Hierarchy:
                         modelo: ref!! e3798312-4076-4b5d-80e4-4c4dcbb1a545
                         "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
             Base:
-                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: 10396d09-c3d0-4716-b888-450afcf55538
         -   Entity:
@@ -1459,7 +1516,7 @@ Hierarchy:
                         Model: "afa430e3-cc52-406b-afb3-f5d65198d0f8:Modelos/Entorno/Botón/Base"
                         Materials: {}
             Base:
-                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Vacío)"
+                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/EntornoDinámico/Botón (Vacío)"
                 BasePartId: 33d94d5f-9c78-4548-88fc-74a17c50d5a7
                 InstanceId: d03a1744-4d1c-4530-bcf7-15ba60d2d8a9
         -   Entity:
@@ -1478,7 +1535,7 @@ Hierarchy:
                         Materials:
                             29052f4076ada5a695dba44b47be1ac7~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
             Base:
-                BasePartAsset: 2c6736d1-0a31-4e49-b281-0e17303b2b12:Prefabs/Entorno/Llave (Roja)
+                BasePartAsset: "2c6736d1-0a31-4e49-b281-0e17303b2b12:Prefabs/EntornoDinámico/Llave (Roja)"
                 BasePartId: 815d72ca-0660-4eba-8cae-00e9b57fa989
                 InstanceId: 2f150493-58d6-47fe-bd21-512bf82fc32d
         -   Entity:
@@ -1497,7 +1554,7 @@ Hierarchy:
                         Materials:
                             d2b19c308a18a23717508b2aeb6c19bb~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
             Base:
-                BasePartAsset: "73f16069-e6ab-4eae-a431-2bbd98bb2fe6:Prefabs/Entorno/Botón (Rojo)"
+                BasePartAsset: "73f16069-e6ab-4eae-a431-2bbd98bb2fe6:Prefabs/EntornoDinámico/Botón (Rojo)"
                 BasePartId: a95bdd9a-d4b5-4794-93a1-c91229340c52
                 InstanceId: edff4fe5-e8a9-44f4-954a-564b4b402372
         -   Folder: null
@@ -1516,7 +1573,7 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
                 InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
-        -   Folder: "Entorno/Obstáculos"
+        -   Folder: "EntornoEstático/Obstáculos"
             Entity:
                 Id: 8b42ea7d-752a-4920-97e2-1646ec7b9189
                 Name: Cube
@@ -1565,7 +1622,7 @@ Hierarchy:
                         modelo: ref!! 02e802eb-b53f-4068-bed0-b0e63b08f2ff
                         "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
             Base:
-                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: 814853e4-d0ae-458c-a2bf-8a7b59346bdc
         -   Folder: null
@@ -1580,9 +1637,13 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: f7e225b5-b554-40f4-8efe-2bde601df476
+                        Id: fe0a9c55-f80e-4d56-bff2-6e4eeb24440a
                         Model: "47c1c69d-2581-453c-a307-453e8ac0f6f7:Modelos/Entorno/PoderDaño/Daño"
                         Materials: {}
+            Base:
+                BasePartAsset: "3058a8fb-6fd5-4bc9-8df4-19fe486ca86e:Prefabs/EntornoDinámico/Poder (Daño)"
+                BasePartId: 560a1261-7bf4-4110-a706-95b81d281962
+                InstanceId: 0e1856ce-e831-40e5-88f2-00b9af8fec6b
         -   Folder: null
             Entity:
                 Id: 8da821bb-04d5-4008-9a51-56dae4802a6e
@@ -1602,23 +1663,23 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
                 InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
-        -   Folder: null
+        -   Folder: "EntornoDinámico"
             Entity:
                 Id: 8dcfbf63-872c-4767-b5d4-c444770e99f8
-                Name: Saltador 0
+                Name: Saltador
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 5f6d0967-5c43-448f-87f9-70e56cdfa1d1
-                        Position: {X: -7.0, Y: 0.0, Z: 0.0}
+                        Position*: {X: -7.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! d811575a-4b20-4860-9c65-1f82abb729e8
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: d07b5dbf-7b19-4baa-b6dd-e51442cf223e
+                        Id: 1bb677eb-8ad7-4e82-a342-7834fffb7527
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: KinematicFilter, CharacterFilter
-                        CanSleep: false
+                        CanCollideWith: DefaultFilter, KinematicFilter, CharacterFilter
+                        CanSleep: true
                         Restitution: 0.0
                         Friction: 0.0
                         RollingFriction: 0.0
@@ -1629,12 +1690,16 @@ Hierarchy:
                         ColliderShapes:
                             ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 2.0, Y: 1.0, Z: 2.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                Size: {X: 2.0, Y: 0.5, Z: 2.0}
+                                LocalOffset: {X: 0.0, Y: 0.25, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     ae77dc873a2c3c32c294301875605415: !Bozobaralika.ControladorSaltador,Bozobaralika.Proyecto
-                        Id: a5b8bfc9-8139-4c69-8e63-f74fd31d23b1
+                        Id: 9bdb1715-0373-471e-9d6d-5760a18830ab
                         fuerza: 15.0
+            Base:
+                BasePartAsset: "e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/EntornoDinámico/Saltador"
+                BasePartId: 0e6fc922-4c0b-44c8-af46-097632041c0b
+                InstanceId: 9a9ab826-c1a2-484c-87b5-e01fd29e4113
         -   Entity:
                 Id: 909b19e5-b46b-4cf9-895d-3b9ea24cdeb3
                 Name: Modelo
@@ -1674,22 +1739,22 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
-                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: fd1eb265-dd05-409d-a535-dde956ce68ed
                 InstanceId: 814853e4-d0ae-458c-a2bf-8a7b59346bdc
         -   Entity:
                 Id: 9778c9f7-ee25-4fad-84cc-397d06ee1a61
-                Name: Lava
+                Name: "Dañador"
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: a4d2b804-a80d-4e82-b855-6ff54f95b8cf
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 30.0, Y: 0.5, Z: 2.0}
+                        Scale*: {X: 30.0, Y: 0.2, Z: 2.0}
                         Children:
                             f929d869c6287b10b039bc4acf343e4f: ref!! afccf0ce-6856-463c-b8f9-3965a352b7d0
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: 05d54835-e18d-4978-98cb-036a25f8dac8
+                        Id: abaf8e24-4516-4d42-a487-e58dca762af0
                         CanCollideWith: KinematicFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -1706,8 +1771,12 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     c8f96335b6b008a32015b198e8047e13: !Bozobaralika.ControladorDa%25C3%25B1oContinuo,Bozobaralika.Proyecto
-                        Id: b68f9ec6-d05e-4aef-a5af-e806786b380b
+                        Id: c06e8203-18dc-48ab-a485-d16ddf6d1470
                         "daño": 10.0
+            Base:
+                BasePartAsset: "45ea8175-4bdb-46b4-998a-9c398b65c48d:Prefabs/EntornoDinámico/DañadorContinuo"
+                BasePartId: d7a4abb5-8b91-4c05-a973-671b9d55674e
+                InstanceId: 11b71e64-cf95-4a63-80ff-a1a7ddc3354f
         -   Folder: Puertas
             Entity:
                 Id: 97f111ef-4039-4184-9d8e-a54c9fc69849
@@ -1725,7 +1794,7 @@ Hierarchy:
                         modelo: ref!! e6d6d2ee-3c2c-4aa9-90ba-73c90e740358
                         "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
             Base:
-                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: b7aa5ff0-129f-49d4-b606-fd1b945a7c67
         -   Folder: null
@@ -1811,40 +1880,6 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
                 InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
-        -   Entity:
-                Id: a77ffa41-2529-4f4e-90a0-1235895d75a0
-                Name: Activador
-                Components:
-                    b91c14479af4b1d70ede6f87899477bd: !TransformComponent
-                        Id: 10f36ae8-fc4e-470e-97d3-d007c522b6ac
-                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 4.0, Y: 0.5, Z: 1.0}
-                        Children: {}
-                    a0d4995e2cf26d899352b37e46d0ae0b: !StaticColliderComponent
-                        Id: e729d4d8-b03a-4f2e-b68a-1d0a97cddc97
-                        CollisionGroup: SensorTrigger
-                        CanCollideWith: CharacterFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: true
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            f5049ee61306e7a6812910763597dbc2: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    6b8d5cb4a8a7b9862a81bc486360f411: !Bozobaralika.ControladorActivador,Bozobaralika.Proyecto
-                        Id: 00d62a29-7211-43fc-9374-758663e3651f
-                        activables:
-                            1a84e458c5d9f986c6cf80a9262dd01e: ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
-                            d14befc0c61f553ddedcc72f70dd56aa: ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
-                            d7633df85cc7d09af10051ca2b599e60: ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
         -   Folder: null
             Entity:
                 Id: a84a3945-0599-4bd3-a73a-85748d1f0d74
@@ -1915,7 +1950,7 @@ Hierarchy:
                         llave: roja
                         modelo: ref!! 32524af0-94ba-4b91-af3d-fabb7dd890b3
             Base:
-                BasePartAsset: 2c6736d1-0a31-4e49-b281-0e17303b2b12:Prefabs/Entorno/Llave (Roja)
+                BasePartAsset: "2c6736d1-0a31-4e49-b281-0e17303b2b12:Prefabs/EntornoDinámico/Llave (Roja)"
                 BasePartId: 276dc3fe-34c9-4bdd-8eb3-33c3400fb4e0
                 InstanceId: 2f150493-58d6-47fe-bd21-512bf82fc32d
         -   Entity:
@@ -2019,23 +2054,9 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
-                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: fd1eb265-dd05-409d-a535-dde956ce68ed
                 InstanceId: affaa42e-d400-469e-97e5-dcc905234d2f
-        -   Entity:
-                Id: b78b3bf7-554c-4fa6-90e0-008c8d904785
-                Name: Modelo
-                Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 4ae2fbba-00a6-46bf-a96f-f24cc2c97f4e
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 57727071-0b3d-430d-b779-98daefe5da7d
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
         -   Entity:
                 Id: b8b1eba2-82a4-43a7-b698-f29e4d133565
                 Name: Base
@@ -2051,7 +2072,7 @@ Hierarchy:
                         Model: "afa430e3-cc52-406b-afb3-f5d65198d0f8:Modelos/Entorno/Botón/Base"
                         Materials: {}
             Base:
-                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Vacío)"
+                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/EntornoDinámico/Botón (Vacío)"
                 BasePartId: 33d94d5f-9c78-4548-88fc-74a17c50d5a7
                 InstanceId: 7437680e-a8f3-48e4-8fa2-e8989c84c4d0
         -   Folder: Puertas
@@ -2071,10 +2092,10 @@ Hierarchy:
                         modelo: ref!! 6a4a82c0-7764-4fe4-8ab9-499710fff4ad
                         "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
             Base:
-                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: affaa42e-d400-469e-97e5-dcc905234d2f
-        -   Folder: "Entorno/Obstáculos"
+        -   Folder: "EntornoEstático/Obstáculos"
             Entity:
                 Id: b98edd79-ab8c-48c3-918b-dadfca384f26
                 Name: Cube
@@ -2155,22 +2176,23 @@ Hierarchy:
                         Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
                         Materials: {}
             Base:
-                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Vacío)"
+                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/EntornoDinámico/Botón (Vacío)"
                 BasePartId: ef75cf51-4305-4d0f-b9ea-22eb5c6a1996
                 InstanceId: d03a1744-4d1c-4530-bcf7-15ba60d2d8a9
-        -   Entity:
+        -   Folder: Secretos
+            Entity:
                 Id: c09a25df-9c1e-4257-b2c0-5d9036000031
                 Name: "Poder (Daño)"
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: bb9be785-1c98-4f92-85ce-64bca6ccc946
-                        Position: {X: -16.0, Y: 0.5, Z: 9.0}
+                        Position*: {X: -16.0, Y: 0.5, Z: 8.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 6f497df9-acb3-4047-b451-d4d070ad90c1
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: 0a59cf5c-9f46-4197-bcf7-66b0083f4855
+                        Id: a7f8e502-71c8-44b2-b8f8-b0e64d3f0659
                         CollisionGroup: SensorTrigger
                         CanCollideWith: CharacterFilter
                         CanSleep: true
@@ -2188,9 +2210,13 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     d4a6cfb5e8fa7e584de806c4e1719eb6: !Bozobaralika.ControladorPoder,Bozobaralika.Proyecto
-                        Id: 03d82c87-9ba5-4331-ac47-210b06b25758
+                        Id: eec2be22-bb19-4b34-b8cc-3481c11f177e
                         poder: "daño"
                         modelo: ref!! 6f497df9-acb3-4047-b451-d4d070ad90c1
+            Base:
+                BasePartAsset: "3058a8fb-6fd5-4bc9-8df4-19fe486ca86e:Prefabs/EntornoDinámico/Poder (Daño)"
+                BasePartId: 135ae145-305c-4c0e-a9fb-bcb9860bb7db
+                InstanceId: 0e1856ce-e831-40e5-88f2-00b9af8fec6b
         -   Folder: null
             Entity:
                 Id: c0c9e26c-4243-4272-80da-f03869b3aa18
@@ -2257,9 +2283,13 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 0d7fd1c1-c1eb-4eba-ae14-aa244747a13c
+                        Id: 617de4d2-f031-4149-b2ff-66aea4359695
                         Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
                         Materials: {}
+            Base:
+                BasePartAsset: "45ea8175-4bdb-46b4-998a-9c398b65c48d:Prefabs/EntornoDinámico/DañadorContinuo"
+                BasePartId: bfe5c0fc-b817-405b-8622-05f5377bf97c
+                InstanceId: 11b71e64-cf95-4a63-80ff-a1a7ddc3354f
         -   Folder: null
             Entity:
                 Id: ce25aa8d-94e1-4e17-8f57-12e6abf642ae
@@ -2272,9 +2302,13 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 5bb9c309-214d-47aa-a23a-47a0827dd6d3
+                        Id: 9f58e4f5-c1e9-496f-85a3-af76a51b79fb
                         Model: 440cbaed-3492-4a7f-8695-02ab886f0bfe:Modelos/Entorno/PoderRapidez/Rapidez
                         Materials: {}
+            Base:
+                BasePartAsset: "9ff047a9-a9e8-4838-af1b-5b0a91f53265:Prefabs/EntornoDinámico/Poder (Rapidez)"
+                BasePartId: 90ffcfac-272e-49e3-a6c6-2369dd4081fd
+                InstanceId: 5052427c-e218-49aa-a78d-885da28e66a6
         -   Folder: null
             Entity:
                 Id: cf86dfbb-e3d9-4101-a038-f580b99a59af
@@ -2298,7 +2332,7 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 4b476576-1ceb-49a5-807d-388a9c60eb3d
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
-        -   Folder: Entorno
+        -   Folder: "EntornoEstático"
             Entity:
                 Id: cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
                 Name: Ground
@@ -2344,7 +2378,7 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: dd90a596-e723-4a2b-a286-196f763a0dc2
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
-        -   Folder: Entorno
+        -   Folder: "EntornoEstático"
             Entity:
                 Id: d3476e3f-eee5-41dc-9c59-89b96ac24a2b
                 Name: "Navegación"
@@ -2377,7 +2411,7 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
                 InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
-        -   Folder: Entorno/Muros
+        -   Folder: "EntornoEstático/Muros"
             Entity:
                 Id: d471c428-d220-4860-b67e-f0ad26d2d613
                 Name: Cube
@@ -2421,7 +2455,7 @@ Hierarchy:
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: {}
                     bbf6de4eda3e187e7c32af3002049f7d: !ParticleSystemComponent
-                        Id: 288f943a-bc85-454d-a19a-5b4f76bca7b2
+                        Id: 773d4abd-814a-4988-8a86-e22c5876a8bd
                         Control:
                             ResetSeconds: 5.0
                             Control: Play
@@ -2481,8 +2515,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            PositionMin: {X: -30.0, Y: 0.0, Z: -2.0}
-                                            PositionMax: {X: 30.0, Y: 0.0, Z: 2.0}
+                                            PositionMin*: {X: -30.0, Y: 0.0, Z: -2.0}
+                                            PositionMax*: {X: 30.0, Y: 0.0, Z: 2.0}
                                             Interpolate: false
                                         b663f69a05042540ff539d253be0dea8: !InitialVelocitySeed
                                             InheritPosition: true
@@ -2562,6 +2596,10 @@ Hierarchy:
                                                             Value: {R: 0.0, G: 0.0, B: 0.0, A: 0.0}
                                                             TangentType: Linear
                                             SeedOffset: 0
+            Base:
+                BasePartAsset: "45ea8175-4bdb-46b4-998a-9c398b65c48d:Prefabs/EntornoDinámico/DañadorContinuo"
+                BasePartId: 82e7750e-4f7d-4f5f-90f2-40b9a93774bf
+                InstanceId: 11b71e64-cf95-4a63-80ff-a1a7ddc3354f
         -   Entity:
                 Id: d5817381-6a16-4585-b384-72760aaa3d44
                 Name: Controlador
@@ -2651,7 +2689,7 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
                 InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
-        -   Folder: Entorno
+        -   Folder: "EntornoEstático"
             Entity:
                 Id: dca75c2f-3874-4e83-9565-15c148fa0401
                 Name: Directional light
@@ -2698,21 +2736,7 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: f1f96026-7e7c-46b5-8c54-e02016058827
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
-        -   Entity:
-                Id: def80f8f-5bd9-4eee-b751-4768d1c73622
-                Name: Modelo
-                Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: b5172603-3a25-45c5-8692-04e0cff01122
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 9e4f4867-2dc7-44a7-80a7-09efe11fdad5
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-        -   Folder: Entorno/Muros
+        -   Folder: "EntornoEstático/Muros"
             Entity:
                 Id: dfbee328-9e17-4814-912e-92e7281c5a1c
                 Name: Cube
@@ -2784,10 +2808,10 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
-                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: fd1eb265-dd05-409d-a535-dde956ce68ed
                 InstanceId: b7aa5ff0-129f-49d4-b606-fd1b945a7c67
-        -   Folder: null
+        -   Folder: Grupo01
             Entity:
                 Id: e3650bf2-48a3-47c0-a058-52246042dfc9
                 Name*: Zombi 1
@@ -2891,7 +2915,7 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 728122cf-ad47-4e23-9b57-295858286fc5
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
-        -   Folder: "Entorno/Obstáculos"
+        -   Folder: "EntornoEstático/Obstáculos"
             Entity:
                 Id: eb300b4d-c14f-4f40-b4b3-e09e965b69a5
                 Name: Cube
@@ -2939,7 +2963,7 @@ Hierarchy:
                         Materials:
                             790347199cd46b2dc25cec73548ae265~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
             Base:
-                BasePartAsset: f104c990-42cd-4a37-ac04-9c9181fbe8ed:Prefabs/Entorno/Llave (Azul)
+                BasePartAsset: "f104c990-42cd-4a37-ac04-9c9181fbe8ed:Prefabs/EntornoDinámico/Llave (Azul)"
                 BasePartId: 0ab9e326-c37c-4666-aaa8-5d30bfd12c45
                 InstanceId: 78864342-0445-470e-b845-5cde3769de17
         -   Folder: null
@@ -3017,7 +3041,7 @@ Hierarchy:
                             aeda593c2d4b1f3231a4b99c3a362ae2*: ref!! 80d1c850-1705-4153-9ecb-a041c143066c
                         modelo: ref!! ce66321f-8ac1-4d09-869e-2ff4938bbf53
             Base:
-                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Vacío)"
+                BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/EntornoDinámico/Botón (Vacío)"
                 BasePartId: 220d4dae-6c4d-4310-8098-a5a1691a7d8b
                 InstanceId: d03a1744-4d1c-4530-bcf7-15ba60d2d8a9
         -   Folder: MuestraEnemigos
@@ -3069,7 +3093,7 @@ Hierarchy:
                         Id: 57776d4e-51c0-435c-ab5f-0781c786f642
                         Model: e2c61240-3de0-4c53-821b-1b0e54af2827:Modelos/Enemigos/Dron/Dron
                         Materials: {}
-        -   Folder: Entorno/Muros
+        -   Folder: "EntornoEstático/Muros"
             Entity:
                 Id: f557bc44-8313-4a06-ba9a-35f36f7d42de
                 Name: Cube
@@ -3141,7 +3165,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
-                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: fd1eb265-dd05-409d-a535-dde956ce68ed
                 InstanceId: 10396d09-c3d0-4716-b888-450afcf55538
         -   Folder: null

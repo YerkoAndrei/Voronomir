@@ -1,0 +1,57 @@
+!PrefabAsset
+Id: 64449b5a-f9ba-4670-b8f7-299dd5509330
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! ee35195a-1513-4fb3-9e69-a6ad7040a4f5
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 75e85694-c129-4841-a288-0597b6172a4d
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 5eddb90b-fce1-4fa6-b7b5-611c4bfb27f7
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 0bd03edb-f34d-415a-b26c-517b65300962
+                        Model: e8d3d766-24dd-46d2-b345-9d5ba829b473:Modelos/Entorno/PoderInvencibilidad/Invencibilidad
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: ee35195a-1513-4fb3-9e69-a6ad7040a4f5
+                Name: Poder (Invencibilidad)
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: cf80365f-1121-4b55-8ca0-ffd80fc01e78
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 5eddb90b-fce1-4fa6-b7b5-611c4bfb27f7
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: bfa3be29-782d-4d96-8670-c1e143b7a9b7
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    d4a6cfb5e8fa7e584de806c4e1719eb6: !Bozobaralika.ControladorPoder,Bozobaralika.Proyecto
+                        Id: 5b3c2719-5574-4d6e-991b-7e5eedbf7185
+                        poder: invencibilidad
+                        modelo: ref!! 5eddb90b-fce1-4fa6-b7b5-611c4bfb27f7

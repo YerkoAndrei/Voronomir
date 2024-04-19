@@ -1,0 +1,39 @@
+!PrefabAsset
+Id: 2566113e-21c9-42ef-94ea-b6ba54bf4188
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! d050dde3-78be-4c83-b124-1ec2abdb06e5
+    Parts:
+        -   Entity:
+                Id: d050dde3-78be-4c83-b124-1ec2abdb06e5
+                Name: Activador
+                Components:
+                    b0f10699d65ec41b687f59ee363befd6: !TransformComponent
+                        Id: 09c9eaaf-e2b7-462c-9a6d-9f59b252c09b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 4.0, Y: 1.0, Z: 2.0}
+                        Children: {}
+                    45bb46cc8e08e3285f9b30cf4b79af13: !StaticColliderComponent
+                        Id: a3a8675a-6a00-4456-9a18-9f48a9198d73
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    e680e31a6c74c52f698f67703af2b423: !Bozobaralika.ControladorActivador,Bozobaralika.Proyecto
+                        Id: 3487a520-6ce1-4bff-ad75-9161159452ad
+                        activables: {}
