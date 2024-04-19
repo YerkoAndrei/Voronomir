@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 
@@ -9,16 +10,23 @@ using static Constantes;
 public class ControladorBotón : AsyncScript
 {
     public Llaves llave;
-    public ControladorPuerta puerta;
+    public List<Entity> activables = new List<Entity> { };
     public TransformComponent modelo;
 
     private PhysicsComponent cuerpo;
     private Vector3 posiciónActivado;
+    private IActivable[] interfaces;
 
     public override async Task Execute()
     {
         cuerpo = Entity.Get<PhysicsComponent>();
         posiciónActivado = modelo.Position + new Vector3(0, -0.3f, 0);
+
+        interfaces = new IActivable[activables.Count];
+        for (int i = 0; i < activables.Count; i++)
+        {
+            interfaces[i] = ObtenerInterfaz<IActivable>(activables[i]);
+        }
 
         while (Game.IsRunning)
         {
@@ -26,24 +34,42 @@ public class ControladorBotón : AsyncScript
             var jugador = RetornaJugador(colisión);
 
             if (jugador != null && cuerpo.Enabled)
-                Activar(jugador);
+                ActivarPorJugador(jugador.ObtenerLlave(llave));
 
             await Script.NextFrame();            
         }
     }
 
-    private void Activar(ControladorJugador controlador)
+    private void ActivarPorJugador(bool posible)
     {
         // Llave necesaria
-        if (!controlador.ObtenerLlave(llave))
+        if (!posible)
         {
             // PENDIENTE: efectos falta llave
             return;
         }
 
+        Activar();
+    }
+
+    public void ActivarPorDisparo()
+    {
+        // Disparo no reemplaza llave
+        if (llave != Llaves.nada || !cuerpo.Enabled)
+            return;
+
+        Activar();
+    }
+
+    private void Activar()
+    {
         cuerpo.Enabled = false;
-        puerta.Activar();
         AnimarActivación();
+
+        foreach (var activable in interfaces)
+        {
+            activable.Activar();
+        }
 
         // PENDIENTE: efectos
     }

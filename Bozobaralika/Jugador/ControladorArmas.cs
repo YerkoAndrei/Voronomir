@@ -264,13 +264,17 @@ public class ControladorArmas : StartupScript
         var resultado = this.GetSimulation().Raycast(cámara.Entity.Transform.WorldMatrix.TranslationVector,
                                                      dirección,
                                                      CollisionFilterGroups.DefaultFilter,
-                                                     colisionesDisparo);
+                                                     colisionesDisparo, true);
         if (!resultado.Succeeded)
             return;
 
         if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
         {
-            ControladorCofres.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal, (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter));
+            var sensor = resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger;
+            if (sensor)
+                ActivarBotón(resultado.Collider);
+
+            ControladorCofres.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal, !sensor);
             return;
         }
 
@@ -306,7 +310,7 @@ public class ControladorArmas : StartupScript
         this.GetSimulation().RaycastPenetrating(cámara.Entity.Transform.WorldMatrix.TranslationVector,
                                                 dirección, resultados,
                                                 CollisionFilterGroups.DefaultFilter,
-                                                colisionesDisparo);
+                                                colisionesDisparo, true);
         if (resultados.Count == 0)
             return;
 
@@ -319,7 +323,11 @@ public class ControladorArmas : StartupScript
         {
             if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
-                ControladorCofres.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal, (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter));
+                var sensor = resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger;
+                if (sensor)
+                    ActivarBotón(resultado.Collider);
+
+                ControladorCofres.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal, !sensor);
                 return;
             }
 
@@ -400,11 +408,12 @@ public class ControladorArmas : StartupScript
             var resultado = this.GetSimulation().Raycast(posiciónRayoGlobal,
                                                          dirección,
                                                          CollisionFilterGroups.DefaultFilter,
-                                                         colisionesDisparo);
+                                                         colisionesDisparo, true);
 
             if (!resultado.Succeeded)
                 continue;
 
+            // Dañables
             if (resultado.Collider.CollisionGroup == CollisionFilterGroups.KinematicFilter ||
                 resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter2)
             {
@@ -418,6 +427,7 @@ public class ControladorArmas : StartupScript
 
                 ControladorCofres.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
             }
+            // Proyectiles
             else if (resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter1)
             {
                 // Destruye proyectiles simples
@@ -427,7 +437,15 @@ public class ControladorArmas : StartupScript
                 var enemigo = resultado.Collider.Entity.Get<ElementoProyectilSimple>().disparador;
                 ControladorCofres.IniciarEfectoDaño(armaActual, enemigo, 0.5f, resultado.Point, resultado.Normal);
             }
-            else
+            // Botones
+            else if (resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
+            {
+                ActivarBotón(resultado.Collider);
+                posición = resultado.Point;
+                normal = resultado.Normal;
+            }
+            // Entorno
+            else if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)
             {
                 posición = resultado.Point;
                 normal = resultado.Normal;
@@ -463,6 +481,13 @@ public class ControladorArmas : StartupScript
 
         movimiento.CambiarSensiblidad(acercar);
         interfaz.MostrarMiraRifle(acercar);
+    }
+
+    private void ActivarBotón(PhysicsComponent elemento)
+    {
+        var botón = elemento.Entity.Get<ControladorBotón>();
+        if (botón != null)
+            botón.ActivarPorDisparo();
     }
 
     private async void CambiarArma(Armas nuevaArma)
