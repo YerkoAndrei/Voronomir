@@ -16,27 +16,28 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 1aea6cd7-ee9c-4921-b84c-beff05d125dd
+                            974930f89f5418aadc8036b440d5a6c6: ref!! a5c3a2ac-019e-49bd-aad9-4f37c7d8ea68
                     288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: d5713461-3d5a-438b-af78-c3a05cfc4543
-                        modelo: ref!! 1aea6cd7-ee9c-4921-b84c-beff05d125dd
-                        "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
-        -   Entity:
-                Id: fd1eb265-dd05-409d-a535-dde956ce68ed
+                        modelo: ref!! a5c3a2ac-019e-49bd-aad9-4f37c7d8ea68
+                        "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
+        -   Folder: null
+            Entity:
+                Id: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
                 Name: Modelo
                 Components:
                     fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 1aea6cd7-ee9c-4921-b84c-beff05d125dd
-                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
+                        Id: a5c3a2ac-019e-49bd-aad9-4f37c7d8ea68
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 3.0, Z: 3.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 58dfe0fb-ea82-4cba-8956-8cd457f2c7f3
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
+                        Id: 5126a893-7e55-4e6d-8e05-82bd8b7cce9c
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
                         Materials: {}
                     aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: c45b41f9-0625-4634-99c4-6aa50df84c0b
+                        Id: 2e85a850-8312-41fe-a003-4c546aff04a0
                         CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
                         CanSleep: false

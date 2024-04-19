@@ -161,6 +161,49 @@ Hierarchy:
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Folder: null
             Entity:
+                Id: 089e6c39-a3da-443c-97d7-437659f63eff
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: bb99c06b-1a0b-49fd-806b-d32041837a3e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 797424c9-c7fe-4281-975a-0fc200f33191
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
+                        Materials: {}
+                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
+                        Id: 0a1bda25-a917-4ef7-9fd7-e9816ff83b32
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: 10396d09-c3d0-4716-b888-450afcf55538
+        -   Folder: null
+            Entity:
                 Id: 08fc2677-0f04-4037-909f-2cc3e7811ef1
                 Name: "Dañable torso"
                 Components:
@@ -833,6 +876,49 @@ Hierarchy:
                 BasePartAsset: "e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/EntornoDinámico/Saltador"
                 BasePartId: b2babcbf-d484-41a4-955b-9edbb720c9dd
                 InstanceId: 30b2e4fe-e6bd-49ef-9a1c-6cdcb9e5bac1
+        -   Folder: null
+            Entity:
+                Id: 39dc6c0e-6112-4a97-80a7-ba5e549e40fc
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: c1da41d9-8786-40b3-94b1-1323677b85a7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: f66c9591-7afb-4864-a634-ac0826b5e455
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
+                        Materials: {}
+                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
+                        Id: 4368cf52-09a3-4160-9837-c858b515eb52
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: 814853e4-d0ae-458c-a2bf-8a7b59346bdc
         -   Entity:
                 Id: 3ec0146f-96c2-48b2-8543-33953943f31c
                 Name: Base
@@ -1490,14 +1576,14 @@ Hierarchy:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: e0be6fbe-2f81-499a-8205-ee10aac36ea1
                         Position*: {X: 19.5, Y: 0.0, Z: 9.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Rotation*: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! e3798312-4076-4b5d-80e4-4c4dcbb1a545
+                            9d8557da382431c2824eb56c010fba30: ref!! bb99c06b-1a0b-49fd-806b-d32041837a3e
                     288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: 476bf0f6-4204-44df-8129-c02ee709279b
-                        modelo: ref!! e3798312-4076-4b5d-80e4-4c4dcbb1a545
-                        "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
+                        modelo: ref!! bb99c06b-1a0b-49fd-806b-d32041837a3e
+                        "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
@@ -1614,14 +1700,14 @@ Hierarchy:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 648b51c6-1800-457a-bfdf-8aa35142affd
                         Position*: {X: 19.5, Y: 0.0, Z: 5.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Rotation*: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 02e802eb-b53f-4068-bed0-b0e63b08f2ff
+                            1ddbd0512b367caf4469eb39c9220865: ref!! c1da41d9-8786-40b3-94b1-1323677b85a7
                     288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: bb0f9e8f-4daa-4b4d-994b-41b4a02a3183
-                        modelo: ref!! 02e802eb-b53f-4068-bed0-b0e63b08f2ff
-                        "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
+                        modelo: ref!! c1da41d9-8786-40b3-94b1-1323677b85a7
+                        "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
@@ -1702,48 +1788,6 @@ Hierarchy:
                 BasePartId: 0e6fc922-4c0b-44c8-af46-097632041c0b
                 InstanceId: 9a9ab826-c1a2-484c-87b5-e01fd29e4113
         -   Entity:
-                Id: 909b19e5-b46b-4cf9-895d-3b9ea24cdeb3
-                Name: Modelo
-                Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 02e802eb-b53f-4068-bed0-b0e63b08f2ff
-                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 3.0, Z: 3.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: b759d36a-fafa-4abd-b1ea-2f8cbf95c1ce
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: 16960875-9d24-4b82-9bb1-2946db6bed34
-                        CollisionGroup: SensorTrigger
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: true
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
-                BasePartId: fd1eb265-dd05-409d-a535-dde956ce68ed
-                InstanceId: 814853e4-d0ae-458c-a2bf-8a7b59346bdc
-        -   Entity:
                 Id: 9778c9f7-ee25-4fad-84cc-397d06ee1a61
                 Name: "Dañador"
                 Components:
@@ -1786,14 +1830,14 @@ Hierarchy:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: dbeb15de-586b-427a-890c-9b4fb51a9e56
                         Position*: {X: 19.5, Y: 0.0, Z: 13.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Rotation*: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! e6d6d2ee-3c2c-4aa9-90ba-73c90e740358
+                            c18e2e620794c306862b4c33a9f5d767: ref!! aa22bde9-4f18-4564-92b1-711927934c22
                     288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: c12cc01a-94f6-4aa1-a67a-42c0fd535afa
-                        modelo: ref!! e6d6d2ee-3c2c-4aa9-90ba-73c90e740358
-                        "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
+                        modelo: ref!! aa22bde9-4f18-4564-92b1-711927934c22
+                        "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
@@ -1881,6 +1925,50 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
                 InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
+        -   Folder: null
+            Entity:
+                Id: a7cf3a65-ca02-44b2-ab58-ac47e21215be
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: a2ebcd3e-500a-4e90-a2d5-9528818a0208
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 37e86b2c-b725-4039-9e0f-302798cb10ea
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
+                        Materials:
+                            bc95f6c4209cf9648746a3f1a806ef73*~1: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
+                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
+                        Id: 0626b7b9-602a-4296-a0e2-182459121313
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: affaa42e-d400-469e-97e5-dcc905234d2f
         -   Folder: null
             Entity:
                 Id: a84a3945-0599-4bd3-a73a-85748d1f0d74
@@ -2017,48 +2105,6 @@ Hierarchy:
                 BasePartId: dc8e25b1-fd36-455c-9e7a-eb960c416884
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Entity:
-                Id: b57e56f4-844c-4c6e-aa99-98f1fced0f94
-                Name: Modelo
-                Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 6a4a82c0-7764-4fe4-8ab9-499710fff4ad
-                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 3.0, Z: 3.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 5ee0d00b-2bb3-4efe-87b8-1ed989c3cac8
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: 7fbfb462-35f7-42bb-b8a9-96768dc2e825
-                        CollisionGroup: SensorTrigger
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: true
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
-                BasePartId: fd1eb265-dd05-409d-a535-dde956ce68ed
-                InstanceId: affaa42e-d400-469e-97e5-dcc905234d2f
-        -   Entity:
                 Id: b8b1eba2-82a4-43a7-b698-f29e4d133565
                 Name: Base
                 Components:
@@ -2084,14 +2130,14 @@ Hierarchy:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 43c4a4a0-baaa-407f-840e-685e5ab2f3dd
                         Position*: {X: 19.5, Y: 0.0, Z: 17.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Rotation*: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 6a4a82c0-7764-4fe4-8ab9-499710fff4ad
+                            cd1b6052f5986670fbc4dd61fd046e2d: ref!! a2ebcd3e-500a-4e90-a2d5-9528818a0208
                     288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: fca2c93f-8884-470f-a142-ec80ddfa1e26
-                        modelo: ref!! 6a4a82c0-7764-4fe4-8ab9-499710fff4ad
-                        "posiciónAbierta": {X: 0.0, Y: 4.0, Z: 0.0}
+                        modelo: ref!! a2ebcd3e-500a-4e90-a2d5-9528818a0208
+                        "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
@@ -2806,48 +2852,6 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Entity:
-                Id: e32884d1-3922-4de3-afe1-5a5b19dd7a43
-                Name: Modelo
-                Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: e6d6d2ee-3c2c-4aa9-90ba-73c90e740358
-                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 3.0, Z: 3.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 238cfd47-7371-44b9-9447-e081f97d2ce4
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: 4fe2c4df-5d2c-46df-9b5b-5cbe209ec672
-                        CollisionGroup: SensorTrigger
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: true
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
-                BasePartId: fd1eb265-dd05-409d-a535-dde956ce68ed
-                InstanceId: b7aa5ff0-129f-49d4-b606-fd1b945a7c67
         -   Folder: Grupo01
             Entity:
                 Id: e3650bf2-48a3-47c0-a058-52246042dfc9
@@ -2932,6 +2936,50 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 64ccf3d0-2c5c-483a-8cb7-82bb054525c0
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
+        -   Folder: null
+            Entity:
+                Id: e8c29c5c-90b6-4934-891f-f3eafa6d6fed
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: aa22bde9-4f18-4564-92b1-711927934c22
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 65e16933-9120-447f-9e7b-1fa3ff536c95
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
+                        Materials:
+                            9f0f310113bae67ad5ef6389213ba9b2*~1: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
+                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
+                        Id: f1ea9bb8-f48a-4e94-bc78-24a6940c42cc
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: b7aa5ff0-129f-49d4-b606-fd1b945a7c67
         -   Folder: null
             Entity:
                 Id: e918d14d-9e57-4aae-ad19-0b7b94080418
@@ -3183,48 +3231,6 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Entity:
-                Id: fc40bf24-57b0-48ee-beb9-f32144816dd4
-                Name: Modelo
-                Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: e3798312-4076-4b5d-80e4-4c4dcbb1a545
-                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 3.0, Z: 3.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 95b55b69-d4d9-4db6-bbe0-3e081782cc9b
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: df38d1dc-b8a3-4c25-85a4-201976b5d1e4
-                        CollisionGroup: SensorTrigger
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: true
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
-                BasePartId: fd1eb265-dd05-409d-a535-dde956ce68ed
-                InstanceId: 10396d09-c3d0-4716-b888-450afcf55538
         -   Folder: null
             Entity:
                 Id: fdaa8bc9-a3aa-48d7-9c5f-52a0da545bc8

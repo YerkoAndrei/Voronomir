@@ -1,0 +1,19 @@
+!Model
+Id: da73348f-10e1-483f-a717-bbab57d625cc
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Puerta.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    6dbd936a01e29eca00048c9ec648b500:
+        Name: Puerta
+        MaterialInstance:
+            Material: f6b3451b-553a-41d6-864c-aca541fa094f:Modelos/Entorno/Puerta/Materiales/Puerta
+    908af2f092532fbd79ba2eaa0a14aa18:
+        Name: Llave
+        MaterialInstance:
+            Material: "b7e056c4-b8af-47da-855f-2941d34898ee:Materiales/Vacío"
+Modifiers: {}
+~SourceHashes:
+    1d2646f431dd74fe41676589c396d533~Puerta.glb: 522162647390c46b8c7f2828f8cf5844
