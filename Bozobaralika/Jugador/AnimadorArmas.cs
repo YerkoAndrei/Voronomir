@@ -353,7 +353,6 @@ public class AnimadorArmas : AsyncScript
             case TipoDisparo.espejo:
                 fuegoIzquierda.Enabled = false;
                 fuegoDerecha.Enabled = false;
-
                 break;
             case TipoDisparo.izquierda:
                 fuegoIzquierda.Enabled = false;
@@ -394,8 +393,13 @@ public class AnimadorArmas : AsyncScript
     // Melé
     public async void AnimarAtaque(TipoDisparo tipoDisparo)
     {
-        var rotaciónAtaqueIzquierda = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-40), MathUtil.DegreesToRadians(-80), MathUtil.DegreesToRadians(60));
-        var rotaciónAtaqueDerecha = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(40), MathUtil.DegreesToRadians(-80), MathUtil.DegreesToRadians(-60));
+        var rotaciónAtaqueIzquierda = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-40), MathUtil.DegreesToRadians(-90), MathUtil.DegreesToRadians(60));
+        var rotaciónAtaqueDerecha = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(40), MathUtil.DegreesToRadians(-90), MathUtil.DegreesToRadians(-60));
+
+        partículasIzquierda.ParticleSystem.ResetSimulation();
+        partículasDerecha.ParticleSystem.ResetSimulation();
+        partículasIzquierda.Enabled = true;
+        partículasDerecha.Enabled = true;
 
         switch (tipoDisparo)
         {
@@ -410,6 +414,10 @@ public class AnimadorArmas : AsyncScript
                 AnimarEspada(ejeIzquierda, rotaciónAtaqueIzquierda, 0.1f);
                 break;
         }
+
+        await Task.Delay(140);
+        partículasIzquierda.Enabled = false;
+        partículasDerecha.Enabled = false;
     }
 
     private async void AnimarEspada(TransformComponent espada, Quaternion rotaciónAtaque, float duración)
