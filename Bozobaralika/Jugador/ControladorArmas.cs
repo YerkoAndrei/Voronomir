@@ -5,6 +5,7 @@ using Stride.Core.Mathematics;
 using Stride.Physics;
 using Stride.Input;
 using Stride.Engine;
+using Stride.Particles.Components;
 
 namespace Bozobaralika;
 using static Utilidades;
@@ -17,6 +18,11 @@ public class ControladorArmas : StartupScript
     public AnimadorArmas animadorMetralleta;
     public AnimadorArmas animadorRife;
     public AnimadorArmas animadorLanzagranadas;
+
+    public Color colorMetralletaCaliente;
+
+    public ParticleSystemComponent partículasMetralletaIzquierda;
+    public ParticleSystemComponent partículasMetralletaDerecha;
 
     private ControladorJugador controlador;
     private ControladorMovimiento movimiento;
@@ -93,6 +99,9 @@ public class ControladorArmas : StartupScript
         interfaz.CambiarMira(armaActual);
         interfaz.CambiarÍcono(armaActual);
 
+        partículasMetralletaIzquierda.Enabled = false;
+        partículasMetralletaDerecha.Enabled = false;
+
         cambiandoArma = true;
         await animadorEspada.AnimarEntradaArma();
         cambiandoArma = false;
@@ -134,6 +143,20 @@ public class ControladorArmas : StartupScript
 
         if (!Input.IsMouseButtonDown(MouseButton.Left))
             EnfriarMetralleta();
+
+        if (armaActual == Armas.metralleta)
+        {
+            if (metralletaAtascada)
+            {
+                partículasMetralletaIzquierda.Color = Color.Transparent;
+                partículasMetralletaDerecha.Color = Color.Transparent;
+            }
+            else
+            {
+                partículasMetralletaIzquierda.Color = Color.Lerp(colorMetralletaCaliente, Color.Transparent, (tempoMetralleta / tiempoMaxMetralleta));
+                partículasMetralletaDerecha.Color = Color.Lerp(colorMetralletaCaliente, Color.Transparent, (tempoMetralleta / tiempoMaxMetralleta));
+            }
+        }
 
         // Espadas
         if (Input.IsMouseButtonPressed(MouseButton.Right) && armaActual == Armas.espada)
@@ -518,6 +541,8 @@ public class ControladorArmas : StartupScript
 
         interfaz.ApagarMiras();
         interfaz.CambiarÍcono(armaActual);
+        partículasMetralletaIzquierda.Enabled = false;
+        partículasMetralletaDerecha.Enabled = false;
 
         switch (armaActual)
         {
@@ -528,6 +553,8 @@ public class ControladorArmas : StartupScript
                 await animadorEscopeta.AnimarEntradaArma();
                 break;
             case Armas.metralleta:
+                partículasMetralletaIzquierda.Enabled = true;
+                partículasMetralletaDerecha.Enabled = true;
                 await animadorMetralleta.AnimarEntradaArma();
                 break;
             case Armas.rifle:
