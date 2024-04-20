@@ -298,6 +298,8 @@ public class AnimadorArmas : AsyncScript
                 fuegoDerecha.Entity.Transform.Scale = tamañoFuegoDerecha;
                 fuegoIzquierda.Entity.Transform.Rotation = Quaternion.RotationZ(MathUtil.DegreesToRadians(RangoAleatorio(0, 360)));
                 fuegoDerecha.Entity.Transform.Rotation = Quaternion.RotationZ(MathUtil.DegreesToRadians(RangoAleatorio(0, 360)));
+
+                await Task.Delay(100);
                 break;
             case TipoDisparo.izquierda:
                 fuegoIzquierda.Enabled = true;
@@ -308,6 +310,8 @@ public class AnimadorArmas : AsyncScript
 
                 fuegoIzquierda.Entity.Transform.Scale = tamañoFuegoIzquierda * RangoAleatorio(1f, 1.2f);
                 fuegoIzquierda.Entity.Transform.Rotation = Quaternion.RotationZ(MathUtil.DegreesToRadians(RangoAleatorio(0, 360)));
+
+                await Task.Delay(70);
                 break;
             case TipoDisparo.derecha:
                 fuegoDerecha.Enabled = true;
@@ -318,10 +322,10 @@ public class AnimadorArmas : AsyncScript
 
                 fuegoDerecha.Entity.Transform.Scale = tamañoFuegoDerecha * RangoAleatorio(1f, 1.2f);
                 fuegoDerecha.Entity.Transform.Rotation = Quaternion.RotationZ(MathUtil.DegreesToRadians(RangoAleatorio(0, 360)));
+
+                await Task.Delay(60);
                 break;
         }
-
-        await Task.Delay(80);
 
         switch (tipoDisparo)
         {
