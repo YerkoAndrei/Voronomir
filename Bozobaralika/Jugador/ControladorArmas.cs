@@ -61,8 +61,8 @@ public class ControladorArmas : StartupScript
         dañoMínimo = 1f;
         dañoMáximo = 200f;
 
-        tiempoMaxMetralleta = 4f;
-        tiempoAtascamientoMetralleta = 2f;
+        tiempoMaxMetralleta = 6f;
+        tiempoAtascamientoMetralleta = 3f;
         tempoMetralleta = tiempoAtascamientoMetralleta;
 
         // Filtros disparos
@@ -218,10 +218,9 @@ public class ControladorArmas : StartupScript
                 últimoDisparoEspada = ControladorPartida.ObtenerTiempo();
                 break;
             case Armas.escopeta:
-                movimiento.DetenerMovimiento();
                 for (int i = 0; i < 20; i++)
                 {
-                    CalcularRayo(0.12f);
+                    CalcularRayo(0.1f);
                 }
                 controlador.VibrarCámara(16, 10);
                 animadorEscopeta.AnimarDisparo(0.5f, 0.2f, TipoDisparo.espejo);
@@ -604,13 +603,13 @@ public class ControladorArmas : StartupScript
         switch (arma)
         {
             case Armas.espada:
-                daño = 25; // * 3
+                daño = 25;  // * 3
                 break;
             case Armas.escopeta:
-                daño = 6;
+                daño = 5;   // * 20
                 break;
             case Armas.metralleta:
-                daño = 8;
+                daño = 10;
                 break;
             case Armas.rifle:
                 daño = 100;
@@ -651,9 +650,9 @@ public class ControladorArmas : StartupScript
             case Armas.espada:
                 return 0.2f;
             case Armas.escopeta:
-                return 0.8f;
+                return 0.6f;
             case Armas.metralleta:
-                return 0.05f;
+                return 0.06f;
             case Armas.rifle:
                 return 1.2f;
             case Armas.lanzagranadas:
