@@ -133,7 +133,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: -0.00076126325, Y: -0.043612745, Z: 0.017435795, W: 0.99889606}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            770dba6c6b3f8ef255d5ec21d6dd3581: ref!! a09ebb9b-ce94-43f6-99df-1a6588b8799c
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 335a61b7-96ff-4965-a76c-9c6d584b044a
                         Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
@@ -255,7 +256,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: -0.0009133893, Y: -0.05232799, Z: 0.01742849, W: 0.99847746}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
-                        Children: {}
+                        Children:
+                            5a6dd3f0c2e68ee4cbba8eb71aa7cacc: ref!! 0ff71874-9ec3-43f1-9ee0-35416d192273
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 4043f6d9-9b3e-4948-beb1-ac23d44e7c48
                         Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
@@ -448,6 +450,8 @@ Hierarchy:
                         ejeDerecha: ref!! d7cfa473-fa37-4dd9-96ec-103d45581de3
                         modeloIzquierda: ref!! c6e611e2-6a2c-4d72-af82-64a695cf67e1
                         modeloDerecha: ref!! 6907a481-3236-4a4b-bb02-43c744cdf9cd
+                        fuegoIzquierda: ref!! 09e21f4c-ff14-4bc0-8a87-9168ea5d7c93
+                        fuegoDerecha: ref!! 280b7636-9d2f-474d-a4cd-c46fb32b0bb0
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: be33c8de-5ac2-44b8-a446-61d76ba7a173
@@ -490,6 +494,25 @@ Hierarchy:
                 BasePartAsset: "64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/EntornoDinámico/Poder (Invencibilidad)"
                 BasePartId: ee35195a-1513-4fb3-9e69-a6ad7040a4f5
                 InstanceId: 938b33c4-b6af-4165-953d-b183bb31a5c8
+        -   Entity:
+                Id: 160d9dd6-daad-4252-bd33-3998368f0820
+                Name: Disparo
+                Components:
+                    a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
+                        Id: a09ebb9b-ce94-43f6-99df-1a6588b8799c
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 1.0}
+                        Children: {}
+                    b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
+                        Id: 057abf12-8d35-4c22-a2b3-83be59c994c2
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
+                BasePartId: debdc7c8-0b4b-48b0-be96-d743a7e42616
+                InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Entity:
                 Id: 192aae67-88cf-46cd-9a6b-79fdb36cf312
                 Name: Fin
@@ -937,6 +960,25 @@ Hierarchy:
                 BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/EntornoDinámico/Botón (Azul)"
                 BasePartId: 9ed46e5c-e8aa-4d32-ad0e-34ea6d159d4c
                 InstanceId: 1b4230e3-9a3b-4a38-bd20-539a23aeec6f
+        -   Entity:
+                Id: 416744cb-032b-4e95-b1e0-110e327fca5d
+                Name: Disparo
+                Components:
+                    a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
+                        Id: df046c83-05ba-4894-8e36-7ba35962d28e
+                        Position: {X: 0.0, Y: 0.0, Z: -0.7}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.25, Y: 0.25, Z: 1.0}
+                        Children: {}
+                    b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
+                        Id: 280b7636-9d2f-474d-a4cd-c46fb32b0bb0
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
+                BasePartId: 20b2dabc-0cb3-430e-a286-cd4ae705787f
+                InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Folder: MuestraEnemigos
             Entity:
                 Id: 41ff8583-2be9-4314-986b-7a66d760d5f7
@@ -1035,6 +1077,25 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 4518117e-2dbe-423c-9312-028d6c941cdc
+                Name: Disparo
+                Components:
+                    a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
+                        Id: 20d208c4-67bc-4e1d-a627-ac54563404fe
+                        Position: {X: 0.0, Y: 0.0, Z: -0.7}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.25, Y: 0.25, Z: 1.0}
+                        Children: {}
+                    b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
+                        Id: 09e21f4c-ff14-4bc0-8a87-9168ea5d7c93
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
+                BasePartId: a5cff35c-2b91-4286-b8b4-7d7df69e6dbf
+                InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Entity:
                 Id: 462326ab-42df-41f7-8f4a-252f4df065e4
                 Name: Ojo
@@ -1208,6 +1269,25 @@ Hierarchy:
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 62a7baa8-3145-43f2-9629-a24f718c9fe0
+                InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
+        -   Entity:
+                Id: 5c6aeca6-1b6d-4562-9bb4-89be7001444c
+                Name: Disparo
+                Components:
+                    a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
+                        Id: b1f34143-30ba-4cf6-a78d-944fe164d91d
+                        Position: {X: 0.0, Y: 0.01, Z: -0.67}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
+                        Id: f3ccc0fe-af32-46bc-a543-39153e999536
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
+                BasePartId: b5498599-9678-4cbd-a50a-c345377df315
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Folder: Secretos
             Entity:
@@ -1542,6 +1622,8 @@ Hierarchy:
                         ejeDerecha: ref!! 56df525a-d108-444c-8588-1b23fdbabaed
                         modeloIzquierda: ref!! c983ceb7-7b9d-4ce7-95f0-5da0322022a6
                         modeloDerecha: ref!! 13a45c8e-0f44-45b3-ba71-5fc80a58c07a
+                        fuegoIzquierda: null
+                        fuegoDerecha: null
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: f4f81536-6702-4abd-a6b3-088819af3788
@@ -1842,6 +1924,25 @@ Hierarchy:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: b7aa5ff0-129f-49d4-b606-fd1b945a7c67
+        -   Entity:
+                Id: 9bef6adf-130b-42eb-b747-b13d594dc1fe
+                Name: Disparo
+                Components:
+                    a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
+                        Id: 8bb90175-a1ef-48ef-95b6-e33f449f418f
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 1.0}
+                        Children: {}
+                    b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
+                        Id: 925a0656-4ff4-4e8a-b0eb-dd937959e706
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
+                BasePartId: e1f6681a-f5c0-4a3c-83b5-6b117a74df1c
+                InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Folder: null
             Entity:
                 Id: a2baa5cc-4c65-4c8c-929d-f62fca0df386
@@ -1979,7 +2080,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: -0.104528464, W: 0.9945219}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
-                        Children: {}
+                        Children:
+                            c68b72e94b1196baac041f403d9f0f59: ref!! df046c83-05ba-4894-8e36-7ba35962d28e
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 6907a481-3236-4a4b-bb02-43c744cdf9cd
                         Model: 08980e3d-c7cb-48a0-8d63-198c7163f769:Modelos/Armas/Escopeta/MC-6
@@ -2079,7 +2181,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 94861604-8435-4c58-8f2d-c16399f334f8
-                        Position: {X: 0.25, Y: -0.2, Z: -0.2}
+                        Position: {X: 0.26, Y: -0.2, Z: -0.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -2188,6 +2290,25 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 4c24f93d-e3a0-4825-833e-e2a97128dba9
                 InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
+        -   Entity:
+                Id: baf51a25-2f54-4bb8-922a-f40740af2e23
+                Name: Disparo
+                Components:
+                    a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
+                        Id: 0ff71874-9ec3-43f1-9ee0-35416d192273
+                        Position: {X: 0.0, Y: 0.01, Z: -0.67}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
+                        Id: f3b33189-04a4-4d62-9ac3-c195566111c9
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
+                BasePartId: 1db03233-9b09-47d5-a47a-0b5d2d4c84bf
+                InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Folder: null
             Entity:
                 Id: bdf55068-7974-4e4a-b53c-d6306703618d
@@ -2299,6 +2420,8 @@ Hierarchy:
                         ejeDerecha: ref!! 3c545399-11ff-475c-bba2-ef70d8a16eca
                         modeloIzquierda: ref!! f2af7d0f-c79e-4338-919e-c76179d02eda
                         modeloDerecha: ref!! 1915ab6d-9a7b-4c51-a495-c7c23d1b5dba
+                        fuegoIzquierda: null
+                        fuegoDerecha: null
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: fd468b26-6c42-4010-8266-2ec5a5170898
@@ -2411,6 +2534,8 @@ Hierarchy:
                         ejeDerecha: ref!! 94861604-8435-4c58-8f2d-c16399f334f8
                         modeloIzquierda: ref!! 4043f6d9-9b3e-4948-beb1-ac23d44e7c48
                         modeloDerecha: ref!! e9b407b3-4230-4e83-a8d1-18116a4dc6a1
+                        fuegoIzquierda: ref!! f3b33189-04a4-4d62-9ac3-c195566111c9
+                        fuegoDerecha: ref!! f3ccc0fe-af32-46bc-a543-39153e999536
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 4b476576-1ceb-49a5-807d-388a9c60eb3d
@@ -2452,7 +2577,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 3baaef54-2b52-4a42-b624-63c70f1ed5c3
-                        Position: {X: -0.25, Y: -0.2, Z: -0.2}
+                        Position: {X: -0.26, Y: -0.2, Z: -0.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -2817,6 +2942,8 @@ Hierarchy:
                         ejeDerecha: ref!! 65a29250-f0ff-40e5-887e-f2772447a9fc
                         modeloIzquierda: ref!! 335a61b7-96ff-4965-a76c-9c6d584b044a
                         modeloDerecha: ref!! bfb418d1-88c7-456a-a872-32e9f6511cec
+                        fuegoIzquierda: ref!! 057abf12-8d35-4c22-a2b3-83be59c994c2
+                        fuegoDerecha: ref!! 925a0656-4ff4-4e8a-b0eb-dd937959e706
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: f1f96026-7e7c-46b5-8c54-e02016058827
@@ -3063,7 +3190,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: -0.0007612632, Y: 0.043612745, Z: -0.017435795, W: 0.99889606}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            b6e080344583361ac68810ebd2c62eb8: ref!! 8bb90175-a1ef-48ef-95b6-e33f449f418f
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: bfb418d1-88c7-456a-a872-32e9f6511cec
                         Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
@@ -3243,7 +3371,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.104528464, W: 0.9945219}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
-                        Children: {}
+                        Children:
+                            c4408d9a4e4970cdad8c059ba487024f: ref!! 20d208c4-67bc-4e1d-a627-ac54563404fe
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: c6e611e2-6a2c-4d72-af82-64a695cf67e1
                         Model: 08980e3d-c7cb-48a0-8d63-198c7163f769:Modelos/Armas/Escopeta/MC-6
@@ -3263,7 +3392,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: -0.00091338827, Y: 0.05232799, Z: -0.017428488, W: 0.99847746}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
-                        Children: {}
+                        Children:
+                            3b6d9706ebe5fa303a84e9d863f3a281: ref!! b1f34143-30ba-4cf6-a78d-944fe164d91d
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: e9b407b3-4230-4e83-a8d1-18116a4dc6a1
                         Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47

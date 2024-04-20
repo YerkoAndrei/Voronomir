@@ -3,6 +3,7 @@ using Stride.Core.Mathematics;
 using Stride.Engine;
 
 namespace Bozobaralika;
+using static Utilidades;
 using static Constantes;
 
 public class AnimadorArmas : AsyncScript
@@ -12,6 +13,9 @@ public class AnimadorArmas : AsyncScript
 
     public ModelComponent modeloIzquierda;
     public ModelComponent modeloDerecha;
+
+    public SpriteComponent fuegoIzquierda;
+    public SpriteComponent fuegoDerecha;
 
     private Vector3 posiciónInicialIzquierda;
     private Vector3 posiciónInicialDerecha;
@@ -36,6 +40,9 @@ public class AnimadorArmas : AsyncScript
     private float tempDuración;
     private float tempFuerza;
 
+    private Vector3 tamañoFuegoIzquierda;
+    private Vector3 tamañoFuegoDerecha;
+
     public void Iniciar()
     {
         posiciónInicialIzquierda = ejeIzquierda.Position;
@@ -54,6 +61,14 @@ public class AnimadorArmas : AsyncScript
         inicialDerecha = centroDerecha;
         objetivoIzquierda = abajoIzquierda;
         objetivoDerecha = abajoDerecha;
+
+        if (fuegoIzquierda != null && fuegoDerecha != null)
+        {
+            tamañoFuegoIzquierda = fuegoIzquierda.Entity.Transform.Scale;
+            tamañoFuegoDerecha = fuegoDerecha.Entity.Transform.Scale;
+            fuegoIzquierda.Enabled = false;
+            fuegoDerecha.Enabled = false;
+        }
     }
 
     public override async Task Execute()
@@ -195,6 +210,9 @@ public class AnimadorArmas : AsyncScript
         float tiempoIzquierda = 0;
         float tiempoDerecha = 0;
 
+        if (fuegoIzquierda != null && fuegoDerecha != null)
+            MostrarFuego(tipoDisparo);
+
         // Posición rápida
         var posiciónDisparoIzquierda = posiciónInicialIzquierda + new Vector3(0, 0, retroceso);
         var posiciónDisparoDerecha = posiciónInicialDerecha + new Vector3(0, 0, retroceso);
@@ -261,6 +279,69 @@ public class AnimadorArmas : AsyncScript
                 ejeDerecha.Position = posiciónInicialDerecha;
                 break;
         }
+    }
+
+    private async void MostrarFuego(TipoDisparo tipoDisparo)
+    {
+        switch (tipoDisparo)
+        {
+            case TipoDisparo.espejo:
+                fuegoIzquierda.Enabled = true;
+                fuegoDerecha.Enabled = true;
+
+                // Aleatorización
+                var colorFuego = ColorFuegoAleatorio();
+                fuegoIzquierda.Color = colorFuego;
+                fuegoDerecha.Color = colorFuego;
+
+                fuegoIzquierda.Entity.Transform.Scale = tamañoFuegoIzquierda;
+                fuegoDerecha.Entity.Transform.Scale = tamañoFuegoDerecha;
+                fuegoIzquierda.Entity.Transform.Rotation = Quaternion.RotationZ(MathUtil.DegreesToRadians(RangoAleatorio(0, 360)));
+                fuegoDerecha.Entity.Transform.Rotation = Quaternion.RotationZ(MathUtil.DegreesToRadians(RangoAleatorio(0, 360)));
+                break;
+            case TipoDisparo.izquierda:
+                fuegoIzquierda.Enabled = true;
+
+                // Aleatorización
+                var colorFuegoIzquierdo = ColorFuegoAleatorio();
+                fuegoIzquierda.Color = colorFuegoIzquierdo;
+
+                fuegoIzquierda.Entity.Transform.Scale = tamañoFuegoIzquierda * RangoAleatorio(1f, 1.2f);
+                fuegoIzquierda.Entity.Transform.Rotation = Quaternion.RotationZ(MathUtil.DegreesToRadians(RangoAleatorio(0, 360)));
+                break;
+            case TipoDisparo.derecha:
+                fuegoDerecha.Enabled = true;
+
+                // Aleatorización
+                var colorFuegoDerecho = ColorFuegoAleatorio();
+                fuegoDerecha.Color = colorFuegoDerecho;
+
+                fuegoDerecha.Entity.Transform.Scale = tamañoFuegoDerecha * RangoAleatorio(1f, 1.2f);
+                fuegoDerecha.Entity.Transform.Rotation = Quaternion.RotationZ(MathUtil.DegreesToRadians(RangoAleatorio(0, 360)));
+                break;
+        }
+
+        await Task.Delay(80);
+
+        switch (tipoDisparo)
+        {
+            case TipoDisparo.espejo:
+                fuegoIzquierda.Enabled = false;
+                fuegoDerecha.Enabled = false;
+
+                break;
+            case TipoDisparo.izquierda:
+                fuegoIzquierda.Enabled = false;
+                break;
+            case TipoDisparo.derecha:
+                fuegoDerecha.Enabled = false;
+                break;
+        }
+    }
+
+    private Color ColorFuegoAleatorio()
+    {
+        return new Color((byte)RangoAleatorio(200, 255), 200, 0, 240);
     }
 
     // Melé

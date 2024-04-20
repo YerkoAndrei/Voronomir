@@ -1,0 +1,15 @@
+!SpriteSheet
+Id: 6db38044-671d-4d0e-ae73-307a86f7f474
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Packing: {}
+Sprites:
+    6f81879fd9e34389dc4a41e2f9e36239:
+        Source: !file ../Texturas/Efectos/Chispa.png
+        Name: Chispa
+        TextureRegion: {X: 0, Y: 0, Width: 128, Height: 128}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

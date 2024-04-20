@@ -44,6 +44,36 @@ Hierarchy:
                         Id: cdfcf675-421f-45af-aa17-f0374ccaf5ab
                         controlador: ref!! 4286558c-21f8-4c73-8ce1-d58ae4daec5d
                         multiplicador: 1.0
+        -   Entity:
+                Id: 1db03233-9b09-47d5-a47a-0b5d2d4c84bf
+                Name: Disparo
+                Components:
+                    a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
+                        Id: 6b653811-a963-4a12-b8d6-adc41935d463
+                        Position: {X: 0.0, Y: 0.01, Z: -0.67}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
+                        Id: 9df59465-e291-4f94-84aa-8133c650c216
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+        -   Entity:
+                Id: 20b2dabc-0cb3-430e-a286-cd4ae705787f
+                Name: Disparo
+                Components:
+                    a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
+                        Id: de21ec37-6aae-42ea-b3bc-889ad3d0b0fa
+                        Position: {X: 0.0, Y: 0.0, Z: -0.7}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.25, Y: 0.25, Z: 1.0}
+                        Children: {}
+                    b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
+                        Id: 87358d27-6879-48fa-9d6c-8972dd9594f8
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Folder: null
             Entity:
                 Id: 3d235512-23a1-4ed3-85ab-4cfa16a22cee
@@ -157,6 +187,8 @@ Hierarchy:
                         ejeDerecha: ref!! 73258a19-7b84-41b2-a0a1-ede074d8fb43
                         modeloIzquierda: ref!! d3d8ae05-4874-483c-92c7-01019190b161
                         modeloDerecha: ref!! 4010ba77-1830-401e-9021-b350ebdae3a1
+                        fuegoIzquierda: ref!! 9df59465-e291-4f94-84aa-8133c650c216
+                        fuegoDerecha: ref!! 93009d42-d5f8-4016-9694-761107bb345c
         -   Folder: null
             Entity:
                 Id: 62a7baa8-3145-43f2-9629-a24f718c9fe0
@@ -207,7 +239,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: -0.104528464, W: 0.9945219}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
-                        Children: {}
+                        Children:
+                            8d1f85322f0cd97247096702d8c58ee6: ref!! de21ec37-6aae-42ea-b3bc-889ad3d0b0fa
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 33f98877-649f-431b-9fbe-f29faf534ffc
                         Model: 08980e3d-c7cb-48a0-8d63-198c7163f769:Modelos/Armas/Escopeta/MC-6
@@ -279,7 +312,7 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 73258a19-7b84-41b2-a0a1-ede074d8fb43
-                        Position: {X: 0.25, Y: -0.2, Z: -0.2}
+                        Position: {X: 0.26, Y: -0.2, Z: -0.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -294,7 +327,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: -0.00091338827, Y: 0.05232799, Z: -0.017428488, W: 0.99847746}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
-                        Children: {}
+                        Children:
+                            263220cb3f42e4d49ae83c9e9422a155: ref!! b22f72ac-f5f4-4c43-8a6d-4c2e6ae355b7
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 4010ba77-1830-401e-9021-b350ebdae3a1
                         Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
@@ -329,6 +363,21 @@ Hierarchy:
                             5c814983963e13056fea52f24dc70768: ref!! f232d96c-e174-4590-82b0-2e79eb23e39d
                             a8c3279d3a24a7d3a0ff3f5b27085e32: ref!! 34aa5fd3-a0f7-44df-8724-5f62c9f6c13a
                             a8aa11a972a17e397655da3161c7b8e7: ref!! 7bfc0445-9495-45bc-b6f4-0e80dd5aaaa6
+        -   Entity:
+                Id: a5cff35c-2b91-4286-b8b4-7d7df69e6dbf
+                Name: Disparo
+                Components:
+                    a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
+                        Id: c546dc16-cf6c-4c74-badd-1e3fa6d741dd
+                        Position: {X: 0.0, Y: 0.0, Z: -0.7}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.25, Y: 0.25, Z: 1.0}
+                        Children: {}
+                    b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
+                        Id: 7d72fb8c-c7ea-4c37-826f-2dec2eaae339
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Folder: null
             Entity:
                 Id: ae26fb61-6490-4523-8dc8-10162f73c79a
@@ -339,7 +388,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: -0.0009133893, Y: -0.05232799, Z: 0.01742849, W: 0.99847746}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
-                        Children: {}
+                        Children:
+                            16339bef1abcafd5163ac74b5782a8e0: ref!! 6b653811-a963-4a12-b8d6-adc41935d463
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: d3d8ae05-4874-483c-92c7-01019190b161
                         Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
@@ -355,12 +405,28 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: -0.0007612632, Y: 0.043612745, Z: -0.017435795, W: 0.99889606}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            badc89a91a4688b3d061f5d32ba7829e: ref!! cf350b03-e4bd-468f-b308-52148213f2d7
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 6b955ddd-d621-49ff-ba1c-2472814fea35
                         Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
                         RenderGroup: Group11
                         Materials: {}
+        -   Entity:
+                Id: b5498599-9678-4cbd-a50a-c345377df315
+                Name: Disparo
+                Components:
+                    a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
+                        Id: b22f72ac-f5f4-4c43-8a6d-4c2e6ae355b7
+                        Position: {X: 0.0, Y: 0.01, Z: -0.67}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
+                        Id: 93009d42-d5f8-4016-9694-761107bb345c
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Folder: null
             Entity:
                 Id: be33c8de-5ac2-44b8-a446-61d76ba7a173
@@ -380,6 +446,8 @@ Hierarchy:
                         ejeDerecha: ref!! 5e528767-36d1-4c61-845d-df2183aaf1e1
                         modeloIzquierda: ref!! 0cfb13ad-bb38-47d3-915c-c201f566daf3
                         modeloDerecha: ref!! 33f98877-649f-431b-9fbe-f29faf534ffc
+                        fuegoIzquierda: ref!! 7d72fb8c-c7ea-4c37-826f-2dec2eaae339
+                        fuegoDerecha: ref!! 87358d27-6879-48fa-9d6c-8972dd9594f8
         -   Folder: null
             Entity:
                 Id: be5aec12-2afc-4788-8cb7-53966dec6a3e
@@ -402,7 +470,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: -0.00076126325, Y: -0.043612745, Z: 0.017435795, W: 0.99889606}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            addf645baa9a8b0a017627b2b269c1a7: ref!! b9439ba8-b68a-49f0-bca7-d001b980bf0f
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 3538e2a1-f059-46c0-8f6f-0d9ba7d1b499
                         Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
@@ -418,7 +487,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.104528464, W: 0.9945219}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
-                        Children: {}
+                        Children:
+                            5ffd19b13f1f047a21301157051d491c: ref!! c546dc16-cf6c-4c74-badd-1e3fa6d741dd
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 0cfb13ad-bb38-47d3-915c-c201f566daf3
                         Model: 08980e3d-c7cb-48a0-8d63-198c7163f769:Modelos/Armas/Escopeta/MC-6
@@ -443,11 +513,41 @@ Hierarchy:
                 Components:
                     2c3754a17763788c13d1e73a8e5b7607: !TransformComponent
                         Id: 7421f998-634c-41ef-b4b1-dc2a435891d1
-                        Position: {X: -0.25, Y: -0.2, Z: -0.2}
+                        Position: {X: -0.26, Y: -0.2, Z: -0.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             18f8ce5a323842e5cd44869c0da3b205: ref!! f8791b1f-9edf-4c61-ac61-75d6dd478c9b
+        -   Entity:
+                Id: debdc7c8-0b4b-48b0-be96-d743a7e42616
+                Name: Disparo
+                Components:
+                    a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
+                        Id: b9439ba8-b68a-49f0-bca7-d001b980bf0f
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 1.0}
+                        Children: {}
+                    b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
+                        Id: 3ac11445-ac45-4540-901f-c8ef603cad2a
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+        -   Entity:
+                Id: e1f6681a-f5c0-4a3c-83b5-6b117a74df1c
+                Name: Disparo
+                Components:
+                    a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
+                        Id: cf350b03-e4bd-468f-b308-52148213f2d7
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 1.0}
+                        Children: {}
+                    b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
+                        Id: 58f50ad1-e4a7-4d54-8eca-f704ce63b482
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Folder: null
             Entity:
                 Id: f1f96026-7e7c-46b5-8c54-e02016058827
@@ -467,6 +567,8 @@ Hierarchy:
                         ejeDerecha: ref!! 198d6dcf-88bd-4560-a5f3-e3f781353fc8
                         modeloIzquierda: ref!! 3538e2a1-f059-46c0-8f6f-0d9ba7d1b499
                         modeloDerecha: ref!! 6b955ddd-d621-49ff-ba1c-2472814fea35
+                        fuegoIzquierda: ref!! 3ac11445-ac45-4540-901f-c8ef603cad2a
+                        fuegoDerecha: ref!! 58f50ad1-e4a7-4d54-8eca-f704ce63b482
         -   Folder: null
             Entity:
                 Id: f359be66-b309-4bfa-834a-76e6d4d5f4c5
@@ -497,6 +599,8 @@ Hierarchy:
                         ejeDerecha: ref!! 21d403bb-b7ad-4307-85bc-31e073b99e61
                         modeloIzquierda: ref!! 3ca52fad-fd4f-4293-83de-7fc03c206ea6
                         modeloDerecha: ref!! 5f27dca2-2e6e-4328-82f0-0b25267abf4b
+                        fuegoIzquierda: null
+                        fuegoDerecha: null
         -   Folder: null
             Entity:
                 Id: fd468b26-6c42-4010-8266-2ec5a5170898
@@ -516,3 +620,5 @@ Hierarchy:
                         ejeDerecha: ref!! ab82a14f-b9e1-48cb-b3c8-80d360e5d3f7
                         modeloIzquierda: ref!! e0dfb212-8556-42f0-9e57-591be7f1bd37
                         modeloDerecha: ref!! 99f082b5-7ab5-4b6e-b141-8036344bc30b
+                        fuegoIzquierda: null
+                        fuegoDerecha: null
