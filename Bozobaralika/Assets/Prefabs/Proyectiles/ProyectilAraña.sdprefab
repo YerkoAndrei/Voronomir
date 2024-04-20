@@ -71,3 +71,4 @@ Hierarchy:
                         Id: 8b43936a-f16a-4661-9d1c-bd482e28e0b5
                         modelo: ref!! eb71238a-255c-40a5-8764-29f4756f08c6
                         cola: ref!! a56d924e-9f03-4dc3-888a-1e111c15c24e
+                        "partícula": null

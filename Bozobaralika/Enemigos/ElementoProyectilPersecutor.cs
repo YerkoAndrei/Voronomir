@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
+using Stride.Particles.Components;
 using Stride.Engine;
 using Stride.Physics;
 
@@ -12,6 +13,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
 {
     public ModelComponent modelo;
     public RigidbodyComponent cuerpoDañable;
+    public ParticleSystemComponent partícula;
     public List<RigidbodyComponent> cuerpos { get; set; }
 
     private Enemigos disparador;
@@ -81,6 +83,9 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
         cuerpo.IsKinematic = true;
         cuerpo.Enabled = false;
         cuerpoDañable.Enabled = false;
+
+        if(partícula != null)
+            partícula.Enabled = false;
     }
 
     public void IniciarPersecutor(float _velocidadRotación, Vector3 _altura)
@@ -109,6 +114,12 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
         modelo.Enabled = true;
         cuerpo.Enabled = true;
         cuerpoDañable.Enabled = true;
+
+        if (partícula != null)
+        {
+            partícula.Enabled = true;
+            partícula.ParticleSystem.ResetSimulation();
+        }
 
         // Proyectiles persecutores duran 30 segundos
         tempo = 30f;
