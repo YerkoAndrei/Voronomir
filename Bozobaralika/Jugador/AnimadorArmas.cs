@@ -344,7 +344,7 @@ public class AnimadorArmas : AsyncScript
 
                 partículasDerecha.Enabled = true;
                 partículasDerecha.ParticleSystem.ResetSimulation();
-                await Task.Delay(60);
+                await Task.Delay(70);
                 break;
         }
 

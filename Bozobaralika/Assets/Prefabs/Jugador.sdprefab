@@ -605,6 +605,7 @@ Hierarchy:
                         animadorMetralleta: ref!! 79103401-ecc7-4eea-a7f6-810ffb5ce5de
                         animadorRife: ref!! 536d9770-3b08-44ca-9e72-5a49a2855db8
                         animadorLanzagranadas: ref!! 84f919b8-6eb4-420c-8a7b-f7008e070b9b
+                        luzDisparo: ref!! 319910e5-3c07-4645-a001-b5ed97680d3a
                         colorMetralletaCaliente: {R: 255, G: 0, B: 0, A: 255}
                         "partículasMetralletaIzquierda": ref!! 9e6895ab-eca9-4efa-ab05-7f0790e72714
                         "partículasMetralletaDerecha": ref!! f8884bf6-3902-43da-9cc8-2623226fcfcf
@@ -922,6 +923,25 @@ Hierarchy:
                         RenderGroup: Group11
                         Materials: {}
         -   Entity:
+                Id: 8c0411ce-9e6a-4025-8060-a66e526ac647
+                Name: LuzDisparo
+                Components:
+                    730f03d56d03fadcfabc65f8428cb4f3: !TransformComponent
+                        Id: 523c31a1-adf0-402c-ab97-705af9da8482
+                        Position: {X: 0.0, Y: -0.5, Z: -2.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74d6e06404c830ee98953ec2f39004c2: !LightComponent
+                        Id: 319910e5-3c07-4645-a001-b5ed97680d3a
+                        Type: !LightPoint
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Radius: 4.0
+                            Shadow: !LightPointShadowMap
+                                Size: Small
+                                BiasParameters: {}
+        -   Entity:
                 Id: 8e7f38a8-957a-47a8-884a-af79891eadbe
                 Name: Izquierda
                 Components:
@@ -944,6 +964,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             36d3c59ff298eb8b6306d66d61ab4b87: ref!! 5d1615c0-a8a8-4046-bad2-a4820162f132
+                            5ef5258fa6b642c15f78762a98f06373: ref!! 523c31a1-adf0-402c-ab97-705af9da8482
                             8452a0c16a9ea414407864b8b8c87048: ref!! 336c61ff-b418-4e99-9fe0-44842a32fccb
                             6a29955c10063a64daa1d56f368541fa: ref!! 6064f21e-a27c-4b3c-9b56-0b5f2a872e10
                             5c814983963e13056fea52f24dc70768: ref!! f232d96c-e174-4590-82b0-2e79eb23e39d

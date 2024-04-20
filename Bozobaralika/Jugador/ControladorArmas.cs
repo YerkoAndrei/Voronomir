@@ -19,6 +19,7 @@ public class ControladorArmas : StartupScript
     public AnimadorArmas animadorRife;
     public AnimadorArmas animadorLanzagranadas;
 
+    public LightComponent luzDisparo;
     public Color colorMetralletaCaliente;
 
     public ParticleSystemComponent partículasMetralletaIzquierda;
@@ -99,6 +100,7 @@ public class ControladorArmas : StartupScript
         interfaz.CambiarMira(armaActual);
         interfaz.CambiarÍcono(armaActual);
 
+        luzDisparo.Enabled = false;
         partículasMetralletaIzquierda.Enabled = false;
         partículasMetralletaDerecha.Enabled = false;
 
@@ -246,12 +248,14 @@ public class ControladorArmas : StartupScript
                     CalcularRayo(0.1f);
                 }
                 controlador.VibrarCámara(16, 10);
+                ActivarLuz();
                 animadorEscopeta.AnimarDisparo(0.5f, 0.2f, TipoDisparo.espejo);
                 últimoDisparoEscopeta = ControladorPartida.ObtenerTiempo();
                 break;
             case Armas.metralleta:
                 // Metralleta se vuelve impresisa según calentamiento
                 CalcularRayo(((tiempoMaxMetralleta - tempoMetralleta) / tiempoMaxMetralleta) * 0.1f);
+                ActivarLuz();
                 animadorMetralleta.AnimarDisparo(0.1f, 0.09f, turnoMetralleta);
                 últimoDisparoMetralleta = ControladorPartida.ObtenerTiempo();
                 break;
@@ -259,6 +263,7 @@ public class ControladorArmas : StartupScript
                 movimiento.DetenerMovimiento();
                 CalcularRayoPenetrante();
                 controlador.VibrarCámara(20, 12);
+                ActivarLuz();
                 animadorRife.AnimarDisparo(2f, 0.4f, TipoDisparo.espejo);
                 últimoDisparoRifle = ControladorPartida.ObtenerTiempo();
                 break;
@@ -266,6 +271,7 @@ public class ControladorArmas : StartupScript
                 movimiento.DetenerMovimiento();
                 DispararGranada(0.08f);
                 controlador.VibrarCámara(16, 20);
+                ActivarLuz();
                 animadorLanzagranadas.AnimarDisparo(0.5f, 0.8f, turnoLanzagranadas);
                 últimoDisparoLanzagranadas = ControladorPartida.ObtenerTiempo();
                 break;
@@ -320,7 +326,7 @@ public class ControladorArmas : StartupScript
         ControladorCofres.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
 
         if (armaActual == Armas.metralleta)
-            controlador.VibrarCámara(0.8f, 4);
+            controlador.VibrarCámara(0.6f, 4);
     }
 
     private void CalcularRayoPenetrante()
@@ -501,6 +507,13 @@ public class ControladorArmas : StartupScript
 
         movimiento.CambiarSensiblidad(acercar);
         interfaz.MostrarMiraRifle(acercar);
+    }
+
+    private async void ActivarLuz()
+    {
+        luzDisparo.Enabled = true;
+        await Task.Delay(80);
+        luzDisparo.Enabled = false;
     }
 
     private void ActivarBotón(PhysicsComponent elemento)

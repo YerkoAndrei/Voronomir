@@ -119,6 +119,7 @@ Hierarchy:
                         animadorMetralleta: ref!! 14b56ce5-0534-48dd-aca3-9cc3154d2023
                         animadorRife: ref!! 21cbd8c8-eaeb-4b28-957b-877607cf99d8
                         animadorLanzagranadas: ref!! c2e86204-8221-47ef-87a2-505fe469f482
+                        luzDisparo: ref!! 1b93512e-e460-4831-a291-01ff7cbfbb37
                         colorMetralletaCaliente: {R: 255, G: 0, B: 0, A: 255}
                         "partículasMetralletaIzquierda": ref!! 4a1ccba0-5c78-49d8-91ab-21ddb9a78532
                         "partículasMetralletaDerecha": ref!! 1c73385b-4d4d-44ef-8754-778bb5a7bfb6
@@ -1207,6 +1208,29 @@ Hierarchy:
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 20b2dabc-0cb3-430e-a286-cd4ae705787f
+                InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
+        -   Entity:
+                Id: 41c6b24a-4428-460e-8833-648ca092291c
+                Name: LuzDisparo
+                Components:
+                    730f03d56d03fadcfabc65f8428cb4f3: !TransformComponent
+                        Id: d25f00d3-fa29-46ea-95a2-8da2ee6fe74b
+                        Position: {X: 0.0, Y: -0.5, Z: -2.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74d6e06404c830ee98953ec2f39004c2: !LightComponent
+                        Id: 1b93512e-e460-4831-a291-01ff7cbfbb37
+                        Type: !LightPoint
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Radius: 4.0
+                            Shadow: !LightPointShadowMap
+                                Size: Small
+                                BiasParameters: {}
+            Base:
+                BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
+                BasePartId: 8c0411ce-9e6a-4025-8060-a66e526ac647
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Folder: MuestraEnemigos
             Entity:
@@ -3950,6 +3974,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             36d3c59ff298eb8b6306d66d61ab4b87: ref!! 345b3b5b-70c4-44ff-96c1-3c413c53637f
+                            552bd7eeb9cd7c467b1826c5779ccb70: ref!! d25f00d3-fa29-46ea-95a2-8da2ee6fe74b
                             8452a0c16a9ea414407864b8b8c87048: ref!! 2ef79e8f-d3d3-4b7f-8f56-057ea0e02541
                             6a29955c10063a64daa1d56f368541fa: ref!! 98e3af2e-af22-4c0b-bd8d-45587e0054fb
                             5c814983963e13056fea52f24dc70768: ref!! 28d27d54-a563-41c4-a5d2-57e0463ff11b
@@ -4000,7 +4025,7 @@ Hierarchy:
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                                 ComputeTransmittance: false
                                 BiasParameters: {}
-                        Intensity: 20.0
+                        Intensity: 10.0
         -   Folder: null
             Entity:
                 Id: dea747ab-0908-49f6-aa22-64eedd2c96b9
