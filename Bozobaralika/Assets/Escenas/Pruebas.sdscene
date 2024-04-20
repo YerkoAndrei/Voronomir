@@ -507,7 +507,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 057abf12-8d35-4c22-a2b3-83be59c994c2
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/SpriteSheet
+                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -973,7 +973,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 280b7636-9d2f-474d-a4cd-c46fb32b0bb0
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/SpriteSheet
+                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -1090,7 +1090,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 09e21f4c-ff14-4bc0-8a87-9168ea5d7c93
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/SpriteSheet
+                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -1283,7 +1283,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: f3ccc0fe-af32-46bc-a543-39153e999536
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/SpriteSheet
+                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -1937,7 +1937,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 925a0656-4ff4-4e8a-b0eb-dd937959e706
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/SpriteSheet
+                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -2303,7 +2303,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: f3b33189-04a4-4d62-9ac3-c195566111c9
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/SpriteSheet
+                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
