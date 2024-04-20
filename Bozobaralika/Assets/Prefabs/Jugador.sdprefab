@@ -57,7 +57,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 9df59465-e291-4f94-84aa-8133c650c216
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/SpriteSheet
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Entity:
                 Id: 20b2dabc-0cb3-430e-a286-cd4ae705787f
@@ -72,7 +72,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 87358d27-6879-48fa-9d6c-8972dd9594f8
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/SpriteSheet
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Folder: null
             Entity:
@@ -376,7 +376,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 7d72fb8c-c7ea-4c37-826f-2dec2eaae339
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/SpriteSheet
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Folder: null
             Entity:
@@ -425,7 +425,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 93009d42-d5f8-4016-9694-761107bb345c
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/SpriteSheet
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Folder: null
             Entity:
@@ -531,7 +531,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 3ac11445-ac45-4540-901f-c8ef603cad2a
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/SpriteSheet
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Entity:
                 Id: e1f6681a-f5c0-4a3c-83b5-6b117a74df1c
@@ -546,7 +546,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 58f50ad1-e4a7-4d54-8eca-f704ce63b482
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 6db38044-671d-4d0e-ae73-307a86f7f474:Sprites/Disparo
+                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/SpriteSheet
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Folder: null
             Entity:
