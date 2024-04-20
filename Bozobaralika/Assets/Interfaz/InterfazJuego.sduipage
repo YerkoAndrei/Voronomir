@@ -127,7 +127,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: Datos
+                Name: DatosFinales
                 Children:
                     1fb28bab155e18cf06d66c48ff228a0a: !TextBlock ref!! 759ea8e0-0910-4abc-b4c4-fbe121cf98a1
                     960cd027b30108f1d3a5f7bf6fdbcb08: !TextBlock ref!! fb544970-5ed4-4c78-a8ea-53ddfa2a150d
@@ -166,6 +166,7 @@ Hierarchy:
                     1f161687c3c5aec34deca95b5e8044ee: !Grid ref!! 8c8be992-82e9-4fcc-ab56-c94d38eb136d
                     cde262a7949222eab70ddb33099e5c07: !UniformGrid ref!! c4c2b7ef-0c02-445e-9287-a17c60c4fbd9
                     e7351d540f421de411fa5ff1960a5d29: !UniformGrid ref!! 281cd101-1667-42a9-89e4-1039a3e3a573
+                    60f20cf2a253ad53782e491d2632077b: !UniformGrid ref!! 5c3adbda-7407-450e-85c8-024ba9d4e51d
                     85d913eca330adba2ee49bf83045a7e7: !Grid ref!! 7e00e8f3-06e0-472e-8cec-ff5756a08416
                     60cd5e24ba09294618747d4e3d82ce94: !Grid ref!! 8804fd5d-15bb-4edd-abd5-7ec90efadaaf
                     47e1b7eed937c2abda6582fdac10ee55: !Grid ref!! 7e7044aa-9a86-4c01-8dce-77d226c7c803
@@ -424,6 +425,23 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !UniformGrid
+                Id: 5c3adbda-7407-450e-85c8-024ba9d4e51d
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 200.0
+                Height: 80.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Bottom
+                Margin: {Left: 10.0, Bottom: 150.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Datos
+                Children:
+                    ecbd6cb55ba40647e538d4cd5770eafe: !TextBlock ref!! 67ec0232-3f2d-427a-859f-6cb8c8ef9c9b
+                    3c5fd295048f96e793a32c2554010bd0: !TextBlock ref!! b1359a90-e1ab-4fcf-b246-03fac74c857b
+                Rows: 2
         -   UIElement: !Button
                 Id: 6100994f-7c56-436e-b567-695e52b035d5
                 DependencyProperties: {}
@@ -464,6 +482,20 @@ Hierarchy:
                     Texture: 24f096cb-35fd-437d-9baf-31d9b23b5236:Texturas/Armas/imgMetralleta
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !TextBlock
+                Id: 67ec0232-3f2d-427a-859f-6cb8c8ef9c9b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 30.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtTiempo
+                Text: 00:00:00
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 25.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
                 Id: 684c4b95-1fe3-4442-85cb-e45c794fd669
                 DependencyProperties: {}
@@ -522,7 +554,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: lblTiempo
+                Name: lblTiempoFinal
                 Text: Tiempo
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 25.0
@@ -884,6 +916,21 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !TextBlock
+                Id: b1359a90-e1ab-4fcf-b246-03fac74c857b
+                DependencyProperties:
+                    7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 30.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "txtAceleración"
+                Text: 0.00
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 25.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !TextBlock
                 Id: b30e70d3-c25e-4e6d-83df-12d90a67508b
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -1238,7 +1285,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtTiempo
+                Name: txtTiempoFinal
                 Text: 00:00:000
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 25.0

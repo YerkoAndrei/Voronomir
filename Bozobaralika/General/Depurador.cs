@@ -61,13 +61,6 @@ public class Depurador : AsyncScript
             }
 
             /*
-            // Jugador
-            DebugText.Print(jugador.vida + "/" + jugador.vidaMax, new Int2(x: 20, y: 20));
-
-            // Movimiento
-            DebugText.Print(jugador.movimiento.cuerpo.LinearVelocity.Lenght().ToString(), new Int2(x: 20, y: 40));
-            DebugText.Print(jugador.movimiento.aceleración.ToString(), new Int2(x: 20, y: 60));
-
             // Armas
             DebugText.Print(jugador.armas.metralletaAtascada.ToString(), new Int2(x: 20, y: 80));
             DebugText.Print(jugador.armas.tempoMetralleta.ToString(), new Int2(x: 20, y: 100));

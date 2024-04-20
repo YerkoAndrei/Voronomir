@@ -38,12 +38,16 @@ public class InterfazJuego : SyncScript
     private ImageElement imgInvencibilidad;
     private ImageElement imgRapidez;
 
-    private TextBlock txtNivel;
+    private UniformGrid panelDatos;
     private TextBlock txtTiempo;
+    private TextBlock txtAceleración;
+
+    private TextBlock txtNivel;
+    private TextBlock txtTiempoFinal;
     private TextBlock txtEnemigos;
     private TextBlock txtSecretos;
 
-    private UniformGrid panelDatos;
+    private UniformGrid panelDatosFinales;
     private Grid panelPausa;
     private Grid panelMuerte;
     private Grid panelFinal;
@@ -74,14 +78,18 @@ public class InterfazJuego : SyncScript
         imgInvencibilidad = página.FindVisualChildOfType<ImageElement>("imgInvencibilidad");
         imgRapidez = página.FindVisualChildOfType<ImageElement>("imgRapidez");
 
-        // Datos
-        txtNivel = página.FindVisualChildOfType<TextBlock>("txtNivel");
+        panelDatos = página.FindVisualChildOfType<UniformGrid>("Datos");
         txtTiempo = página.FindVisualChildOfType<TextBlock>("txtTiempo");
+        txtAceleración = página.FindVisualChildOfType<TextBlock>("txtAceleración");
+
+        // Datos finales
+        txtNivel = página.FindVisualChildOfType<TextBlock>("txtNivel");
+        txtTiempoFinal = página.FindVisualChildOfType<TextBlock>("txtTiempoFinal");
         txtEnemigos = página.FindVisualChildOfType<TextBlock>("txtEnemigos");
         txtSecretos = página.FindVisualChildOfType<TextBlock>("txtSecretos");
 
         // Paneles
-        panelDatos = página.FindVisualChildOfType<UniformGrid>("Datos");
+        panelDatosFinales = página.FindVisualChildOfType<UniformGrid>("DatosFinales");
         panelPausa = página.FindVisualChildOfType<Grid>("PanelPausa");
         panelMuerte = página.FindVisualChildOfType<Grid>("PanelMuerte");
         panelFinal = página.FindVisualChildOfType<Grid>("PanelFinal");
@@ -98,10 +106,13 @@ public class InterfazJuego : SyncScript
         // Predeterminado
         tamañoVida = imgVida.Width;
 
-        panelDatos.Visibility = Visibility.Hidden;
+        panelDatosFinales.Visibility = Visibility.Hidden;
         panelPausa.Visibility = Visibility.Hidden;
         panelMuerte.Visibility = Visibility.Hidden;
         panelFinal.Visibility = Visibility.Hidden;
+
+        // PENDIENTE: configuración
+        panelDatos.Visibility = Visibility.Visible;
 
         ApagarMiras();
         ApagarLlaves();
@@ -115,6 +126,12 @@ public class InterfazJuego : SyncScript
     {
         if (Input.IsKeyPressed(Keys.Escape))
             Pausar();
+
+        if(ControladorPartida.ObtenerActivo())
+        {
+            txtTiempo.Text = FormatearTiempo(ControladorPartida.ObtenerTiempo());
+            txtAceleración.Text = ControladorPartida.ObtenerAceleración().ToString("n2");
+        }
     }
 
     private void Pausar()
@@ -304,11 +321,11 @@ public class InterfazJuego : SyncScript
 
         // Datos
         //txtNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
-        txtTiempo.Text = ControladorPartida.ObtenerTextoDuración();
+        txtTiempoFinal.Text = ControladorPartida.ObtenerTextoDuración();
         txtEnemigos.Text = ControladorPartida.ObtenerTextoEnemigos();
         txtSecretos.Text = ControladorPartida.ObtenerTextoSecretos();
 
-        panelDatos.Visibility = Visibility.Visible;
+        panelDatosFinales.Visibility = Visibility.Visible;
         panelMuerte.Visibility = Visibility.Visible;
     }
 
@@ -319,11 +336,11 @@ public class InterfazJuego : SyncScript
 
         // Datos
         //txtNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
-        txtTiempo.Text = ControladorPartida.ObtenerTextoDuración();
+        txtTiempoFinal.Text = ControladorPartida.ObtenerTextoDuración();
         txtEnemigos.Text = ControladorPartida.ObtenerTextoEnemigos();
         txtSecretos.Text = ControladorPartida.ObtenerTextoSecretos();
 
-        panelDatos.Visibility = Visibility.Visible;
+        panelDatosFinales.Visibility = Visibility.Visible;
         panelFinal.Visibility = Visibility.Visible;
     }
 }

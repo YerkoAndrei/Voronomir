@@ -151,6 +151,11 @@ public class ControladorJugador : SyncScript, IDañable
         ControladorPartida.Morir();
     }
 
+    public float ObtenerAceleración()
+    {
+        return movimiento.ObtenerAceleración();
+    }
+
     public void GuardarLlave(Llaves llave)
     {
         interfaz.ActivarLlave(llave);

@@ -15,8 +15,9 @@ public class ControladorPartida : SyncScript
     private static Escenas _siguienteEscena;
 
     private static ControladorPersecusionesTrigonométricas[] persecutoresTrigonométricos;
-    private static TransformComponent jugador;
-    private static TransformComponent cabeza;
+    private static ControladorJugador jugador;
+    private static TransformComponent transformJugador;
+    private static TransformComponent cabezaJugador;
     private static InterfazJuego interfaz;
 
     private static bool activo;
@@ -35,8 +36,9 @@ public class ControladorPartida : SyncScript
 
         // Encuentra jugador para los demás
         var entidadJugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault();
-        cabeza = entidadJugador.Get<ControladorJugador>().cabeza;
-        jugador = entidadJugador.Transform;
+        jugador = entidadJugador.Get<ControladorJugador>();
+        transformJugador = entidadJugador.Transform;
+        cabezaJugador = jugador.cabeza;
 
         // Persecutores
         var entidad = Entity.Scene.Entities.Where(o => o.Get<ControladorPersecusionesTrigonométricas>() != null).FirstOrDefault();
@@ -111,12 +113,17 @@ public class ControladorPartida : SyncScript
     // Jugador
     public static Vector3 ObtenerPosiciónJugador()
     {
-        return jugador.WorldMatrix.TranslationVector;
+        return transformJugador.WorldMatrix.TranslationVector;
     }
 
     public static Vector3 ObtenerCabezaJugador()
     {
-        return cabeza.WorldMatrix.TranslationVector;
+        return cabezaJugador.WorldMatrix.TranslationVector;
+    }
+
+    public static float ObtenerAceleración()
+    {
+        return jugador.ObtenerAceleración();
     }
 
     // Persecutores
