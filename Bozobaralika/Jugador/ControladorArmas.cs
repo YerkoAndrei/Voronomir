@@ -403,9 +403,9 @@ public class ControladorArmas : StartupScript
         var normal = Vector3.Zero;
         foreach (var posiciónRayo in direccionRayos)
         {
-            var posiciónRayoGlobal = cámara.Entity.Transform.LocalToWorld(posiciónRayo);
+            var inicioRayo = cámara.Entity.Transform.LocalToWorld(posiciónRayo);
             var dirección = cámara.Entity.Transform.WorldMatrix.TranslationVector + cámara.Entity.Transform.WorldMatrix.Forward * 2;
-            var resultado = this.GetSimulation().Raycast(posiciónRayoGlobal,
+            var resultado = this.GetSimulation().Raycast(inicioRayo,
                                                          dirección,
                                                          CollisionFilterGroups.DefaultFilter,
                                                          colisionesDisparo, true);
@@ -441,8 +441,6 @@ public class ControladorArmas : StartupScript
             else if (resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
                 ActivarBotón(resultado.Collider);
-                posición = resultado.Point;
-                normal = resultado.Normal;
             }
             // Entorno
             else if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter)

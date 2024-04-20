@@ -11,16 +11,16 @@ public class ElementoMarca : StartupScript
     public SpriteComponent textura;
     public Texture marcaSuave;
     public Texture marcaFuerte;
+    public Texture marcaOctágono;
 
     public override void Start()
     {
+        // PENDIENTE: crear marcas proyectadas desde cero (decals)
         textura.Enabled = false;
     }
 
-    public void IniciarMarca(Armas arma, Vector3 posición, Vector3 normal)
+    public void IniciarMarcaDisparo(Armas arma, Vector3 posición, Vector3 normal)
     {
-        textura.Enabled = true;
-
         switch (arma)
         {
             case Armas.espada:
@@ -50,6 +50,48 @@ public class ElementoMarca : StartupScript
                 break;
         }
 
+        textura.Enabled = true;
+        Entity.Transform.Position = posición + (normal * 0.001f);
+        Entity.Transform.Rotation = Quaternion.LookRotation(normal, posición);
+    }
+
+    public void IniciarMarcaMuerte(Enemigos enemigo, Vector3 posición, Vector3 normal)
+    {
+        switch (enemigo)
+        {
+            case Enemigos.meléLigero:
+                textura.SpriteProvider = ObtenerSprite(marcaOctágono);
+                textura.Entity.Transform.Scale = Vector3.One * 0.8f;
+                textura.Color = new Color(100, 0, 0, 200);
+                break;
+            case Enemigos.meléMediano:
+                textura.SpriteProvider = ObtenerSprite(marcaOctágono);
+                textura.Entity.Transform.Scale = Vector3.One * 0.8f;
+                textura.Color = new Color(100, 0, 0, 200);
+                break;
+            case Enemigos.meléPesado:
+                textura.SpriteProvider = ObtenerSprite(marcaFuerte);
+                textura.Entity.Transform.Scale = Vector3.One * 0.6f;
+                textura.Color = new Color(0, 0, 100, 200);
+                break;
+            case Enemigos.rangoLigero:
+                textura.SpriteProvider = ObtenerSprite(marcaFuerte);
+                textura.Entity.Transform.Scale = Vector3.One * 0.2f;
+                textura.Color = new Color(0, 0, 100, 200);
+                break;
+            case Enemigos.rangoMediano:
+                textura.SpriteProvider = ObtenerSprite(marcaOctágono);
+                textura.Entity.Transform.Scale = Vector3.One * 1.0f;
+                textura.Color = new Color(100, 0, 0, 200);
+                break;
+            case Enemigos.rangoPesado:
+                textura.SpriteProvider = ObtenerSprite(marcaOctágono);
+                textura.Entity.Transform.Scale = Vector3.One * 1.2f;
+                textura.Color = new Color(0, 100, 0, 200);
+                break;
+        }
+
+        textura.Enabled = true;
         Entity.Transform.Position = posición + (normal * 0.001f);
         Entity.Transform.Rotation = Quaternion.LookRotation(normal, posición);
     }

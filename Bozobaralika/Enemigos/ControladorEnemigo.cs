@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
 
 namespace Bozobaralika;
+using static Utilidades;
 using static Constantes;
 
 public class ControladorEnemigo : SyncScript, IDañable, IActivable
@@ -115,11 +117,29 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
     {
         activo = false;
         cuerpo.Enabled = false;
+        cuerpo.SetVelocity(Vector3.Zero);
         persecutor.EliminarPersecutor();
+
+        CrearMarcaMuerte();
         ControladorPartida.SumarEnemigo();
 
         // PENDIENTE: ragdoll
         Entity.Scene.Entities.Remove(Entity);
+    }
+
+    private async void CrearMarcaMuerte()
+    {
+        await Task.Delay(100);
+
+        // Rayo para crear marca
+        var inicioRayo = Entity.Transform.WorldMatrix.TranslationVector + (Vector3.UnitY * 0.5f);
+        var dirección = inicioRayo - Vector3.UnitY;
+        var resultado = this.GetSimulation().Raycast(inicioRayo,
+                                                     dirección,
+                                                     CollisionFilterGroups.DefaultFilter,
+                                                     CollisionFilterGroupFlags.StaticFilter);
+        if (resultado.Succeeded)
+            ControladorCofres.IniciarEfectoEntornoMuerte(enemigo, resultado.Point, resultado.Normal);
     }
 
     private int ObtenerVida()

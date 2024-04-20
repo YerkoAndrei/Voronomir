@@ -145,7 +145,7 @@ public class ControladorCofres : StartupScript
         // Marca
         if (iniciarMarca)
         {
-            marcas[marcaActual].IniciarMarca(arma, posición, normal);
+            marcas[marcaActual].IniciarMarcaDisparo(arma, posición, normal);
             marcaActual++;
 
             if (marcaActual >= maxMarcas)
@@ -158,6 +158,15 @@ public class ControladorCofres : StartupScript
 
         if (efectoActual >= maxEfectos)
             efectoActual = 0;
+    }
+
+    public static void IniciarEfectoEntornoMuerte(Enemigos enemigo, Vector3 posición, Vector3 normal)
+    {
+        marcas[marcaActual].IniciarMarcaMuerte(enemigo, posición, normal);
+        marcaActual++;
+
+        if (marcaActual >= maxMarcas)
+            marcaActual = 0;
     }
 
     public static void IniciarEfectoDaño(Armas arma, Enemigos enemigo, float multiplicadorDaño, Vector3 posición, Vector3 normal)
