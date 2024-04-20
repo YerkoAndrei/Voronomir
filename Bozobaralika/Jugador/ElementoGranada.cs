@@ -1,7 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
+using Stride.Particles.Components;
 using Stride.Physics;
 
 namespace Bozobaralika;
@@ -12,6 +12,7 @@ public class ElementoGranada : AsyncScript, IProyectil
 {
     public ModelComponent modelo;
     public TransformComponent cola;
+    public ParticleSystemComponent partícula;
 
     private RigidbodyComponent cuerpo;
     private float dañoImpacto;
@@ -38,6 +39,7 @@ public class ElementoGranada : AsyncScript, IProyectil
 
     public void Destruir()
     {
+        partícula.Enabled = false;
         cuerpo.LinearVelocity = Vector3.Zero;
         modelo.Enabled = false;
         cuerpo.IsKinematic = true;
@@ -65,9 +67,12 @@ public class ElementoGranada : AsyncScript, IProyectil
         modelo.Enabled = true;
 
         // Granadas duran 10 segundos
+        cuerpo.Enabled = true;
+        partícula.Enabled = true;
+        partícula.ParticleSystem.ResetSimulation();
+
         tempo = 10f;
         ContarVida();
-        cuerpo.Enabled = true;
     }
 
     private async void ContarVida()
