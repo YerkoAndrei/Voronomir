@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
+using Stride.Particles.Components;
 using Stride.Engine;
 
 namespace Bozobaralika;
@@ -16,6 +17,9 @@ public class AnimadorArmas : AsyncScript
 
     public SpriteComponent fuegoIzquierda;
     public SpriteComponent fuegoDerecha;
+
+    public ParticleSystemComponent partículasIzquierda;
+    public ParticleSystemComponent partículasDerecha;
 
     private Vector3 posiciónInicialIzquierda;
     private Vector3 posiciónInicialDerecha;
@@ -68,6 +72,12 @@ public class AnimadorArmas : AsyncScript
             tamañoFuegoDerecha = fuegoDerecha.Entity.Transform.Scale;
             fuegoIzquierda.Enabled = false;
             fuegoDerecha.Enabled = false;
+        }
+
+        if(partículasIzquierda != null && partículasDerecha != null)
+        {
+            partículasIzquierda.Enabled = false;
+            partículasDerecha.Enabled = false;
         }
     }
 
@@ -213,6 +223,9 @@ public class AnimadorArmas : AsyncScript
         if (fuegoIzquierda != null && fuegoDerecha != null)
             MostrarFuego(tipoDisparo);
 
+        if (partículasIzquierda != null && partículasDerecha != null)
+            MostrarPartículas(tipoDisparo);
+
         // Posición rápida
         var posiciónDisparoIzquierda = posiciónInicialIzquierda + new Vector3(0, 0, retroceso);
         var posiciónDisparoDerecha = posiciónInicialDerecha + new Vector3(0, 0, retroceso);
@@ -299,6 +312,10 @@ public class AnimadorArmas : AsyncScript
                 fuegoIzquierda.Entity.Transform.Rotation = Quaternion.RotationZ(MathUtil.DegreesToRadians(RangoAleatorio(0, 360)));
                 fuegoDerecha.Entity.Transform.Rotation = Quaternion.RotationZ(MathUtil.DegreesToRadians(RangoAleatorio(0, 360)));
 
+                partículasIzquierda.Enabled = true;
+                partículasDerecha.Enabled = true;
+                partículasIzquierda.ParticleSystem.ResetSimulation();
+                partículasDerecha.ParticleSystem.ResetSimulation();
                 await Task.Delay(100);
                 break;
             case TipoDisparo.izquierda:
@@ -311,6 +328,8 @@ public class AnimadorArmas : AsyncScript
                 fuegoIzquierda.Entity.Transform.Scale = tamañoFuegoIzquierda * RangoAleatorio(1f, 1.2f);
                 fuegoIzquierda.Entity.Transform.Rotation = Quaternion.RotationZ(MathUtil.DegreesToRadians(RangoAleatorio(0, 360)));
 
+                partículasIzquierda.Enabled = true;
+                partículasIzquierda.ParticleSystem.ResetSimulation();
                 await Task.Delay(70);
                 break;
             case TipoDisparo.derecha:
@@ -323,6 +342,8 @@ public class AnimadorArmas : AsyncScript
                 fuegoDerecha.Entity.Transform.Scale = tamañoFuegoDerecha * RangoAleatorio(1f, 1.2f);
                 fuegoDerecha.Entity.Transform.Rotation = Quaternion.RotationZ(MathUtil.DegreesToRadians(RangoAleatorio(0, 360)));
 
+                partículasDerecha.Enabled = true;
+                partículasDerecha.ParticleSystem.ResetSimulation();
                 await Task.Delay(60);
                 break;
         }
@@ -339,6 +360,28 @@ public class AnimadorArmas : AsyncScript
                 break;
             case TipoDisparo.derecha:
                 fuegoDerecha.Enabled = false;
+                break;
+        }
+    }
+
+    private void MostrarPartículas(TipoDisparo tipoDisparo)
+    {
+        switch (tipoDisparo)
+        {
+            case TipoDisparo.espejo:
+                partículasIzquierda.Enabled = true;
+                partículasDerecha.Enabled = true;
+
+                partículasIzquierda.ParticleSystem.ResetSimulation();
+                partículasDerecha.ParticleSystem.ResetSimulation();
+                break;
+            case TipoDisparo.izquierda:
+                partículasIzquierda.Enabled = true;
+                partículasIzquierda.ParticleSystem.ResetSimulation();
+                break;
+            case TipoDisparo.derecha:
+                partículasDerecha.Enabled = true;
+                partículasDerecha.ParticleSystem.ResetSimulation();
                 break;
         }
     }

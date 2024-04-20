@@ -45,6 +45,122 @@ Hierarchy:
                         controlador: ref!! 4286558c-21f8-4c73-8ce1-d58ae4daec5d
                         multiplicador: 1.0
         -   Entity:
+                Id: 147e9c1b-6e08-4fa2-8b4a-a4f0b80d0ed8
+                Name: "Partículas"
+                Components:
+                    3d7f1c6eb1a3ef416262e032e3f63102: !TransformComponent
+                        Id: 49ecaa0a-903e-46c5-84e5-b8442879aaff
+                        Position: {X: 0.0, Y: -0.01, Z: -1.2}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.4, Y: 0.4, Z: 0.4}
+                        Children: {}
+                    ee1782ed2b45cf6c66e06a026450791f: !ParticleSystemComponent
+                        Id: 0ec22f3e-f950-43aa-b66b-ec0d038d6a65
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 2.0
+                            Control: Play
+                        Color: {R: 0.78431374, G: 0.78431374, B: 0.78431374, A: 0.78431374}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                580ff45c4f30d2f5d251f55cfc8420d6:
+                                    ParticleLifetime: {X: 0.2, Y: 0.4}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        96aa76e26217dd61bfdc313984c8238b: !SpawnerBurst
+                                            LoopCondition: OneShot
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 40
+                                    Initializers:
+                                        956126d9c86b2e1942503a8d9ff4c860: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.15}
+                                        fdc82e232e8e44f4e8a27de98fb27c77: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -0.1, Y: 0.0, Z: -0.1}
+                                            PositionMax: {X: 0.1, Y: 0.0, Z: 0.1}
+                                            Interpolate: false
+                                        3c2f17b0a27043c7f99b2b48ac7309d3: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: 10.0, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 12.0, Z: 1.0}
+                                    Updaters:
+                                        e15c82f17f8d377d6e68e7007eb855ef: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        cdd1ad942a88367cf73ef9e2f6991396:
+                                                            Key: 0.0
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        d0968e312c10b34e58f6a8f8bd77c81c:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+        -   Entity:
                 Id: 1db03233-9b09-47d5-a47a-0b5d2d4c84bf
                 Name: Disparo
                 Components:
@@ -60,6 +176,238 @@ Hierarchy:
                             Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Entity:
+                Id: 1ec15dbd-c871-4f5e-b556-fb190ee401bb
+                Name: "Partículas"
+                Components:
+                    3d7f1c6eb1a3ef416262e032e3f63102: !TransformComponent
+                        Id: f863df8c-6601-4620-826d-12cc407ead03
+                        Position: {X: 0.0, Y: 0.0, Z: -0.7}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.4, Y: 0.4, Z: 0.4}
+                        Children: {}
+                    ee1782ed2b45cf6c66e06a026450791f: !ParticleSystemComponent
+                        Id: a798f7ff-a7a9-44ba-a317-434dc5418c7e
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 2.0
+                            Control: Play
+                        Color: {R: 0.78431374, G: 0.78431374, B: 0.78431374, A: 0.78431374}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                580ff45c4f30d2f5d251f55cfc8420d6:
+                                    ParticleLifetime: {X: 0.2, Y: 0.4}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        96aa76e26217dd61bfdc313984c8238b: !SpawnerBurst
+                                            LoopCondition: OneShot
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 40
+                                    Initializers:
+                                        956126d9c86b2e1942503a8d9ff4c860: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.15}
+                                        fdc82e232e8e44f4e8a27de98fb27c77: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -0.1, Y: 0.0, Z: -0.1}
+                                            PositionMax: {X: 0.1, Y: 0.0, Z: 0.1}
+                                            Interpolate: false
+                                        3c2f17b0a27043c7f99b2b48ac7309d3: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: 10.0, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 12.0, Z: 1.0}
+                                    Updaters:
+                                        e15c82f17f8d377d6e68e7007eb855ef: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        cdd1ad942a88367cf73ef9e2f6991396:
+                                                            Key: 0.0
+                                                            Value: 0.2
+                                                            TangentType: Linear
+                                                        d0968e312c10b34e58f6a8f8bd77c81c:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+        -   Entity:
+                Id: 2040daa6-49ab-4794-bdd5-37e4fde3c568
+                Name: "PartículasIzquierda"
+                Components:
+                    3d7f1c6eb1a3ef416262e032e3f63102: !TransformComponent
+                        Id: 5f022ea1-c9d5-455f-a388-afeaddd19ecb
+                        Position: {X: -0.8, Y: -0.04, Z: 0.0}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children: {}
+                    ee1782ed2b45cf6c66e06a026450791f: !ParticleSystemComponent
+                        Id: e8742a2e-3a96-46d8-ba28-9c3b473ba066
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 2.0
+                            Control: Play
+                        Color: {R: 0.78431374, G: 0.78431374, B: 0.78431374, A: 0.78431374}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                580ff45c4f30d2f5d251f55cfc8420d6:
+                                    ParticleLifetime: {X: 0.2, Y: 0.4}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        96aa76e26217dd61bfdc313984c8238b: !SpawnerBurst
+                                            LoopCondition: OneShot
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 40
+                                    Initializers:
+                                        956126d9c86b2e1942503a8d9ff4c860: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.15}
+                                        fdc82e232e8e44f4e8a27de98fb27c77: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -0.1, Y: 0.0, Z: -0.1}
+                                            PositionMax: {X: 0.1, Y: 0.0, Z: 0.1}
+                                            Interpolate: false
+                                        3c2f17b0a27043c7f99b2b48ac7309d3: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: 8.0, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 10.0, Z: 1.0}
+                                    Updaters:
+                                        e15c82f17f8d377d6e68e7007eb855ef: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        cdd1ad942a88367cf73ef9e2f6991396:
+                                                            Key: 0.0
+                                                            Value: 0.4
+                                                            TangentType: Linear
+                                                        d0968e312c10b34e58f6a8f8bd77c81c:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+        -   Entity:
                 Id: 20b2dabc-0cb3-430e-a286-cd4ae705787f
                 Name: Disparo
                 Components:
@@ -74,6 +422,122 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+        -   Entity:
+                Id: 3594fe7c-b7ec-48ee-832c-00fde6ed809f
+                Name: "PartículasDerecha"
+                Components:
+                    3d7f1c6eb1a3ef416262e032e3f63102: !TransformComponent
+                        Id: 91ecbaff-3bce-4a09-9400-91a823c1ea8b
+                        Position: {X: 0.8, Y: -0.04, Z: 0.0}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children: {}
+                    ee1782ed2b45cf6c66e06a026450791f: !ParticleSystemComponent
+                        Id: 82d7e9f5-9bc9-41bb-93a2-2d5a3d84fd61
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 2.0
+                            Control: Play
+                        Color: {R: 0.78431374, G: 0.78431374, B: 0.78431374, A: 0.78431374}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                580ff45c4f30d2f5d251f55cfc8420d6:
+                                    ParticleLifetime: {X: 0.2, Y: 0.4}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        96aa76e26217dd61bfdc313984c8238b: !SpawnerBurst
+                                            LoopCondition: OneShot
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 40
+                                    Initializers:
+                                        956126d9c86b2e1942503a8d9ff4c860: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.15}
+                                        fdc82e232e8e44f4e8a27de98fb27c77: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -0.1, Y: 0.0, Z: -0.1}
+                                            PositionMax: {X: 0.1, Y: 0.0, Z: 0.1}
+                                            Interpolate: false
+                                        3c2f17b0a27043c7f99b2b48ac7309d3: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: 8.0, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 10.0, Z: 1.0}
+                                    Updaters:
+                                        e15c82f17f8d377d6e68e7007eb855ef: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        cdd1ad942a88367cf73ef9e2f6991396:
+                                                            Key: 0.0
+                                                            Value: 0.4
+                                                            TangentType: Linear
+                                                        d0968e312c10b34e58f6a8f8bd77c81c:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
         -   Folder: null
             Entity:
                 Id: 3d235512-23a1-4ed3-85ab-4cfa16a22cee
@@ -168,6 +632,122 @@ Hierarchy:
                         Id: 3ca52fad-fd4f-4293-83de-7fc03c206ea6
                         Model: 8446cdd3-3139-4136-a668-41cb01e8aa8c:Modelos/Armas/Lanzagranadas/RPG-2
                         Materials: {}
+        -   Entity:
+                Id: 4a85f05e-ee90-42e6-bb21-70bfe3b94b7f
+                Name: "Partículas"
+                Components:
+                    3d7f1c6eb1a3ef416262e032e3f63102: !TransformComponent
+                        Id: 73c5f6c4-2817-4ac4-b449-6402f2eaa8a6
+                        Position: {X: 0.0, Y: -0.01, Z: -2.5}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    ee1782ed2b45cf6c66e06a026450791f: !ParticleSystemComponent
+                        Id: c36b1be4-9044-48a1-b87d-6ae1f2168fcd
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 2.0
+                            Control: Play
+                        Color: {R: 0.78431374, G: 0.78431374, B: 0.78431374, A: 0.78431374}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                580ff45c4f30d2f5d251f55cfc8420d6:
+                                    ParticleLifetime: {X: 0.2, Y: 0.4}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        96aa76e26217dd61bfdc313984c8238b: !SpawnerBurst
+                                            LoopCondition: OneShot
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 40
+                                    Initializers:
+                                        956126d9c86b2e1942503a8d9ff4c860: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.15}
+                                        fdc82e232e8e44f4e8a27de98fb27c77: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -0.1, Y: 0.0, Z: -0.1}
+                                            PositionMax: {X: 0.1, Y: 0.0, Z: 0.1}
+                                            Interpolate: false
+                                        3c2f17b0a27043c7f99b2b48ac7309d3: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: 8.0, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 10.0, Z: 1.0}
+                                    Updaters:
+                                        e15c82f17f8d377d6e68e7007eb855ef: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        cdd1ad942a88367cf73ef9e2f6991396:
+                                                            Key: 0.0
+                                                            Value: 0.4
+                                                            TangentType: Linear
+                                                        d0968e312c10b34e58f6a8f8bd77c81c:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
         -   Folder: null
             Entity:
                 Id: 4b476576-1ceb-49a5-807d-388a9c60eb3d
@@ -189,6 +769,8 @@ Hierarchy:
                         modeloDerecha: ref!! 4010ba77-1830-401e-9021-b350ebdae3a1
                         fuegoIzquierda: ref!! 9df59465-e291-4f94-84aa-8133c650c216
                         fuegoDerecha: ref!! 93009d42-d5f8-4016-9694-761107bb345c
+                        "partículasIzquierda": ref!! a24b8059-2f7f-4a1e-ae56-1a64b5816885
+                        "partículasDerecha": ref!! a798f7ff-a7a9-44ba-a317-434dc5418c7e
         -   Folder: null
             Entity:
                 Id: 62a7baa8-3145-43f2-9629-a24f718c9fe0
@@ -241,6 +823,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
                         Children:
                             8d1f85322f0cd97247096702d8c58ee6: ref!! de21ec37-6aae-42ea-b3bc-889ad3d0b0fa
+                            7ba6fea3e06452f4cdbaec0336f276a5: ref!! 49ecaa0a-903e-46c5-84e5-b8442879aaff
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 33f98877-649f-431b-9fbe-f29faf534ffc
                         Model: 08980e3d-c7cb-48a0-8d63-198c7163f769:Modelos/Armas/Escopeta/MC-6
@@ -262,8 +845,7 @@ Hierarchy:
                         Model: af94209d-bf15-4fe0-be2a-de8f4f8d2b4a:Modelos/Armas/Espada/Shashka
                         RenderGroup: Group11
                         Materials: {}
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 7d8701f0-6c58-4fdd-8dc2-750170946402
                 Name: Derecha
                 Components:
@@ -329,13 +911,13 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
                         Children:
                             263220cb3f42e4d49ae83c9e9422a155: ref!! b22f72ac-f5f4-4c43-8a6d-4c2e6ae355b7
+                            b19af163e9c9b00fb8c1d95041da88fb: ref!! f863df8c-6601-4620-826d-12cc407ead03
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 4010ba77-1830-401e-9021-b350ebdae3a1
                         Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
                         RenderGroup: Group11
                         Materials: {}
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 8e7f38a8-957a-47a8-884a-af79891eadbe
                 Name: Izquierda
                 Components:
@@ -378,6 +960,122 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+        -   Entity:
+                Id: a797918f-0191-4c40-a2ce-1809dc134eca
+                Name: "Partículas"
+                Components:
+                    3d7f1c6eb1a3ef416262e032e3f63102: !TransformComponent
+                        Id: 8a9b1f07-8679-45f3-9a67-79257845c8e5
+                        Position: {X: 0.0, Y: 0.0, Z: -0.7}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.4, Y: 0.4, Z: 0.4}
+                        Children: {}
+                    ee1782ed2b45cf6c66e06a026450791f: !ParticleSystemComponent
+                        Id: a24b8059-2f7f-4a1e-ae56-1a64b5816885
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 2.0
+                            Control: Play
+                        Color: {R: 0.78431374, G: 0.78431374, B: 0.78431374, A: 0.78431374}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                580ff45c4f30d2f5d251f55cfc8420d6:
+                                    ParticleLifetime: {X: 0.2, Y: 0.4}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        96aa76e26217dd61bfdc313984c8238b: !SpawnerBurst
+                                            LoopCondition: OneShot
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 40
+                                    Initializers:
+                                        956126d9c86b2e1942503a8d9ff4c860: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.15}
+                                        fdc82e232e8e44f4e8a27de98fb27c77: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -0.1, Y: 0.0, Z: -0.1}
+                                            PositionMax: {X: 0.1, Y: 0.0, Z: 0.1}
+                                            Interpolate: false
+                                        3c2f17b0a27043c7f99b2b48ac7309d3: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: 10.0, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 12.0, Z: 1.0}
+                                    Updaters:
+                                        e15c82f17f8d377d6e68e7007eb855ef: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        cdd1ad942a88367cf73ef9e2f6991396:
+                                                            Key: 0.0
+                                                            Value: 0.2
+                                                            TangentType: Linear
+                                                        d0968e312c10b34e58f6a8f8bd77c81c:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
         -   Folder: null
             Entity:
                 Id: ae26fb61-6490-4523-8dc8-10162f73c79a
@@ -390,6 +1088,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
                         Children:
                             16339bef1abcafd5163ac74b5782a8e0: ref!! 6b653811-a963-4a12-b8d6-adc41935d463
+                            20510000c429ab2bdd32be006d01cd20: ref!! 8a9b1f07-8679-45f3-9a67-79257845c8e5
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: d3d8ae05-4874-483c-92c7-01019190b161
                         Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
@@ -407,6 +1106,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             badc89a91a4688b3d061f5d32ba7829e: ref!! cf350b03-e4bd-468f-b308-52148213f2d7
+                            c57f0e71503bfe6754d5b08ed7a0a2a5: ref!! 3155aa36-83e8-449a-a410-8b8bff3fdca6
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 6b955ddd-d621-49ff-ba1c-2472814fea35
                         Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
@@ -448,6 +1148,8 @@ Hierarchy:
                         modeloDerecha: ref!! 33f98877-649f-431b-9fbe-f29faf534ffc
                         fuegoIzquierda: ref!! 7d72fb8c-c7ea-4c37-826f-2dec2eaae339
                         fuegoDerecha: ref!! 87358d27-6879-48fa-9d6c-8972dd9594f8
+                        "partículasIzquierda": ref!! 0fd7d908-2fc6-468e-a791-63966122a7bf
+                        "partículasDerecha": ref!! 0ec22f3e-f950-43aa-b66b-ec0d038d6a65
         -   Folder: null
             Entity:
                 Id: be5aec12-2afc-4788-8cb7-53966dec6a3e
@@ -472,11 +1174,128 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             addf645baa9a8b0a017627b2b269c1a7: ref!! b9439ba8-b68a-49f0-bca7-d001b980bf0f
+                            6c3109f69e73698b048ad3341ebed0b0: ref!! 73c5f6c4-2817-4ac4-b449-6402f2eaa8a6
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 3538e2a1-f059-46c0-8f6f-0d9ba7d1b499
                         Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
                         RenderGroup: Group11
                         Materials: {}
+        -   Entity:
+                Id: c4d72591-362b-4f02-a4ab-6166c7e4df26
+                Name: "Partículas"
+                Components:
+                    3d7f1c6eb1a3ef416262e032e3f63102: !TransformComponent
+                        Id: 3155aa36-83e8-449a-a410-8b8bff3fdca6
+                        Position: {X: 0.0, Y: -0.01, Z: -2.5}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    ee1782ed2b45cf6c66e06a026450791f: !ParticleSystemComponent
+                        Id: f9ccd989-1d5a-4e97-9e37-f49fb9a7d522
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 2.0
+                            Control: Play
+                        Color: {R: 0.78431374, G: 0.78431374, B: 0.78431374, A: 0.78431374}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                580ff45c4f30d2f5d251f55cfc8420d6:
+                                    ParticleLifetime: {X: 0.2, Y: 0.4}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        96aa76e26217dd61bfdc313984c8238b: !SpawnerBurst
+                                            LoopCondition: OneShot
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 40
+                                    Initializers:
+                                        956126d9c86b2e1942503a8d9ff4c860: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.15}
+                                        fdc82e232e8e44f4e8a27de98fb27c77: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -0.1, Y: 0.0, Z: -0.1}
+                                            PositionMax: {X: 0.1, Y: 0.0, Z: 0.1}
+                                            Interpolate: false
+                                        3c2f17b0a27043c7f99b2b48ac7309d3: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: 8.0, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 10.0, Z: 1.0}
+                                    Updaters:
+                                        e15c82f17f8d377d6e68e7007eb855ef: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        cdd1ad942a88367cf73ef9e2f6991396:
+                                                            Key: 0.0
+                                                            Value: 0.4
+                                                            TangentType: Linear
+                                                        d0968e312c10b34e58f6a8f8bd77c81c:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
         -   Folder: null
             Entity:
                 Id: db0a187b-bd41-45d8-b0ce-c8ba99ddc6ed
@@ -489,6 +1308,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 0.99999994}
                         Children:
                             5ffd19b13f1f047a21301157051d491c: ref!! c546dc16-cf6c-4c74-badd-1e3fa6d741dd
+                            cd9b75e5c04e7f1f6b92689bdcebcc4e: ref!! c4a94b08-433a-4d8a-9858-2aaacb304177
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 0cfb13ad-bb38-47d3-915c-c201f566daf3
                         Model: 08980e3d-c7cb-48a0-8d63-198c7163f769:Modelos/Armas/Escopeta/MC-6
@@ -548,6 +1368,122 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+        -   Entity:
+                Id: f10d2475-185f-4c3e-9813-427d4150de9f
+                Name: "Partículas"
+                Components:
+                    3d7f1c6eb1a3ef416262e032e3f63102: !TransformComponent
+                        Id: c4a94b08-433a-4d8a-9858-2aaacb304177
+                        Position: {X: 0.0, Y: -0.01, Z: -1.2}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.4, Y: 0.4, Z: 0.4}
+                        Children: {}
+                    ee1782ed2b45cf6c66e06a026450791f: !ParticleSystemComponent
+                        Id: 0fd7d908-2fc6-468e-a791-63966122a7bf
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 2.0
+                            Control: Play
+                        Color: {R: 0.78431374, G: 0.78431374, B: 0.78431374, A: 0.78431374}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                580ff45c4f30d2f5d251f55cfc8420d6:
+                                    ParticleLifetime: {X: 0.2, Y: 0.4}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        96aa76e26217dd61bfdc313984c8238b: !SpawnerBurst
+                                            LoopCondition: OneShot
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 40
+                                    Initializers:
+                                        956126d9c86b2e1942503a8d9ff4c860: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.15}
+                                        fdc82e232e8e44f4e8a27de98fb27c77: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -0.1, Y: 0.0, Z: -0.1}
+                                            PositionMax: {X: 0.1, Y: 0.0, Z: 0.1}
+                                            Interpolate: false
+                                        3c2f17b0a27043c7f99b2b48ac7309d3: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: 10.0, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 12.0, Z: 1.0}
+                                    Updaters:
+                                        e15c82f17f8d377d6e68e7007eb855ef: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        cdd1ad942a88367cf73ef9e2f6991396:
+                                                            Key: 0.0
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        d0968e312c10b34e58f6a8f8bd77c81c:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
         -   Folder: null
             Entity:
                 Id: f1f96026-7e7c-46b5-8c54-e02016058827
@@ -569,6 +1505,8 @@ Hierarchy:
                         modeloDerecha: ref!! 6b955ddd-d621-49ff-ba1c-2472814fea35
                         fuegoIzquierda: ref!! 3ac11445-ac45-4540-901f-c8ef603cad2a
                         fuegoDerecha: ref!! 58f50ad1-e4a7-4d54-8eca-f704ce63b482
+                        "partículasIzquierda": ref!! c36b1be4-9044-48a1-b87d-6ae1f2168fcd
+                        "partículasDerecha": ref!! f9ccd989-1d5a-4e97-9e37-f49fb9a7d522
         -   Folder: null
             Entity:
                 Id: f359be66-b309-4bfa-834a-76e6d4d5f4c5
@@ -591,8 +1529,10 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            9ec7f7cd5e42e40010834051d887c79a: ref!! 0822e4ff-3bd9-4bce-b2a7-7aa7baa59d3e
-                            c00f4c428de7e6317d9a9b4c6c9f23a1: ref!! 21d403bb-b7ad-4307-85bc-31e073b99e61
+                            cbaba5de8ec27491b2814e5bec045328: ref!! 0822e4ff-3bd9-4bce-b2a7-7aa7baa59d3e
+                            00fc4567fe8a771f2c3dc90ab380ba69: ref!! 21d403bb-b7ad-4307-85bc-31e073b99e61
+                            99311f5927bdeffa23ab57c62ec242ce: ref!! 5f022ea1-c9d5-455f-a388-afeaddd19ecb
+                            116bca79568dbcc2a0cbeef2b6db6b19: ref!! 91ecbaff-3bce-4a09-9400-91a823c1ea8b
                     1d2872fa0a254e1c4dbdaaba19f1a4f1: !Bozobaralika.AnimadorArmas,Bozobaralika.Proyecto
                         Id: 84f919b8-6eb4-420c-8a7b-f7008e070b9b
                         ejeIzquierda: ref!! 0822e4ff-3bd9-4bce-b2a7-7aa7baa59d3e
@@ -601,6 +1541,8 @@ Hierarchy:
                         modeloDerecha: ref!! 5f27dca2-2e6e-4328-82f0-0b25267abf4b
                         fuegoIzquierda: null
                         fuegoDerecha: null
+                        "partículasIzquierda": ref!! e8742a2e-3a96-46d8-ba28-9c3b473ba066
+                        "partículasDerecha": ref!! 82d7e9f5-9bc9-41bb-93a2-2d5a3d84fd61
         -   Folder: null
             Entity:
                 Id: fd468b26-6c42-4010-8266-2ec5a5170898
@@ -622,3 +1564,5 @@ Hierarchy:
                         modeloDerecha: ref!! 99f082b5-7ab5-4b6e-b141-8036344bc30b
                         fuegoIzquierda: null
                         fuegoDerecha: null
+                        "partículasIzquierda": null
+                        "partículasDerecha": null
