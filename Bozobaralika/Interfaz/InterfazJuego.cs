@@ -38,6 +38,12 @@ public class InterfazJuego : SyncScript
     private ImageElement imgInvencibilidad;
     private ImageElement imgRapidez;
 
+    private TextBlock txtNivel;
+    private TextBlock txtTiempo;
+    private TextBlock txtEnemigos;
+    private TextBlock txtSecretos;
+
+    private UniformGrid panelDatos;
     private Grid panelPausa;
     private Grid panelMuerte;
     private Grid panelFinal;
@@ -46,8 +52,8 @@ public class InterfazJuego : SyncScript
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
 
+        // Interfaz
         imgVida = página.FindVisualChildOfType<ImageElement>("imgVida");
-        tamañoVida = imgVida.Width;
 
         miraEspada = página.FindVisualChildOfType<ImageElement>("miraEspada");
         miraEscopeta = página.FindVisualChildOfType<ImageElement>("miraEscopeta");
@@ -68,19 +74,34 @@ public class InterfazJuego : SyncScript
         imgInvencibilidad = página.FindVisualChildOfType<ImageElement>("imgInvencibilidad");
         imgRapidez = página.FindVisualChildOfType<ImageElement>("imgRapidez");
 
+        // Datos
+        txtNivel = página.FindVisualChildOfType<TextBlock>("txtNivel");
+        txtTiempo = página.FindVisualChildOfType<TextBlock>("txtTiempo");
+        txtEnemigos = página.FindVisualChildOfType<TextBlock>("txtEnemigos");
+        txtSecretos = página.FindVisualChildOfType<TextBlock>("txtSecretos");
+
+        // Paneles
+        panelDatos = página.FindVisualChildOfType<UniformGrid>("Datos");
         panelPausa = página.FindVisualChildOfType<Grid>("PanelPausa");
         panelMuerte = página.FindVisualChildOfType<Grid>("PanelMuerte");
         panelFinal = página.FindVisualChildOfType<Grid>("PanelFinal");
 
-        panelPausa.Visibility = Visibility.Hidden;
-        panelMuerte.Visibility = Visibility.Hidden;
-
+        // Botónes
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReanudar"), Pausar);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReintentar"), EnClicReintentar);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReiniciar"), EnClicReintentar);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnContinuar"), EnClicContinuar);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnPausaSalir"), EnClicSalir);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnMuerteSalir"), EnClicSalir);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnFinalSalir"), EnClicSalir);
+
+        // Predeterminado
+        tamañoVida = imgVida.Width;
+
+        panelDatos.Visibility = Visibility.Hidden;
+        panelPausa.Visibility = Visibility.Hidden;
+        panelMuerte.Visibility = Visibility.Hidden;
+        panelFinal.Visibility = Visibility.Hidden;
 
         ApagarMiras();
         ApagarLlaves();
@@ -278,23 +299,31 @@ public class InterfazJuego : SyncScript
         imgVida.Color = vidaVacía;
         imgVida.Width = tamañoVida;
 
-        // Datos
-        var tiempo = ControladorPartida.ObtenerTiempo();
-
         ControladorPartida.Pausar(false);
         BloquearInterfaz(true);
 
+        // Datos
+        //txtNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
+        txtTiempo.Text = ControladorPartida.ObtenerTextoDuración();
+        txtEnemigos.Text = ControladorPartida.ObtenerTextoEnemigos();
+        txtSecretos.Text = ControladorPartida.ObtenerTextoSecretos();
+
+        panelDatos.Visibility = Visibility.Visible;
         panelMuerte.Visibility = Visibility.Visible;
     }
 
     public void Finalizar()
     {
-        // Datos
-        var tiempo = ControladorPartida.ObtenerTiempo();
-
         ControladorPartida.Pausar(false);
         BloquearInterfaz(true);
 
+        // Datos
+        //txtNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
+        txtTiempo.Text = ControladorPartida.ObtenerTextoDuración();
+        txtEnemigos.Text = ControladorPartida.ObtenerTextoEnemigos();
+        txtSecretos.Text = ControladorPartida.ObtenerTextoSecretos();
+
+        panelDatos.Visibility = Visibility.Visible;
         panelFinal.Visibility = Visibility.Visible;
     }
 }

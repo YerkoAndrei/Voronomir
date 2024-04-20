@@ -116,6 +116,8 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         activo = false;
         cuerpo.Enabled = false;
         persecutor.EliminarPersecutor();
+        ControladorPartida.SumarEnemigo();
+
         // PENDIENTE: ragdoll
         Entity.Scene.Entities.Remove(Entity);
     }

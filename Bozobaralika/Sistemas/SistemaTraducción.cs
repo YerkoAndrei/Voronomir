@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Stride.Core.Serialization;
 using Stride.Engine;
 using Newtonsoft.Json;
+using System.Globalization;
 
 namespace Bozobaralika;
 using static Constantes;
@@ -47,7 +48,7 @@ public class SistemaTraducción : StartupScript
         if (idiomaGuardado == Idiomas.sistema)
         {
             // Revisa el idioma instalado. ISO 639-1
-            var lenguajeSistema = System.Globalization.CultureInfo.InstalledUICulture.TwoLetterISOLanguageName;
+            var lenguajeSistema = CultureInfo.InstalledUICulture.TwoLetterISOLanguageName;
             switch (lenguajeSistema)
             {
                 default:

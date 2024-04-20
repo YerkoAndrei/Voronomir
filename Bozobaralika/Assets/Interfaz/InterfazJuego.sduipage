@@ -42,21 +42,6 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-        -   UIElement: !TextBlock
-                Id: 15670dd9-51b6-4e42-a0f0-6d3044d6987e
-                DependencyProperties:
-                    2658381c694afc63da4581d5dc8df08c~GridBase.ColumnPropertyKey: 1
-                    48d443ad87c7c7d252daa85c5dab4842~GridBase.RowPropertyKey: 1
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Left: 10.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: txtEnemigos
-                Text: 00/00
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
                 Id: 163cf578-8edc-4584-89fc-c36b45d53030
                 DependencyProperties:
@@ -131,6 +116,27 @@ Hierarchy:
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !UniformGrid
+                Id: 1fb1e13a-d5c8-41bf-b052-1f83b29d6bc2
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
+                Width: 500.0
+                Height: 200.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Datos
+                Children:
+                    1fb28bab155e18cf06d66c48ff228a0a: !TextBlock ref!! 759ea8e0-0910-4abc-b4c4-fbe121cf98a1
+                    960cd027b30108f1d3a5f7bf6fdbcb08: !TextBlock ref!! fb544970-5ed4-4c78-a8ea-53ddfa2a150d
+                    01dffbe2a005d0633af11ef59c999539: !TextBlock ref!! 61f25a01-f690-4534-925a-57732bbb48a0
+                    8c5dbcd38ad154e45559eaf5779226f8: !TextBlock ref!! d7a64e16-e33d-43a0-b881-b20f5ddb9e24
+                    9f898c64c6764dcf7c9bafc2de0694cf: !TextBlock ref!! a851c8fb-5f01-4c23-81ee-259ae8cd5241
+                    8a7582bcb5f33d4f29f52a18f770c2c6: !TextBlock ref!! 39b87c48-8ee8-4d34-8217-cd54089c2f16
+                Rows: 3
+                Columns: 2
         -   UIElement: !ImageElement
                 Id: 21d6f9a8-b5f3-4b2f-ac48-2c359e518eea
                 DependencyProperties: {}
@@ -163,6 +169,7 @@ Hierarchy:
                     85d913eca330adba2ee49bf83045a7e7: !Grid ref!! 7e00e8f3-06e0-472e-8cec-ff5756a08416
                     60cd5e24ba09294618747d4e3d82ce94: !Grid ref!! 8804fd5d-15bb-4edd-abd5-7ec90efadaaf
                     47e1b7eed937c2abda6582fdac10ee55: !Grid ref!! 7e7044aa-9a86-4c01-8dce-77d226c7c803
+                    08c269a9970590b9f7fb726b421e30fa: !UniformGrid ref!! 1fb1e13a-d5c8-41bf-b052-1f83b29d6bc2
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -182,26 +189,6 @@ Hierarchy:
                 Children:
                     5dceceba74468c2080b801a37e14f56c: !ImageElement ref!! 33975fa5-af25-44ed-9082-4926fa943f8f
                     42a1858727d64d4f95bc4ccabdee8cff: !ImageElement ref!! dae539b2-e1a4-407c-b2ea-60d5ff1a181e
-                Columns: 2
-        -   UIElement: !UniformGrid
-                Id: 2c406d1d-5c53-417f-99b7-297f28564d1d
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 500.0
-                Height: 200.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: Datos
-                Children:
-                    1fb28bab155e18cf06d66c48ff228a0a: !TextBlock ref!! d7c8f7df-8427-479e-bdc5-0d1f73248c98
-                    960cd027b30108f1d3a5f7bf6fdbcb08: !TextBlock ref!! 4b70cbd4-e93b-4b42-8ef7-ad4b964fd18b
-                    01dffbe2a005d0633af11ef59c999539: !TextBlock ref!! 65612dda-51f5-4de1-b8be-5d9d12edef21
-                    8c5dbcd38ad154e45559eaf5779226f8: !TextBlock ref!! a9c9cfbe-09fc-4618-9715-22342026f0e3
-                    9f898c64c6764dcf7c9bafc2de0694cf: !TextBlock ref!! 63a618d3-aaff-4798-b495-3388220301a0
-                    8a7582bcb5f33d4f29f52a18f770c2c6: !TextBlock ref!! 74a1247f-bbc0-4c13-a84a-c0360f3c84db
-                Rows: 3
                 Columns: 2
         -   UIElement: !ImageElement
                 Id: 33975fa5-af25-44ed-9082-4926fa943f8f
@@ -259,28 +246,29 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !TextBlock
-                Id: 3e2b1d0d-4015-4f8c-9d5a-26d805bccb10
+                Id: 39b87c48-8ee8-4d34-8217-cd54089c2f16
                 DependencyProperties:
-                    c2822c8ae47298b7dd0e12b487596096~GridBase.RowPropertyKey: 1
+                    d08c8a67af2548af04fffb8de4259de0~GridBase.ColumnPropertyKey: 1
+                    6f97dfb0c5f07a659401e96aad846531~GridBase.RowPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Right: 10.0}
+                Height: 30.0
+                Margin: {Left: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: lblEnemigos
-                Text: Enemigos
+                Name: txtSecretos
+                Text: 0/0
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
-                TextAlignment: Right
         -   UIElement: !TextBlock
                 Id: 40334597-99c1-48cc-b5dd-d7c6d4e80828
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 1280.0
-                Height: 100.0
+                Height: 95.0
                 VerticalAlignment: Top
-                Margin: {Top: 100.0}
+                Margin: {Top: 50.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -374,20 +362,6 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-        -   UIElement: !TextBlock
-                Id: 4b70cbd4-e93b-4b42-8ef7-ad4b964fd18b
-                DependencyProperties:
-                    4637f3e5d6d1ef2ef3921f12495e33fa~GridBase.ColumnPropertyKey: 1
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Left: 10.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: txtTiempo
-                Text: 00:00:000
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
                 Id: 54399583-ed5c-4bf5-a156-a3d393a50b8a
                 DependencyProperties:
@@ -407,9 +381,9 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 1280.0
-                Height: 100.0
+                Height: 95.0
                 VerticalAlignment: Top
-                Margin: {Top: 100.0}
+                Margin: {Top: 50.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -461,25 +435,11 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: btn
         -   UIElement: !TextBlock
-                Id: 63a618d3-aaff-4798-b495-3388220301a0
-                DependencyProperties:
-                    e1b8d7c5d7211c43b3e9e9b88e752d1e~GridBase.RowPropertyKey: 2
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Right: 10.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: lblSecretos
-                Text: Secretos
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-                TextAlignment: Right
-        -   UIElement: !TextBlock
-                Id: 65612dda-51f5-4de1-b8be-5d9d12edef21
+                Id: 61f25a01-f690-4534-925a-57732bbb48a0
                 DependencyProperties:
                     c2822c8ae47298b7dd0e12b487596096~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 30.0
                 Margin: {Right: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -520,21 +480,25 @@ Hierarchy:
                     Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 0, B: 255, A: 255}
-        -   UIElement: !TextBlock
-                Id: 74a1247f-bbc0-4c13-a84a-c0360f3c84db
-                DependencyProperties:
-                    d08c8a67af2548af04fffb8de4259de0~GridBase.ColumnPropertyKey: 1
-                    6f97dfb0c5f07a659401e96aad846531~GridBase.RowPropertyKey: 2
+        -   UIElement: !Grid
+                Id: 6c625eaf-c0a1-439b-a127-66b7ba1a4b14
+                DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Left: 10.0}
+                Width: 600.0
+                Height: 60.0
+                VerticalAlignment: Bottom
+                Margin: {Bottom: 150.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtSecretos
-                Text: 0/0
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                Name: btnReiniciar
+                Children:
+                    c88094e8da5bda4ed8fb265e222019c7: !Button ref!! c71b5507-deb8-4776-bc84-18c40f884129
+                    083030b6189734c68ea659f60a908b9c: !ImageElement ref!! f4112962-ee35-463a-a3c2-4bf1756fbc7b
+                    cac06d838ddbc0d5adc3fa9c43ea5a77: !TextBlock ref!! ecb0dbe2-a60a-499d-8389-5975bf97edd3
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: 7552fdbd-eeed-4cbe-8626-ec50d2417acd
                 DependencyProperties: {}
@@ -549,6 +513,21 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 79, G: 79, B: 255, A: 255}
                 StretchType: Fill
+        -   UIElement: !TextBlock
+                Id: 759ea8e0-0910-4abc-b4c4-fbe121cf98a1
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 30.0
+                Margin: {Right: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: lblTiempo
+                Text: Tiempo
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 25.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextAlignment: Right
         -   UIElement: !Button
                 Id: 76614c78-8f62-419a-949e-26d853f047f0
                 DependencyProperties: {}
@@ -587,6 +566,7 @@ Hierarchy:
                 Children:
                     a1c27a8786b254adfef7164629f7c808: !TextBlock ref!! 1d56c1b9-a79c-4ec1-9991-8c24b90f5ef3
                     4e08cd7a5c5dfcbd2e07998950cfe2e1: !Grid ref!! dc8a603d-84a0-4e0a-bf35-4d46a534e56e
+                    113aea6d4f1918786e0376a838d6928a: !Grid ref!! 6c625eaf-c0a1-439b-a127-66b7ba1a4b14
                     88861eed88d3ac32e16f49995cd0d510: !Grid ref!! 4245180b-2a8f-45a4-891f-1a4a538a8fa8
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -603,7 +583,7 @@ Hierarchy:
                 Name: PanelFinal
                 Children:
                     a1c27a8786b254adfef7164629f7c808: !TextBlock ref!! 40334597-99c1-48cc-b5dd-d7c6d4e80828
-                    efd2e8bb363a12d19a0c215491426d7b: !UniformGrid ref!! b673bff7-334d-4b95-abbc-5229038063c6
+                    574a792245d1b22b0661c3e5424ce47c: !TextBlock ref!! 989240e4-49fb-4428-93e5-eef3105242e8
                     7cd73d2daf2e0644ed9030cf8cfe68a5: !Grid ref!! ab350892-89fb-4c41-95a6-7e348ac78cca
                     79e92ad0a4ac476274a088de4e3919a8: !Grid ref!! a6566608-6c34-4490-b3d8-fbb099fb8b46
                 RowDefinitions: {}
@@ -680,7 +660,7 @@ Hierarchy:
                 Name: PanelMuerte
                 Children:
                     a1c27a8786b254adfef7164629f7c808: !TextBlock ref!! 595c244b-fd84-4d7e-9586-6cf40349b089
-                    efd2e8bb363a12d19a0c215491426d7b: !UniformGrid ref!! 2c406d1d-5c53-417f-99b7-297f28564d1d
+                    30c93cae451a83ef6600cd0c95da591f: !TextBlock ref!! ed2670cd-4534-4fec-aceb-574726c68fff
                     7cd73d2daf2e0644ed9030cf8cfe68a5: !Grid ref!! 0912d743-39a8-45f4-8e8e-55d91a788333
                     79e92ad0a4ac476274a088de4e3919a8: !Grid ref!! df90c397-6147-4891-86eb-ead9582f2246
                 RowDefinitions: {}
@@ -742,6 +722,23 @@ Hierarchy:
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !TextBlock
+                Id: 989240e4-49fb-4428-93e5-eef3105242e8
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 1280.0
+                Height: 40.0
+                VerticalAlignment: Top
+                Margin: {Top: 160.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtNivel
+                Text: 'E0M0: nombre nivel'
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 30.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextAlignment: Center
         -   UIElement: !ImageElement
                 Id: 98c4ba50-567b-4670-b872-c1e99881e33a
                 DependencyProperties: {}
@@ -837,20 +834,21 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 0, A: 255}
         -   UIElement: !TextBlock
-                Id: a9c9cfbe-09fc-4618-9715-22342026f0e3
+                Id: a851c8fb-5f01-4c23-81ee-259ae8cd5241
                 DependencyProperties:
-                    2658381c694afc63da4581d5dc8df08c~GridBase.ColumnPropertyKey: 1
-                    48d443ad87c7c7d252daa85c5dab4842~GridBase.RowPropertyKey: 1
+                    e1b8d7c5d7211c43b3e9e9b88e752d1e~GridBase.RowPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Left: 10.0}
+                Height: 30.0
+                Margin: {Right: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtEnemigos
-                Text: 00/00
+                Name: lblSecretos
+                Text: Secretos
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextAlignment: Right
         -   UIElement: !Grid
                 Id: ab350892-89fb-4c41-95a6-7e348ac78cca
                 DependencyProperties: {}
@@ -917,41 +915,6 @@ Hierarchy:
                     Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 255, B: 255, A: 255}
-        -   UIElement: !TextBlock
-                Id: b52aa88b-0329-4d05-b47c-331fe25c279a
-                DependencyProperties:
-                    e1b8d7c5d7211c43b3e9e9b88e752d1e~GridBase.RowPropertyKey: 2
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Right: 10.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: lblSecretos
-                Text: Secretos
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-                TextAlignment: Right
-        -   UIElement: !UniformGrid
-                Id: b673bff7-334d-4b95-abbc-5229038063c6
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 500.0
-                Height: 200.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: Datos
-                Children:
-                    1fb28bab155e18cf06d66c48ff228a0a: !TextBlock ref!! e6e7527d-a604-48fb-b7b8-985562c68d6f
-                    960cd027b30108f1d3a5f7bf6fdbcb08: !TextBlock ref!! f5784378-f1c9-4e21-a945-b0127d110873
-                    01dffbe2a005d0633af11ef59c999539: !TextBlock ref!! 3e2b1d0d-4015-4f8c-9d5a-26d805bccb10
-                    8c5dbcd38ad154e45559eaf5779226f8: !TextBlock ref!! 15670dd9-51b6-4e42-a0f0-6d3044d6987e
-                    9f898c64c6764dcf7c9bafc2de0694cf: !TextBlock ref!! b52aa88b-0329-4d05-b47c-331fe25c279a
-                    8a7582bcb5f33d4f29f52a18f770c2c6: !TextBlock ref!! ec6b594c-2325-46bb-ab03-93be6f56d281
-                Rows: 3
-                Columns: 2
         -   UIElement: !ImageElement
                 Id: baf2a7ef-6afe-469f-9263-cc969e1cc31e
                 DependencyProperties:
@@ -999,6 +962,16 @@ Hierarchy:
                     a6cf6be54fd09a0d764749f88de03bd1: !ImageElement ref!! a7e91ecc-496e-4549-8754-9a5682d39bbf
                 Rows: 3
         -   UIElement: !Button
+                Id: c71b5507-deb8-4776-bc84-18c40f884129
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+        -   UIElement: !Button
                 Id: c9830234-648b-466a-a12b-532f30843165
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -1038,19 +1011,21 @@ Hierarchy:
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
         -   UIElement: !TextBlock
-                Id: d7c8f7df-8427-479e-bdc5-0d1f73248c98
-                DependencyProperties: {}
+                Id: d7a64e16-e33d-43a0-b881-b20f5ddb9e24
+                DependencyProperties:
+                    2658381c694afc63da4581d5dc8df08c~GridBase.ColumnPropertyKey: 1
+                    48d443ad87c7c7d252daa85c5dab4842~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Right: 10.0}
+                Height: 30.0
+                Margin: {Left: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: lblTiempo
-                Text: Tiempo
+                Name: txtEnemigos
+                Text: 00/00
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
-                TextAlignment: Right
         -   UIElement: !Button
                 Id: da5714ef-4796-40b5-a3f0-b9cac8cfdc7e
                 DependencyProperties: {}
@@ -1098,7 +1073,7 @@ Hierarchy:
                 Width: 800.0
                 Height: 60.0
                 VerticalAlignment: Bottom
-                Margin: {Bottom: 150.0}
+                Margin: {Bottom: 250.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -1144,34 +1119,37 @@ Hierarchy:
                 Color: {R: 79, G: 79, B: 255, A: 255}
                 StretchType: Fill
         -   UIElement: !TextBlock
-                Id: e6e7527d-a604-48fb-b7b8-985562c68d6f
+                Id: ecb0dbe2-a60a-499d-8389-5975bf97edd3
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Right: 10.0}
+                Height: 30.0
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: lblTiempo
-                Text: Tiempo
+                Name: txtReiniciar
+                Text: Reintentar
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
-                TextAlignment: Right
+                TextAlignment: Center
         -   UIElement: !TextBlock
-                Id: ec6b594c-2325-46bb-ab03-93be6f56d281
-                DependencyProperties:
-                    d08c8a67af2548af04fffb8de4259de0~GridBase.ColumnPropertyKey: 1
-                    6f97dfb0c5f07a659401e96aad846531~GridBase.RowPropertyKey: 2
+                Id: ed2670cd-4534-4fec-aceb-574726c68fff
+                DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Left: 10.0}
+                Width: 1280.0
+                Height: 40.0
+                VerticalAlignment: Top
+                Margin: {Top: 160.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtSecretos
-                Text: 0/0
+                Name: txtNivel
+                Text: 'E0M0: nombre nivel'
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 25.0
+                TextSize: 30.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextAlignment: Center
         -   UIElement: !Grid
                 Id: ed970148-9451-495e-8f8b-f4f2099dd023
                 DependencyProperties:
@@ -1203,20 +1181,20 @@ Hierarchy:
                     Texture: 1f830b4b-c208-4476-8ee3-496236d0724c:Texturas/Armas/imgRifle
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
-        -   UIElement: !TextBlock
-                Id: f5784378-f1c9-4e21-a945-b0127d110873
-                DependencyProperties:
-                    4637f3e5d6d1ef2ef3921f12495e33fa~GridBase.ColumnPropertyKey: 1
+        -   UIElement: !ImageElement
+                Id: f4112962-ee35-463a-a3c2-4bf1756fbc7b
+                DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Left: 10.0}
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtTiempo
-                Text: 00:00:000
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 79, G: 79, B: 255, A: 255}
+                StretchType: Fill
         -   UIElement: !UniformGrid
                 Id: f9c55e83-016c-4bc2-9420-9cb93cdb0f34
                 DependencyProperties: {}
@@ -1250,3 +1228,18 @@ Hierarchy:
                     Texture: e99dfabe-bc63-4d5f-b04f-e132129de808:Texturas/Armas/imgEscopeta
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !TextBlock
+                Id: fb544970-5ed4-4c78-a8ea-53ddfa2a150d
+                DependencyProperties:
+                    4637f3e5d6d1ef2ef3921f12495e33fa~GridBase.ColumnPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 30.0
+                Margin: {Left: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtTiempo
+                Text: 00:00:000
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 25.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}

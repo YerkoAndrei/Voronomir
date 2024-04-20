@@ -16,8 +16,12 @@ public static class Constantes
     public enum Escenas
     {
         menú,
-        mundo,
-        jefe
+        //pruebas,
+        //supervivencia,
+        E1M1,
+        E1M2,
+        E1M3,
+        E1M4
     }
 
     public enum Armas

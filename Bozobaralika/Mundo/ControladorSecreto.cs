@@ -2,7 +2,6 @@
 using Stride.Engine;
 
 namespace Bozobaralika;
-using static Utilidades;
 
 public class ControladorSecreto : AsyncScript
 {
@@ -25,6 +24,6 @@ public class ControladorSecreto : AsyncScript
     private void Activar()
     {
         cuerpo.Enabled = false;
-        ControladorPartida.EncontrarSecreto();
+        ControladorPartida.SumarSecreto();
     }
 }

@@ -199,4 +199,15 @@ public static class Utilidades
         var fechaHora = fecha.ToString("yyyy-MM-ddThh:mm:ss");
         return fechaHora;
     }
+
+    public static string FormatearTiempo(float segundos)
+    {
+        var tiempo = TimeSpan.FromSeconds(segundos);
+        var formateado = tiempo.ToString(@"mm\:ss\:ff");
+
+        if(tiempo.TotalHours > 1)
+            formateado = tiempo.ToString(@"hh\:mm\:ss\:ff");
+
+        return formateado;
+    }
 }
