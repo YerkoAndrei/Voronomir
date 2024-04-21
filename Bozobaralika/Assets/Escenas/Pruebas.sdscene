@@ -4233,7 +4233,7 @@ Hierarchy:
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                                 ComputeTransmittance: false
                                 BiasParameters: {}
-                        Intensity: 10.0
+                        Intensity: 20.0
         -   Folder: null
             Entity:
                 Id: dea747ab-0908-49f6-aa22-64eedd2c96b9
