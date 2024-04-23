@@ -53,7 +53,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
             if (TocaJugador(colisión))
             {
                 // Daña jugador
-                dañable.RecibirDaño(daño);
+                dañable.RecibirDaño(daño, false);
                 Destruir();
             }
             else if (TocaEnemigo(colisión))
@@ -63,7 +63,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
                     continue;
 
                 // Daña enemigos un 50%
-                dañable.RecibirDaño(daño * 0.5f);
+                dañable.RecibirDaño(daño * 0.5f, false);
                 Destruir();
             }
             await Script.NextFrame();

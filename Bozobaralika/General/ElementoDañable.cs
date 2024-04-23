@@ -1,6 +1,7 @@
 ﻿using Stride.Core;
 using Stride.Core.Mathematics;
 using Stride.Engine;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Bozobaralika;
 using static Utilidades;
@@ -9,6 +10,7 @@ using static Constantes;
 public class ElementoDañable : StartupScript
 {
     public Entity controlador;
+    public bool inmunidadExplosión;
     public float multiplicador;
 
     [DataMemberIgnore]
@@ -27,8 +29,12 @@ public class ElementoDañable : StartupScript
             enemigo = Enemigos.nada;
     }
 
-    public void RecibirDaño(float daño)
+    public void RecibirDaño(float daño, bool explosión)
     {
+        // Explosiones solo dañan cuerpo principal
+        if (inmunidadExplosión == explosión)
+            return;
+
         interfaz.RecibirDaño(daño * multiplicador);
     }
 

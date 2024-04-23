@@ -67,7 +67,7 @@ public class ElementoExplosión : StartupScript, IImpacto
             if (dañable == null)
                 continue;
 
-            dañable.RecibirDaño(daño);
+            dañable.RecibirDaño(daño, true);
 
             // Empujar
             var dirección = dañable.Entity.Transform.WorldMatrix.TranslationVector - Entity.Transform.WorldMatrix.TranslationVector;

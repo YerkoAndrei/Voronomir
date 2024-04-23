@@ -44,6 +44,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: 065904a9-cfc8-43c1-8741-7a333479868f
                         controlador: ref!! 7a8e594f-2dc9-4757-9c8b-6ba499a42422
+                        "inmunidadExplosión": false
                         multiplicador: 1.0
         -   Folder: null
             Entity:

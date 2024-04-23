@@ -59,6 +59,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: 2e7169b7-b476-4f11-91f9-4c201c3fdc70
                         controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
+                        "inmunidadExplosión": true
                         multiplicador: 1.0
         -   Entity:
                 Id: 5984df18-147f-4744-a394-935be627a03e
@@ -77,9 +78,9 @@ Hierarchy:
                 Components:
                     1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
                         Id: b9304e97-1cb5-4620-a474-977619588ae6
-                        Position: {X: 0.0, Y: 0.25, Z: -1.1}
+                        Position: {X: 0.0, Y: 0.25, Z: -1.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 0.5, Z: 1.5}
+                        Scale: {X: 1.0, Y: 0.5, Z: 1.3}
                         Children: {}
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: 542a3a24-2b94-4dd7-a4ee-782c88e45c9a
@@ -108,6 +109,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: a01bcb72-8d8a-41a1-9b46-ce60a7c6550d
                         controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
+                        "inmunidadExplosión": true
                         multiplicador: 0.8
         -   Folder: null
             Entity:
@@ -212,9 +214,9 @@ Hierarchy:
                 Components:
                     1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
                         Id: 0140fde5-d500-4f7c-ae52-6df913e6c508
-                        Position: {X: 0.0, Y: 0.525, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.525, Z: -0.07}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.4, Y: 1.05, Z: 0.6}
+                        Scale: {X: 1.4, Y: 1.05, Z: 0.8}
                         Children: {}
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: fcaa9200-384e-431c-8afa-1d5e4c93c294
@@ -243,6 +245,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: abbbe5fc-5902-41a2-9a3f-843d1219fa51
                         controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
+                        "inmunidadExplosión": false
                         multiplicador: 0.9
         -   Folder: null
             Entity:
@@ -251,7 +254,7 @@ Hierarchy:
                 Components:
                     1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
                         Id: 4b23c0fe-22ad-47b7-b100-d0e20ea32e5c
-                        Position: {X: 0.0, Y: 1.32, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.31, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.8, Y: 0.5, Z: 0.6}
                         Children: {}
@@ -282,4 +285,5 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: 069be702-aeca-45f6-99d0-a4498c440bd3
                         controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
+                        "inmunidadExplosión": true
                         multiplicador: 0.9

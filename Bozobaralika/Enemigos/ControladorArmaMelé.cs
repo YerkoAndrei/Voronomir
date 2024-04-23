@@ -37,7 +37,7 @@ public class ControladorArmaMelé : StartupScript
             if (dañable == null)
                 continue;
 
-            dañable.RecibirDaño(daño);
+            dañable.RecibirDaño(daño, false);
         }
     }
 }

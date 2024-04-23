@@ -43,6 +43,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: c3654977-b51e-4399-a4b5-3fcdd6fa1030
                         controlador: ref!! d690be62-0e38-4c20-b3c6-2b570dbd4e93
+                        "inmunidadExplosión": true
                         multiplicador: 1.0
         -   Folder: null
             Entity:
@@ -252,6 +253,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: eda277fa-85ce-4103-a383-85d39a7a263a
                         controlador: ref!! d690be62-0e38-4c20-b3c6-2b570dbd4e93
+                        "inmunidadExplosión": false
                         multiplicador: 0.5
         -   Folder: null
             Entity:
@@ -291,6 +293,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: 7f3099f7-8b34-4984-99a0-d6783070880c
                         controlador: ref!! d690be62-0e38-4c20-b3c6-2b570dbd4e93
+                        "inmunidadExplosión": true
                         multiplicador: 0.1
         -   Entity:
                 Id: d690be62-0e38-4c20-b3c6-2b570dbd4e93

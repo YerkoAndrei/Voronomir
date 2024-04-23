@@ -245,6 +245,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: 9cb61b7b-8dc9-49c6-a12e-2dc1fdbe6635
                         controlador: ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
+                        "inmunidadExplosión": false
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -460,9 +461,9 @@ Hierarchy:
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
                         StepHeight: 0.25
-                        FallSpeed: 10.0
+                        FallSpeed: 20.0
                         MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 20.0
+                        JumpSpeed: 15.0
                         Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
@@ -730,6 +731,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: 283e1a13-5282-4cc9-81be-e952acd02ca7
                         controlador: ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
+                        "inmunidadExplosión": false
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -869,9 +871,9 @@ Hierarchy:
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
                         StepHeight: 0.25
-                        FallSpeed: 10.0
+                        FallSpeed: 20.0
                         MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 20.0
+                        JumpSpeed: 15.0
                         Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
@@ -2125,6 +2127,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: cd187482-eb94-489d-ba39-57e301e348bc
                         controlador: ref!! 03d7dac1-3bdd-4638-b544-75e00b4e55ec
+                        "inmunidadExplosión": false
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -3045,6 +3048,7 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Bozobaralika.ElementoDa%25C3%25B1able,Bozobaralika.Proyecto
                         Id: 546d67b6-8ea7-4100-92aa-ea4bb0d5c110
                         controlador: ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
+                        "inmunidadExplosión": false
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -4310,9 +4314,9 @@ Hierarchy:
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
                         StepHeight: 0.25
-                        FallSpeed: 10.0
+                        FallSpeed: 20.0
                         MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 20.0
+                        JumpSpeed: 15.0
                         Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
                         ColliderShapes:
                             ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc

@@ -45,7 +45,7 @@ public class ControladorDañoContinuo : AsyncScript
             if (dañable == null)
                 continue;
 
-            dañable.RecibirDaño(daño);
+            dañable.RecibirDaño(daño, false);
         }
     }
 }
