@@ -71,10 +71,6 @@ public class ElementoExplosión : StartupScript, IImpacto
 
             // Empujar
             var dirección = dañable.Entity.Transform.WorldMatrix.TranslationVector - Entity.Transform.WorldMatrix.TranslationVector;
-            
-            if(dirección.Y < 0)
-                dirección.Y = 0;
-
             dañable.Empujar(dirección);
         }
     }

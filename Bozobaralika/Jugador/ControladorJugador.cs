@@ -145,7 +145,7 @@ public class ControladorJugador : SyncScript, IDañable
 
     public void Empujar(Vector3 dirección)
     {
-        cuerpo.Jump(dirección * cuerpo.JumpSpeed);
+        cuerpo.Jump(dirección * (cuerpo.JumpSpeed * 0.8f));
     }
 
     private void Morir()

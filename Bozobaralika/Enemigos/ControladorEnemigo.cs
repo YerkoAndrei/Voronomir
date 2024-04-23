@@ -110,6 +110,10 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
 
     public void Empujar(Vector3 dirección)
     {
+        // Evita que salten tanto
+        dirección.Y *= 0.5f;
+        dirección.Y = MathUtil.Clamp(dirección.Y, 0, 2);
+
         cuerpo.Jump(dirección * cuerpo.JumpSpeed);
     }
 
