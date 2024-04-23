@@ -1,4 +1,5 @@
 ﻿using Stride.Core;
+using Stride.Core.Mathematics;
 using Stride.Engine;
 
 namespace Bozobaralika;
@@ -29,5 +30,10 @@ public class ElementoDañable : StartupScript
     public void RecibirDaño(float daño)
     {
         interfaz.RecibirDaño(daño * multiplicador);
+    }
+
+    public void Empujar(Vector3 dirección)
+    {
+        interfaz.Empujar(dirección);
     }
 }

@@ -143,6 +143,11 @@ public class ControladorJugador : SyncScript, IDañable
             Morir();
     }
 
+    public void Empujar(Vector3 dirección)
+    {
+        cuerpo.Jump(dirección * cuerpo.JumpSpeed);
+    }
+
     private void Morir()
     {
         // PENDIENTE: efectos

@@ -162,7 +162,7 @@ public class ControladorMovimiento : StartupScript
 
     private void Saltar()
     {
-        if(cuerpo.IsGrounded && !bloqueo)
+        if (cuerpo.IsGrounded && !bloqueo)
             cuerpo.Jump();
     }
 

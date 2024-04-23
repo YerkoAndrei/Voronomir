@@ -108,6 +108,11 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             Morir();
     }
 
+    public void Empujar(Vector3 dirección)
+    {
+        cuerpo.Jump(dirección * cuerpo.JumpSpeed);
+    }
+
     public bool ObtenerActivo()
     {
         return activo;

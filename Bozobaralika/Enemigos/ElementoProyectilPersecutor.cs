@@ -158,4 +158,9 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
         if (vida <= 0)
             Destruir();
     }
+
+    public void Empujar(Vector3 dirección)
+    {
+
+    }
 }
