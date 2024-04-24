@@ -39,6 +39,8 @@ public class Depurador : AsyncScript
 
         while (Game.IsRunning)
         {
+            DebugText.Print(Game.UpdateTime.FramePerSecond.ToString(), new Int2(x: 20, y: 20));
+
             if (Input.IsKeyPressed(Keys.T))
             {
                 var enemigo = zombi.Instantiate()[0];
