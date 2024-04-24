@@ -70,6 +70,29 @@ Hierarchy:
                         Id: 2138665c-fd1c-4a2f-8ad0-6a166a3c81c7
                         Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 01e52b5a-baac-4610-b6a4-b24c2348aeca
+                Name: "CámaraArmas"
+                Components:
+                    e65a81596fe695650289a9304d55af07: !TransformComponent
+                        Id: 4af6c699-e79f-4e3a-91bb-db8bd2bd77f9
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7104a1b2696edbfc5247e2e5587fd9ce: !CameraComponent
+                        Id: 792b70c6-59b8-43cf-b1de-a26fa757b6aa
+                        Name: null
+                        Projection: Perspective
+                        VerticalFieldOfView: 90.0
+                        FarClipPlane: 10.0
+                        AspectRatio: 1.777778
+                        Slot: f5a0a975-9bfa-45b7-aa78-2a07806d34bf
+            Base:
+                BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
+                BasePartId: 4624ce45-300f-49f0-a7bf-f9f236e8910d
+                InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Entity:
                 Id: 03d7dac1-3bdd-4638-b544-75e00b4e55ec
                 Name: Jugador
@@ -143,7 +166,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 335a61b7-96ff-4965-a76c-9c6d584b044a
                         Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
-                        RenderGroup: Group11
+                        RenderGroup: Group10
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -268,7 +291,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 4043f6d9-9b3e-4948-beb1-ac23d44e7c48
                         Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
-                        RenderGroup: Group11
+                        RenderGroup: Group10
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -390,6 +413,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 1ec15dbd-c871-4f5e-b556-fb190ee401bb
@@ -624,7 +648,7 @@ Hierarchy:
                 InstanceId: 938b33c4-b6af-4165-953d-b183bb31a5c8
         -   Entity:
                 Id: 160d9dd6-daad-4252-bd33-3998368f0820
-                Name: Disparo
+                Name: Fuego
                 Components:
                     a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
                         Id: a09ebb9b-ce94-43f6-99df-1a6588b8799c
@@ -637,6 +661,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: debdc7c8-0b4b-48b0-be96-d743a7e42616
@@ -851,6 +876,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 6a221535-0550-4e8b-b845-bc7cec0ebe9b
@@ -1213,6 +1239,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: fa3ac242-8c4a-4280-bf49-7bc27023351c
@@ -1279,6 +1306,130 @@ Hierarchy:
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
                 InstanceId: 814853e4-d0ae-458c-a2bf-8a7b59346bdc
         -   Entity:
+                Id: 3e01eee6-96c3-4630-999e-9c0ac932ee9c
+                Name: "Partículas"
+                Components:
+                    ab5f0ff33be84be4576ecc9600f312a1: !TransformComponent
+                        Id: 96b52cb3-a7ce-4c0a-85bf-c06c8ea9067c
+                        Position: {X: 0.0, Y: 0.2, Z: 0.0}
+                        Rotation: {X: -4.371139E-08, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.8, Y: 0.8, Z: 1.8}
+                        Children: {}
+                    e7b18cdc52fd5dbf42146476aa7acdb5: !ParticleSystemComponent
+                        Id: 880524ae-032e-401b-b636-022160907794
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 0.0, G: 0.0, B: 1.0, A: 0.39215687}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                0bb0b4d692dfa4ecbca6ad2d8b8f437d:
+                                    ParticleLifetime: {X: 0.8, Y: 0.8}
+                                    SortingPolicy: ByOrder
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Estrella
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        c8a001c7e85ef73c9c99b0cfbb90b6ec: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 12.0
+                                    Initializers:
+                                        104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.2}
+                                        74b5ec95eb237d0fbc6df36e211d7738: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: 0.0, Y: 1.0, Z: 0.0}
+                                            VelocityMax: {X: 0.0, Y: 4.0, Z: 0.0}
+                                        1b9625bd46999c9dbee4cd9348aba191: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 0.0, Z: 1.0}
+                                            Interpolate: false
+                                    Updaters:
+                                        51c45ad5981014c93840960c16f9955c: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        4bf50b8158aa20168b1243da627d62da:
+                                                            Key: 0.0
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        0b25ddd01aea87784a67e63f2a9747de:
+                                                            Key: 0.8
+                                                            Value: 0.8
+                                                            TangentType: Linear
+                                                        ddab55ab4fa0a214eb2fe0ad77430aa9:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+            Base:
+                BasePartAsset: "e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/EntornoDinámico/Saltador"
+                BasePartId: dd557b1f-094b-4fdd-876b-a3bb02567a13
+                InstanceId: 9a9ab826-c1a2-484c-87b5-e01fd29e4113
+        -   Entity:
                 Id: 3ec0146f-96c2-48b2-8543-33953943f31c
                 Name: Base
                 Components:
@@ -1298,7 +1449,7 @@ Hierarchy:
                 InstanceId: 1b4230e3-9a3b-4a38-bd20-539a23aeec6f
         -   Entity:
                 Id: 416744cb-032b-4e95-b1e0-110e327fca5d
-                Name: Disparo
+                Name: Fuego
                 Components:
                     a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
                         Id: df046c83-05ba-4894-8e36-7ba35962d28e
@@ -1311,6 +1462,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 20b2dabc-0cb3-430e-a286-cd4ae705787f
@@ -1438,7 +1590,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 4518117e-2dbe-423c-9312-028d6c941cdc
-                Name: Disparo
+                Name: Fuego
                 Components:
                     a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
                         Id: 20d208c4-67bc-4e1d-a627-ac54563404fe
@@ -1451,10 +1603,135 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: a5cff35c-2b91-4286-b8b4-7d7df69e6dbf
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
+        -   Entity:
+                Id: 45ab0d51-a5f2-4597-9099-c2a4ed2e6708
+                Name: "Partículas"
+                Components:
+                    ab5f0ff33be84be4576ecc9600f312a1: !TransformComponent
+                        Id: 92fdfd87-38f7-4775-92ad-bfd98843a229
+                        Position: {X: 0.0, Y: 0.2, Z: 0.0}
+                        Rotation: {X: -4.371139E-08, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.8, Y: 0.8, Z: 1.8}
+                        Children: {}
+                    e7b18cdc52fd5dbf42146476aa7acdb5: !ParticleSystemComponent
+                        Id: 26a18fad-9256-4ed3-88cc-5c8be38e38fd
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 0.0, G: 0.0, B: 1.0, A: 0.39215687}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                0bb0b4d692dfa4ecbca6ad2d8b8f437d:
+                                    ParticleLifetime: {X: 0.8, Y: 0.8}
+                                    SortingPolicy: ByOrder
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Estrella
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        c8a001c7e85ef73c9c99b0cfbb90b6ec: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 12.0
+                                    Initializers:
+                                        104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.2}
+                                        74b5ec95eb237d0fbc6df36e211d7738: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: 0.0, Y: 1.0, Z: 0.0}
+                                            VelocityMax: {X: 0.0, Y: 4.0, Z: 0.0}
+                                        1b9625bd46999c9dbee4cd9348aba191: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 0.0, Z: 1.0}
+                                            Interpolate: false
+                                    Updaters:
+                                        51c45ad5981014c93840960c16f9955c: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        4bf50b8158aa20168b1243da627d62da:
+                                                            Key: 0.0
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        0b25ddd01aea87784a67e63f2a9747de:
+                                                            Key: 0.8
+                                                            Value: 0.8
+                                                            TangentType: Linear
+                                                        ddab55ab4fa0a214eb2fe0ad77430aa9:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+            Base:
+                BasePartAsset: "e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/EntornoDinámico/Saltador"
+                BasePartId: dd557b1f-094b-4fdd-876b-a3bb02567a13
+                InstanceId: 30b2e4fe-e6bd-49ef-9a1c-6cdcb9e5bac1
         -   Entity:
                 Id: 462326ab-42df-41f7-8f4a-252f4df065e4
                 Name: Ojo
@@ -1501,6 +1778,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: c983ceb7-7b9d-4ce7-95f0-5da0322022a6
                         Model: 8446cdd3-3139-4136-a668-41cb01e8aa8c:Modelos/Armas/Lanzagranadas/RPG-2
+                        RenderGroup: Group10
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -1605,6 +1883,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 046e1357-852b-491d-b00a-9f3198b6cd84
@@ -1734,7 +2013,7 @@ Hierarchy:
                 InstanceId: 91936035-e6c7-4a81-876c-78ea8e419df0
         -   Entity:
                 Id: 5c6aeca6-1b6d-4562-9bb4-89be7001444c
-                Name: Disparo
+                Name: Fuego
                 Components:
                     a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
                         Id: b1f34143-30ba-4cf6-a78d-944fe164d91d
@@ -1747,6 +2026,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: b5498599-9678-4cbd-a50a-c345377df315
@@ -2048,6 +2328,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: f10d2475-185f-4c3e-9813-427d4150de9f
@@ -2066,6 +2347,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 13a45c8e-0f44-45b3-ba71-5fc80a58c07a
                         Model: 8446cdd3-3139-4136-a668-41cb01e8aa8c:Modelos/Armas/Lanzagranadas/RPG-2
+                        RenderGroup: Group10
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -2162,6 +2444,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 71fe88b4-39ee-48cc-9226-8fdc0619f6d3
+                            98f4094d9d6688a94511bb78bcb26a33: ref!! 92fdfd87-38f7-4775-92ad-bfd98843a229
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: d66402d2-3c24-49c4-b386-5312c8345162
                         CollisionGroup: SensorTrigger
@@ -2445,6 +2728,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 4a85f05e-ee90-42e6-bb21-70bfe3b94b7f
@@ -2597,6 +2881,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: a797918f-0191-4c40-a2ce-1809dc134eca
@@ -2671,6 +2956,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! d811575a-4b20-4860-9c65-1f82abb729e8
+                            5f73a64969db40e65a8f7cf572b85272: ref!! 96b52cb3-a7ce-4c0a-85bf-c06c8ea9067c
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: 1bb677eb-8ad7-4e82-a342-7834fffb7527
                         CollisionGroup: SensorTrigger
@@ -2812,6 +3098,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 2040daa6-49ab-4794-bdd5-37e4fde3c568
@@ -2873,7 +3160,7 @@ Hierarchy:
                 InstanceId: b7aa5ff0-129f-49d4-b606-fd1b945a7c67
         -   Entity:
                 Id: 9bef6adf-130b-42eb-b747-b13d594dc1fe
-                Name: Disparo
+                Name: Fuego
                 Components:
                     a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
                         Id: 8bb90175-a1ef-48ef-95b6-e33f449f418f
@@ -2886,6 +3173,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: e1f6681a-f5c0-4a3c-83b5-6b117a74df1c
@@ -3006,6 +3294,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: c4d72591-362b-4f02-a4ab-6166c7e4df26
@@ -3154,7 +3443,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 6907a481-3236-4a4b-bb02-43c744cdf9cd
                         Model: 08980e3d-c7cb-48a0-8d63-198c7163f769:Modelos/Armas/Escopeta/MC-6
-                        RenderGroup: Group11
+                        RenderGroup: Group10
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -3375,6 +3664,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 147e9c1b-6e08-4fa2-8b4a-a4f0b80d0ed8
@@ -3481,7 +3771,7 @@ Hierarchy:
                 InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
         -   Entity:
                 Id: baf51a25-2f54-4bb8-922a-f40740af2e23
-                Name: Disparo
+                Name: Fuego
                 Components:
                     a52c8e9eaf9049696c601b4113c617ce: !TransformComponent
                         Id: 0ff71874-9ec3-43f1-9ee0-35416d192273
@@ -3494,6 +3784,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 1db03233-9b09-47d5-a47a-0b5d2d4c84bf
@@ -3512,7 +3803,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: f2af7d0f-c79e-4338-919e-c76179d02eda
                         Model: af94209d-bf15-4fe0-be2a-de8f4f8d2b4a:Modelos/Armas/Espada/Shashka
-                        RenderGroup: Group11
+                        RenderGroup: Group10
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -3733,6 +4024,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 3594fe7c-b7ec-48ee-832c-00fde6ed809f
@@ -4186,6 +4478,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             36d3c59ff298eb8b6306d66d61ab4b87: ref!! 345b3b5b-70c4-44ff-96c1-3c413c53637f
+                            8450c4deff1f001f63642d3412f089a4: ref!! 4af6c699-e79f-4e3a-91bb-db8bd2bd77f9
                             552bd7eeb9cd7c467b1826c5779ccb70: ref!! d25f00d3-fa29-46ea-95a2-8da2ee6fe74b
                             8452a0c16a9ea414407864b8b8c87048: ref!! 2ef79e8f-d3d3-4b7f-8f56-057ea0e02541
                             6a29955c10063a64daa1d56f368541fa: ref!! 98e3af2e-af22-4c0b-bd8d-45587e0054fb
@@ -4376,7 +4669,7 @@ Hierarchy:
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: d2b354d8-94a5-4b66-9fae-aa7814560104
                         Model: 53769a50-21f0-4a6e-a207-518d4b9bbf96:Modelos/Jugador/Geroi
-                        RenderGroup: Group10
+                        RenderGroup: Group11
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -4440,7 +4733,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: 1915ab6d-9a7b-4c51-a495-c7c23d1b5dba
                         Model: af94209d-bf15-4fe0-be2a-de8f4f8d2b4a:Modelos/Armas/Espada/Shashka
-                        RenderGroup: Group11
+                        RenderGroup: Group10
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -4577,6 +4870,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: e3ffef3f-7d1d-44bb-b143-6ecceeb66783
@@ -4616,7 +4910,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: bfb418d1-88c7-456a-a872-32e9f6511cec
                         Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
-                        RenderGroup: Group11
+                        RenderGroup: Group10
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -4798,7 +5092,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: c6e611e2-6a2c-4d72-af82-64a695cf67e1
                         Model: 08980e3d-c7cb-48a0-8d63-198c7163f769:Modelos/Armas/Escopeta/MC-6
-                        RenderGroup: Group11
+                        RenderGroup: Group10
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -4821,7 +5115,7 @@ Hierarchy:
                     5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
                         Id: e9b407b3-4230-4e83-a8d1-18116a4dc6a1
                         Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
-                        RenderGroup: Group11
+                        RenderGroup: Group10
                         Materials: {}
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
