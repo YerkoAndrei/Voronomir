@@ -133,9 +133,7 @@ SharedRenderers:
             Id: 4bc4b2ca-027e-4e4a-94cb-2912709bef5f
             ClearFlags*: ColorOnly
             Color*: {R: 0.40392157, G: 0.4117647, B: 0.43529412, A: 1.0}
-            Depth*: 0.0
-            Stencil*: 0
-        LightProbes*: true
+        LightProbes: true
         OpaqueRenderStage: ref!! ee3f3531-74a9-42e2-9a9a-420d66f88cc5
         TransparentRenderStage: ref!! b1fe86cb-ef8f-48ca-82e6-e45738f6e7bc
         ShadowMapRenderStages:
@@ -143,7 +141,7 @@ SharedRenderers:
             87ff1d9cdd52418daf76385176a0e316: ref!! 26635cc2-6f1a-4ade-8679-84f976e0d6eb
             5e059d4cc2db4ee8a1f28a40f4ac3ae8: ref!! 626ab94c-2cbd-4fb1-b5d8-109d7fa603c8
         GBufferRenderStage: ref!! 59f1d4bd-e661-4f85-9c66-7bc9759f9e85
-        PostEffects*: !PostProcessingEffects ref!! 39713196-3f2e-4a55-b898-f671814700bd
+        PostEffects: !PostProcessingEffects ref!! 39713196-3f2e-4a55-b898-f671814700bd
         LightShafts: null
         VRSettings:
             Enabled: false
@@ -192,7 +190,7 @@ SharedRenderers:
             FogStart: 10.0
             SkipBackground: false
         AmbientOcclusion:
-            Enabled: false
+            Enabled*: true
         LocalReflections:
             Enabled: false
             ResolvePassResolution: Full
@@ -218,7 +216,8 @@ SharedRenderers:
                 e86e22e9a5d65545b8b55fca26e0afee: !Vignetting
                     Enabled: false
                     Color: {R: 0.0, G: 0.0, B: 0.0}
-        Antialiasing: !FXAAEffect {}
+        Antialiasing: !FXAAEffect
+            Enabled*: false
     ee80a20a9bd99f2d70711114e15fe7ca: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering
         Id: c9d050fa-b997-4e0b-8bdc-382178c0c85b
         DebugRenderStages: {}
