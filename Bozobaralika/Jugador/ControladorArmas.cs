@@ -326,7 +326,7 @@ public class ControladorArmas : StartupScript
         ControladorCofres.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
 
         if (armaActual == Armas.metralleta)
-            controlador.VibrarCámara(0.6f, 4);
+            controlador.VibrarCámara(0.4f, 4);
     }
 
     private void CalcularRayoPenetrante()
@@ -362,9 +362,6 @@ public class ControladorArmas : StartupScript
             var dañable = resultado.Collider.Entity.Get<ElementoDañable>();
             if (dañable == null)
                 continue;
-
-            // Retroalimentación daño
-            controlador.VibrarCámara(4f, 4);
 
             // PENDIENTE: efecto
             // Daño segun distancia
