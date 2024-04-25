@@ -7,9 +7,6 @@ Cameras:
     de2e75c3b2b23e54162686363f3f138e:
         Id: 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
         Name: Main
-    6d3945a69833125d221aad8ccc111ba9*:
-        Id: f5a0a975-9bfa-45b7-aa78-2a07806d34bf
-        Name: Armas
 RenderStages:
     47116750c1a5d449b4ad3625f71439b3:
         Id: ee3f3531-74a9-42e2-9a9a-420d66f88cc5
@@ -256,7 +253,7 @@ Game*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
             RenderMask: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9
         9b1fc22f7ff978e9fa4ca6360d7a867d: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
             Id: 76aa7799-ae16-41fe-85f6-c59fa7dcb5e7
-            Camera: ref!! f5a0a975-9bfa-45b7-aa78-2a07806d34bf
+            Camera: ref!! 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
             Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! e394fb1f-8a8d-4123-b5da-b1792dd479e9
             RenderMask: Group10
         825e4b5b142dc3b9fe44a9a85abbb7bf: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine

@@ -83,6 +83,7 @@ Hierarchy:
                         Children: {}
                     7104a1b2696edbfc5247e2e5587fd9ce: !CameraComponent
                         Id: 792b70c6-59b8-43cf-b1de-a26fa757b6aa
+                        Enabled: false
                         Name: null
                         Projection: Perspective
                         VerticalFieldOfView: 90.0

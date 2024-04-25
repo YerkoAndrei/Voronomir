@@ -718,25 +718,6 @@ Hierarchy:
                         "partículasMetralletaDerecha": ref!! f8884bf6-3902-43da-9cc8-2623226fcfcf
         -   Folder: null
             Entity:
-                Id: 4624ce45-300f-49f0-a7bf-f9f236e8910d
-                Name: "CámaraArmas"
-                Components:
-                    e65a81596fe695650289a9304d55af07: !TransformComponent
-                        Id: 87d64ca6-463d-489d-be65-cd3c88e24ebb
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    7104a1b2696edbfc5247e2e5587fd9ce: !CameraComponent
-                        Id: 3cf60211-e73f-4729-bcc4-1397782500f8
-                        Name: null
-                        Projection: Perspective
-                        VerticalFieldOfView: 90.0
-                        FarClipPlane: 10.0
-                        AspectRatio: 1.777778
-                        Slot: f5a0a975-9bfa-45b7-aa78-2a07806d34bf
-        -   Folder: null
-            Entity:
                 Id: 4712e9b1-87fa-41b6-b2b3-d403e75a85ec
                 Name: Derecha
                 Components:
@@ -1193,7 +1174,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             36d3c59ff298eb8b6306d66d61ab4b87: ref!! 5d1615c0-a8a8-4046-bad2-a4820162f132
-                            fa5cf8de6cbe3b0fe5af59b2ad99df49: ref!! 87d64ca6-463d-489d-be65-cd3c88e24ebb
                             5ef5258fa6b642c15f78762a98f06373: ref!! 523c31a1-adf0-402c-ab97-705af9da8482
                             8452a0c16a9ea414407864b8b8c87048: ref!! 336c61ff-b418-4e99-9fe0-44842a32fccb
                             6a29955c10063a64daa1d56f368541fa: ref!! 6064f21e-a27c-4b3c-9b56-0b5f2a872e10
