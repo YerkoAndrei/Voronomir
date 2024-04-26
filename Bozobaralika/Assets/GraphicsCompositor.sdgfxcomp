@@ -132,7 +132,8 @@ SharedRenderers:
         Clear:
             Id: 4bc4b2ca-027e-4e4a-94cb-2912709bef5f
             ClearFlags*: ColorOnly
-            Color*: {R: 0.40392157, G: 0.4117647, B: 0.43529412, A: 1.0}
+            Color*: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Depth*: 0.0
         LightProbes: true
         OpaqueRenderStage: ref!! ee3f3531-74a9-42e2-9a9a-420d66f88cc5
         TransparentRenderStage: ref!! b1fe86cb-ef8f-48ca-82e6-e45738f6e7bc
@@ -156,7 +157,7 @@ SharedRenderers:
         Clear:
             Id: 66a42307-1985-4316-871a-768449238c11
             Enabled*: true
-            ClearFlags*: DepthOnly
+            ClearFlags*: ColorAndDepth
             Color*: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         LightProbes*: false
         OpaqueRenderStage: ref!! ee3f3531-74a9-42e2-9a9a-420d66f88cc5
@@ -226,7 +227,7 @@ SharedRenderers:
         Clear:
             Id: 5e3de075-6056-48d9-b35d-b8183a99cf9c
             ClearFlags: DepthOnly
-            Color: {R: 0.40392157, G: 0.4117647, B: 0.43529412, A: 1.0}
+            Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         LightProbes: false
         OpaqueRenderStage: ref!! ee3f3531-74a9-42e2-9a9a-420d66f88cc5
         TransparentRenderStage: ref!! b1fe86cb-ef8f-48ca-82e6-e45738f6e7bc
