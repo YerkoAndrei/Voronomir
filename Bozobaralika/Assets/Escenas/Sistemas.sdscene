@@ -45,7 +45,7 @@ Hierarchy:
                         compositorAlto: null
                     07702f8ed2638a99dbc80e83c0e49883: !UIComponent
                         Id: ed2e1c72-019f-402e-b24b-5033cf5fd0d5
-                        Page: 332c8334-a4ec-41e0-9ce9-f970181eaade:Interfaz/Escenas
+                        Page: 332c8334-a4ec-41e0-9ce9-f970181eaade:Interfaz/Sistema
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
                         ResolutionStretch: FixedHeightAdaptableWidth
