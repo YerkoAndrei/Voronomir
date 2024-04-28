@@ -114,7 +114,7 @@ public class ControladorCofres : StartupScript
             Entity.Scene.Entities.Add(impacto);
         }
 
-        // Dron
+        // Babosa
         proyectilesBabosa = new IProyectil[maxProyectilesBabosa];
         for (int i = 0; i < maxProyectilesBabosa; i++)
         {
