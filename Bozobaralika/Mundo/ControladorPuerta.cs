@@ -6,13 +6,19 @@ namespace Bozobaralika;
 
 public class ControladorPuerta : StartupScript, IActivable
 {
+    public int activaciones;
     public TransformComponent modelo;
     public Vector3 posiciónAbierta;
+
+    private int activadas;
 
     public void Activar()
     {
         // PENDIENTE: efectos
-        AnimarPuerta();
+        activadas++;
+
+        if(activadas >= activaciones)
+            AnimarPuerta();
     }
 
     private async void AnimarPuerta()

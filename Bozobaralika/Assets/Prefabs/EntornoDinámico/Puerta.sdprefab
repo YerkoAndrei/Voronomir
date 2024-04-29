@@ -19,6 +19,7 @@ Hierarchy:
                             974930f89f5418aadc8036b440d5a6c6: ref!! a5c3a2ac-019e-49bd-aad9-4f37c7d8ea68
                     288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: d5713461-3d5a-438b-af78-c3a05cfc4543
+                        activaciones: 1
                         modelo: ref!! a5c3a2ac-019e-49bd-aad9-4f37c7d8ea68
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
         -   Folder: null
