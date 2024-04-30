@@ -310,7 +310,6 @@ public class ControladorArmas : StartupScript
         if (dañable == null)
             return;
 
-        // PENDIENTE: efecto
         // Daño segun distancia
         var distancia = Vector3.Distance(cámara.Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
         var reducción = 0f;
@@ -363,7 +362,6 @@ public class ControladorArmas : StartupScript
             if (dañable == null)
                 continue;
 
-            // PENDIENTE: efecto
             // Daño segun distancia
             var distancia = Vector3.Distance(cámara.Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
             var aumento = 0f;

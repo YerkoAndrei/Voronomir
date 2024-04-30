@@ -18,6 +18,7 @@ public class ControladorMovimiento : StartupScript
     // Movimiento
     private Vector3 entradas;
     private Vector3 movimiento;
+    private float velocidadBase;
     private float multiplicadorVelocidad;
     private bool caminando;
     private bool detención;
@@ -57,7 +58,8 @@ public class ControladorMovimiento : StartupScript
         maxVelocidad = 1.5f;
 
         CambiarSensiblidad(false);
-        multiplicadorVelocidad = ObtenerMultiplicadorVelocidad();
+        velocidadBase = 10f;
+        multiplicadorVelocidad = velocidadBase;
     }
 
     public void ActualizarEntradas()
@@ -126,7 +128,7 @@ public class ControladorMovimiento : StartupScript
             movimiento.Y = 0;
             movimiento.Normalize();
 
-            cuerpo.SetVelocity(movimiento * 10 * multiplicadorVelocidad * aceleración);
+            cuerpo.SetVelocity(movimiento * multiplicadorVelocidad * aceleración);
         }
 
         // Rotación
@@ -172,19 +174,13 @@ public class ControladorMovimiento : StartupScript
             return;
 
         caminando = true;
-        multiplicadorVelocidad = ObtenerMultiplicadorVelocidad() * 0.25f;
+        multiplicadorVelocidad = velocidadBase * 0.25f;
     }
 
     private void DesactivarCaminar()
     {
         caminando = false;
-        multiplicadorVelocidad = ObtenerMultiplicadorVelocidad();
-    }
-
-    private float ObtenerMultiplicadorVelocidad()
-    {
-        // PENDIENTE: mejoras
-        return 1;
+        multiplicadorVelocidad = velocidadBase;
     }
 
     public bool ObtenerEnSuelo()
