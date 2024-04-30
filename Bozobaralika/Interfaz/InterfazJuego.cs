@@ -168,6 +168,7 @@ public class InterfazJuego : SyncScript
 
     private void EnClicReiniciar()
     {
+        ControladorCofres.ApagarFísicas();
         SistemaEscenas.CambiarEscena(ControladorPartida.ObtenerEscena());
     }
 
@@ -178,6 +179,7 @@ public class InterfazJuego : SyncScript
 
     private void EnClicSalir()
     {
+        ControladorCofres.ApagarFísicas();
         SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 

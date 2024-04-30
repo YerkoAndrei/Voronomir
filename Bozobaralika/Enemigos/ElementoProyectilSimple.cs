@@ -68,13 +68,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
         }
     }
 
-    public void Destruir()
-    {
-        ControladorCofres.IniciarEfectoEnemigo(disparador, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
-        Apagar();
-    }
-
-    private void Apagar()
+    public void Apagar()
     {
         cuerpo.LinearVelocity = Vector3.Zero;
         modelo.Enabled = false;
@@ -83,6 +77,12 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
 
         if (partícula != null)
             partícula.Enabled = false;
+    }
+
+    public void Destruir()
+    {
+        ControladorCofres.IniciarEfectoEnemigo(disparador, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
+        Apagar();
     }
 
     public void IniciarPersecutor(float _velocidadRotación, Vector3 _altura)

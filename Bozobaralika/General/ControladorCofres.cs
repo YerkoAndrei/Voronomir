@@ -270,4 +270,28 @@ public class ControladorCofres : StartupScript
                 break;
         }
     }
+
+    public static void ApagarFísicas()
+    {
+        for (int i = 0; i < maxGranadas; i++)
+        {
+            // Granadas
+            granadas[i].Apagar();
+        }
+        for (int i = 0; i < maxProyectilesDron; i++)
+        {
+            // Dron
+            proyectilesDron[i].Apagar();
+        }
+        for (int i = 0; i < maxProyectilesBabosa; i++)
+        {
+            // Babosa
+            proyectilesBabosa[i].Apagar();
+        }
+        for (int i = 0; i < maxProyectilesAraña; i++)
+        {
+            // Araña
+            proyectilesAraña[i].Apagar();
+        }
+    }
 }

@@ -22,7 +22,7 @@ public class ElementoGranada : AsyncScript, IProyectil
     public override async Task Execute()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
-        Destruir();
+        Apagar();
 
         while (Game.IsRunning)
         {
@@ -37,13 +37,18 @@ public class ElementoGranada : AsyncScript, IProyectil
         }
     }
 
-    public void Destruir()
+    public void Apagar()
     {
         partícula.Enabled = false;
         cuerpo.LinearVelocity = Vector3.Zero;
         modelo.Enabled = false;
         cuerpo.IsKinematic = true;
         cuerpo.Enabled = false;
+    }
+
+    public void Destruir()
+    {
+        Apagar();
     }
 
     public void IniciarPersecutor(float _velocidadRotación, Vector3 _altura)
