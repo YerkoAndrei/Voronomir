@@ -231,9 +231,11 @@ public class ControladorMovimiento : StartupScript
     public void CambiarSensiblidad(bool reducir)
     {
         // PENDIENTE: ajustes
+        var sensibilidadBase = 1f;
+
         if (reducir)
-            sensibilidad = 0.4f;
+            sensibilidad = sensibilidadBase * 0.4f;
         else
-            sensibilidad = 1f;
+            sensibilidad = sensibilidadBase;
     }
 }
