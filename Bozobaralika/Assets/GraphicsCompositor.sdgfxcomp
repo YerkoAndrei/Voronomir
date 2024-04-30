@@ -165,7 +165,6 @@ SharedRenderers:
         Clear:
             Id: 66a42307-1985-4316-871a-768449238c11
             Enabled*: true
-            ClearFlags*: ColorAndDepth
             Color*: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         LightProbes*: false
         OpaqueRenderStage: ref!! ee3f3531-74a9-42e2-9a9a-420d66f88cc5
@@ -174,8 +173,8 @@ SharedRenderers:
             5c382f66ee524c498d26d9aaf19fc9c3: ~(Deleted)
             2323a99a8a983e182f318e55604659b0: ~(Deleted)
             61b557b74893400898c007d5ece5e87f: ~(Deleted)
-        GBufferRenderStage*: ref!! 59f1d4bd-e661-4f85-9c66-7bc9759f9e85
-        PostEffects*: null
+        GBufferRenderStage: ref!! 59f1d4bd-e661-4f85-9c66-7bc9759f9e85
+        PostEffects: null
         LightShafts: null
         VRSettings:
             Enabled: false
