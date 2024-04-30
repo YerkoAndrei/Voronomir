@@ -9,22 +9,27 @@ Hierarchy:
         - !Grid ref!! a0c880f9-1ca3-40aa-90f5-c0321eaa6f28
     Parts:
         -   UIElement: !Grid
+                Id: 8d7c0f98-06e8-4503-a661-3ce8c888ebf2
+                DependencyProperties:
+                    5132757c74b0ba0e90375368e42509b4~Panel.ZIndexPropertyKey: 10
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 255}
+                Opacity: 0.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: PanelOscuro
+                Children: {}
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
                 Id: a0c880f9-1ca3-40aa-90f5-c0321eaa6f28
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
                 Children:
-                    b5dd14726eef777167d29b19127f1567: !Grid ref!! c73d2998-7e5d-433c-9749-140001324a88
-                RowDefinitions: {}
-                ColumnDefinitions: {}
-                LayerDefinitions: {}
-        -   UIElement: !Grid
-                Id: c73d2998-7e5d-433c-9749-140001324a88
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {}
-                Name: PanelOscuro
-                Children: {}
+                    20bbbd9029b9269e62ac7a650eb459fd: !Grid ref!! 8d7c0f98-06e8-4503-a661-3ce8c888ebf2
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}

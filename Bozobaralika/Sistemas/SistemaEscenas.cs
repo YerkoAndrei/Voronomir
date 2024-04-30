@@ -22,11 +22,11 @@ public class SistemaEscenas : AsyncScript
 
     private static Escenas siguienteEscena;
     private static Scene escenaActual;
-    private static bool animando;
+    private static bool abriendo;
+    private static bool ocultando;
 
     private Grid panelOscuro;
     private ImageElement imgCursor;
-    private float duraciónLerp;
 
     public override async Task Execute()
     {
@@ -44,11 +44,11 @@ public class SistemaEscenas : AsyncScript
         var alto = int.Parse(resolución[1]);
         CambiarPantalla(pantallaCompleta, ancho, alto);
         */
-        // Predeterminado
-        duraciónLerp = 0.2f;
 
+        // Predeterminado
         var página = Entity.Get<UIComponent>().Page.RootElement;
         panelOscuro = página.FindVisualChildOfType<Grid>("PanelOscuro");
+        panelOscuro.Opacity = 0;
 
         escenaActual = Content.Load(escenaMenú);
         Entity.Scene.Children.Add(escenaActual);
@@ -60,10 +60,44 @@ public class SistemaEscenas : AsyncScript
         //Game.Window.IsMouseVisible = false;
         //imgCursor = página.FindVisualChildOfType<ImageElement>("imgCursor");
 
+        var duraciónOcultar = 0.2f;
+        var duraciónAbrir = 0.4f;
+        var tiempoLerp = 0f;
+        var tiempo = 0f;
+
         while (Game.IsRunning)
         {
             // Cursor es una imagen
             //PosicionarCursor();
+            if (ocultando)
+            {
+                tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duraciónOcultar);
+                panelOscuro.Opacity = MathUtil.Lerp(0f, 1f, tiempo);
+                tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+
+                // Fin
+                if (tiempoLerp >= duraciónOcultar)
+                {
+                    tiempo = 0;
+                    tiempoLerp = 0;
+                    CargarEscena();
+                }
+            }
+
+            if (abriendo)
+            {
+                tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duraciónAbrir);
+                panelOscuro.Opacity = MathUtil.Lerp(1f, 0f, tiempo);
+                tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+
+                // Fin
+                if (tiempoLerp >= duraciónAbrir)
+                {
+                    panelOscuro.Opacity = 0;
+                    panelOscuro.CanBeHitByUser = false;
+                    abriendo = false;
+                }
+            }
             await Script.NextFrame();
         }
     }
@@ -109,35 +143,22 @@ public class SistemaEscenas : AsyncScript
 
     public static void CambiarEscena(Escenas escena)
     {
-        if (animando)
+        if (ocultando || abriendo)
             return;
 
-        instancia.panelOscuro.BackgroundColor = Color.Transparent;
+        instancia.panelOscuro.Opacity = 0;
         instancia.panelOscuro.CanBeHitByUser = true;
 
         siguienteEscena = escena;
-        animando = true;
-
-        instancia.CargarEscena();
+        abriendo = false;
+        ocultando = true;
     }
 
     private async void CargarEscena()
     {
-        // Panel oscuro
-        float tiempoLerp = 0;
-        float tiempo = 0;
-
-        while (tiempoLerp < duraciónLerp)
-        {
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duraciónLerp);
-            panelOscuro.BackgroundColor = Color.Lerp(Color.Transparent, Color.Black, tiempo);
-
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Task.Delay(1);
-        }
-
         // Fin Lerp
-        panelOscuro.BackgroundColor = Color.Black;
+        ocultando = false;
+        panelOscuro.Opacity = 1;
 
         // Descarga
         Content.Unload(escenaActual);
@@ -152,30 +173,13 @@ public class SistemaEscenas : AsyncScript
 
         // Carga
         Entity.Scene.Children.Add(escenaActual);
-
-        // Retraso predeterminado
         await Task.Delay(200);
-
-        // Panel oscuro
-        tiempoLerp = 0;
-        tiempo = 0;
-
-        while (tiempoLerp < duraciónLerp)
-        {
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duraciónLerp);
-            panelOscuro.BackgroundColor = Color.Lerp(Color.Transparent, Color.Black, tiempo);
-
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Task.Delay(1);
-        }
 
         // Traduciones
         SistemaTraducción.ActualizarTextosEscena();
 
-        // Fin Lerp
-        panelOscuro.BackgroundColor = Color.Transparent;
-        panelOscuro.CanBeHitByUser = false;
-        animando = false;
+        // Inicio Lerp
+        abriendo = true;
     }
 
     public static GraphicsCompositor ObtenerGráficos(NivelesConfiguración nivel)
