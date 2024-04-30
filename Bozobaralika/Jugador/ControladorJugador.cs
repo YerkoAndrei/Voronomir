@@ -22,6 +22,7 @@ public class ControladorJugador : SyncScript, IDañable
     private InterfazJuego interfaz;
 
     private Vector3 posiciónCabeza;
+    private bool vibrando;
     private bool curando;
     private float vida;
     private float vidaMax;
@@ -241,8 +242,16 @@ public class ControladorJugador : SyncScript, IDañable
         }
     }
 
-    public void VibrarCámara(float fuerza, int iteraciones)
+    public async void VibrarCámara(float fuerza, int iteraciones)
     {
+        if (vibrando)
+        {
+            // Cancela vibración actual para iniciar nueva
+            vibrando = false;
+            await Task.Delay(2);
+        }
+
+        vibrando = true;
         var duración = 0.01f;
         RotarCámara(duración, fuerza, iteraciones);
 
@@ -284,7 +293,7 @@ public class ControladorJugador : SyncScript, IDañable
             float tiempoLerp = 0;
             float tiempo = 0;
 
-            while (tiempoLerp < duración)
+            while (tiempoLerp < duración && vibrando)
             {
                 tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
                 cámara.Entity.Transform.Rotation = Quaternion.Lerp(inicial, objetivo, tiempo);
@@ -294,6 +303,7 @@ public class ControladorJugador : SyncScript, IDañable
             }
         }
         cámara.Entity.Transform.Rotation = rotaciónCabeza;
+        vibrando = false;
     }
 
     private async void MoverCámara(float duración, float fuerza)
@@ -321,7 +331,7 @@ public class ControladorJugador : SyncScript, IDañable
         float tiempoLerp = 0;
         float tiempo = 0;
 
-        while (tiempoLerp < duración)
+        while (tiempoLerp < duración && vibrando)
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             cabeza.Position = Vector3.Lerp(inicio, objetivo, tiempo);
