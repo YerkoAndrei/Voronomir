@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Physics;
@@ -44,6 +45,7 @@ public class ControladorArmas : StartupScript
     private float últimoDisparoRifle;
     private float últimoDisparoLanzagranadas;
 
+    private CancellationTokenSource tokenLuz;
     private bool cambiandoArma;
     private bool usandoMira;
 
@@ -100,6 +102,7 @@ public class ControladorArmas : StartupScript
         interfaz.CambiarMira(armaActual);
         interfaz.CambiarÍcono(armaActual);
 
+        tokenLuz = new CancellationTokenSource();
         luzDisparo.Enabled = false;
         partículasMetralletaIzquierda.Enabled = false;
         partículasMetralletaDerecha.Enabled = false;
@@ -495,7 +498,7 @@ public class ControladorArmas : StartupScript
     private void AcercarMira(bool acercar)
     {
         // PENDIENTE: elegir FOV de opciones
-        // PENDIENTE: animacioón
+        // PENDIENTE: animación
         usandoMira = acercar;
         if (usandoMira)
             cámara.VerticalFieldOfView = 20;
@@ -508,8 +511,16 @@ public class ControladorArmas : StartupScript
 
     private async void ActivarLuz()
     {
+        // Cancela luz
+        tokenLuz.Cancel();
+        tokenLuz = new CancellationTokenSource();
+
         luzDisparo.Enabled = true;
-        await Task.Delay(80);
+
+        var token = tokenLuz.Token;
+        if (!token.IsCancellationRequested)
+            await Task.Delay(80);
+
         luzDisparo.Enabled = false;
     }
 
