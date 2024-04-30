@@ -108,6 +108,9 @@ public class ControladorPartida : SyncScript
     public static void SumarSecreto()
     {
         secretos++;
+
+        // PENDIENTE: efectos
+        interfaz.MostrarMensaje("Secreto Revelado");
     }
 
     // Jugador
