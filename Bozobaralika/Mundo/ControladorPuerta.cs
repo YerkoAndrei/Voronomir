@@ -7,6 +7,7 @@ namespace Bozobaralika;
 public class ControladorPuerta : StartupScript, IActivable
 {
     public int activaciones;
+    public bool instantanea;
     public TransformComponent modelo;
     public Vector3 posiciónAbierta;
 
@@ -28,7 +29,10 @@ public class ControladorPuerta : StartupScript, IActivable
         float tiempoLerp = 0;
         float tiempo = 0;
 
-        await Task.Delay(200);
+        if(instantanea)
+            duración = 0.1f;
+        else
+            await Task.Delay(200);
 
         while (tiempoLerp < duración)
         {

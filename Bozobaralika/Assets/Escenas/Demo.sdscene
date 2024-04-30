@@ -1455,6 +1455,7 @@ Hierarchy:
                     288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: b6928d80-e409-4b71-b028-ecffbb8130e1
                         activaciones*: 2
+                        instantanea: false
                         modelo: ref!! e6c52ee0-d486-4cbf-b99e-9addbbbd1eda
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
@@ -2608,6 +2609,7 @@ Hierarchy:
                     288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: 476bf0f6-4204-44df-8129-c02ee709279b
                         activaciones: 1
+                        instantanea*: true
                         modelo: ref!! bb99c06b-1a0b-49fd-806b-d32041837a3e
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
@@ -2854,6 +2856,7 @@ Hierarchy:
                     288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: bb0f9e8f-4daa-4b4d-994b-41b4a02a3183
                         activaciones: 1
+                        instantanea: false
                         modelo: ref!! c1da41d9-8786-40b3-94b1-1323677b85a7
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
@@ -3090,6 +3093,7 @@ Hierarchy:
                     288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: c12cc01a-94f6-4aa1-a67a-42c0fd535afa
                         activaciones: 1
+                        instantanea: false
                         modelo: ref!! aa22bde9-4f18-4564-92b1-711927934c22
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
@@ -3602,6 +3606,7 @@ Hierarchy:
                     288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: fca2c93f-8884-470f-a142-ec80ddfa1e26
                         activaciones: 1
+                        instantanea: false
                         modelo: ref!! a2ebcd3e-500a-4e90-a2d5-9528818a0208
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
