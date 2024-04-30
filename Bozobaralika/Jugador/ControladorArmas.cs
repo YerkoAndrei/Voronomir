@@ -46,6 +46,8 @@ public class ControladorArmas : StartupScript
     private float últimoDisparoLanzagranadas;
 
     private CancellationTokenSource tokenLuz;
+    private float duraciónAnimación;
+    private float fuerzaAnimación;
     private bool cambiandoArma;
     private bool usandoMira;
 
@@ -60,7 +62,7 @@ public class ControladorArmas : StartupScript
     // Lanzagranadas
     private TipoDisparo turnoLanzagranadas;
 
-    public async void Iniciar(ControladorJugador _controlador, ControladorMovimiento _movimiento, CameraComponent _cámara, InterfazJuego _interfaz)
+    public void Iniciar(ControladorJugador _controlador, ControladorMovimiento _movimiento, CameraComponent _cámara, InterfazJuego _interfaz)
     {
         controlador = _controlador;
         movimiento = _movimiento;
@@ -88,11 +90,18 @@ public class ControladorArmas : StartupScript
             new Vector3 (-0.3f, 0, 0)
         };
 
-        animadorEspada.Iniciar();
-        animadorEscopeta.Iniciar();
-        animadorMetralleta.Iniciar();
-        animadorRife.Iniciar();
-        animadorLanzagranadas.Iniciar();
+        AnimarMovimientoArma();
+        animadorEspada.Iniciar(this);
+        animadorEscopeta.Iniciar(this);
+        animadorMetralleta.Iniciar(this);
+        animadorRife.Iniciar(this);
+        animadorLanzagranadas.Iniciar(this);
+
+        partículasMetralletaIzquierda.Enabled = false;
+        partículasMetralletaDerecha.Enabled = false;
+
+        tokenLuz = new CancellationTokenSource();
+        luzDisparo.Enabled = false;
 
         // Arma por defecto
         ApagarArmas();
@@ -102,24 +111,17 @@ public class ControladorArmas : StartupScript
         interfaz.CambiarMira(armaActual);
         interfaz.CambiarÍcono(armaActual);
 
-        tokenLuz = new CancellationTokenSource();
-        luzDisparo.Enabled = false;
-        partículasMetralletaIzquierda.Enabled = false;
-        partículasMetralletaDerecha.Enabled = false;
-
-        cambiandoArma = true;
-        await animadorEspada.AnimarEntradaArma();
-        cambiandoArma = false;
+        animadorEspada.ActivarArma(true);
         movimiento.CambiarVelocidadMáxima(armaActual);
     }
 
     public void ActualizarEntradas()
     {
-        if (bloqueo)
-            return;
-
         // Movimiento correr
         AnimarMovimientoArma();
+
+        if (bloqueo)
+            return;
 
         // Disparo general
         if (Input.IsMouseButtonPressed(MouseButton.Left))
@@ -594,24 +596,62 @@ public class ControladorArmas : StartupScript
 
     private void AnimarMovimientoArma()
     {
+        // Reposo
+        var fuerza = 1f;
+        duraciónAnimación = 2;
+
         switch (armaActual)
         {
             case Armas.espada:
-                animadorEspada.AnimarCorrerArma(0.5f, movimiento.ObtenerAceleración() - 0.1f, movimiento.ObtenerEnSuelo());
+                fuerza = 0.5f;
                 break;
             case Armas.escopeta:
-                animadorEscopeta.AnimarCorrerArma(1, movimiento.ObtenerAceleración(), movimiento.ObtenerEnSuelo());
+                fuerza = 1f;
                 break;
             case Armas.metralleta:
-                animadorMetralleta.AnimarCorrerArma(1, movimiento.ObtenerAceleración(), movimiento.ObtenerEnSuelo());
+                fuerza = 1f;
                 break;
             case Armas.rifle:
-                animadorRife.AnimarCorrerArma(2, movimiento.ObtenerAceleración(), movimiento.ObtenerEnSuelo());
+                fuerza = 2f;
                 break;
             case Armas.lanzagranadas:
-                animadorLanzagranadas.AnimarCorrerArma(2, movimiento.ObtenerAceleración(), movimiento.ObtenerEnSuelo());
+                fuerza = 2f;
                 break;
         }
+
+        if (movimiento.ObtenerAceleración() > 1)
+            duraciónAnimación = 2f - movimiento.ObtenerAceleración();
+
+        // Reposo
+        if (movimiento.ObtenerAceleración() <= 1)
+        {
+            duraciónAnimación = 2;
+            fuerzaAnimación = 0.5f;
+            return;
+        }
+
+        duraciónAnimación = ((1 - movimiento.ObtenerAceleración()) + 1);
+        fuerzaAnimación = movimiento.ObtenerAceleración() * fuerza;
+
+        // En aire se mueve más lento y más 
+        if (!movimiento.ObtenerEnSuelo())
+        {
+            duraciónAnimación = (((1 - movimiento.ObtenerAceleración()) + 1)) * 2;
+            fuerzaAnimación = (duraciónAnimación * fuerza) * 4;
+        }
+
+        if (armaActual == Armas.espada)
+                duraciónAnimación += 0.2f;
+    }
+
+    public float ObtenerDuración()
+    {
+        return duraciónAnimación;
+    }
+
+    public float ObtenerFuerza()
+    {
+        return fuerzaAnimación;
     }
 
     public void GuardarArma()
@@ -638,11 +678,11 @@ public class ControladorArmas : StartupScript
 
     private void ApagarArmas()
     {
-        animadorEspada.ApagarArma();
-        animadorEscopeta.ApagarArma();
-        animadorMetralleta.ApagarArma();
-        animadorRife.ApagarArma();
-        animadorLanzagranadas.ApagarArma();
+        animadorEspada.ActivarArma(false);
+        animadorEscopeta.ActivarArma(false);
+        animadorMetralleta.ActivarArma(false);
+        animadorRife.ActivarArma(false);
+        animadorLanzagranadas.ActivarArma(false);
     }
 
     private float ObtenerDaño(Armas arma)

@@ -41,31 +41,31 @@ public class AnimadorArmas : AsyncScript
 
     private float tiempoLerp;
     private float tiempo;
-    private float tempDuración;
-    private float tempFuerza;
 
     private Vector3 tamañoFuegoIzquierda;
     private Vector3 tamañoFuegoDerecha;
 
-    public void Iniciar()
+    private ControladorArmas controlador;
+
+    public void Iniciar(ControladorArmas _controlador)
     {
+        controlador = _controlador;
+
+        // Entrada / salida
         posiciónInicialIzquierda = ejeIzquierda.Position;
         posiciónInicialDerecha = ejeDerecha.Position;
 
+        // Animación movimiento
         bajando = true;
-        duraciónAnimación = 2;
-        fuerzaAnimación = 0.5f;
+        activa = false;
 
         centroIzquierda = modeloIzquierda.Entity.Transform.Rotation;
         centroDerecha = modeloDerecha.Entity.Transform.Rotation;
-        abajoIzquierda = centroIzquierda * Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(1f), MathUtil.DegreesToRadians(-2f), MathUtil.DegreesToRadians(2));
-        abajoDerecha = centroDerecha * Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-1f), MathUtil.DegreesToRadians(-2f), MathUtil.DegreesToRadians(-2));
+        abajoIzquierda = centroIzquierda * RotaciónÁngulos(1, -2, 2);
+        abajoDerecha = centroDerecha * RotaciónÁngulos(-1, -2, -2);        
+        ReiniciarAnimación();
 
-        inicialIzquierda = centroIzquierda;
-        inicialDerecha = centroDerecha;
-        objetivoIzquierda = abajoIzquierda;
-        objetivoDerecha = abajoDerecha;
-
+        // Efectos
         if (fuegoIzquierda != null && fuegoDerecha != null)
         {
             tamañoFuegoIzquierda = fuegoIzquierda.Entity.Transform.Scale;
@@ -123,35 +123,35 @@ public class AnimadorArmas : AsyncScript
         tiempoLerp = 0;
         tiempo = 0;
         bajando = !bajando;
-        duraciónAnimación = tempDuración;
-        fuerzaAnimación = tempFuerza;
+        duraciónAnimación = controlador.ObtenerDuración();
+        fuerzaAnimación = controlador.ObtenerFuerza();
     }
 
-    public void AnimarCorrerArma(float fuerza, float velocidad, bool enSuelo)
+    private void ReiniciarAnimación()
     {
-        // Reposo
-        if (velocidad <= 1)
-        {
-            tempDuración = 2;
-            tempFuerza = 0.5f;
-            return;
-        }
+        modeloIzquierda.Entity.Transform.Rotation = centroIzquierda;
+        modeloDerecha.Entity.Transform.Rotation = centroDerecha;
 
-        tempDuración = ((1 - velocidad) + 1);
-        tempFuerza = velocidad * fuerza;
+        inicialIzquierda = centroIzquierda;
+        inicialDerecha = centroDerecha;
+        objetivoIzquierda = abajoIzquierda;
+        objetivoDerecha = abajoDerecha;
 
-        // En aire se mueve más lento y más 
-        if (!enSuelo)
-        {
-            tempDuración = (((1 - velocidad) + 1)) * 2;
-            tempFuerza = (tempDuración * fuerza) * 4;
-        }
+        tiempoLerp = 0;
+        tiempo = 0;
+        bajando = true;
+        duraciónAnimación = controlador.ObtenerDuración();
+        fuerzaAnimación = controlador.ObtenerFuerza();
     }
 
-    public void ApagarArma()
+    public void ActivarArma(bool activo)
     {
-        modeloIzquierda.Entity.Get<ModelComponent>().Enabled = false;
-        modeloDerecha.Entity.Get<ModelComponent>().Enabled = false;
+        modeloIzquierda.Entity.Get<ModelComponent>().Enabled = activo;
+        modeloDerecha.Entity.Get<ModelComponent>().Enabled = activo;
+
+        // Inicial
+        if (activo)
+            activa = true;
     }
 
     public async Task AnimarEntradaArma()
@@ -178,13 +178,14 @@ public class AnimadorArmas : AsyncScript
 
         ejeIzquierda.Rotation = Quaternion.Identity;
         ejeDerecha.Rotation = Quaternion.Identity;
+
+        ReiniciarAnimación();
         activa = true;
     }
 
     public async void AnimarSalidaArma()
     {
         activa = false;
-        var rotaciónCentro = Quaternion.Identity;
         var rotaciónSale = Quaternion.RotationX(MathUtil.DegreesToRadians(-60));
         var pocisiónSalida = Vector3.UnitZ * -0.1f;
 
@@ -198,8 +199,8 @@ public class AnimadorArmas : AsyncScript
             ejeIzquierda.Position = Vector3.Lerp(posiciónInicialIzquierda, (posiciónInicialIzquierda - pocisiónSalida), tiempo);
             ejeDerecha.Position = Vector3.Lerp(posiciónInicialDerecha, (posiciónInicialDerecha - pocisiónSalida), tiempo);
 
-            ejeIzquierda.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
-            ejeDerecha.Rotation = Quaternion.Lerp(rotaciónCentro, rotaciónSale, tiempo);
+            ejeIzquierda.Rotation = Quaternion.Lerp(Quaternion.Identity, rotaciónSale, tiempo);
+            ejeDerecha.Rotation = Quaternion.Lerp(Quaternion.Identity, rotaciónSale, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Task.Delay(1);
@@ -210,6 +211,8 @@ public class AnimadorArmas : AsyncScript
 
         ejeIzquierda.Position = posiciónInicialIzquierda;
         ejeDerecha.Position = posiciónInicialDerecha;
+
+        ReiniciarAnimación();
     }
 
     // Rango
@@ -390,11 +393,16 @@ public class AnimadorArmas : AsyncScript
         return new Color((byte)RangoAleatorio(200, 255), 200, 0, 240);
     }
 
+    private Quaternion RotaciónÁngulos(float x, float y, float z)
+    {
+        return Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(x), MathUtil.DegreesToRadians(y), MathUtil.DegreesToRadians(z));
+    }
+
     // Melé
     public async void AnimarAtaque(TipoDisparo tipoDisparo)
     {
-        var rotaciónAtaqueIzquierda = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-40), MathUtil.DegreesToRadians(-90), MathUtil.DegreesToRadians(60));
-        var rotaciónAtaqueDerecha = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(40), MathUtil.DegreesToRadians(-90), MathUtil.DegreesToRadians(-60));
+        var rotaciónAtaqueIzquierda = RotaciónÁngulos(-40, -90, 60);
+        var rotaciónAtaqueDerecha = RotaciónÁngulos(40, -90, -60);
 
         partículasIzquierda.ParticleSystem.ResetSimulation();
         partículasDerecha.ParticleSystem.ResetSimulation();
