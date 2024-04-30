@@ -165,6 +165,7 @@ Hierarchy:
                     1f161687c3c5aec34deca95b5e8044ee: !Grid ref!! 8c8be992-82e9-4fcc-ab56-c94d38eb136d
                     cde262a7949222eab70ddb33099e5c07: !UniformGrid ref!! c4c2b7ef-0c02-445e-9287-a17c60c4fbd9
                     e7351d540f421de411fa5ff1960a5d29: !UniformGrid ref!! 281cd101-1667-42a9-89e4-1039a3e3a573
+                    56b9e644dde7b4ae01c33ca488da07b7: !TextBlock ref!! 9e0c3032-3d77-496a-b813-bd3c1e662476
                     60f20cf2a253ad53782e491d2632077b: !UniformGrid ref!! 5c3adbda-7407-450e-85c8-024ba9d4e51d
                     85d913eca330adba2ee49bf83045a7e7: !Grid ref!! 7e00e8f3-06e0-472e-8cec-ff5756a08416
                     60cd5e24ba09294618747d4e3d82ce94: !Grid ref!! 8804fd5d-15bb-4edd-abd5-7ec90efadaaf
@@ -987,6 +988,22 @@ Hierarchy:
                     Texture: 27f5f360-1f8f-40cc-a19a-728a67fe77b4:Texturas/Miras/miraEspada
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 255, B: 0, A: 255}
+        -   UIElement: !TextBlock
+                Id: 9e0c3032-3d77-496a-b813-bd3c1e662476
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 45.0
+                VerticalAlignment: Top
+                Margin: {Top: 28.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtMensaje
+                Text: Mensaje lorem ipsum dolor sit amet
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 40.0
+                TextColor: {R: 255, G: 0, B: 0, A: 255}
+                TextAlignment: Center
         -   UIElement: !ImageElement
                 Id: a28a61c2-f0a2-4638-b013-8999916134b9
                 DependencyProperties:

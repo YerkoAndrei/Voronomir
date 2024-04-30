@@ -138,6 +138,11 @@ public class ControladorPartida : SyncScript
         return interfaz;
     }
 
+    public static void MostrarMensaje(string mensaje)
+    {
+        interfaz.MostrarMensaje(mensaje);
+    }
+
     public static string ObtenerTextoDuración()
     {
         return FormatearTiempo(tiempo);

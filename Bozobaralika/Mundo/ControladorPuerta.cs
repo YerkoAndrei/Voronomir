@@ -1,25 +1,52 @@
-﻿using Stride.Core.Mathematics;
+﻿using System.Threading.Tasks;
+using Stride.Core.Mathematics;
 using Stride.Engine;
-using System.Threading.Tasks;
 
 namespace Bozobaralika;
+using static Utilidades;
 
-public class ControladorPuerta : StartupScript, IActivable
+public class ControladorPuerta : AsyncScript, IActivable
 {
-    public int activaciones;
     public bool instantanea;
+    public int activaciones;
     public TransformComponent modelo;
     public Vector3 posiciónAbierta;
 
+    private PhysicsComponent cuerpo;
     private int activadas;
+
+    public override async Task Execute()
+    {
+        cuerpo = Entity.Get<PhysicsComponent>();
+
+        while (Game.IsRunning)
+        {
+            var colisión = await cuerpo.NewCollision();
+            if (TocaJugador(colisión) && cuerpo.Enabled)
+                TocarJugador();
+
+            await Script.NextFrame();
+        }
+    }
 
     public void Activar()
     {
         // PENDIENTE: efectos
         activadas++;
 
-        if(activadas >= activaciones)
+        if (activadas >= activaciones)
+        {
             AnimarPuerta();
+            cuerpo.Enabled = false;
+            ControladorPartida.MostrarMensaje("Puerta abierta");
+        }
+        else
+            ControladorPartida.MostrarMensaje(activadas + " de " + activaciones);
+    }
+
+    private void TocarJugador()
+    {
+        ControladorPartida.MostrarMensaje("Puerta cerrada");
     }
 
     private async void AnimarPuerta()

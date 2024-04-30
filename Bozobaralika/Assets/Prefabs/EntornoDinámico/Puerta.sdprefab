@@ -10,6 +10,24 @@ Hierarchy:
                 Id: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 Name: Puerta
                 Components:
+                    684e8d9d72b05614aa004a6afce49ac0: !StaticColliderComponent
+                        Id: 38ccc657-defe-432f-933d-c6532aa6a022
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            339b26397037be06899b1eaacf8faec7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 8f6de174-a4c0-4359-9466-d73bfeae3a0f
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -19,6 +37,7 @@ Hierarchy:
                             974930f89f5418aadc8036b440d5a6c6: ref!! a5c3a2ac-019e-49bd-aad9-4f37c7d8ea68
                     288763fffe05bd2540a5679e6d2ee407: !Bozobaralika.ControladorPuerta,Bozobaralika.Proyecto
                         Id: d5713461-3d5a-438b-af78-c3a05cfc4543
+                        instantanea: false
                         activaciones: 1
                         modelo: ref!! a5c3a2ac-019e-49bd-aad9-4f37c7d8ea68
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}

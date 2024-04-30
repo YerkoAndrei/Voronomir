@@ -4,6 +4,8 @@ using Stride.Engine;
 using Stride.UI.Controls;
 using Stride.UI.Panels;
 using Stride.Input;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace Bozobaralika;
 using static Utilidades;
@@ -17,7 +19,6 @@ public class InterfazJuego : SyncScript
     public Color armaSeleccionada;
 
     private ImageElement imgVida;
-    private float tamañoVida;
 
     private ImageElement miraEspada;
     private ImageElement miraEscopeta;
@@ -38,9 +39,10 @@ public class InterfazJuego : SyncScript
     private ImageElement imgInvencibilidad;
     private ImageElement imgRapidez;
 
-    private UniformGrid panelDatos;
+    private TextBlock txtMensaje;
     private TextBlock txtTiempo;
     private TextBlock txtAceleración;
+    private UniformGrid panelDatos;
 
     private TextBlock txtNivel;
     private TextBlock txtTiempoFinal;
@@ -51,6 +53,9 @@ public class InterfazJuego : SyncScript
     private Grid panelPausa;
     private Grid panelMuerte;
     private Grid panelFinal;
+
+    private float tamañoVida;
+    private CancellationTokenSource tokenMensaje;
 
     public override void Start()
     {
@@ -78,9 +83,10 @@ public class InterfazJuego : SyncScript
         imgInvencibilidad = página.FindVisualChildOfType<ImageElement>("imgInvencibilidad");
         imgRapidez = página.FindVisualChildOfType<ImageElement>("imgRapidez");
 
-        panelDatos = página.FindVisualChildOfType<UniformGrid>("Datos");
+        txtMensaje = página.FindVisualChildOfType<TextBlock>("txtMensaje");
         txtTiempo = página.FindVisualChildOfType<TextBlock>("txtTiempo");
         txtAceleración = página.FindVisualChildOfType<TextBlock>("txtAceleración");
+        panelDatos = página.FindVisualChildOfType<UniformGrid>("Datos");
 
         // Datos finales
         txtNivel = página.FindVisualChildOfType<TextBlock>("txtNivel");
@@ -105,6 +111,9 @@ public class InterfazJuego : SyncScript
 
         // Predeterminado
         tamañoVida = imgVida.Width;
+        txtMensaje.Text = string.Empty;
+        txtMensaje.Opacity = 0;
+        tokenMensaje = new CancellationTokenSource();
 
         panelDatosFinales.Visibility = Visibility.Hidden;
         panelPausa.Visibility = Visibility.Hidden;
@@ -311,6 +320,40 @@ public class InterfazJuego : SyncScript
         imgDaño.Visibility = Visibility.Hidden;
         imgInvencibilidad.Visibility = Visibility.Hidden;
         imgRapidez.Visibility = Visibility.Hidden;
+    }
+
+    public async void MostrarMensaje(string mensaje)
+    {
+        // Cancela mensaje actual para iniciar nuevo
+        tokenMensaje.Cancel();
+        tokenMensaje = new CancellationTokenSource();
+
+        txtMensaje.Text = mensaje;
+        txtMensaje.Opacity = 1;
+
+        float duración = 1f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        var token = tokenMensaje.Token;
+        if (!token.IsCancellationRequested)
+            await Task.Delay(500);
+
+        while (tiempoLerp < duración)
+        {
+            if (token.IsCancellationRequested)
+                return;
+
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+            txtMensaje.Opacity = MathUtil.Lerp(1f, 0f, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+
+        // Fin
+        txtMensaje.Text = string.Empty;
+        txtMensaje.Opacity = 0;
     }
 
     public void Morir()
