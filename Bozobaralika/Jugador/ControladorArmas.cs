@@ -46,8 +46,6 @@ public class ControladorArmas : StartupScript
     private float últimoDisparoLanzagranadas;
 
     private CancellationTokenSource tokenLuz;
-    private float duraciónAnimación;
-    private float fuerzaAnimación;
     private bool cambiandoArma;
     private bool usandoMira;
 
@@ -90,23 +88,23 @@ public class ControladorArmas : StartupScript
             new Vector3 (-0.3f, 0, 0)
         };
 
-        AnimarMovimientoArma();
-        animadorEspada.Iniciar(this);
-        animadorEscopeta.Iniciar(this);
-        animadorMetralleta.Iniciar(this);
-        animadorRife.Iniciar(this);
-        animadorLanzagranadas.Iniciar(this);
-
         partículasMetralletaIzquierda.Enabled = false;
         partículasMetralletaDerecha.Enabled = false;
 
         tokenLuz = new CancellationTokenSource();
         luzDisparo.Enabled = false;
 
+        // Iniciar
+        animadorEspada.Iniciar(this);
+        animadorEscopeta.Iniciar(this);
+        animadorMetralleta.Iniciar(this);
+        animadorRife.Iniciar(this);
+        animadorLanzagranadas.Iniciar(this);
+        
         // Arma por defecto
-        ApagarArmas();
         armaActual = Armas.espada;
         armaAnterior = armaActual;
+        ApagarArmas();
 
         interfaz.CambiarMira(armaActual);
         interfaz.CambiarÍcono(armaActual);
@@ -117,9 +115,6 @@ public class ControladorArmas : StartupScript
 
     public void ActualizarEntradas()
     {
-        // Movimiento correr
-        AnimarMovimientoArma();
-
         if (bloqueo)
             return;
 
@@ -564,6 +559,8 @@ public class ControladorArmas : StartupScript
 
         interfaz.ApagarMiras();
         interfaz.CambiarÍcono(armaActual);
+        movimiento.CambiarVelocidadMáxima(armaActual);
+
         partículasMetralletaIzquierda.Enabled = false;
         partículasMetralletaDerecha.Enabled = false;
 
@@ -589,69 +586,42 @@ public class ControladorArmas : StartupScript
         }
 
         cambiandoArma = false;
-
-        movimiento.CambiarVelocidadMáxima(armaActual);
         interfaz.CambiarMira(armaActual);
     }
 
-    private void AnimarMovimientoArma()
+    public float[] ObtenerParametrosAnimación()
     {
-        // Reposo
-        var fuerza = 1f;
-        duraciónAnimación = 2;
+        var duraciónAnimación = 2 - movimiento.ObtenerAceleración();
+        var fuerzaAnimación = 1f;
 
         switch (armaActual)
         {
             case Armas.espada:
-                fuerza = 0.5f;
+                duraciónAnimación += 0.2f;
+                fuerzaAnimación = movimiento.ObtenerAceleración() * 0.5f;
                 break;
             case Armas.escopeta:
-                fuerza = 1f;
+                fuerzaAnimación = movimiento.ObtenerAceleración() * 1f;
                 break;
             case Armas.metralleta:
-                fuerza = 1f;
+                fuerzaAnimación = movimiento.ObtenerAceleración() * 1f;
                 break;
             case Armas.rifle:
-                fuerza = 2f;
+                fuerzaAnimación = movimiento.ObtenerAceleración() * 2f;
                 break;
             case Armas.lanzagranadas:
-                fuerza = 2f;
+                fuerzaAnimación = movimiento.ObtenerAceleración() * 2f;
                 break;
         }
-
-        if (movimiento.ObtenerAceleración() > 1)
-            duraciónAnimación = 2f - movimiento.ObtenerAceleración();
-
-        // Reposo
-        if (movimiento.ObtenerAceleración() <= 1)
-        {
-            duraciónAnimación = 2;
-            fuerzaAnimación = 0.5f;
-            return;
-        }
-
-        duraciónAnimación = ((1 - movimiento.ObtenerAceleración()) + 1);
-        fuerzaAnimación = movimiento.ObtenerAceleración() * fuerza;
-
+        /*
         // En aire se mueve más lento y más 
         if (!movimiento.ObtenerEnSuelo())
         {
-            duraciónAnimación = (((1 - movimiento.ObtenerAceleración()) + 1)) * 2;
-            fuerzaAnimación = (duraciónAnimación * fuerza) * 4;
-        }
-
-        if (armaActual == Armas.espada)
-                duraciónAnimación += 0.2f;
-    }
-
-    public float ObtenerDuración()
-    {
-        return duraciónAnimación;
-    }
-
-    public float ObtenerFuerza()
-    {
-        return fuerzaAnimación;
+            duraciónAnimación *= 2;
+            fuerzaAnimación *= 0.5f;
+        }*/
+        
+        return new float[] { duraciónAnimación, fuerzaAnimación };
     }
 
     public void GuardarArma()

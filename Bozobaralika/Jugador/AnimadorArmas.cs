@@ -62,8 +62,9 @@ public class AnimadorArmas : AsyncScript
         centroIzquierda = modeloIzquierda.Entity.Transform.Rotation;
         centroDerecha = modeloDerecha.Entity.Transform.Rotation;
         abajoIzquierda = centroIzquierda * RotaciónÁngulos(1, -2, 2);
-        abajoDerecha = centroDerecha * RotaciónÁngulos(-1, -2, -2);        
+        abajoDerecha = centroDerecha * RotaciónÁngulos(-1, -2, -2);
         ReiniciarAnimación();
+        ReiniciarParametros();
 
         // Efectos
         if (fuegoIzquierda != null && fuegoDerecha != null)
@@ -120,11 +121,8 @@ public class AnimadorArmas : AsyncScript
             objetivoDerecha = abajoDerecha;
         }
 
-        tiempoLerp = 0;
-        tiempo = 0;
         bajando = !bajando;
-        duraciónAnimación = controlador.ObtenerDuración();
-        fuerzaAnimación = controlador.ObtenerFuerza();
+        ReiniciarParametros();
     }
 
     private void ReiniciarAnimación()
@@ -137,11 +135,17 @@ public class AnimadorArmas : AsyncScript
         objetivoIzquierda = abajoIzquierda;
         objetivoDerecha = abajoDerecha;
 
+        bajando = true;
+    }
+
+    private void ReiniciarParametros()
+    {
         tiempoLerp = 0;
         tiempo = 0;
-        bajando = true;
-        duraciónAnimación = controlador.ObtenerDuración();
-        fuerzaAnimación = controlador.ObtenerFuerza();
+
+        var parametros = controlador.ObtenerParametrosAnimación();
+        duraciónAnimación = parametros[0];
+        fuerzaAnimación = parametros[1];
     }
 
     public void ActivarArma(bool activo)
@@ -180,6 +184,7 @@ public class AnimadorArmas : AsyncScript
         ejeDerecha.Rotation = Quaternion.Identity;
 
         ReiniciarAnimación();
+        ReiniciarParametros();
         activa = true;
     }
 

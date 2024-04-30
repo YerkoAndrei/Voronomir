@@ -194,6 +194,9 @@ public class ControladorMovimiento : StartupScript
 
     public float ObtenerAceleración()
     {
+        if (controlador.ObtenerPoder(Poderes.rapidez))
+            return maxVelocidad;
+
         return aceleración;
     }
 
