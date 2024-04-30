@@ -591,7 +591,7 @@ public class ControladorArmas : StartupScript
 
     public float[] ObtenerParametrosAnimación()
     {
-        var duraciónAnimación = 2 - movimiento.ObtenerAceleración();
+        var duraciónAnimación = 1.9f - movimiento.ObtenerAceleración();
         var fuerzaAnimación = 1f;
 
         switch (armaActual)
@@ -610,17 +610,14 @@ public class ControladorArmas : StartupScript
                 fuerzaAnimación = movimiento.ObtenerAceleración() * 2f;
                 break;
             case Armas.lanzagranadas:
-                fuerzaAnimación = movimiento.ObtenerAceleración() * 2f;
+                fuerzaAnimación = movimiento.ObtenerAceleración() * 4f;
                 break;
         }
-        /*
-        // En aire se mueve más lento y más 
-        if (!movimiento.ObtenerEnSuelo())
-        {
-            duraciónAnimación *= 2;
-            fuerzaAnimación *= 0.5f;
-        }*/
         
+        // Ajuste
+        duraciónAnimación = MathUtil.Clamp(duraciónAnimación, 0.2f, 2);
+        fuerzaAnimación = MathUtil.Clamp(fuerzaAnimación, 0.5f, 3);
+
         return new float[] { duraciónAnimación, fuerzaAnimación };
     }
 
