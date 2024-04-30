@@ -5,6 +5,7 @@ using Stride.Core.Mathematics;
 using Stride.Physics;
 using Stride.Engine;
 using Stride.Input;
+using System.Threading;
 
 namespace Bozobaralika;
 using static Utilidades;
@@ -21,8 +22,8 @@ public class ControladorJugador : SyncScript, IDañable
     private ControladorArmas armas;
     private InterfazJuego interfaz;
 
+    private CancellationTokenSource tokenVibración;
     private Vector3 posiciónCabeza;
-    private bool vibrando;
     private bool curando;
     private float vida;
     private float vidaMax;
@@ -51,6 +52,7 @@ public class ControladorJugador : SyncScript, IDañable
         movimiento.Iniciar(this, cuerpo, cabeza, cámara.Entity.Transform);
         armas.Iniciar(this, movimiento, cámara, interfaz);
 
+        tokenVibración = new CancellationTokenSource();
         posiciónCabeza = cabeza.Position;
 
         llaveAzul = false;
@@ -199,13 +201,17 @@ public class ControladorJugador : SyncScript, IDañable
         {
             case Poderes.daño:
                 tiempoDaño = 30;
+                ControladorPartida.MostrarMensaje("Triple daño");
                 break;
             case Poderes.invencibilidad:
                 vida = vidaMax;
+                interfaz.ActualizarVida(vida / vidaMax);
                 tiempoInvencibilidad = 30;
+                ControladorPartida.MostrarMensaje("Invencibilidad");
                 break;
             case Poderes.rapidez:
                 tiempoRapidez = 30;
+                ControladorPartida.MostrarMensaje("Rapidez");
                 break;
         }
     }
@@ -242,16 +248,12 @@ public class ControladorJugador : SyncScript, IDañable
         }
     }
 
-    public async void VibrarCámara(float fuerza, int iteraciones)
+    public void VibrarCámara(float fuerza, int iteraciones)
     {
-        if (vibrando)
-        {
-            // Cancela vibración actual para iniciar nueva
-            vibrando = false;
-            await Task.Delay(2);
-        }
+        // Cancela vibración actual para iniciar nueva
+        tokenVibración.Cancel();
+        tokenVibración = new CancellationTokenSource();
 
-        vibrando = true;
         var duración = 0.01f;
         RotarCámara(duración, fuerza, iteraciones);
 
@@ -293,8 +295,12 @@ public class ControladorJugador : SyncScript, IDañable
             float tiempoLerp = 0;
             float tiempo = 0;
 
-            while (tiempoLerp < duración && vibrando)
+            var token = tokenVibración.Token;
+            while (tiempoLerp < duración)
             {
+                if (token.IsCancellationRequested)
+                    return;
+
                 tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
                 cámara.Entity.Transform.Rotation = Quaternion.Lerp(inicial, objetivo, tiempo);
 
@@ -303,7 +309,6 @@ public class ControladorJugador : SyncScript, IDañable
             }
         }
         cámara.Entity.Transform.Rotation = rotaciónCabeza;
-        vibrando = false;
     }
 
     private async void MoverCámara(float duración, float fuerza)
@@ -312,8 +317,12 @@ public class ControladorJugador : SyncScript, IDañable
         float tiempoLerp = 0;
         float tiempo = 0;
 
+        var token = tokenVibración.Token;
         while (tiempoLerp < duración)
         {
+            if (token.IsCancellationRequested)
+                return;
+
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             cabeza.Position = Vector3.Lerp(retroceso, posiciónCabeza, tiempo);
 
@@ -331,7 +340,7 @@ public class ControladorJugador : SyncScript, IDañable
         float tiempoLerp = 0;
         float tiempo = 0;
 
-        while (tiempoLerp < duración && vibrando)
+        while (tiempoLerp < duración)
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             cabeza.Position = Vector3.Lerp(inicio, objetivo, tiempo);
