@@ -14,7 +14,7 @@ Hierarchy:
                         Id: 1b60e8cc-438e-4d5b-880d-010ac01cbf07
                         Position: {X: 0.0, Y: 0.1, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Scale: {X: 0.3, Y: 0.3, Z: 0.3}
                         Children: {}
                     d72211c0ad36ba4e1a6fcfe43e525d97: !ParticleSystemComponent
                         Id: 52fecfce-ffd7-49a0-9b03-cccd4ccc3276
@@ -29,14 +29,14 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 59bfcfe1659359744eabe7e38789e47b:
-                                    ParticleLifetime: {X: 0.1, Y: 0.2}
+                                    ParticleLifetime: {X: 0.1, Y: 0.3}
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null
                                         SamplerSize: null
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Estrella
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
@@ -78,8 +78,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            PositionMin: {X: -0.2, Y: 0.0, Z: -0.2}
-                                            PositionMax: {X: 0.2, Y: 0.0, Z: 0.2}
+                                            PositionMin: {X: -0.5, Y: -0.1, Z: -0.5}
+                                            PositionMax: {X: 0.5, Y: 0.1, Z: 0.5}
                                             Interpolate: false
                                         88d1f7879d91335823a6574fb337d0f0: !InitialVelocitySeed
                                             InheritPosition: true
@@ -96,6 +96,20 @@ Hierarchy:
                                             DisplayParticleScaleUniform: true
                                             VelocityMin: {X: -0.5, Y: 1.0, Z: -0.5}
                                             VelocityMax: {X: 0.5, Y: 3.0, Z: 0.5}
+                                        3dfa63404685d2e35500421d2eaa20b7: !InitialRotationSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            AngularRotation: {X: -360.0, Y: 360.0}
                                     Updaters:
                                         e4b83d890da9539062dd643b377fbaa0: !UpdaterSizeOverTime
                                             InheritPosition: true

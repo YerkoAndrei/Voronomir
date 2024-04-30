@@ -221,7 +221,7 @@ public class ControladorCofres : StartupScript
     // Enemigos
     public static void IniciarEfectoEnemigo(Enemigos enemigo, Vector3 posición, Vector3 normal)
     {
-        efectos[efectoActual].IniciarEfectoEnemigo(enemigo, 0.5f, posición, normal);
+        efectos[efectoActual].IniciarEfectoEnemigo(enemigo, 0.2f, posición, normal);
         efectoActual++;
 
         if (efectoActual >= maxEfectos)

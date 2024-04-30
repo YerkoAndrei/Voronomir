@@ -458,7 +458,7 @@ public class ControladorArmas : StartupScript
                 interfaz.Destruir();
 
                 var enemigo = resultado.Collider.Entity.Get<ElementoProyectilSimple>().disparador;
-                ControladorCofres.IniciarEfectoDaño(armaActual, enemigo, 0.5f, resultado.Point, resultado.Normal);
+                ControladorCofres.IniciarEfectoDaño(armaActual, enemigo, 0.2f, resultado.Point, resultado.Normal);
             }
             // Botones
             else if (resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)

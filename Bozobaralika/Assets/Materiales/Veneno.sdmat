@@ -9,6 +9,7 @@ Attributes:
     DiffuseModel: !MaterialDiffuseLambertModelFeature
         Enabled: false
     Specular: !MaterialSpecularMapFeature
+        Enabled: false
         SpecularMap: !ComputeColor
             Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         Intensity: !ComputeFloat
