@@ -107,7 +107,7 @@ Hierarchy:
                         Id: 3361a7a9-0413-4093-9180-6d63d5ad6e12
                         Position: {X: 0.0, Y: 1.2, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 0.4, Y: 0.4, Z: 0.4}
                         Children: {}
                     bbf6de4eda3e187e7c32af3002049f7d: !ParticleSystemComponent
                         Id: 2ef60f9a-e435-4cba-a2ee-c8cb7b007389
@@ -170,8 +170,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
-                                            PositionMax: {X: 1.0, Y: 0.0, Z: 1.0}
+                                            PositionMin: {X: -1.5, Y: 0.0, Z: -6.0}
+                                            PositionMax: {X: 1.5, Y: 0.0, Z: 2.0}
                                             Interpolate: false
                                         b663f69a05042540ff539d253be0dea8: !InitialVelocitySeed
                                             InheritPosition: true
@@ -251,6 +251,7 @@ Hierarchy:
                                                             Value: {R: 1.0, G: 1.0, B: 1.0, A: 0.0}
                                                             TangentType: Linear
                                             SeedOffset: 0
+                        RenderGroup: Group1
         -   Entity:
                 Id: a2d52ea3-1fed-47ae-928e-c28bfc64ff7e
                 Name: Veneno

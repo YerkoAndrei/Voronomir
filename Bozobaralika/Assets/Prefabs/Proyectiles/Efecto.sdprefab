@@ -22,14 +22,14 @@ Hierarchy:
                         Control:
                             ResetSeconds: 2.0
                             Control: Play
-                        Color: {R: 0.627451, G: 0.0, B: 0.0, A: 0.39215687}
+                        Color: {R: 0.627451, G: 0.0, B: 0.0, A: 0.627451}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
                             BoundingShape: null
                             Emitters:
                                 4f568c9f2acf53e703cba1b6000a6173:
-                                    ParticleLifetime: {X: 0.8, Y: 1.0}
+                                    ParticleLifetime: {X: 0.5, Y: 1.0}
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null
                                         SamplerSize: null
@@ -64,7 +64,7 @@ Hierarchy:
                                             DisplayParticleRotation: false
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            RandomSize: {X: 0.05, Y: 0.15}
+                                            RandomSize: {X: 1.0, Y: 2.0}
                                         d531158707504cff72daa8e8f8f61784: !InitialPositionSeed
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -95,7 +95,7 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
                                             VelocityMin: {X: -6.0, Y: 2.0, Z: -6.0}
-                                            VelocityMax: {X: 6.0, Y: 6.0, Z: 6.0}
+                                            VelocityMax: {X: 6.0, Y: 8.0, Z: 6.0}
                                     Updaters:
                                         75b073a481ac7c5736754d17befa5b44: !UpdaterForceField
                                             InheritPosition: true
@@ -119,7 +119,7 @@ Hierarchy:
                                             ForceDirected: 0.0
                                             ForceVortex: 0.0
                                             ForceRepulsive: 0.0
-                                            ForceFixed: {X: 0.0, Y: -25.0, Z: 0.0}
+                                            ForceFixed: {X: 0.0, Y: -30.0, Z: 0.0}
                                         519e69f8366514ed595aee0b7374e7ee: !UpdaterSizeOverTime
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -153,6 +153,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group1
         -   Folder: null
             Entity:
                 Id: 4ca8692f-c53e-445e-8890-259b9fffb928
@@ -177,7 +178,7 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 4f568c9f2acf53e703cba1b6000a6173:
-                                    ParticleLifetime: {X: 0.8, Y: 1.0}
+                                    ParticleLifetime: {X: 0.5, Y: 1.0}
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null
                                         SamplerSize: null
@@ -212,7 +213,7 @@ Hierarchy:
                                             DisplayParticleRotation: false
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            RandomSize: {X: 0.1, Y: 0.2}
+                                            RandomSize: {X: 1.0, Y: 2.0}
                                         d531158707504cff72daa8e8f8f61784: !InitialPositionSeed
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -301,6 +302,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group1
         -   Entity:
                 Id: 6b32fb5d-c7f8-4fc9-8421-86bc281951ee
                 Name: Bala
@@ -324,7 +326,7 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 4f568c9f2acf53e703cba1b6000a6173:
-                                    ParticleLifetime: {X: 0.8, Y: 1.0}
+                                    ParticleLifetime: {X: 0.5, Y: 1.0}
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null
                                         SamplerSize: null
@@ -359,7 +361,7 @@ Hierarchy:
                                             DisplayParticleRotation: false
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            RandomSize: {X: 0.05, Y: 0.15}
+                                            RandomSize: {X: 1.0, Y: 2.0}
                                         d531158707504cff72daa8e8f8f61784: !InitialPositionSeed
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -448,6 +450,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group1
         -   Folder: null
             Entity:
                 Id: 77595d60-ca7d-4904-a636-70471c8c0f54
@@ -472,7 +475,7 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 354399268ecb80863fbcd44a7de54c62:
-                                    ParticleLifetime: {X: 0.8, Y: 1.0}
+                                    ParticleLifetime: {X: 0.5, Y: 1.0}
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null
                                         SamplerSize: null
@@ -492,7 +495,7 @@ Hierarchy:
                                             LoopCondition: OneShot
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 64
+                                            SpawnCount: 32
                                     Initializers:
                                         ee72ebc2f93cf12825ea2538a284a63f: !InitialSizeSeed
                                             InheritPosition: true
@@ -507,23 +510,7 @@ Hierarchy:
                                             DisplayParticleRotation: false
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            RandomSize: {X: 0.04, Y: 0.08}
-                                        d531158707504cff72daa8e8f8f61784: !InitialPositionSeed
-                                            InheritPosition: true
-                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                                            InheritRotation: true
-                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                            InheritScale: true
-                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                                            ScaleUniform: 1.0
-                                            SeedOffset: 0
-                                            DisplayParticlePosition: false
-                                            DisplayParticleRotation: true
-                                            DisplayParticleScale: false
-                                            DisplayParticleScaleUniform: true
-                                            PositionMin: {X: -0.1, Y: -0.1, Z: -0.1}
-                                            PositionMax: {X: 0.1, Y: 0.1, Z: 0.1}
-                                            Interpolate: false
+                                            RandomSize: {X: 1.0, Y: 2.0}
                                         7b6764ebde5a1c451a2898eb923bc60c: !InitialVelocitySeed
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -596,6 +583,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group1
         -   Entity:
                 Id: da36a1d4-20a4-4045-8862-27ba561b8c9b
                 Name: Rayo
@@ -621,7 +609,7 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 4f568c9f2acf53e703cba1b6000a6173:
-                                    ParticleLifetime: {X: 0.5, Y: 0.6}
+                                    ParticleLifetime: {X: 0.4, Y: 0.6}
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         SmoothingPolicy: Fast
                                         Segments: 2
@@ -674,6 +662,7 @@ Hierarchy:
                                             PositionMax: {X: 1.0, Y: 1.0, Z: 1.0}
                                             Interpolate: false
                                     Updaters: {}
+                        RenderGroup: Group1
         -   Folder: null
             Entity:
                 Id: f56c73b5-ccee-4485-842f-a939b94aaeb8
@@ -691,14 +680,14 @@ Hierarchy:
                         Control:
                             ResetSeconds: 2.0
                             Control: Play
-                        Color: {R: 0.0, G: 0.39215687, B: 0.0, A: 0.39215687}
+                        Color: {R: 0.0, G: 0.627451, B: 0.0, A: 0.627451}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
                             BoundingShape: null
                             Emitters:
                                 4f568c9f2acf53e703cba1b6000a6173:
-                                    ParticleLifetime: {X: 0.8, Y: 1.0}
+                                    ParticleLifetime: {X: 0.5, Y: 1.0}
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null
                                         SamplerSize: null
@@ -733,7 +722,7 @@ Hierarchy:
                                             DisplayParticleRotation: false
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            RandomSize: {X: 0.05, Y: 0.15}
+                                            RandomSize: {X: 1.0, Y: 2.0}
                                         d531158707504cff72daa8e8f8f61784: !InitialPositionSeed
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -764,7 +753,7 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
                                             VelocityMin: {X: -6.0, Y: 2.0, Z: -6.0}
-                                            VelocityMax: {X: 6.0, Y: 6.0, Z: 6.0}
+                                            VelocityMax: {X: 6.0, Y: 8.0, Z: 6.0}
                                     Updaters:
                                         75b073a481ac7c5736754d17befa5b44: !UpdaterForceField
                                             InheritPosition: true
@@ -788,7 +777,7 @@ Hierarchy:
                                             ForceDirected: 0.0
                                             ForceVortex: 0.0
                                             ForceRepulsive: 0.0
-                                            ForceFixed: {X: 0.0, Y: -20.0, Z: 0.0}
+                                            ForceFixed: {X: 0.0, Y: -30.0, Z: 0.0}
                                         519e69f8366514ed595aee0b7374e7ee: !UpdaterSizeOverTime
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -822,6 +811,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group1
         -   Entity:
                 Id: fdd6c350-4826-4aa3-903a-831b7d6c9b53
                 Name: Efecto

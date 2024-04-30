@@ -72,7 +72,7 @@ Hierarchy:
                         Id: 0c3c11fc-f39f-4018-8437-8e426769ee0e
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
                         Children: {}
                     bbf6de4eda3e187e7c32af3002049f7d: !ParticleSystemComponent
                         Id: 1507096d-1638-40a2-99dc-cb64252b667b

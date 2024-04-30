@@ -1306,21 +1306,21 @@ Hierarchy:
                         Id: 96b52cb3-a7ce-4c0a-85bf-c06c8ea9067c
                         Position: {X: 0.0, Y: 0.2, Z: 0.0}
                         Rotation: {X: -4.371139E-08, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.8, Y: 0.8, Z: 1.8}
+                        Scale: {X: 0.6, Y: 0.6, Z: 0.6}
                         Children: {}
                     e7b18cdc52fd5dbf42146476aa7acdb5: !ParticleSystemComponent
                         Id: 880524ae-032e-401b-b636-022160907794
                         Control:
                             ResetSeconds: 5.0
                             Control: Play
-                        Color: {R: 0.0, G: 0.0, B: 1.0, A: 0.39215687}
+                        Color: {R: 1.0, G: 0.0, B: 1.0, A: 0.39215687}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
                             BoundingShape: null
                             Emitters:
                                 0bb0b4d692dfa4ecbca6ad2d8b8f437d:
-                                    ParticleLifetime: {X: 0.8, Y: 0.8}
+                                    ParticleLifetime: {X: 0.1, Y: 0.2}
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null
@@ -1341,7 +1341,7 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 12.0
+                                            SpawnCount: 32.0
                                     Initializers:
                                         104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
                                             InheritPosition: true
@@ -1370,8 +1370,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            VelocityMin: {X: 0.0, Y: 1.0, Z: 0.0}
-                                            VelocityMax: {X: 0.0, Y: 4.0, Z: 0.0}
+                                            VelocityMin: {X: 0.0, Y: 10.0, Z: 0.0}
+                                            VelocityMax: {X: 0.0, Y: 12.0, Z: 0.0}
                                         1b9625bd46999c9dbee4cd9348aba191: !InitialPositionSeed
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -1385,8 +1385,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
-                                            PositionMax: {X: 1.0, Y: 0.0, Z: 1.0}
+                                            PositionMin: {X: -1.5, Y: 0.0, Z: -1.5}
+                                            PositionMax: {X: 1.5, Y: 0.0, Z: 1.5}
                                             Interpolate: false
                                     Updaters:
                                         51c45ad5981014c93840960c16f9955c: !UpdaterSizeOverTime
@@ -1418,6 +1418,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group1
             Base:
                 BasePartAsset: "e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/EntornoDinámico/Saltador"
                 BasePartId: dd557b1f-094b-4fdd-876b-a3bb02567a13
@@ -1627,21 +1628,21 @@ Hierarchy:
                         Id: 92fdfd87-38f7-4775-92ad-bfd98843a229
                         Position: {X: 0.0, Y: 0.2, Z: 0.0}
                         Rotation: {X: -4.371139E-08, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.8, Y: 0.8, Z: 1.8}
+                        Scale: {X: 0.6, Y: 0.6, Z: 0.6}
                         Children: {}
                     e7b18cdc52fd5dbf42146476aa7acdb5: !ParticleSystemComponent
                         Id: 26a18fad-9256-4ed3-88cc-5c8be38e38fd
                         Control:
                             ResetSeconds: 5.0
                             Control: Play
-                        Color: {R: 0.0, G: 0.0, B: 1.0, A: 0.39215687}
+                        Color: {R: 1.0, G: 0.0, B: 1.0, A: 0.39215687}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
                             BoundingShape: null
                             Emitters:
                                 0bb0b4d692dfa4ecbca6ad2d8b8f437d:
-                                    ParticleLifetime: {X: 0.8, Y: 0.8}
+                                    ParticleLifetime: {X: 0.1, Y: 0.2}
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null
@@ -1662,7 +1663,7 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 12.0
+                                            SpawnCount: 32.0
                                     Initializers:
                                         104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
                                             InheritPosition: true
@@ -1691,8 +1692,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            VelocityMin: {X: 0.0, Y: 1.0, Z: 0.0}
-                                            VelocityMax: {X: 0.0, Y: 4.0, Z: 0.0}
+                                            VelocityMin: {X: 0.0, Y: 10.0, Z: 0.0}
+                                            VelocityMax: {X: 0.0, Y: 12.0, Z: 0.0}
                                         1b9625bd46999c9dbee4cd9348aba191: !InitialPositionSeed
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -1706,8 +1707,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
-                                            PositionMax: {X: 1.0, Y: 0.0, Z: 1.0}
+                                            PositionMin: {X: -1.5, Y: 0.0, Z: -1.5}
+                                            PositionMax: {X: 1.5, Y: 0.0, Z: 1.5}
                                             Interpolate: false
                                     Updaters:
                                         51c45ad5981014c93840960c16f9955c: !UpdaterSizeOverTime
@@ -1739,6 +1740,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
+                        RenderGroup: Group1
             Base:
                 BasePartAsset: "e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/EntornoDinámico/Saltador"
                 BasePartId: dd557b1f-094b-4fdd-876b-a3bb02567a13

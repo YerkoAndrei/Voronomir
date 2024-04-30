@@ -177,16 +177,16 @@ public class ControladorCofres : StartupScript
                 multiplicadorDaño *= 0.2f;
                 break;
             case Armas.escopeta:
-                multiplicadorDaño *= 0.1f;
+                multiplicadorDaño *= 0.12f;
                 break;
             case Armas.metralleta:
-                multiplicadorDaño *= 0.2f;
+                multiplicadorDaño *= 0.18f;
                 break;
             case Armas.rifle:
-                multiplicadorDaño *= 0.5f;
+                multiplicadorDaño *= 0.4f;
                 break;
             case Armas.lanzagranadas:
-                multiplicadorDaño *= 0.5f;
+                multiplicadorDaño *= 0.4f;
                 break;
         }
 
