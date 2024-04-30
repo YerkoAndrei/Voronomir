@@ -93,6 +93,8 @@ public class SistemaEscenas : AsyncScript
                 // Fin
                 if (tiempoLerp >= duraciónAbrir)
                 {
+                    tiempo = 0;
+                    tiempoLerp = 0;
                     panelOscuro.Opacity = 0;
                     panelOscuro.CanBeHitByUser = false;
                     abriendo = false;
@@ -173,7 +175,7 @@ public class SistemaEscenas : AsyncScript
 
         // Carga
         Entity.Scene.Children.Add(escenaActual);
-        await Task.Delay(200);
+        await Task.Delay(400);
 
         // Traduciones
         SistemaTraducción.ActualizarTextosEscena();
