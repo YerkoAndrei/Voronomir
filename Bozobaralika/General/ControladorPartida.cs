@@ -51,7 +51,7 @@ public class ControladorPartida : SyncScript
         maxEnemigos = Entity.Scene.Entities.Where(o => o.Get<ControladorEnemigo>() != null).Count();
         maxSecretos = Entity.Scene.Entities.Where(o => o.Get<ControladorSecreto>() != null).Count();
 
-        activo = true;
+        activo = false;
         tiempo = 0;
     }
 

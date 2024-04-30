@@ -1,0 +1,64 @@
+!UILibraryAsset
+Id: 01c9430c-0aed-4bb2-9e7d-7b06f6e3134d
+SerializedVersion: {Stride: 2.1.0.1}
+Tags: []
+Design:
+    Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+PublicUIElements:
+    b97cce6f-c671-4e4c-afde-a556a2be51f3: "Botón"
+Hierarchy:
+    RootParts:
+        - !Grid ref!! b97cce6f-c671-4e4c-afde-a556a2be51f3
+    Parts:
+        -   UIElement: !ImageElement
+                Id: 03267286-f8aa-4aaf-8a71-0ad889f5753b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
+        -   UIElement: !Button
+                Id: 29e403c2-1f00-4214-ba69-7d3981ebbbe5
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+        -   UIElement: !Grid
+                Id: b97cce6f-c671-4e4c-afde-a556a2be51f3
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                Name: "Botón"
+                Children:
+                    288bb3cba41217ca70828c1288cd1352: !Button ref!! 29e403c2-1f00-4214-ba69-7d3981ebbbe5
+                    4ba0ac30b211286f5dbb3efee011a5e8: !ImageElement ref!! 03267286-f8aa-4aaf-8a71-0ad889f5753b
+                    500555a6cf47edf712d2d76bd9bd5974: !TextBlock ref!! d55d9875-b47c-4938-8415-98e65702c058
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !TextBlock
+                Id: d55d9875-b47c-4938-8415-98e65702c058
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 35.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txt
+                Text: "Botón"
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 30.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextAlignment: Center

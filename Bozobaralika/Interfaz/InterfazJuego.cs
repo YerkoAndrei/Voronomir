@@ -178,7 +178,7 @@ public class InterfazJuego : SyncScript
 
     private void EnClicSalir()
     {
-
+        SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 
     public void ActualizarVida(float porcentaje)

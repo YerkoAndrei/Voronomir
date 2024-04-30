@@ -16,7 +16,7 @@ public static class Constantes
     public enum Escenas
     {
         menú,
-        //pruebas,
+        demo,
         //supervivencia,
         E1M1,
         E1M2,

@@ -13,6 +13,7 @@ using static Constantes;
 public class SistemaEscenas : AsyncScript
 {
     public UrlReference<Scene> escenaMenú;
+    public UrlReference<Scene> escenaDemo;
 
     public GraphicsCompositor compositorBajo;
     public GraphicsCompositor compositorMedio;
@@ -27,6 +28,12 @@ public class SistemaEscenas : AsyncScript
 
     private Grid panelOscuro;
     private ImageElement imgCursor;
+
+    private float duraciónOcultar;
+    private float duraciónAbrir;
+    private float tiempoLerp;
+    private float tiempo;
+    private bool juego;
 
     public override async Task Execute()
     {
@@ -49,6 +56,8 @@ public class SistemaEscenas : AsyncScript
         var página = Entity.Get<UIComponent>().Page.RootElement;
         panelOscuro = página.FindVisualChildOfType<Grid>("PanelOscuro");
         panelOscuro.Opacity = 0;
+        duraciónOcultar = 0.2f;
+        duraciónAbrir = 0.4f;
 
         escenaActual = Content.Load(escenaMenú);
         Entity.Scene.Children.Add(escenaActual);
@@ -59,11 +68,6 @@ public class SistemaEscenas : AsyncScript
         // Cursor
         //Game.Window.IsMouseVisible = false;
         //imgCursor = página.FindVisualChildOfType<ImageElement>("imgCursor");
-
-        var duraciónOcultar = 0.2f;
-        var duraciónAbrir = 0.4f;
-        var tiempoLerp = 0f;
-        var tiempo = 0f;
 
         while (Game.IsRunning)
         {
@@ -77,11 +81,7 @@ public class SistemaEscenas : AsyncScript
 
                 // Fin
                 if (tiempoLerp >= duraciónOcultar)
-                {
-                    tiempo = 0;
-                    tiempoLerp = 0;
                     CargarEscena();
-                }
             }
 
             if (abriendo)
@@ -92,19 +92,13 @@ public class SistemaEscenas : AsyncScript
 
                 // Fin
                 if (tiempoLerp >= duraciónAbrir)
-                {
-                    tiempo = 0;
-                    tiempoLerp = 0;
-                    panelOscuro.Opacity = 0;
-                    panelOscuro.CanBeHitByUser = false;
-                    abriendo = false;
-                }
+                    TerminarCarga();
             }
             await Script.NextFrame();
         }
     }
 
-    public void PosicionarCursor()
+    private void PosicionarCursor()
     {
         // Cursor es un ImageElement
         // ¿Optimizar?
@@ -159,8 +153,12 @@ public class SistemaEscenas : AsyncScript
     private async void CargarEscena()
     {
         // Fin Lerp
+        tiempo = 0;
+        tiempoLerp = 0;
+        juego = false;
         ocultando = false;
         panelOscuro.Opacity = 1;
+        await Task.Delay(10);
 
         // Descarga
         Content.Unload(escenaActual);
@@ -171,17 +169,32 @@ public class SistemaEscenas : AsyncScript
             case Escenas.menú:
                 escenaActual = Content.Load(escenaMenú);
                 break;
+            case Escenas.demo:
+                escenaActual = Content.Load(escenaDemo);
+                juego = true;
+                break;
         }
 
         // Carga
         Entity.Scene.Children.Add(escenaActual);
-        await Task.Delay(400);
-
-        // Traduciones
         SistemaTraducción.ActualizarTextosEscena();
 
-        // Inicio Lerp
+        // Retraso predeterminado
+        await Task.Delay(400);
         abriendo = true;
+    }
+
+    private void TerminarCarga()
+    {
+        tiempo = 0;
+        tiempoLerp = 0;
+        abriendo = false;
+        panelOscuro.Opacity = 0;
+        panelOscuro.CanBeHitByUser = false;
+
+        // Iniciar cuanto termine pantalla suave
+        if (juego)
+            ControladorPartida.Pausar(true);
     }
 
     public static GraphicsCompositor ObtenerGráficos(NivelesConfiguración nivel)

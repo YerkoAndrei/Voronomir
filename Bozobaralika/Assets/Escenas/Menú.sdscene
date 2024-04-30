@@ -7,10 +7,12 @@ Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
         - ref!! 1d10ba6a-b7e9-4c1e-b4b4-4ad331cb5dab
+        - ref!! be667d8c-7eba-46db-b617-c4e63e53fe13
+        - ref!! a85530a3-8e0e-41cf-9e02-3a6d407082fd
     Parts:
         -   Entity:
                 Id: 1d10ba6a-b7e9-4c1e-b4b4-4ad331cb5dab
-                Name: UI
+                Name: "Menú"
                 Components:
                     9370f9bed92220e5bf30ccc49bc46461: !Bozobaralika.InterfazMen%25C3%25BA,Bozobaralika.Proyecto
                         Id: 15755fcf-600b-45d3-9c56-f08837828dc3
@@ -22,8 +24,39 @@ Hierarchy:
                         Children: {}
                     2a3f5fd9b4d9f74d08afc9b240c3f933: !UIComponent
                         Id: 6fe1333c-8c6e-459b-a3be-af9814613a43
-                        Page: null
+                        Page: "2973b9e0-75a7-45db-bc7a-1d6a505e0191:Interfaz/Menú"
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
                         ResolutionStretch: FixedHeightAdaptableWidth
                         RenderGroup: Group30
+        -   Folder: Entorno
+            Entity:
+                Id: a85530a3-8e0e-41cf-9e02-3a6d407082fd
+                Name: Geroi
+                Components:
+                    fc71ffc7d776f28d75dcd5b8de0d15bf: !TransformComponent
+                        Id: 22dd994f-f714-41ba-b144-30bef35cd9f2
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    61213c6e0f39c981fa4898519b0bf7d9: !ModelComponent
+                        Id: e372b488-76d2-4bdb-b1ef-aff7584cf1bd
+                        Model: 53769a50-21f0-4a6e-a207-518d4b9bbf96:Modelos/Jugador/Geroi
+                        Materials: {}
+        -   Entity:
+                Id: be667d8c-7eba-46db-b617-c4e63e53fe13
+                Name: "Cámara"
+                Components:
+                    f54f70abed89338ea151d8f78a56a82d: !TransformComponent
+                        Id: 49a47ee1-2699-4531-aad3-8b6c1df1b1a9
+                        Position: {X: 0.0, Y: 1.3, Z: 2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f16251ac079005852047045a87cacca5: !CameraComponent
+                        Id: 23bf7f96-84c6-48c4-af5d-4b83b8e0cccd
+                        Name: null
+                        Projection: Perspective
+                        FarClipPlane: 100.0
+                        Slot: 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
