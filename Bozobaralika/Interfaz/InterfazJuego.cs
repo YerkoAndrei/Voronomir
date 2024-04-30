@@ -96,8 +96,8 @@ public class InterfazJuego : SyncScript
 
         // Botónes
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReanudar"), Pausar);
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReintentar"), EnClicReintentar);
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReiniciar"), EnClicReintentar);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReiniciar"), EnClicReiniciar);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReintentar"), EnClicReiniciar);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnContinuar"), EnClicContinuar);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnPausaSalir"), EnClicSalir);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnMuerteSalir"), EnClicSalir);
@@ -166,9 +166,9 @@ public class InterfazJuego : SyncScript
         }
     }
 
-    private void EnClicReintentar()
+    private void EnClicReiniciar()
     {
-        SistemaEscenas.RecargarEscena();
+        SistemaEscenas.CambiarEscena(ControladorPartida.ObtenerEscena());
     }
 
     private void EnClicContinuar()

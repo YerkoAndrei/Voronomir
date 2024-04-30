@@ -4446,8 +4446,8 @@ Hierarchy:
                 Components:
                     5cb52a5c65430d2569b779dae13d4ecd: !Bozobaralika.ControladorPartida,Bozobaralika.Proyecto
                         Id: 54081697-9976-4321-80a2-1d5877652fd9
-                        escena: "menú"
-                        siguienteEscena: "menú"
+                        escena: demo
+                        siguienteEscena: demo
                     7107c19923448b964ecd9d41fe2771bf: !TransformComponent
                         Id: d22b2c10-5f6a-4267-ae92-9812dfaf0ed5
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}

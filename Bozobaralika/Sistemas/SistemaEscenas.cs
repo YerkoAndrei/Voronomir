@@ -132,11 +132,6 @@ public class SistemaEscenas : AsyncScript
         instancia.Game.Window.Visible = true;
     }
 
-    public static void RecargarEscena()
-    {
-        CambiarEscena(ControladorPartida.ObtenerEscena());
-    }
-
     public static void CambiarEscena(Escenas escena)
     {
         if (ocultando || abriendo)

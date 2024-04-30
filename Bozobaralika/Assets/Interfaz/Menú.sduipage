@@ -48,7 +48,7 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: 22e4730b-3f64-4cf3-b576-557b68834416
                 DependencyProperties:
-                    1d92ebaa7082b5f67f2058380c0cd92f*~GridBase.RowPropertyKey: 1
+                    1d92ebaa7082b5f67f2058380c0cd92f~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width*: 600.0
                 Height*: 60.0
@@ -64,10 +64,6 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-            Base:
-                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
-                BasePartId: b97cce6f-c671-4e4c-afde-a556a2be51f3
-                InstanceId: 5a0e46d8-b1c3-4675-aefe-cdd107da4a51
         -   UIElement: !Button
                 Id: 30d2f42c-4bac-41b3-95a4-d8f27d54fc14
                 DependencyProperties: {}
@@ -116,10 +112,6 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-            Base:
-                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
-                BasePartId: b97cce6f-c671-4e4c-afde-a556a2be51f3
-                InstanceId: 4f98a5a8-2dad-469b-acd9-c377e4e947a3
         -   UIElement: !TextBlock
                 Id: 4fecb162-c19a-4549-bcd7-686b483647a1
                 DependencyProperties: {}
@@ -139,7 +131,7 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: 5f30d524-7aac-4920-905a-935d3e82cc1c
                 DependencyProperties:
-                    2bd169d513c41073523b98b0579c9c64*~GridBase.RowPropertyKey: 3
+                    2bd169d513c41073523b98b0579c9c64~GridBase.RowPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width*: 600.0
                 Height*: 60.0
@@ -155,10 +147,6 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-            Base:
-                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
-                BasePartId: b97cce6f-c671-4e4c-afde-a556a2be51f3
-                InstanceId: a62d6062-9958-4205-9f7b-d6125b123537
         -   UIElement: !Button
                 Id: 7c6efa0a-76d8-49e1-80d1-dd9112ca872b
                 DependencyProperties: {}
@@ -212,7 +200,7 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: c740692e-1fd3-4315-b270-488ae60960c7
                 DependencyProperties:
-                    ca3b2c76f402dd39a3294df5681b9356*~GridBase.RowPropertyKey: 4
+                    ca3b2c76f402dd39a3294df5681b9356~GridBase.RowPropertyKey: 4
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width*: 600.0
                 Height*: 60.0
@@ -228,10 +216,6 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-            Base:
-                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
-                BasePartId: b97cce6f-c671-4e4c-afde-a556a2be51f3
-                InstanceId: 9a08eab7-c3f2-439d-b295-bfffafdf008d
         -   UIElement: !ImageElement
                 Id: d3a99fd6-f891-426b-ad6d-dd3ce39a81f5
                 DependencyProperties: {}

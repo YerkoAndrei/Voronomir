@@ -193,9 +193,14 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: 2c659738-77e9-4656-86a6-138c738c84ab
                 DependencyProperties:
-                    5086a6c1cec6a5353eb1de0908debfff*~GridBase.RowPropertyKey: 0
+                    5086a6c1cec6a5353eb1de0908debfff~GridBase.RowPropertyKey: 0
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 800.0
+                Height: 60.0
                 Margin*: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
                 Name*: btnReintentar
                 Children:
                     288bb3cba41217ca70828c1288cd1352: !Button ref!! 04e8c357-0189-40c8-a4ed-26ea31fa0822
@@ -204,10 +209,6 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-            Base:
-                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
-                BasePartId: b97cce6f-c671-4e4c-afde-a556a2be51f3
-                InstanceId: 85241890-76fe-4e1d-b742-8892f87ed870
         -   UIElement: !ImageElement
                 Id: 32a03b41-3dd8-4b3f-baaa-5290748d448f
                 DependencyProperties: {}
@@ -327,25 +328,6 @@ Hierarchy:
                 BasePartId: 03267286-f8aa-4aaf-8a71-0ad889f5753b
                 InstanceId: d7eaa43e-bfa4-47ea-968a-8ddd625172f6
         -   UIElement: !Grid
-                Id: 4245180b-2a8f-45a4-891f-1a4a538a8fa8
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 600.0
-                Height: 60.0
-                VerticalAlignment: Bottom
-                Margin: {Bottom: 50.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnPausaSalir
-                Children:
-                    c88094e8da5bda4ed8fb265e222019c7: !Button ref!! da5714ef-4796-40b5-a3f0-b9cac8cfdc7e
-                    083030b6189734c68ea659f60a908b9c: !ImageElement ref!! 98c4ba50-567b-4670-b872-c1e99881e33a
-                    cac06d838ddbc0d5adc3fa9c43ea5a77: !TextBlock ref!! d67a2e61-7509-4d8f-b917-769fd4fa1d78
-                RowDefinitions: {}
-                ColumnDefinitions: {}
-                LayerDefinitions: {}
-        -   UIElement: !Grid
                 Id: 42fcb295-de85-418a-af42-2570ba39e531
                 DependencyProperties:
                     9802bd0f45500b87c078b59b27829606~GridBase.ColumnPropertyKey: 4
@@ -387,7 +369,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name*: txtMuerteSalir
-                Text: "Botón"
+                Text*: Salir
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 30.0
                 TextColor: {R: 0, G: 0, B: 0, A: 255}
@@ -432,6 +414,25 @@ Hierarchy:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
                 BasePartId: 03267286-f8aa-4aaf-8a71-0ad889f5753b
                 InstanceId: cb0063b7-57fe-4177-acbe-84c6f370c3eb
+        -   UIElement: !TextBlock
+                Id: 4d5930ef-340b-4f0b-8252-ba7d76aca4ad
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 35.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name*: txtReanudar
+                Text*: Reanudar
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 30.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextAlignment: Center
+            Base:
+                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
+                BasePartId: d55d9875-b47c-4938-8415-98e65702c058
+                InstanceId: ee0e9eff-406b-461e-8142-b879f95daf77
         -   UIElement: !ImageElement
                 Id: 54399583-ed5c-4bf5-a156-a3d393a50b8a
                 DependencyProperties:
@@ -529,6 +530,24 @@ Hierarchy:
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Right
         -   UIElement: !ImageElement
+                Id: 621b489d-f1cd-4c84-ba64-0e970d7b9b08
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
+            Base:
+                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
+                BasePartId: 03267286-f8aa-4aaf-8a71-0ad889f5753b
+                InstanceId: ee0e9eff-406b-461e-8142-b879f95daf77
+        -   UIElement: !ImageElement
                 Id: 65d37beb-a012-411d-88b5-d62ed55ef95f
                 DependencyProperties:
                     40d6d4ea7f4b997c14a8b1d99b3a790d~Panel.ZIndexPropertyKey: 2
@@ -545,9 +564,14 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: 65e81845-78c9-4dbc-aa9e-ef5fe0599f28
                 DependencyProperties:
-                    c2846184b2914b6111852351f93d9bab*~GridBase.RowPropertyKey: 1
+                    c2846184b2914b6111852351f93d9bab~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 800.0
+                Height: 60.0
                 Margin*: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
                 Name*: btnMuerteSalir
                 Children:
                     288bb3cba41217ca70828c1288cd1352: !Button ref!! aedb8d39-14ac-4fbb-8e88-b7cc9bfd866f
@@ -556,10 +580,24 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 678a6380-a079-4a49-8d81-31f00f89f083
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
-                BasePartId: b97cce6f-c671-4e4c-afde-a556a2be51f3
-                InstanceId: d7eaa43e-bfa4-47ea-968a-8ddd625172f6
+                BasePartId: 03267286-f8aa-4aaf-8a71-0ad889f5753b
+                InstanceId: a1cd4c59-9f5d-4925-a97d-537d41fc6beb
         -   UIElement: !TextBlock
                 Id: 67ec0232-3f2d-427a-859f-6cb8c8ef9c9b
                 DependencyProperties: {}
@@ -590,22 +628,56 @@ Hierarchy:
                     Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 0, B: 255, A: 255}
-        -   UIElement: !Grid
-                Id: 6c625eaf-c0a1-439b-a127-66b7ba1a4b14
+        -   UIElement: !ImageElement
+                Id: 6e50c91a-0c88-4674-bb28-4fa4701e26ef
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 600.0
-                Height: 60.0
-                VerticalAlignment: Bottom
-                Margin: {Bottom: 150.0}
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: btnReiniciar
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
+            Base:
+                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
+                BasePartId: 03267286-f8aa-4aaf-8a71-0ad889f5753b
+                InstanceId: 20d8f2d4-e027-4801-971f-ba24bdcd6159
+        -   UIElement: !UniformGrid
+                Id: 6ec05711-a4dd-476c-8a23-4e6ee721e272
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 340.0
+                VerticalAlignment: Bottom
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Botones
                 Children:
-                    c88094e8da5bda4ed8fb265e222019c7: !Button ref!! c71b5507-deb8-4776-bc84-18c40f884129
-                    083030b6189734c68ea659f60a908b9c: !ImageElement ref!! f4112962-ee35-463a-a3c2-4bf1756fbc7b
-                    cac06d838ddbc0d5adc3fa9c43ea5a77: !TextBlock ref!! ecb0dbe2-a60a-499d-8389-5975bf97edd3
+                    d678b2d394ed1ab3b0b763c9830b53c6: !Grid ref!! 73b600d2-294f-4378-ab35-15477a69fe0a
+                    19d316047c31d02488677c937b6483ca: !Grid ref!! 83adc92f-e079-4be1-94d0-f924ba156060
+                    dd25c54d9698b85550d55b4bdfa48836: !Grid ref!! 90de1e5d-e97b-4933-b883-2621b9733d3f
+                Rows: 3
+        -   UIElement: !Grid
+                Id: 73b600d2-294f-4378-ab35-15477a69fe0a
+                DependencyProperties:
+                    5086a6c1cec6a5353eb1de0908debfff~GridBase.RowPropertyKey: 0
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 800.0
+                Height: 60.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnReanudar
+                Children:
+                    288bb3cba41217ca70828c1288cd1352: !Button ref!! fe945350-261e-43cd-a775-c4c9a4c74b2c
+                    4ba0ac30b211286f5dbb3efee011a5e8: !ImageElement ref!! 621b489d-f1cd-4c84-ba64-0e970d7b9b08
+                    500555a6cf47edf712d2d76bd9bd5974: !TextBlock ref!! 4d5930ef-340b-4f0b-8252-ba7d76aca4ad
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -624,31 +696,6 @@ Hierarchy:
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Right
-        -   UIElement: !Button
-                Id: 76614c78-8f62-419a-949e-26d853f047f0
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btn
-        -   UIElement: !TextBlock
-                Id: 788a11a5-847a-4ec7-900b-25d097af2f13
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: txtReanudar
-                Text: Reanudar
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-                TextAlignment: Center
         -   UIElement: !Grid
                 Id: 7e00e8f3-06e0-472e-8cec-ff5756a08416
                 DependencyProperties: {}
@@ -661,9 +708,7 @@ Hierarchy:
                 Name: PanelPausa
                 Children:
                     a1c27a8786b254adfef7164629f7c808: !TextBlock ref!! 1d56c1b9-a79c-4ec1-9991-8c24b90f5ef3
-                    4e08cd7a5c5dfcbd2e07998950cfe2e1: !Grid ref!! dc8a603d-84a0-4e0a-bf35-4d46a534e56e
-                    113aea6d4f1918786e0376a838d6928a: !Grid ref!! 6c625eaf-c0a1-439b-a127-66b7ba1a4b14
-                    88861eed88d3ac32e16f49995cd0d510: !Grid ref!! 4245180b-2a8f-45a4-891f-1a4a538a8fa8
+                    5f870d578032aed04b40fe5c64222f2f: !UniformGrid ref!! 6ec05711-a4dd-476c-8a23-4e6ee721e272
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -697,6 +742,25 @@ Hierarchy:
                     ef7bcae47b23ca0468c71544a35d72f0: !ImageElement ref!! 1f2cd61c-3339-4a98-8a1d-307b6fbece08
                     3b5b4d746c683dde142a4092f70a40b8: !ImageElement ref!! 18843bab-6c2a-4d06-9865-e0d2d2d91da7
                     ba2ac22536255d552858ee4b2cfb65bb: !ImageElement ref!! 198d3bb2-a3a7-4cd2-ba10-d837f4cef590
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
+                Id: 83adc92f-e079-4be1-94d0-f924ba156060
+                DependencyProperties:
+                    5086a6c1cec6a5353eb1de0908debfff~GridBase.RowPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 600.0
+                Height: 60.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnReiniciar
+                Children:
+                    288bb3cba41217ca70828c1288cd1352: !Button ref!! 9100b5f9-fcc8-4d52-b802-6101489b3c5c
+                    4ba0ac30b211286f5dbb3efee011a5e8: !ImageElement ref!! 678a6380-a079-4a49-8d81-31f00f89f083
+                    500555a6cf47edf712d2d76bd9bd5974: !TextBlock ref!! bbfefdfc-aeaa-49ee-9d6b-f0b20fb1fcbd
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -756,7 +820,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name*: txtReintentar
-                Text: "Botón"
+                Text*: Reintentar
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 30.0
                 TextColor: {R: 0, G: 0, B: 0, A: 255}
@@ -814,6 +878,39 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !Grid
+                Id: 90de1e5d-e97b-4933-b883-2621b9733d3f
+                DependencyProperties:
+                    c2846184b2914b6111852351f93d9bab~GridBase.RowPropertyKey: 2
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 600.0
+                Height: 60.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnPausaSalir
+                Children:
+                    288bb3cba41217ca70828c1288cd1352: !Button ref!! 9c04432b-f002-4340-b192-be7441761210
+                    4ba0ac30b211286f5dbb3efee011a5e8: !ImageElement ref!! 6e50c91a-0c88-4674-bb28-4fa4701e26ef
+                    500555a6cf47edf712d2d76bd9bd5974: !TextBlock ref!! d469a677-644a-4efe-97f2-2740b95abcfc
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Button
+                Id: 9100b5f9-fcc8-4d52-b802-6101489b3c5c
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+            Base:
+                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
+                BasePartId: 29e403c2-1f00-4214-ba69-7d3981ebbbe5
+                InstanceId: a1cd4c59-9f5d-4925-a97d-537d41fc6beb
         -   UIElement: !ImageElement
                 Id: 95187428-8d3f-4120-8659-5a1e4a1a5ba1
                 DependencyProperties:
@@ -846,20 +943,20 @@ Hierarchy:
                 TextSize: 30.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
-        -   UIElement: !ImageElement
-                Id: 98c4ba50-567b-4670-b872-c1e99881e33a
+        -   UIElement: !Button
+                Id: 9c04432b-f002-4340-b192-be7441761210
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: img
-                Source: !SpriteFromTexture
-                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
-                    Center: {X: 0.0, Y: 0.0}
-                Color: {R: 79, G: 79, B: 255, A: 255}
-                StretchType: Fill
+                Name: btn
+            Base:
+                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
+                BasePartId: 29e403c2-1f00-4214-ba69-7d3981ebbbe5
+                InstanceId: 20d8f2d4-e027-4801-971f-ba24bdcd6159
         -   UIElement: !ImageElement
                 Id: 9cd2d46b-af16-4a8a-a534-5079740eb5eb
                 DependencyProperties: {}
@@ -1027,6 +1124,25 @@ Hierarchy:
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !TextBlock
+                Id: bbfefdfc-aeaa-49ee-9d6b-f0b20fb1fcbd
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 35.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name*: txtReiniciar
+                Text*: Reiniciar
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 30.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextAlignment: Center
+            Base:
+                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
+                BasePartId: d55d9875-b47c-4938-8415-98e65702c058
+                InstanceId: a1cd4c59-9f5d-4925-a97d-537d41fc6beb
         -   UIElement: !ImageElement
                 Id: bfdd7d6f-be8e-4f4c-a216-592fdf81d819
                 DependencyProperties:
@@ -1061,7 +1177,7 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: c5d8c8b0-e9f8-476b-b572-8f964c39e827
                 DependencyProperties:
-                    c2846184b2914b6111852351f93d9bab*~GridBase.RowPropertyKey: 1
+                    c2846184b2914b6111852351f93d9bab~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width*: 600.0
                 Height*: 60.0
@@ -1077,20 +1193,6 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-            Base:
-                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
-                BasePartId: b97cce6f-c671-4e4c-afde-a556a2be51f3
-                InstanceId: 73dd3c4b-5a71-4110-97a7-a03923f743e6
-        -   UIElement: !Button
-                Id: c71b5507-deb8-4776-bc84-18c40f884129
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btn
         -   UIElement: !Button
                 Id: cae14e0d-a257-4e16-90e3-183c53194489
                 DependencyProperties: {}
@@ -1106,20 +1208,24 @@ Hierarchy:
                 BasePartId: 29e403c2-1f00-4214-ba69-7d3981ebbbe5
                 InstanceId: cb0063b7-57fe-4177-acbe-84c6f370c3eb
         -   UIElement: !TextBlock
-                Id: d67a2e61-7509-4d8f-b917-769fd4fa1d78
+                Id: d469a677-644a-4efe-97f2-2740b95abcfc
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
+                Height: 35.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtSalir
-                Text: Salir
+                Name*: txtPausaSalir
+                Text: "Botón"
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextSize: 30.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
                 TextAlignment: Center
+            Base:
+                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
+                BasePartId: d55d9875-b47c-4938-8415-98e65702c058
+                InstanceId: 20d8f2d4-e027-4801-971f-ba24bdcd6159
         -   UIElement: !TextBlock
                 Id: d7a64e16-e33d-43a0-b881-b20f5ddb9e24
                 DependencyProperties:
@@ -1139,7 +1245,7 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: d9118e8e-d2f8-4808-875d-2c6119d8d1e2
                 DependencyProperties:
-                    5086a6c1cec6a5353eb1de0908debfff*~GridBase.RowPropertyKey: 0
+                    5086a6c1cec6a5353eb1de0908debfff~GridBase.RowPropertyKey: 0
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width*: 800.0
                 Height*: 60.0
@@ -1155,20 +1261,6 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-            Base:
-                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
-                BasePartId: b97cce6f-c671-4e4c-afde-a556a2be51f3
-                InstanceId: cb0063b7-57fe-4177-acbe-84c6f370c3eb
-        -   UIElement: !Button
-                Id: da5714ef-4796-40b5-a3f0-b9cac8cfdc7e
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btn
         -   UIElement: !ImageElement
                 Id: da97b4cc-aca5-4668-9280-c12700792b56
                 DependencyProperties:
@@ -1199,25 +1291,6 @@ Hierarchy:
                     Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 0, B: 0, A: 255}
-        -   UIElement: !Grid
-                Id: dc8a603d-84a0-4e0a-bf35-4d46a534e56e
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 800.0
-                Height: 60.0
-                VerticalAlignment: Bottom
-                Margin: {Bottom: 250.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnReanudar
-                Children:
-                    c88094e8da5bda4ed8fb265e222019c7: !Button ref!! 76614c78-8f62-419a-949e-26d853f047f0
-                    083030b6189734c68ea659f60a908b9c: !ImageElement ref!! e43039b7-71ea-445a-b007-ee25720d8848
-                    cac06d838ddbc0d5adc3fa9c43ea5a77: !TextBlock ref!! 788a11a5-847a-4ec7-900b-25d097af2f13
-                RowDefinitions: {}
-                ColumnDefinitions: {}
-                LayerDefinitions: {}
         -   UIElement: !UniformGrid
                 Id: e35763b1-8f48-4fb9-8329-9a638e0a0541
                 DependencyProperties: {}
@@ -1233,35 +1306,6 @@ Hierarchy:
                     d678b2d394ed1ab3b0b763c9830b53c6: !Grid ref!! d9118e8e-d2f8-4808-875d-2c6119d8d1e2
                     dd25c54d9698b85550d55b4bdfa48836: !Grid ref!! c5d8c8b0-e9f8-476b-b572-8f964c39e827
                 Rows: 2
-        -   UIElement: !ImageElement
-                Id: e43039b7-71ea-445a-b007-ee25720d8848
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: img
-                Source: !SpriteFromTexture
-                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
-                    Center: {X: 0.0, Y: 0.0}
-                Color: {R: 79, G: 79, B: 255, A: 255}
-                StretchType: Fill
-        -   UIElement: !TextBlock
-                Id: ecb0dbe2-a60a-499d-8389-5975bf97edd3
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: txtReiniciar
-                Text: Reintentar
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-                TextAlignment: Center
         -   UIElement: !TextBlock
                 Id: ed2670cd-4534-4fec-aceb-574726c68fff
                 DependencyProperties: {}
@@ -1310,20 +1354,6 @@ Hierarchy:
                     Texture: 1f830b4b-c208-4476-8ee3-496236d0724c:Texturas/Armas/imgRifle
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
-        -   UIElement: !ImageElement
-                Id: f4112962-ee35-463a-a3c2-4bf1756fbc7b
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: img
-                Source: !SpriteFromTexture
-                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
-                    Center: {X: 0.0, Y: 0.0}
-                Color: {R: 79, G: 79, B: 255, A: 255}
-                StretchType: Fill
         -   UIElement: !UniformGrid
                 Id: f9c55e83-016c-4bc2-9420-9cb93cdb0f34
                 DependencyProperties: {}
@@ -1372,3 +1402,17 @@ Hierarchy:
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !Button
+                Id: fe945350-261e-43cd-a775-c4c9a4c74b2c
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+            Base:
+                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
+                BasePartId: 29e403c2-1f00-4214-ba69-7d3981ebbbe5
+                InstanceId: ee0e9eff-406b-461e-8142-b879f95daf77
