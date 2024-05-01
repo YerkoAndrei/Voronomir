@@ -76,7 +76,7 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 0bb0b4d692dfa4ecbca6ad2d8b8f437d:
-                                    ParticleLifetime: {X: 0.1, Y: 0.2}
+                                    ParticleLifetime: {X: 0.1, Y: 0.3}
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null

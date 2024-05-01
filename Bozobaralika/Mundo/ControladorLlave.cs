@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
+using Stride.Particles.Components;
 using Stride.Engine;
 
 namespace Bozobaralika;
@@ -10,6 +11,7 @@ public class ControladorLlave : AsyncScript
 {
     public Llaves llave;
     public TransformComponent modelo;
+    public ParticleSystemComponent partículas;
     private bool activo;
 
     private PhysicsComponent cuerpo;
@@ -28,6 +30,9 @@ public class ControladorLlave : AsyncScript
         velocidadRotación = 2;
         AnimarMovimiento(posiciónArriba);
         Rotar();
+
+        partículas.Enabled = true;
+        partículas.ParticleSystem.ResetSimulation();
 
         while (Game.IsRunning)
         {
@@ -95,6 +100,7 @@ public class ControladorLlave : AsyncScript
 
     private async void AnimarFin()
     {
+        partículas.ParticleSystem.StopEmitters();
         var inicio = modelo.Scale;
         float duración = 0.5f;
         float tiempoLerp = 0;
@@ -110,5 +116,8 @@ public class ControladorLlave : AsyncScript
         }
 
         activo = false;
+
+        await Task.Delay(1000);
+        partículas.Enabled = false;
     }
 }
