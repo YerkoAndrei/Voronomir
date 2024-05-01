@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Particles.Components;
 using Stride.Engine;
@@ -46,6 +47,8 @@ public class AnimadorArmas : AsyncScript
     private Vector3 tamañoFuegoDerecha;
 
     private ControladorArmas controlador;
+    private CancellationTokenSource tokenEspadaIzquierda;
+    private CancellationTokenSource tokenEspadaDerecha;
 
     public void Iniciar(ControladorArmas _controlador)
     {
@@ -58,6 +61,8 @@ public class AnimadorArmas : AsyncScript
         // Animación movimiento
         bajando = true;
         activa = false;
+        tokenEspadaIzquierda = new CancellationTokenSource();
+        tokenEspadaDerecha = new CancellationTokenSource();
 
         centroIzquierda = modeloIzquierda.Entity.Transform.Rotation;
         centroDerecha = modeloDerecha.Entity.Transform.Rotation;
@@ -252,25 +257,24 @@ public class AnimadorArmas : AsyncScript
                 break;
         }
 
-        // Evita repeticón de animación
+        // Evita repetición de animación
         switch (tipoDisparo)
         {
             case TipoDisparo.espejo:
+                while (tiempoLerpIzquierda < duración)
+                {
+                    tiempoIzquierda = SistemaAnimación.EvaluarSuave(tiempoLerpIzquierda / duración);
+                    ejeIzquierda.Position = Vector3.Lerp(posiciónDisparoIzquierda, posiciónInicialIzquierda, tiempoIzquierda);
+                    ejeDerecha.Position = Vector3.Lerp(posiciónDisparoDerecha, posiciónInicialDerecha, tiempoIzquierda);
+                    tiempoLerpIzquierda += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+                    await Task.Delay(1);
+                }
+                break;
             case TipoDisparo.izquierda:
                 while (tiempoLerpIzquierda < duración)
                 {
                     tiempoIzquierda = SistemaAnimación.EvaluarSuave(tiempoLerpIzquierda / duración);
-
-                    switch (tipoDisparo)
-                    {
-                        case TipoDisparo.espejo:
-                            ejeIzquierda.Position = Vector3.Lerp(posiciónDisparoIzquierda, posiciónInicialIzquierda, tiempoIzquierda);
-                            ejeDerecha.Position = Vector3.Lerp(posiciónDisparoDerecha, posiciónInicialDerecha, tiempoIzquierda);
-                            break;
-                        case TipoDisparo.izquierda:
-                            ejeIzquierda.Position = Vector3.Lerp(posiciónDisparoIzquierda, posiciónInicialIzquierda, tiempoIzquierda);
-                            break;
-                    }
+                    ejeIzquierda.Position = Vector3.Lerp(posiciónDisparoIzquierda, posiciónInicialIzquierda, tiempoIzquierda);
                     tiempoLerpIzquierda += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
                     await Task.Delay(1);
                 }
@@ -279,7 +283,6 @@ public class AnimadorArmas : AsyncScript
                 while (tiempoLerpDerecha < duración)
                 {
                     tiempoDerecha = SistemaAnimación.EvaluarSuave(tiempoLerpDerecha / duración);
-
                     ejeDerecha.Position = Vector3.Lerp(posiciónDisparoDerecha, posiciónInicialDerecha, tiempoDerecha);
                     tiempoLerpDerecha += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
                     await Task.Delay(1);
@@ -406,8 +409,8 @@ public class AnimadorArmas : AsyncScript
     // Melé
     public async void AnimarAtaque(TipoDisparo tipoDisparo)
     {
-        var rotaciónAtaqueIzquierda = RotaciónÁngulos(-40, -90, 60);
-        var rotaciónAtaqueDerecha = RotaciónÁngulos(40, -90, -60);
+        var rotaciónAtaqueIzquierda = RotaciónÁngulos(-100, -90, 60);
+        var rotaciónAtaqueDerecha = RotaciónÁngulos(100, -90, -60);
 
         partículasIzquierda.ParticleSystem.ResetSimulation();
         partículasDerecha.ParticleSystem.ResetSimulation();
@@ -417,14 +420,30 @@ public class AnimadorArmas : AsyncScript
         switch (tipoDisparo)
         {
             case TipoDisparo.izquierda:
-                AnimarEspada(ejeIzquierda, rotaciónAtaqueIzquierda, 0.09f);
-                await Task.Delay(60);
-                AnimarEspada(ejeDerecha, rotaciónAtaqueDerecha, 0.1f);
+                // Cancela ataque
+                tokenEspadaIzquierda.Cancel();
+                tokenEspadaIzquierda = new CancellationTokenSource();
+
+                AnimarEspada(ejeIzquierda, rotaciónAtaqueIzquierda, 0.12f);
+
+                var tokenIzq = tokenEspadaIzquierda.Token;
+                if (!tokenIzq.IsCancellationRequested)
+                    await Task.Delay(80);
+
+                AnimarEspada(ejeDerecha, rotaciónAtaqueDerecha, 0.12f);
                 break;
             case TipoDisparo.derecha:
-                AnimarEspada(ejeDerecha, rotaciónAtaqueDerecha, 0.09f);
-                await Task.Delay(60);
-                AnimarEspada(ejeIzquierda, rotaciónAtaqueIzquierda, 0.1f);
+                // Cancela ataque
+                tokenEspadaDerecha.Cancel();
+                tokenEspadaDerecha = new CancellationTokenSource();
+
+                AnimarEspada(ejeDerecha, rotaciónAtaqueDerecha, 0.12f);
+
+                var tokenDer = tokenEspadaDerecha.Token;
+                if (!tokenDer.IsCancellationRequested)
+                    await Task.Delay(80);
+
+                AnimarEspada(ejeIzquierda, rotaciónAtaqueIzquierda, 0.12f);
                 break;
         }
 
@@ -440,8 +459,14 @@ public class AnimadorArmas : AsyncScript
         float tiempoLerp = 0;
         float tiempo = 0;
 
+        var tokenIzq = tokenEspadaIzquierda.Token;
+        var tokenDer = tokenEspadaDerecha.Token;
         while (tiempoLerp < duración)
         {
+            if ((tokenIzq.IsCancellationRequested && espada == ejeIzquierda) ||
+                (tokenDer.IsCancellationRequested && espada == ejeDerecha))
+                return;
+
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             espada.Rotation = Quaternion.Lerp(rotaciónAtaque, Quaternion.Identity, tiempo);
 

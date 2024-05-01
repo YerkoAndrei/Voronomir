@@ -249,7 +249,7 @@ public class ControladorArmas : StartupScript
                 }
                 controlador.VibrarCámara(16, 10);
                 ActivarLuz();
-                animadorEscopeta.AnimarDisparo(0.5f, 0.2f, TipoDisparo.espejo);
+                animadorEscopeta.AnimarDisparo(0.5f, 0.25f, TipoDisparo.espejo);
                 últimoDisparoEscopeta = ControladorPartida.ObtenerTiempo();
                 break;
             case Armas.metralleta:
