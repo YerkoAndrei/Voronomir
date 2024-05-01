@@ -19,7 +19,8 @@ Hierarchy:
                     79c97683a9b44b1d2aa39475a8794065: !ModelComponent
                         Id: eb71238a-255c-40a5-8764-29f4756f08c6
                         Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Proyectiles/Cilindro/Cilindro
-                        Materials: {}
+                        Materials:
+                            a3f6ad4041a4b67179cea1539445e7cf~0: 6cc33e1e-db8b-4674-a9cb-cd74193afd64:Materiales/Veneno
         -   Entity:
                 Id: 86d7594e-a646-4f48-b770-da51d79c7422
                 Name: Cola

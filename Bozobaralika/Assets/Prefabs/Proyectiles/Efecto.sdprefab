@@ -513,14 +513,14 @@ Hierarchy:
                         Control:
                             ResetSeconds: 2.0
                             Control: Play
-                        Color: {R: 0.0, G: 0.0, B: 0.0, A: 0.39215687}
+                        Color: {R: 0.78431374, G: 0.78431374, B: 0.78431374, A: 0.39215687}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
                             BoundingShape: null
                             Emitters:
                                 354399268ecb80863fbcd44a7de54c62:
-                                    ParticleLifetime: {X: 0.5, Y: 1.0}
+                                    ParticleLifetime: {X: 0.2, Y: 0.6}
                                     SortingPolicy: ByDepth
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null
@@ -570,8 +570,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            VelocityMin: {X: -4.0, Y: 2.0, Z: -4.0}
-                                            VelocityMax: {X: 4.0, Y: 10.0, Z: 4.0}
+                                            VelocityMin: {X: -20.0, Y: 5.0, Z: -20.0}
+                                            VelocityMax: {X: 20.0, Y: 20.0, Z: 20.0}
                                         46ee23d7604542c576797737fd156b39: !InitialRotationSeed
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -643,7 +643,7 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
-                        RenderGroup: Group1
+                        RenderGroup: Group2
         -   Entity:
                 Id: da36a1d4-20a4-4045-8862-27ba561b8c9b
                 Name: Rayo

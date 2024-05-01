@@ -109,7 +109,7 @@ public class ControladorPoder : AsyncScript
 
         activo = false;
 
-        await Task.Delay(1000);
+        await Task.Delay(2000);
         partículas.Enabled = false;
     }
 }

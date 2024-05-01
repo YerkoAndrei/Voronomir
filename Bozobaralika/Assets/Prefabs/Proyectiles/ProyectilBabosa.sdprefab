@@ -154,7 +154,8 @@ Hierarchy:
                     79c97683a9b44b1d2aa39475a8794065: !ModelComponent
                         Id: eaf03fe5-4edd-4d6f-9c4d-2f704c2a5aaa
                         Model: 7adde463-1cce-45fb-b6f0-a375b43e6bf4:Modelos/Proyectiles/Craneo/Craneo
-                        Materials: {}
+                        Materials:
+                            861f307fbdebaebce8870347035d48ee~0: cd3458a5-f44c-4cb6-9b75-20eeaaf730a5:Materiales/Hueso
         -   Entity:
                 Id: 86c20c07-f561-40f8-a878-11b31ee66fe1
                 Name: ProyectilBabosa

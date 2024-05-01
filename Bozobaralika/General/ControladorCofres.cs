@@ -171,6 +171,10 @@ public class ControladorCofres : StartupScript
 
     public static void IniciarEfectoDaño(Armas arma, Enemigos enemigo, float multiplicadorDaño, Vector3 posición, Vector3 normal)
     {
+        // Cerebro / escudo
+        if (enemigo == Enemigos.meléPesado && multiplicadorDaño == 1)
+            enemigo = Enemigos.meléLigero;
+
         switch (arma)
         {
             case Armas.espada:
