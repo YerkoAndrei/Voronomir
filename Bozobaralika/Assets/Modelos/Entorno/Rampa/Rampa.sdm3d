@@ -1,0 +1,16 @@
+!Model
+Id: e01784e0-2784-46b0-b413-ff821b238fa6
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Rampa.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    8b666684ec962bd18a9f20f65ec48896:
+        Name: Material
+        MaterialInstance:
+            Material: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Obstáculo"
+DeduplicateMaterials: false
+Modifiers: {}
+~SourceHashes:
+    e0f82341d0eafe82b5747890ac97b8b4~Rampa.glb: 4eb27e9125843a149488c5bff4ed8876

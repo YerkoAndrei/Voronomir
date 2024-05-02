@@ -1,0 +1,16 @@
+!Model
+Id: 9888010c-da09-43e3-9b25-a4b43cdc5d87
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Cubo.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    5de61e3c026edd83fa34815edca972ce:
+        Name: Material
+        MaterialInstance:
+            Material: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Obstáculo"
+DeduplicateMaterials: false
+Modifiers: {}
+~SourceHashes:
+    a532c9dacead372b7c0316d1603cc879~Cubo.glb: b4eba476a319a8ca30f9e806d8ab263a
