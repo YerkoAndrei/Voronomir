@@ -53,13 +53,13 @@ public class ControladorMovimiento : StartupScript
 
         minVelocidad = 1f;
         aceleraciónInicial = 0.1f;
-        tiempoIniciación = 0.2f;
+        tiempoIniciación = 0.25f;
         tiempoAceleración = 20f;
         maxVelocidad = 1.5f;
 
-        CambiarSensiblidad(false);
-        velocidadBase = 10f;
+        velocidadBase = 12f;
         multiplicadorVelocidad = velocidadBase;
+        CambiarSensiblidad(false);
     }
 
     public void ActualizarEntradas()
@@ -93,10 +93,19 @@ public class ControladorMovimiento : StartupScript
             entradas += Vector3.UnitX;
 
         // Aceleración
-        if (entradas == Vector3.Zero || detención || caminando || RevisarColisiones())
+        if (entradas == Vector3.Zero || detención || caminando || cuerpo.Collisions.Where(TocaEnemigo).Count() > 0)
         {
+            // 1 enemigo detiene velocidad
             tempoAceleración = 0;
             tempoIniciación = 0;
+            aceleración = 0;
+            detención = false;
+        }
+        else if (cuerpo.Collisions.Where(TocaEntornoEstáico).Count() > 1)
+        {
+            // 2 pisos o paredes reinician velocidad
+            tempoAceleración = 0;
+            tempoIniciación = tiempoIniciación;
             aceleración = minVelocidad;
             detención = false;
         }
@@ -134,20 +143,6 @@ public class ControladorMovimiento : StartupScript
         // Rotación
         rotaciónY -= Input.MouseDelta.X * sensibilidad;
         cuerpo.Orientation = Quaternion.RotationY(rotaciónY);
-    }
-
-    private bool RevisarColisiones()
-    {
-        // 1 enemigo reduce velocidad
-        if (cuerpo.Collisions.Where(TocaEnemigo).Count() > 0)
-            return true;
-
-        // 2 pisos o paredes reducen velocidad
-        if (cuerpo.Collisions.Where(o => o.ColliderA.CollisionGroup == CollisionFilterGroups.StaticFilter ||
-                                         o.ColliderB.CollisionGroup == CollisionFilterGroups.StaticFilter).Count() > 1)
-            return true;
-
-        return false;
     }
 
     private void Mirar()

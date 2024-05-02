@@ -36,6 +36,12 @@ public static class Utilidades
                 colisión.ColliderB.CollisionGroup == CollisionFilterGroups.SensorTrigger);
     }
 
+    public static bool TocaEntornoEstáico(Collision colisión)
+    {
+        return (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.StaticFilter ||
+                colisión.ColliderB.CollisionGroup == CollisionFilterGroups.StaticFilter);
+    }
+
     public static bool TocaEnemigo(Collision colisión)
     {
         return (colisión.ColliderA.CollisionGroup == CollisionFilterGroups.KinematicFilter || colisión.ColliderB.CollisionGroup == CollisionFilterGroups.KinematicFilter);
