@@ -3,10 +3,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
+using Stride.Particles.Components;
 using Stride.Physics;
 using Stride.Input;
 using Stride.Engine;
-using Stride.Particles.Components;
 
 namespace Bozobaralika;
 using static Utilidades;
@@ -45,6 +45,7 @@ public class ControladorArmas : StartupScript
     private float últimoDisparoRifle;
     private float últimoDisparoLanzagranadas;
 
+    private CancellationTokenSource tokenMira;
     private CancellationTokenSource tokenLuz;
     private bool cambiandoArma;
     private bool usandoMira;
@@ -91,6 +92,7 @@ public class ControladorArmas : StartupScript
         partículasMetralletaIzquierda.Enabled = false;
         partículasMetralletaDerecha.Enabled = false;
 
+        tokenMira = new CancellationTokenSource();
         tokenLuz = new CancellationTokenSource();
         luzDisparo.Enabled = false;
 
@@ -490,18 +492,45 @@ public class ControladorArmas : StartupScript
         tempoMetralleta = tiempoMaxMetralleta;
     }
 
-    private void AcercarMira(bool acercar)
+    private async void AcercarMira(bool acercar)
     {
-        // PENDIENTE: elegir FOV de opciones
-        // PENDIENTE: animación
         usandoMira = acercar;
-        if (usandoMira)
-            cámara.VerticalFieldOfView = 20;
-        else
-            cámara.VerticalFieldOfView = 90;
+        movimiento.CambiarSensiblidad(usandoMira);
 
-        movimiento.CambiarSensiblidad(acercar);
-        interfaz.MostrarMiraRifle(acercar);
+        // PENDIENTE: ajustes
+        var campoVisión = 90;
+        var inicial = cámara.VerticalFieldOfView;
+        var objetivo = inicial;
+
+        if (usandoMira)
+            objetivo = campoVisión * 0.2f; // 18
+        else
+            objetivo = campoVisión;        // 90
+
+        // Animación mira
+        tokenMira.Cancel();
+        tokenMira = new CancellationTokenSource();
+
+        float duración = 0.025f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        var token = tokenMira.Token;
+        while (tiempoLerp < duración)
+        {
+            if (token.IsCancellationRequested)
+                return;
+
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+            cámara.VerticalFieldOfView = MathUtil.Lerp(inicial, objetivo, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+
+        // Fin
+        cámara.VerticalFieldOfView = objetivo;
+        interfaz.MostrarMiraRifle(usandoMira);
     }
 
     private async void ActivarLuz()
