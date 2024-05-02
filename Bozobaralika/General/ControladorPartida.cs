@@ -126,6 +126,11 @@ public class ControladorPartida : SyncScript
         return cabezaJugador.WorldMatrix.TranslationVector;
     }
 
+    public static float ObtenerVelocidad()
+    {
+        return jugador.ObtenerVelocidad();
+    }
+
     public static float ObtenerAceleración()
     {
         return jugador.ObtenerAceleración();

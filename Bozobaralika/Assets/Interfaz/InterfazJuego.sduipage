@@ -486,11 +486,11 @@ Hierarchy:
                 Id: 5c3adbda-7407-450e-85c8-024ba9d4e51d
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 200.0
-                Height: 80.0
+                Width: 500.0
+                Height: 120.0
                 HorizontalAlignment: Left
-                VerticalAlignment: Bottom
-                Margin: {Left: 10.0, Bottom: 150.0}
+                VerticalAlignment: Top
+                Margin: {Top: 30.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -498,7 +498,10 @@ Hierarchy:
                 Children:
                     ecbd6cb55ba40647e538d4cd5770eafe: !TextBlock ref!! 67ec0232-3f2d-427a-859f-6cb8c8ef9c9b
                     3c5fd295048f96e793a32c2554010bd0: !TextBlock ref!! b1359a90-e1ab-4fcf-b246-03fac74c857b
-                Rows: 2
+                    8690256253b35b35d25fb49e58788e4c: !TextBlock ref!! f12ec70d-c0f5-42c4-8d5e-ad8fee3252a7
+                    560d555704fb21c34ae8fd4e2c668734: !TextBlock ref!! 8bcf0fa2-9db4-45af-b257-ebf297550626
+                    3086f641d01286a3604972d3e515f53d: !TextBlock ref!! 8600101f-2308-44e0-8d3b-23713ee0ae3c
+                Rows: 5
         -   UIElement: !UniformGrid
                 Id: 61027bcf-7d46-4842-84d6-85941d310a40
                 DependencyProperties: {}
@@ -603,16 +606,16 @@ Hierarchy:
                 Id: 67ec0232-3f2d-427a-859f-6cb8c8ef9c9b
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtTiempo
-                Text: 00:00:00
+                Name: "txtPosición"
+                Text: P 000,00 - 000,00, - 000,00
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextSize: 20.0
+                TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
                 Id: 684c4b95-1fe3-4442-85cb-e45c794fd669
                 DependencyProperties: {}
@@ -780,6 +783,21 @@ Hierarchy:
                     Texture: feb5202a-462f-4115-8031-7a28a732b3d0:Texturas/Miras/miraMetralleta
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 255, B: 0, A: 255}
+        -   UIElement: !TextBlock
+                Id: 8600101f-2308-44e0-8d3b-23713ee0ae3c
+                DependencyProperties:
+                    7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 4
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 25.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtFPS
+                Text: C 000
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
                 Id: 874cee85-a7e9-475f-9f0d-f59d432f212e
                 DependencyProperties:
@@ -848,6 +866,21 @@ Hierarchy:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
                 BasePartId: 03267286-f8aa-4aaf-8a71-0ad889f5753b
                 InstanceId: 85241890-76fe-4e1d-b742-8892f87ed870
+        -   UIElement: !TextBlock
+                Id: 8bcf0fa2-9db4-45af-b257-ebf297550626
+                DependencyProperties:
+                    7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 3
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 25.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "txtAceleración"
+                Text: A 0.00
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !Grid
                 Id: 8c8be992-82e9-4fcc-ab56-c94d38eb136d
                 DependencyProperties: {}
@@ -1099,16 +1132,16 @@ Hierarchy:
                 DependencyProperties:
                     7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: "txtAceleración"
-                Text: 0.00
+                Name: txtTiempo
+                Text: T 00:00:00
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextSize: 20.0
+                TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
                 Id: b4c60a5e-d56f-4528-ba04-2460b44b7bd0
                 DependencyProperties:
@@ -1371,6 +1404,21 @@ Hierarchy:
                     Texture: 1f830b4b-c208-4476-8ee3-496236d0724c:Texturas/Armas/imgRifle
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !TextBlock
+                Id: f12ec70d-c0f5-42c4-8d5e-ad8fee3252a7
+                DependencyProperties:
+                    7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 2
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 25.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtVelocidad
+                Text: V 00.00
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !UniformGrid
                 Id: f9c55e83-016c-4bc2-9420-9cb93cdb0f34
                 DependencyProperties: {}

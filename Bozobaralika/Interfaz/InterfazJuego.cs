@@ -39,10 +39,13 @@ public class InterfazJuego : SyncScript
     private ImageElement imgInvencibilidad;
     private ImageElement imgRapidez;
 
-    private TextBlock txtMensaje;
-    private TextBlock txtTiempo;
-    private TextBlock txtAceleración;
     private UniformGrid panelDatos;
+    private TextBlock txtMensaje;
+    private TextBlock txtPosición;
+    private TextBlock txtTiempo;
+    private TextBlock txtVelocidad;
+    private TextBlock txtAceleración;
+    private TextBlock txtFPS;
 
     private TextBlock txtNivel;
     private TextBlock txtTiempoFinal;
@@ -83,10 +86,15 @@ public class InterfazJuego : SyncScript
         imgInvencibilidad = página.FindVisualChildOfType<ImageElement>("imgInvencibilidad");
         imgRapidez = página.FindVisualChildOfType<ImageElement>("imgRapidez");
 
-        txtMensaje = página.FindVisualChildOfType<TextBlock>("txtMensaje");
-        txtTiempo = página.FindVisualChildOfType<TextBlock>("txtTiempo");
-        txtAceleración = página.FindVisualChildOfType<TextBlock>("txtAceleración");
         panelDatos = página.FindVisualChildOfType<UniformGrid>("Datos");
+        txtMensaje = página.FindVisualChildOfType<TextBlock>("txtMensaje");
+
+        // Datos depuración
+        txtPosición = página.FindVisualChildOfType<TextBlock>("txtPosición");
+        txtTiempo = página.FindVisualChildOfType<TextBlock>("txtTiempo");
+        txtVelocidad = página.FindVisualChildOfType<TextBlock>("txtVelocidad");
+        txtAceleración = página.FindVisualChildOfType<TextBlock>("txtAceleración");
+        txtFPS = página.FindVisualChildOfType<TextBlock>("txtFPS");
 
         // Datos finales
         txtNivel = página.FindVisualChildOfType<TextBlock>("txtNivel");
@@ -136,10 +144,13 @@ public class InterfazJuego : SyncScript
         if (Input.IsKeyPressed(Keys.Escape))
             Pausar();
 
-        if(ControladorPartida.ObtenerActivo())
+        if(ControladorPartida.ObtenerActivo() /*&& depuración*/)
         {
-            txtTiempo.Text = FormatearTiempo(ControladorPartida.ObtenerTiempo());
-            txtAceleración.Text = ControladorPartida.ObtenerAceleración().ToString("n2");
+            txtPosición.Text = "P " + ControladorPartida.ObtenerPosiciónJugador().ToString("n3");
+            txtTiempo.Text = "T " + FormatearTiempo(ControladorPartida.ObtenerTiempo());
+            txtVelocidad.Text = "V " + (ControladorPartida.ObtenerVelocidad() * 10).ToString("n3");
+            txtAceleración.Text = "A " + ControladorPartida.ObtenerAceleración().ToString("n3");
+            txtFPS.Text = "C " + Game.UpdateTime.FramePerSecond.ToString("000");
         }
     }
 

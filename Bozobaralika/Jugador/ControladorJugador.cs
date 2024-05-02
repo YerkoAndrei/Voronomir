@@ -153,6 +153,11 @@ public class ControladorJugador : SyncScript, IDañable
         ControladorPartida.Morir();
     }
 
+    public float ObtenerVelocidad()
+    {
+        return cuerpo.LinearVelocity.Length();
+    }
+
     public float ObtenerAceleración()
     {
         return movimiento.ObtenerAceleración();

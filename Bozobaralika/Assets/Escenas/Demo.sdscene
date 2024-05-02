@@ -5255,7 +5255,7 @@ Hierarchy:
                     be25c192f8666064ceb8a1bef89aaeae: !Bozobaralika.ControladorPersecusionesTrigonom%25C3%25A9tricas,Bozobaralika.Proyecto
                         Id: 2b886118-5837-4ff4-8202-f21652caf832
                         enemigo: "meléPesado"
-                    5d7d60972d62727e06bf9f67509b933b: !Bozobaralika.Depurador,Bozobaralika.Proyecto
+                    5d7d60972d62727e06bf9f67509b933b: !Bozobaralika.ControladorDemo,Bozobaralika.Proyecto
                         Id: 8688afb4-7376-419b-a61d-169b36f0c5ab
                         zombi: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                         lancero: 348ffd0b-1a96-4bdb-bd14-ebd446626828:Prefabs/Enemigos/Lancero
