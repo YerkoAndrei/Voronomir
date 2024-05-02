@@ -94,6 +94,21 @@ Hierarchy:
                     181a47c93641358ca59811ac734c3f27: !Grid ref!! 5f30d524-7aac-4920-905a-935d3e82cc1c
                     3eeb325e4b1e97a7f7995bafe1c59abf: !Grid ref!! c740692e-1fd3-4315-b270-488ae60960c7
                 Rows: 5
+        -   UIElement: !ImageElement
+                Id: 4c1cd38d-f723-4592-b083-83624c26e2c4
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 5.0
+                HorizontalAlignment: Left
+                Margin: {Left: 20.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 100, G: 40, B: 40, A: 255}
+                StretchType: Fill
         -   UIElement: !Grid
                 Id: 4d80c4b3-aa71-424d-978c-7cfaa8b0a610
                 DependencyProperties: {}
@@ -109,6 +124,11 @@ Hierarchy:
                     288bb3cba41217ca70828c1288cd1352: !Button ref!! 7c6efa0a-76d8-49e1-80d1-dd9112ca872b
                     4ba0ac30b211286f5dbb3efee011a5e8: !ImageElement ref!! 9e84c9fb-e157-463f-b24c-39f823f00e9c
                     500555a6cf47edf712d2d76bd9bd5974: !TextBlock ref!! dceb7328-a19a-4034-a9d1-327a98ed7f63
+                    8f1ecac6d73cde634d7d1b157b7acc0d: !ImageElement ref!! 8611f98d-e9cd-4e9c-8c4c-933235d805c2
+                    d1f6a1cbf0cdb60d88390d531cc01397: !ImageElement ref!! a7a9be98-a8a8-4d75-9eb4-362e68c15d4e
+                    1bb9ddee7ccedc034eee8b23f04c38cb: !ImageElement ref!! cd1ef5c8-572d-4c31-979d-3604d4585032
+                    f94eee85652a8ff3a665a08f708a1598: !ImageElement ref!! a80585ca-17bf-4d98-8c7c-725dfc887e7a
+                    938c4c9788e33a443514f845e4414d52: !ImageElement ref!! 4c1cd38d-f723-4592-b083-83624c26e2c4
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -162,6 +182,21 @@ Hierarchy:
                 BasePartId: 29e403c2-1f00-4214-ba69-7d3981ebbbe5
                 InstanceId: 4f98a5a8-2dad-469b-acd9-c377e4e947a3
         -   UIElement: !ImageElement
+                Id: 8611f98d-e9cd-4e9c-8c4c-933235d805c2
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 5.0
+                VerticalAlignment: Top
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 100, G: 40, B: 40, A: 255}
+                StretchType: Fill
+        -   UIElement: !ImageElement
                 Id: 8f3afbd0-34e2-43ef-8b5e-7824ad5a5471
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -191,12 +226,42 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 255, G: 255, B: 255, A: 255}
+                Color*: {R: 200, G: 39, B: 39, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
                 BasePartId: 03267286-f8aa-4aaf-8a71-0ad889f5753b
                 InstanceId: 4f98a5a8-2dad-469b-acd9-c377e4e947a3
+        -   UIElement: !ImageElement
+                Id: a7a9be98-a8a8-4d75-9eb4-362e68c15d4e
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 5.0
+                VerticalAlignment: Bottom
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 100, G: 40, B: 40, A: 255}
+                StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: a80585ca-17bf-4d98-8c7c-725dfc887e7a
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 5.0
+                HorizontalAlignment: Left
+                Margin: {Left: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 100, G: 40, B: 40, A: 255}
+                StretchType: Fill
         -   UIElement: !Grid
                 Id: c740692e-1fd3-4315-b270-488ae60960c7
                 DependencyProperties:
@@ -216,6 +281,21 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: cd1ef5c8-572d-4c31-979d-3604d4585032
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 5.0
+                HorizontalAlignment: Left
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 100, G: 40, B: 40, A: 255}
+                StretchType: Fill
         -   UIElement: !ImageElement
                 Id: d3a99fd6-f891-426b-ad6d-dd3ce39a81f5
                 DependencyProperties: {}
@@ -266,7 +346,7 @@ Hierarchy:
                 Text*: Jugar
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 30.0
-                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextColor*: {R: 255, G: 255, B: 200, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -324,6 +404,9 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
                 Children:
                     ea5fb224503f1df1e0b6bcc1a88c0abe: !TextBlock ref!! 4fecb162-c19a-4549-bcd7-686b483647a1
                     38f43a1f642f56519fb186078d6026c0: !UniformGrid ref!! 35a2558b-c39d-418d-90d3-216d8bfffe32

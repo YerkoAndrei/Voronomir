@@ -19,20 +19,15 @@ Hierarchy:
         - ref!! edeff615-c141-4feb-96da-868b5fe6ebc8
         - ref!! 52cd02bd-3165-4aa6-8d1e-7538541119a3
         - ref!! dca75c2f-3874-4e83-9565-15c148fa0401
-        - ref!! 2c46881f-53e6-4d1d-85df-924007329f46
-        - ref!! d471c428-d220-4860-b67e-f0ad26d2d613
-        - ref!! 1203753a-eca1-4f4a-85e3-0edf0ce91347
-        - ref!! f557bc44-8313-4a06-ba9a-35f36f7d42de
-        - ref!! dfbee328-9e17-4814-912e-92e7281c5a1c
-        - ref!! eb300b4d-c14f-4f40-b4b3-e09e965b69a5
-        - ref!! 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
-        - ref!! 8b42ea7d-752a-4920-97e2-1646ec7b9189
-        - ref!! 442ecefd-9d8c-4e23-a74a-5b10de50d15d
-        - ref!! 43a0f70d-9590-47d8-8ed8-79ed738a7d35
-        - ref!! b98edd79-ab8c-48c3-918b-dadfca384f26
-        - ref!! 5806e859-d7ec-42d4-ac78-edfc026317d2
+        - ref!! cd32b3e8-5353-4fb1-8f2f-4d0b902bb2c1
+        - ref!! 18e39ea5-413f-4fb5-ba5f-e18f6ead6a5e
+        - ref!! ed0d214e-4de2-42c3-91fb-1b283cd6e28b
+        - ref!! 422aa522-2c49-40da-b327-40289a680542
+        - ref!! 55426dd8-7316-4b8d-b2a7-f3aad1edcb3e
+        - ref!! ff1ad3cd-2e87-4233-908e-ab8d94bd42d4
+        - ref!! 91ad2e6c-622e-436d-aea1-f589b486e0fb
         - ref!! d3476e3f-eee5-41dc-9c59-89b96ac24a2b
-        - ref!! cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
+        - ref!! 12a2ab68-9b90-4433-b140-868a63eea89c
         - ref!! 510ed132-3f81-42a5-9c8c-e52f9348ffab
         - ref!! a9c0250e-6712-4e86-bc3f-78047f439de2
         - ref!! d72b9b8d-d7c2-4f8e-8bbe-d1163dc9cebe
@@ -57,6 +52,11 @@ Hierarchy:
         - ref!! 713070be-902c-4072-88c3-994978523f77
         - ref!! 8dcfbf63-872c-4767-b5d4-c444770e99f8
         - ref!! 75824380-1882-4be8-8052-13cb0667f063
+        - ref!! ca868181-806d-4c21-bc2a-d3b7217b9c92
+        - ref!! ea69d010-4477-44fa-8615-195b30627948
+        - ref!! 863ac3f1-4173-4406-80e1-7b76911c5de4
+        - ref!! a5ef5d26-a4e4-4579-a735-cfe119a49697
+        - ref!! cda6bc12-083f-436a-b677-15c45e1b7f8b
     Parts:
         -   Folder: MuestraEnemigos
             Entity:
@@ -195,25 +195,6 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
                 InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
-        -   Entity:
-                Id: 0fea7eb5-f3a0-4f2f-8f6a-460c88d65c5c
-                Name: Modelo
-                Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 10d535a9-9220-46bf-a275-7182fafdb40f
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: f72a0336-acea-4e4e-a1ce-4feb8f7500d3
-                        Enabled*: true
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-            Base:
-                BasePartAsset: "ba20a406-510b-45d3-8837-e5839f7f9e4e:Prefabs/EntornoDinámico/Fin"
-                BasePartId: 8337edb7-9783-4e91-839c-fa93b4e591b2
-                InstanceId: bc71f645-4720-4972-8946-16796ac03b3f
         -   Folder: null
             Entity:
                 Id: 10c26f8f-3be3-476c-aa70-fbc9af6600d1
@@ -241,38 +222,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: be33c8de-5ac2-44b8-a446-61d76ba7a173
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
-        -   Folder: "EntornoEstático/Obstáculos"
-            Entity:
-                Id: 10dac0c7-16bc-4f61-96c6-ebc5eb74cd3f
-                Name: Cube
-                Components:
-                    ae0a1c16314df115170f0165e6677708: !ModelComponent
-                        Id: 87927965-5ca5-4822-afc0-fdff9898e33d
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: 77584610-80f0-4beb-944e-1361b36a9563
-                        Position: {X: -10.0, Y: 0.01, Z: 4.447}
-                        Rotation: {X: 0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
-                        Scale: {X: 2.0, Y: 2.0, Z: 4.5}
-                        Children: {}
-                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
-                        Id: f952b7c7-ed88-4e26-be4c-aefda995f495
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: 11ba29e3-47d9-4fcd-ba66-be1d1b35fd43
@@ -360,39 +309,6 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
                 InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
-        -   Folder: "EntornoEstático/Muros"
-            Entity:
-                Id: 1203753a-eca1-4f4a-85e3-0edf0ce91347
-                Name: Cube
-                Components:
-                    ae0a1c16314df115170f0165e6677708: !ModelComponent
-                        Id: 1e2901f0-9316-4b4b-ac61-08e5314da545
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials:
-                            28c3dc5c37d7986dd7eca9cf30a03595~0: 5cae3548-e7fb-4d32-b143-3a2b1598d56e:Opaco
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: 324561d4-8967-40e9-bd6d-3e0c4ed3b251
-                        Position: {X: 0.0, Y: 3.0, Z: -20.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 40.0, Y: 6.0, Z: 1.0}
-                        Children: {}
-                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
-                        Id: fa87a99e-2772-4eea-baf5-5a7ee755d00d
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: 120ed277-7701-42d1-a21a-c8b2254e6289
@@ -436,6 +352,39 @@ Hierarchy:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
                 InstanceId: ca050498-6d51-489a-8319-788c683abe81
+        -   Folder: "EntornoEstático"
+            Entity:
+                Id: 12a2ab68-9b90-4433-b140-868a63eea89c
+                Name: Piso
+                Components:
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: 3e623ff4-3334-44fd-88ad-8eb49834070c
+                        Position: {X: 0.0, Y: -0.1, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 50.0, Y: 0.1, Z: 50.0}
+                        Children: {}
+                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
+                        Id: 65ec2f65-baa6-415f-8592-b8f0bf60bd7d
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: ec03448c-4a4c-4fbb-a6c9-586fb23bc055
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
+                        Materials:
+                            20ea19b545ed568ea3e84fb5ecb8d169~0: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Piso
         -   Folder: null
             Entity:
                 Id: 1330df51-afef-4f37-b933-5d015309569e
@@ -496,17 +445,49 @@ Hierarchy:
                 BasePartAsset: "64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/EntornoDinámico/Poder (Invencibilidad)"
                 BasePartId: ee35195a-1513-4fb3-9e69-a6ad7040a4f5
                 InstanceId: 938b33c4-b6af-4165-953d-b183bb31a5c8
+        -   Folder: "EntornoEstático/Muros"
+            Entity:
+                Id: 18e39ea5-413f-4fb5-ba5f-e18f6ead6a5e
+                Name: Pared
+                Components:
+                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
+                        Id: b6c6c364-aac5-4823-bcee-c80c44b99b21
+                        Position: {X: 0.0, Y: 0.0, Z: 20.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 10.0, Y: 2.0, Z: 1.0}
+                        Children: {}
+                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
+                        Id: da79ea96-c6fa-447d-b630-f37b43dd21fa
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
+                        Id: 2a9d6341-775d-4527-8727-0ddaee4913ca
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        Materials: {}
         -   Entity:
                 Id: 192aae67-88cf-46cd-9a6b-79fdb36cf312
                 Name: Fin
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 45866c4b-ac96-4261-b9b4-ade63415ca34
-                        Position*: {X: 0.0, Y: 0.25, Z: 19.0}
+                        Position*: {X: 0.0, Y: 0.0, Z: 19.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale*: {X: 3.0, Y: 0.5, Z: 1.0}
                         Children:
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 10d535a9-9220-46bf-a275-7182fafdb40f
+                            c53ab01d244dfc8b7e6d96450d757bb0: ref!! bda38b23-7c9f-4822-a802-cb56a7eb8157
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: 6dffb4c6-a77e-45c7-ba4c-5e41e6ecb570
                         CollisionGroup: SensorTrigger
@@ -523,7 +504,7 @@ Hierarchy:
                             ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
                                 Is2D: false
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     0f06abcfd5b41f788b9b239b398b138c: !Bozobaralika.ControladorFin,Bozobaralika.Proyecto
                         Id: 597d3040-185f-4af5-b564-ad015762e800
@@ -916,39 +897,6 @@ Hierarchy:
                 BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/EntornoDinámico/Botón (Azul)"
                 BasePartId: 4dd8d50e-34b1-443c-ae29-c80da6cfeba3
                 InstanceId: 1b4230e3-9a3b-4a38-bd20-539a23aeec6f
-        -   Folder: "EntornoEstático/Muros"
-            Entity:
-                Id: 2c46881f-53e6-4d1d-85df-924007329f46
-                Name: Cube
-                Components:
-                    ae0a1c16314df115170f0165e6677708: !ModelComponent
-                        Id: d2b47470-f19c-41cd-aa8f-ddd3be8967a0
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials:
-                            72067199462976b4ea042d495be06f12~0: 5cae3548-e7fb-4d32-b143-3a2b1598d56e:Opaco
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: 56178e94-747f-4fbc-a1f8-fe489855cd99
-                        Position: {X: -20.0, Y: 3.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 6.0, Z: 40.0}
-                        Children: {}
-                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
-                        Id: b334cb6d-4dbf-49ee-80d0-3bd7b9851274
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: 2ce62315-fc93-4bf4-ac0f-dfdb49f82bf6
@@ -1204,7 +1152,8 @@ Hierarchy:
                         Position*: {X: 0.0, Y: 0.0, Z: -1.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 4.0, Y: 1.0, Z: 2.0}
-                        Children: {}
+                        Children:
+                            da2ed410bf0d8a92329c6be006407236: ref!! 17778505-776d-4c94-a5ae-3e6de9f6fbbb
                     45bb46cc8e08e3285f9b30cf4b79af13: !StaticColliderComponent
                         Id: 5f28f2bb-d164-421d-a905-99aa8e4d31a6
                         CollisionGroup: SensorTrigger
@@ -1677,6 +1626,38 @@ Hierarchy:
                 BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/EntornoDinámico/Botón (Vacío)"
                 BasePartId: ef75cf51-4305-4d0f-b9ea-22eb5c6a1996
                 InstanceId: 7437680e-a8f3-48e4-8fa2-e8989c84c4d0
+        -   Folder: "EntornoEstático/Muros"
+            Entity:
+                Id: 422aa522-2c49-40da-b327-40289a680542
+                Name: Pared
+                Components:
+                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
+                        Id: 7098b10c-a355-4e56-bc4d-32853c528658
+                        Position: {X: 20.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 10.0, Y: 2.0, Z: 1.0}
+                        Children: {}
+                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
+                        Id: 3e35c53d-40ec-4ecf-b887-7edcec21fe69
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
+                        Id: 6d59886f-c4a5-4069-96d6-9485b7858054
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        Materials: {}
         -   Folder: Puertas
             Entity:
                 Id: 4294728e-e279-4fec-a72e-6555b4aef51f
@@ -1718,70 +1699,6 @@ Hierarchy:
                 BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/EntornoDinámico/Botón (Vacío)"
                 BasePartId: 220d4dae-6c4d-4310-8098-a5a1691a7d8b
                 InstanceId: fd954c11-6c4f-4f56-9d02-8630442a86e2
-        -   Folder: "EntornoEstático/Obstáculos"
-            Entity:
-                Id: 43a0f70d-9590-47d8-8ed8-79ed738a7d35
-                Name: Cube
-                Components:
-                    ae0a1c16314df115170f0165e6677708: !ModelComponent
-                        Id: 346200b1-f231-42eb-a1e5-d3ab2c6cc15a
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: 2cac70f4-6ead-44cc-b685-516b63e0b8b2
-                        Position: {X: 10.0, Y: 0.01, Z: 4.447}
-                        Rotation: {X: 0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
-                        Scale: {X: 2.0, Y: 2.0, Z: 4.5}
-                        Children: {}
-                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
-                        Id: dbed9c64-324e-4cbe-997b-6010f7eb6749
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Folder: "EntornoEstático/Obstáculos"
-            Entity:
-                Id: 442ecefd-9d8c-4e23-a74a-5b10de50d15d
-                Name: Cube
-                Components:
-                    ae0a1c16314df115170f0165e6677708: !ModelComponent
-                        Id: 9fb31aca-254d-4a6e-8e4b-3d4edd076bc1
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: e53a5640-5f0c-4ebb-91f9-b3136e89c9f0
-                        Position: {X: 10.0, Y: 0.01, Z: -4.447}
-                        Rotation: {X: -0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
-                        Scale: {X: 2.0, Y: 2.0, Z: 4.5}
-                        Children: {}
-                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
-                        Id: 77086fd5-9e52-4887-832d-cb038a0a1689
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 45ab0d51-a5f2-4597-9099-c2a4ed2e6708
                 Name: "Partículas"
@@ -2092,23 +2009,19 @@ Hierarchy:
                         Id: 5948d7fd-40c3-40e2-a1c1-18a6ff9489d8
                         Type: !LightSkybox
                             Skybox: fa0474ca-0906-42ca-8deb-fbe7df071b66:Skybox
-        -   Folder: "EntornoEstático/Obstáculos"
+        -   Folder: "EntornoEstático/Muros"
             Entity:
-                Id: 5806e859-d7ec-42d4-ac78-edfc026317d2
-                Name: Cube
+                Id: 55426dd8-7316-4b8d-b2a7-f3aad1edcb3e
+                Name: Pared
                 Components:
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: dc9ac95a-a725-4ea0-82d2-5a047ae63b5a
-                        Position: {X: 0.0, Y: 1.0, Z: -5.0}
+                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
+                        Id: 793b2b89-b832-4bfd-86d9-142f4726379f
+                        Position: {X: 0.0, Y: 0.0, Z: -6.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 4.0, Y: 2.0, Z: 1.0}
+                        Scale: {X: 1.0, Y: 0.5, Z: 1.0}
                         Children: {}
-                    5b4a5369b88a9dd7e56f43a4c28c220f: !ModelComponent
-                        Id: 2c0648fa-79da-4913-843d-347a4a300df9
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-                    7ba96e69f4807a7985d5cc7a77050d2d: !StaticColliderComponent
-                        Id: f462a480-da0d-4a6b-835f-3eb66befd5c7
+                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
+                        Id: 9a2867f6-3a48-4984-a75c-bcb818f13b34
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -2119,11 +2032,15 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
+                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
+                        Id: b0e5187c-fc2b-42f0-a0e1-580deee1c4c3
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 5abe79c2-4a7b-4ad5-8607-11e7af7b5cb3
@@ -3270,6 +3187,38 @@ Hierarchy:
                 BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/EntornoDinámico/Botón (Vacío)"
                 BasePartId: 33d94d5f-9c78-4548-88fc-74a17c50d5a7
                 InstanceId: d03a1744-4d1c-4530-bcf7-15ba60d2d8a9
+        -   Folder: "EntornoEstático/Obstáculos"
+            Entity:
+                Id: 863ac3f1-4173-4406-80e1-7b76911c5de4
+                Name: Cubo
+                Components:
+                    9110fe22f38d7c40ada52e01b8a01b92: !StaticColliderComponent
+                        Id: ac665e25-5f90-49ef-b6de-ca4c9cdf1a16
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: 1231fdb9-f773-4828-81d7-a69a6aa639de
+                        Position: {X: 10.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 6.0}
+                        Children: {}
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: 92a85a31-56a5-4327-8b8c-adaad18b7459
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
+                        Materials: {}
         -   Entity:
                 Id: 86ce93a1-ae39-4e71-92c0-223e2ee4fe62
                 Name: Modelo
@@ -3460,38 +3409,6 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
                 InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
-        -   Folder: "EntornoEstático/Obstáculos"
-            Entity:
-                Id: 8b42ea7d-752a-4920-97e2-1646ec7b9189
-                Name: Cube
-                Components:
-                    ae0a1c16314df115170f0165e6677708: !ModelComponent
-                        Id: ba816c7d-0428-4085-b0f7-d115518e1773
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: fa742505-f28a-43fb-9b75-e753aedeaee8
-                        Position: {X: -10.0, Y: 1.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.0, Y: 2.0, Z: 6.0}
-                        Children: {}
-                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
-                        Id: d2cdcbe2-1046-4ff2-8b0e-c5d71573ab5d
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: Puertas
             Entity:
                 Id: 8bf65f1a-e9d0-457c-a88e-4f15d5465421
@@ -3712,13 +3629,45 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 046e1357-852b-491d-b00a-9f3198b6cd84
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Folder: "EntornoEstático/Obstáculos"
+            Entity:
+                Id: 91ad2e6c-622e-436d-aea1-f589b486e0fb
+                Name: Cubo
+                Components:
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: 02915454-9f2e-44d8-8871-429efa535541
+                        Position: {X: -10.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 6.0}
+                        Children: {}
+                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
+                        Id: 44f0c90b-cbe2-47b0-8d8d-ccc1438e5102
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: 85ab4bb0-05e4-4089-81c3-cf17363fe123
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
+                        Materials: {}
         -   Entity:
                 Id: 9778c9f7-ee25-4fad-84cc-397d06ee1a61
                 Name: "Dañador"
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: a4d2b804-a80d-4e82-b855-6ff54f95b8cf
-                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale*: {X: 30.0, Y: 0.2, Z: 2.0}
                         Children:
@@ -3738,7 +3687,7 @@ Hierarchy:
                             ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
                                 Is2D: false
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     c8f96335b6b008a32015b198e8047e13: !Bozobaralika.ControladorDa%25C3%25B1oContinuo,Bozobaralika.Proyecto
                         Id: c06e8203-18dc-48ab-a485-d16ddf6d1470
@@ -3787,6 +3736,25 @@ Hierarchy:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: b7aa5ff0-129f-49d4-b606-fd1b945a7c67
+        -   Entity:
+                Id: 9ee203fd-a5fc-4161-92f4-f8bdf3252c95
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 17778505-776d-4c94-a5ae-3e6de9f6fbbb
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 7a656f81-d627-47f1-b9ac-6d022db074e1
+                        Enabled: false
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: "2566113e-21c9-42ef-94ea-b6ba54bf4188:Prefabs/EntornoDinámico/Activador"
+                BasePartId: 2826dafd-3bb4-4276-8c3a-8807cabe8e1c
+                InstanceId: 01ac6709-3342-4ff7-8214-52129e40de96
         -   Entity:
                 Id: 9fef33ec-62b3-420e-ac57-72546faed848
                 Name: "PartículasIzquierda"
@@ -4103,6 +4071,35 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 147e9c1b-6e08-4fa2-8b4a-a4f0b80d0ed8
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Folder: "EntornoEstático/Obstáculos"
+            Entity:
+                Id: a5ef5d26-a4e4-4579-a735-cfe119a49697
+                Name: Rampa
+                Components:
+                    a1bf85a6b17c4e179b9683deba64c1b7: !TransformComponent
+                        Id: d56f6bfe-7468-4c96-91ab-0e73b5ca4919
+                        Position: {X: 10.0, Y: 0.0, Z: 5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fcb3c69c2abe22187dd6d95fcfc1fda3: !StaticColliderComponent
+                        Id: 66998696-6a08-4a51-9d90-64cfd675d247
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            cbf9f2e68f706f746ff54d67277aa5c0: !ColliderShapeAssetDesc
+                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Entorno/Rampa/ColliderRampa
+                    f90574c0c620ae24776fc892df6f674b: !ModelComponent
+                        Id: c1acaa60-0d98-4788-9819-0d8e661bd257
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Entorno/Rampa/Rampa
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: a678a339-d21e-4ddd-9b32-9a09750dd8ea
@@ -4350,38 +4347,6 @@ Hierarchy:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: affaa42e-d400-469e-97e5-dcc905234d2f
-        -   Folder: "EntornoEstático/Obstáculos"
-            Entity:
-                Id: b98edd79-ab8c-48c3-918b-dadfca384f26
-                Name: Cube
-                Components:
-                    ae0a1c16314df115170f0165e6677708: !ModelComponent
-                        Id: bd150e24-316a-41ba-a47f-77d2bfc5eeb1
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: 32dca679-f463-4c20-9384-6e08dce33363
-                        Position: {X: 10.0, Y: 1.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.0, Y: 2.0, Z: 6.0}
-                        Children: {}
-                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
-                        Id: db1e5041-a398-4172-a7ac-660f5c6bcd57
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: b9c6d541-e9a1-4aa2-9548-eb141f13b39e
                 Name: Ojo
@@ -4674,6 +4639,35 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 1ec15dbd-c871-4f5e-b556-fb190ee401bb
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Folder: "EntornoEstático/Obstáculos"
+            Entity:
+                Id: ca868181-806d-4c21-bc2a-d3b7217b9c92
+                Name: Rampa
+                Components:
+                    a1bf85a6b17c4e179b9683deba64c1b7: !TransformComponent
+                        Id: 9860564b-84c7-479d-ab0b-e7946e8448a7
+                        Position: {X: -10.0, Y: 0.0, Z: 5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    873f30390b7979aa35e7799492249e7a: !StaticColliderComponent
+                        Id: 16fffed9-2a80-4242-96ae-96fb996f0818
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            cbf9f2e68f706f746ff54d67277aa5c0: !ColliderShapeAssetDesc
+                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Entorno/Rampa/ColliderRampa
+                    f90574c0c620ae24776fc892df6f674b: !ModelComponent
+                        Id: 1c02d769-8a36-4101-9f66-3c9cd3a1eed4
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Entorno/Rampa/Rampa
+                        Materials: {}
         -   Entity:
                 Id: cb74dedf-a315-4eb5-a0b0-bf447505f378
                 Name: Modelo
@@ -4686,7 +4680,7 @@ Hierarchy:
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 617de4d2-f031-4149-b2ff-66aea4359695
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
                         Materials: {}
             Base:
                 BasePartAsset: "45ea8175-4bdb-46b4-998a-9c398b65c48d:Prefabs/EntornoDinámico/DañadorContinuo"
@@ -4710,6 +4704,67 @@ Hierarchy:
                 BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/EntornoDinámico/Botón (Vacío)"
                 BasePartId: ef75cf51-4305-4d0f-b9ea-22eb5c6a1996
                 InstanceId: fd954c11-6c4f-4f56-9d02-8630442a86e2
+        -   Folder: "EntornoEstático/Muros"
+            Entity:
+                Id: cd32b3e8-5353-4fb1-8f2f-4d0b902bb2c1
+                Name: Pared
+                Components:
+                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
+                        Id: d7cabf28-a4f4-409a-8261-7e698dd1e61f
+                        Position: {X: 0.0, Y: -1.1222115E-06, Z: -20.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 10.0, Y: 2.0, Z: 1.0}
+                        Children: {}
+                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
+                        Id: 18a0692e-e38f-46ef-a000-68228127792f
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
+                        Id: 69b7da8b-7831-48e0-a3b9-09d56c043f51
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        Materials: {}
+        -   Folder: "EntornoEstático/Obstáculos"
+            Entity:
+                Id: cda6bc12-083f-436a-b677-15c45e1b7f8b
+                Name: Rampa
+                Components:
+                    a1bf85a6b17c4e179b9683deba64c1b7: !TransformComponent
+                        Id: 2463b454-5a1f-4c30-ab97-792f06e81194
+                        Position: {X: 10.0, Y: 0.0, Z: -5.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: -0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7f35f66ee9d2363e3d83d77ff1a605f8: !StaticColliderComponent
+                        Id: 62daa5a7-cb8b-445f-9221-3ac4b9cc33d3
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            cbf9f2e68f706f746ff54d67277aa5c0: !ColliderShapeAssetDesc
+                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Entorno/Rampa/ColliderRampa
+                    f90574c0c620ae24776fc892df6f674b: !ModelComponent
+                        Id: 7d390dfb-0a6c-4761-b02c-dea26e55e5cb
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Entorno/Rampa/Rampa
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: cdb41842-be89-46ee-ae0a-3baeceadcfd2
@@ -4763,7 +4818,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 51976648-e668-4ebf-ac73-c8eb5cab8bfa
-                        Position*: {X: -18.5, Y: 0.25, Z: 18.5}
+                        Position*: {X: -18.5, Y: 0.0, Z: 18.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 2.0, Y: 0.5, Z: 2.0}
                         Children:
@@ -4784,7 +4839,7 @@ Hierarchy:
                             ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
                                 Is2D: false
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     5fdbf293971470194dde6fc608a8a334: !Bozobaralika.ControladorSecreto,Bozobaralika.Proyecto
                         Id: e994447a-e489-4917-a92c-0f44e5c50cdc
@@ -4808,36 +4863,25 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: dd90a596-e723-4a2b-a286-196f763a0dc2
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
-        -   Folder: "EntornoEstático"
-            Entity:
-                Id: cfd6ccfc-9319-4f7d-a211-046e9f98dbc2
-                Name: Ground
+        -   Entity:
+                Id: cff689f0-574f-4115-8d2d-ce00405279b0
+                Name: Modelo
                 Components:
-                    ced56d990c07811c74eeaccbcb403b9a: !TransformComponent
-                        Id: 99063d4a-8162-449f-82d2-6874203a05bb
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: bda38b23-7c9f-4822-a802-cb56a7eb8157
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 10.0, Y: 1.0, Z: 10.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    d41f3abc016efffd2e5f7a94d5de0baa: !ModelComponent
-                        Id: 0735e48f-4c19-43a8-94e4-19f7dd741468
-                        Model: d1430432-8d57-4725-8d48-3062b9a2c657:Piso
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 24d82642-3e8f-4535-8bc7-a2b097ad41cd
+                        Enabled*: true
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
                         Materials: {}
-                    7af7fa75ca3c4166e2cb471413a3c101: !StaticColliderComponent
-                        Id: 905c79ad-7c76-48cc-9252-f814e05c5ade
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            23dbc0b2458cddf36f86fa2127a63436: !StaticPlaneColliderShapeDesc
-                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
-                                Offset: 0.0
+            Base:
+                BasePartAsset: "ba20a406-510b-45d3-8837-e5839f7f9e4e:Prefabs/EntornoDinámico/Fin"
+                BasePartId: 22d20d30-052f-4bef-bd70-3143aa6246cd
+                InstanceId: bc71f645-4720-4972-8946-16796ac03b3f
         -   Entity:
                 Id: d0a21442-9a84-4c42-b54b-bb53b5310c13
                 Name: "Partículas"
@@ -5007,39 +5051,6 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
                 InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
-        -   Folder: "EntornoEstático/Muros"
-            Entity:
-                Id: d471c428-d220-4860-b67e-f0ad26d2d613
-                Name: Cube
-                Components:
-                    ae0a1c16314df115170f0165e6677708: !ModelComponent
-                        Id: d0966398-95a1-4a94-8753-397886ad520d
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials:
-                            49d7d2a3f790877c3fdb7eb6c73612bd~0: 5cae3548-e7fb-4d32-b143-3a2b1598d56e:Opaco
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: 55b0cb1d-8f86-4329-b2c4-e582dc024795
-                        Position: {X: 20.0, Y: 3.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 6.0, Z: 40.0}
-                        Children: {}
-                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
-                        Id: 075c1757-649c-4a19-8bc5-afce4602a703
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: d54d693a-86ca-4b20-b12a-b1d6f3fa4ea1
                 Name: Base
@@ -5561,39 +5572,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: f10d2475-185f-4c3e-9813-427d4150de9f
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
-        -   Folder: "EntornoEstático/Muros"
-            Entity:
-                Id: dfbee328-9e17-4814-912e-92e7281c5a1c
-                Name: Cube
-                Components:
-                    ae0a1c16314df115170f0165e6677708: !ModelComponent
-                        Id: 4bd7776d-e89a-4c43-9f9c-c3142712f549
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials:
-                            11fd6d3218ccdf65782cb6628451632b~0: 5cae3548-e7fb-4d32-b143-3a2b1598d56e:Opaco
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: c22d49d3-5d4d-4e03-a73a-959d22a960a0
-                        Position: {X: 0.0, Y: 25.0, Z: 40.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 40.0, Y: 50.0, Z: 1.0}
-                        Children: {}
-                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
-                        Id: aa953773-da1f-4037-bd2d-a9802d454de7
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: Grupo01
             Entity:
                 Id: e3650bf2-48a3-47c0-a058-52246042dfc9
@@ -5984,36 +5962,33 @@ Hierarchy:
                 InstanceId: 5052427c-e218-49aa-a78d-885da28e66a6
         -   Folder: "EntornoEstático/Obstáculos"
             Entity:
-                Id: eb300b4d-c14f-4f40-b4b3-e09e965b69a5
-                Name: Cube
+                Id: ea69d010-4477-44fa-8615-195b30627948
+                Name: Rampa
                 Components:
-                    ae0a1c16314df115170f0165e6677708: !ModelComponent
-                        Id: c08f63a8-efa3-4b5d-b2b8-763e33061b45
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials: {}
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: 54231152-8e5d-4adf-923f-606314ebce36
-                        Position: {X: -10.0, Y: 0.01, Z: -4.447}
-                        Rotation: {X: -0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
-                        Scale: {X: 2.0, Y: 2.0, Z: 4.5}
+                    a1bf85a6b17c4e179b9683deba64c1b7: !TransformComponent
+                        Id: 28326133-4d73-49b4-aa02-d716ac50f551
+                        Position: {X: -10.0, Y: 0.0, Z: -5.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: -0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
-                        Id: 8b91c208-c537-4774-9b3e-77afe8264977
+                    795c2c4ecd038f1c86ce6af97187cd30: !StaticColliderComponent
+                        Id: 2ab72a66-38df-4b08-b4a4-f0e919993906
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 1.0
+                        Friction: 0.5
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                            cbf9f2e68f706f746ff54d67277aa5c0: !ColliderShapeAssetDesc
+                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Entorno/Rampa/ColliderRampa
+                    f90574c0c620ae24776fc892df6f674b: !ModelComponent
+                        Id: c2aabd68-0d0a-4073-8ec8-187707a9e1c4
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Entorno/Rampa/Rampa
+                        Materials: {}
         -   Entity:
                 Id: eb67bfca-42e8-4ce6-8c5d-d9e37bd7f436
                 Name: Modelo
@@ -6033,6 +6008,38 @@ Hierarchy:
                 BasePartAsset: "f104c990-42cd-4a37-ac04-9c9181fbe8ed:Prefabs/EntornoDinámico/Llave (Azul)"
                 BasePartId: 0ab9e326-c37c-4666-aaa8-5d30bfd12c45
                 InstanceId: 78864342-0445-470e-b845-5cde3769de17
+        -   Folder: "EntornoEstático/Muros"
+            Entity:
+                Id: ed0d214e-4de2-42c3-91fb-1b283cd6e28b
+                Name: Pared
+                Components:
+                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
+                        Id: 4cd849ae-9106-441c-8e7c-464fa5a1ad83
+                        Position: {X: -20.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 10.0, Y: 2.0, Z: 1.0}
+                        Children: {}
+                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
+                        Id: e1de79eb-2ed7-4a36-ae01-e6dae1630621
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
+                        Id: 8634173c-9181-4e1a-9349-56728402efbd
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        Materials: {}
         -   Folder: MuestraEnemigos
             Entity:
                 Id: ed574734-d19c-4582-8145-31497e3f514d
@@ -6137,7 +6144,7 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: bfce63cf-f011-49e7-8407-0ef152133901
                         Enabled*: true
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
                         Materials: {}
             Base:
                 BasePartAsset: "d5058dbe-b40f-4ad7-b603-b31e795ab1f4:Prefabs/EntornoDinámico/Secreto"
@@ -6199,39 +6206,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: c41130bf-6291-4855-a1b9-97929b15f0ea
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
-        -   Folder: "EntornoEstático/Muros"
-            Entity:
-                Id: f557bc44-8313-4a06-ba9a-35f36f7d42de
-                Name: Cube
-                Components:
-                    ae0a1c16314df115170f0165e6677708: !ModelComponent
-                        Id: cc61408f-d7b5-4921-b020-23666943d5f0
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
-                        Materials:
-                            11fd6d3218ccdf65782cb6628451632b~0: 5cae3548-e7fb-4d32-b143-3a2b1598d56e:Opaco
-                    bd42e873d6606f3ba6a481b89a7d1402: !TransformComponent
-                        Id: a4261350-d80e-49ce-9ab7-b724439a707e
-                        Position: {X: 0.0, Y: 3.0, Z: 20.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 40.0, Y: 6.0, Z: 1.0}
-                        Children: {}
-                    0ba73945bcef19366888c56a325842e2: !StaticColliderComponent
-                        Id: 0d2f722f-2501-4812-b5f4-702542d935fb
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ef08ba3c993a13e4cf1b35158497a2e0: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: fb152daa-ca6a-489d-9d00-bb8870e8b2ca
@@ -6270,6 +6244,38 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: db0a187b-bd41-45d8-b0ce-c8ba99ddc6ed
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Folder: "EntornoEstático/Muros"
+            Entity:
+                Id: ff1ad3cd-2e87-4233-908e-ab8d94bd42d4
+                Name: Pared
+                Components:
+                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
+                        Id: 853416a6-9782-4f83-8b3d-468a07fc0e69
+                        Position: {X: 0.0, Y: 0.0, Z: 30.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 10.0, Y: 10.0, Z: 1.0}
+                        Children: {}
+                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
+                        Id: 86a28332-ebe4-4562-b61a-3753305da7ba
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
+                        Id: d3d64e94-1b92-4b0c-8537-338ffeee3c13
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        Materials: {}
         -   Entity:
                 Id: ff5480c7-125b-4faf-a925-a78b68f1b73b
                 Name: Interfaz

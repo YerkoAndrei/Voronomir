@@ -7,19 +7,19 @@ Hierarchy:
         - ref!! ffaf0f04-a1a7-474a-8e05-7f0c7c41f485
     Parts:
         -   Entity:
-                Id: 8337edb7-9783-4e91-839c-fa93b4e591b2
+                Id: 22d20d30-052f-4bef-bd70-3143aa6246cd
                 Name: Modelo
                 Components:
                     fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 96fd6f9d-8221-4516-8d05-bffa535509fa
+                        Id: f0d405e9-94c8-4087-8f17-a2f27b5f9e95
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 97735444-ff1c-4b61-bf62-ce61c2357e20
+                        Id: 85f94fbb-6b49-49b9-b449-22801feb11c5
                         Enabled: false
-                        Model: 6b753808-4ca1-48d4-aec0-f815b1866d52:Cubo
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
                         Materials: {}
         -   Entity:
                 Id: ffaf0f04-a1a7-474a-8e05-7f0c7c41f485
@@ -27,11 +27,11 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 9de41c8c-f51f-45ab-95f8-1f023ede4cef
-                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 2.0, Y: 0.2, Z: 2.0}
                         Children:
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 96fd6f9d-8221-4516-8d05-bffa535509fa
+                            659bd5d1548bf3062c65324b1142d0ca: ref!! f0d405e9-94c8-4087-8f17-a2f27b5f9e95
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: d858d902-b91f-4ce7-b32d-2e7018e64510
                         CollisionGroup: SensorTrigger
@@ -48,7 +48,7 @@ Hierarchy:
                             ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
                                 Is2D: false
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     0f06abcfd5b41f788b9b239b398b138c: !Bozobaralika.ControladorFin,Bozobaralika.Proyecto
                         Id: e5787bfc-95b2-4ce2-bd80-fc8865ce19a2
