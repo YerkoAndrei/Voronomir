@@ -44,8 +44,8 @@ public static class Constantes
     {
         nada,
         daño,
-        invencibilidad,
-        rapidez
+        invulnerabilidad,
+        velocidad
     }
 
     public enum TipoDisparo

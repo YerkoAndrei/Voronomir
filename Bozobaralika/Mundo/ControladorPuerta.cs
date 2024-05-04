@@ -31,22 +31,25 @@ public class ControladorPuerta : AsyncScript, IActivable
 
     public void Activar()
     {
-        // PENDIENTE: efectos
         activadas++;
 
         if (activadas >= activaciones)
         {
             AnimarPuerta();
             cuerpo.Enabled = false;
-            ControladorPartida.MostrarMensaje("Puerta abierta");
+            ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("puertaAbierta"));
+            // PENDIENTE: efecto positivo
         }
         else
-            ControladorPartida.MostrarMensaje(activadas + " de " + activaciones);
+        {
+            // PENDIENTE: efecto negativo
+            ControladorPartida.MostrarMensaje((activaciones - activadas) + " " + SistemaTraducción.ObtenerTraducción("activaciones"));
+        } 
     }
 
     private void TocarJugador()
     {
-        ControladorPartida.MostrarMensaje("Puerta cerrada");
+        ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("puertaCerrada"));
     }
 
     private async void AnimarPuerta()

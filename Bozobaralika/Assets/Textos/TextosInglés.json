@@ -24,5 +24,17 @@
   "reinicio": "(Requires restart)",
   "volumenGeneral": "General volume",
   "volumenMúsica": "Music volume",
-  "volumenEfectos": "Effects volume"
+  "volumenEfectos": "Effects volume",
+
+  "azul": "Blue key",
+  "roja": "Red key",
+
+  "necesita": "Needs",
+  "activaciones": "more to go",
+  "puertaCerrada": "Door Closed",
+  "puertaAbierta": "Door Open",
+  "secreto": "Secret revealed",
+  "poderDaño": "Triple Damage",
+  "poderInvulnerabilidad": "Invulnerability",
+  "poderVelocidad": "Velocity"
 }

@@ -112,7 +112,7 @@ public class ControladorPartida : SyncScript
         secretos++;
 
         // PENDIENTE: efectos
-        interfaz.MostrarMensaje("Secreto Revelado");
+        MostrarMensaje(SistemaTraducción.ObtenerTraducción("secreto"));
     }
 
     // Jugador

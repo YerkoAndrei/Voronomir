@@ -36,8 +36,8 @@ public class InterfazJuego : SyncScript
     private ImageElement imgLlaveRoja;
 
     private ImageElement imgDaño;
-    private ImageElement imgInvencibilidad;
-    private ImageElement imgRapidez;
+    private ImageElement imgInvulnerabilidad;
+    private ImageElement imgVelocidad;
 
     private UniformGrid panelDatos;
     private TextBlock txtMensaje;
@@ -83,8 +83,8 @@ public class InterfazJuego : SyncScript
         imgLlaveRoja = página.FindVisualChildOfType<ImageElement>("imgLlaveRoja");
 
         imgDaño = página.FindVisualChildOfType<ImageElement>("imgDaño");
-        imgInvencibilidad = página.FindVisualChildOfType<ImageElement>("imgInvencibilidad");
-        imgRapidez = página.FindVisualChildOfType<ImageElement>("imgRapidez");
+        imgInvulnerabilidad = página.FindVisualChildOfType<ImageElement>("imgInvulnerabilidad");
+        imgVelocidad = página.FindVisualChildOfType<ImageElement>("imgVelocidad");
 
         panelDatos = página.FindVisualChildOfType<UniformGrid>("Datos");
         txtMensaje = página.FindVisualChildOfType<TextBlock>("txtMensaje");
@@ -311,17 +311,17 @@ public class InterfazJuego : SyncScript
                 else
                     imgDaño.Visibility = Visibility.Hidden;
                 break;
-            case Poderes.invencibilidad:
+            case Poderes.invulnerabilidad:
                 if (activar)
-                    imgInvencibilidad.Visibility = Visibility.Visible;
+                    imgInvulnerabilidad.Visibility = Visibility.Visible;
                 else
-                    imgInvencibilidad.Visibility = Visibility.Hidden;
+                    imgInvulnerabilidad.Visibility = Visibility.Hidden;
                 break;
-            case Poderes.rapidez:
+            case Poderes.velocidad:
                 if (activar)
-                    imgRapidez.Visibility = Visibility.Visible;
+                    imgVelocidad.Visibility = Visibility.Visible;
                 else
-                    imgRapidez.Visibility = Visibility.Hidden;
+                    imgVelocidad.Visibility = Visibility.Hidden;
                 break;
         }
     }
@@ -329,8 +329,8 @@ public class InterfazJuego : SyncScript
     private void ApagarPoderes()
     {
         imgDaño.Visibility = Visibility.Hidden;
-        imgInvencibilidad.Visibility = Visibility.Hidden;
-        imgRapidez.Visibility = Visibility.Hidden;
+        imgInvulnerabilidad.Visibility = Visibility.Hidden;
+        imgVelocidad.Visibility = Visibility.Hidden;
     }
 
     public async void MostrarMensaje(string mensaje)

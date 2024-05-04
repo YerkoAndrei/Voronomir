@@ -24,5 +24,17 @@
   "reinicio": "(Requiere reinicio)",
   "volumenGeneral": "Volumen general",
   "volumenMúsica": "Volumen música",
-  "volumenEfectos": "Volumen efectos"
+  "volumenEfectos": "Volumen efectos",
+
+  "azul": "llave Azul",
+  "roja": "llave Roja",
+
+  "necesita": "Necesita",
+  "activaciones": "más para ir",
+  "puertaCerrada": "Puerta Cerrada",
+  "puertaAbierta": "Puerta Abierta",
+  "secreto": "Secreto es revelado",
+  "poderDaño": "Triple Daño",
+  "poderInvulnerabilidad": "Invulnerabilidad",
+  "poderVelocidad": "Velocidad"
 }

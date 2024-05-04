@@ -46,7 +46,7 @@ public class ControladorBotón : AsyncScript
         if (!posible)
         {
             // PENDIENTE: efectos falta llave
-            ControladorPartida.MostrarMensaje("Necesita llave " + llave.ToString());
+            ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("necesita") + " " + SistemaTraducción.ObtenerTraducción(llave.ToString()));
             return;
         }
 

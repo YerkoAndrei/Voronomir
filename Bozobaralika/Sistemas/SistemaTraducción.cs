@@ -17,7 +17,7 @@ public class SistemaTraducción : StartupScript
     private static string jsonEspañol;
     private static string jsonInglés;
 
-    private static Idiomas idioma;
+    public static Idiomas idioma;
     private static Dictionary<string, string> diccionario;
 
     public UrlReference textosEspañol;

@@ -39,7 +39,7 @@ Hierarchy:
                 Text*: Demo
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 30.0
-                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextColor*: {R: 255, G: 255, B: 200, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -61,6 +61,11 @@ Hierarchy:
                     288bb3cba41217ca70828c1288cd1352: !Button ref!! f444a2ed-c525-4910-896b-bff54eaae8ce
                     4ba0ac30b211286f5dbb3efee011a5e8: !ImageElement ref!! 8f3afbd0-34e2-43ef-8b5e-7824ad5a5471
                     500555a6cf47edf712d2d76bd9bd5974: !TextBlock ref!! 1c4ec9fe-4292-4341-9be5-49c8dd90823d
+                    4923e26625dabc51010075c8823c4041: !ImageElement ref!! 4c1cd38d-f723-4592-b083-83624c26e2c4
+                    fc2cfcb82970a0e0fddf20db86c58d13: !ImageElement ref!! a80585ca-17bf-4d98-8c7c-725dfc887e7a
+                    04b47bd4ec1610c6bf8073bf17d31685: !ImageElement ref!! cd1ef5c8-572d-4c31-979d-3604d4585032
+                    92bde48721d59e56306c30566053a28f: !ImageElement ref!! a7a9be98-a8a8-4d75-9eb4-362e68c15d4e
+                    6bf61bc9b80fbd08a39d0b248d164fce: !ImageElement ref!! 8611f98d-e9cd-4e9c-8c4c-933235d805c2
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -124,11 +129,6 @@ Hierarchy:
                     288bb3cba41217ca70828c1288cd1352: !Button ref!! 7c6efa0a-76d8-49e1-80d1-dd9112ca872b
                     4ba0ac30b211286f5dbb3efee011a5e8: !ImageElement ref!! 9e84c9fb-e157-463f-b24c-39f823f00e9c
                     500555a6cf47edf712d2d76bd9bd5974: !TextBlock ref!! dceb7328-a19a-4034-a9d1-327a98ed7f63
-                    8f1ecac6d73cde634d7d1b157b7acc0d: !ImageElement ref!! 8611f98d-e9cd-4e9c-8c4c-933235d805c2
-                    d1f6a1cbf0cdb60d88390d531cc01397: !ImageElement ref!! a7a9be98-a8a8-4d75-9eb4-362e68c15d4e
-                    1bb9ddee7ccedc034eee8b23f04c38cb: !ImageElement ref!! cd1ef5c8-572d-4c31-979d-3604d4585032
-                    f94eee85652a8ff3a665a08f708a1598: !ImageElement ref!! a80585ca-17bf-4d98-8c7c-725dfc887e7a
-                    938c4c9788e33a443514f845e4414d52: !ImageElement ref!! 4c1cd38d-f723-4592-b083-83624c26e2c4
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -208,7 +208,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 255, G: 255, B: 255, A: 255}
+                Color*: {R: 200, G: 39, B: 39, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -226,7 +226,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color*: {R: 200, G: 39, B: 39, A: 255}
+                Color*: {R: 255, G: 255, B: 255, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -346,7 +346,7 @@ Hierarchy:
                 Text*: Jugar
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 30.0
-                TextColor*: {R: 255, G: 255, B: 200, A: 255}
+                TextColor*: {R: 0, G: 0, B: 0, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"

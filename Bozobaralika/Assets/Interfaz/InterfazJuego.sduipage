@@ -629,7 +629,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "imgDaño"
                 Source: !SpriteFromTexture
-                    Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
+                    Texture: "e86c8183-ef2b-4651-942b-5e3638725a40:Texturas/Interfaz/imgDaño"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 0, B: 255, A: 255}
         -   UIElement: !ImageElement
@@ -1025,7 +1025,7 @@ Hierarchy:
                 Id: 9e0c3032-3d77-496a-b813-bd3c1e662476
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 45.0
+                Height: 35.0
                 VerticalAlignment: Top
                 Margin: {Top: 28.0}
                 MaximumWidth: 3.4028235E+38
@@ -1034,7 +1034,7 @@ Hierarchy:
                 Name: txtMensaje
                 Text: Mensaje lorem ipsum dolor sit amet
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
+                TextSize: 30.0
                 TextColor: {R: 255, G: 0, B: 0, A: 255}
                 TextAlignment: Center
         -   UIElement: !ImageElement
@@ -1063,9 +1063,9 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: imgRapidez
+                Name: imgVelocidad
                 Source: !SpriteFromTexture
-                    Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
+                    Texture: 0c02ac69-1605-40e0-ad77-96d914616059:Texturas/Interfaz/imgVelocidad
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 0, A: 255}
         -   UIElement: !TextBlock
@@ -1154,9 +1154,9 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: imgInvencibilidad
+                Name: imgInvulnerabilidad
                 Source: !SpriteFromTexture
-                    Texture: b2d5dcbd-88de-4edc-8f58-99fc4ccfae72:Texturas/Interfaz/imgLlave
+                    Texture: 66b1843c-bb88-48c1-bb72-456474c626fc:Texturas/Interfaz/imgInvulnerabilidad
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement

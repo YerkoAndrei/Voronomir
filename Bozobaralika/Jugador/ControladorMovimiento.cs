@@ -130,7 +130,7 @@ public class ControladorMovimiento : StartupScript
         // Movimiento
         if(!bloqueo)
         {
-            if (controlador.ObtenerPoder(Poderes.rapidez))
+            if (controlador.ObtenerPoder(Poderes.velocidad))
                 aceleración = maxVelocidad;
 
             movimiento = Vector3.Transform(entradas, cuerpo.Orientation);
@@ -185,7 +185,7 @@ public class ControladorMovimiento : StartupScript
 
     public float ObtenerAceleración()
     {
-        if (controlador.ObtenerPoder(Poderes.rapidez))
+        if (controlador.ObtenerPoder(Poderes.velocidad))
             return maxVelocidad;
 
         return aceleración;

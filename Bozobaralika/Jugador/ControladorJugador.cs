@@ -34,8 +34,8 @@ public class ControladorJugador : SyncScript, IDañable
 
     // Poderes
     private float tiempoDaño;
-    private float tiempoInvencibilidad;
-    private float tiempoRapidez;
+    private float tiempoInvulnerabilidad;
+    private float tiempoVelocidad;
 
     public override void Start()
     {
@@ -75,17 +75,17 @@ public class ControladorJugador : SyncScript, IDañable
         // Poderes        
         if (tiempoDaño > 0)
             tiempoDaño -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
-        if (tiempoInvencibilidad > 0)
-            tiempoInvencibilidad -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
-        if (tiempoRapidez > 0)
-            tiempoRapidez -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+        if (tiempoInvulnerabilidad > 0)
+            tiempoInvulnerabilidad -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+        if (tiempoVelocidad > 0)
+            tiempoVelocidad -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
 
         if(tiempoDaño <= 0)
             ApagarPoder(Poderes.daño);
-        if (tiempoInvencibilidad <= 0)
-            ApagarPoder(Poderes.invencibilidad);
-        if (tiempoRapidez <= 0)
-            ApagarPoder(Poderes.rapidez);
+        if (tiempoInvulnerabilidad <= 0)
+            ApagarPoder(Poderes.invulnerabilidad);
+        if (tiempoVelocidad <= 0)
+            ApagarPoder(Poderes.velocidad);
     }
 
     private async void Curar()
@@ -130,7 +130,7 @@ public class ControladorJugador : SyncScript, IDañable
         movimiento.DetenerMovimiento();
         VibrarCámara(10, 10);
 
-        if (ObtenerPoder(Poderes.invencibilidad))
+        if (ObtenerPoder(Poderes.invulnerabilidad))
             return;
 
         vida -= daño;
@@ -200,17 +200,17 @@ public class ControladorJugador : SyncScript, IDañable
         {
             case Poderes.daño:
                 tiempoDaño = 30;
-                ControladorPartida.MostrarMensaje("Triple daño");
+                ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("poderDaño"));
                 break;
-            case Poderes.invencibilidad:
+            case Poderes.invulnerabilidad:
                 vida = vidaMax;
                 interfaz.ActualizarVida(vida / vidaMax);
-                tiempoInvencibilidad = 30;
-                ControladorPartida.MostrarMensaje("Invencibilidad");
+                tiempoInvulnerabilidad = 30;
+                ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("poderInvulnerabilidad"));
                 break;
-            case Poderes.rapidez:
-                tiempoRapidez = 30;
-                ControladorPartida.MostrarMensaje("Rapidez");
+            case Poderes.velocidad:
+                tiempoVelocidad = 30;
+                ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("poderVelocidad"));
                 break;
         }
     }
@@ -223,11 +223,11 @@ public class ControladorJugador : SyncScript, IDañable
             case Poderes.daño:
                 tiempoDaño = 0;
                 break;
-            case Poderes.invencibilidad:
-                tiempoInvencibilidad = 0;
+            case Poderes.invulnerabilidad:
+                tiempoInvulnerabilidad = 0;
                 break;
-            case Poderes.rapidez:
-                tiempoRapidez = 0;
+            case Poderes.velocidad:
+                tiempoVelocidad = 0;
                 break;
         }
     }
@@ -238,10 +238,10 @@ public class ControladorJugador : SyncScript, IDañable
         {
             case Poderes.daño:
                 return tiempoDaño > 0;
-            case Poderes.invencibilidad:
-                return tiempoInvencibilidad > 0;
-            case Poderes.rapidez:
-                return tiempoRapidez > 0;
+            case Poderes.invulnerabilidad:
+                return tiempoInvulnerabilidad > 0;
+            case Poderes.velocidad:
+                return tiempoVelocidad > 0;
              default:
                 return false;
         }
