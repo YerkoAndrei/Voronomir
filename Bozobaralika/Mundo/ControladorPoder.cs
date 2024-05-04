@@ -51,9 +51,9 @@ public class ControladorPoder : AsyncScript
         cuerpo.Enabled = false;
         velocidadRotación = 30;
         controlador.ActivarPoder(poder);
-        AnimarFin();
 
-        // PENDIENTE: efectos
+        AnimarFin();
+        SistemaSonidos.SonarPoder(poder);
     }
 
     private async void Rotar()

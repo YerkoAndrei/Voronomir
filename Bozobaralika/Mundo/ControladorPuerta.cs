@@ -38,18 +38,19 @@ public class ControladorPuerta : AsyncScript, IActivable
             AnimarPuerta();
             cuerpo.Enabled = false;
             ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("puertaAbierta"));
-            // PENDIENTE: efecto positivo
+            SistemaSonidos.SonarPuerta();
         }
         else
         {
-            // PENDIENTE: efecto negativo
             ControladorPartida.MostrarMensaje((activaciones - activadas) + " " + SistemaTraducción.ObtenerTraducción("activaciones"));
+            SistemaSonidos.SonarCerrado();
         } 
     }
 
     private void TocarJugador()
     {
         ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("puertaCerrada"));
+        SistemaSonidos.SonarCerrado();
     }
 
     private async void AnimarPuerta()

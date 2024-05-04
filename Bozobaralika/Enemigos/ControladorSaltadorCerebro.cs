@@ -42,6 +42,9 @@ public class ControladorSaltadorCerebro : AsyncScript
 
             persecutor.Atacar();
             cuerpo.Jump(dirección);
+
+            if (cuerpo.Entity.Get<ControladorJugador>() != null)
+                SistemaSonidos.SonarSaltador();
         }
     }
 }

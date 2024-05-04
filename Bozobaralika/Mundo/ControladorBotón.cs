@@ -45,8 +45,8 @@ public class ControladorBotón : AsyncScript
         // Llave necesaria
         if (!posible)
         {
-            // PENDIENTE: efectos falta llave
             ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("necesita") + " " + SistemaTraducción.ObtenerTraducción(llave.ToString()));
+            SistemaSonidos.SonarCerrado();
             return;
         }
 
@@ -71,8 +71,7 @@ public class ControladorBotón : AsyncScript
         {
             activable.Activar();
         }
-
-        // PENDIENTE: efectos
+        SistemaSonidos.SonarBotón();
     }
 
     private async void AnimarActivación()

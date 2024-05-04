@@ -127,6 +127,7 @@ public class ControladorJugador : SyncScript, IDañable
         if (!ControladorPartida.ObtenerActivo())
             return;
 
+        SistemaSonidos.SonarDaño();
         movimiento.DetenerMovimiento();
         VibrarCámara(10, 10);
 
@@ -147,10 +148,10 @@ public class ControladorJugador : SyncScript, IDañable
 
     private void Morir()
     {
-        // PENDIENTE: efectos
         armas.GuardarArma();
         AnimarMuerte();
         ControladorPartida.Morir();
+        SistemaSonidos.SonarMorir();
     }
 
     public float ObtenerVelocidad()

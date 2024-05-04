@@ -128,7 +128,7 @@ public class InterfazJuego : SyncScript
         panelMuerte.Visibility = Visibility.Hidden;
         panelFinal.Visibility = Visibility.Hidden;
 
-        // PENDIENTE: configuración
+        // PENDIENTE: ajustes
         panelDatos.Visibility = Visibility.Visible;
 
         ApagarMiras();

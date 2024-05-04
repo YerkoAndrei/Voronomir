@@ -85,6 +85,7 @@ public class ControladorPartida : SyncScript
     {
         activo = false;
         interfaz.Finalizar();
+        SistemaSonidos.SonarFinalizar();
     }
 
     public static float ObtenerTiempo()
@@ -110,9 +111,8 @@ public class ControladorPartida : SyncScript
     public static void SumarSecreto()
     {
         secretos++;
-
-        // PENDIENTE: efectos
         MostrarMensaje(SistemaTraducción.ObtenerTraducción("secreto"));
+        SistemaSonidos.SonarSecreto();
     }
 
     // Jugador

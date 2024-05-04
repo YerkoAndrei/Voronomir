@@ -234,6 +234,7 @@ public class ControladorArmas : StartupScript
         else
             turnoLanzagranadas = TipoDisparo.derecha;
 
+        SistemaSonidos.SonarDisparo(armaActual);
         switch (armaActual)
         {
             case Armas.espada:

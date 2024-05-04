@@ -37,6 +37,9 @@ public class ControladorSaltador : AsyncScript
                 continue;
 
             cuerpo.Jump(dirección);
+
+            if (cuerpo.Entity.Get<ControladorJugador>() != null)
+                SistemaSonidos.SonarSaltador();
         }
     }
 }

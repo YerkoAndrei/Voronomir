@@ -51,9 +51,9 @@ public class ControladorLlave : AsyncScript
         cuerpo.Enabled = false;
         velocidadRotación = 30;
         controlador.GuardarLlave(llave);
-        AnimarFin();
 
-        // PENDIENTE: efectos
+        AnimarFin();
+        SistemaSonidos.SonarLlave();
     }
 
     private async void Rotar()

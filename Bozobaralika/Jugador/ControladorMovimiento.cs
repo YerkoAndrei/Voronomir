@@ -160,7 +160,10 @@ public class ControladorMovimiento : StartupScript
     private void Saltar()
     {
         if (cuerpo.IsGrounded && !bloqueo)
+        {
             cuerpo.Jump();
+            SistemaSonidos.SonarSalto();
+        }
     }
 
     private void Caminar()

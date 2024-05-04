@@ -99,8 +99,8 @@ public static class Utilidades
         botón.Click += (s, a) => { action.Invoke(); };
 
         // Sonidos
-        //botón.TouchDown += (s, a) => { SistemaSonido.SonarBotónEntra(); };
-        //botón.TouchUp += (s, a) => { SistemaSonido.SonarBotónSale(); };
+        botón.TouchDown += (s, a) => { SistemaSonidos.SonarBotónEntra(); };
+        botón.TouchUp += (s, a) => { SistemaSonidos.SonarBotónSale(); };
 
         // Cambios color
         var colorBase = imagen.Color;
