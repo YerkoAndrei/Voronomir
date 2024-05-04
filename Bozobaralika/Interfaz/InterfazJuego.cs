@@ -19,6 +19,7 @@ public class InterfazJuego : SyncScript
     public Color armaSeleccionada;
 
     private ImageElement imgVida;
+    private ImageElement imgFinal;
 
     private ImageElement miraEspada;
     private ImageElement miraEscopeta;
@@ -48,10 +49,15 @@ public class InterfazJuego : SyncScript
     private TextBlock txtAceleración;
     private TextBlock txtFPS;
 
-    private TextBlock txtNivel;
-    private TextBlock txtTiempoFinal;
+    private TextBlock txtMuerteTiempo;
+
+    private TextBlock txtFinalNivel;
+    private TextBlock txtFinalTiempo;
     private TextBlock txtEnemigos;
     private TextBlock txtSecretos;
+
+    private Grid btnContinuar;
+    private Grid btnFinalSalir;
 
     private UniformGrid panelDatosFinales;
     private Grid panelPausa;
@@ -67,6 +73,7 @@ public class InterfazJuego : SyncScript
 
         // Interfaz
         imgVida = página.FindVisualChildOfType<ImageElement>("imgVida");
+        imgFinal = página.FindVisualChildOfType<ImageElement>("imgFinal");
 
         miraEspada = página.FindVisualChildOfType<ImageElement>("miraEspada");
         miraEscopeta = página.FindVisualChildOfType<ImageElement>("miraEscopeta");
@@ -99,8 +106,9 @@ public class InterfazJuego : SyncScript
         txtFPS = página.FindVisualChildOfType<TextBlock>("txtFPS");
 
         // Datos finales
-        txtNivel = página.FindVisualChildOfType<TextBlock>("txtNivel");
-        txtTiempoFinal = página.FindVisualChildOfType<TextBlock>("txtTiempoFinal");
+        txtMuerteTiempo = página.FindVisualChildOfType<TextBlock>("txtMuerteTiempo");
+        txtFinalNivel = página.FindVisualChildOfType<TextBlock>("txtFinalNivel");
+        txtFinalTiempo = página.FindVisualChildOfType<TextBlock>("txtFinalTiempo");
         txtEnemigos = página.FindVisualChildOfType<TextBlock>("txtEnemigos");
         txtSecretos = página.FindVisualChildOfType<TextBlock>("txtSecretos");
 
@@ -114,10 +122,16 @@ public class InterfazJuego : SyncScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReanudar"), Pausar);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReiniciar"), EnClicReiniciar);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReintentar"), EnClicReiniciar);
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnContinuar"), EnClicContinuar);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnPausaSalir"), EnClicSalir);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnMuerteSalir"), EnClicSalir);
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnFinalSalir"), EnClicSalir);
+
+        btnContinuar = página.FindVisualChildOfType<Grid>("btnContinuar");
+        btnFinalSalir = página.FindVisualChildOfType<Grid>("btnFinalSalir");
+
+        ConfigurarBotón(btnContinuar, EnClicContinuar);
+        ConfigurarBotón(btnFinalSalir, EnClicSalir);
+        BloquearBotón(btnContinuar, true);
+        BloquearBotón(btnFinalSalir, true);
 
         // Predeterminado
         tamañoVida = imgVida.Width;
@@ -387,13 +401,7 @@ public class InterfazJuego : SyncScript
         ControladorPartida.Pausar(false);
         BloquearInterfaz(true);
 
-        // Datos
-        //txtNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
-        txtTiempoFinal.Text = ControladorPartida.ObtenerTextoDuración();
-        txtEnemigos.Text = ControladorPartida.ObtenerTextoEnemigos();
-        txtSecretos.Text = ControladorPartida.ObtenerTextoSecretos();
-
-        panelDatosFinales.Visibility = Visibility.Visible;
+        txtMuerteTiempo.Text = ControladorPartida.ObtenerTextoDuración();
         panelMuerte.Visibility = Visibility.Visible;
     }
 
@@ -403,12 +411,40 @@ public class InterfazJuego : SyncScript
         BloquearInterfaz(true);
 
         // Datos
-        //txtNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
-        txtTiempoFinal.Text = ControladorPartida.ObtenerTextoDuración();
+        txtFinalNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
+        txtFinalTiempo.Text = ControladorPartida.ObtenerTextoDuración();
         txtEnemigos.Text = ControladorPartida.ObtenerTextoEnemigos();
         txtSecretos.Text = ControladorPartida.ObtenerTextoSecretos();
 
-        panelDatosFinales.Visibility = Visibility.Visible;
+        txtFinalNivel.Visibility = Visibility.Hidden;
         panelFinal.Visibility = Visibility.Visible;
+
+        SistemaSonidos.SonarPuerta();
+        MostrarFinal();
+    }
+
+    public async void MostrarFinal()
+    {
+        float duración = 0.4f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+            imgFinal.Opacity = MathUtil.Lerp(0f, 1f, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+
+        // Fin
+        imgFinal.Opacity = 1;        
+        panelDatosFinales.Visibility = Visibility.Visible;
+        txtFinalNivel.Visibility = Visibility.Visible;
+
+        BloquearBotón(btnContinuar, false);
+        BloquearBotón(btnFinalSalir, false);
+        SistemaSonidos.SonarFinalizar();
     }
 }

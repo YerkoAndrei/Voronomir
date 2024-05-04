@@ -100,7 +100,6 @@ Hierarchy:
                 Id: 1fb1e13a-d5c8-41bf-b052-1f83b29d6bc2
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Visibility: Hidden
                 Width: 500.0
                 Height: 200.0
                 Margin: {}
@@ -170,7 +169,6 @@ Hierarchy:
                     85d913eca330adba2ee49bf83045a7e7: !Grid ref!! 7e00e8f3-06e0-472e-8cec-ff5756a08416
                     60cd5e24ba09294618747d4e3d82ce94: !Grid ref!! 8804fd5d-15bb-4edd-abd5-7ec90efadaaf
                     47e1b7eed937c2abda6582fdac10ee55: !Grid ref!! 7e7044aa-9a86-4c01-8dce-77d226c7c803
-                    08c269a9970590b9f7fb726b421e30fa: !UniformGrid ref!! 1fb1e13a-d5c8-41bf-b052-1f83b29d6bc2
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -275,6 +273,21 @@ Hierarchy:
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !TextBlock
+                Id: 3b582537-3523-4026-9e49-2e816a96491b
+                DependencyProperties:
+                    4637f3e5d6d1ef2ef3921f12495e33fa~GridBase.ColumnPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 30.0
+                Margin: {Left: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtMuerteTiempo
+                Text: 00:00:000
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 25.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !TextBlock
                 Id: 4031c84f-688c-4e6b-8e8d-0aa10fbed661
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -297,7 +310,6 @@ Hierarchy:
                 Id: 40334597-99c1-48cc-b5dd-d7c6d4e80828
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 1280.0
                 Height: 95.0
                 VerticalAlignment: Top
                 Margin: {Top: 50.0}
@@ -456,7 +468,7 @@ Hierarchy:
                 Width: 1280.0
                 Height: 95.0
                 VerticalAlignment: Top
-                Margin: {Top: 50.0}
+                Margin: {Top: 100.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -571,7 +583,7 @@ Hierarchy:
                 DependencyProperties:
                     c2846184b2914b6111852351f93d9bab~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 800.0
+                Width: 600.0
                 Height: 60.0
                 Margin*: {}
                 MaximumWidth: 3.4028235E+38
@@ -585,6 +597,21 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 6774fef3-5392-40ba-af34-e5b5e29b3c4a
+                DependencyProperties:
+                    be859a582ce44e87f778d2a4474b96f0~Panel.ZIndexPropertyKey: -1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgFinal
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 0, G: 0, B: 0, A: 255}
+                StretchType: Fill
         -   UIElement: !ImageElement
                 Id: 678a6380-a079-4a49-8d81-31f00f89f083
                 DependencyProperties: {}
@@ -695,7 +722,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: lblTiempoFinal
+                Name: lblFinalTiempo
                 Text: Tiempo
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 25.0
@@ -720,7 +747,7 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: 7e7044aa-9a86-4c01-8dce-77d226c7c803
                 DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 255}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Visibility: Hidden
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -728,8 +755,10 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: PanelFinal
                 Children:
+                    36049f7dde63c65d87b5ec04ad31a14a: !ImageElement ref!! 6774fef3-5392-40ba-af34-e5b5e29b3c4a
                     a1c27a8786b254adfef7164629f7c808: !TextBlock ref!! 40334597-99c1-48cc-b5dd-d7c6d4e80828
                     574a792245d1b22b0661c3e5424ce47c: !TextBlock ref!! 989240e4-49fb-4428-93e5-eef3105242e8
+                    36c2fd17ebee863c8637c76c7225cad0: !UniformGrid ref!! 1fb1e13a-d5c8-41bf-b052-1f83b29d6bc2
                     1f79f5520694347a120d55589f66abfe: !UniformGrid ref!! e35763b1-8f48-4fb9-8329-9a638e0a0541
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -825,7 +854,7 @@ Hierarchy:
                 Name: PanelMuerte
                 Children:
                     a1c27a8786b254adfef7164629f7c808: !TextBlock ref!! 595c244b-fd84-4d7e-9586-6cf40349b089
-                    30c93cae451a83ef6600cd0c95da591f: !TextBlock ref!! ed2670cd-4534-4fec-aceb-574726c68fff
+                    8b590e737ae8428892c87057e11dfb32: !UniformGrid ref!! a7cc6754-c48e-4c34-9b2e-51ff82895f4c
                     73b216b86fb67963fed7d70412afe069: !UniformGrid ref!! 61027bcf-7d46-4842-84d6-85941d310a40
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -966,13 +995,13 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 1280.0
-                Height: 40.0
+                Height: 35.0
                 VerticalAlignment: Top
                 Margin: {Top: 160.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtNivel
+                Name: txtFinalNivel
                 Text: 'E0M0: nombre nivel'
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 30.0
@@ -1038,6 +1067,21 @@ Hierarchy:
                 TextSize: 30.0
                 TextColor: {R: 255, G: 0, B: 0, A: 255}
                 TextAlignment: Center
+        -   UIElement: !TextBlock
+                Id: a25a016f-cd20-409c-9de1-d0724812a65c
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 30.0
+                Margin: {Right: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: lblMuerteTiempo
+                Text: Tiempo
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 25.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextAlignment: Right
         -   UIElement: !ImageElement
                 Id: a28a61c2-f0a2-4638-b013-8999916134b9
                 DependencyProperties:
@@ -1052,6 +1096,21 @@ Hierarchy:
                     Texture: 06d28cdc-d365-45f3-8be3-8fccc23d4c92:Texturas/Armas/decoArmas
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !UniformGrid
+                Id: a7cc6754-c48e-4c34-9b2e-51ff82895f4c
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 600.0
+                Height: 30.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: DatosMuerte
+                Children:
+                    1fb28bab155e18cf06d66c48ff228a0a: !TextBlock ref!! a25a016f-cd20-409c-9de1-d0724812a65c
+                    960cd027b30108f1d3a5f7bf6fdbcb08: !TextBlock ref!! 3b582537-3523-4026-9e49-2e816a96491b
+                Columns: 2
         -   UIElement: !ImageElement
                 Id: a7e91ecc-496e-4549-8754-9a5682d39bbf
                 DependencyProperties:
@@ -1371,23 +1430,6 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 0, B: 0, A: 250}
                 StretchType: Fill
-        -   UIElement: !TextBlock
-                Id: ed2670cd-4534-4fec-aceb-574726c68fff
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 1280.0
-                Height: 40.0
-                VerticalAlignment: Top
-                Margin: {Top: 160.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: txtNivel
-                Text: 'E0M0: nombre nivel'
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 30.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-                TextAlignment: Center
         -   UIElement: !Grid
                 Id: ed970148-9451-495e-8f8b-f4f2099dd023
                 DependencyProperties:
@@ -1477,7 +1519,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtTiempoFinal
+                Name: txtFinalTiempo
                 Text: 00:00:000
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 25.0
