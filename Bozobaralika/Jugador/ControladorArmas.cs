@@ -497,16 +497,25 @@ public class ControladorArmas : StartupScript
     {
         usandoMira = acercar;
         movimiento.CambiarSensiblidad(usandoMira);
+        interfaz.ApagarMiras();
 
         // PENDIENTE: ajustes
         var campoVisión = 90;
         var inicial = cámara.VerticalFieldOfView;
         var objetivo = inicial;
 
+        var sombraInicial = 0f;
+        var sombraObjetivo = 1f;
+
         if (usandoMira)
-            objetivo = campoVisión * 0.2f; // 18
+            objetivo = campoVisión * 0.22f; // 20
         else
-            objetivo = campoVisión;        // 90
+        {
+            objetivo = campoVisión;         // 90
+            sombraInicial = 1f;
+            sombraObjetivo = 0f;
+            interfaz.MostrarMiraRifle(false);
+        }
 
         // Animación mira
         tokenMira.Cancel();
@@ -524,6 +533,7 @@ public class ControladorArmas : StartupScript
 
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             cámara.VerticalFieldOfView = MathUtil.Lerp(inicial, objetivo, tiempo);
+            interfaz.ActualizarSombraRifle(MathUtil.Lerp(sombraInicial, sombraObjetivo, tiempo));
 
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
@@ -532,6 +542,7 @@ public class ControladorArmas : StartupScript
         // Fin
         cámara.VerticalFieldOfView = objetivo;
         interfaz.MostrarMiraRifle(usandoMira);
+        interfaz.ActualizarSombraRifle(sombraObjetivo);
     }
 
     private async void ActivarLuz()

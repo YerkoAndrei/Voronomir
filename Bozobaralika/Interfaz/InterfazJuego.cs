@@ -24,6 +24,7 @@ public class InterfazJuego : SyncScript
     private ImageElement miraEscopeta;
     private ImageElement miraMetralleta;
     private ImageElement miraRifle;
+    private ImageElement sombraRifle;
     private ImageElement miraLanzagranadas;
 
     private ImageElement imgEspada;
@@ -71,6 +72,7 @@ public class InterfazJuego : SyncScript
         miraEscopeta = página.FindVisualChildOfType<ImageElement>("miraEscopeta");
         miraMetralleta = página.FindVisualChildOfType<ImageElement>("miraMetralleta");
         miraRifle = página.FindVisualChildOfType<ImageElement>("miraRifle");
+        sombraRifle = página.FindVisualChildOfType<ImageElement>("sombraRifle");
         miraLanzagranadas = página.FindVisualChildOfType<ImageElement>("miraLanzagranadas");
 
         imgEspada = página.FindVisualChildOfType<ImageElement>("imgEspada");
@@ -256,12 +258,21 @@ public class InterfazJuego : SyncScript
 
     public void MostrarMiraRifle(bool mostrar)
     {
-        ApagarMiras();
-
-        if(mostrar)
+        if (mostrar)
+        {
             miraRifle.Visibility = Visibility.Visible;
+            ActualizarSombraRifle(1);
+        }
         else
             miraRifle.Visibility = Visibility.Hidden;
+    }
+
+    public void ActualizarSombraRifle(float opacidad)
+    {
+        if(opacidad > 0)
+            sombraRifle.Visibility = Visibility.Visible;
+
+        sombraRifle.Opacity = opacidad;
     }
 
     public void ApagarMiras()
@@ -270,6 +281,7 @@ public class InterfazJuego : SyncScript
         miraEscopeta.Visibility = Visibility.Hidden;
         miraMetralleta.Visibility = Visibility.Hidden;
         miraRifle.Visibility = Visibility.Hidden;
+        sombraRifle.Visibility = Visibility.Hidden;
         miraLanzagranadas.Visibility = Visibility.Hidden;
     }
 

@@ -393,6 +393,7 @@ Hierarchy:
                     611464a46bf4be8ddfe8aeeb853c25ca: !ImageElement ref!! ad9d9f28-8a91-42d4-9074-6c62ccd28aa3
                     98046954a4c112afb241308e71200511: !ImageElement ref!! 85d08406-1342-4f61-a088-e86ee449acd8
                     6ed5a00e82f98e2cadc3b8895cb7fd20: !ImageElement ref!! 9cd2d46b-af16-4a8a-a534-5079740eb5eb
+                    a14aa3cb6bfa531975b98393239715ad: !ImageElement ref!! ed09652c-fc96-4992-9e87-78b1964c6fb5
                     51b4271c5f1f215b473e4d4e980aed47: !ImageElement ref!! 456bce48-7ade-4476-ade0-4a483375e395
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -1356,6 +1357,20 @@ Hierarchy:
                     d678b2d394ed1ab3b0b763c9830b53c6: !Grid ref!! d9118e8e-d2f8-4808-875d-2c6119d8d1e2
                     dd25c54d9698b85550d55b4bdfa48836: !Grid ref!! c5d8c8b0-e9f8-476b-b572-8f964c39e827
                 Rows: 2
+        -   UIElement: !ImageElement
+                Id: ed09652c-fc96-4992-9e87-78b1964c6fb5
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: sombraRifle
+                Source: !SpriteFromTexture
+                    Texture: add94038-a23e-47ca-a273-6adb812fcb51:Texturas/Miras/sombraRifle
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 0, G: 0, B: 0, A: 250}
+                StretchType: Fill
         -   UIElement: !TextBlock
                 Id: ed2670cd-4534-4fec-aceb-574726c68fff
                 DependencyProperties: {}
