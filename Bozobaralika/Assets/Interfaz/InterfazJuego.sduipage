@@ -53,16 +53,16 @@ Hierarchy:
                 Id: 05affce2-68c8-4b5c-91d7-8ff44942070c
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 35.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name*: txtMuerteSalir
                 Text*: Salir
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 220, A: 255}
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -224,8 +224,7 @@ Hierarchy:
                 Id: 1d56c1b9-a79c-4ec1-9991-8c24b90f5ef3
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 1280.0
-                Height: 100.0
+                Height: 80.0
                 VerticalAlignment: Top
                 Margin: {Top: 100.0}
                 MaximumWidth: 3.4028235E+38
@@ -233,7 +232,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtPausa
                 Text: Pausa
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 90.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -296,8 +295,8 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 500.0
-                Height: 200.0
-                Margin: {}
+                Height: 140.0
+                Margin: {Top: 50.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -579,14 +578,14 @@ Hierarchy:
                     d08c8a67af2548af04fffb8de4259de0~GridBase.ColumnPropertyKey: 1
                     6f97dfb0c5f07a659401e96aad846531~GridBase.RowPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
+                Height: 20.0
                 Margin: {Left: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtSecretos
                 Text: 0/0
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
@@ -614,14 +613,14 @@ Hierarchy:
                 DependencyProperties:
                     4637f3e5d6d1ef2ef3921f12495e33fa~GridBase.ColumnPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
+                Height: 20.0
                 Margin: {Left: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtMuerteTiempo
                 Text: 00:00:000
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
@@ -668,15 +667,15 @@ Hierarchy:
                 Id: 40334597-99c1-48cc-b5dd-d7c6d4e80828
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 95.0
+                Height: 80.0
                 VerticalAlignment: Top
-                Margin: {Top: 50.0}
+                Margin: {Top: 100.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtFinal
                 Text: final
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 90.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -762,16 +761,16 @@ Hierarchy:
                 Id: 449b4203-1816-471c-953f-e17f83b61c36
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 35.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name*: txtReiniciar
                 Text*: Reiniciar
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 220, A: 255}
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1037,16 +1036,16 @@ Hierarchy:
                 Id: 535f183d-ffda-4aab-bc64-dfadb934edc2
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 35.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name*: txtReintentar
                 Text*: Reintentar
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 220, A: 255}
+                TextColor*: {R: 240, G: 240, B: 160, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1071,7 +1070,7 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 1280.0
-                Height: 95.0
+                Height: 80.0
                 VerticalAlignment: Top
                 Margin: {Top: 100.0}
                 MaximumWidth: 3.4028235E+38
@@ -1079,7 +1078,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtMuerte
                 Text: muerte
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 90.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -1160,14 +1159,14 @@ Hierarchy:
                 DependencyProperties:
                     c2822c8ae47298b7dd0e12b487596096~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
+                Height: 20.0
                 Margin: {Right: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: lblEnemigos
                 Text: Enemigos
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Right
@@ -1189,16 +1188,16 @@ Hierarchy:
                 Id: 638596c1-cfbf-471c-ae31-22ffa5b539e1
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 35.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name*: txtPausaSalir
                 Text*: Salir
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 220, A: 255}
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1276,14 +1275,14 @@ Hierarchy:
                 Id: 67ec0232-3f2d-427a-859f-6cb8c8ef9c9b
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: "txtPosición"
                 Text: P 000,00 - 000,00, - 000,00
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
@@ -1412,16 +1411,16 @@ Hierarchy:
                 Id: 7240a079-4ec8-4685-a0d6-65f7ced00d6c
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 35.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name*: txtContinuar
                 Text*: Continuar
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 220, A: 255}
+                TextColor*: {R: 240, G: 240, B: 160, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1431,14 +1430,14 @@ Hierarchy:
                 Id: 759ea8e0-0910-4abc-b4c4-fbe121cf98a1
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
+                Height: 20.0
                 Margin: {Right: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: lblFinalTiempo
                 Text: Tiempo
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Right
@@ -1446,16 +1445,16 @@ Hierarchy:
                 Id: 760160a1-7dbc-4a7f-89c7-c3e95a1649b4
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 35.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name*: txtFinalSalir
                 Text*: Salir
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 220, A: 255}
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1681,14 +1680,14 @@ Hierarchy:
                 DependencyProperties:
                     7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 4
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtFPS
                 Text: C 000
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
@@ -1787,14 +1786,14 @@ Hierarchy:
                 DependencyProperties:
                     7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: "txtAceleración"
                 Text: A 0.00
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !Grid
@@ -1836,16 +1835,16 @@ Hierarchy:
                 Id: 8ee4e868-3465-41d6-ab93-70fd51e9d7d1
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 35.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name*: txtReanudar
                 Text*: Reanudar
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 220, A: 255}
+                TextColor*: {R: 240, G: 240, B: 160, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1951,15 +1950,15 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 1280.0
-                Height: 35.0
+                Height: 25.0
                 VerticalAlignment: Top
-                Margin: {Top: 160.0}
+                Margin: {Top: 200.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtFinalNivel
                 Text: 'E0M0: nombre nivel'
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -1997,7 +1996,7 @@ Hierarchy:
                 Id: 9e0c3032-3d77-496a-b813-bd3c1e662476
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 35.0
+                Height: 25.0
                 VerticalAlignment: Top
                 Margin: {Top: 40.0}
                 MaximumWidth: 3.4028235E+38
@@ -2005,9 +2004,9 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtMensaje
                 Text: Mensaje lorem ipsum dolor sit amet
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
-                TextColor: {R: 255, G: 0, B: 0, A: 255}
+                TextColor: {R: 200, G: 0, B: 0, A: 255}
                 TextAlignment: Center
         -   UIElement: !Button
                 Id: 9fc0562c-6128-41c0-9494-5390f4814166
@@ -2084,14 +2083,14 @@ Hierarchy:
                 Id: a25a016f-cd20-409c-9de1-d0724812a65c
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
+                Height: 20.0
                 Margin: {Right: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: lblMuerteTiempo
                 Text: Tiempo
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Right
@@ -2153,9 +2152,9 @@ Hierarchy:
                 Id: a7cc6754-c48e-4c34-9b2e-51ff82895f4c
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 600.0
                 Height: 30.0
-                Margin: {}
+                VerticalAlignment: Top
+                Margin: {Top: 200.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -2187,14 +2186,14 @@ Hierarchy:
                 DependencyProperties:
                     e1b8d7c5d7211c43b3e9e9b88e752d1e~GridBase.RowPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
+                Height: 20.0
                 Margin: {Right: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: lblSecretos
                 Text: Secretos
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Right
@@ -2259,14 +2258,14 @@ Hierarchy:
                 DependencyProperties:
                     7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtTiempo
                 Text: T 00:00:00
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
@@ -2610,14 +2609,14 @@ Hierarchy:
                     2658381c694afc63da4581d5dc8df08c~GridBase.ColumnPropertyKey: 1
                     48d443ad87c7c7d252daa85c5dab4842~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
+                Height: 20.0
                 Margin: {Left: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtEnemigos
                 Text: 00/00
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !Grid
@@ -3006,14 +3005,14 @@ Hierarchy:
                 DependencyProperties:
                     7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtVelocidad
                 Text: V 00.00
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !Button
@@ -3107,14 +3106,14 @@ Hierarchy:
                 DependencyProperties:
                     4637f3e5d6d1ef2ef3921f12495e33fa~GridBase.ColumnPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 30.0
+                Height: 20.0
                 Margin: {Left: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtFinalTiempo
                 Text: 00:00:000
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !Grid

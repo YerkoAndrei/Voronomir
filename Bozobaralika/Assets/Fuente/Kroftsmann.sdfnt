@@ -1,0 +1,9 @@
+!SpriteFont
+Id: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+FontSource: !FileFontProvider
+    Source: !file Kroftsmann.ttf
+FontType: !RuntimeRasterizedSpriteFontType
+    Size: 30.0
+Spacing: 4.0

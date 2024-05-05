@@ -483,16 +483,16 @@ Hierarchy:
                 Id: 4fecb162-c19a-4549-bcd7-686b483647a1
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 85.0
+                Height: 100.0
                 VerticalAlignment: Top
-                Margin: {Top: 100.0}
+                Margin: {Top: 80.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: "txtTítulo"
                 Text: Bozobaralika
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 80.0
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
+                TextSize: 110.0
                 TextColor: {R: 0, G: 0, B: 0, A: 255}
                 TextAlignment: Center
         -   UIElement: !ImageElement
@@ -614,16 +614,16 @@ Hierarchy:
                 Id: 69dccf24-6995-46ec-9262-a7cc371d83a7
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 35.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txt
                 Text*: Demo
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 220, A: 255}
+                TextColor*: {R: 240, G: 240, B: 160, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -768,16 +768,16 @@ Hierarchy:
                 Id: a26a2e76-bb46-46f1-925d-4e1a1a6b0ac3
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 35.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txt
                 Text*: Salir
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 220, A: 255}
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -814,16 +814,16 @@ Hierarchy:
                 Id: a8971fdc-2121-40a0-8329-e60dc4c20995
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 35.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txt
                 Text*: Opciones
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 220, A: 255}
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1133,16 +1133,16 @@ Hierarchy:
                 Id: e1d91033-7e7c-4e24-9a10-4d38e12031bf
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 35.0
+                Height: 25.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txt
                 Text*: Jugar
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 220, A: 255}
+                TextColor*: {R: 240, G: 240, B: 160, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"

@@ -2,6 +2,7 @@ YerkoAndrei:
 Programación, diseño, arte, modelado, shaders, música, sonidos y traducción.
 
 Fuente :
+kroftsmann (AbdulMakesFonts)
 
 VSTs:
 
