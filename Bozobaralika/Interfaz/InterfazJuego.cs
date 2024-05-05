@@ -398,6 +398,10 @@ public class InterfazJuego : SyncScript
         imgVida.Color = vidaVacía;
         imgVida.Width = tamañoVida;
 
+        ApagarMiras();
+        ApagarLlaves();
+        ApagarPoderes();
+
         ControladorPartida.Pausar(false);
         BloquearInterfaz(true);
 
