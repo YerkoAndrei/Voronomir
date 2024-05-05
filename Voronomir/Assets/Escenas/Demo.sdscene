@@ -18,6 +18,7 @@ Hierarchy:
         - ref!! a9178381-0e65-41e7-b367-ddfb062cebe6
         - ref!! edeff615-c141-4feb-96da-868b5fe6ebc8
         - ref!! 52cd02bd-3165-4aa6-8d1e-7538541119a3
+        - ref!! 0157bade-c6d9-4521-b929-8ef3c82b501a
         - ref!! dca75c2f-3874-4e83-9565-15c148fa0401
         - ref!! cd32b3e8-5353-4fb1-8f2f-4d0b902bb2c1
         - ref!! 18e39ea5-413f-4fb5-ba5f-e18f6ead6a5e
@@ -73,6 +74,23 @@ Hierarchy:
                         Id: 2138665c-fd1c-4a2f-8ad0-6a166a3c81c7
                         Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
+        -   Folder: "EntornoEstático"
+            Entity:
+                Id: 0157bade-c6d9-4521-b929-8ef3c82b501a
+                Name: Luz Ambiente
+                Components:
+                    32ab1d170fea034338f8662484dcb61d: !TransformComponent
+                        Id: 2901beaa-e245-4976-b141-535bdabf0aec
+                        Position: {X: 0.0, Y: 5.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    090ebbbb69374cc8bcdad33561b73bac: !LightComponent
+                        Id: c4ecae75-d15e-4aa8-8e46-378b969f4946
+                        Type: !LightAmbient
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.78431374, G: 0.78431374, B: 0.78431374}
+                        Intensity: 2.0
         -   Entity:
                 Id: 01b7e0fd-9639-4cc4-93f7-cabbc094b963
                 Name: Izquierda
@@ -2005,10 +2023,6 @@ Hierarchy:
                     9e6fd99d483f71d3202608c86972b99b: !BackgroundComponent
                         Id: ab0ca55b-ddd7-44cf-9dc9-6deb45f8a864
                         Texture: 1afb23f5-a8f8-44a2-929d-353d007943a0:Skybox texture
-                    090ebbbb69374cc8bcdad33561b73bac: !LightComponent
-                        Id: 5948d7fd-40c3-40e2-a1c1-18a6ff9489d8
-                        Type: !LightSkybox
-                            Skybox: fa0474ca-0906-42ca-8deb-fbe7df071b66:Skybox
         -   Folder: "EntornoEstático/Muros"
             Entity:
                 Id: 55426dd8-7316-4b8d-b2a7-f3aad1edcb3e
