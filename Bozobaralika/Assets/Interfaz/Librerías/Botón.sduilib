@@ -22,7 +22,40 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 255, G: 255, B: 255, A: 255}
+                Color: {R: 100, G: 19, B: 19, A: 255}
+                StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: 0ed75d3a-3998-4f34-8425-0d2145ff3725
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
+                Width: 5.0
+                HorizontalAlignment: Right
+                Margin: {Right: 30.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: der_3
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 40, G: 0, B: 0, A: 255}
+                StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: 208d5d4d-5916-4a83-96ce-3ed0a232eecc
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 5.0
+                HorizontalAlignment: Right
+                Margin: {Right: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: der_1
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 40, G: 0, B: 0, A: 255}
                 StretchType: Fill
         -   UIElement: !Button
                 Id: 29e403c2-1f00-4214-ba69-7d3981ebbbe5
@@ -34,19 +67,155 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: btn
+        -   UIElement: !ImageElement
+                Id: 4631910d-b8ba-46e9-b479-13c2ef8e0ac6
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 5.0
+                VerticalAlignment: Top
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: arriba
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 40, G: 0, B: 0, A: 255}
+                StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: 4b011e5c-668b-427a-b756-2cc9bc8b6832
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 5.0
+                HorizontalAlignment: Left
+                Margin: {Left: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: izq_1
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 40, G: 0, B: 0, A: 255}
+                StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: 8b7dc299-107b-456e-8e58-4adf0cd3702d
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
+                Width: 5.0
+                HorizontalAlignment: Left
+                Margin: {Left: 30.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: izq_3
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 40, G: 0, B: 0, A: 255}
+                StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: 9956b817-dc14-496c-8f6d-6d3a845a3940
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 5.0
+                VerticalAlignment: Bottom
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: abajo
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 40, G: 0, B: 0, A: 255}
+                StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: a29521e8-6f92-4f9f-8eba-01caf0bc8d53
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
+                Width: 5.0
+                HorizontalAlignment: Right
+                Margin: {Right: 20.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: der_2
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 40, G: 0, B: 0, A: 255}
+                StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: b05a968b-04bb-4761-8bec-8ad409415f3f
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
+                Width: 5.0
+                HorizontalAlignment: Left
+                Margin: {Left: 20.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: izq_2
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 40, G: 0, B: 0, A: 255}
+                StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: b0fd12cd-cbfb-4999-bc52-027a5a0a41f5
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 5.0
+                HorizontalAlignment: Left
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: izq_0
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 40, G: 0, B: 0, A: 255}
+                StretchType: Fill
         -   UIElement: !Grid
                 Id: b97cce6f-c671-4e4c-afde-a556a2be51f3
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 60.0
                 Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
                 Name: "Botón"
                 Children:
                     288bb3cba41217ca70828c1288cd1352: !Button ref!! 29e403c2-1f00-4214-ba69-7d3981ebbbe5
                     4ba0ac30b211286f5dbb3efee011a5e8: !ImageElement ref!! 03267286-f8aa-4aaf-8a71-0ad889f5753b
                     500555a6cf47edf712d2d76bd9bd5974: !TextBlock ref!! d55d9875-b47c-4938-8415-98e65702c058
+                    3df6f2ec72b555713584bc9bc41fd7a4: !Grid ref!! fe4698b0-adfd-4b0c-b516-0d9535114561
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: bbdb2ba4-1df7-4383-8b41-db0803d2b7ad
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 5.0
+                HorizontalAlignment: Right
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: der_0
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 40, G: 0, B: 0, A: 255}
+                StretchType: Fill
         -   UIElement: !TextBlock
                 Id: d55d9875-b47c-4938-8415-98e65702c058
                 DependencyProperties: {}
@@ -60,5 +229,28 @@ Hierarchy:
                 Text: "Botón"
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 30.0
-                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextColor: {R: 255, G: 255, B: 220, A: 255}
                 TextAlignment: Center
+        -   UIElement: !Grid
+                Id: fe4698b0-adfd-4b0c-b516-0d9535114561
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Deco
+                Children:
+                    761b636411b370482f6c02fadc16cea1: !ImageElement ref!! 4631910d-b8ba-46e9-b479-13c2ef8e0ac6
+                    29fb47c06655683d7e97d5babbf10765: !ImageElement ref!! 9956b817-dc14-496c-8f6d-6d3a845a3940
+                    85e5d8377e99a96d6aa80b9e7d29819d: !ImageElement ref!! b0fd12cd-cbfb-4999-bc52-027a5a0a41f5
+                    cbc2f664e96bc0a8286901f1e98efc3b: !ImageElement ref!! 4b011e5c-668b-427a-b756-2cc9bc8b6832
+                    f3ebe255f705d66e8624b8f43405fae9: !ImageElement ref!! b05a968b-04bb-4761-8bec-8ad409415f3f
+                    de99be6a64056709ab5d7bc3617d8da7: !ImageElement ref!! 8b7dc299-107b-456e-8e58-4adf0cd3702d
+                    1699ee3c6966b96cdf706baf41b90b18: !ImageElement ref!! bbdb2ba4-1df7-4383-8b41-db0803d2b7ad
+                    0ca27cb3f0a22180477eb9f36e75f15c: !ImageElement ref!! 208d5d4d-5916-4a83-96ce-3ed0a232eecc
+                    75e4d04d36c70803b0da9f6f1cba159c: !ImageElement ref!! a29521e8-6f92-4f9f-8eba-01caf0bc8d53
+                    6543b15d8fa7f85960240020e504d5ec: !ImageElement ref!! 0ed75d3a-3998-4f34-8425-0d2145ff3725
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
