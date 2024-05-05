@@ -363,6 +363,7 @@ Hierarchy:
                             ea08a84d5f3dde506286584b8fd64d67: ref!! da9e9a18-1567-4d94-b286-973cb2c0ed1d
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 4ba9a486-b7da-4603-8605-cda247797342
+                        "estático": false
                         ojos:
                             2824235e2bd7176f130bad5360091c8c: ref!! cedfb71a-e8d0-42bb-9ca2-313994b8d025
                             918aa9027aa51d125f664f54e4209f9e: ref!! 196a4786-30d5-4101-a773-ac5f2372ea0f

@@ -252,6 +252,7 @@ Hierarchy:
                             ad5f371af09d736586a420c788f25eaf: ref!! b6acb4b1-f705-4fa2-976d-216152784495
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: a856b63a-c2d6-4b60-9a27-0727b457357a
+                        "estático": false
                         ojos:
                             4db60a51e1f224185a1f775371f2eeb2: ref!! 58cad4ee-090a-49ea-89ec-2267b4ae444b
                     f8a8bea51b0be6e7628afcbf94a7d8aa: !Voronomir.AnimadorDron,Voronomir.Proyecto

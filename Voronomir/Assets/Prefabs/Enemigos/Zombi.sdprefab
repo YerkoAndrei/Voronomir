@@ -155,6 +155,7 @@ Hierarchy:
                             ad5f371af09d736586a420c788f25eaf: ref!! c9e8139f-9d0c-4754-95e0-2a4119f586b2
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 53bb4bc4-517c-4420-b135-b5c27330ae8f
+                        "estático": false
                         ojos:
                             44e390ec37f8924a7039eeab0e0141fc: ref!! 3589340e-1e65-4811-93ff-1643242f91cf
                     dcfc61066510852ac085b2f68892da9c: !Voronomir.AnimadorZombi,Voronomir.Proyecto

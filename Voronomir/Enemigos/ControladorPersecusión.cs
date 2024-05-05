@@ -10,6 +10,7 @@ using static Utilidades;
 
 public class ControladorPersecusión : StartupScript
 {
+    public bool estático;
     public List<TransformComponent> ojos = new List<TransformComponent> { };
 
     private ControladorPersecusionesTrigonométricas persecutor;
@@ -89,13 +90,23 @@ public class ControladorPersecusión : StartupScript
             return;
         }
 
-        // Busca cada cierto tiempo
-        tempoBusqueda -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
-        if(tempoBusqueda <= 0)
-            BuscarObjetivo();
-
-        Perseguir();
         MirarJugador(velocidadRotación);
+
+        // Estáticos no persiguen y disparan mientras vea al jugador
+        if (estático)
+        {
+            if (MirarJugador())
+                Atacar();
+        }
+        else
+        {
+            // Busca cada cierto tiempo
+            tempoBusqueda -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            if (tempoBusqueda <= 0)
+                BuscarObjetivo();
+
+            Perseguir();
+        }
     }
 
     private void BuscarObjetivo()
