@@ -1,0 +1,289 @@
+!PrefabAsset
+Id: e8ff3d35-f6b5-4e6b-8c5d-8fba8c117327
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 1add6800-9cf9-4afc-bb23-045504040570
+                Name: "Dañables"
+                Components:
+                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
+                        Id: 27cd1275-4e3c-492c-9117-680900c77b93
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            274570ec839d03441939b84ca63d1199: ref!! db7d9fa9-3c6c-4130-a934-9ca1f3e9b182
+                            ee33064418fffd75344270b8a2fcbd87: ref!! 4b23c0fe-22ad-47b7-b100-d0e20ea32e5c
+                            120734da9b0753d0def8c3907703f84b: ref!! 0140fde5-d500-4f7c-ae52-6df913e6c508
+                            92bf3e988928f5b5468cbb4a9ca8a665: ref!! b9304e97-1cb5-4620-a474-977619588ae6
+        -   Folder: null
+            Entity:
+                Id: 32b5d84a-34ff-4c2c-ab64-891da7c4a882
+                Name: "Dañable cabeza"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: db7d9fa9-3c6c-4130-a934-9ca1f3e9b182
+                        Position: {X: 0.0, Y: 1.78, Z: -0.08}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.4, Y: 0.4, Z: 0.4}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 6e8d25c8-8069-4b70-a171-1cac5c31aec2
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: 2e7169b7-b476-4f11-91f9-4c201c3fdc70
+                        controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
+                        "inmunidadExplosión": true
+                        multiplicador: 1.0
+        -   Entity:
+                Id: 5984df18-147f-4744-a394-935be627a03e
+                Name: OjoDer
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: 4e6da196-1aa1-42a0-83c7-b592514232ef
+                        Position: {X: -0.5, Y: 1.7, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Folder: null
+            Entity:
+                Id: 6d0df423-bedc-475f-8137-03c269c5ac52
+                Name: "Dañable cola"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: b9304e97-1cb5-4620-a474-977619588ae6
+                        Position: {X: 0.0, Y: 0.25, Z: -1.2}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.5, Z: 1.3}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 542a3a24-2b94-4dd7-a4ee-782c88e45c9a
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: a01bcb72-8d8a-41a1-9b46-ce60a7c6550d
+                        controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
+                        "inmunidadExplosión": true
+                        multiplicador: 0.8
+        -   Folder: null
+            Entity:
+                Id: 73aee6e0-093b-4df6-b7c3-eee1eb1d5c61
+                Name: Modelo
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: 713e1b7d-f71c-4e42-8a80-6b226356d591
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: 4c4cba65-7576-43a9-8e06-ed3870fa32f5
+                        Model: e5264c9f-ce07-44c3-804e-cfe48eae8f2a:Modelos/Enemigos/Babosa/Babosa
+                        Materials: {}
+        -   Entity:
+                Id: 9c01c5c5-5d3a-405c-b244-2393c762057f
+                Name: Babosa
+                Components:
+                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
+                        Id: d9fa1da2-7240-4ae3-9567-ef09b833eff5
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        StepHeight: 0.25
+                        FallSpeed: 20.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 6.0
+                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
+                        ColliderShapes:
+                            ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
+                                Length: 0.4
+                                Radius: 0.8
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: -0.4}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
+                        Id: 3dc877d1-da43-40f0-aaca-7c9dddb592cb
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
+                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
+                        Id: cd28d72d-5f8c-491b-a1bd-6e576c59b87e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f14eafd2887605601cb783e4e612d427: ref!! 27cd1275-4e3c-492c-9117-680900c77b93
+                            7b2b17de96d9e06c33d811d00c284814: ref!! 981f9228-bcc6-4442-89b4-e15da243d96c
+                            6c449980db9daada232188b4e54fef7b: ref!! 4e6da196-1aa1-42a0-83c7-b592514232ef
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 713e1b7d-f71c-4e42-8a80-6b226356d591
+                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! 34ccecee-8594-4129-974a-843b0c2fba9b
+                    7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
+                        Id: 56c9107d-eaae-434c-96ea-6d9d41abbeac
+                        enemigo: rangoMediano
+                        "armaMelé": null
+                        armaRango: ref!! d7fc863f-43cd-4879-a47f-ea890762fdc2
+                        cuerpos:
+                            ad5f371af09d736586a420c788f25eaf: ref!! 6e8d25c8-8069-4b70-a171-1cac5c31aec2
+                            c2378b917991e66dd5fc2100c4bf353e: ref!! 54a6621f-226c-47bb-9bda-5a99903411b2
+                            74fde528525905834da10484cd45023e: ref!! fcaa9200-384e-431c-8afa-1d5e4c93c294
+                            c720f42f0d9e10f8ea94ae0935c9bc34: ref!! 542a3a24-2b94-4dd7-a4ee-782c88e45c9a
+                    33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
+                        Id: 9cb8a6d0-7ffb-442d-9c71-0584b6ebc293
+                        ojos:
+                            a155963e307498a8bb9d2076aed1db20: ref!! 4e6da196-1aa1-42a0-83c7-b592514232ef
+                            c2532f61544fea6a8da111d60b332666: ref!! 981f9228-bcc6-4442-89b4-e15da243d96c
+                    a1ce091ce9222f61cea38175f0566423: !Voronomir.AnimadorBabosa,Voronomir.Proyecto
+                        Id: d664d70d-922d-4bc2-a36b-a9248faf0b96
+                        modelo: ref!! 713e1b7d-f71c-4e42-8a80-6b226356d591
+        -   Entity:
+                Id: 9f545b3c-2af1-461f-91fd-64ab709d1b5c
+                Name: OjoIzq
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: 981f9228-bcc6-4442-89b4-e15da243d96c
+                        Position: {X: 0.5, Y: 1.7, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Folder: null
+            Entity:
+                Id: b18829c4-26fb-4449-a8dd-89df2409a40c
+                Name: ArmaRango
+                Components:
+                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
+                        Id: 34ccecee-8594-4129-974a-843b0c2fba9b
+                        Position: {X: 0.0, Y: 0.78, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 2.0}
+                        Children: {}
+                    c2755b36878a560282a863adea320430: !Voronomir.ControladorArmaRango,Voronomir.Proyecto
+                        Id: d7fc863f-43cd-4879-a47f-ea890762fdc2
+        -   Folder: null
+            Entity:
+                Id: cbb09c9d-4595-4383-b865-2b7620927711
+                Name: "Dañable cuerpo 1"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 0140fde5-d500-4f7c-ae52-6df913e6c508
+                        Position: {X: 0.0, Y: 0.525, Z: -0.07}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.4, Y: 1.05, Z: 0.8}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: fcaa9200-384e-431c-8afa-1d5e4c93c294
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: abbbe5fc-5902-41a2-9a3f-843d1219fa51
+                        controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
+                        "inmunidadExplosión": false
+                        multiplicador: 0.9
+        -   Folder: null
+            Entity:
+                Id: e63c757b-c488-4319-a429-bbd95c377b2e
+                Name: "Dañable cuerpo 0"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 4b23c0fe-22ad-47b7-b100-d0e20ea32e5c
+                        Position: {X: 0.0, Y: 1.31, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.8, Y: 0.5, Z: 0.6}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 54a6621f-226c-47bb-9bda-5a99903411b2
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: 069be702-aeca-45f6-99d0-a4498c440bd3
+                        controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
+                        "inmunidadExplosión": true
+                        multiplicador: 0.9

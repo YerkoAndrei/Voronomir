@@ -1,0 +1,75 @@
+!PrefabAsset
+Id: 4e523c66-cad9-49d9-8baf-b22243566c31
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! bae73870-af2e-47f5-a745-a2709d6c0e07
+    Parts:
+        -   Entity:
+                Id: 69f58330-8b02-40c0-8bc2-be3999f2a0c7
+                Name: Modelo
+                Components:
+                    4434603cbafdaa05f2732041b413b98b: !TransformComponent
+                        Id: 2175c9d1-17a3-4daa-9242-8f24e7736e99
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.4, Y: 0.4, Z: 0.4}
+                        Children: {}
+                    79c97683a9b44b1d2aa39475a8794065: !ModelComponent
+                        Id: eb71238a-255c-40a5-8764-29f4756f08c6
+                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Proyectiles/Cilindro/Cilindro
+                        Materials:
+                            a3f6ad4041a4b67179cea1539445e7cf~0: 6cc33e1e-db8b-4674-a9cb-cd74193afd64:Materiales/Veneno
+        -   Entity:
+                Id: 86d7594e-a646-4f48-b770-da51d79c7422
+                Name: Cola
+                Components:
+                    4434603cbafdaa05f2732041b413b98b: !TransformComponent
+                        Id: a56d924e-9f03-4dc3-888a-1e111c15c24e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.8}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
+                Id: bae73870-af2e-47f5-a745-a2709d6c0e07
+                Name: "ProyectilAraña"
+                Components:
+                    32b1f75000d0962d38db272c3c9501f1: !RigidbodyComponent
+                        Id: 5d68bbaf-fb05-461b-8bd1-e42f83bc8c1e
+                        Enabled: false
+                        CollisionGroup: CustomFilter1
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: -1.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            53ccf4e4443413d37984cd184ebc6033: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.15, Y: 0.15, Z: 0.4}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.2}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    15bec10d30d73bc28a393fa9974edf68: !TransformComponent
+                        Id: 0b9a42c7-3820-4dc3-a1a8-a7a21b36f2d6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            0b335534c64dd0779773c5269e18e1da: ref!! 2175c9d1-17a3-4daa-9242-8f24e7736e99
+                            be27b1076021f3295f61c2d4c2f01f1d: ref!! a56d924e-9f03-4dc3-888a-1e111c15c24e
+                    449ebeeb02b58b0c3a84ceebf03c07d2: !Voronomir.ElementoProyectilSimple,Voronomir.Proyecto
+                        Id: 8b43936a-f16a-4661-9d1c-bd482e28e0b5
+                        modelo: ref!! eb71238a-255c-40a5-8764-29f4756f08c6
+                        cola: ref!! a56d924e-9f03-4dc3-888a-1e111c15c24e
+                        "partícula": null

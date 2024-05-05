@@ -1,0 +1,150 @@
+!SceneAsset
+Id: 5b37a5d0-1466-42dc-9341-692a97726971
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 3f51d6fe-263b-4673-b6c6-809f7c828ebd
+        - ref!! 46c7fdfe-9f29-4fde-be2f-ea04da13a001
+        - ref!! 1cb13506-b31a-43e2-a5be-a8ba28047d45
+        - ref!! 92837f4b-7a8a-49e3-9218-749c0c7c0cad
+        - ref!! 3de971ab-4788-4d1f-9845-5e7bfde8fc6c
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 1cb13506-b31a-43e2-a5be-a8ba28047d45
+                Name: SistemaSonidos
+                Components:
+                    a5c2652683d403350b22306273eb4e9a: !TransformComponent
+                        Id: f1255148-816f-486b-a207-a18690eca191
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    57ffb4e631355b8c92d59e397913898b: !Voronomir.SistemaSonidos,Voronomir.Proyecto
+                        Id: f996b8f6-c2cc-405c-a06e-efda17240c69
+                        Priority: 2
+                        "sonidoBotónEntra": 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        "sonidoBotónSale": 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        "sonidoBotón": 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoLlave: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoPuerta: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoCerrado: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoSecreto: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoSaltador: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        "sonidoDaño": 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoSalto: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoMorir: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoFinalizar: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoEspada: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoEscopeta: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoMetralleta: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoRifle: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoLanzagranadas: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        "sonidoPoderDaño": 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoPoderInvulnerabilidad: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+                        sonidoPoderVelocidad: 3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/prueba
+        -   Folder: null
+            Entity:
+                Id: 3de971ab-4788-4d1f-9845-5e7bfde8fc6c
+                Name: SistemaEscenas
+                Components:
+                    a5c2652683d403350b22306273eb4e9a: !TransformComponent
+                        Id: b8a90606-c621-4b53-b7aa-b329b3ec450a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            41346df47bd90273b1a4fd9b35c90d63: ref!! b291b176-1ea8-4be9-b6dc-99c9660ca4b8
+                    b87e4e66fa2811191dcd016271e1728d: !Voronomir.SistemaEscenas,Voronomir.Proyecto
+                        Id: 96903a2a-e245-43e8-9b6e-08fe6696783a
+                        Priority: 4
+                        "escenaMenú": "96aa054d-54af-441d-ace7-62be2c4ea9fd:Escenas/Menú"
+                        escenaDemo: d96f9ef1-9ebb-4fd3-a140-1cacde38458e:Escenas/Demo
+                        compositorBajo: null
+                        compositorMedio: null
+                        compositorAlto: null
+                    07702f8ed2638a99dbc80e83c0e49883: !UIComponent
+                        Id: ed2e1c72-019f-402e-b24b-5033cf5fd0d5
+                        Page: 332c8334-a4ec-41e0-9ce9-f970181eaade:Interfaz/Sistema
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                        ResolutionStretch: FixedHeightAdaptableWidth
+                        RenderGroup: Group31
+        -   Entity:
+                Id: 3f51d6fe-263b-4673-b6c6-809f7c828ebd
+                Name: SistemaMemoria
+                Components:
+                    a5c2652683d403350b22306273eb4e9a: !TransformComponent
+                        Id: dc6421fa-9d24-414a-b4da-cd50ed360a54
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1a2f0278c070fbe68d1a41626502d394: !Voronomir.SistemaMemoria,Voronomir.Proyecto
+                        Id: a2c1e958-c442-4c9e-bacc-bf1742c32325
+        -   Folder: null
+            Entity:
+                Id: 46c7fdfe-9f29-4fde-be2f-ea04da13a001
+                Name: "SistemaAnimación"
+                Components:
+                    a5c2652683d403350b22306273eb4e9a: !TransformComponent
+                        Id: 1f103c66-dd12-4acf-ae12-c306b1cc03c5
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    adc7023ce2c974cf56472b2d3cbf0847: !Voronomir.SistemaAnimaci%25C3%25B3n,Voronomir.Proyecto
+                        Id: 69e8d777-93cd-478c-b632-fa568d0159b4
+                        Priority: 1
+                        "curvaRápida": !ComputeCurveSamplerFloat
+                            Curve: !ComputeAnimationCurveFloat
+                                KeyFrames:
+                                    4121cdf7e21b56ee89b5d3dd34700e5f:
+                                        Key: 0.0
+                                        Value: 0.0
+                                        TangentType: Linear
+                                    0473a839093ea0c65f25080f59dac157:
+                                        Key: 0.6
+                                        Value: 0.9
+                                        TangentType: Linear
+                                    09b11f0ad22e4d0453918a298a8e293f:
+                                        Key: 1.0
+                                        Value: 1.0
+                                        TangentType: Linear
+        -   Folder: null
+            Entity:
+                Id: 92837f4b-7a8a-49e3-9218-749c0c7c0cad
+                Name: "SistemaTraducción"
+                Components:
+                    a5c2652683d403350b22306273eb4e9a: !TransformComponent
+                        Id: 3b7adc4c-3979-451a-bb14-8db370da84e3
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74df27f190b8dbdcac02e613682d5d88: !Voronomir.SistemaTraducci%25C3%25B3n,Voronomir.Proyecto
+                        Id: 1f3991f5-e598-4785-b4d6-a93b177455c4
+                        Priority: 3
+                        "textosEspañol": "302f6bd6-251a-4f65-b982-98fa94597caa:Textos/TextosEspañol"
+                        "textosInglés": "adb9b7ae-d3e7-482a-a5a2-47e5f402d77a:Textos/TextosInglés"
+        -   Entity:
+                Id: d41ce776-06b8-4938-8878-328440e25809
+                Name: "CámaraSobretodo"
+                Components:
+                    98588b6aaaeb13d7465dfc96fe4ebb6e: !TransformComponent
+                        Id: b291b176-1ea8-4be9-b6dc-99c9660ca4b8
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e837126f9c4b0fdba90d523ac4d1fff7: !CameraComponent
+                        Id: 2d50a49b-56a5-4f9b-be7d-c767635584a2
+                        Name: null
+                        Projection: Orthographic
+                        OrthographicSize: 1.0
+                        NearClipPlane: 0.0
+                        FarClipPlane: 0.1
+                        Slot: f0ce8336-0b02-49c3-9edf-6ca71a524f64

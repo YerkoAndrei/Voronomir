@@ -1,0 +1,40 @@
+{
+  "nombreJuego": "Voronomir",
+
+  "jugar": "Play",
+  "reanudar": "Resume",
+  "reiniciar": "Restart",
+  "cancelar": "Cancel",
+  "volver": "Back",
+  "salir": "Exit",
+  "pausa": "Pause",
+  "opciones": "Options",
+  "sí": "Yes",
+  "no": "No",
+
+  "idioma": "Languaje",
+  "gráficos": "Graphics",
+  "sonidos": "Sounds",
+  "red": "Network",
+  "calidad": "Quality",
+  "sombras": "Shadows",
+  "vSync": "v Sync",
+  "pantallaCompleta": "Fullscreen",
+  "resolución": "Resolution",
+  "reinicio": "(Requires restart)",
+  "volumenGeneral": "General volume",
+  "volumenMúsica": "Music volume",
+  "volumenEfectos": "Effects volume",
+
+  "azul": "Blue key",
+  "roja": "Red key",
+
+  "necesita": "Needs",
+  "activaciones": "more to go",
+  "puertaCerrada": "Door Closed",
+  "puertaAbierta": "Door Open",
+  "secreto": "Secret revealed",
+  "poderDaño": "Triple Damage",
+  "poderInvulnerabilidad": "Invulnerability",
+  "poderVelocidad": "Velocity"
+}
