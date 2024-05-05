@@ -7,9 +7,52 @@ Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
         - ref!! 1d10ba6a-b7e9-4c1e-b4b4-4ad331cb5dab
-        - ref!! be667d8c-7eba-46db-b617-c4e63e53fe13
+        - ref!! 7ea4c980-7567-4efd-a10c-687f8bf4cc46
+        - ref!! 46c159ca-7f3d-45e8-8241-728e6f69d604
+        - ref!! e100fb71-cf1a-4222-b929-4c7545c998df
+        - ref!! 67c59d48-6d0d-4438-8410-f1f5bfd87029
+        - ref!! b9461758-446e-4d95-a9e9-79ac6dfb14b6
+        - ref!! 8d5aa17f-6acf-4e5b-b6bc-e35375cc0fbe
+        - ref!! 1a028761-0e76-4237-8ce7-eeb3171d0128
+        - ref!! 7ffb0423-29be-431c-b50b-2fbfa5441767
         - ref!! a85530a3-8e0e-41cf-9e02-3a6d407082fd
+        - ref!! 5cae0776-85e8-46de-88f4-94eb1cfa814b
+        - ref!! 583a3938-5c8f-4ffb-b075-771484abcf3f
+        - ref!! b4a16ea9-b8c5-4074-b3df-48f4dd2655b7
     Parts:
+        -   Folder: Entorno
+            Entity:
+                Id: 1a028761-0e76-4237-8ce7-eeb3171d0128
+                Name: Pared
+                Components:
+                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
+                        Id: 006d527d-db1b-4eeb-b412-237a7ca6a92b
+                        Position: {X: 5.0, Y: -1.1222115E-06, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 2.5, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
+                        Id: 079edb75-b405-43e1-8a93-43b7db3f03eb
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
+                        Id: 8a0524b4-2f4d-486c-a1d0-1a306d0ef549
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        IsShadowCaster: false
+                        Materials: {}
         -   Entity:
                 Id: 1d10ba6a-b7e9-4c1e-b4b4-4ad331cb5dab
                 Name: "Menú"
@@ -31,6 +74,156 @@ Hierarchy:
                         RenderGroup: Group30
         -   Folder: Entorno
             Entity:
+                Id: 46c159ca-7f3d-45e8-8241-728e6f69d604
+                Name: Luz direccional
+                Components:
+                    e35a58dffbc4aadd5823f57ed881d54d: !TransformComponent
+                        Id: 14949534-25fa-451f-83a1-f0bfcdc70199
+                        Position: {X: 0.0, Y: 5.0, Z: 0.0}
+                        Rotation: {X: -3.774895E-08, Y: -0.8660254, Z: -0.5, W: 6.53831E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    34c340859588b2f35c268a68055cc5d9: !LightComponent
+                        Id: b46249b7-0258-48f5-ab91-99884700ff84
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.39215687, G: 0.3137255, B: 0.3137255}
+                            Shadow: !LightDirectionalShadowMap
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter7x7
+                                Size: XLarge
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Folder: null
+            Entity:
+                Id: 583a3938-5c8f-4ffb-b075-771484abcf3f
+                Name: Zombi 1
+                Components:
+                    149deb349cd3470a0dda2638c195a7a5: !TransformComponent
+                        Id: 062865f8-536e-4fb9-ad3c-ad511c2ba8c0
+                        Position: {X: -0.5, Y: 0.1, Z: 0.5}
+                        Rotation: {X: -0.35355335, Y: 0.61237246, Z: 0.61237246, W: 0.35355335}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    500f5e93b4f180476bb60b7b31db4869: !ModelComponent
+                        Id: f8a0f34d-615d-48b3-9276-349ab933559f
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
+                        Materials: {}
+        -   Entity:
+                Id: 5cae0776-85e8-46de-88f4-94eb1cfa814b
+                Name: Zombi 0
+                Components:
+                    149deb349cd3470a0dda2638c195a7a5: !TransformComponent
+                        Id: 8cb841dd-75a3-493e-862f-b4b36f5092f9
+                        Position: {X: 0.0, Y: 0.1, Z: -0.5}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    500f5e93b4f180476bb60b7b31db4869: !ModelComponent
+                        Id: acb4ca05-1e36-4695-a9eb-2676845e5119
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
+                        Materials: {}
+        -   Folder: Entorno
+            Entity:
+                Id: 67c59d48-6d0d-4438-8410-f1f5bfd87029
+                Name: Pared
+                Components:
+                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
+                        Id: 16303cb1-83f6-48a8-bd4e-e7c339cd413f
+                        Position: {X: 0.0, Y: -1.1222115E-06, Z: -5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.5, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
+                        Id: 2c889a09-ee60-4701-b783-97d63e4c9bc8
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
+                        Id: 13fc660f-c1cc-4f3a-a6e9-f26c4c6bad6f
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Folder: Entorno
+            Entity:
+                Id: 7ea4c980-7567-4efd-a10c-687f8bf4cc46
+                Name: Luz ambiental
+                Components:
+                    32ab1d170fea034338f8662484dcb61d: !TransformComponent
+                        Id: 14a73cb4-5be1-4697-8ce2-0abfa3a93830
+                        Position: {X: 0.0, Y: 5.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    090ebbbb69374cc8bcdad33561b73bac: !LightComponent
+                        Id: 710028f1-c7b9-43c2-9b04-86dc9b63cdbe
+                        Type: !LightAmbient
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.39215687, G: 0.3137255, B: 0.3137255}
+        -   Entity:
+                Id: 7ffb0423-29be-431c-b50b-2fbfa5441767
+                Name: Rotador
+                Components:
+                    a12c72a0bb1237bef21be12f415f6ff2: !TransformComponent
+                        Id: 11582bc7-46ca-4c86-bb3d-309917e32996
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            9d2c850dde1bf18fc5ac1e4e640fe34e: ref!! 49a47ee1-2699-4531-aad3-8b6c1df1b1a9
+                    912dd9027d285f1103445f326cffeb38: !Bozobaralika.Rotador,Bozobaralika.Proyecto
+                        Id: 26358e1a-59f8-4f9b-9dea-5c7495a1401d
+                        "ánguloY": 0.05
+        -   Folder: Entorno
+            Entity:
+                Id: 8d5aa17f-6acf-4e5b-b6bc-e35375cc0fbe
+                Name: Pared
+                Components:
+                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
+                        Id: a72eb0d5-915c-4965-a563-f1f1a29db0d1
+                        Position: {X: -5.0, Y: -1.1222115E-06, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 2.5, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
+                        Id: ecd72930-2876-4ce0-895a-033a81737998
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
+                        Id: 4d4bf350-79ae-478c-81cd-2a6cced2688f
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Entity:
                 Id: a85530a3-8e0e-41cf-9e02-3a6d407082fd
                 Name: Geroi
                 Components:
@@ -44,19 +237,100 @@ Hierarchy:
                         Id: e372b488-76d2-4bdb-b1ef-aff7584cf1bd
                         Model: 53769a50-21f0-4a6e-a207-518d4b9bbf96:Modelos/Jugador/Geroi
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: b4a16ea9-b8c5-4074-b3df-48f4dd2655b7
+                Name: Zombi 2
+                Components:
+                    149deb349cd3470a0dda2638c195a7a5: !TransformComponent
+                        Id: 298bdeaf-f572-4d44-9888-e42ef8aeba44
+                        Position: {X: 0.5, Y: 0.1, Z: 0.5}
+                        Rotation: {X: -0.35355335, Y: -0.61237246, Z: -0.61237246, W: 0.35355335}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    500f5e93b4f180476bb60b7b31db4869: !ModelComponent
+                        Id: 1a5a8689-434f-4d73-8e73-eda152dbca2a
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
+                        Materials: {}
+        -   Folder: Entorno
+            Entity:
+                Id: b9461758-446e-4d95-a9e9-79ac6dfb14b6
+                Name: Pared
+                Components:
+                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
+                        Id: 1eef9451-9536-42e9-94b7-70869044e6f3
+                        Position: {X: 0.0, Y: -1.1222115E-06, Z: 5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.5, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
+                        Id: f83571e8-ad37-4e40-a470-bf78e563e155
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
+                        Id: 85e348cc-b9d7-4c31-be4f-349cc196d033
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        IsShadowCaster: false
+                        Materials: {}
         -   Entity:
                 Id: be667d8c-7eba-46db-b617-c4e63e53fe13
                 Name: "Cámara"
                 Components:
                     f54f70abed89338ea151d8f78a56a82d: !TransformComponent
                         Id: 49a47ee1-2699-4531-aad3-8b6c1df1b1a9
-                        Position: {X: 0.0, Y: 1.3, Z: 2.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: 0.0, Y: 1.4, Z: 2.0}
+                        Rotation: {X: -0.034899496, Y: 0.0, Z: 0.0, W: 0.99939084}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     f16251ac079005852047045a87cacca5: !CameraComponent
                         Id: 23bf7f96-84c6-48c4-af5d-4b83b8e0cccd
                         Name: null
                         Projection: Perspective
-                        FarClipPlane: 100.0
+                        FarClipPlane: 10.0
                         Slot: 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
+        -   Folder: Entorno
+            Entity:
+                Id: e100fb71-cf1a-4222-b929-4c7545c998df
+                Name: Piso
+                Components:
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: b859bcf4-224d-43d3-a4f2-952e7b6ae1af
+                        Position: {X: 0.0, Y: -0.1, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 10.0, Y: 0.1, Z: 10.0}
+                        Children: {}
+                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
+                        Id: 46d47a85-dcfa-4110-af82-ed8dec4a8f56
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: 53df197c-4d45-4d1e-824a-040eb598683e
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
+                        Materials:
+                            20ea19b545ed568ea3e84fb5ecb8d169~0: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Piso

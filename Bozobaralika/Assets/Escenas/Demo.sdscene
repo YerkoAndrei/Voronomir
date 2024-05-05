@@ -1994,7 +1994,7 @@ Hierarchy:
         -   Folder: "EntornoEstático"
             Entity:
                 Id: 52cd02bd-3165-4aa6-8d1e-7538541119a3
-                Name: Skybox
+                Name: Cielo
                 Components:
                     32ab1d170fea034338f8662484dcb61d: !TransformComponent
                         Id: 1835d3ca-0136-4b92-b18f-94d4046d208c
@@ -5413,7 +5413,7 @@ Hierarchy:
         -   Folder: "EntornoEstático"
             Entity:
                 Id: dca75c2f-3874-4e83-9565-15c148fa0401
-                Name: Directional light
+                Name: Luz direccional
                 Components:
                     e35a58dffbc4aadd5823f57ed881d54d: !TransformComponent
                         Id: 8578baa7-5062-4910-a926-cef5af77092b
@@ -5425,7 +5425,7 @@ Hierarchy:
                         Id: 7765bd79-f781-43cf-a9c2-f4115c744cbb
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
-                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                                Value: {R: 1.0, G: 1.0, B: 0.98039216}
                             Shadow: !LightDirectionalShadowMap
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf

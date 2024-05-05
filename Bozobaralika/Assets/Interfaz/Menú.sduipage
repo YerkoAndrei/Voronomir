@@ -483,7 +483,7 @@ Hierarchy:
                 Id: 4fecb162-c19a-4549-bcd7-686b483647a1
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 100.0
+                Height: 95.0
                 VerticalAlignment: Top
                 Margin: {Top: 80.0}
                 MaximumWidth: 3.4028235E+38
@@ -1247,6 +1247,22 @@ Hierarchy:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
                 BasePartId: a29521e8-6f92-4f9f-8eba-01caf0bc8d53
                 InstanceId: 53dff2cf-a8ac-495e-a440-19b40c69a6f8
+        -   UIElement: !ImageElement
+                Id: fcf83c41-2bde-4ded-9ec3-aeb251822526
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 95.0
+                VerticalAlignment: Top
+                Margin: {Top: 80.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Deco
+                Source: !SpriteFromTexture
+                    Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 200, G: 0, B: 0, A: 255}
+                StretchType: Fill
         -   UIElement: !Grid
                 Id: fd65042a-08c0-4046-980a-f35738e8e5ec
                 DependencyProperties: {}
@@ -1256,7 +1272,8 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Children:
-                    ea5fb224503f1df1e0b6bcc1a88c0abe: !TextBlock ref!! 4fecb162-c19a-4549-bcd7-686b483647a1
+                    08310940e33ec8d7a58394158ffd88d4: !ImageElement ref!! fcf83c41-2bde-4ded-9ec3-aeb251822526
+                    04621074ec222c62baa1c9efd4b27837: !TextBlock ref!! 4fecb162-c19a-4549-bcd7-686b483647a1
                     38f43a1f642f56519fb186078d6026c0: !UniformGrid ref!! 35a2558b-c39d-418d-90d3-216d8bfffe32
                 RowDefinitions: {}
                 ColumnDefinitions: {}
