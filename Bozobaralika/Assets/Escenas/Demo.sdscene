@@ -2706,7 +2706,7 @@ Hierarchy:
                 Components:
                     730f03d56d03fadcfabc65f8428cb4f3: !TransformComponent
                         Id: 7046bb6f-7b1b-456b-b63f-22d98246e8e6
-                        Position: {X: 0.0, Y: 1.0, Z: -2.5}
+                        Position: {X: 0.0, Y: 1.0, Z: -0.25}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -2715,7 +2715,7 @@ Hierarchy:
                         Type: !LightPoint
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 0.78431374}
-                            Radius: 3.0
+                            Radius: 4.0
                             Shadow: !LightPointShadowMap
                                 Size: Small
                                 BiasParameters: {}
