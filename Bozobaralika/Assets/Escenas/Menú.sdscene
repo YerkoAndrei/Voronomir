@@ -87,7 +87,7 @@ Hierarchy:
                         Id: b46249b7-0258-48f5-ab91-99884700ff84
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
-                                Value: {R: 0.39215687, G: 0.3137255, B: 0.3137255}
+                                Value: {R: 0.23529412, G: 0.15686275, B: 0.15686275}
                             Shadow: !LightDirectionalShadowMap
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf
@@ -175,7 +175,7 @@ Hierarchy:
                         Id: 710028f1-c7b9-43c2-9b04-86dc9b63cdbe
                         Type: !LightAmbient
                             Color: !ColorRgbProvider
-                                Value: {R: 0.39215687, G: 0.3137255, B: 0.3137255}
+                                Value: {R: 0.23529412, G: 0.15686275, B: 0.15686275}
         -   Entity:
                 Id: 7ffb0423-29be-431c-b50b-2fbfa5441767
                 Name: Rotador
