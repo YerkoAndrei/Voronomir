@@ -18,6 +18,7 @@ public class SistemaTraducción : StartupScript
     private static string jsonInglés;
 
     public static Idiomas idioma;
+    public static CultureInfo cultura;
     private static Dictionary<string, string> diccionario;
 
     public UrlReference textosEspañol;
@@ -73,9 +74,11 @@ public class SistemaTraducción : StartupScript
         {
             default:
             case Idiomas.español:
+                cultura = CultureInfo.GetCultureInfo("es-cl");
                 diccionario = CrearDiccionario(jsonEspañol);
                 break;
             case Idiomas.inglés:
+                cultura = CultureInfo.GetCultureInfo("en");
                 diccionario = CrearDiccionario(jsonInglés);
                 break;
         }

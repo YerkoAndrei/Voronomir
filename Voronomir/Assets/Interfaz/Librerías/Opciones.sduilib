@@ -49,6 +49,7 @@ Hierarchy:
                 DependencyProperties:
                     d154ef60d384db5030f170f1d25aaf62~Panel.ZIndexPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
                 Width: 200.0
                 Height: 260.0
                 HorizontalAlignment: Left
@@ -2233,8 +2234,7 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 800.0
                 Height: 50.0
-                VerticalAlignment: Top
-                Margin: {Top: 180.0}
+                Margin: {Bottom: 320.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -3221,8 +3221,8 @@ Hierarchy:
                 Width*: 200.0
                 Height*: 50.0
                 HorizontalAlignment*: Stretch
-                VerticalAlignment*: Bottom
-                Margin*: {Bottom: 120.0}
+                VerticalAlignment*: Stretch
+                Margin*: {Top: 420.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -4743,8 +4743,7 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 800.0
                 Height: 35.0
-                VerticalAlignment: Top
-                Margin: {Top: 125.0}
+                Margin: {Bottom: 440.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -5093,14 +5092,14 @@ Hierarchy:
                     d042c34905fe182236af1c2395beafdb~GridBase.ColumnPropertyKey: 0
                     4349175ee22a5cbd1e0b75a7ae605c6a~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 400.0
+                Width: 60.0
                 Height: 20.0
                 Margin: {Left: 500.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtSensibilidadActual
-                Text: 0.0
+                Text: 0.00
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
@@ -5704,14 +5703,14 @@ Hierarchy:
                     d042c34905fe182236af1c2395beafdb~GridBase.ColumnPropertyKey: 0
                     4349175ee22a5cbd1e0b75a7ae605c6a~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 400.0
+                Width: 60.0
                 Height: 20.0
                 Margin: {Left: 500.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: "txtCampoVisiónActual"
-                Text: 0.0
+                Text: 000
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
@@ -6204,7 +6203,7 @@ Hierarchy:
                     b5747a18e84917d590e33efd1413ab61~Panel.ZIndexPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 CanBeHitByUser: true
-                Width: 212.0
+                Width: 200.0
                 Height: 400.0
                 HorizontalAlignment: Left
                 Margin: {}
@@ -6448,7 +6447,10 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 200}
                 DrawLayerNumber: 2
                 Margin: {}
-                Name: PanelOscuro
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: PanelOscuroOpciones
         -   UIElement: !ImageElement
                 Id: e8b59bf8-9047-49c0-a0f2-fdf15eac07a9
                 DependencyProperties: {}
@@ -6477,7 +6479,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: SliderSensibilidad
                 Value: 1.0
-                Minimum: 0.5
+                Minimum: 0.1
                 Maximum: 2.0
                 TrackBackgroundImage: !SpriteFromTexture
                     Texture: 41a626cf-5002-40ad-b98b-7f2d038bf279:Texturas/Interfaz/Slider/Claro

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
+using System.Globalization;
 using Stride.UI;
 using Stride.Engine;
 using Stride.UI.Controls;
 using Stride.UI.Panels;
-using System.Globalization;
 using Stride.UI.Events;
 
 namespace Voronomir;
@@ -32,10 +32,9 @@ public class InterfazOpciones : StartupScript
         // Botones y deslisadores
         página = Entity.Get<UIComponent>().Page.RootElement;
         Opciones = página.FindVisualChildOfType<Grid>("Opciones");
-        Opciones.Visibility = Visibility.Hidden;
         animOpciones = página.FindVisualChildOfType<Grid>("animOpciones");
 
-        ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuro"), EnClicVolver);
+        ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuroOpciones"), EnClicVolver);
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("btnPanel"), () => MostrarResoluciones(false));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicVolver);
 
@@ -252,10 +251,11 @@ public class InterfazOpciones : StartupScript
 
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.sensibilidad, slider.Value.ToString("n2", CultureInfo.InvariantCulture));
-        txtSensibilidadActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad);
+
+        var sensibilidadFormateada = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad), SistemaTraducción.cultura);
+        txtSensibilidadActual.Text = sensibilidadFormateada.ToString();
         MostrarResoluciones(false);
     }
-
 
     private void ConfigurarCampoVisión(object sender, RoutedEventArgs e)
     {
@@ -358,8 +358,7 @@ public class InterfazOpciones : StartupScript
         MostrarResoluciones(false);
 
         DesbloquearBotonesResolución();
-        BloquearBotón(página.FindVisualChildOfType<Grid>(botón), true);
-        
+        BloquearBotón(página.FindVisualChildOfType<Grid>(botón), true);        
     }
 
     private void ActualizarResolución(int ancho, int alto)
@@ -490,7 +489,7 @@ public class InterfazOpciones : StartupScript
 
         animando = true;
         resoluciones.Visibility = Visibility.Hidden;
-        SistemaAnimación.AnimarElemento(animOpciones, 0.2f, false, Direcciones.abajo, TipoCurva.rápida, () =>
+        SistemaAnimación.AnimarElemento(animOpciones, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
         {
             Opciones.Visibility = Visibility.Hidden;
             animando = false;
