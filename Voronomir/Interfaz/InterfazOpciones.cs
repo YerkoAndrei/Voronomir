@@ -45,7 +45,10 @@ public class InterfazOpciones : StartupScript
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnEspañol"), () => EnClicIdioma(Idiomas.español));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnInglés"), () => EnClicIdioma(Idiomas.inglés));
-        
+
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDatosSí"), () => EnClicDatos(true));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDatosNo"), () => EnClicDatos(false));
+
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosBajos"), () => EnClicGráficos(NivelesConfiguración.bajo));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosMedios"), () => EnClicGráficos(NivelesConfiguración.medio));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosAltos"), () => EnClicGráficos(NivelesConfiguración.alto));
@@ -59,9 +62,6 @@ public class InterfazOpciones : StartupScript
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnCompleta"), () => EnClicPantallaCompleta(true));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVentana"), () => EnClicPantallaCompleta(false));
-
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDatosSí"), () => EnClicDatos(true));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDatosNo"), () => EnClicDatos(false));
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnResoluciones"), () => MostrarResoluciones(true));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR0"), () => EnClicResolución(960, 540, "btnR0"));
@@ -127,6 +127,7 @@ public class InterfazOpciones : StartupScript
         var sliderGeneral = página.FindVisualChildOfType<Slider>("SliderGeneral");
         var sliderMúsica = página.FindVisualChildOfType<Slider>("SliderMúsica");
         var sliderEfectos = página.FindVisualChildOfType<Slider>("SliderEfectos");
+
         var sliderSensibilidad = página.FindVisualChildOfType<Slider>("SliderSensibilidad");
         var sliderCampoVisión = página.FindVisualChildOfType<Slider>("SliderCampoVisión");
         
@@ -163,16 +164,6 @@ public class InterfazOpciones : StartupScript
         // Actualiza gráficos
         //ActualizaGráficos((NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
         //ActualizaSombras();
-    }
-
-    private void EnClicIdioma(Idiomas idioma)
-    {
-        if (animando)
-            return;
-
-        SistemaTraducción.CambiarIdioma(idioma);
-        BloquearIdioma(idioma);
-        MostrarResoluciones(false);
     }
 
     private void EnClicPestaña(string pestaña)
@@ -212,13 +203,23 @@ public class InterfazOpciones : StartupScript
         }
     }
 
+    private void EnClicIdioma(Idiomas idioma)
+    {
+        if (animando)
+            return;
+
+        SistemaTraducción.CambiarIdioma(idioma);
+        BloquearIdioma(idioma);
+        MostrarResoluciones(false);
+    }
+
     private void ConfigurarVolumenGeneral(object sender, RoutedEventArgs e)
     {
         if (animando)
             return;
 
         var slider = (Slider)sender;
-        SistemaMemoria.GuardarConfiguración(Configuraciones.volumenGeneral, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
+        SistemaMemoria.GuardarConfiguración(Configuraciones.volumenGeneral, slider.Value.ToString("n2", CultureInfo.InvariantCulture));
         MostrarResoluciones(false);
         SistemaSonidos.ActualizarVolumenMúsica();
     }
@@ -229,7 +230,7 @@ public class InterfazOpciones : StartupScript
             return;
 
         var slider = (Slider)sender;
-        SistemaMemoria.GuardarConfiguración(Configuraciones.volumenMúsica, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
+        SistemaMemoria.GuardarConfiguración(Configuraciones.volumenMúsica, slider.Value.ToString("n2", CultureInfo.InvariantCulture));
         MostrarResoluciones(false);
         SistemaSonidos.ActualizarVolumenMúsica();
     }
@@ -240,7 +241,7 @@ public class InterfazOpciones : StartupScript
             return;
 
         var slider = (Slider)sender;
-        SistemaMemoria.GuardarConfiguración(Configuraciones.volumenEfectos, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
+        SistemaMemoria.GuardarConfiguración(Configuraciones.volumenEfectos, slider.Value.ToString("n2", CultureInfo.InvariantCulture));
         MostrarResoluciones(false);
     }
 
@@ -250,7 +251,7 @@ public class InterfazOpciones : StartupScript
             return;
 
         var slider = (Slider)sender;
-        SistemaMemoria.GuardarConfiguración(Configuraciones.sensibilidad, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
+        SistemaMemoria.GuardarConfiguración(Configuraciones.sensibilidad, slider.Value.ToString("n2", CultureInfo.InvariantCulture));
         txtSensibilidadActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad);
         MostrarResoluciones(false);
     }
@@ -262,8 +263,18 @@ public class InterfazOpciones : StartupScript
             return;
 
         var slider = (Slider)sender;
-        SistemaMemoria.GuardarConfiguración(Configuraciones.campoVisión, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
+        SistemaMemoria.GuardarConfiguración(Configuraciones.campoVisión, slider.Value.ToString("n0", CultureInfo.InvariantCulture));
         txtCampoVisiónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión);
+        MostrarResoluciones(false);
+    }
+
+    private void EnClicDatos(bool activo)
+    {
+        if (animando)
+            return;
+
+        SistemaMemoria.GuardarConfiguración(Configuraciones.datos, activo.ToString());
+        BloquearDatos(activo);
         MostrarResoluciones(false);
     }
 
@@ -278,9 +289,15 @@ public class InterfazOpciones : StartupScript
         MostrarResoluciones(false);
     }
 
-    private void ActualizaGráficos(NivelesConfiguración nivel)
+    private void EnClicSombras(NivelesConfiguración nivel)
     {
-        Services.GetService<SceneSystem>().GraphicsCompositor = SistemaEscenas.ObtenerGráficos(nivel);
+        if (animando)
+            return;
+
+        SistemaMemoria.GuardarConfiguración(Configuraciones.sombras, nivel.ToString());
+        BloquearSombras(nivel);
+        ActualizaSombras();
+        MostrarResoluciones(false);
     }
 
     private void EnClicVSync(bool activo)
@@ -292,26 +309,10 @@ public class InterfazOpciones : StartupScript
         BloquearVSync(activo);
         MostrarResoluciones(false);
     }
-    
-    private void EnClicDatos(bool activo)
+
+    private void ActualizaGráficos(NivelesConfiguración nivel)
     {
-        if (animando)
-            return;
-
-        SistemaMemoria.GuardarConfiguración(Configuraciones.datos, activo.ToString());
-        BloquearDatos(activo);
-        MostrarResoluciones(false);
-    }
-
-    private void EnClicSombras(NivelesConfiguración nivel)
-    {
-        if (animando)
-            return;
-
-        SistemaMemoria.GuardarConfiguración(Configuraciones.sombras, nivel.ToString());
-        BloquearSombras(nivel);
-        ActualizaSombras();
-        MostrarResoluciones(false);
+        Services.GetService<SceneSystem>().GraphicsCompositor = SistemaEscenas.ObtenerGráficos(nivel);
     }
 
     private void ActualizaSombras()
@@ -409,10 +410,22 @@ public class InterfazOpciones : StartupScript
         }
     }
 
+    private void BloquearDatos(bool datos)
+    {
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnDatosSí"), datos);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnDatosNo"), !datos);
+    }
+
     private void BloquearPantallaCompleta(bool pantallaCompleta)
     {
         BloquearBotón(página.FindVisualChildOfType<Grid>("btnCompleta"), pantallaCompleta);
         BloquearBotón(página.FindVisualChildOfType<Grid>("btnVentana"), !pantallaCompleta);
+    }
+
+    private void BloquearVSync(bool vSync)
+    {
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnVSyncSí"), vSync);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnVSyncNo"), !vSync);
     }
 
     private void BloquearGráficos(NivelesConfiguración nivel)
@@ -459,18 +472,6 @@ public class InterfazOpciones : StartupScript
         }
     }
 
-    private void BloquearVSync(bool vSync)
-    {
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnVSyncSí"), vSync);
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnVSyncNo"), !vSync);
-    }
-
-    private void BloquearDatos(bool datos)
-    {
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnDatosSí"), datos);
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnDatosNo"), !datos);
-    }
-
     private void DesbloquearBotonesResolución()
     {
         BloquearBotón(página.FindVisualChildOfType<Grid>("btnR0"), false);
@@ -494,15 +495,5 @@ public class InterfazOpciones : StartupScript
             Opciones.Visibility = Visibility.Hidden;
             animando = false;
         });
-    }
-
-    public void Ocultar()
-    {
-        if (Opciones.Visibility != Visibility.Visible)
-            return;
-
-        resoluciones.Visibility = Visibility.Hidden;
-        Opciones.Visibility = Visibility.Hidden;
-        animando = false;
     }
 }

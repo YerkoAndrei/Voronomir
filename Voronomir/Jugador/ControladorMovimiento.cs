@@ -3,6 +3,7 @@ using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
 using System.Linq;
+using System.Globalization;
 
 namespace Voronomir;
 using static Utilidades;
@@ -228,7 +229,7 @@ public class ControladorMovimiento : StartupScript
 
     public void CambiarSensiblidad(bool reducir)
     {
-        var sensibilidadBase = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad));
+        var sensibilidadBase = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad), CultureInfo.InvariantCulture);
 
         if (reducir)
             sensibilidad = sensibilidadBase * 0.4f;

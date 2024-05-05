@@ -7,6 +7,7 @@ using Stride.Particles.Components;
 using Stride.Physics;
 using Stride.Input;
 using Stride.Engine;
+using System.Globalization;
 
 namespace Voronomir;
 using static Utilidades;
@@ -74,6 +75,9 @@ public class ControladorArmas : StartupScript
         tiempoMaxMetralleta = 6f;
         tiempoAtascamientoMetralleta = 3f;
         tempoMetralleta = tiempoMaxMetralleta;
+
+        // Campo visión
+        cámara.VerticalFieldOfView = int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión), CultureInfo.InvariantCulture);
 
         // Filtros disparos
         colisionesDisparo = CollisionFilterGroupFlags.StaticFilter | 
@@ -499,7 +503,7 @@ public class ControladorArmas : StartupScript
         movimiento.CambiarSensiblidad(usandoMira);
         interfaz.ApagarMiras();
 
-        var campoVisión = int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión));
+        var campoVisión = int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión), CultureInfo.InvariantCulture);
         var inicial = cámara.VerticalFieldOfView;
         var objetivo = inicial;
 
