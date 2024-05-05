@@ -499,8 +499,7 @@ public class ControladorArmas : StartupScript
         movimiento.CambiarSensiblidad(usandoMira);
         interfaz.ApagarMiras();
 
-        // PENDIENTE: ajustes
-        var campoVisión = 90;
+        var campoVisión = int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión));
         var inicial = cámara.VerticalFieldOfView;
         var objetivo = inicial;
 

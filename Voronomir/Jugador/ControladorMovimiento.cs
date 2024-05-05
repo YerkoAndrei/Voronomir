@@ -228,8 +228,7 @@ public class ControladorMovimiento : StartupScript
 
     public void CambiarSensiblidad(bool reducir)
     {
-        // PENDIENTE: ajustes
-        var sensibilidadBase = 1f;
+        var sensibilidadBase = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad));
 
         if (reducir)
             sensibilidad = sensibilidadBase * 0.4f;
