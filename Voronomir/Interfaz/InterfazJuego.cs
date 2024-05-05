@@ -154,7 +154,7 @@ public class InterfazJuego : SyncScript
         ApagarPoderes();
 
         // Bloqueo
-        BloquearInterfaz(false);
+        BloquearInterfaz(true);
     }
 
     public override void Update()
@@ -178,30 +178,24 @@ public class InterfazJuego : SyncScript
 
         if(ControladorPartida.ObtenerActivo())
         {
-            BloquearInterfaz(false);
+            BloquearInterfaz(true);
             panelPausa.Visibility = Visibility.Hidden;
         }
         else
         {
-            BloquearInterfaz(true);
+            BloquearInterfaz(false);
             panelPausa.Visibility = Visibility.Visible;
         }
     }
 
     private void BloquearInterfaz(bool bloquear)
     {
+        SistemaEscenas.BloquearCursor(bloquear);
+
         if (bloquear)
-        {
-            Input.UnlockMousePosition();
-            Game.IsMouseVisible = true;
-            Game.UpdateTime.Factor = 0;
-        }
-        else
-        {
-            Input.LockMousePosition(true);
-            Game.IsMouseVisible = false;
             Game.UpdateTime.Factor = 1;
-        }
+        else
+            Game.UpdateTime.Factor = 0;
     }
 
     private void EnClicReiniciar()

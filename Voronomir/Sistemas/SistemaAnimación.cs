@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Threading.Tasks;
 using Stride.Engine;
 using Stride.Animations;
 using Stride.Core.Mathematics;
@@ -9,35 +9,34 @@ using Stride.UI;
 namespace Voronomir;
 using static Constantes;
 
-public class SistemaAnimación : SyncScript
+public class SistemaAnimación : AsyncScript
 {
     public ComputeCurveSampler<float> curvaRápida;
 
     private static SistemaAnimación instancia;
 
-    private Dictionary<string, Thickness> elementosConocidos;
-    private bool animando;
-
     // Animación
-    private Grid elemento;
-    private float duración;
-    private float tiempoDelta;
-    private float tiempo;
-    private TipoCurva tipoCurva;
-    private Thickness margenInicio;
-    private Thickness margenObjetivo;
-    private Action enFin;
+    private static Grid elemento;
+    private static bool animando;
+    private static float duración;
+    private static float tiempoDelta;
+    private static float tiempo;
+    private static TipoCurva tipoCurva;
+    private static Thickness margenInicio;
+    private static Thickness margenObjetivo;
+    private static Action enFin;
 
-    public override void Start()
+    public override async Task Execute()
     {
         instancia = this;
-        elementosConocidos = new Dictionary<string, Thickness>();
-    }
 
-    public override void Update()
-    {
-        if (animando)
-            Animar();
+        while (Game.IsRunning)
+        {
+            if (animando)
+                Animar();
+
+            await Script.NextFrame();
+        }
     }
 
     public static float EvaluarSuave(float tiempo)
@@ -56,58 +55,46 @@ public class SistemaAnimación : SyncScript
 
     public static void AnimarElemento(Grid _elemento, float _duración, bool entrando, Direcciones dirección, TipoCurva _tipoCurva, Action _enFin)
     {
-        Thickness original;
-        var fuera = new Thickness();
-
-        // Busca o agrega elemento en diccionario, queda guardado por la sesión
-        var nombre = _elemento.Name + "_" + _elemento.Parent.Name;
-        if (instancia.elementosConocidos.ContainsKey(nombre))
-            original = instancia.elementosConocidos.GetValueOrDefault(nombre);
-        else
-        {
-            instancia.elementosConocidos.Add(nombre, _elemento.Margin);
-            original = _elemento.Margin;
-        }
-
         // Crea dirección exterior
+        var fuera = new Thickness();
         switch (dirección)
         {
             case Direcciones.arriba:
-                fuera = new Thickness(original.Left, original.Top, original.Right, original.Bottom + 1500);
+                fuera = new Thickness(0, 0, 0, 1500);
                 break;
             case Direcciones.abajo:
-                fuera = new Thickness(original.Left, original.Top + 1500, original.Right, original.Bottom);
+                fuera = new Thickness(0, 1500, 0, 0);
                 break;
             case Direcciones.izquierda:
-                fuera = new Thickness(original.Left, original.Top, original.Right + 3000, original.Bottom);
+                fuera = new Thickness(0, 0, 3000, 0);
                 break;
             case Direcciones.derecha:
-                fuera = new Thickness(original.Left + 3000, original.Top, original.Right, original.Bottom);
+                fuera = new Thickness(3000, 0, 0, 0);
                 break;
         }
 
         if (entrando)
         {
-            instancia.margenInicio = fuera;
-            instancia.margenObjetivo = original;
+            margenInicio = fuera;
+            margenObjetivo = new Thickness();
         }
         else
         {
-            instancia.margenInicio = original;
-            instancia.margenObjetivo = fuera;
+            margenInicio = new Thickness();
+            margenObjetivo = fuera;
         }
 
         // Predeterminados
-        instancia.elemento = _elemento;
-        instancia.duración = _duración;
-        instancia.tipoCurva = _tipoCurva;
-        instancia.enFin = _enFin;
+        elemento = _elemento;
+        duración = _duración;
+        tipoCurva = _tipoCurva;
+        enFin = _enFin;
 
-        instancia.elemento.Margin = instancia.margenInicio;
+        elemento.Margin = margenInicio;
 
-        instancia.tiempoDelta = 0;
-        instancia.tiempo = 0;
-        instancia.animando = true;
+        tiempoDelta = 0;
+        tiempo = 0;
+        animando = true;
     }
 
     private void Animar()
@@ -126,12 +113,10 @@ public class SistemaAnimación : SyncScript
                 break;
         }
 
-        float left = MathUtil.Lerp(margenInicio.Left, margenObjetivo.Left, tiempo);
-        float top = MathUtil.Lerp(margenInicio.Top, margenObjetivo.Top, tiempo);
-        float right = MathUtil.Lerp(margenInicio.Right, margenObjetivo.Right, tiempo);
-        float bottom = MathUtil.Lerp(margenInicio.Bottom, margenObjetivo.Bottom, tiempo);
-        elemento.Margin = new Thickness(left, top, right, bottom);
-
+        elemento.Margin = new Thickness(MathUtil.Lerp(margenInicio.Left, margenObjetivo.Left, tiempo),
+                                        MathUtil.Lerp(margenInicio.Top, margenObjetivo.Top, tiempo),
+                                        MathUtil.Lerp(margenInicio.Right, margenObjetivo.Right, tiempo),
+                                        MathUtil.Lerp(margenInicio.Bottom, margenObjetivo.Bottom, tiempo));
         // Fin
         if (tiempoDelta >= duración)
         {

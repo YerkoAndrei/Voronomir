@@ -29,11 +29,12 @@ public class InterfazOpciones : StartupScript
 
     public override void Start()
     {
-        // Botones y deslisadores
         página = Entity.Get<UIComponent>().Page.RootElement;
+
         Opciones = página.FindVisualChildOfType<Grid>("Opciones");
         animOpciones = página.FindVisualChildOfType<Grid>("animOpciones");
 
+        // Botones
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuroOpciones"), EnClicVolver);
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("btnPanel"), () => MostrarResoluciones(false));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicVolver);
@@ -71,6 +72,7 @@ public class InterfazOpciones : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR5"), () => EnClicResolución(2560, 1440, "btnR5"));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR6"), () => EnClicResolución(3840, 2160, "btnR6"));
         
+        // Textos
         pestañaGráficos = página.FindVisualChildOfType<Grid>("Gráficos");
         pestañaSonidos = página.FindVisualChildOfType<Grid>("Sonidos");
         pestañaJuego = página.FindVisualChildOfType<Grid>("Juego");
@@ -122,7 +124,7 @@ public class InterfazOpciones : StartupScript
                 break;
         }
 
-        // Slider
+        // Deslizadores
         var sliderGeneral = página.FindVisualChildOfType<Slider>("SliderGeneral");
         var sliderMúsica = página.FindVisualChildOfType<Slider>("SliderMúsica");
         var sliderEfectos = página.FindVisualChildOfType<Slider>("SliderEfectos");

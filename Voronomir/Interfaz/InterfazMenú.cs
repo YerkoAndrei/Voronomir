@@ -28,6 +28,9 @@ public class InterfazMenú : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSalir"), EnClicSalir);
 
         BloquearBotón(página.FindVisualChildOfType<Grid>("btnJugar"), true);
+
+        SistemaEscenas.BloquearCursor(false);
+        Game.UpdateTime.Factor = 1;
     }
 
     private void EnClicJugar()
@@ -37,7 +40,6 @@ public class InterfazMenú : StartupScript
 
     private void EnClicDemo()
     {
-        OcultarCursor();
         SistemaEscenas.CambiarEscena(Escenas.demo);
     }
 
@@ -57,11 +59,5 @@ public class InterfazMenú : StartupScript
     private void EnClicSalir()
     {
         Environment.Exit(0);
-    }
-
-    private void OcultarCursor()
-    {
-        Input.LockMousePosition(true);
-        Game.IsMouseVisible = false;
     }
 }

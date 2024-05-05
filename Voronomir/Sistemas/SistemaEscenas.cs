@@ -120,6 +120,20 @@ public class SistemaEscenas : AsyncScript
         imgCursor.Margin = new Thickness(left, top, right, bottom);
     }
 
+    public static void BloquearCursor(bool bloquear)
+    {
+        if (bloquear)
+        {
+            instancia.Game.IsMouseVisible = false;
+            instancia.Input.LockMousePosition(true);
+        }
+        else
+        {
+            instancia.Input.UnlockMousePosition();
+            instancia.Game.IsMouseVisible = true;
+        }
+    }
+
     public static void CambiarPantalla(bool pantallaCompleta, int ancho, int alto)
     {
         instancia.Game.Window.Visible = false;
@@ -137,6 +151,7 @@ public class SistemaEscenas : AsyncScript
         if (ocultando || abriendo)
             return;
 
+        BloquearCursor(true);
         instancia.panelOscuro.Opacity = 0;
         instancia.panelOscuro.CanBeHitByUser = true;
 
