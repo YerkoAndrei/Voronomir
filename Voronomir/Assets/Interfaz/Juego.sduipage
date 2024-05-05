@@ -10,7 +10,8 @@ Hierarchy:
     Parts:
         -   UIElement: !ImageElement
                 Id: 008287a1-8f24-47ff-8741-0e664a21c1a9
-                DependencyProperties: {}
+                DependencyProperties:
+                    741b7054631567115b575e174c362841~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Bottom
@@ -43,7 +44,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -53,7 +54,7 @@ Hierarchy:
                 Id: 05affce2-68c8-4b5c-91d7-8ff44942070c
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -61,7 +62,7 @@ Hierarchy:
                 Name*: txtMuerteSalir
                 Text*: Salir
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
-                TextSize: 30.0
+                TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
             Base:
@@ -83,7 +84,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -144,7 +145,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -399,7 +400,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -434,7 +435,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -442,7 +443,8 @@ Hierarchy:
                 InstanceId: 9440749c-6845-4a7c-8b0c-6aa543e95635
         -   UIElement: !ImageElement
                 Id: 2c0866d5-2ca5-4683-95c4-d3651ff1bc99
-                DependencyProperties: {}
+                DependencyProperties:
+                    741b7054631567115b575e174c362841~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Bottom
@@ -462,7 +464,8 @@ Hierarchy:
                 InstanceId: 7bb1e034-abe6-4c61-a948-9c45feab606b
         -   UIElement: !ImageElement
                 Id: 2e84dbe5-26b3-4928-8dd5-9acd749cb028
-                DependencyProperties: {}
+                DependencyProperties:
+                    741b7054631567115b575e174c362841~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Bottom
@@ -515,7 +518,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -536,7 +539,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -590,7 +593,8 @@ Hierarchy:
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
                 Id: 39c50dc1-eedc-4973-a6fc-741b7e1cdc98
-                DependencyProperties: {}
+                DependencyProperties:
+                    8b382fd864570b49ccfbe09505090ec0~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Top
@@ -694,7 +698,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -739,7 +743,8 @@ Hierarchy:
                 LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: 444c5f2c-6d6f-404b-b77d-dea77e00ebe2
-                DependencyProperties: {}
+                DependencyProperties:
+                    741b7054631567115b575e174c362841~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Bottom
@@ -761,7 +766,7 @@ Hierarchy:
                 Id: 449b4203-1816-471c-953f-e17f83b61c36
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -769,7 +774,7 @@ Hierarchy:
                 Name*: txtReiniciar
                 Text*: Reiniciar
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
-                TextSize: 30.0
+                TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
             Base:
@@ -882,7 +887,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -973,7 +978,8 @@ Hierarchy:
                 InstanceId: 55cb11fb-6f3a-4f77-a724-c1d492f6b67a
         -   UIElement: !ImageElement
                 Id: 4e8c8d71-0576-4565-bbae-5195d99a5676
-                DependencyProperties: {}
+                DependencyProperties:
+                    8b382fd864570b49ccfbe09505090ec0~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Top
@@ -1006,7 +1012,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1036,7 +1042,7 @@ Hierarchy:
                 Id: 535f183d-ffda-4aab-bc64-dfadb934edc2
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -1044,7 +1050,7 @@ Hierarchy:
                 Name*: txtReintentar
                 Text*: Reintentar
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
-                TextSize: 30.0
+                TextSize: 25.0
                 TextColor*: {R: 240, G: 240, B: 160, A: 255}
                 TextAlignment: Center
             Base:
@@ -1188,7 +1194,7 @@ Hierarchy:
                 Id: 638596c1-cfbf-471c-ae31-22ffa5b539e1
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -1196,7 +1202,7 @@ Hierarchy:
                 Name*: txtPausaSalir
                 Text*: Salir
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
-                TextSize: 30.0
+                TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
             Base:
@@ -1368,7 +1374,8 @@ Hierarchy:
                 InstanceId: 589cb458-d6fe-40af-b773-a4665561fe85
         -   UIElement: !ImageElement
                 Id: 71af114c-b5b6-48dc-9bf5-64c0c3d74d78
-                DependencyProperties: {}
+                DependencyProperties:
+                    8b382fd864570b49ccfbe09505090ec0~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Top
@@ -1401,7 +1408,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1411,7 +1418,7 @@ Hierarchy:
                 Id: 7240a079-4ec8-4685-a0d6-65f7ced00d6c
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -1419,7 +1426,7 @@ Hierarchy:
                 Name*: txtContinuar
                 Text*: Continuar
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
-                TextSize: 30.0
+                TextSize: 25.0
                 TextColor*: {R: 240, G: 240, B: 160, A: 255}
                 TextAlignment: Center
             Base:
@@ -1445,7 +1452,7 @@ Hierarchy:
                 Id: 760160a1-7dbc-4a7f-89c7-c3e95a1649b4
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -1453,7 +1460,7 @@ Hierarchy:
                 Name*: txtFinalSalir
                 Text*: Salir
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
-                TextSize: 30.0
+                TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
             Base:
@@ -1475,7 +1482,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1483,7 +1490,8 @@ Hierarchy:
                 InstanceId: 7bb1e034-abe6-4c61-a948-9c45feab606b
         -   UIElement: !ImageElement
                 Id: 7969569b-8ce4-441f-b11e-d50006531efb
-                DependencyProperties: {}
+                DependencyProperties:
+                    741b7054631567115b575e174c362841~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Bottom
@@ -1503,7 +1511,8 @@ Hierarchy:
                 InstanceId: 589cb458-d6fe-40af-b773-a4665561fe85
         -   UIElement: !ImageElement
                 Id: 7b6764d0-d60c-4f48-9576-cd8dab47e6ac
-                DependencyProperties: {}
+                DependencyProperties:
+                    8b382fd864570b49ccfbe09505090ec0~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Top
@@ -1621,7 +1630,8 @@ Hierarchy:
                 InstanceId: 2aa5f198-c207-482d-887d-15039c4c9bb3
         -   UIElement: !ImageElement
                 Id: 8364bc97-741f-45f6-b162-b2823fde8aee
-                DependencyProperties: {}
+                DependencyProperties:
+                    8b382fd864570b49ccfbe09505090ec0~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Top
@@ -1654,7 +1664,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1763,7 +1773,8 @@ Hierarchy:
                 InstanceId: 890d9ead-e2ce-41ec-8d9d-ee3da45e37c0
         -   UIElement: !ImageElement
                 Id: 89ca888e-c0e0-4775-a311-19f5fbbc2583
-                DependencyProperties: {}
+                DependencyProperties:
+                    741b7054631567115b575e174c362841~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Bottom
@@ -1825,7 +1836,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1835,7 +1846,7 @@ Hierarchy:
                 Id: 8ee4e868-3465-41d6-ab93-70fd51e9d7d1
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -1843,7 +1854,7 @@ Hierarchy:
                 Name*: txtReanudar
                 Text*: Reanudar
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
-                TextSize: 30.0
+                TextSize: 25.0
                 TextColor*: {R: 240, G: 240, B: 160, A: 255}
                 TextAlignment: Center
             Base:
@@ -1865,7 +1876,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1903,7 +1914,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1924,7 +1935,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2130,7 +2141,8 @@ Hierarchy:
                 InstanceId: 890d9ead-e2ce-41ec-8d9d-ee3da45e37c0
         -   UIElement: !ImageElement
                 Id: a6bf7f55-7eec-4dd4-a815-ade1f6410ab5
-                DependencyProperties: {}
+                DependencyProperties:
+                    741b7054631567115b575e174c362841~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Bottom
@@ -2232,7 +2244,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2301,7 +2313,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2357,7 +2369,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2410,7 +2422,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2431,7 +2443,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2556,7 +2568,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2577,7 +2589,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2585,7 +2597,8 @@ Hierarchy:
                 InstanceId: 890d9ead-e2ce-41ec-8d9d-ee3da45e37c0
         -   UIElement: !ImageElement
                 Id: d66058a8-c4ba-4cde-90dc-07a2e3e9ac5a
-                DependencyProperties: {}
+                DependencyProperties:
+                    8b382fd864570b49ccfbe09505090ec0~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Top
@@ -2661,7 +2674,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2759,7 +2772,8 @@ Hierarchy:
                 InstanceId: 9440749c-6845-4a7c-8b0c-6aa543e95635
         -   UIElement: !ImageElement
                 Id: e200fdd5-22c1-488d-b6e0-1223257bee7b
-                DependencyProperties: {}
+                DependencyProperties:
+                    8b382fd864570b49ccfbe09505090ec0~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Top
@@ -2861,7 +2875,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2882,7 +2896,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -3062,7 +3076,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"

@@ -39,7 +39,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: 208d5d4d-5916-4a83-96ce-3ed0a232eecc
@@ -69,7 +69,8 @@ Hierarchy:
                 Name: btn
         -   UIElement: !ImageElement
                 Id: 4631910d-b8ba-46e9-b479-13c2ef8e0ac6
-                DependencyProperties: {}
+                DependencyProperties:
+                    8b382fd864570b49ccfbe09505090ec0~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Top
@@ -114,11 +115,12 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: 9956b817-dc14-496c-8f6d-6d3a845a3940
-                DependencyProperties: {}
+                DependencyProperties:
+                    741b7054631567115b575e174c362841~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 5.0
                 VerticalAlignment: Bottom
@@ -147,7 +149,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: b05a968b-04bb-4761-8bec-8ad409415f3f
@@ -164,7 +166,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 200, G: 200, B: 0, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: b0fd12cd-cbfb-4999-bc52-027a5a0a41f5
@@ -186,7 +188,7 @@ Hierarchy:
                 Id: b97cce6f-c671-4e4c-afde-a556a2be51f3
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 60.0
+                Height: 50.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -220,7 +222,7 @@ Hierarchy:
                 Id: d55d9875-b47c-4938-8415-98e65702c058
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 25.0
+                Height: 20.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -228,7 +230,7 @@ Hierarchy:
                 Name: txt
                 Text: "Botón"
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
-                TextSize: 30.0
+                TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
         -   UIElement: !Grid

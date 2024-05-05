@@ -1,0 +1,7 @@
+!Texture
+Id: d77187b3-5fe2-4b71-887c-458584ad6750
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file "BaseOctágono.png"
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

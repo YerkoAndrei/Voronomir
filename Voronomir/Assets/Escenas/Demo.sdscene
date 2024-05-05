@@ -5436,6 +5436,9 @@ Hierarchy:
                                 ComputeTransmittance: false
                                 BiasParameters: {}
                         Intensity: 20.0
+                    8510a4b010e6703fc9b0ae2a9d411a2e: !Voronomir.ControladorSombras,Voronomir.Proyecto
+                        Id: 18b50279-c5dc-4283-bec0-cc64c97f7a84
+                        luzPrincipal: ref!! 7765bd79-f781-43cf-a9c2-f4115c744cbb
         -   Entity:
                 Id: defeded5-4bc3-4e00-a581-29700c408b3f
                 Name: "Partículas"

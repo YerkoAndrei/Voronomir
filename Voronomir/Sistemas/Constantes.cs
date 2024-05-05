@@ -112,7 +112,10 @@ public static class Constantes
         velocidadRed,
         puertoRed,
         pantallaCompleta,
-        resolución
+        resolución,
+        sensibilidad,
+        campoVisión,
+        datos
     }
 
     public enum NivelesConfiguración

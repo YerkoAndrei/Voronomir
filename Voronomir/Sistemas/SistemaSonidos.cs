@@ -250,6 +250,12 @@ public class SistemaSonidos : StartupScript
         }
     }
 
+    // Música    
+    public static void ActualizarVolumenMúsica()
+    {
+        //instancia.música.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
+    }
+    
     /*
     public static void SonarPitch()
     {

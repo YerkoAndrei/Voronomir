@@ -147,6 +147,11 @@ public static class Utilidades
         };
     }
 
+    public static void ConfigurarBotónOculto(Button botón, Action action)
+    {
+        botón.Click += (sender, e) => { action.Invoke(); };
+    }
+
     public static TextBlock ObtenerTexto(Grid grid)
     {
         // Encuentra primer texto del grid

@@ -5,7 +5,6 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Voronomir;
-using static Utilidades;
 using static Constantes;
 
 public class ControladorEnemigo : SyncScript, IDañable, IActivable

@@ -65,6 +65,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
+                    901bef4181ce7b23ef38c7e7914b69e0: !Voronomir.InterfazOpciones,Voronomir.Proyecto
+                        Id: c9cc97dd-1458-41ba-af00-0ef61cd31f37
                     2a3f5fd9b4d9f74d08afc9b240c3f933: !UIComponent
                         Id: 6fe1333c-8c6e-459b-a3be-af9814613a43
                         Page: "2973b9e0-75a7-45db-bc7a-1d6a505e0191:Interfaz/Menú"
@@ -98,6 +100,9 @@ Hierarchy:
                                 ComputeTransmittance: false
                                 BiasParameters: {}
                         Intensity: 20.0
+                    f4d2bbd76c14c3b0e533b466d9fb710c: !Voronomir.ControladorSombras,Voronomir.Proyecto
+                        Id: 004a8568-52c4-4df0-89fc-2f5b014c5663
+                        luzPrincipal: ref!! b46249b7-0258-48f5-ab91-99884700ff84
         -   Folder: null
             Entity:
                 Id: 583a3938-5c8f-4ffb-b075-771484abcf3f

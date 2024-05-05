@@ -1,0 +1,7 @@
+!Texture
+Id: 35003da6-4786-4f76-ba85-8dfff79c0c33
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file PalancaVista.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

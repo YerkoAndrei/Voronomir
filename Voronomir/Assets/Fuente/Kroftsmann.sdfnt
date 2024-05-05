@@ -5,5 +5,5 @@ Tags: []
 FontSource: !FileFontProvider
     Source: !file Kroftsmann.ttf
 FontType: !RuntimeRasterizedSpriteFontType
-    Size: 30.0
+    Size: 25.0
 Spacing: 4.0

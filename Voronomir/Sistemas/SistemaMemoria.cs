@@ -62,7 +62,10 @@ public class SistemaMemoria : StartupScript
             { Configuraciones.volumenMúsica.ToString(),     "0.5" },
             { Configuraciones.volumenEfectos.ToString(),    "0.5" },
             { Configuraciones.pantallaCompleta.ToString(),  true.ToString() },
-            { Configuraciones.resolución.ToString(),        resolución }
+            { Configuraciones.resolución.ToString(),        resolución },
+            { Configuraciones.sensibilidad.ToString(),      "1" },
+            { Configuraciones.campoVisión.ToString(),       "90" },
+            { Configuraciones.datos.ToString(),             false.ToString() },
         };
     }
 
