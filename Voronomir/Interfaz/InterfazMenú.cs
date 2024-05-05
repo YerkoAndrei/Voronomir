@@ -37,6 +37,7 @@ public class InterfazMenú : StartupScript
 
     private void EnClicDemo()
     {
+        OcultarCursor();
         SistemaEscenas.CambiarEscena(Escenas.demo);
     }
 
@@ -56,5 +57,11 @@ public class InterfazMenú : StartupScript
     private void EnClicSalir()
     {
         Environment.Exit(0);
+    }
+
+    private void OcultarCursor()
+    {
+        Input.LockMousePosition(true);
+        Game.IsMouseVisible = false;
     }
 }

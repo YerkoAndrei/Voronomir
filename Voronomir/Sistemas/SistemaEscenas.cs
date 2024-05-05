@@ -172,10 +172,12 @@ public class SistemaEscenas : AsyncScript
 
         // Carga
         Entity.Scene.Children.Add(escenaActual);
+        await Task.Delay(10);
+
         SistemaTraducción.ActualizarTextosEscena();
 
         // Retraso predeterminado
-        await Task.Delay(400);
+        await Task.Delay(200);
         abriendo = true;
     }
 
