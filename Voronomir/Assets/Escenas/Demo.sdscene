@@ -15,6 +15,7 @@ Hierarchy:
         - ref!! 41ff8583-2be9-4314-986b-7a66d760d5f7
         - ref!! de406bde-14a8-4975-8051-a037ffe3647f
         - ref!! ed574734-d19c-4582-8145-31497e3f514d
+        - ref!! 1d5236fa-fe59-4e5e-94a2-a9f7dafbc20c
         - ref!! f3e301de-3c24-4082-9407-c92be0463470
         - ref!! a9178381-0e65-41e7-b367-ddfb062cebe6
         - ref!! edeff615-c141-4feb-96da-868b5fe6ebc8
@@ -658,6 +659,21 @@ Hierarchy:
                 BasePartAsset: "ba20a406-510b-45d3-8837-e5839f7f9e4e:Prefabs/EntornoDinámico/Fin"
                 BasePartId: ffaf0f04-a1a7-474a-8e05-7f0c7c41f485
                 InstanceId: bc71f645-4720-4972-8946-16796ac03b3f
+        -   Folder: MuestraEnemigos
+            Entity:
+                Id: 1d5236fa-fe59-4e5e-94a2-a9f7dafbc20c
+                Name: Pulga
+                Components:
+                    58d1e0ab3962a7692275b79681512bf3: !TransformComponent
+                        Id: de69db87-18b9-4c2b-93e9-cb3cba887210
+                        Position: {X: 1.0, Y: 0.0, Z: 15.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    642b71e4feeb220de86e8814c9ec7fd2: !ModelComponent
+                        Id: b51f9316-10dd-4dd2-8001-bc941f0c272d
+                        Model: 2dc126b1-212f-408b-a6c3-fcb99490097b:Modelos/Enemigos/Pulga/Pulga
+                        Materials: {}
         -   Entity:
                 Id: 1d79f511-3980-439f-a46e-d2a4089d9eba
                 Name: Fuego

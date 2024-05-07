@@ -1,0 +1,15 @@
+!Model
+Id: 2dc126b1-212f-408b-a6c3-fcb99490097b
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Pulga.glb
+Skeleton: 2f44b4af-6930-4524-9af9-b6ddcb52c2ee:Modelos/Enemigos/Pulga/Pulga Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    2df384b8a6ccc73a18a6a2cf36b77b58:
+        Name: Pulga
+        MaterialInstance:
+            Material: b830911b-b21f-402d-8d9b-ca365e8e4997:Modelos/Enemigos/Pulga/Materiales/Pulga
+Modifiers: {}
+~SourceHashes:
+    80c5e115e649ffc9e43eb6acdaa61f1b~Pulga.glb: d53b0ccb96884ea3eca1d3d278a6ce7b
