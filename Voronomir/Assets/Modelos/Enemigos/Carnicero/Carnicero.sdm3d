@@ -1,0 +1,27 @@
+!Model
+Id: 48763854-09a1-4fb9-a3da-de443b45ab99
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Carnicero.glb
+Skeleton: 13de2dc3-9064-4d70-8f77-3cc2e8b00616:Modelos/Enemigos/Carnicero/Carnicero Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    dee0e705a5bc5d5e58c842988775975d:
+        Name: Pelo
+        MaterialInstance:
+            Material: bf8471a8-df18-4806-9c28-6a8c0fad8459:Modelos/Enemigos/Carnicero/Materiales/Pelo
+    32cb7d9e63b6a1e209710122b63cb580:
+        Name: Metal
+        MaterialInstance:
+            Material: 73da8257-a7b9-42f5-89b7-b9d4cf04c6d0:Modelos/Enemigos/Carnicero/Materiales/Metal
+    e018c0bbfd95851f35874bf662f33ee2:
+        Name: Hueso
+        MaterialInstance:
+            Material: 9bd7dc70-b1f5-4b24-a4aa-00dc552d2ffd:Modelos/Enemigos/Carnicero/Materiales/Hueso
+    2a023e6c37356f7f1f8f6bfd92399e7e:
+        Name: Cuero
+        MaterialInstance:
+            Material: b0e21474-e5be-4e4d-ab82-04b79f60b1c1:Modelos/Enemigos/Carnicero/Materiales/Cuero
+Modifiers: {}
+~SourceHashes:
+    b9ad3781224decf933e2ff970aa3efbb~Carnicero.glb: d7bc1b3c3a8f693e6841b5bd5c1cd7f5

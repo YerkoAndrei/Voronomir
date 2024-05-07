@@ -5738,7 +5738,7 @@ Hierarchy:
         -   Folder: MuestraEnemigos
             Entity:
                 Id: de406bde-14a8-4975-8051-a037ffe3647f
-                Name: Minotauro
+                Name: Carnicero
                 Components:
                     0bf908d21ca5064d108754ed9872aa8a: !TransformComponent
                         Id: 3f3c82cf-1d14-4082-8178-02f5f0ead523
@@ -5748,7 +5748,7 @@ Hierarchy:
                         Children: {}
                     46e08691f1276f81ebd4c15485efcf6f: !ModelComponent
                         Id: 6157f9d3-a39f-44cb-8cfe-a683c87ab3ef
-                        Model: 6b232d0c-aaca-41d6-9ba7-e130a308b39e:Modelos/Enemigos/Minotauro/Minotauro
+                        Model: 48763854-09a1-4fb9-a3da-de443b45ab99:Modelos/Enemigos/Carnicero/Carnicero
                         Materials: {}
         -   Entity:
                 Id: defeded5-4bc3-4e00-a581-29700c408b3f
