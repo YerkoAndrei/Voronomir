@@ -355,7 +355,7 @@ Hierarchy:
                             65446f9c70abd3a53b8246b4b1dea0f2: ref!! 0054abcc-e94d-4339-8bf2-7c5390f24b66
                     dde0c8ec0d35e0e851f71b7539019f93: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: bf1bd434-6b18-4668-9491-2a73bd7031e4
-                        enemigo: "meléPesado"
+                        enemigo: especialPesado
                         "armaMelé": null
                         armaRango: null
                         cuerpos:

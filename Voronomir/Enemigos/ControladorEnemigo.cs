@@ -43,10 +43,10 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
                 persecutor.Iniciar(this, 0.1f, 4f, 5f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.meléPesado:
-                persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), true);
+                //persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.rangoLigero:
-                persecutor.Iniciar(this, 1f, 16f, 0f, ObtenerDistanciaAtaque(), true);
+                //persecutor.Iniciar(this, 1f, 16f, 0f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.rangoMediano:
                 persecutor.Iniciar(this, 0.2f, 2f, 3f, ObtenerDistanciaAtaque(), false);
@@ -55,16 +55,13 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
                 persecutor.Iniciar(this, 0.2f, 8f, 6f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.especialLigero:
-                persecutor.Iniciar(this, 1f, 1f, 1f, ObtenerDistanciaAtaque(), false);
+                persecutor.Iniciar(this, 1f, 16f, 0f, ObtenerDistanciaAtaque(), true);
+                break;
+            case Enemigos.especialMediano:
+                //persecutor.Iniciar(this, 1f, 1f, 1f, ObtenerDistanciaAtaque(), true);
                 break;
             case Enemigos.especialPesado:
-                persecutor.Iniciar(this, 1f, 1f, 1f, ObtenerDistanciaAtaque(), false);
-                break;
-            case Enemigos.minijefeMelé:
-                persecutor.Iniciar(this, 1f, 1f, 1f, ObtenerDistanciaAtaque(), false);
-                break;
-            case Enemigos.minijefeRango:
-                persecutor.Iniciar(this, 1f, 1f, 1f, ObtenerDistanciaAtaque(), false);
+                persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), true);
                 break;
         }
     }
@@ -159,21 +156,19 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.meléMediano:
                 return 200;
             case Enemigos.meléPesado:
-                return 100;
+                return 800;
             case Enemigos.rangoLigero:
-                return 40;
+                return 60;
             case Enemigos.rangoMediano:
                 return 400;
             case Enemigos.rangoPesado:
                 return 600;
             case Enemigos.especialLigero:
-                return 100;
+                return 40;
+            case Enemigos.especialMediano:
+                return 0;
             case Enemigos.especialPesado:
-                return 1000;
-            case Enemigos.minijefeMelé:
-                return 5000;
-            case Enemigos.minijefeRango:
-                return 3000;
+                return 100;
             default:
                 return 0;
         }
@@ -189,25 +184,21 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.meléMediano:
                 return 25;
             case Enemigos.meléPesado:
-                return 0;
-            // Proyectil
+                return 30;
+            // Rango
             case Enemigos.rangoLigero:
-                return 5;
+                return 6;
             case Enemigos.rangoMediano:
                 return 20;
             case Enemigos.rangoPesado:
                 return 25;
-            // Melé especial
+            // Especial
             case Enemigos.especialLigero:
-                return 1f;
+                return 5;
+            case Enemigos.especialMediano:
+                return 1;
             case Enemigos.especialPesado:
-                return 1f;
-
-            case Enemigos.minijefeMelé:
-                return 1f;
-            case Enemigos.minijefeRango:
-                return 1f;
-
+                return 0;
             default:
                 return 0;
         }
@@ -222,24 +213,19 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.meléMediano:
                 return 2.5f;
             case Enemigos.meléPesado:
-                return 4f;
+                return 0f;
             case Enemigos.rangoLigero:
                 return 6f;
             case Enemigos.rangoMediano:
                 return 12f;
             case Enemigos.rangoPesado:
                 return 16f;
-
             case Enemigos.especialLigero:
-                return 1f;
+                return 6f;
+            case Enemigos.especialMediano:
+                return 0f;
             case Enemigos.especialPesado:
-                return 1f;
-
-            case Enemigos.minijefeMelé:
-                return 1f;
-            case Enemigos.minijefeRango:
-                return 1f;
-
+                return 4f;
             default:
                 return 0;
         }
@@ -254,24 +240,19 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.meléMediano:
                 return 0.8f;
             case Enemigos.meléPesado:
-                return 0.5f;
+                return 0;
             case Enemigos.rangoLigero:
-                return 0.5f;
+                return 0;
             case Enemigos.rangoMediano:
                 return 2f;
             case Enemigos.rangoPesado:
                 return 1f;
-
             case Enemigos.especialLigero:
                 return 0.5f;
+            case Enemigos.especialMediano:
+                return 0;
             case Enemigos.especialPesado:
                 return 0.5f;
-
-            case Enemigos.minijefeMelé:
-                return 0.5f;
-            case Enemigos.minijefeRango:
-                return 0.5f;
-
             default:
                 return 0;
         }
@@ -300,6 +281,8 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
                 return 10;
             case Enemigos.rangoPesado:
                 return 25;
+            case Enemigos.especialLigero:
+                return 15;
             default:
                 return 0;
         }

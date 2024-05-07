@@ -245,7 +245,7 @@ Hierarchy:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 07e87824-3863-43ff-971b-5642118571c8
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: e54a000a-7d20-48df-898b-5fced74ce053
-                        enemigo: rangoLigero
+                        enemigo: especialLigero
                         "armaMelé": null
                         armaRango: ref!! 7c0c0baa-c7d8-4edc-bfe9-0f947660bd35
                         cuerpos:

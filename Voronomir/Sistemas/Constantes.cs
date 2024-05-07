@@ -60,16 +60,15 @@ public static class Constantes
         nada,
         meléLigero,     // Esqueleto
         meléMediano,    // Lancero
-        meléPesado,     // Cerebro
-        rangoLigero,    // Dron
+        meléPesado,     // Minotauro
+
+        rangoLigero,    // Saltamonte
         rangoMediano,   // Babosa
         rangoPesado,    // Araña
 
-        especialLigero, // Motoquero
-        especialPesado, // Calavera
-
-        minijefeMelé,   // Minotauro
-        minijefeRango,  // Dinosaurio
+        especialLigero, // Dron
+        especialMediano,// Calavera
+        especialPesado, // Cerebro
     }
 
     public enum Jefes
