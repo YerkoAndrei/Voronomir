@@ -5547,10 +5547,10 @@ Hierarchy:
                         "prefabImpactoAraña": "0813580a-18cd-48ee-b40d-7d72977e10c5:Prefabs/Proyectiles/ImpactoAraña"
                     3ba19ac87f450380cffa251b6434761f: !Voronomir.ControladorPersecusionesTrigonom%25C3%25A9tricas,Voronomir.Proyecto
                         Id: 41c4e19c-0c5b-4c55-b8b8-d2a4e05dd1f1
-                        enemigo: rangoLigero
+                        enemigo: especialLigero
                     be25c192f8666064ceb8a1bef89aaeae: !Voronomir.ControladorPersecusionesTrigonom%25C3%25A9tricas,Voronomir.Proyecto
                         Id: 2b886118-5837-4ff4-8202-f21652caf832
-                        enemigo: "meléPesado"
+                        enemigo: especialPesado
                     5d7d60972d62727e06bf9f67509b933b: !Voronomir.ControladorDemo,Voronomir.Proyecto
                         Id: 8688afb4-7376-419b-a61d-169b36f0c5ab
                         zombi: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi

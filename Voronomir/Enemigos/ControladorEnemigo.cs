@@ -213,7 +213,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.meléMediano:
                 return 2.5f;
             case Enemigos.meléPesado:
-                return 0f;
+                return 8f;
             case Enemigos.rangoLigero:
                 return 6f;
             case Enemigos.rangoMediano:
