@@ -1,0 +1,19 @@
+!Model
+Id: 6b232d0c-aaca-41d6-9ba7-e130a308b39e
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Minotauro.glb
+Skeleton: 6230ea0a-ff88-43e8-a547-e9b030f488cc:Modelos/Enemigos/Minotauro/Minotauro Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    c016d31ddbde5049865ac779fb53b06b:
+        Name: Pelo
+        MaterialInstance:
+            Material: 6628739f-765b-4cf7-b477-2f13050da9a2:Modelos/Enemigos/Minotauro/Materiales/Pelo
+    60257e777760fdaa0f640a04f8d40857:
+        Name: Metal
+        MaterialInstance:
+            Material: c67e7816-247e-40c3-84e4-96ca624cc9da:Modelos/Enemigos/Minotauro/Materiales/Metal
+Modifiers: {}
+~SourceHashes:
+    c6b2c0aa79c04ca365c07df869e8dbca~Minotauro.glb: e54ebecbeb33e0577826c2692268fbaf

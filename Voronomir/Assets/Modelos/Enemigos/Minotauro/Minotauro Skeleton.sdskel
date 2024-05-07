@@ -1,0 +1,32 @@
+!Skeleton
+Id: 6230ea0a-ff88-43e8-a547-e9b030f488cc
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Minotauro.glb
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    baf796b62dd91bbee14c43f7c7d19a51: {Name: ROOT, Depth: 0}
+    ae4c37e340123eb52514d74de256a4e3: {Name: Minotauro, Depth: 1}
+    94c1287fd49f3fd1b02963c9ceef6853: {Name: Esqueleto, Depth: 1}
+    18a0d08ccb84523221b0ff9553f6ed6a: {Name: pelvis, Depth: 2}
+    5c12278e61c9859e944222c65f794c37: {Name: columna_01, Depth: 3}
+    96ac820e7c965dc6cb8f829649431730: {Name: columna_02, Depth: 4}
+    f52e894f2d8341b196be20679cdd69a1: {Name: pecho, Depth: 5}
+    cbf92a21f47ef8ed7e2929cb3214d695: {Name: hombro.R, Depth: 6}
+    8f20e03288a431cc099fc9a92928ff9b: {Name: brazo.R, Depth: 7}
+    401665ef4ab629032b499919e0eaed83: {Name: antebrazo.R, Depth: 8}
+    1da19fc17f369447970cfb48a82dba7b: {Name: mano.R, Depth: 9}
+    cef086fc557ecd87a35d273008b383ff: {Name: cuello, Depth: 6}
+    35bf5c30665a3df6e1fabd0928d0f195: {Name: cabeza, Depth: 7}
+    0b740f3260cfa8cd71f759ee73b4aaaf: {Name: hombro.L, Depth: 6}
+    c55c073c1011a773fe9c6ea330606645: {Name: brazo.L, Depth: 7}
+    022f5bcd78532ea352f69f700b303403: {Name: antebrazo.L, Depth: 8}
+    b4fd7d0873e6e0ff2f7e89d1ed78adc5: {Name: mano.L, Depth: 9}
+    1d85faad482965b8232f657ffe446214: {Name: muslo.R, Depth: 3}
+    d137bbf41b9eca920593b81a980a9af0: {Name: canilla.R, Depth: 4}
+    8e1f5d8c85d73931cf02b8e9e343bfc5: {Name: pie.R, Depth: 5}
+    1442fd292dc853fc83b0b49c063dd627: {Name: muslo.L, Depth: 3}
+    3d874f30304706172dd9ab2514a561e5: {Name: canilla.L, Depth: 4}
+    d22aa0b0308f8ad59c897e8e5dee7971: {Name: pie.L, Depth: 5}
+~SourceHashes:
+    b0f8e96355f9b6a1cdafcea2a8846092~Minotauro.glb: e54ebecbeb33e0577826c2692268fbaf

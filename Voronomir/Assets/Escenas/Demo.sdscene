@@ -13,6 +13,7 @@ Hierarchy:
         - ref!! 00a9628e-10ba-490b-b4de-135740c5d52b
         - ref!! 614f2b4b-5916-4eef-82c7-8951ea902122
         - ref!! 41ff8583-2be9-4314-986b-7a66d760d5f7
+        - ref!! de406bde-14a8-4975-8051-a037ffe3647f
         - ref!! ed574734-d19c-4582-8145-31497e3f514d
         - ref!! f3e301de-3c24-4082-9407-c92be0463470
         - ref!! a9178381-0e65-41e7-b367-ddfb062cebe6
@@ -3373,7 +3374,7 @@ Hierarchy:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 0f9ab762-0c1e-442f-816b-21a48f2c38a1
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 596b7fcd-de12-4dce-98c8-a74321307177
-                        enemigo: rangoLigero
+                        enemigo: especialLigero
                         "armaMelé": null
                         armaRango: ref!! 3465134a-e5ea-42bb-9ce4-65f62b006cc2
                         cuerpos:
@@ -5734,6 +5735,21 @@ Hierarchy:
                     8510a4b010e6703fc9b0ae2a9d411a2e: !Voronomir.ControladorSombras,Voronomir.Proyecto
                         Id: 18b50279-c5dc-4283-bec0-cc64c97f7a84
                         luzPrincipal: ref!! 7765bd79-f781-43cf-a9c2-f4115c744cbb
+        -   Folder: MuestraEnemigos
+            Entity:
+                Id: de406bde-14a8-4975-8051-a037ffe3647f
+                Name: Minotauro
+                Components:
+                    0bf908d21ca5064d108754ed9872aa8a: !TransformComponent
+                        Id: 3f3c82cf-1d14-4082-8178-02f5f0ead523
+                        Position: {X: -6.5, Y: 0.0, Z: 15.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    46e08691f1276f81ebd4c15485efcf6f: !ModelComponent
+                        Id: 6157f9d3-a39f-44cb-8cfe-a683c87ab3ef
+                        Model: 6b232d0c-aaca-41d6-9ba7-e130a308b39e:Modelos/Enemigos/Minotauro/Minotauro
+                        Materials: {}
         -   Entity:
                 Id: defeded5-4bc3-4e00-a581-29700c408b3f
                 Name: "Partículas"
@@ -6346,7 +6362,7 @@ Hierarchy:
                 Components:
                     e2b0031d964e8fb217d93c961d8c4399: !TransformComponent
                         Id: 82c37e53-c0b6-443a-ba50-890dcc1a9daa
-                        Position: {X: -6.0, Y: 0.0, Z: 15.0}
+                        Position: {X: -8.293695, Y: 0.0, Z: 15.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: -0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
