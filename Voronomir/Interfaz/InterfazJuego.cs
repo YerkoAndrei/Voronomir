@@ -399,7 +399,7 @@ public class InterfazJuego : SyncScript
         ApagarPoderes();
 
         ControladorPartida.Pausar(false);
-        BloquearInterfaz(true);
+        BloquearInterfaz(false);
 
         txtMuerteTiempo.Text = ControladorPartida.ObtenerTextoDuración();
         panelMuerte.Visibility = Visibility.Visible;
@@ -408,7 +408,7 @@ public class InterfazJuego : SyncScript
     public void Finalizar()
     {
         ControladorPartida.Pausar(false);
-        BloquearInterfaz(true);
+        BloquearInterfaz(false);
 
         // Datos
         txtFinalNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
