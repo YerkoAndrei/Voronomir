@@ -142,7 +142,7 @@ public class ControladorPersecusión : StartupScript
         distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerPosiciónJugador());
 
         // Salto
-        if (distanciaJugador <= distanciaSalto && cuerpo.IsGrounded)
+        if (distanciaSalto > 0 && distanciaJugador <= distanciaSalto && cuerpo.IsGrounded)
             Saltar();
 
         // Ataque
@@ -183,7 +183,7 @@ public class ControladorPersecusión : StartupScript
 
     public void Saltar()
     {
-        var dirección = (ControladorPartida.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector) * 3f;
+        var dirección = (ControladorPartida.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector) * (controlador.ObtenerFuerzaSalto() * 0.25f);
         dirección.Y = controlador.ObtenerFuerzaSalto();
         cuerpo.Jump(dirección);
     }

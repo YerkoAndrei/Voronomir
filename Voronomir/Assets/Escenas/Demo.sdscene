@@ -5572,7 +5572,7 @@ Hierarchy:
                         Id: 8688afb4-7376-419b-a61d-169b36f0c5ab
                         zombi: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                         lancero: 348ffd0b-1a96-4bdb-bd14-ebd446626828:Prefabs/Enemigos/Lancero
-                        carnicero: null
+                        carnicero: f1595cc7-238a-48d9-9554-45fdbeb6f57b:Prefabs/Enemigos/Carnicero
                         pulga: 2cccb0da-7f3b-474a-9dcb-86bb06c58ab2:Prefabs/Enemigos/Pulga
                         babosa: e8ff3d35-f6b5-4e6b-8c5d-8fba8c117327:Prefabs/Enemigos/Babosa
                         "araña": "9aa19048-03e4-4927-8465-80862da8cc48:Prefabs/Enemigos/Araña"

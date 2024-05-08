@@ -58,8 +58,8 @@ public class ControladorDemo : AsyncScript
             }
             if (Input.IsKeyPressed(Keys.F3))
             {
-                //var enemigo = carnicero.Instantiate()[0];
-                //Inicializar(enemigo);
+                var enemigo = carnicero.Instantiate()[0];
+                Inicializar(enemigo);
             }
             if (Input.IsKeyPressed(Keys.F4))
             {

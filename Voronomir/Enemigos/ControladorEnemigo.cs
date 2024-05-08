@@ -43,7 +43,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
                 persecutor.Iniciar(this, 0.1f, 4f, 5f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.meléPesado:
-                //persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(),  false);
+                persecutor.Iniciar(this, 1f, 10f, 2f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(),  false);
                 break;
             case Enemigos.rangoLigero:
                 persecutor.Iniciar(this, 1f, 4f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
@@ -58,7 +58,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
                 persecutor.Iniciar(this, 1f, 16f, 0f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), true);
                 break;
             case Enemigos.especialMediano:
-                //persecutor.Iniciar(this, 1f, 1f, 1f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(),  true);
+
                 break;
             case Enemigos.especialPesado:
                 persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), true);
@@ -156,13 +156,13 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.meléMediano:
                 return 200;
             case Enemigos.meléPesado:
-                return 800;
+                return 1000;
             case Enemigos.rangoLigero:
                 return 60;
             case Enemigos.rangoMediano:
-                return 400;
-            case Enemigos.rangoPesado:
                 return 600;
+            case Enemigos.rangoPesado:
+                return 800;
             case Enemigos.especialLigero:
                 return 40;
             case Enemigos.especialMediano:
@@ -184,7 +184,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.meléMediano:
                 return 25;
             case Enemigos.meléPesado:
-                return 30;
+                return 40;
             // Rango
             case Enemigos.rangoLigero:
                 return 6;
@@ -213,7 +213,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.meléMediano:
                 return 2.5f;
             case Enemigos.meléPesado:
-                return 8f;
+                return 2f;
             case Enemigos.rangoLigero:
                 return 10f;
             case Enemigos.rangoMediano:
@@ -240,7 +240,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.meléMediano:
                 return 0.8f;
             case Enemigos.meléPesado:
-                return 0;
+                return 1.5f;
             case Enemigos.rangoLigero:
                 return 0.4f;
             case Enemigos.rangoMediano:
@@ -267,7 +267,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.meléMediano:
                 return 0.4f;
             case Enemigos.meléPesado:
-                return 0;
+                return 0.1f;
             default:
                 return 0;
         }
@@ -277,8 +277,6 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
     {
         switch (enemigo)
         {
-            case Enemigos.meléPesado:
-                return 6;
             case Enemigos.rangoLigero:
                 return 12;
             default:
@@ -290,8 +288,6 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
     {
         switch (enemigo)
         {
-            case Enemigos.meléPesado:
-                return 10;
             case Enemigos.rangoLigero:
                 return 8;
             default:

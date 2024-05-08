@@ -70,14 +70,14 @@ public class ElementoMarca : StartupScript
                 textura.Color = new Color(100, 0, 0, 200);
                 break;
             case Enemigos.meléPesado:
-                textura.SpriteProvider = ObtenerSprite(marcaFuerte);
-                textura.Entity.Transform.Scale = Vector3.One * 0.6f;
-                textura.Color = new Color(0, 0, 100, 200);
+                textura.SpriteProvider = ObtenerSprite(marcaOctágono);
+                textura.Entity.Transform.Scale = Vector3.One * 1.4f;
+                textura.Color = new Color(100, 0, 0, 200);
                 break;
             case Enemigos.rangoLigero:
-                textura.SpriteProvider = ObtenerSprite(marcaFuerte);
-                textura.Entity.Transform.Scale = Vector3.One * 0.2f;
-                textura.Color = new Color(0, 0, 100, 200);
+                textura.SpriteProvider = ObtenerSprite(marcaOctágono);
+                textura.Entity.Transform.Scale = Vector3.One * 0.6f;
+                textura.Color = new Color(0, 100, 0, 200);
                 break;
             case Enemigos.rangoMediano:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
@@ -88,6 +88,15 @@ public class ElementoMarca : StartupScript
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
                 textura.Entity.Transform.Scale = Vector3.One * 1.2f;
                 textura.Color = new Color(0, 100, 0, 200);
+                break;
+            case Enemigos.especialLigero:
+                break;
+            case Enemigos.especialMediano:
+                break;
+            case Enemigos.especialPesado:
+                textura.SpriteProvider = ObtenerSprite(marcaFuerte);
+                textura.Entity.Transform.Scale = Vector3.One * 0.6f;
+                textura.Color = new Color(0, 0, 100, 200);
                 break;
         }
 

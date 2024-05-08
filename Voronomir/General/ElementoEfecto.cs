@@ -77,6 +77,9 @@ public class ElementoEfecto : StartupScript
                 sangre.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.meléPesado:
+                sangre.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
+                sangre.Enabled = true;
+                sangre.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.rangoLigero:
                 hemolinfa.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
