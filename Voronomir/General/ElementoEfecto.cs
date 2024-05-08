@@ -77,14 +77,11 @@ public class ElementoEfecto : StartupScript
                 sangre.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.meléPesado:
-                rayos.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
-                rayos.Enabled = true;
-                rayos.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.rangoLigero:
-                rayos.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
-                rayos.Enabled = true;
-                rayos.ParticleSystem.ResetSimulation();
+                hemolinfa.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
+                hemolinfa.Enabled = true;
+                hemolinfa.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.rangoMediano:
                 sangre.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
@@ -95,6 +92,19 @@ public class ElementoEfecto : StartupScript
                 hemolinfa.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
                 hemolinfa.Enabled = true;
                 hemolinfa.ParticleSystem.ResetSimulation();
+                break;
+            case Enemigos.especialLigero:
+                rayos.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
+                rayos.Enabled = true;
+                rayos.ParticleSystem.ResetSimulation();
+                break;
+            case Enemigos.especialMediano:
+
+                break;
+            case Enemigos.especialPesado:
+                rayos.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
+                rayos.Enabled = true;
+                rayos.ParticleSystem.ResetSimulation();
                 break;
         }
 

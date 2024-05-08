@@ -1,0 +1,64 @@
+!PrefabAsset
+Id: 3985b433-ed91-43a2-88d4-ff0125cccf46
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! f698450b-5d67-4adc-9ab5-21fa1b577f1a
+    Parts:
+        -   Entity:
+                Id: f698450b-5d67-4adc-9ab5-21fa1b577f1a
+                Name: ProyectilPulga
+                Components:
+                    32b1f75000d0962d38db272c3c9501f1: !RigidbodyComponent
+                        Id: b6775ffc-35d0-415d-8b4f-863bdf7e02e3
+                        Enabled: false
+                        CollisionGroup: CustomFilter1
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: -8.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            53ccf4e4443413d37984cd184ebc6033: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    15bec10d30d73bc28a393fa9974edf68: !TransformComponent
+                        Id: 4ef7c962-9b87-47d5-9afa-ba2124eb5036
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            65bcef327949f5b575d0c1ec2a98f9a3: ref!! 1df5c2e3-c2e1-4389-a2df-6d8e985380df
+                    2f7c3e8089300ae2e8806e507c594375: !Voronomir.ElementoProyectilSimple,Voronomir.Proyecto
+                        Id: f8206215-440e-4d00-a511-70fdbf2c2814
+                        modelo: ref!! 234b8cf9-1f4e-44e0-8fa7-1e292c89eb66
+                        cola: null
+                        "partícula": null
+        -   Folder: null
+            Entity:
+                Id: fa1a189a-5ef9-492b-bd3e-346fc9956829
+                Name: Modelo
+                Components:
+                    4434603cbafdaa05f2732041b413b98b: !TransformComponent
+                        Id: 1df5c2e3-c2e1-4389-a2df-6d8e985380df
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.4, Y: 0.4, Z: 0.4}
+                        Children: {}
+                    79c97683a9b44b1d2aa39475a8794065: !ModelComponent
+                        Id: 234b8cf9-1f4e-44e0-8fa7-1e292c89eb66
+                        Model: 806ab5d9-9135-4bb0-8f4b-4d47bab525c3:Modelos/Proyectiles/Esfera/Esfera
+                        Materials:
+                            8b70fc45b87a9a98df55c76899501785~0: 6cc33e1e-db8b-4674-a9cb-cd74193afd64:Materiales/Veneno

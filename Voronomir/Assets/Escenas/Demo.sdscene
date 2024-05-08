@@ -5557,9 +5557,10 @@ Hierarchy:
                         prefabEfecto: fb5fb3aa-991f-4954-94e8-6ddbde24eb1f:Prefabs/Proyectiles/Efecto
                         prefabGranada: a3c696d3-259b-49a3-94e8-945c1671282a:Prefabs/Proyectiles/Granada
                         "prefabExplosión": "3db0a6bf-02b6-4061-8734-ac74c0c26780:Prefabs/Proyectiles/Explosión"
-                        prefabProyectilDron: af640d43-9c24-4ebd-83e0-38d09e4f84c0:Prefabs/Proyectiles/ProyectilDron
+                        prefabProyectilPulga: 3985b433-ed91-43a2-88d4-ff0125cccf46:Prefabs/Proyectiles/ProyectilPulga
                         prefabProyectilBabosa: 950b1dd4-c019-4d1b-950c-b9d49b6d11f9:Prefabs/Proyectiles/ProyectilBabosa
                         "prefabProyectilAraña": "4e523c66-cad9-49d9-8baf-b22243566c31:Prefabs/Proyectiles/ProyectilAraña"
+                        prefabProyectilDron: af640d43-9c24-4ebd-83e0-38d09e4f84c0:Prefabs/Proyectiles/ProyectilDron
                         "prefabImpactoAraña": "0813580a-18cd-48ee-b40d-7d72977e10c5:Prefabs/Proyectiles/ImpactoAraña"
                     3ba19ac87f450380cffa251b6434761f: !Voronomir.ControladorPersecusionesTrigonom%25C3%25A9tricas,Voronomir.Proyecto
                         Id: 41c4e19c-0c5b-4c55-b8b8-d2a4e05dd1f1
@@ -5571,10 +5572,12 @@ Hierarchy:
                         Id: 8688afb4-7376-419b-a61d-169b36f0c5ab
                         zombi: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                         lancero: 348ffd0b-1a96-4bdb-bd14-ebd446626828:Prefabs/Enemigos/Lancero
-                        cerebro: f89baa3b-42d2-4588-b0af-916f14d07e34:Prefabs/Enemigos/Cerebro
-                        dron: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Enemigos/Dron
+                        carnicero: null
+                        pulga: 2cccb0da-7f3b-474a-9dcb-86bb06c58ab2:Prefabs/Enemigos/Pulga
                         babosa: e8ff3d35-f6b5-4e6b-8c5d-8fba8c117327:Prefabs/Enemigos/Babosa
                         "araña": "9aa19048-03e4-4927-8465-80862da8cc48:Prefabs/Enemigos/Araña"
+                        dron: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Enemigos/Dron
+                        cerebro: f89baa3b-42d2-4588-b0af-916f14d07e34:Prefabs/Enemigos/Cerebro
         -   Entity:
                 Id: d6469b5e-a04d-4f00-8adf-79e362dcd0f4
                 Name: Lanza

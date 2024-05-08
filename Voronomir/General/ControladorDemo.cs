@@ -10,10 +10,13 @@ public class ControladorDemo : AsyncScript
 {
     public Prefab zombi;
     public Prefab lancero;
-    public Prefab cerebro;
-    public Prefab dron;
+    public Prefab carnicero;
+    public Prefab pulga;
     public Prefab babosa;
     public Prefab araña;
+    public Prefab dron;
+    //public Prefab ;
+    public Prefab cerebro;
 
     private Vector3[] posiciones;
     private int posiciónActual;
@@ -43,34 +46,48 @@ public class ControladorDemo : AsyncScript
             DebugText.Print(jugador.armas.tempoMetralleta.ToString(), new Int2(x: 20, y: 40));
             */
 
-            if (Input.IsKeyPressed(Keys.T))
+            if (Input.IsKeyPressed(Keys.F1))
             {
                 var enemigo = zombi.Instantiate()[0];
                 Inicializar(enemigo);
             }
-            if (Input.IsKeyPressed(Keys.Y))
+            if (Input.IsKeyPressed(Keys.F2))
             {
                 var enemigo = lancero.Instantiate()[0];
                 Inicializar(enemigo);
             }
-            if (Input.IsKeyPressed(Keys.U))
+            if (Input.IsKeyPressed(Keys.F3))
             {
-                var enemigo = cerebro.Instantiate()[0];
+                //var enemigo = carnicero.Instantiate()[0];
+                //Inicializar(enemigo);
+            }
+            if (Input.IsKeyPressed(Keys.F4))
+            {
+                var enemigo = pulga.Instantiate()[0];
                 Inicializar(enemigo);
             }
-            if (Input.IsKeyPressed(Keys.I))
-            {
-                var enemigo = dron.Instantiate()[0];
-                Inicializar(enemigo);
-            }
-            if (Input.IsKeyPressed(Keys.O))
+            if (Input.IsKeyPressed(Keys.F5))
             {
                 var enemigo = babosa.Instantiate()[0];
                 Inicializar(enemigo);
             }
-            if (Input.IsKeyPressed(Keys.P))
+            if (Input.IsKeyPressed(Keys.F6))
             {
                 var enemigo = araña.Instantiate()[0];
+                Inicializar(enemigo);
+            }
+            if (Input.IsKeyPressed(Keys.F7))
+            {
+                var enemigo = dron.Instantiate()[0];
+                Inicializar(enemigo);
+            }
+            if (Input.IsKeyPressed(Keys.F8))
+            {
+
+            }
+            if (Input.IsKeyPressed(Keys.F9))
+            {
+                var enemigo = cerebro.Instantiate()[0];
                 Inicializar(enemigo);
             }
             await Script.NextFrame();

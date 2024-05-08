@@ -12,9 +12,10 @@ public class ControladorCofres : StartupScript
     public Prefab prefabGranada;
     public Prefab prefabExplosión;
 
-    public Prefab prefabProyectilDron;
+    public Prefab prefabProyectilPulga;
     public Prefab prefabProyectilBabosa;
     public Prefab prefabProyectilAraña;
+    public Prefab prefabProyectilDron;
     public Prefab prefabImpactoAraña;
 
     // Marcas
@@ -35,8 +36,10 @@ public class ControladorCofres : StartupScript
     private static int maxGranadas;
     private static int maxExplosiones;
 
-    // ligero
-
+    // Pulga
+    private static IProyectil[] proyectilesPulga;
+    private static int proyectilPulgaActual;
+    private static int maxProyectilesPulga;
 
     // Babosa
     private static IProyectil[] proyectilesBabosa;
@@ -103,29 +106,37 @@ public class ControladorCofres : StartupScript
 
         // PENDIENTE: buscar cantidad enemigos
         // Cofre enemigos
+        maxProyectilesPulga = 20;
         maxProyectilesBabosa = 20;
         maxProyectilesAraña = 20;
         maxProyectilesDron = 20;
         maxImpactosAraña = maxProyectilesAraña * 2;
 
-        // Ligero
+        // Pulga
+        proyectilesPulga = new IProyectil[maxProyectilesPulga];
+        for (int i = 0; i < maxProyectilesPulga; i++)
+        {
+            var proyectil = prefabProyectilPulga.Instantiate()[0];
+            proyectilesPulga[i] = ObtenerInterfaz<IProyectil>(proyectil);
+            Entity.Scene.Entities.Add(proyectil);
+        }
 
         // Babosa
         proyectilesBabosa = new IProyectil[maxProyectilesBabosa];
         for (int i = 0; i < maxProyectilesBabosa; i++)
         {
-            var impacto = prefabProyectilBabosa.Instantiate()[0];
-            proyectilesBabosa[i] = ObtenerInterfaz<IProyectil>(impacto);
-            Entity.Scene.Entities.Add(impacto);
+            var proyectil = prefabProyectilBabosa.Instantiate()[0];
+            proyectilesBabosa[i] = ObtenerInterfaz<IProyectil>(proyectil);
+            Entity.Scene.Entities.Add(proyectil);
         }
 
         // Araña
         proyectilesAraña = new IProyectil[maxProyectilesAraña];
         for (int i = 0; i < maxProyectilesAraña; i++)
         {
-            var impacto = prefabProyectilAraña.Instantiate()[0];
-            proyectilesAraña[i] = ObtenerInterfaz<IProyectil>(impacto);
-            Entity.Scene.Entities.Add(impacto);
+            var proyectil = prefabProyectilAraña.Instantiate()[0];
+            proyectilesAraña[i] = ObtenerInterfaz<IProyectil>(proyectil);
+            Entity.Scene.Entities.Add(proyectil);
         }
         impactosAraña = new IImpacto[maxImpactosAraña];
         for (int i = 0; i < maxImpactosAraña; i++)
@@ -139,9 +150,9 @@ public class ControladorCofres : StartupScript
         proyectilesDron = new IProyectil[maxProyectilesDron];
         for (int i = 0; i < maxProyectilesDron; i++)
         {
-            var impacto = prefabProyectilDron.Instantiate()[0];
-            proyectilesDron[i] = ObtenerInterfaz<IProyectil>(impacto);
-            Entity.Scene.Entities.Add(impacto);
+            var proyectil = prefabProyectilDron.Instantiate()[0];
+            proyectilesDron[i] = ObtenerInterfaz<IProyectil>(proyectil);
+            Entity.Scene.Entities.Add(proyectil);
         }
     }
 
@@ -242,7 +253,11 @@ public class ControladorCofres : StartupScript
         switch (enemigo)
         {
             case Enemigos.rangoLigero:
+                proyectilesPulga[proyectilPulgaActual].Iniciar(daño, velocidad, rotación, posición, enemigo);
 
+                proyectilPulgaActual++;
+                if (proyectilPulgaActual >= maxProyectilesPulga)
+                    proyectilPulgaActual = 0;
                 break;
             case Enemigos.rangoMediano:
                 proyectilesBabosa[proyectilBabosaActual].IniciarPersecutor(velocidadRotación, alturaObjetivo);

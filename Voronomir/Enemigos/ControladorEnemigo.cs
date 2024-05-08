@@ -46,7 +46,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
                 //persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.rangoLigero:
-                //persecutor.Iniciar(this, 1f, 16f, 0f, ObtenerDistanciaAtaque(), false);
+                persecutor.Iniciar(this, 1f, 2f, 6f, ObtenerDistanciaAtaque(), false);
                 break;
             case Enemigos.rangoMediano:
                 persecutor.Iniciar(this, 0.2f, 2f, 3f, ObtenerDistanciaAtaque(), false);
@@ -215,7 +215,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.meléPesado:
                 return 8f;
             case Enemigos.rangoLigero:
-                return 6f;
+                return 10f;
             case Enemigos.rangoMediano:
                 return 12f;
             case Enemigos.rangoPesado:
@@ -242,7 +242,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             case Enemigos.meléPesado:
                 return 0;
             case Enemigos.rangoLigero:
-                return 0;
+                return 0.4f;
             case Enemigos.rangoMediano:
                 return 2f;
             case Enemigos.rangoPesado:
@@ -266,6 +266,8 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
                 return 0.25f;
             case Enemigos.meléMediano:
                 return 0.4f;
+            case Enemigos.meléPesado:
+                return 0;
             default:
                 return 0;
         }
@@ -276,7 +278,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         switch (enemigo)
         {
             case Enemigos.rangoLigero:
-                return 15;
+                return 20;
             case Enemigos.rangoMediano:
                 return 10;
             case Enemigos.rangoPesado:
@@ -305,11 +307,13 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         switch (enemigo)
         {
             case Enemigos.rangoLigero:
-                return Vector3.UnitY * 1.4f;
+                return Vector3.UnitY * 1.7f;
             case Enemigos.rangoMediano:
                 return Vector3.UnitY * 0.6f;
             case Enemigos.rangoPesado:
                 return Vector3.UnitY * 0.33f;
+            case Enemigos.especialLigero:
+                return Vector3.UnitY * 1.4f;
             default:
                 return Vector3.UnitY;
         }
