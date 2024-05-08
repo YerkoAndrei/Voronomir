@@ -1,4 +1,5 @@
-﻿using Stride.Core.Mathematics;
+﻿using System.Collections.Generic;
+using Stride.Core.Mathematics;
 using Stride.Engine;
 
 namespace Voronomir;
@@ -300,25 +301,16 @@ public class ControladorCofres : StartupScript
 
     public static void ApagarFísicas()
     {
-        for (int i = 0; i < maxGranadas; i++)
+        var proyectiles = new List<IProyectil>();
+        proyectiles.AddRange(granadas);
+        proyectiles.AddRange(proyectilesPulga);
+        proyectiles.AddRange(proyectilesBabosa);
+        proyectiles.AddRange(proyectilesAraña);
+        proyectiles.AddRange(proyectilesDron);
+
+        foreach (var proyectil in proyectiles)
         {
-            // Granadas
-            granadas[i].Apagar();
-        }
-        for (int i = 0; i < maxProyectilesDron; i++)
-        {
-            // Dron
-            proyectilesDron[i].Apagar();
-        }
-        for (int i = 0; i < maxProyectilesBabosa; i++)
-        {
-            // Babosa
-            proyectilesBabosa[i].Apagar();
-        }
-        for (int i = 0; i < maxProyectilesAraña; i++)
-        {
-            // Araña
-            proyectilesAraña[i].Apagar();
+            proyectil.Apagar();
         }
     }
 }

@@ -35,6 +35,7 @@ public class ControladorPersecusión : StartupScript
     private float velocidad;
     private float aceleración;
     private float distanciaAtaque;
+    private float distanciaSalto;
 
     private float tiempoRotación;
     private float velocidadRotación;
@@ -45,7 +46,7 @@ public class ControladorPersecusión : StartupScript
     private float tempoBusqueda;
     private float tiempoBusqueda;
 
-    public void Iniciar(ControladorEnemigo _controlador, float _tiempoBusqueda, float _velocidad, float _rotación, float _distanciaAtaque, bool _persecutorTrigonométrico)
+    public void Iniciar(ControladorEnemigo _controlador, float _tiempoBusqueda, float _velocidad, float _rotación, float _distanciaAtaque, float _distanciaSalto, bool _persecutorTrigonométrico)
     {
         // Busca animador
         animador = ObtenerInterfaz<IAnimador>(Entity);
@@ -60,12 +61,13 @@ public class ControladorPersecusión : StartupScript
 
         controlador = _controlador;
         tiempoBusqueda = _tiempoBusqueda;
-        tempoBusqueda = tiempoBusqueda;
+        tempoBusqueda = 0;
 
         velocidad = _velocidad;
         velocidadRotación = _rotación;
         distanciaAtaque = _distanciaAtaque;
 
+        distanciaSalto = _distanciaSalto;
         persecutorTrigonométrico = _persecutorTrigonométrico;
         if (persecutorTrigonométrico)
         {
@@ -138,7 +140,11 @@ public class ControladorPersecusión : StartupScript
 
         distanciaRuta = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ruta[índiceRuta]);
         distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerPosiciónJugador());
-        
+
+        // Salto
+        if (distanciaJugador <= distanciaSalto && cuerpo.IsGrounded)
+            Saltar();
+
         // Ataque
         if (distanciaJugador <= distanciaAtaque)
         {
@@ -148,7 +154,7 @@ public class ControladorPersecusión : StartupScript
                 return;
             }
         }
-        
+
         // Movimiento
         if (distanciaRuta > 0.1f)
         {
@@ -173,6 +179,13 @@ public class ControladorPersecusión : StartupScript
             else
                 ruta.Clear();
         }
+    }
+
+    public void Saltar()
+    {
+        var dirección = (ControladorPartida.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector) * 3f;
+        dirección.Y = controlador.ObtenerFuerzaSalto();
+        cuerpo.Jump(dirección);
     }
 
     public void ForzarPersecusiónTrigonométrica()

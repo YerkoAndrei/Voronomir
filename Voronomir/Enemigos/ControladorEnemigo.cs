@@ -37,31 +37,31 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         switch (enemigo)
         {
             case Enemigos.meléLigero:
-                persecutor.Iniciar(this, 0.1f, 7f, 6f, ObtenerDistanciaAtaque(), false);
+                persecutor.Iniciar(this, 0.1f, 7f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.meléMediano:
-                persecutor.Iniciar(this, 0.1f, 4f, 5f, ObtenerDistanciaAtaque(), false);
+                persecutor.Iniciar(this, 0.1f, 4f, 5f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.meléPesado:
-                //persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), false);
+                //persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(),  false);
                 break;
             case Enemigos.rangoLigero:
-                persecutor.Iniciar(this, 1f, 2f, 6f, ObtenerDistanciaAtaque(), false);
+                persecutor.Iniciar(this, 1f, 4f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.rangoMediano:
-                persecutor.Iniciar(this, 0.2f, 2f, 3f, ObtenerDistanciaAtaque(), false);
+                persecutor.Iniciar(this, 0.2f, 2f, 3f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.rangoPesado:
-                persecutor.Iniciar(this, 0.2f, 8f, 6f, ObtenerDistanciaAtaque(), false);
+                persecutor.Iniciar(this, 0.2f, 8f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.especialLigero:
-                persecutor.Iniciar(this, 1f, 16f, 0f, ObtenerDistanciaAtaque(), true);
+                persecutor.Iniciar(this, 1f, 16f, 0f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), true);
                 break;
             case Enemigos.especialMediano:
-                //persecutor.Iniciar(this, 1f, 1f, 1f, ObtenerDistanciaAtaque(), true);
+                //persecutor.Iniciar(this, 1f, 1f, 1f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(),  true);
                 break;
             case Enemigos.especialPesado:
-                persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), true);
+                persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), true);
                 break;
         }
     }
@@ -268,6 +268,32 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
                 return 0.4f;
             case Enemigos.meléPesado:
                 return 0;
+            default:
+                return 0;
+        }
+    }
+
+    public float ObtenerFuerzaSalto()
+    {
+        switch (enemigo)
+        {
+            case Enemigos.meléPesado:
+                return 6;
+            case Enemigos.rangoLigero:
+                return 12;
+            default:
+                return 0;
+        }
+    }
+
+    public float ObtenerDistanciaSalto()
+    {
+        switch (enemigo)
+        {
+            case Enemigos.meléPesado:
+                return 10;
+            case Enemigos.rangoLigero:
+                return 8;
             default:
                 return 0;
         }
