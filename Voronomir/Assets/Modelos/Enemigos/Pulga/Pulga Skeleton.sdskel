@@ -1,10 +1,32 @@
 !Skeleton
-Id: 2f44b4af-6930-4524-9af9-b6ddcb52c2ee
+Id: efc69f95-54aa-405b-a914-b0cafb249827
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Source: !file Pulga.glb
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Nodes:
-    580897d2a2b35c4cb3feedd38e32e871: {Name: Pulga, Depth: 0}
+    18f8a9bedb9d184cb6eb9a5b607b92e4: {Name: Esqueleto, Depth: 0}
+    a6f1286e2366af372e9db488880caca8: {Name: Pulga, Depth: 1}
+    ba7399b35c0bcd98c2de0d51c75922a3: {Name: Cuerpo, Depth: 1}
+    46d1f8022160b6cd5f4855922d7ed682: {Name: Pata.1_01.R, Depth: 2}
+    e9f75d55aef0044d98d0346721e3ce5d: {Name: Pata.1_02.R, Depth: 3}
+    db6c4afd170fcfb76ce7c85a4469d326: {Name: Pata.1_03.R, Depth: 4}
+    2ae2ad3846eb93c9195c29c26a0e5afe: {Name: Pata.2_01.R, Depth: 2}
+    41d79675f17656dc2719de655760d793: {Name: Pata.2_02.R, Depth: 3}
+    a94fc50418e1f9d5f84f2e425fbfbbe1: {Name: Pata.2_03.R, Depth: 4}
+    635203dcf5f99586c6f8053289bff872: {Name: Pata.3_01.R, Depth: 2}
+    6f113da6a4f51e1b7938446fff222c77: {Name: Pata.3_02.R, Depth: 3}
+    d9eee62074ad37c07e324d853b44c8f1: {Name: Pata.3_03.R, Depth: 4}
+    6f4094cc960c95ce4932f1e3ba171278: {Name: Cabeza, Depth: 2}
+    6418b76e43279e24b4d3d9778e0d9fcd: {Name: Pata.1_01.L, Depth: 2}
+    eccaa92163e09e0b83767387c86734f0: {Name: Pata.1_02.L, Depth: 3}
+    1541502aa981c2a9f83313bc21204d7b: {Name: Pata.1_03.L, Depth: 4}
+    fe5d23dd955226dd17b8d1cda5deb834: {Name: Pata.2_01.L, Depth: 2}
+    2a3a04b5ef41adc017f1230747bea09d: {Name: Pata.2_02.L, Depth: 3}
+    62eb4b78113c538fae498fa6ca9d1bfa: {Name: Pata.2_03.L, Depth: 4}
+    fc5a8ef4cbe1288f3af336187adbb018: {Name: Pata.3_01.L, Depth: 2}
+    79dfb4cd0f3d114ec4405650c35f18d1: {Name: Pata.3_02.L, Depth: 3}
+    333b4ee39e6dc8f7a02d46d5aca9e31a: {Name: Pata.3_03.L, Depth: 4}
+    2f156900d513a43749ebb92e703a379d: {Name: Poto, Depth: 1}
 ~SourceHashes:
-    68f9e2cc1d119a1cc7c98f0e5ad286fc~Pulga.glb: d53b0ccb96884ea3eca1d3d278a6ce7b
+    8ea64d41d31e03de4fdbcc6d82aadaeb~Pulga.glb: 0454e75120d10fe0d5f44077d68bae72

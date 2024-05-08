@@ -1,15 +1,19 @@
 !Model
-Id: 2dc126b1-212f-408b-a6c3-fcb99490097b
+Id: 00e3d6aa-59e1-4226-9f7a-1055b165e111
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Source: !file Pulga.glb
-Skeleton: 2f44b4af-6930-4524-9af9-b6ddcb52c2ee:Modelos/Enemigos/Pulga/Pulga Skeleton
+Skeleton: efc69f95-54aa-405b-a914-b0cafb249827:Modelos/Enemigos/Pulga/Pulga Skeleton
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Materials:
-    2df384b8a6ccc73a18a6a2cf36b77b58:
+    8db0676d4f45ab387358bae4d953607f:
         Name: Pulga
         MaterialInstance:
-            Material: b830911b-b21f-402d-8d9b-ca365e8e4997:Modelos/Enemigos/Pulga/Materiales/Pulga
+            Material: 2d038b98-2eeb-470b-9cba-de1e34a05e68:Modelos/Enemigos/Pulga/Materiales/Pulga
+    31e6cb65117ab9185a30d92d3fc258c4:
+        Name: Patas
+        MaterialInstance:
+            Material: 119d0636-a10f-46c1-b117-8d43cb45e559:Modelos/Enemigos/Pulga/Materiales/Patas
 Modifiers: {}
 ~SourceHashes:
-    80c5e115e649ffc9e43eb6acdaa61f1b~Pulga.glb: d53b0ccb96884ea3eca1d3d278a6ce7b
+    e31590d748648a3e5c5f82888551c151~Pulga.glb: 0454e75120d10fe0d5f44077d68bae72

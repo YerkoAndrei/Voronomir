@@ -667,12 +667,12 @@ Hierarchy:
                     58d1e0ab3962a7692275b79681512bf3: !TransformComponent
                         Id: de69db87-18b9-4c2b-93e9-cb3cba887210
                         Position: {X: 1.0, Y: 0.0, Z: 15.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     642b71e4feeb220de86e8814c9ec7fd2: !ModelComponent
                         Id: b51f9316-10dd-4dd2-8001-bc941f0c272d
-                        Model: 2dc126b1-212f-408b-a6c3-fcb99490097b:Modelos/Enemigos/Pulga/Pulga
+                        Model: 00e3d6aa-59e1-4226-9f7a-1055b165e111:Modelos/Enemigos/Pulga/Pulga
                         Materials: {}
         -   Entity:
                 Id: 1d79f511-3980-439f-a46e-d2a4089d9eba
