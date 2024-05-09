@@ -49,7 +49,7 @@ public class ControladorPoder : AsyncScript
     private void Obtener(ControladorJugador controlador)
     {
         cuerpo.Enabled = false;
-        velocidadRotación = 30;
+        velocidadRotación = 50;
         controlador.ActivarPoder(poder);
 
         AnimarFin();
