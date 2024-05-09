@@ -57,6 +57,7 @@ public class ElementoMarca : StartupScript
 
     public void IniciarMarcaMuerte(Enemigos enemigo, Vector3 posición, Vector3 normal)
     {
+        var crear = true;
         switch (enemigo)
         {
             case Enemigos.meléLigero:
@@ -90,6 +91,7 @@ public class ElementoMarca : StartupScript
                 textura.Color = new Color(0, 100, 0, 200);
                 break;
             case Enemigos.especialLigero:
+                crear = false;
                 break;
             case Enemigos.especialMediano:
                 break;
@@ -99,6 +101,9 @@ public class ElementoMarca : StartupScript
                 textura.Color = new Color(0, 0, 100, 200);
                 break;
         }
+
+        if (!crear)
+            return;
 
         textura.Enabled = true;
         Entity.Transform.Position = posición + (normal * 0.001f);
