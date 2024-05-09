@@ -5,11 +5,13 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Voronomir;
+using static Utilidades;
 using static Constantes;
 
 public class ControladorEnemigo : SyncScript, IDañable, IActivable
 {
     public Enemigos enemigo;
+    public bool invisible;
     public List<RigidbodyComponent> cuerpos { get; set; }
 
     public ControladorArmaMelé armaMelé;
@@ -17,6 +19,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
 
     private CharacterComponent cuerpo;
     private ControladorPersecusión persecutor;
+    private IAnimador animador;
     private float vida;
     private bool despierto;
     private bool activo;
@@ -29,6 +32,16 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         despierto = false;
         activo = false;
 
+        // Busca animador
+        animador = ObtenerInterfaz<IAnimador>(Entity);
+        animador.Iniciar();
+
+        if (invisible)
+        {
+            cuerpo.Enabled = false;
+            animador.Activar(false);
+        }
+
         if (armaMelé != null)
             armaMelé.Iniciar(ObtenerDaño());
         else if (armaRango != null)
@@ -37,31 +50,31 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         switch (enemigo)
         {
             case Enemigos.meléLigero:
-                persecutor.Iniciar(this, 0.1f, 7f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
+                persecutor.Iniciar(this, animador, 0.1f, 7f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.meléMediano:
-                persecutor.Iniciar(this, 0.1f, 4f, 5f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
+                persecutor.Iniciar(this, animador, 0.1f, 4f, 5f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.meléPesado:
-                persecutor.Iniciar(this, 1f, 10f, 2f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(),  false);
+                persecutor.Iniciar(this, animador, 1f, 10f, 2f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(),  false);
                 break;
             case Enemigos.rangoLigero:
-                persecutor.Iniciar(this, 1f, 4f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
+                persecutor.Iniciar(this, animador, 1f, 4f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.rangoMediano:
-                persecutor.Iniciar(this, 0.2f, 2f, 3f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
+                persecutor.Iniciar(this, animador, 0.2f, 2f, 3f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.rangoPesado:
-                persecutor.Iniciar(this, 0.2f, 8f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
+                persecutor.Iniciar(this, animador, 0.2f, 8f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.especialLigero:
-                persecutor.Iniciar(this, 1f, 16f, 0f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), true);
+                persecutor.Iniciar(this, animador, 1f, 16f, 0f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), true);
                 break;
             case Enemigos.especialMediano:
 
                 break;
             case Enemigos.especialPesado:
-                persecutor.Iniciar(this, 1f, 10f, 4f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), true);
+                persecutor.Iniciar(this, animador, 1f, 10f, 4f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), true);
                 break;
         }
     }
@@ -70,6 +83,13 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
     {
         if (despierto)
             return;
+
+        if (invisible)
+        {
+            cuerpo.Enabled = true;
+            animador.Activar(true);
+            ControladorCofres.IniciarAparición(enemigo, Entity.Transform.WorldMatrix.TranslationVector);
+        }
 
         despierto = true;
         activo = true;

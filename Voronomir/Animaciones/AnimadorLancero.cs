@@ -10,6 +10,7 @@ namespace Voronomir;
 public class AnimadorLancero : StartupScript, IAnimador
 {
     public ModelComponent modelo;
+    public ModelComponent modeloLanza;
     public TransformComponent lanza;
     public List<string> brazos = new List<string> { };
     public List<string> piernas = new List<string> { };
@@ -60,6 +61,12 @@ public class AnimadorLancero : StartupScript, IAnimador
     public void Actualizar()
     {
 
+    }
+
+    public void Activar(bool activar)
+    {
+        modelo.Enabled = activar;
+        modeloLanza.Enabled = activar;
     }
 
     public void Caminar(float velocidad)

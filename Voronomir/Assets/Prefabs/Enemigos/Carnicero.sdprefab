@@ -225,6 +225,7 @@ Hierarchy:
                     954d0ff008c5bbb1b96abc5e37c5fa11: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 2a11c1c0-1720-4b8c-92e9-9cfcadf327b8
                         enemigo: "meléPesado"
+                        invisible: false
                         "armaMelé": ref!! cecf82e1-f198-4faa-b03f-2b96ce3c6b26
                         armaRango: null
                         cuerpos:
@@ -239,7 +240,7 @@ Hierarchy:
                             46db9bbd737517563d412dfb1480cd92: ref!! ca139aa5-c0cb-4928-8ec0-639775718d76
                     687581e2307681c826d156c78271ab5f: !Voronomir.AnimadorCarnicero,Voronomir.Proyecto
                         Id: 44dea43f-e730-492d-aa3b-32ba51539e35
-                        modelo: ref!! 869d7a0f-ec0e-4d4c-a14b-06718c4c201d
+                        modelo: ref!! 53795824-656e-4952-9c2d-87b036f8e4d4
         -   Folder: null
             Entity:
                 Id: dcbc7ff8-ca31-41aa-bcb6-855d91a14965

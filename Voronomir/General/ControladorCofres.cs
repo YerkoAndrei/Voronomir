@@ -218,6 +218,15 @@ public class ControladorCofres : StartupScript
             efectoActual = 0;
     }
 
+    public static void IniciarAparición(Enemigos enemigo, Vector3 posición)
+    {
+        efectos[efectoActual].IniciarAparición(enemigo, posición);
+        efectoActual++;
+
+        if (efectoActual >= maxEfectos)
+            efectoActual = 0;
+    }
+
     public static void IniciarGranada(float daño, float velocidad, Vector3 posición, Quaternion rotación)
     {
         granadas[granadaActual].Iniciar(daño, velocidad, rotación, posición, Enemigos.nada);

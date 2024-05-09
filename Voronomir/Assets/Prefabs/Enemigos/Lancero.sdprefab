@@ -194,6 +194,7 @@ Hierarchy:
                     954d0ff008c5bbb1b96abc5e37c5fa11: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 0cb46007-db80-4631-9727-8e0d24bbf462
                         enemigo: "meléMediano"
+                        invisible: false
                         "armaMelé": ref!! c8a68cc4-275d-480b-be50-241f5096c1e5
                         armaRango: null
                         cuerpos:
@@ -209,6 +210,7 @@ Hierarchy:
                     6731dbc2021f9caf46d335ba7756cfe5: !Voronomir.AnimadorLancero,Voronomir.Proyecto
                         Id: 099538ca-7eff-4097-b7e6-48ba06f09c12
                         modelo: ref!! b237a84c-cf40-4a01-a1a8-d03e00dbe523
+                        modeloLanza: ref!! 6692d722-47a8-43e8-aae4-13a906c898d9
                         lanza: ref!! 7144186d-b962-4877-832b-4a5acf0e4726
                         brazos:
                             47c2a11bbdfba4a5f129699ad7e976f7: brazo.L

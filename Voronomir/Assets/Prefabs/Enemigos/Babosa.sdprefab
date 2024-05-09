@@ -169,6 +169,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 56c9107d-eaae-434c-96ea-6d9d41abbeac
                         enemigo: rangoMediano
+                        invisible: false
                         "armaMelé": null
                         armaRango: ref!! d7fc863f-43cd-4879-a47f-ea890762fdc2
                         cuerpos:
@@ -184,7 +185,7 @@ Hierarchy:
                             c2532f61544fea6a8da111d60b332666: ref!! 981f9228-bcc6-4442-89b4-e15da243d96c
                     a1ce091ce9222f61cea38175f0566423: !Voronomir.AnimadorBabosa,Voronomir.Proyecto
                         Id: d664d70d-922d-4bc2-a36b-a9248faf0b96
-                        modelo: ref!! 713e1b7d-f71c-4e42-8a80-6b226356d591
+                        modelo: ref!! 4c4cba65-7576-43a9-8e06-ed3870fa32f5
         -   Entity:
                 Id: 9f545b3c-2af1-461f-91fd-64ab709d1b5c
                 Name: OjoIzq

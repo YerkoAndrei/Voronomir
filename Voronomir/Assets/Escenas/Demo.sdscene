@@ -477,6 +477,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 9cde4a2f-82be-42ef-8bc1-62b5d6c3399a
                         enemigo: "meléLigero"
+                        invisible: false
                         "armaMelé": ref!! 0a27d0de-50df-46fe-afb5-0621eb2f636e
                         armaRango: null
                         cuerpos:
@@ -1042,6 +1043,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 88ff69db-fc94-4595-bcde-e5707bfe8b97
                         enemigo: "meléLigero"
+                        invisible: false
                         "armaMelé": ref!! 7fd9ec35-6b91-41d4-9f2d-d58306892cef
                         armaRango: null
                         cuerpos:
@@ -3482,6 +3484,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 596b7fcd-de12-4dce-98c8-a74321307177
                         enemigo: especialLigero
+                        invisible: false
                         "armaMelé": null
                         armaRango: ref!! 3465134a-e5ea-42bb-9ce4-65f62b006cc2
                         cuerpos:
@@ -3493,7 +3496,9 @@ Hierarchy:
                             4db60a51e1f224185a1f775371f2eeb2: ref!! 44b40718-202e-4536-be60-a8b2232fc621
                     f8a8bea51b0be6e7628afcbf94a7d8aa: !Voronomir.AnimadorDron,Voronomir.Proyecto
                         Id: e25d5d82-aad9-4021-ada7-dd61545f49ac
-                        modelo: ref!! 0f9ab762-0c1e-442f-816b-21a48f2c38a1
+                        transform: ref!! 0f9ab762-0c1e-442f-816b-21a48f2c38a1
+                        modelo: ref!! 7defe9f0-fce3-495f-b688-2909e97e4504
+                        "partículas": ref!! f61a2bfc-9115-4b3e-b490-0137d0bcb549
             Base:
                 BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Enemigos/Dron
                 BasePartId: c9de616d-fc44-4005-a31a-6d8dcd5084c0
@@ -6084,6 +6089,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: dceff8dd-5792-46e3-8a58-c917bddf362d
                         enemigo: "meléLigero"
+                        invisible*: true
                         "armaMelé": ref!! 0bb36b1b-0609-4ae8-9c0c-85288f5de32f
                         armaRango: null
                         cuerpos:

@@ -246,6 +246,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: e54a000a-7d20-48df-898b-5fced74ce053
                         enemigo: especialLigero
+                        invisible: false
                         "armaMelé": null
                         armaRango: ref!! 7c0c0baa-c7d8-4edc-bfe9-0f947660bd35
                         cuerpos:
@@ -257,4 +258,6 @@ Hierarchy:
                             4db60a51e1f224185a1f775371f2eeb2: ref!! 58cad4ee-090a-49ea-89ec-2267b4ae444b
                     f8a8bea51b0be6e7628afcbf94a7d8aa: !Voronomir.AnimadorDron,Voronomir.Proyecto
                         Id: d69fa50d-19f7-4b98-a773-c6ee979a51b7
-                        modelo: ref!! 07e87824-3863-43ff-971b-5642118571c8
+                        transform: ref!! 07e87824-3863-43ff-971b-5642118571c8
+                        modelo: ref!! ac260142-919c-4d8b-a867-56b5a16854c7
+                        "partículas": ref!! 1cb652a3-0fc2-49b3-af92-c9464f98c40c

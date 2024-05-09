@@ -6,7 +6,6 @@ using Stride.Navigation;
 using Stride.Physics;
 
 namespace Voronomir;
-using static Utilidades;
 
 public class ControladorPersecusión : StartupScript
 {
@@ -46,12 +45,9 @@ public class ControladorPersecusión : StartupScript
     private float tempoBusqueda;
     private float tiempoBusqueda;
 
-    public void Iniciar(ControladorEnemigo _controlador, float _tiempoBusqueda, float _velocidad, float _rotación, float _distanciaAtaque, float _distanciaSalto, bool _persecutorTrigonométrico)
+    public void Iniciar(ControladorEnemigo _controlador, IAnimador _animador, float _tiempoBusqueda, float _velocidad, float _rotación, float _distanciaAtaque, float _distanciaSalto, bool _persecutorTrigonométrico)
     {
-        // Busca animador
-        animador = ObtenerInterfaz<IAnimador>(Entity);
-        animador.Iniciar();
-
+        animador = _animador;
         colisionesMirada = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.CharacterFilter;
         cuerpo = Entity.Get<CharacterComponent>();
         navegador = Entity.Get<NavigationComponent>();

@@ -77,6 +77,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 33474d78-5041-4ac7-8270-b4389db1d87b
                         enemigo: rangoLigero
+                        invisible: false
                         "armaMelé": null
                         armaRango: ref!! 371895d5-3862-425c-9c79-d3df8f232842
                         cuerpos:
@@ -88,7 +89,7 @@ Hierarchy:
                             4db60a51e1f224185a1f775371f2eeb2: ref!! dd4e8b56-e62e-4446-991d-59e9db54358c
                     c723158e71ae60a899c9a7879438eb2d: !Voronomir.AnimadorPulga,Voronomir.Proyecto
                         Id: 619d679a-65d4-462b-ac1f-33d406d86c41
-                        modelo: ref!! 1243bde9-95c7-4d8b-a2e9-95055a81a858
+                        modelo: ref!! d18919cc-5ead-442c-bcb6-c44f869a2ba5
         -   Folder: null
             Entity:
                 Id: b50ae1a7-ea9b-414b-9d00-3c0a9796dbc8

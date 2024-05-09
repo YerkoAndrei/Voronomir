@@ -356,6 +356,7 @@ Hierarchy:
                     dde0c8ec0d35e0e851f71b7539019f93: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: bf1bd434-6b18-4668-9491-2a73bd7031e4
                         enemigo: especialPesado
+                        invisible: false
                         "armaMelé": null
                         armaRango: null
                         cuerpos:
@@ -370,6 +371,10 @@ Hierarchy:
                     1dd64e1afcd5512cedf9e97ef1931ca5: !Voronomir.AnimadorCerebro,Voronomir.Proyecto
                         Id: a63307c3-bda5-4b9a-9601-55a51fc27887
                         rueda: ref!! 2f42f099-981c-463c-967d-0db778a7ebba
+                        modelos:
+                            a5d171ca5a62c66362aa02b7a81ebab0: ref!! fac3214c-fe70-406b-a095-bed2c63fd8fb
+                            ecff80b0fac0ec2b368f6d056e6ae965: ref!! 6ebf5e89-67f5-48e6-a778-fab520d51d82
+                            f49c40c4e250c9751031466e80e37013: ref!! 76401dda-ec5b-441f-98c0-f55928eb29b9
         -   Folder: null
             Entity:
                 Id: edbfe97a-f7ca-4741-8daf-861fb66dc9e0

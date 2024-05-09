@@ -5,7 +5,7 @@ namespace Voronomir;
 
 public class AnimadorBabosa : StartupScript, IAnimador
 {
-    public TransformComponent modelo;
+    public ModelComponent modelo;
 
 	public void Iniciar()
     {
@@ -14,6 +14,12 @@ public class AnimadorBabosa : StartupScript, IAnimador
 
     public void Actualizar()
     {
+
+    }
+
+    public void Activar(bool activar)
+    {
+        modelo.Enabled = activar;
     }
 
     public void Caminar(float velocidad)
