@@ -98,7 +98,7 @@ Hierarchy:
                         Id: 4f08475b-56a1-413d-8ae9-26cdbaed7bee
                         Position: {X: 0.0, Y: 0.5, Z: -0.7}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.9, Y: 0.9, Z: 0.9}
+                        Scale: {X: 0.8, Y: 0.9, Z: 1.5}
                         Children: {}
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: e2b9bdf0-087e-4a8d-be9b-836bc5b2357d
@@ -119,10 +119,9 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !CapsuleColliderShapeDesc
-                                Length: 0.7
-                                Radius: 0.5
-                                Orientation: UpZ
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto

@@ -6,6 +6,84 @@ Hierarchy:
     RootParts:
         - ref!! 7775d43f-4a74-4716-9411-e498e7159645
     Parts:
+        -   Entity:
+                Id: 0d1127c3-5de7-430c-9d3b-7b886172ea6f
+                Name: "Dañable cabeza"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 4b36c08e-4fa2-47bc-a637-5d7d9193241e
+                        Position: {X: 0.0, Y: 2.8, Z: 0.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.4, Y: 0.4, Z: 0.35}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: cd1d54f8-eecf-4389-8d1f-29ee93408348
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: 521a87a3-4123-4060-966a-4509b08569da
+                        controlador: ref!! 7775d43f-4a74-4716-9411-e498e7159645
+                        "inmunidadExplosión": true
+                        multiplicador: 1.2
+        -   Entity:
+                Id: 36b6763d-3086-4325-badc-e78277839f8e
+                Name: "Dañable torso"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 0845d57c-58d5-45ea-93c9-8d42853acd64
+                        Position: {X: 0.0, Y: 2.05, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.1, Y: 1.8, Z: 0.6}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 33797a56-c7c8-4b61-9e7e-7b04f0d21e49
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: c0e652bb-ff12-4a05-8ae7-cef9c88b6de7
+                        controlador: ref!! 7775d43f-4a74-4716-9411-e498e7159645
+                        "inmunidadExplosión": false
+                        multiplicador: 1.0
         -   Folder: null
             Entity:
                 Id: 3cd33641-ee09-40cb-a62e-bfa8ffdb5191
@@ -64,6 +142,46 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4764e3bbc5ced29d8cec24362b6b5f3c: !Voronomir.ControladorArmaMel%25C3%25A9,Voronomir.Proyecto
                         Id: cecf82e1-f198-4faa-b03f-2b96ce3c6b26
+        -   Folder: null
+            Entity:
+                Id: 6f46ead0-758f-4650-97cb-ed83b9cfba60
+                Name: "Dañable piernas"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: e40cc6e9-d1c6-47df-ab75-b6c14b855c4d
+                        Position: {X: 0.0, Y: 0.55, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.9, Y: 1.1, Z: 0.5}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: b95240ff-2842-485d-9d0c-77f7cb0c2f30
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: b7d781de-86fe-47ee-bfff-2b8546cf3266
+                        controlador: ref!! 7775d43f-4a74-4716-9411-e498e7159645
+                        "inmunidadExplosión": true
+                        multiplicador: 0.5
         -   Entity:
                 Id: 7775d43f-4a74-4716-9411-e498e7159645
                 Name: Carnicero
@@ -110,7 +228,9 @@ Hierarchy:
                         "armaMelé": ref!! cecf82e1-f198-4faa-b03f-2b96ce3c6b26
                         armaRango: null
                         cuerpos:
-                            c9b14b227e668793819166799f08a25e: ref!! 3f41f5b9-bf5f-4a96-a5ee-1f45770ace25
+                            c9b14b227e668793819166799f08a25e: ref!! cd1d54f8-eecf-4389-8d1f-29ee93408348
+                            c040a6596ec1950958c9a76337fd3810: ref!! 33797a56-c7c8-4b61-9e7e-7b04f0d21e49
+                            3bb38a855f15d16b6653d407835b1f2d: ref!! b95240ff-2842-485d-9d0c-77f7cb0c2f30
                     e42c151e94d68ac78484fc9361011f5c: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: f2e027db-f03e-4519-b7f8-fdfb0a068d61
                         "estático": false
@@ -137,46 +257,6 @@ Hierarchy:
                         Materials: {}
         -   Folder: null
             Entity:
-                Id: f6872a99-8ef6-47b4-947f-29f190027200
-                Name: "Dañable torso"
-                Components:
-                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
-                        Id: c676ed20-9963-40a0-b4d4-ab077f2b90ce
-                        Position: {X: 0.0, Y: 1.5, Z: 0.1}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.8, Y: 3.0, Z: 0.6}
-                        Children: {}
-                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
-                        Id: 3f41f5b9-bf5f-4a96-a5ee-1f45770ace25
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
-                        Id: 1949ff20-6b28-4ea4-b342-d2e192efd0dd
-                        controlador: ref!! 7775d43f-4a74-4716-9411-e498e7159645
-                        "inmunidadExplosión": false
-                        multiplicador: 1.0
-        -   Folder: null
-            Entity:
                 Id: faf2e103-c3ae-45b5-8a20-d79eb424e3d1
                 Name: "Dañables"
                 Components:
@@ -186,4 +266,6 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            274570ec839d03441939b84ca63d1199: ref!! c676ed20-9963-40a0-b4d4-ab077f2b90ce
+                            02741dad3b3dc6ee52bdd1e959d8f7dd: ref!! 4b36c08e-4fa2-47bc-a637-5d7d9193241e
+                            10808fbf769d1af4e12f818314e61620: ref!! 0845d57c-58d5-45ea-93c9-8d42853acd64
+                            2e2e3f44834d962ed3b5235004c20694: ref!! e40cc6e9-d1c6-47df-ab75-b6c14b855c4d
