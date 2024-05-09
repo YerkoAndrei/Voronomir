@@ -6,7 +6,7 @@ namespace Voronomir;
 
 public interface IDañable
 {
-    public List<RigidbodyComponent> cuerpos { get; set; }
+    public List<RigidbodyComponent> dañables { get; set; }
     public void RecibirDaño(float daño);
     public void Empujar(Vector3 dirección);
 }

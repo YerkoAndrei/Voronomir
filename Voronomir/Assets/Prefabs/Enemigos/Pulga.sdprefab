@@ -80,8 +80,8 @@ Hierarchy:
                         invisible: false
                         "armaMelé": null
                         armaRango: ref!! 371895d5-3862-425c-9c79-d3df8f232842
-                        cuerpos:
-                            ad5f371af09d736586a420c788f25eaf: ref!! e2b9bdf0-087e-4a8d-be9b-836bc5b2357d
+                        "dañables":
+                            53a4dc0fc15c01ea8cafb9a46d269048: ref!! e2b9bdf0-087e-4a8d-be9b-836bc5b2357d
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: dfe8fe9b-e020-4144-b8f5-9dc6becbfb75
                         "estático": false

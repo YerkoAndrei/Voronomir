@@ -752,8 +752,8 @@ Hierarchy:
                         Id: 7697bae4-e288-40f2-bf34-020e8b7344f8
                         cabeza: ref!! e7e6b6ac-7363-4aeb-9582-a1e16e76b1ae
                         "cámara": ref!! c94d7988-37c0-4840-b16f-27912a8f4a17
-                        cuerpos:
-                            7390e727d4bb096c99284e317d4920a8: ref!! 46a8499f-bade-47ce-b262-c1612fe5be71
+                        "dañables":
+                            ba2b9f89422b6516b0a6206de72ff831: ref!! 46a8499f-bade-47ce-b262-c1612fe5be71
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 0f68b383-7401-4067-8520-9e9ff0ddfc18
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}

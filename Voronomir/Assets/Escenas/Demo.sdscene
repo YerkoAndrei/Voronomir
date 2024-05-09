@@ -49,9 +49,9 @@ Hierarchy:
         - ref!! 13515e4b-abd3-4110-8493-464d7ceea6ed
         - ref!! 5f2be316-c335-4e47-94e2-616f939d5d8c
         - ref!! 347bd0cd-f2ad-4c4b-a987-27846fe13532
-        - ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
-        - ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
-        - ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
+        - ref!! 293f7583-6c3c-4921-a3ca-4853773072d5
+        - ref!! 9003c97f-e6c6-4e78-ba13-390eef43db89
+        - ref!! 9466ef07-c364-447b-94db-14d4447fda74
         - ref!! 8453a3e0-4d61-4f66-950c-12fa89c30bac
         - ref!! 713070be-902c-4072-88c3-994978523f77
         - ref!! 8dcfbf63-872c-4767-b5d4-c444770e99f8
@@ -236,6 +236,42 @@ Hierarchy:
                 InstanceId: 0099e264-d3bb-4e4a-9d61-761cd03349de
         -   Folder: null
             Entity:
+                Id: 0741208b-13bd-45f9-8946-b289c1fbc760
+                Name: "Dañables"
+                Components:
+                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
+                        Id: b7d9d158-03d1-48b2-b836-63a33a12ff18
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            2ad6cd5c446016fa97595be8d4955232: ref!! cc54e762-f6c5-43dc-a417-46db4bcf6f3b
+                            428cdd007aef582d1f4a5effd1c6bf49: ref!! fbfb7906-1124-4ffc-ba4c-09e105671345
+                            274570ec839d03441939b84ca63d1199: ref!! 5ecdc69e-f75e-40be-8e55-c4a9f8a79389
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
+                InstanceId: 5e87710b-8767-46b6-a137-8996c846998b
+        -   Folder: null
+            Entity:
+                Id: 0751af3f-7f72-4a32-ba5f-2591fb0664e6
+                Name: "Dañables"
+                Components:
+                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
+                        Id: e7426f2d-f038-4b97-80ab-353827230af7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            2ad6cd5c446016fa97595be8d4955232: ref!! cfdb5e0d-7f90-449d-9e6c-beeab16370d3
+                            428cdd007aef582d1f4a5effd1c6bf49: ref!! d27a42b8-c7aa-4936-9569-79a27051dcc9
+                            274570ec839d03441939b84ca63d1199: ref!! 5e198d7f-7b23-431a-b433-fcb12f31660a
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
+                InstanceId: fc0d6ee1-e034-4860-b925-6232f35f9f31
+        -   Folder: null
+            Entity:
                 Id: 07ad3fc9-6538-4846-9a71-a2f7abac8b74
                 Name: Espada
                 Components:
@@ -254,49 +290,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 855d46ad-e0df-46e0-a435-46753f797211
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
-        -   Entity:
-                Id: 0800101e-0e5d-42a2-a198-a84cde239dae
-                Name: "Dañable torso"
-                Components:
-                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
-                        Id: 941fc714-b959-4b2e-8dc3-d418e3e8562b
-                        Position: {X: 0.0, Y: 1.32, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.8, Z: 0.3}
-                        Children: {}
-                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
-                        Id: 5b1bd07b-70b6-475e-840d-c15e1ce66d8d
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
-                        Id: 94ec98a8-6e4b-4399-846d-ee35c90fddde
-                        controlador: ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
-                        "inmunidadExplosión": false
-                        multiplicador: 1.0
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 1cb886b6-cff7-4034-9eda-9023f8f94cd1
-                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
         -   Folder: null
             Entity:
                 Id: 089e6c39-a3da-443c-97d7-437659f63eff
@@ -340,50 +333,6 @@ Hierarchy:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
                 InstanceId: 10396d09-c3d0-4716-b888-450afcf55538
-        -   Folder: null
-            Entity:
-                Id: 08fc2677-0f04-4037-909f-2cc3e7811ef1
-                Name: "Dañable piernas"
-                Components:
-                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
-                        Id: eba11905-eac7-4d02-9bcd-f872ccc3b33a
-                        Position: {X: 0.0, Y: 0.45954072, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.4, Y: 0.9, Z: 0.2}
-                        Children: {}
-                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
-                        Id: 74fdb046-7a71-4173-8795-18dd6dce0e8b
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
-                        Id: 9cb61b7b-8dc9-49c6-a12e-2dc1fdbe6635
-                        controlador: ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
-                        "inmunidadExplosión": true
-                        multiplicador: 0.5
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
-                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
         -   Folder: null
             Entity:
                 Id: 10c26f8f-3be3-476c-aa70-fbc9af6600d1
@@ -434,74 +383,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: ae26fb61-6490-4523-8dc8-10162f73c79a
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
-        -   Folder: Grupo01
-            Entity:
-                Id: 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
-                Name*: Zombi 2
-                Components:
-                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
-                        Id: 51e1af36-28b1-4e6f-ab4b-07e1b3481c94
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        StepHeight: 0.25
-                        FallSpeed: 20.0
-                        MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 15.0
-                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
-                        ColliderShapes:
-                            ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
-                                Length: 1.2
-                                Radius: 0.4
-                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
-                        Id: 8d29016e-2edd-4555-80a3-cf93db3163f7
-                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
-                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
-                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
-                        Id: 064c01ad-fbc4-4abd-8fb6-b658da9d0ebb
-                        Position*: {X: 2.0, Y: 0.0, Z: -3.5}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            f14eafd2887605601cb783e4e612d427: ref!! 10b96e19-8814-46c1-bc55-9c2171c819ad
-                            b0616bd3e59c50d54fa88ad23e8366f7: ref!! 2bf3f90e-2146-4e67-9bb0-db4fda703230
-                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 4e4cc16a-55d4-4eb3-97d6-33016a35e30c
-                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! dd2cba02-7e76-418b-b527-6fb6c885c15e
-                    7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
-                        Id: 9cde4a2f-82be-42ef-8bc1-62b5d6c3399a
-                        enemigo: "meléLigero"
-                        invisible: false
-                        "armaMelé": ref!! 0a27d0de-50df-46fe-afb5-0621eb2f636e
-                        armaRango: null
-                        cuerpos:
-                            ad5f371af09d736586a420c788f25eaf: null
-                            9149851558301df51c96fef221d01b51: ref!! 5b1bd07b-70b6-475e-840d-c15e1ce66d8d
-                            a1d02110d78b01331e7e7dc7ff7d9b12: ref!! e14ba89c-246f-4513-a694-5bee9ca9d27d
-                    33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
-                        Id: 90e841ff-0145-412d-9ff5-5c44bfe97d31
-                        "estático": false
-                        ojos:
-                            44e390ec37f8924a7039eeab0e0141fc: ref!! 2bf3f90e-2146-4e67-9bb0-db4fda703230
-                    dcfc61066510852ac085b2f68892da9c: !Voronomir.AnimadorZombi,Voronomir.Proyecto
-                        Id: 4943d905-f50c-49a4-a2eb-283bd74ace12
-                        modelo: ref!! 733a460c-1f9a-4401-b759-12d9b996c64f
-                        brazos:
-                            d5e5d05836e952ab9b8d7b3c1a2be51e: brazo.L
-                            64022d1c494de0222385fdafef680dc4: brazo.R
-                        piernas:
-                            e1fa468402b498fdc635e4bc98c6f42b: muslo.L
-                            980a0b5184eece1987ea9a444454fbc2: muslo.R
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
-                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
         -   Folder: null
             Entity:
                 Id: 120ed277-7701-42d1-a21a-c8b2254e6289
@@ -846,50 +727,6 @@ Hierarchy:
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
         -   Folder: null
             Entity:
-                Id: 1e2b7127-3ce7-4e63-bff3-3ab670ff9699
-                Name: "Dañable piernas"
-                Components:
-                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
-                        Id: e7ca49a4-37b2-4c2e-a5a7-eeba4ebf152a
-                        Position: {X: 0.0, Y: 0.45954072, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.4, Y: 0.9, Z: 0.2}
-                        Children: {}
-                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
-                        Id: 64de43ef-79d6-4568-8ab0-2b80c3cdf7aa
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
-                        Id: 283e1a13-5282-4cc9-81be-e952acd02ca7
-                        controlador: ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
-                        "inmunidadExplosión": true
-                        multiplicador: 0.5
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
-                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
-        -   Folder: null
-            Entity:
                 Id: 1e3cce1c-e0ae-41ae-93b5-57ed6713228d
                 Name: Izquierda
                 Components:
@@ -942,6 +779,24 @@ Hierarchy:
                         Id: dd794269-8824-4994-9c86-7ee26b13fed0
                         Model: 42f01256-b2f0-4d1d-b81d-719b59cf45c5:Modelos/Enemigos/Cerebro/Rueda
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 24db3f26-7269-47e6-b926-c9753227d15d
+                Name: "Dañables"
+                Components:
+                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
+                        Id: 8673c616-a88a-4c12-a46a-3e9299ad18e8
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            2ad6cd5c446016fa97595be8d4955232: ref!! 605282d3-0b49-418a-94c5-f50a46839f80
+                            428cdd007aef582d1f4a5effd1c6bf49: ref!! 4f790d3a-4b3d-4711-b9b6-b9a5dab26232
+                            274570ec839d03441939b84ca63d1199: ref!! 2b0c62c9-ef6e-455d-9bfd-7136325785bd
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
+                InstanceId: 09a48882-bda0-4afb-b531-69859893d44a
         -   Entity:
                 Id: 26ce6f3f-2202-40ae-a9fc-481d6a6f7495
                 Name: Jugador
@@ -971,8 +826,8 @@ Hierarchy:
                         Id: 6f366a40-a7cf-4031-bcf9-b6d17ce214d2
                         cabeza: ref!! a0b3f98f-2764-44c6-be18-c8ee43f5d9ba
                         "cámara": ref!! 2252214f-6036-4ac3-b0d4-fa427cd7456d
-                        cuerpos:
-                            7390e727d4bb096c99284e317d4920a8: ref!! 606a17c9-924a-4512-8e4f-49eb8341921d
+                        "dañables":
+                            ba2b9f89422b6516b0a6206de72ff831: ref!! 606a17c9-924a-4512-8e4f-49eb8341921d
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: e3576cb5-c000-45aa-8fc7-3d32786ba8cf
                         Position*: {X: 0.0, Y: 0.0, Z: 4.0}
@@ -1002,11 +857,11 @@ Hierarchy:
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
         -   Folder: Grupo01
             Entity:
-                Id: 2707f98b-4945-4cfb-9a7a-6ae13692cab4
+                Id: 293f7583-6c3c-4921-a3ca-4853773072d5
                 Name*: Zombi 0
                 Components:
                     4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
-                        Id: 5105a398-1adc-4764-a9dd-09826af890ea
+                        Id: f5f064d7-bacc-47bb-928f-2edb041cd4b4
                         CollisionGroup: KinematicFilter
                         CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
                         CanSleep: false
@@ -1027,37 +882,37 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
-                        Id: b601a98a-357d-41b6-a814-7eca9a54aee3
+                        Id: e8d2af2e-8aa0-4b34-98f2-95932aed2a7d
                         NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
-                        Id: 3717bf1d-1943-4fef-80a5-17de44b70f40
-                        Position*: {X: -2.0, Y: 0.0, Z: -3.5}
+                        Id: 38fc10a2-2f72-4b6d-897f-71702408528a
+                        Position*: {X: -2.0, Y: 0.0, Z: -4.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            f14eafd2887605601cb783e4e612d427: ref!! 3e1ca9ec-8acc-4b13-b485-8f93d3eee5b0
-                            b0616bd3e59c50d54fa88ad23e8366f7: ref!! a6361536-a82e-4d00-8e42-1dacfd083523
-                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 6380311c-6925-4c1b-b125-8e472fc62b47
-                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! 20dec4b6-d581-4481-8eb7-3e977c7f0089
+                            f14eafd2887605601cb783e4e612d427: ref!! b7d9d158-03d1-48b2-b836-63a33a12ff18
+                            b0616bd3e59c50d54fa88ad23e8366f7: ref!! fb05c347-77c8-46b6-9d5c-5de8d8a15656
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 6c5a5b2a-3e33-423b-bf69-967cbe942806
+                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! 88494a4a-8d92-40a9-a303-567adcfaee31
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
-                        Id: 88ff69db-fc94-4595-bcde-e5707bfe8b97
+                        Id: ae9e5b59-4677-41ce-9aaa-fb0879d4ba82
                         enemigo: "meléLigero"
                         invisible: false
-                        "armaMelé": ref!! 7fd9ec35-6b91-41d4-9f2d-d58306892cef
+                        "armaMelé": ref!! f6db328c-a355-410a-94eb-463252bb627d
                         armaRango: null
-                        cuerpos:
-                            ad5f371af09d736586a420c788f25eaf: null
-                            9149851558301df51c96fef221d01b51: ref!! e4a94432-c1a0-4c89-aafe-cc59dcb8f720
-                            a1d02110d78b01331e7e7dc7ff7d9b12: ref!! 74fdb046-7a71-4173-8795-18dd6dce0e8b
+                        "dañables":
+                            879816046b77289099f4e582750ed124: ref!! 81964f47-e752-432b-aa42-7500f7349936
+                            fb8305e469c40ecdf531ef10f158c1dc: ref!! d630aa7a-c81d-4bd8-80f3-7e447bbcf3f7
+                            2b7cc022be2ea087edba8da9a4a1e291: ref!! 2ae8da19-599c-4310-a9f7-c561b2307652
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
-                        Id: fa5ef297-d82b-4431-91e0-c67ddaeaf110
+                        Id: 274dece1-ca9b-480f-9924-13a5363f3d01
                         "estático": false
                         ojos:
-                            44e390ec37f8924a7039eeab0e0141fc: ref!! a6361536-a82e-4d00-8e42-1dacfd083523
+                            44e390ec37f8924a7039eeab0e0141fc: ref!! fb05c347-77c8-46b6-9d5c-5de8d8a15656
                     dcfc61066510852ac085b2f68892da9c: !Voronomir.AnimadorZombi,Voronomir.Proyecto
-                        Id: f46c0389-4eb3-42d9-bac6-d5951496d8f3
-                        modelo: ref!! 017900b6-b60c-4b05-9c9b-be825d6ff4fa
+                        Id: 235a58e9-863f-4796-98bf-1a8782a213be
+                        modelo: ref!! 22049ac5-2788-4cf1-b16f-275f6302b85c
                         brazos:
                             d5e5d05836e952ab9b8d7b3c1a2be51e: brazo.L
                             64022d1c494de0222385fdafef680dc4: brazo.R
@@ -1067,7 +922,7 @@ Hierarchy:
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
-                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
+                InstanceId: 5e87710b-8767-46b6-a137-8996c846998b
         -   Folder: Puertas
             Entity:
                 Id: 299ccfb5-4943-40a8-973b-7b78a695f370
@@ -1387,9 +1242,9 @@ Hierarchy:
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: 6fb2ce7d-6840-4e48-827c-896af4749d68
                         activables:
-                            252cd8a586cd04f09fff927492fe857d*: ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
-                            e97626f945ff1d822bb25b6e2b268ec4*: ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
-                            732e7ad64096d4b835203683a3c35ac1*: ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
+                            252cd8a586cd04f09fff927492fe857d*: ref!! 293f7583-6c3c-4921-a3ca-4853773072d5
+                            e97626f945ff1d822bb25b6e2b268ec4*: ref!! 9003c97f-e6c6-4e78-ba13-390eef43db89
+                            732e7ad64096d4b835203683a3c35ac1*: ref!! 9466ef07-c364-447b-94db-14d4447fda74
                             9145594d4d0702d4d6d3c7ebc8f98802*: ref!! 8453a3e0-4d61-4f66-950c-12fa89c30bac
             Base:
                 BasePartAsset: "2566113e-21c9-42ef-94ea-b6ba54bf4188:Prefabs/EntornoDinámico/Activador"
@@ -1477,6 +1332,63 @@ Hierarchy:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
                 InstanceId: 814853e4-d0ae-458c-a2bf-8a7b59346bdc
+        -   Entity:
+                Id: 3b0463ef-f798-4fa4-b6be-bb03ba28e8eb
+                Name: Ojo
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: fb05c347-77c8-46b6-9d5c-5de8d8a15656
+                        Position: {X: 0.0, Y: 1.6, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4c24f93d-e3a0-4825-833e-e2a97128dba9
+                InstanceId: 5e87710b-8767-46b6-a137-8996c846998b
+        -   Entity:
+                Id: 3b4a8dae-f6e9-4d07-a1ed-0f96b1f3322f
+                Name: "Dañable cabeza"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: cc54e762-f6c5-43dc-a417-46db4bcf6f3b
+                        Position: {X: 0.0, Y: 1.88, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.25, Y: 0.25, Z: 0.25}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 81964f47-e752-432b-aa42-7500f7349936
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: 066e217e-9f0f-40e2-af2f-befc08b36545
+                        controlador: ref!! 293f7583-6c3c-4921-a3ca-4853773072d5
+                        "inmunidadExplosión": true
+                        multiplicador: 1.5
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 0c476c17-80e5-422b-a8ae-de6ab3487673
+                InstanceId: 5e87710b-8767-46b6-a137-8996c846998b
         -   Entity:
                 Id: 3c46f4e3-d6df-49ff-801a-5d458ad32a00
                 Name: "Partículas"
@@ -2059,20 +1971,6 @@ Hierarchy:
                 BasePartId: dd557b1f-094b-4fdd-876b-a3bb02567a13
                 InstanceId: 30b2e4fe-e6bd-49ef-9a1c-6cdcb9e5bac1
         -   Entity:
-                Id: 462326ab-42df-41f7-8f4a-252f4df065e4
-                Name: Ojo
-                Components:
-                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
-                        Id: 2bf3f90e-2146-4e67-9bb0-db4fda703230
-                        Position: {X: 0.0, Y: 1.6, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 4c24f93d-e3a0-4825-833e-e2a97128dba9
-                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
-        -   Entity:
                 Id: 46624e17-7c51-4632-b9eb-fabc06e5cd94
                 Name: Modelo
                 Components:
@@ -2225,18 +2123,32 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: b5498599-9678-4cbd-a50a-c345377df315
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Folder: "EntornoEstático"
+            Entity:
+                Id: 52cd02bd-3165-4aa6-8d1e-7538541119a3
+                Name: Cielo
+                Components:
+                    32ab1d170fea034338f8662484dcb61d: !TransformComponent
+                        Id: 1835d3ca-0136-4b92-b18f-94d4046d208c
+                        Position: {X: 0.0, Y: 5.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9e6fd99d483f71d3202608c86972b99b: !BackgroundComponent
+                        Id: ab0ca55b-ddd7-44cf-9dc9-6deb45f8a864
+                        Texture: 1afb23f5-a8f8-44a2-929d-353d007943a0:Skybox texture
         -   Entity:
-                Id: 524e8b8e-2d24-4fd7-939d-f0fd3035fa5c
+                Id: 540e5283-54ba-477f-9ff1-a7d29c29f607
                 Name: "Dañable torso"
                 Components:
                     1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
-                        Id: 08496f99-3318-47ce-a9ef-745fc4746484
+                        Id: 4f790d3a-4b3d-4711-b9b6-b9a5dab26232
                         Position: {X: 0.0, Y: 1.32, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.5, Y: 0.8, Z: 0.3}
                         Children: {}
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
-                        Id: de96ee47-f31b-4036-99e3-5751155e504a
+                        Id: d15590a9-b875-4d17-970a-55de656976ef
                         CollisionGroup: KinematicFilter
                         CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
@@ -2260,28 +2172,14 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
-                        Id: fe8dd0ae-b88c-4ce8-ad6b-2f6109dc05d0
-                        controlador: ref!! e3650bf2-48a3-47c0-a058-52246042dfc9
+                        Id: 11a13a03-c127-450a-acbc-e69a351659ed
+                        controlador: ref!! 9466ef07-c364-447b-94db-14d4447fda74
                         "inmunidadExplosión": false
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 1cb886b6-cff7-4034-9eda-9023f8f94cd1
-                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
-        -   Folder: "EntornoEstático"
-            Entity:
-                Id: 52cd02bd-3165-4aa6-8d1e-7538541119a3
-                Name: Cielo
-                Components:
-                    32ab1d170fea034338f8662484dcb61d: !TransformComponent
-                        Id: 1835d3ca-0136-4b92-b18f-94d4046d208c
-                        Position: {X: 0.0, Y: 5.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    9e6fd99d483f71d3202608c86972b99b: !BackgroundComponent
-                        Id: ab0ca55b-ddd7-44cf-9dc9-6deb45f8a864
-                        Texture: 1afb23f5-a8f8-44a2-929d-353d007943a0:Skybox texture
+                InstanceId: 09a48882-bda0-4afb-b531-69859893d44a
         -   Folder: "EntornoEstático/Muros"
             Entity:
                 Id: 55426dd8-7316-4b8d-b2a7-f3aad1edcb3e
@@ -2735,63 +2633,6 @@ Hierarchy:
                 BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/EntornoDinámico/Botón (Vacío)"
                 BasePartId: 33d94d5f-9c78-4548-88fc-74a17c50d5a7
                 InstanceId: fd954c11-6c4f-4f56-9d02-8630442a86e2
-        -   Folder: null
-            Entity:
-                Id: 645651a4-8cf8-4f3e-9e19-bc42e8984c16
-                Name: "Dañables"
-                Components:
-                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
-                        Id: 10b96e19-8814-46c1-bc55-9c2171c819ad
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            274570ec839d03441939b84ca63d1199: ref!! 1e75411b-d789-4f89-8329-aaf9c3095298
-                            1c2c9fd26845043fc11fc1d5f4109092: ref!! 941fc714-b959-4b2e-8dc3-d418e3e8562b
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
-                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
-        -   Folder: null
-            Entity:
-                Id: 6688a175-b604-4b9a-b9fe-ddd707d59e0a
-                Name: "ArmaMelé"
-                Components:
-                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
-                        Id: 20dec4b6-d581-4481-8eb7-3e977c7f0089
-                        Position: {X: 0.0, Y: 1.0, Z: 1.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 1.0, Z: 2.0}
-                        Children: {}
-                    67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
-                        Id: 1ebfb6a3-9c62-4c1a-aaad-24ff5e3e6e47
-                        CanCollideWith: CharacterFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: true
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            ee1f0f8d5ea461771e1abc59d4677dae: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    3f732cae4db439c6ef0a3d251d2261d5: !Voronomir.ControladorArmaMel%25C3%25A9,Voronomir.Proyecto
-                        Id: 7fd9ec35-6b91-41d4-9f2d-d58306892cef
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
-                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
         -   Entity:
                 Id: 671e9621-45bb-407a-bcfe-d85b250e7816
                 Name: Base
@@ -2914,46 +2755,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: fa3ac242-8c4a-4280-bf49-7bc27023351c
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
-        -   Folder: null
-            Entity:
-                Id: 6adfca37-5386-486c-ac13-c14d22099770
-                Name: "ArmaMelé"
-                Components:
-                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
-                        Id: d227dbe4-1e91-49a6-8274-2c4b07edb0db
-                        Position: {X: 0.0, Y: 1.0, Z: 1.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 1.0, Z: 2.0}
-                        Children: {}
-                    67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
-                        Id: 0542c400-a4d5-433f-8a96-cd922ca33cd2
-                        CanCollideWith: CharacterFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: true
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            ee1f0f8d5ea461771e1abc59d4677dae: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    3f732cae4db439c6ef0a3d251d2261d5: !Voronomir.ControladorArmaMel%25C3%25A9,Voronomir.Proyecto
-                        Id: 0bb36b1b-0609-4ae8-9c0c-85288f5de32f
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
-                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
         -   Entity:
                 Id: 6b0ea7ef-5e06-4f99-a538-38afae892a8b
                 Name: Fuego
@@ -3135,6 +2936,90 @@ Hierarchy:
                 BasePartAsset: "e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/EntornoDinámico/Saltador"
                 BasePartId: 0e6fc922-4c0b-44c8-af46-097632041c0b
                 InstanceId: 30b2e4fe-e6bd-49ef-9a1c-6cdcb9e5bac1
+        -   Folder: null
+            Entity:
+                Id: 78b95d77-f8db-44a3-a0da-bde957aebf04
+                Name: "Dañable piernas"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 5e198d7f-7b23-431a-b433-fcb12f31660a
+                        Position: {X: 0.0, Y: 0.45954072, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.4, Y: 0.9, Z: 0.2}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 7bd5033d-0d22-4cd2-a433-7751e6d3e333
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: b30d9600-00a8-4e21-8e6f-05871be9aa66
+                        controlador: ref!! 9003c97f-e6c6-4e78-ba13-390eef43db89
+                        "inmunidadExplosión": true
+                        multiplicador: 0.5
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
+                InstanceId: fc0d6ee1-e034-4860-b925-6232f35f9f31
+        -   Folder: null
+            Entity:
+                Id: 7a5f5310-c22b-4f0f-914b-de64ec04a005
+                Name: "ArmaMelé"
+                Components:
+                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
+                        Id: e5f733c2-e6e4-4f10-ae56-ea59e9e282fd
+                        Position: {X: 0.0, Y: 1.0, Z: 1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 1.0, Z: 2.0}
+                        Children: {}
+                    67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
+                        Id: 57501663-3114-4855-b253-857ad14ea29e
+                        CanCollideWith: CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ee1f0f8d5ea461771e1abc59d4677dae: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    3f732cae4db439c6ef0a3d251d2261d5: !Voronomir.ControladorArmaMel%25C3%25A9,Voronomir.Proyecto
+                        Id: 64c39503-baa5-4b36-86b1-f98bd2eaa51f
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
+                InstanceId: 09a48882-bda0-4afb-b531-69859893d44a
         -   Entity:
                 Id: 7efda1a6-3d1b-41f0-9ce1-9556e94a323e
                 Name: "Partículas"
@@ -3487,8 +3372,8 @@ Hierarchy:
                         invisible: false
                         "armaMelé": null
                         armaRango: ref!! 3465134a-e5ea-42bb-9ce4-65f62b006cc2
-                        cuerpos:
-                            ad5f371af09d736586a420c788f25eaf: ref!! 33fa3acc-c81a-4d93-939d-04b8266859f9
+                        "dañables":
+                            321eaea6aae1a3e7b88d9b99ca3bff48: ref!! 33fa3acc-c81a-4d93-939d-04b8266859f9
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: cea00763-51a0-4212-bd57-d6694970cfbd
                         "estático*": true
@@ -3724,6 +3609,25 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 3594fe7c-b7ec-48ee-832c-00fde6ed809f
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Folder: null
+            Entity:
+                Id: 875cfce2-a5c0-421d-b0ae-52a7f8f6878e
+                Name: Modelo
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: 6c5a5b2a-3e33-423b-bf69-967cbe942806
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: 22049ac5-2788-4cf1-b16f-275f6302b85c
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
+                        Materials: {}
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
+                InstanceId: 5e87710b-8767-46b6-a137-8996c846998b
         -   Entity:
                 Id: 88a3ab5c-4356-4c31-be55-4769ebdbb0c1
                 Name: Modelo
@@ -3743,35 +3647,18 @@ Hierarchy:
                 BasePartAsset: "73f16069-e6ab-4eae-a431-2bbd98bb2fe6:Prefabs/EntornoDinámico/Botón (Rojo)"
                 BasePartId: a95bdd9a-d4b5-4794-93a1-c91229340c52
                 InstanceId: edff4fe5-e8a9-44f4-954a-564b4b402372
-        -   Folder: null
-            Entity:
-                Id: 893511a5-8fd4-4d43-b50c-6fec6cbd1cb1
-                Name: "Dañables"
-                Components:
-                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
-                        Id: cb4f0327-92a0-43f9-a4de-6d3f40093b0e
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            274570ec839d03441939b84ca63d1199: ref!! e7ca49a4-37b2-4c2e-a5a7-eeba4ebf152a
-                            ca8337c7d7699d0c743d45b82d54bc3c: ref!! 08496f99-3318-47ce-a9ef-745fc4746484
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
-                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
         -   Entity:
-                Id: 89ef4446-2980-4b4f-b0c6-f35410fae24b
-                Name: "Dañable torso"
+                Id: 88d1af2d-6727-4f03-9530-09a1ea8fee65
+                Name: "Dañable cabeza"
                 Components:
                     1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
-                        Id: 614bc9b8-6066-442a-86cd-0c76d6397fe8
-                        Position: {X: 0.0, Y: 1.32, Z: 0.0}
+                        Id: 605282d3-0b49-418a-94c5-f50a46839f80
+                        Position: {X: 0.0, Y: 1.88, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.8, Z: 0.3}
+                        Scale: {X: 0.25, Y: 0.25, Z: 0.25}
                         Children: {}
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
-                        Id: e4a94432-c1a0-4c89-aafe-cc59dcb8f720
+                        Id: 08cf4fd0-b3af-4365-86df-7df9b6ee64ed
                         CollisionGroup: KinematicFilter
                         CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
@@ -3795,14 +3682,14 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
-                        Id: a237fbc9-b1be-4f1e-9abd-dded616fec94
-                        controlador: ref!! 2707f98b-4945-4cfb-9a7a-6ae13692cab4
-                        "inmunidadExplosión": false
-                        multiplicador: 1.0
+                        Id: 25603cab-663f-4b4b-a36c-86c3b5347a6d
+                        controlador: ref!! 9466ef07-c364-447b-94db-14d4447fda74
+                        "inmunidadExplosión": true
+                        multiplicador: 1.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 1cb886b6-cff7-4034-9eda-9023f8f94cd1
-                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
+                BasePartId: 0c476c17-80e5-422b-a8ae-de6ab3487673
+                InstanceId: 09a48882-bda0-4afb-b531-69859893d44a
         -   Folder: Puertas
             Entity:
                 Id: 8bf65f1a-e9d0-457c-a88e-4f15d5465421
@@ -3862,25 +3749,6 @@ Hierarchy:
                 BasePartAsset: "3058a8fb-6fd5-4bc9-8df4-19fe486ca86e:Prefabs/EntornoDinámico/Poder (Daño)"
                 BasePartId: 560a1261-7bf4-4110-a706-95b81d281962
                 InstanceId: 0e1856ce-e831-40e5-88f2-00b9af8fec6b
-        -   Folder: null
-            Entity:
-                Id: 8da821bb-04d5-4008-9a51-56dae4802a6e
-                Name: Modelo
-                Components:
-                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
-                        Id: 8852e3d3-e0b4-45b8-8429-62375100362d
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
-                        Id: 7cb6b6f1-18a3-4116-9725-7d349401abc3
-                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
-                        Materials: {}
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
-                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
         -   Folder: "EntornoDinámico"
             Entity:
                 Id: 8dcfbf63-872c-4767-b5d4-c444770e99f8
@@ -3919,6 +3787,74 @@ Hierarchy:
                 BasePartAsset: "e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/EntornoDinámico/Saltador"
                 BasePartId: 0e6fc922-4c0b-44c8-af46-097632041c0b
                 InstanceId: 9a9ab826-c1a2-484c-87b5-e01fd29e4113
+        -   Folder: Grupo01
+            Entity:
+                Id: 9003c97f-e6c6-4e78-ba13-390eef43db89
+                Name*: Zombi 1
+                Components:
+                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
+                        Id: 460600bb-8cb0-40d7-a019-698027ee3512
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        StepHeight: 0.25
+                        FallSpeed: 20.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 15.0
+                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
+                        ColliderShapes:
+                            ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
+                                Length: 1.2
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
+                        Id: ba6b4e77-f736-4b70-855f-1c9319283534
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
+                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
+                        Id: 11198ca9-2dfd-4a6c-aed4-21da1f414109
+                        Position*: {X: 0.0, Y: 0.0, Z: -4.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f14eafd2887605601cb783e4e612d427: ref!! e7426f2d-f038-4b97-80ab-353827230af7
+                            b0616bd3e59c50d54fa88ad23e8366f7: ref!! c077e950-a6d9-4085-aaa1-a4407962c697
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 673ad655-53ac-4a05-b5d6-3a6689137fc6
+                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! 2b72d44b-b886-4718-bda9-b866a5996a99
+                    7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
+                        Id: d0c96a68-b7ba-41cd-aaf5-ffea27e91c7a
+                        enemigo: "meléLigero"
+                        invisible*: true
+                        "armaMelé": ref!! 2b85fa8c-5bea-47c9-8554-73d9e853e478
+                        armaRango: null
+                        "dañables":
+                            879816046b77289099f4e582750ed124: ref!! 97b97a7d-f5cf-4ebd-ae42-dcd2acc99a4c
+                            fb8305e469c40ecdf531ef10f158c1dc: ref!! f28acd94-d4f2-44ab-bb9c-ab38b257be2b
+                            2b7cc022be2ea087edba8da9a4a1e291: ref!! 7bd5033d-0d22-4cd2-a433-7751e6d3e333
+                    33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
+                        Id: 75be94a8-8b9f-4e0c-a59a-cfb5e84452a4
+                        "estático": false
+                        ojos:
+                            44e390ec37f8924a7039eeab0e0141fc: ref!! c077e950-a6d9-4085-aaa1-a4407962c697
+                    dcfc61066510852ac085b2f68892da9c: !Voronomir.AnimadorZombi,Voronomir.Proyecto
+                        Id: 245c00d5-cd39-4c0b-a2d0-c7381512ebda
+                        modelo: ref!! b2c57cd5-97eb-461f-b139-2f48efe239e1
+                        brazos:
+                            d5e5d05836e952ab9b8d7b3c1a2be51e: brazo.L
+                            64022d1c494de0222385fdafef680dc4: brazo.R
+                        piernas:
+                            e1fa468402b498fdc635e4bc98c6f42b: muslo.L
+                            980a0b5184eece1987ea9a444454fbc2: muslo.R
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
+                InstanceId: fc0d6ee1-e034-4860-b925-6232f35f9f31
         -   Entity:
                 Id: 90a7e24a-017a-4fc7-857c-43360e16e8ab
                 Name: "Partículas"
@@ -4055,6 +3991,74 @@ Hierarchy:
                         Id: 85ab4bb0-05e4-4089-81c3-cf17363fe123
                         Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
                         Materials: {}
+        -   Folder: Grupo01
+            Entity:
+                Id: 9466ef07-c364-447b-94db-14d4447fda74
+                Name*: Zombi 2
+                Components:
+                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
+                        Id: 8d0c4bbc-f390-4988-bdbd-a407c4f78cb2
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        StepHeight: 0.25
+                        FallSpeed: 20.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 15.0
+                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
+                        ColliderShapes:
+                            ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
+                                Length: 1.2
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
+                        Id: d5969228-23b9-43e3-9d22-5c5148ef02e8
+                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
+                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
+                        Id: 7b50492f-3dbf-494b-bf0d-f896be3322cf
+                        Position*: {X: 2.0, Y: 0.0, Z: -4.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f14eafd2887605601cb783e4e612d427: ref!! 8673c616-a88a-4c12-a46a-3e9299ad18e8
+                            b0616bd3e59c50d54fa88ad23e8366f7: ref!! fdd91fb6-7100-44ab-85c0-f25ad998325a
+                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! b34095f0-7763-40f4-b2e5-5aa5c6c3004e
+                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! e5f733c2-e6e4-4f10-ae56-ea59e9e282fd
+                    7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
+                        Id: 0863067d-987e-4c88-8e18-e9bbe2fba7a4
+                        enemigo: "meléLigero"
+                        invisible: false
+                        "armaMelé": ref!! 64c39503-baa5-4b36-86b1-f98bd2eaa51f
+                        armaRango: null
+                        "dañables":
+                            879816046b77289099f4e582750ed124: ref!! 08cf4fd0-b3af-4365-86df-7df9b6ee64ed
+                            fb8305e469c40ecdf531ef10f158c1dc: ref!! d15590a9-b875-4d17-970a-55de656976ef
+                            2b7cc022be2ea087edba8da9a4a1e291: ref!! 0b1ddb92-ea3e-4258-9e82-ced44cb72d13
+                    33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
+                        Id: 6273a746-4571-4baa-ba29-9cdb75bafaa9
+                        "estático": false
+                        ojos:
+                            44e390ec37f8924a7039eeab0e0141fc: ref!! fdd91fb6-7100-44ab-85c0-f25ad998325a
+                    dcfc61066510852ac085b2f68892da9c: !Voronomir.AnimadorZombi,Voronomir.Proyecto
+                        Id: d150e98d-9193-41f6-b00a-d75e00aed490
+                        modelo: ref!! a811d361-3bd3-435c-8cdc-2002b017e25d
+                        brazos:
+                            d5e5d05836e952ab9b8d7b3c1a2be51e: brazo.L
+                            64022d1c494de0222385fdafef680dc4: brazo.R
+                        piernas:
+                            e1fa468402b498fdc635e4bc98c6f42b: muslo.L
+                            980a0b5184eece1987ea9a444454fbc2: muslo.R
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
+                InstanceId: 09a48882-bda0-4afb-b531-69859893d44a
         -   Entity:
                 Id: 9778c9f7-ee25-4fad-84cc-397d06ee1a61
                 Name: "Dañador"
@@ -4163,6 +4167,20 @@ Hierarchy:
                 BasePartAsset: "2566113e-21c9-42ef-94ea-b6ba54bf4188:Prefabs/EntornoDinámico/Activador"
                 BasePartId: 2826dafd-3bb4-4276-8c3a-8807cabe8e1c
                 InstanceId: 01ac6709-3342-4ff7-8214-52129e40de96
+        -   Entity:
+                Id: 9f4d2940-d74c-4b12-86d5-23d3940b0c29
+                Name: Ojo
+                Components:
+                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
+                        Id: fdd91fb6-7100-44ab-85c0-f25ad998325a
+                        Position: {X: 0.0, Y: 1.6, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4c24f93d-e3a0-4825-833e-e2a97128dba9
+                InstanceId: 09a48882-bda0-4afb-b531-69859893d44a
         -   Entity:
                 Id: 9fef33ec-62b3-420e-ac57-72546faed848
                 Name: "PartículasIzquierda"
@@ -4299,50 +4317,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 2040daa6-49ab-4794-bdd5-37e4fde3c568
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
-        -   Folder: null
-            Entity:
-                Id: a2baa5cc-4c65-4c8c-929d-f62fca0df386
-                Name: "Dañable piernas"
-                Components:
-                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
-                        Id: 1e75411b-d789-4f89-8329-aaf9c3095298
-                        Position: {X: 0.0, Y: 0.45954072, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.4, Y: 0.9, Z: 0.2}
-                        Children: {}
-                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
-                        Id: e14ba89c-246f-4513-a694-5bee9ca9d27d
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
-                        Id: 546d67b6-8ea7-4100-92aa-ea4bb0d5c110
-                        controlador: ref!! 11cebd3c-4e9d-4ca8-8799-4d3bbdcd8527
-                        "inmunidadExplosión": true
-                        multiplicador: 0.5
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
-                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
         -   Entity:
                 Id: a389a70d-2af1-483f-840b-b7824320970d
                 Name: "Partículas"
@@ -4510,46 +4484,6 @@ Hierarchy:
                         Materials: {}
         -   Folder: null
             Entity:
-                Id: a678a339-d21e-4ddd-9b32-9a09750dd8ea
-                Name: "ArmaMelé"
-                Components:
-                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
-                        Id: dd2cba02-7e76-418b-b527-6fb6c885c15e
-                        Position: {X: 0.0, Y: 1.0, Z: 1.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 1.0, Z: 2.0}
-                        Children: {}
-                    67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
-                        Id: aa328668-b0b9-4756-a3ea-099c71441d43
-                        CanCollideWith: CharacterFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: true
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            ee1f0f8d5ea461771e1abc59d4677dae: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    3f732cae4db439c6ef0a3d251d2261d5: !Voronomir.ControladorArmaMel%25C3%25A9,Voronomir.Proyecto
-                        Id: 0a27d0de-50df-46fe-afb5-0621eb2f636e
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
-                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
-        -   Folder: null
-            Entity:
                 Id: a7cf3a65-ca02-44b2-ab58-ac47e21215be
                 Name: Modelo
                 Components:
@@ -4607,6 +4541,46 @@ Hierarchy:
                         Id: d6a5e338-afa8-4a79-a142-2586652224f2
                         Model: e5264c9f-ce07-44c3-804e-cfe48eae8f2a:Modelos/Enemigos/Babosa/Babosa
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: a9980765-91dd-436e-b643-37fa777d94f4
+                Name: "ArmaMelé"
+                Components:
+                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
+                        Id: 2b72d44b-b886-4718-bda9-b866a5996a99
+                        Position: {X: 0.0, Y: 1.0, Z: 1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 1.0, Z: 2.0}
+                        Children: {}
+                    67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
+                        Id: 54454e32-5dc3-4536-a442-68a9b3870dfd
+                        CanCollideWith: CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ee1f0f8d5ea461771e1abc59d4677dae: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    3f732cae4db439c6ef0a3d251d2261d5: !Voronomir.ControladorArmaMel%25C3%25A9,Voronomir.Proyecto
+                        Id: 2b85fa8c-5bea-47c9-8554-73d9e853e478
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
+                InstanceId: fc0d6ee1-e034-4860-b925-6232f35f9f31
         -   Folder: Puertas
             Entity:
                 Id: a9c0250e-6712-4e86-bc3f-78047f439de2
@@ -4684,11 +4658,11 @@ Hierarchy:
                 BasePartId: 728122cf-ad47-4e23-9b57-295858286fc5
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
         -   Entity:
-                Id: af86748a-5f1b-4654-930f-3c40030c6306
+                Id: ac776652-e151-4e0c-a20b-11584ba41a8b
                 Name: Ojo
                 Components:
                     7f50e0862aa64c64b624858b643ede4a: !TransformComponent
-                        Id: a6361536-a82e-4d00-8e42-1dacfd083523
+                        Id: c077e950-a6d9-4085-aaa1-a4407962c697
                         Position: {X: 0.0, Y: 1.6, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -4696,7 +4670,45 @@ Hierarchy:
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 4c24f93d-e3a0-4825-833e-e2a97128dba9
-                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
+                InstanceId: fc0d6ee1-e034-4860-b925-6232f35f9f31
+        -   Folder: null
+            Entity:
+                Id: b0136b94-0773-4195-ba9f-9b9e305ff93b
+                Name: Modelo
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: 673ad655-53ac-4a05-b5d6-3a6689137fc6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: b2c57cd5-97eb-461f-b139-2f48efe239e1
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
+                        Materials: {}
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
+                InstanceId: fc0d6ee1-e034-4860-b925-6232f35f9f31
+        -   Folder: null
+            Entity:
+                Id: b844b6ae-2a94-43fb-9274-bb90778da8d1
+                Name: Modelo
+                Components:
+                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
+                        Id: b34095f0-7763-40f4-b2e5-5aa5c6c3004e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
+                        Id: a811d361-3bd3-435c-8cdc-2002b017e25d
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
+                        Materials: {}
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
+                InstanceId: 09a48882-bda0-4afb-b531-69859893d44a
         -   Entity:
                 Id: b8b1eba2-82a4-43a7-b698-f29e4d133565
                 Name: Base
@@ -4755,20 +4767,6 @@ Hierarchy:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: affaa42e-d400-469e-97e5-dcc905234d2f
-        -   Entity:
-                Id: b9c6d541-e9a1-4aa2-9548-eb141f13b39e
-                Name: Ojo
-                Components:
-                    7f50e0862aa64c64b624858b643ede4a: !TransformComponent
-                        Id: 1be93bf2-df2b-451e-a9ae-227b417a60bb
-                        Position: {X: 0.0, Y: 1.6, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 4c24f93d-e3a0-4825-833e-e2a97128dba9
-                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
         -   Folder: null
             Entity:
                 Id: bc2ffddc-e3e5-47f9-b546-08491df3f59a
@@ -4955,6 +4953,50 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 86fc6b06-f3ee-4510-a53f-3e5ecd54bb0b
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Folder: null
+            Entity:
+                Id: c58d926c-83a3-494b-acac-062f750e87dc
+                Name: "Dañable piernas"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 5ecdc69e-f75e-40be-8e55-c4a9f8a79389
+                        Position: {X: 0.0, Y: 0.45954072, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.4, Y: 0.9, Z: 0.2}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 2ae8da19-599c-4310-a9f7-c561b2307652
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: 081d2d76-bd92-4e02-8066-5fdd91faf803
+                        controlador: ref!! 293f7583-6c3c-4921-a3ca-4853773072d5
+                        "inmunidadExplosión": true
+                        multiplicador: 0.5
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
+                InstanceId: 5e87710b-8767-46b6-a137-8996c846998b
         -   Entity:
                 Id: c9dd8130-9916-4bd5-8f84-a204485e033a
                 Name: "Partículas"
@@ -5299,6 +5341,49 @@ Hierarchy:
                 BasePartAsset: "d5058dbe-b40f-4ad7-b603-b31e795ab1f4:Prefabs/EntornoDinámico/Secreto"
                 BasePartId: 72adb0e4-c869-4909-be91-02f39498b109
                 InstanceId: 516bfc01-3907-4530-a490-bc3359ecb776
+        -   Entity:
+                Id: cf1e7388-665a-4086-b6d3-6fef6dd4c905
+                Name: "Dañable cabeza"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: cfdb5e0d-7f90-449d-9e6c-beeab16370d3
+                        Position: {X: 0.0, Y: 1.88, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.25, Y: 0.25, Z: 0.25}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 97b97a7d-f5cf-4ebd-ae42-dcd2acc99a4c
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: b6fe990b-2b79-4697-859b-8e0e6ebceb51
+                        controlador: ref!! 9003c97f-e6c6-4e78-ba13-390eef43db89
+                        "inmunidadExplosión": true
+                        multiplicador: 1.5
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 0c476c17-80e5-422b-a8ae-de6ab3487673
+                InstanceId: fc0d6ee1-e034-4860-b925-6232f35f9f31
         -   Folder: null
             Entity:
                 Id: cfcee2a6-31c9-4986-8499-7f37c1250f7b
@@ -5484,25 +5569,49 @@ Hierarchy:
                     8da989470e5d3482f6697c8ae7b8694b: !Stride.Navigation.NavigationBoundingBoxComponent,Stride.Navigation
                         Id: 42364fca-41df-4490-ba99-fb64dd6d91f6
                         Size: {X: 20.0, Y: 1.5, Z: 20.0}
-        -   Folder: null
-            Entity:
-                Id: d3c8523f-a505-470a-9186-a32e93319e5d
-                Name: Modelo
+        -   Entity:
+                Id: d520df0e-a4a7-4f12-9aaf-fcade76a3a07
+                Name: "Dañable torso"
                 Components:
-                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
-                        Id: 6380311c-6925-4c1b-b125-8e472fc62b47
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: fbfb7906-1124-4ffc-ba4c-09e105671345
+                        Position: {X: 0.0, Y: 1.32, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 0.5, Y: 0.8, Z: 0.3}
                         Children: {}
-                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
-                        Id: 017900b6-b60c-4b05-9c9b-be825d6ff4fa
-                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
-                        Materials: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: d630aa7a-c81d-4bd8-80f3-7e447bbcf3f7
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: ab631ab3-07b8-4f81-92ea-b048addb42fd
+                        controlador: ref!! 293f7583-6c3c-4921-a3ca-4853773072d5
+                        "inmunidadExplosión": false
+                        multiplicador: 1.0
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
-                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
+                BasePartId: 1cb886b6-cff7-4034-9eda-9023f8f94cd1
+                InstanceId: 5e87710b-8767-46b6-a137-8996c846998b
         -   Entity:
                 Id: d54d693a-86ca-4b20-b12a-b1d6f3fa4ea1
                 Name: Base
@@ -5808,23 +5917,6 @@ Hierarchy:
                 InstanceId: 788b978f-4a7b-45e3-9237-0934adea20a7
         -   Folder: null
             Entity:
-                Id: dade0e81-b5cd-472f-bf2a-1d3264a8119f
-                Name: "Dañables"
-                Components:
-                    4c1931c09a54c0ac693685242f89d15f: !TransformComponent
-                        Id: 3e1ca9ec-8acc-4b13-b485-8f93d3eee5b0
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            274570ec839d03441939b84ca63d1199: ref!! eba11905-eac7-4d02-9bcd-f872ccc3b33a
-                            d0fe14ac3f5c1fa0b2c153e7cfe99460: ref!! 614bc9b8-6066-442a-86cd-0c76d6397fe8
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
-                InstanceId: 5abc19cb-3026-4f0f-868e-815237db9abf
-        -   Folder: null
-            Entity:
                 Id: db4dc5af-fe78-49b6-b6bd-415ce3dd1a93
                 Name: "Dañable"
                 Components:
@@ -6046,74 +6138,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: f10d2475-185f-4c3e-9813-427d4150de9f
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
-        -   Folder: Grupo01
-            Entity:
-                Id: e3650bf2-48a3-47c0-a058-52246042dfc9
-                Name*: Zombi 1
-                Components:
-                    4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
-                        Id: 012661f5-b54b-47a2-b4bf-a9053d843e93
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        StepHeight: 0.25
-                        FallSpeed: 20.0
-                        MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 15.0
-                        Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
-                        ColliderShapes:
-                            ed72926b10062c3c2c8aad3be9245c95: !CapsuleColliderShapeDesc
-                                Length: 1.2
-                                Radius: 0.4
-                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
-                        Id: 99269a54-0c4a-44a9-b96d-816f0a3dcb0b
-                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
-                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
-                    5c3712b7730db1a3c2064795b79553df: !TransformComponent
-                        Id: 4c213ffb-3b99-4b21-8e85-9a573cfe36c8
-                        Position*: {X: 0.0, Y: 0.0, Z: -3.5}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            f14eafd2887605601cb783e4e612d427: ref!! cb4f0327-92a0-43f9-a4de-6d3f40093b0e
-                            b0616bd3e59c50d54fa88ad23e8366f7: ref!! 1be93bf2-df2b-451e-a9ae-227b417a60bb
-                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 8852e3d3-e0b4-45b8-8429-62375100362d
-                            1b2e1ded652285c1cb23eeab5ec9d185: ref!! d227dbe4-1e91-49a6-8274-2c4b07edb0db
-                    7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
-                        Id: dceff8dd-5792-46e3-8a58-c917bddf362d
-                        enemigo: "meléLigero"
-                        invisible*: true
-                        "armaMelé": ref!! 0bb36b1b-0609-4ae8-9c0c-85288f5de32f
-                        armaRango: null
-                        cuerpos:
-                            ad5f371af09d736586a420c788f25eaf: null
-                            9149851558301df51c96fef221d01b51: ref!! de96ee47-f31b-4036-99e3-5751155e504a
-                            a1d02110d78b01331e7e7dc7ff7d9b12: ref!! 64de43ef-79d6-4568-8ab0-2b80c3cdf7aa
-                    33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
-                        Id: 91aa0eec-5f1e-4e86-bdcd-11807483163f
-                        "estático": false
-                        ojos:
-                            44e390ec37f8924a7039eeab0e0141fc: ref!! 1be93bf2-df2b-451e-a9ae-227b417a60bb
-                    dcfc61066510852ac085b2f68892da9c: !Voronomir.AnimadorZombi,Voronomir.Proyecto
-                        Id: 4d63f6ba-601b-4a50-bf94-642f96a55d1b
-                        modelo: ref!! 7cb6b6f1-18a3-4116-9725-7d349401abc3
-                        brazos:
-                            d5e5d05836e952ab9b8d7b3c1a2be51e: brazo.L
-                            64022d1c494de0222385fdafef680dc4: brazo.R
-                        piernas:
-                            e1fa468402b498fdc635e4bc98c6f42b: muslo.L
-                            980a0b5184eece1987ea9a444454fbc2: muslo.R
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
-                InstanceId: 2daa3874-be72-4644-8c1f-19858f66e1e2
         -   Entity:
                 Id: e5b8731f-1eb6-441f-b7ab-bd16b7cd5950
                 Name: "Partículas"
@@ -6250,6 +6274,49 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: a797918f-0191-4c40-a2ce-1809dc134eca
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Entity:
+                Id: e8088acd-bab9-4c15-8391-60a0e3c2c85f
+                Name: "Dañable torso"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: d27a42b8-c7aa-4936-9569-79a27051dcc9
+                        Position: {X: 0.0, Y: 1.32, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 0.8, Z: 0.3}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: f28acd94-d4f2-44ab-bb9c-ab38b257be2b
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: ad3e7e60-71fa-4ab3-987f-bcced8d0197d
+                        controlador: ref!! 9003c97f-e6c6-4e78-ba13-390eef43db89
+                        "inmunidadExplosión": false
+                        multiplicador: 1.0
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 1cb886b6-cff7-4034-9eda-9023f8f94cd1
+                InstanceId: fc0d6ee1-e034-4860-b925-6232f35f9f31
         -   Folder: null
             Entity:
                 Id: e8c29c5c-90b6-4934-891f-f3eafa6d6fed
@@ -6294,6 +6361,46 @@ Hierarchy:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
                 InstanceId: b7aa5ff0-129f-49d4-b606-fd1b945a7c67
+        -   Folder: null
+            Entity:
+                Id: e96204bc-5bba-4082-8fa6-8ff99473c16f
+                Name: "ArmaMelé"
+                Components:
+                    48ef2dfe2b9e2a6bec9d705ceff1b567: !TransformComponent
+                        Id: 88494a4a-8d92-40a9-a303-567adcfaee31
+                        Position: {X: 0.0, Y: 1.0, Z: 1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.5, Y: 1.0, Z: 2.0}
+                        Children: {}
+                    67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
+                        Id: 1a8a9dd7-e97a-463d-861c-4d9c896699ef
+                        CanCollideWith: CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ee1f0f8d5ea461771e1abc59d4677dae: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    3f732cae4db439c6ef0a3d251d2261d5: !Voronomir.ControladorArmaMel%25C3%25A9,Voronomir.Proyecto
+                        Id: f6db328c-a355-410a-94eb-463252bb627d
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
+                InstanceId: 5e87710b-8767-46b6-a137-8996c846998b
         -   Entity:
                 Id: ea0f736c-6f10-4cbe-8c35-672142890c6f
                 Name: "Partículas"
@@ -6628,25 +6735,6 @@ Hierarchy:
                 BasePartAsset: "d5058dbe-b40f-4ad7-b603-b31e795ab1f4:Prefabs/EntornoDinámico/Secreto"
                 BasePartId: 31ac85c4-45ee-471c-a957-2959f7c007c3
                 InstanceId: 516bfc01-3907-4530-a490-bc3359ecb776
-        -   Folder: null
-            Entity:
-                Id: f2e00024-7ed8-44c7-b274-832a1836771a
-                Name: Modelo
-                Components:
-                    e8f9cf0aa966229b689d889367899aac: !TransformComponent
-                        Id: 4e4cc16a-55d4-4eb3-97d6-33016a35e30c
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
-                        Id: 733a460c-1f9a-4401-b759-12d9b996c64f
-                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
-                        Materials: {}
-            Base:
-                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
-                BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
-                InstanceId: afa6cbb8-2aca-44b1-bf64-fc2cf1731bbe
         -   Folder: MuestraEnemigos
             Entity:
                 Id: f3e301de-3c24-4082-9407-c92be0463470
@@ -6700,6 +6788,50 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 6670f41a-7467-4bbf-89b7-753fdb7341f1
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Folder: null
+            Entity:
+                Id: fc062bb7-cce9-4952-ba88-b038428961ca
+                Name: "Dañable piernas"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 2b0c62c9-ef6e-455d-9bfd-7136325785bd
+                        Position: {X: 0.0, Y: 0.45954072, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.4, Y: 0.9, Z: 0.2}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 0b1ddb92-ea3e-4258-9e82-ced44cb72d13
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: 761c8adc-a5b4-49b9-8fa0-d822ef271590
+                        controlador: ref!! 9466ef07-c364-447b-94db-14d4447fda74
+                        "inmunidadExplosión": true
+                        multiplicador: 0.5
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
+                InstanceId: 09a48882-bda0-4afb-b531-69859893d44a
         -   Folder: null
             Entity:
                 Id: fe9a458d-b997-40e2-ad3b-2559fad03ce8
