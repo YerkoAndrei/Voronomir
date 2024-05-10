@@ -12,7 +12,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
 {
     public Enemigos enemigo;
     public bool invisible;
-    public List<RigidbodyComponent> cuerpos { get; set; }
+    public List<RigidbodyComponent> dañables { get; set; }
 
     public ControladorArmaMelé armaMelé;
     public ControladorArmaRango armaRango;
@@ -23,6 +23,10 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
     private float vida;
     private bool despierto;
     private bool activo;
+
+    private Vector3 gravedad;
+    private CollisionFilterGroups colisionesCuerpo;
+    private CollisionFilterGroups[] colisionesDañables;
 
     public override void Start()
     {
@@ -36,17 +40,28 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         animador = ObtenerInterfaz<IAnimador>(Entity);
         animador.Iniciar();
 
+        // Desactiva colisiones si empieza invicible
         if (invisible)
         {
-            cuerpo.Enabled = false;
             animador.Activar(false);
+            colisionesCuerpo = cuerpo.CollisionGroup;
+            cuerpo.CollisionGroup = CollisionFilterGroups.StaticFilter;
+
+            colisionesDañables = new CollisionFilterGroups[dañables.Count];
+            for (int i = 0; i < dañables.Count; i++)
+            {
+                colisionesDañables[i] = dañables[i].CollisionGroup;
+                dañables[i].CollisionGroup = CollisionFilterGroups.StaticFilter;
+            }
         }
 
+        // Armas
         if (armaMelé != null)
             armaMelé.Iniciar(ObtenerDaño());
         else if (armaRango != null)
             armaRango.Iniciar(ObtenerDaño(), ObtenerVelocidadProyectil(), ObtenerRotaciónProyectil(), ObtenerObjetivoProyectil(), enemigo);
 
+        // Persecución
         switch (enemigo)
         {
             case Enemigos.meléLigero:
@@ -86,8 +101,13 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
 
         if (invisible)
         {
-            cuerpo.Enabled = true;
+            cuerpo.CollisionGroup = colisionesCuerpo;
             animador.Activar(true);
+
+            for (int i = 0; i < dañables.Count; i++)
+            {
+                dañables[i].CollisionGroup = colisionesDañables[i];
+            }
             ControladorCofres.IniciarAparición(enemigo, Entity.Transform.WorldMatrix.TranslationVector);
         }
 

@@ -124,37 +124,43 @@ public class ElementoEfecto : StartupScript
         {
             case Enemigos.meléLigero:
                 aparición.Entity.Transform.Scale = Vector3.One * 1f;
+                Entity.Transform.Position = posición + Vector3.UnitY * 1f;
                 break;
             case Enemigos.meléMediano:
                 aparición.Entity.Transform.Scale = Vector3.One * 1f;
+                Entity.Transform.Position = posición + Vector3.UnitY * 1f;
                 break;
             case Enemigos.meléPesado:
                 aparición.Entity.Transform.Scale = Vector3.One * 1f;
+                Entity.Transform.Position = posición + Vector3.UnitY * 1f;
                 break;
             case Enemigos.rangoLigero:
                 aparición.Entity.Transform.Scale = Vector3.One * 1f;
+                Entity.Transform.Position = posición + Vector3.UnitY * 1f;
                 break;
             case Enemigos.rangoMediano:
                 aparición.Entity.Transform.Scale = Vector3.One * 1f;
+                Entity.Transform.Position = posición + Vector3.UnitY * 1f;
                 break;
             case Enemigos.rangoPesado:
                 aparición.Entity.Transform.Scale = Vector3.One * 1f;
+                Entity.Transform.Position = posición + Vector3.UnitY * 1f;
                 break;
             case Enemigos.especialLigero:
-                posición += Vector3.UnitY * 2.5f;
                 aparición.Entity.Transform.Scale = Vector3.One * 1f;
+                Entity.Transform.Position = posición + Vector3.UnitY * 2f;
                 break;
             case Enemigos.especialMediano:
 
                 break;
             case Enemigos.especialPesado:
                 aparición.Entity.Transform.Scale = Vector3.One * 1f;
+                Entity.Transform.Position = posición + Vector3.UnitY * 1f;
                 break;
         }
 
         aparición.Enabled = true;
         aparición.ParticleSystem.ResetSimulation();
-        Entity.Transform.Position = posición;
     }
 
     private void Apagar()
