@@ -20,7 +20,9 @@ public class ControladorSaltadorCerebro : AsyncScript
         while (Game.IsRunning)
         {
             await cuerpo.NewCollision();
-            Saltar(cuerpo.Collisions.ToArray());
+
+            if(cuerpo.Enabled)
+                Saltar(cuerpo.Collisions.ToArray());
 
             await Script.NextFrame();
         }

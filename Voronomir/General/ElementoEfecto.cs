@@ -131,8 +131,8 @@ public class ElementoEfecto : StartupScript
                 Entity.Transform.Position = posición + Vector3.UnitY * 1f;
                 break;
             case Enemigos.meléPesado:
-                aparición.Entity.Transform.Scale = Vector3.One * 1f;
-                Entity.Transform.Position = posición + Vector3.UnitY * 1f;
+                aparición.Entity.Transform.Scale = Vector3.One * 1.5f;
+                Entity.Transform.Position = posición + Vector3.UnitY * 2f;
                 break;
             case Enemigos.rangoLigero:
                 aparición.Entity.Transform.Scale = Vector3.One * 1f;
@@ -143,12 +143,12 @@ public class ElementoEfecto : StartupScript
                 Entity.Transform.Position = posición + Vector3.UnitY * 1f;
                 break;
             case Enemigos.rangoPesado:
-                aparición.Entity.Transform.Scale = Vector3.One * 1f;
+                aparición.Entity.Transform.Scale = Vector3.One * 2f;
                 Entity.Transform.Position = posición + Vector3.UnitY * 1f;
                 break;
             case Enemigos.especialLigero:
                 aparición.Entity.Transform.Scale = Vector3.One * 1f;
-                Entity.Transform.Position = posición + Vector3.UnitY * 2f;
+                Entity.Transform.Position = posición + Vector3.UnitY * 3f;
                 break;
             case Enemigos.especialMediano:
 

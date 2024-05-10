@@ -40,19 +40,21 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         animador = ObtenerInterfaz<IAnimador>(Entity);
         animador.Iniciar();
 
+        colisionesDañables = new CollisionFilterGroups[dañables.Count];
+        for (int i = 0; i < dañables.Count; i++)
+        {
+            colisionesDañables[i] = dañables[i].CollisionGroup;
+        }
+
         // Desactiva colisiones si empieza invicible
         if (invisible)
         {
             animador.Activar(false);
-            colisionesCuerpo = cuerpo.CollisionGroup;
-            cuerpo.CollisionGroup = CollisionFilterGroups.StaticFilter;
+            cuerpo.Enabled = false;
 
-            colisionesDañables = new CollisionFilterGroups[dañables.Count];
-            for (int i = 0; i < dañables.Count; i++)
-            {
-                colisionesDañables[i] = dañables[i].CollisionGroup;
-                dañables[i].CollisionGroup = CollisionFilterGroups.StaticFilter;
-            }
+            gravedad = cuerpo.Gravity;
+            colisionesCuerpo = cuerpo.CollisionGroup;
+            DesactivarColisiones();
         }
 
         // Armas
@@ -101,12 +103,16 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
 
         if (invisible)
         {
+            cuerpo.Gravity = gravedad;
             cuerpo.CollisionGroup = colisionesCuerpo;
+
+            cuerpo.Enabled = true;
             animador.Activar(true);
 
             for (int i = 0; i < dañables.Count; i++)
             {
                 dañables[i].CollisionGroup = colisionesDañables[i];
+                dañables[i].Enabled = true;
             }
             ControladorCofres.IniciarAparición(enemigo, Entity.Transform.WorldMatrix.TranslationVector);
         }
@@ -168,8 +174,21 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         CrearMarcaMuerte();
         ControladorPartida.SumarEnemigo();
 
+        animador.Activar(false);
+        DesactivarColisiones();
         // PENDIENTE: ragdoll
-        Entity.Scene.Entities.Remove(Entity);
+    }
+
+    private void DesactivarColisiones()
+    {
+        cuerpo.Gravity = Vector3.Zero;
+        cuerpo.CollisionGroup = CollisionFilterGroups.StaticFilter;
+
+        for (int i = 0; i < dañables.Count; i++)
+        {
+            dañables[i].CollisionGroup = CollisionFilterGroups.StaticFilter;
+            dañables[i].Enabled = false;
+        }
     }
 
     private async void CrearMarcaMuerte()

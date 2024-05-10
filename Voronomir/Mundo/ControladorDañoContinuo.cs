@@ -18,7 +18,9 @@ public class ControladorDañoContinuo : AsyncScript
         while (Game.IsRunning)
         {
             await cuerpo.NewCollision();
-            IntentarDañar();
+
+            if (cuerpo.Enabled)
+                IntentarDañar();
 
             await Script.NextFrame();
         }

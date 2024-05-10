@@ -350,7 +350,7 @@ Hierarchy:
                             e99fd69243b07ffb3cb8b699d64c5a6b: ref!! f351aac3-baa2-4941-9565-feb3cbc9e8a3
                             90a7e5f1db7e84c8ee409bc4ec194c69: ref!! 84b963ff-9a5c-435c-ab48-c14129d1909e
                             b98853d48efd39aba09a0bffdc276403: ref!! b2edc07b-41e7-42f5-acc0-d56498828145
-                            4732b4ce95e4cb3bd921ff1f29d5b54a: ref!! 76e2a775-7afe-484e-a5df-b8b85b4dc932
+                            a13b75650fedf82dde8922f68f6be026: ref!! 76e2a775-7afe-484e-a5df-b8b85b4dc932
                             e40d5481cf1e218611340ca1ddf40eed: ref!! 2f42f099-981c-463c-967d-0db778a7ebba
                             65446f9c70abd3a53b8246b4b1dea0f2: ref!! 0054abcc-e94d-4339-8bf2-7c5390f24b66
                     dde0c8ec0d35e0e851f71b7539019f93: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
@@ -362,7 +362,7 @@ Hierarchy:
                         "dañables":
                             1f2aec9701f98d5f9e41aed33acf5829: ref!! 9a4a09b7-f892-4fdc-82e9-115129733547
                             27a857feb6002353c808262effdaa824: ref!! c6a9bd0b-a22b-4f96-9a70-d6f1f3fd3ea1
-                            41d446c8c57e5247ee13b6963a9861c2: ref!! c6a9bd0b-a22b-4f96-9a70-d6f1f3fd3ea1
+                            41d446c8c57e5247ee13b6963a9861c2: ref!! d2e9ed88-e4b2-4015-b3dc-9474001dffc7
                     d7feb748634a3f30f579747ffa6f0e53: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: b402af8c-3273-4944-89bf-bb71b6503b90
                         "estático": false
@@ -371,10 +371,15 @@ Hierarchy:
                     1dd64e1afcd5512cedf9e97ef1931ca5: !Voronomir.AnimadorCerebro,Voronomir.Proyecto
                         Id: a63307c3-bda5-4b9a-9601-55a51fc27887
                         rueda: ref!! 2f42f099-981c-463c-967d-0db778a7ebba
+                        "partículas": ref!! 022044a0-c005-4ee1-9ebd-87ef16318f29
+                        saltador: ref!! 83b2816f-85f4-4d4f-837d-601ff844428d
                         modelos:
                             a5d171ca5a62c66362aa02b7a81ebab0: ref!! fac3214c-fe70-406b-a095-bed2c63fd8fb
                             ecff80b0fac0ec2b368f6d056e6ae965: ref!! 6ebf5e89-67f5-48e6-a778-fab520d51d82
                             f49c40c4e250c9751031466e80e37013: ref!! 76401dda-ec5b-441f-98c0-f55928eb29b9
+                        cuerpos:
+                            afe2544420b22484ea959cf91b4495bf: ref!! eb9ed55c-3c89-4305-b9a1-6eff242aaa16
+                            ac52f192c68e015025912c85737a36fc: ref!! fcdfbd81-5ec0-4ab5-b372-8fbe769a30a5
         -   Folder: null
             Entity:
                 Id: edbfe97a-f7ca-4741-8daf-861fb66dc9e0
@@ -425,8 +430,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: fdcabb40-b9a7-4016-9adc-adfb1e4dc4e9
                 Name: Escudo
                 Components:
