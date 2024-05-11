@@ -25,15 +25,12 @@ public class ElementoImpactoVeneno : StartupScript, IImpacto
     {
         Entity.Transform.Position = posición;
         Entity.Transform.Scale = Vector3.One;
+        Entity.Transform.UpdateWorldMatrix();
 
-        // Solo rota modelo
-        if (normal != Vector3.UnitY)
-            modelo.Entity.Transform.Rotation = Quaternion.LookRotation(normal, posición) * Quaternion.RotationY(MathUtil.DegreesToRadians(90));
-        else
-            modelo.Entity.Transform.Rotation = Quaternion.Identity;
+        cuerpo.Enabled = true;
+        cuerpo.UpdatePhysicsTransformation();
 
         modelo.Enabled = true;
-        cuerpo.Enabled = true;
         partículas.Enabled = true;
         partículas.ParticleSystem.ResetSimulation();
 

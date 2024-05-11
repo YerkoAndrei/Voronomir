@@ -20,6 +20,7 @@ Hierarchy:
                             e184a5410578c4604a3caa43030c0b88: ref!! 0c3c11fc-f39f-4018-8437-8e426769ee0e
                     10febf0414810204af56e165b5692877: !RigidbodyComponent
                         Id: e8efbcf4-8691-47e4-8cbf-318699bfb6ca
+                        Enabled: false
                         CanCollideWith: KinematicFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -57,14 +58,14 @@ Hierarchy:
                         Id: 02c0e734-3a36-4192-be97-41218480a08f
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 3.2, Y: 0.2, Z: 3.2}
+                        Scale: {X: 1.6, Y: 1.6, Z: 1.6}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: e27e83ea-8886-45fc-a94b-0ffa1911247d
-                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Proyectiles/Cilindro/Cilindro
+                        Model: 806ab5d9-9135-4bb0-8f4b-4d47bab525c3:Modelos/Proyectiles/Esfera/Esfera
                         IsShadowCaster: false
                         Materials:
-                            1a78ec5ca4e5e0f7fc0d523455037b80~0: 6cc33e1e-db8b-4674-a9cb-cd74193afd64:Materiales/Veneno
+                            5c0034a4ed434d451855cd339a7671b5~0: 6cc33e1e-db8b-4674-a9cb-cd74193afd64:Materiales/Veneno
         -   Entity:
                 Id: 939f8024-6f76-4536-a1b0-df6b957eb590
                 Name: "Partículas"
@@ -137,8 +138,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            PositionMin: {X: -0.5, Y: 0.0, Z: -0.5}
-                                            PositionMax: {X: 0.5, Y: 0.0, Z: 0.5}
+                                            PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 0.0, Z: 1.0}
                                             Interpolate: false
                                         b663f69a05042540ff539d253be0dea8: !InitialVelocitySeed
                                             InheritPosition: true
