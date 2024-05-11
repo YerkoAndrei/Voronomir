@@ -19,6 +19,9 @@ public class ControladorCofres : StartupScript
     public Prefab prefabProyectilDron;
     public Prefab prefabImpactoAraña;
 
+    // Enemigos
+    private static Vector3 cofreEnemigos;
+
     // Marcas
     private static ElementoMarca[] marcas;
     private static int marcaActual;
@@ -63,6 +66,9 @@ public class ControladorCofres : StartupScript
 
     public override void Start()
     {
+        // Cofre enemigos
+        cofreEnemigos = new Vector3(-13, 0, 0);
+
         // Cofre jugador / efectos
         maxMarcas = 100;
         maxEfectos = 100;
@@ -306,6 +312,12 @@ public class ControladorCofres : StartupScript
                     impactoArañaActual = 0;
                 break;
         }
+    }
+
+    public static Vector3 ObtenerCofreEnemigos()
+    {
+        cofreEnemigos += (Vector3.UnitX * 3);
+        return cofreEnemigos;
     }
 
     public static void ApagarFísicas()

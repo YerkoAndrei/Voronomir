@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -12,7 +11,6 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
 {
     public Enemigos enemigo;
     public bool invisible;
-    public List<RigidbodyComponent> dañables { get; set; }
 
     public ControladorArmaMelé armaMelé;
     public ControladorArmaRango armaRango;
@@ -24,9 +22,9 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
     private bool despierto;
     private bool activo;
 
-    private Vector3 gravedad;
-    private Vector3[] tamañosDañables;
-    private CollisionFilterGroups colisionesCuerpo;
+    // Invisible
+    private Vector3 posiciónInicial;
+    private Vector3 gravedadInicial;
 
     public override void Start()
     {
@@ -40,23 +38,12 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         animador = ObtenerInterfaz<IAnimador>(Entity);
         animador.Iniciar();
 
-        // Desactiva colisiones si empieza invicible
+        // Mueve a cofre si empieza invicible
         if (invisible)
         {
-            // Para navegador tiene que desactivar gravedad y colisiones para que no caiga
-            animador.Activar(false);
-            cuerpo.Enabled = false;
-
-            gravedad = cuerpo.Gravity;
-            colisionesCuerpo = cuerpo.CollisionGroup;
-
-            // Para dañables solo cambia tamaño
-            tamañosDañables = new Vector3[dañables.Count];
-            for (int i = 0; i < dañables.Count; i++)
-            {
-                tamañosDañables[i] = dañables[i].Entity.Transform.Scale;
-            }
-            DesactivarColisiones();
+            posiciónInicial = Entity.Transform.WorldMatrix.TranslationVector;
+            gravedadInicial = cuerpo.Gravity;
+            Esconder();
         }
 
         // Armas
@@ -105,18 +92,10 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
 
         if (invisible)
         {
-            cuerpo.Gravity = gravedad;
-            cuerpo.CollisionGroup = colisionesCuerpo;
-
-            cuerpo.Enabled = true;
+            cuerpo.Teleport(posiciónInicial);
+            cuerpo.Gravity = gravedadInicial;
             animador.Activar(true);
-
-            for (int i = 0; i < dañables.Count; i++)
-            {
-                dañables[i].Entity.Transform.Scale = tamañosDañables[i];
-                dañables[i].Enabled = true;
-            }
-            ControladorCofres.IniciarAparición(enemigo, Entity.Transform.WorldMatrix.TranslationVector);
+            ControladorCofres.IniciarAparición(enemigo, posiciónInicial);
         }
 
         despierto = true;
@@ -174,23 +153,18 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         persecutor.EliminarPersecutor();
 
         CrearMarcaMuerte();
+        Esconder();
         ControladorPartida.SumarEnemigo();
 
-        animador.Activar(false);
-        DesactivarColisiones();
+        // PENDIENTE: efectos
         // PENDIENTE: ragdoll
     }
 
-    private void DesactivarColisiones()
+    private void Esconder()
     {
+        animador.Activar(false);
         cuerpo.Gravity = Vector3.Zero;
-        cuerpo.CollisionGroup = CollisionFilterGroups.StaticFilter;
-
-        for (int i = 0; i < dañables.Count; i++)
-        {
-            dañables[i].Entity.Transform.Scale = Vector3.Zero;
-            dañables[i].Enabled = false;
-        }
+        cuerpo.Teleport(ControladorCofres.ObtenerCofreEnemigos());
     }
 
     private async void CrearMarcaMuerte()
