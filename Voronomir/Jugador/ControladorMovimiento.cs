@@ -94,7 +94,14 @@ public class ControladorMovimiento : StartupScript
             entradas += Vector3.UnitX;
 
         // Aceleración
-        if (entradas == Vector3.Zero || detención || caminando || cuerpo.Collisions.Where(TocaEnemigo).Count() > 0)
+        if (entradas == Vector3.Zero || detención || caminando)
+        {
+            tempoAceleración = 0;
+            tempoIniciación = 0;
+            aceleración = 0;
+            detención = false;
+        }
+        if (cuerpo.Collisions.Where(TocaEnemigo).Count() > 0 && aceleración >= 1)
         {
             // 1 enemigo detiene velocidad
             tempoAceleración = 0;
