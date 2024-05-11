@@ -198,8 +198,6 @@ Hierarchy:
                         modelo: ref!! eaf03fe5-4edd-4d6f-9c4d-2f704c2a5aaa
                         "cuerpoDañable": ref!! ca4626ef-f3fd-47be-8ccd-ba4de24b1dfd
                         "partícula": ref!! 52fecfce-ffd7-49a0-9b03-cccd4ccc3276
-                        "dañables":
-                            b76f7698fe36497ab0e64ed18ba745cf: ref!! ca4626ef-f3fd-47be-8ccd-ba4de24b1dfd
         -   Entity:
                 Id: fe3fbc5c-a4d9-49bf-bb5a-795caf0665db
                 Name: "Dañable"

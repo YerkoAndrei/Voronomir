@@ -826,8 +826,6 @@ Hierarchy:
                         Id: 6f366a40-a7cf-4031-bcf9-b6d17ce214d2
                         cabeza: ref!! a0b3f98f-2764-44c6-be18-c8ee43f5d9ba
                         "cámara": ref!! 2252214f-6036-4ac3-b0d4-fa427cd7456d
-                        "dañables":
-                            ba2b9f89422b6516b0a6206de72ff831: ref!! 606a17c9-924a-4512-8e4f-49eb8341921d
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: e3576cb5-c000-45aa-8fc7-3d32786ba8cf
                         Position*: {X: 0.0, Y: 0.0, Z: 4.0}
@@ -901,10 +899,6 @@ Hierarchy:
                         invisible: false
                         "armaMelé": ref!! f6db328c-a355-410a-94eb-463252bb627d
                         armaRango: null
-                        "dañables":
-                            879816046b77289099f4e582750ed124: ref!! 81964f47-e752-432b-aa42-7500f7349936
-                            fb8305e469c40ecdf531ef10f158c1dc: ref!! d630aa7a-c81d-4bd8-80f3-7e447bbcf3f7
-                            2b7cc022be2ea087edba8da9a4a1e291: ref!! 2ae8da19-599c-4310-a9f7-c561b2307652
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 274dece1-ca9b-480f-9924-13a5363f3d01
                         "estático": false
@@ -3359,7 +3353,7 @@ Hierarchy:
                         GroupId: 2bdbfe22-c886-4059-a832-34043684b804
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 3f39c2c2-97ce-4706-9426-a559d88c62b0
-                        Position*: {X: 10.0, Y: 2.0, Z: 0.0}
+                        Position*: {X: 0.0, Y: 2.0, Z: -6.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3372,8 +3366,6 @@ Hierarchy:
                         invisible: false
                         "armaMelé": null
                         armaRango: ref!! 3465134a-e5ea-42bb-9ce4-65f62b006cc2
-                        "dañables":
-                            321eaea6aae1a3e7b88d9b99ca3bff48: ref!! 33fa3acc-c81a-4d93-939d-04b8266859f9
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: cea00763-51a0-4212-bd57-d6694970cfbd
                         "estático*": true
@@ -3833,10 +3825,6 @@ Hierarchy:
                         invisible*: true
                         "armaMelé": ref!! 2b85fa8c-5bea-47c9-8554-73d9e853e478
                         armaRango: null
-                        "dañables":
-                            879816046b77289099f4e582750ed124: ref!! 97b97a7d-f5cf-4ebd-ae42-dcd2acc99a4c
-                            fb8305e469c40ecdf531ef10f158c1dc: ref!! f28acd94-d4f2-44ab-bb9c-ab38b257be2b
-                            2b7cc022be2ea087edba8da9a4a1e291: ref!! 7bd5033d-0d22-4cd2-a433-7751e6d3e333
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 75be94a8-8b9f-4e0c-a59a-cfb5e84452a4
                         "estático": false
@@ -4037,10 +4025,6 @@ Hierarchy:
                         invisible: false
                         "armaMelé": ref!! 64c39503-baa5-4b36-86b1-f98bd2eaa51f
                         armaRango: null
-                        "dañables":
-                            879816046b77289099f4e582750ed124: ref!! 08cf4fd0-b3af-4365-86df-7df9b6ee64ed
-                            fb8305e469c40ecdf531ef10f158c1dc: ref!! d15590a9-b875-4d17-970a-55de656976ef
-                            2b7cc022be2ea087edba8da9a4a1e291: ref!! 0b1ddb92-ea3e-4258-9e82-ced44cb72d13
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 6273a746-4571-4baa-ba29-9cdb75bafaa9
                         "estático": false
@@ -5792,6 +5776,7 @@ Hierarchy:
                 Components:
                     5cb52a5c65430d2569b779dae13d4ecd: !Voronomir.ControladorPartida,Voronomir.Proyecto
                         Id: 54081697-9976-4321-80a2-1d5877652fd9
+                        Priority: -1
                         escena: demo
                         siguienteEscena: demo
                     7107c19923448b964ecd9d41fe2771bf: !TransformComponent
@@ -5802,6 +5787,7 @@ Hierarchy:
                         Children: {}
                     0e0d6b05a21cc4b97f364ff49e6728e5: !Voronomir.ControladorCofres,Voronomir.Proyecto
                         Id: b56be47b-3d93-4831-86f0-13b3a2b3d9aa
+                        Priority: -1
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/Proyectiles/Marca
                         prefabEfecto: fb5fb3aa-991f-4954-94e8-6ddbde24eb1f:Prefabs/Proyectiles/Efecto
                         prefabGranada: a3c696d3-259b-49a3-94e8-945c1671282a:Prefabs/Proyectiles/Granada
@@ -5813,9 +5799,11 @@ Hierarchy:
                         "prefabImpactoAraña": "0813580a-18cd-48ee-b40d-7d72977e10c5:Prefabs/Proyectiles/ImpactoAraña"
                     3ba19ac87f450380cffa251b6434761f: !Voronomir.ControladorPersecusionesTrigonom%25C3%25A9tricas,Voronomir.Proyecto
                         Id: 41c4e19c-0c5b-4c55-b8b8-d2a4e05dd1f1
+                        Priority: -1
                         enemigo: especialLigero
                     be25c192f8666064ceb8a1bef89aaeae: !Voronomir.ControladorPersecusionesTrigonom%25C3%25A9tricas,Voronomir.Proyecto
                         Id: 2b886118-5837-4ff4-8202-f21652caf832
+                        Priority: -1
                         enemigo: especialPesado
                     5d7d60972d62727e06bf9f67509b933b: !Voronomir.ControladorDemo,Voronomir.Proyecto
                         Id: 8688afb4-7376-419b-a61d-169b36f0c5ab

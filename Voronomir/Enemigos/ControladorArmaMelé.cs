@@ -6,13 +6,13 @@ namespace Voronomir;
 
 public class ControladorArmaMelé : StartupScript
 {
-    private RigidbodyComponent cuerpo;
+    private PhysicsComponent cuerpo;
     private float daño;
 
     public void Iniciar(float _daño)
     {
         daño = _daño;
-        cuerpo = Entity.Get<RigidbodyComponent>();
+        cuerpo = Entity.Get<PhysicsComponent>();
     }
 
     public void Atacar()
@@ -27,7 +27,7 @@ public class ControladorArmaMelé : StartupScript
 
     private void EnviarDaño(Collision[] colisiones, float daño)
     {
-        // Melé envia daño por todos los elementos
+        // Melé envia daño a todos los dañables
         foreach (var colisión in colisiones)
         {
             var dañable = colisión.ColliderA.Entity.Get<ElementoDañable>();

@@ -172,11 +172,6 @@ Hierarchy:
                         invisible: false
                         "armaMelé": null
                         armaRango: ref!! d7fc863f-43cd-4879-a47f-ea890762fdc2
-                        "dañables":
-                            fb4773a93b02b964e21a9e5263094f9a: ref!! 6e8d25c8-8069-4b70-a171-1cac5c31aec2
-                            cc468bc3a724810daefdd73d6d4400ce: ref!! 54a6621f-226c-47bb-9bda-5a99903411b2
-                            1eb631b17a3b0389a64326d2b70c70d2: ref!! fcaa9200-384e-431c-8afa-1d5e4c93c294
-                            4a052ad4245d0d8a0c2705ec0dd4b452: ref!! 542a3a24-2b94-4dd7-a4ee-782c88e45c9a
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 9cb8a6d0-7ffb-442d-9c71-0584b6ebc293
                         "estático": false

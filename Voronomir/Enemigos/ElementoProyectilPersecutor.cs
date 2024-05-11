@@ -14,7 +14,6 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
     public ModelComponent modelo;
     public RigidbodyComponent cuerpoDañable;
     public ParticleSystemComponent partícula;
-    public List<RigidbodyComponent> dañables { get; set; }
 
     private Enemigos disparador;
     private RigidbodyComponent cuerpo;
