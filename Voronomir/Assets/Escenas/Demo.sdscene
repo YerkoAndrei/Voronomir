@@ -5788,6 +5788,7 @@ Hierarchy:
                     0e0d6b05a21cc4b97f364ff49e6728e5: !Voronomir.ControladorCofres,Voronomir.Proyecto
                         Id: b56be47b-3d93-4831-86f0-13b3a2b3d9aa
                         Priority: -1
+                        "permiteInstanciación": true
                         prefabMarca: 8e9d85b9-a162-4e07-b7b2-56c0bec72782:Prefabs/Proyectiles/Marca
                         prefabEfecto: fb5fb3aa-991f-4954-94e8-6ddbde24eb1f:Prefabs/Proyectiles/Efecto
                         prefabGranada: a3c696d3-259b-49a3-94e8-945c1671282a:Prefabs/Proyectiles/Granada

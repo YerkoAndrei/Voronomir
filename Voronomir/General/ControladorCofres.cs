@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using System.Collections.Generic;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 
@@ -8,6 +9,7 @@ using static Constantes;
 
 public class ControladorCofres : StartupScript
 {
+    public bool permiteInstanciación;
     public Prefab prefabMarca;
     public Prefab prefabEfecto;
     public Prefab prefabGranada;
@@ -19,7 +21,8 @@ public class ControladorCofres : StartupScript
     public Prefab prefabProyectilDron;
     public Prefab prefabImpactoAraña;
 
-    // Enemigos
+    // Cofres
+    private static Vector3 cofreProyectiles;
     private static Vector3 cofreEnemigos;
 
     // Marcas
@@ -67,7 +70,8 @@ public class ControladorCofres : StartupScript
     public override void Start()
     {
         // Cofre enemigos
-        cofreEnemigos = new Vector3(-13, 0, 0);
+        cofreProyectiles = new Vector3(0, -10, 0);
+        cofreEnemigos = new Vector3(-13, -10, 0);
 
         // Cofre jugador / efectos
         maxMarcas = 100;
@@ -81,6 +85,7 @@ public class ControladorCofres : StartupScript
         {
             var marca = prefabMarca.Instantiate()[0];
             marcas[i] = marca.Get<ElementoMarca>();
+            marca.Transform.Position = cofreProyectiles;
             Entity.Scene.Entities.Add(marca);
         }
 
@@ -90,6 +95,8 @@ public class ControladorCofres : StartupScript
         {
             var efecto = prefabEfecto.Instantiate()[0];
             efectos[i] = efecto.Get<ElementoEfecto>();
+            efecto.Transform.Position = cofreProyectiles;
+            efecto.Transform.Position = cofreProyectiles;
             Entity.Scene.Entities.Add(efecto);
         }
 
@@ -99,6 +106,7 @@ public class ControladorCofres : StartupScript
         {
             var granada = prefabGranada.Instantiate()[0];
             granadas[i] = ObtenerInterfaz<IProyectil>(granada);
+            granada.Transform.Position = cofreProyectiles;
             Entity.Scene.Entities.Add(granada);
         }
 
@@ -108,16 +116,40 @@ public class ControladorCofres : StartupScript
         {
             var explosión = prefabExplosión.Instantiate()[0];
             explosiones[i] = ObtenerInterfaz<IImpacto>(explosión);
+            explosión.Transform.Position = cofreProyectiles;
             Entity.Scene.Entities.Add(explosión);
         }
 
-        // PENDIENTE: buscar cantidad enemigos
         // Cofre enemigos
-        maxProyectilesPulga = 20;
-        maxProyectilesBabosa = 20;
-        maxProyectilesAraña = 20;
-        maxProyectilesDron = 20;
-        maxImpactosAraña = maxProyectilesAraña * 2;
+        if (permiteInstanciación)
+        {
+            maxProyectilesPulga = 20;
+            maxProyectilesBabosa = 20;
+            maxProyectilesAraña = 20;
+            maxImpactosAraña = 40;
+            maxProyectilesDron = 20;
+        }
+        else
+        {
+            var controladores = Entity.Scene.Entities.Where(o => o.Get<ControladorEnemigo>() != null)
+                                                     .Select(o => o.Get<ControladorEnemigo>())
+                                                     .ToArray();
+            // Cuenta enemigos
+            if (controladores.Where(o => o.enemigo == Enemigos.rangoLigero).Count() > 0)
+                maxProyectilesPulga = 20;
+
+            if (controladores.Where(o => o.enemigo == Enemigos.rangoMediano).Count() > 0)
+                maxProyectilesBabosa = 20;
+
+            if (controladores.Where(o => o.enemigo == Enemigos.rangoPesado).Count() > 0)
+            {
+                maxProyectilesAraña = 20;
+                maxImpactosAraña = 40;
+            }
+
+            if (controladores.Where(o => o.enemigo == Enemigos.especialLigero).Count() > 0)
+                maxProyectilesDron = 20;
+        }
 
         // Pulga
         proyectilesPulga = new IProyectil[maxProyectilesPulga];
@@ -125,6 +157,7 @@ public class ControladorCofres : StartupScript
         {
             var proyectil = prefabProyectilPulga.Instantiate()[0];
             proyectilesPulga[i] = ObtenerInterfaz<IProyectil>(proyectil);
+            proyectil.Transform.Position = cofreProyectiles;
             Entity.Scene.Entities.Add(proyectil);
         }
 
@@ -134,6 +167,7 @@ public class ControladorCofres : StartupScript
         {
             var proyectil = prefabProyectilBabosa.Instantiate()[0];
             proyectilesBabosa[i] = ObtenerInterfaz<IProyectil>(proyectil);
+            proyectil.Transform.Position = cofreProyectiles;
             Entity.Scene.Entities.Add(proyectil);
         }
 
@@ -143,6 +177,7 @@ public class ControladorCofres : StartupScript
         {
             var proyectil = prefabProyectilAraña.Instantiate()[0];
             proyectilesAraña[i] = ObtenerInterfaz<IProyectil>(proyectil);
+            proyectil.Transform.Position = cofreProyectiles;
             Entity.Scene.Entities.Add(proyectil);
         }
         impactosAraña = new IImpacto[maxImpactosAraña];
@@ -150,6 +185,7 @@ public class ControladorCofres : StartupScript
         {
             var impacto = prefabImpactoAraña.Instantiate()[0];
             impactosAraña[i] = ObtenerInterfaz<IImpacto>(impacto);
+            impacto.Transform.Position = cofreProyectiles;
             Entity.Scene.Entities.Add(impacto);
         }
 
@@ -159,6 +195,7 @@ public class ControladorCofres : StartupScript
         {
             var proyectil = prefabProyectilDron.Instantiate()[0];
             proyectilesDron[i] = ObtenerInterfaz<IProyectil>(proyectil);
+            proyectil.Transform.Position = cofreProyectiles;
             Entity.Scene.Entities.Add(proyectil);
         }
     }
