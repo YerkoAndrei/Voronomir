@@ -108,8 +108,6 @@ public static class Constantes
         volumenGeneral,
         volumenMúsica,
         volumenEfectos,
-        velocidadRed,
-        puertoRed,
         pantallaCompleta,
         resolución,
         sensibilidad,
