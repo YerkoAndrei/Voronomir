@@ -12,20 +12,10 @@ public class AnimadorCerebro : StartupScript, IAnimador
     public ParticleSystemComponent partículas;
     public RigidbodyComponent saltador;
     public List<ModelComponent> modelos = new List<ModelComponent> { };
-    public List<RigidbodyComponent> cuerpos = new List<RigidbodyComponent> { };
-
-    private CollisionFilterGroups[] colisionesCuerpos;
 
     public void Iniciar()
     {
-        // Cerebro tiene colisiones extras
-        colisionesCuerpos = new CollisionFilterGroups[cuerpos.Count];
-        for (int i = 0; i < cuerpos.Count; i++)
-        {
-            colisionesCuerpos[i] = cuerpos[i].CollisionGroup;
-            cuerpos[i].CollisionGroup = CollisionFilterGroups.StaticFilter;
-            cuerpos[i].Enabled = false;
-        }
+
     }
 
     public void Actualizar()
@@ -38,11 +28,6 @@ public class AnimadorCerebro : StartupScript, IAnimador
         foreach (var modelo in modelos)
         {
             modelo.Enabled = activar;
-        }
-        for (int i = 0; i < cuerpos.Count; i++)
-        {
-            cuerpos[i].CollisionGroup = colisionesCuerpos[i];
-            cuerpos[i].Enabled = true;
         }
 
         partículas.Enabled = activar;
