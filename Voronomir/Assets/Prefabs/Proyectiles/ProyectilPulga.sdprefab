@@ -60,5 +60,6 @@ Hierarchy:
                     79c97683a9b44b1d2aa39475a8794065: !ModelComponent
                         Id: 234b8cf9-1f4e-44e0-8fa7-1e292c89eb66
                         Model: 806ab5d9-9135-4bb0-8f4b-4d47bab525c3:Modelos/Proyectiles/Esfera/Esfera
+                        IsShadowCaster: false
                         Materials:
                             8b70fc45b87a9a98df55c76899501785~0: 6cc33e1e-db8b-4674-a9cb-cd74193afd64:Materiales/Veneno

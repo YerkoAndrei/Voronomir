@@ -62,6 +62,7 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: e27e83ea-8886-45fc-a94b-0ffa1911247d
                         Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Proyectiles/Cilindro/Cilindro
+                        IsShadowCaster: false
                         Materials:
                             1a78ec5ca4e5e0f7fc0d523455037b80~0: 6cc33e1e-db8b-4674-a9cb-cd74193afd64:Materiales/Veneno
         -   Entity:
