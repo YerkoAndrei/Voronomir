@@ -372,6 +372,18 @@ Hierarchy:
                         modelo: ref!! a499c6d7-b229-4995-a0cb-d00b50d65824
                         veneno: ref!! a6ba3f7b-3276-494b-a6c1-eb06ce4e527d
                         "partículas": ref!! 2ef60f9a-e435-4cba-a2ee-c8cb7b007389
+                        cabeza: cabeza
+                        poto: poto_01
+                        patasIzq:
+                            4b8814497bc91db1d7a5cf496d115b5f: pata.1_03.L
+                            06b4eca309009beaa875c2e8a572925c: pata.2_03.L
+                            1bf27eda3a5133e7014517139631a07c: pata.3_03.L
+                            cc4f3696387a5df60919e78c22f4fc33: pata.4_03.L
+                        patasDer:
+                            9ba3ea6ee47a879c2874b0eda2b40710: pata.1_03.R
+                            a1aa4041480f4818a277a06814af251e: pata.2_03.R
+                            3a60c392506c72ab62c1051f24687dcf: pata.3_03.R
+                            c0e672ffdc0ddad77e91ec6b9d8c6d2f: pata.4_03.R
         -   Folder: null
             Entity:
                 Id: c89d458b-f954-4d3f-9032-14652b88b729

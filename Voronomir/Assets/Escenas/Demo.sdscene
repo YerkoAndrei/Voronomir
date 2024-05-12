@@ -3609,7 +3609,7 @@ Hierarchy:
                             5335687c323b410f0abeb005c3b0e03f: ref!! a2757bed-fac4-4e0f-b968-5971166e0ea1
                             2bda9b522f335cd62de84b098bd1e2c9: ref!! b02cf995-a510-41d8-b048-8819245b2a71
                             ade62b521c38c050c44e3b24f46248c9: ref!! 38c20524-659c-4ef9-9d22-65555fd773c7
-                            c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 0f9ab762-0c1e-442f-816b-21a48f2c38a1
+                            08252d56ff63011042d4473b3df43b9d: ref!! 0f9ab762-0c1e-442f-816b-21a48f2c38a1
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 596b7fcd-de12-4dce-98c8-a74321307177
                         enemigo: especialLigero

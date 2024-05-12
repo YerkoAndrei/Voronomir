@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Linq;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Rendering;
@@ -71,8 +70,8 @@ public class AnimadorLancero : StartupScript, IAnimador
 
     public void Caminar(float velocidad)
     {
-        esqueleto.NodeTransformations[idPiernas[0]].Transform.Rotation *= Quaternion.RotationY(-velocidad * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
-        esqueleto.NodeTransformations[idPiernas[1]].Transform.Rotation *= Quaternion.RotationY(velocidad * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
+        esqueleto.NodeTransformations[idPiernas[0]].Transform.Rotation *= Quaternion.RotationY(-velocidad * 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
+        esqueleto.NodeTransformations[idPiernas[1]].Transform.Rotation *= Quaternion.RotationY(velocidad * 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
 
         ApuntarLanza();
     }
@@ -91,8 +90,8 @@ public class AnimadorLancero : StartupScript, IAnimador
 
     private async void AnimarAtaque()
     {
-        var rotaciónAtaque0 = Quaternion.RotationZ(-90);
-        var rotaciónAtaque1 = Quaternion.RotationZ(90);
+        var rotaciónAtaque0 = Quaternion.RotationZ(MathUtil.DegreesToRadians(-120));
+        var rotaciónAtaque1 = Quaternion.RotationZ(MathUtil.DegreesToRadians(120));
         float duración = 0.4f;
         float tiempoLerp = 0;
         float tiempo = 0;

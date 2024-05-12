@@ -90,6 +90,16 @@ Hierarchy:
                     c723158e71ae60a899c9a7879438eb2d: !Voronomir.AnimadorPulga,Voronomir.Proyecto
                         Id: 619d679a-65d4-462b-ac1f-33d406d86c41
                         modelo: ref!! d18919cc-5ead-442c-bcb6-c44f869a2ba5
+                        cabeza: cabeza
+                        poto: poto
+                        patasIzq:
+                            a52948bea5859dc6f772c3716dd5dbc7: pata.1_02.L
+                            458ef93db17ce35d21fbed1debc0d490: pata.2_02.L
+                            6f8e4c91f7a732876521926f1daaa441: pata.3_02.L
+                        patasDer:
+                            10e99fafcefdd6a3074fc349d55c66de: pata.1_02.R
+                            8e65a6aaad4f40c73ca1bd72c9209c13: pata.2_02.R
+                            438093aea2917a1a7ecb22d55370c1c6: pata.3_02.R
         -   Entity:
                 Id: 74b17871-cc22-41ba-ba6f-d19852fa124b
                 Name: Emisor

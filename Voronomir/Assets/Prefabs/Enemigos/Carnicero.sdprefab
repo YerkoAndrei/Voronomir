@@ -258,6 +258,12 @@ Hierarchy:
                     687581e2307681c826d156c78271ab5f: !Voronomir.AnimadorCarnicero,Voronomir.Proyecto
                         Id: 44dea43f-e730-492d-aa3b-32ba51539e35
                         modelo: ref!! 53795824-656e-4952-9c2d-87b036f8e4d4
+                        brazos:
+                            f5565bd98e81abe189c67f996f9e75d8: brazo.L
+                            456611d3dc8c0e5065e21c19ab908336: brazo.R
+                        piernas:
+                            b29c42652168a67cf063f3c2713e5826: muslo.L
+                            f351acd21200855b28898d3df7685cf1: muslo.R
         -   Folder: null
             Entity:
                 Id: dcbc7ff8-ca31-41aa-bcb6-855d91a14965
