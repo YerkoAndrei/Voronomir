@@ -359,6 +359,7 @@ Hierarchy:
                         invisible: false
                         "armaMelé": null
                         armaRango: null
+                        emisor: null
                     d7feb748634a3f30f579747ffa6f0e53: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: b402af8c-3273-4944-89bf-bb71b6503b90
                         "estático": false

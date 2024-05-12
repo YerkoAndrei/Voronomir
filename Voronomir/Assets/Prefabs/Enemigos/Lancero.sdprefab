@@ -6,6 +6,25 @@ Hierarchy:
     RootParts:
         - ref!! c9e799f5-5b9a-49c2-8d71-11b62ba6434c
     Parts:
+        -   Entity:
+                Id: 04735d80-c07e-40e0-b7f8-fea5bb358ed7
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 0e806b7e-ec46-4e5b-9497-6ff1998d01d5
+                        Position: {X: 0.0, Y: 1.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 4fbfd175-a022-475c-8022-e153d5590fc4
+                        Sounds:
+                            77654c9207313432df1094f1bac845c9~atacar: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            "225e0fa471669017da53479ca07a123a~daño": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            b4a4b5f9c4cd20149d1933cd4cacb798~morir: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
         -   Folder: null
             Entity:
                 Id: 3ee393cc-14e8-4a1c-adcf-9ad18a6b28d8
@@ -190,6 +209,7 @@ Hierarchy:
                             98b2fbf71a5cfafbf7eb81d64dc09137: ref!! f1cf5d44-d5f9-4dc5-b7ee-27e957d6fe66
                             6d3eb683bcf2fe51f0c93cafe3af4268: ref!! a5a79d80-4d40-4f5c-a9bb-3fc2a23d252f
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 4ee0fa72-da51-4fc4-85d9-347ee2fc3b58
+                            98246894102c75cfc21aaf3cc49d3ca3: ref!! 0e806b7e-ec46-4e5b-9497-6ff1998d01d5
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! ed6871da-b990-4be5-ac45-d7c7dd876677
                     954d0ff008c5bbb1b96abc5e37c5fa11: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 0cb46007-db80-4631-9727-8e0d24bbf462
@@ -197,6 +217,7 @@ Hierarchy:
                         invisible: false
                         "armaMelé": ref!! c8a68cc4-275d-480b-be50-241f5096c1e5
                         armaRango: null
+                        emisor: ref!! 4fbfd175-a022-475c-8022-e153d5590fc4
                     e42c151e94d68ac78484fc9361011f5c: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 4c39d3ae-0407-4623-abb7-a16af17cdafd
                         "estático": false

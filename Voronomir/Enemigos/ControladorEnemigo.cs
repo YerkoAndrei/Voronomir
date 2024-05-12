@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
-using Stride.Engine;
 using Stride.Physics;
+using Stride.Audio;
+using Stride.Engine;
 
 namespace Voronomir;
 using static Utilidades;
@@ -14,6 +15,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
 
     public ControladorArmaMelé armaMelé;
     public ControladorArmaRango armaRango;
+    public AudioEmitterComponent emisor;
 
     private CharacterComponent cuerpo;
     private ControladorPersecusión persecutor;
@@ -21,6 +23,10 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
     private float vida;
     private bool despierto;
     private bool activo;
+
+    private AudioEmitterSoundController sonidoAtacar;
+    private AudioEmitterSoundController sonidoDaño;
+    private AudioEmitterSoundController sonidoMorir;
 
     // Invisible
     private Vector3 posiciónInicial;
@@ -30,9 +36,19 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
     {
         cuerpo = Entity.Get<CharacterComponent>();
         persecutor = Entity.Get<ControladorPersecusión>();
+
         vida = ObtenerVida();
         despierto = false;
         activo = false;
+
+        sonidoAtacar = emisor["atacar"];
+        sonidoDaño = emisor["daño"];
+        sonidoMorir = emisor["morir"];
+
+        var alturaSonido = RangoAleatorio(0.9f, 1.1f);
+        sonidoAtacar.Pitch = alturaSonido;
+        sonidoDaño.Pitch = alturaSonido;
+        sonidoMorir.Pitch = alturaSonido;
 
         // Busca animador
         animador = ObtenerInterfaz<IAnimador>(Entity);
@@ -120,6 +136,11 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
             armaMelé.Atacar();
         else if (armaRango != null)
             armaRango.Disparar();
+
+        // Sonido
+        sonidoAtacar.Stop();
+        sonidoAtacar.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+        sonidoAtacar.Play();
     }
 
     public void RecibirDaño(float daño)
@@ -128,7 +149,18 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         vida -= daño;
 
         if (vida <= 0 && activo)
+        {
             Morir();
+
+            sonidoMorir.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+            sonidoMorir.PlayAndForget();
+        }
+        else
+        {
+            sonidoDaño.Stop();
+            sonidoDaño.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+            sonidoDaño.Play();
+        }
     }
 
     public void Empujar(Vector3 dirección)

@@ -335,6 +335,29 @@ Hierarchy:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
                 InstanceId: 10396d09-c3d0-4716-b888-450afcf55538
+        -   Entity:
+                Id: 095f16b8-041c-4282-adb9-f715c2d19f0a
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 38c20524-659c-4ef9-9d22-65555fd773c7
+                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 83666af7-18bd-4d32-b0ae-3baf1a18d436
+                        Sounds:
+                            77654c9207313432df1094f1bac845c9~atacar: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            "225e0fa471669017da53479ca07a123a~daño": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            b4a4b5f9c4cd20149d1933cd4cacb798~morir: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Enemigos/Dron
+                BasePartId: 786ebb12-3b47-4ea1-9eb2-6723836cdf94
+                InstanceId: 0099e264-d3bb-4e4a-9d61-761cd03349de
         -   Folder: null
             Entity:
                 Id: 10c26f8f-3be3-476c-aa70-fbc9af6600d1
@@ -493,6 +516,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 2f292ff2-68d1-4939-884c-78cab4160835
+                            c94682221c88f3c4f580d5bc94e9d92f: ref!! 7fa07442-3ed9-470f-acbd-37ff1998aa8b
                             71043ba84480484fa2072869fece6482: ref!! 91c92da7-4f55-47fd-8d77-95c98b4706cb
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: c90830d7-e60d-4d46-8b61-d88f1b9681ce
@@ -517,6 +541,7 @@ Hierarchy:
                         poder: invulnerabilidad
                         modelo: ref!! 2f292ff2-68d1-4939-884c-78cab4160835
                         "partículas": ref!! c68b340b-1042-4452-8db5-fc25eb12a4f2
+                        emisor: ref!! e97c6b3d-f600-4c89-bcca-fc66673cbbee
             Base:
                 BasePartAsset: "64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/EntornoDinámico/Poder (Invulnerabilidad)"
                 BasePartId: ee35195a-1513-4fb3-9e69-a6ad7040a4f5
@@ -618,16 +643,39 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             1ddbd0512b367caf4469eb39c9220865: ref!! b133376a-c857-4675-adb5-6314ac7ef543
+                            f6b94792c7c6d0ef6bb4afe8051582f6: ref!! ed968079-e6cf-41a3-ab86-034adecd2c29
                     288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
                         Id: 2243fcfb-fabe-4ac3-926b-f2a785ba4def
                         instantanea: false
                         activaciones: 1
                         modelo: ref!! b133376a-c857-4675-adb5-6314ac7ef543
+                        emisor: ref!! f7ac94e1-4bf9-4a9b-80b9-d8aa9dda8a7e
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: 45cbff65-19f6-4c05-ba8a-03c032d56655
+        -   Entity:
+                Id: 1d1da290-227e-40f7-b78f-b0685269fb6d
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: f73b06aa-424c-48f7-bb46-cd6a4cc67e59
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: d46f6e8b-a171-456c-99b4-47faaf4edef4
+                        Sounds:
+                            f6ff0bc540a30aa830334fe03cf0f94f~sonido: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: "9ff047a9-a9e8-4838-af1b-5b0a91f53265:Prefabs/EntornoDinámico/Poder (Velocidad)"
+                BasePartId: 0f1382bf-6c40-4201-8302-929ad137e015
+                InstanceId: 5052427c-e218-49aa-a78d-885da28e66a6
         -   Folder: MuestraEnemigos
             Entity:
                 Id: 1d5236fa-fe59-4e5e-94a2-a9f7dafbc20c
@@ -934,6 +982,7 @@ Hierarchy:
                             f14eafd2887605601cb783e4e612d427: ref!! b7d9d158-03d1-48b2-b836-63a33a12ff18
                             b0616bd3e59c50d54fa88ad23e8366f7: ref!! fb05c347-77c8-46b6-9d5c-5de8d8a15656
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 6c5a5b2a-3e33-423b-bf69-967cbe942806
+                            622a5aad8a29a62b21482fb46e214963: ref!! 9ebf82b4-36cd-41d8-a591-6ecd6a08f487
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! 88494a4a-8d92-40a9-a303-567adcfaee31
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: ae9e5b59-4677-41ce-9aaa-fb0879d4ba82
@@ -941,6 +990,7 @@ Hierarchy:
                         invisible: false
                         "armaMelé": ref!! f6db328c-a355-410a-94eb-463252bb627d
                         armaRango: null
+                        emisor: ref!! cde3cdb1-c138-4e19-b837-256f99cf815d
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 274dece1-ca9b-480f-9924-13a5363f3d01
                         "estático": false
@@ -1000,6 +1050,28 @@ Hierarchy:
                 BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/EntornoDinámico/Botón (Azul)"
                 BasePartId: 4dd8d50e-34b1-443c-ae29-c80da6cfeba3
                 InstanceId: 1b4230e3-9a3b-4a38-bd20-539a23aeec6f
+        -   Entity:
+                Id: 29c6d3b8-c679-4e41-8798-693280d612e2
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 1dc58004-77ae-4b4e-ade7-63fde01f582a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 847e03bb-c90d-4019-b962-65369e1a7f56
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: ca050498-6d51-489a-8319-788c683abe81
         -   Folder: null
             Entity:
                 Id: 2ce62315-fc93-4bf4-ac0f-dfdb49f82bf6
@@ -1469,7 +1541,7 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 2.0
+                                            SpawnCount: 4.0
                                     Initializers:
                                         104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
                                             InheritPosition: true
@@ -1764,11 +1836,13 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             974930f89f5418aadc8036b440d5a6c6: ref!! e6c52ee0-d486-4cbf-b99e-9addbbbd1eda
+                            3a7a599ff67359515ca6237a9cc8e319: ref!! 1dc58004-77ae-4b4e-ade7-63fde01f582a
                     288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
                         Id: b6928d80-e409-4b71-b028-ecffbb8130e1
                         instantanea: false
                         activaciones*: 2
                         modelo: ref!! e6c52ee0-d486-4cbf-b99e-9addbbbd1eda
+                        emisor: ref!! 847e03bb-c90d-4019-b962-65369e1a7f56
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
@@ -2111,6 +2185,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 5dd9166c-961d-48ba-b9dd-efe134b7b2f3
+                            8b4c61b51eb45a04b7baebee10f652f4: ref!! d348cef0-c87e-417e-8797-3d0c44964c48
                             f4cd1655ba7ae5aff2915c59621e1f40: ref!! 27889040-52ce-4031-a734-20e77eea60e7
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: c24a51b3-4179-4dba-94d3-faf9213a4ebb
@@ -2135,6 +2210,7 @@ Hierarchy:
                         llave: azul
                         modelo: ref!! 5dd9166c-961d-48ba-b9dd-efe134b7b2f3
                         "partículas": ref!! e3f201f1-72d2-4c92-91e1-cc7ca3b3c22e
+                        emisor: ref!! 2a822dca-4d21-4475-9821-380c9e9e1bec
             Base:
                 BasePartAsset: "f104c990-42cd-4a37-ac04-9c9181fbe8ed:Prefabs/EntornoDinámico/Llave (Azul)"
                 BasePartId: 60a17964-ae87-420b-b6c7-baa54dd9ac8a
@@ -2159,6 +2235,27 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: b5498599-9678-4cbd-a50a-c345377df315
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Entity:
+                Id: 52af4772-db38-4468-bd58-d171b00a9115
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 7fa07442-3ed9-470f-acbd-37ff1998aa8b
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: e97c6b3d-f600-4c89-bcca-fc66673cbbee
+                        Sounds:
+                            f6ff0bc540a30aa830334fe03cf0f94f~sonido: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: "64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/EntornoDinámico/Poder (Invulnerabilidad)"
+                BasePartId: f4bfee44-8d74-4f83-82d1-69380cae9886
+                InstanceId: 938b33c4-b6af-4165-953d-b183bb31a5c8
         -   Folder: "EntornoEstático"
             Entity:
                 Id: 52cd02bd-3165-4aa6-8d1e-7538541119a3
@@ -2323,6 +2420,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 411e04b7-e116-4fb4-8bf5-773513c77a48
+                            211976014e41b0a71ae8d3aba7026c9e: ref!! f73b06aa-424c-48f7-bb46-cd6a4cc67e59
                             ba6b955c5049a58c1bc34e564a810517: ref!! 9c89cd24-436b-4abc-8adf-5c50103b6da4
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: afcbe468-e143-4a47-85bd-85fd78989504
@@ -2347,10 +2445,34 @@ Hierarchy:
                         poder: velocidad
                         modelo: ref!! 411e04b7-e116-4fb4-8bf5-773513c77a48
                         "partículas": ref!! a45ebd23-e302-428e-8a64-c2fdba176ef0
+                        emisor: ref!! d46f6e8b-a171-456c-99b4-47faaf4edef4
             Base:
                 BasePartAsset: "9ff047a9-a9e8-4838-af1b-5b0a91f53265:Prefabs/EntornoDinámico/Poder (Velocidad)"
                 BasePartId: a5bbf80c-25f8-4ffa-bbdf-0a6f4f966fa9
                 InstanceId: 5052427c-e218-49aa-a78d-885da28e66a6
+        -   Entity:
+                Id: 604348ff-f0ea-4ee4-a99b-58e07ce23e0d
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 2a0c0bd0-cbd8-4b88-80fd-18a0195abe7d
+                        Position: {X: 0.0, Y: 1.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: bb842453-f0f2-4e38-b2fe-af20eb48699c
+                        Sounds:
+                            77654c9207313432df1094f1bac845c9~atacar: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            "225e0fa471669017da53479ca07a123a~daño": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            b4a4b5f9c4cd20149d1933cd4cacb798~morir: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4a60d4e8-39c8-4965-bd7f-125c563e38bb
+                InstanceId: 09a48882-bda0-4afb-b531-69859893d44a
         -   Entity:
                 Id: 612dea71-366e-4ba6-aa20-5ee33cfcf3c9
                 Name: "Partículas"
@@ -2395,7 +2517,7 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 2.0
+                                            SpawnCount: 4.0
                                     Initializers:
                                         104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
                                             InheritPosition: true
@@ -2539,7 +2661,7 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 2.0
+                                            SpawnCount: 4.0
                                     Initializers:
                                         104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
                                             InheritPosition: true
@@ -2704,6 +2826,27 @@ Hierarchy:
                 BasePartAsset: "73f16069-e6ab-4eae-a431-2bbd98bb2fe6:Prefabs/EntornoDinámico/Botón (Rojo)"
                 BasePartId: 233c6a74-4ed3-4f45-9b13-717901d3fe86
                 InstanceId: edff4fe5-e8a9-44f4-954a-564b4b402372
+        -   Entity:
+                Id: 684e9a53-62b2-49c1-9aab-172b62c63eac
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 6385e688-d917-4bbb-bc20-a0dc740c3000
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 1d5150c3-15fa-489b-8ac0-4b439e646137
+                        Sounds:
+                            f6ff0bc540a30aa830334fe03cf0f94f~sonido: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: "3058a8fb-6fd5-4bc9-8df4-19fe486ca86e:Prefabs/EntornoDinámico/Poder (Daño)"
+                BasePartId: c12cda72-f6ef-4bb2-b86e-ba3c72fcb47c
+                InstanceId: 0e1856ce-e831-40e5-88f2-00b9af8fec6b
         -   Entity:
                 Id: 69719b05-c9e1-46bc-8c2b-0c9732e33142
                 Name: "PartículasCalentamiento"
@@ -2893,6 +3036,27 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 70161267-23b6-4164-a9ff-8afd7133263f
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Entity:
+                Id: 6f2a0446-3a43-4c76-bcca-d39a0e53acc5
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 7f9ec5c0-00b3-4986-9c4a-314fd4b36cae
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 4a8538fd-4dfd-4d19-9ef2-3947288bd0f4
+                        Sounds:
+                            f6ff0bc540a30aa830334fe03cf0f94f~sonido: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: "2c6736d1-0a31-4e49-b281-0e17303b2b12:Prefabs/EntornoDinámico/Llave (Roja)"
+                BasePartId: bf9a8b69-299c-46ff-8817-d0b2f00148e4
+                InstanceId: 2f150493-58d6-47fe-bd21-512bf82fc32d
         -   Folder: "EntornoDinámico"
             Entity:
                 Id: 713070be-902c-4072-88c3-994978523f77
@@ -2922,6 +3086,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             36d3c59ff298eb8b6306d66d61ab4b87: ref!! d97d1025-8df0-4f59-8b9e-afe1008072ec
+                            fbf50803748b037cbc662826890643c7: ref!! 0cc91c02-7e12-4386-9463-c33830704488
                             8452a0c16a9ea414407864b8b8c87048: ref!! 13e53e78-dbf0-40aa-aa31-1abcf01a3c2d
                             6a29955c10063a64daa1d56f368541fa: ref!! 875843cf-f563-4771-84a0-5b5842d36e74
                             5c814983963e13056fea52f24dc70768: ref!! 3652bc5a-1729-41cc-b50e-f8dc5b156014
@@ -3227,16 +3392,40 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             9d8557da382431c2824eb56c010fba30: ref!! bb99c06b-1a0b-49fd-806b-d32041837a3e
+                            45e68bd4ded7fe523263c7cd6ea2b26e: ref!! de09b6e6-e56a-42be-9085-b7dc4175b0d9
                     288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
                         Id: 476bf0f6-4204-44df-8129-c02ee709279b
                         instantanea*: true
                         activaciones: 1
                         modelo: ref!! bb99c06b-1a0b-49fd-806b-d32041837a3e
+                        emisor: ref!! 9fb0ff61-3d58-4be6-81cf-093a863ab21d
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: 10396d09-c3d0-4716-b888-450afcf55538
+        -   Entity:
+                Id: 819795c3-13ad-4126-8e59-54c91ff7e944
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: dab259f0-ef21-4a67-8ccc-e2ef7dfba51f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 3a5fef0f-0a2d-4882-bea0-b012fbc73258
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: affaa42e-d400-469e-97e5-dcc905234d2f
         -   Entity:
                 Id: 8276ca91-a8ff-46fc-b56f-5527daeba089
                 Name: "Partículas"
@@ -3281,7 +3470,7 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 2.0
+                                            SpawnCount: 4.0
                                     Initializers:
                                         104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
                                             InheritPosition: true
@@ -3419,6 +3608,7 @@ Hierarchy:
                             0a5042c5122b96b7568d7bafd42c2219: ref!! 44b40718-202e-4536-be60-a8b2232fc621
                             5335687c323b410f0abeb005c3b0e03f: ref!! a2757bed-fac4-4e0f-b968-5971166e0ea1
                             2bda9b522f335cd62de84b098bd1e2c9: ref!! b02cf995-a510-41d8-b048-8819245b2a71
+                            ade62b521c38c050c44e3b24f46248c9: ref!! 38c20524-659c-4ef9-9d22-65555fd773c7
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 0f9ab762-0c1e-442f-816b-21a48f2c38a1
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 596b7fcd-de12-4dce-98c8-a74321307177
@@ -3426,6 +3616,7 @@ Hierarchy:
                         invisible: false
                         "armaMelé": null
                         armaRango: ref!! 3465134a-e5ea-42bb-9ce4-65f62b006cc2
+                        emisor: ref!! 83666af7-18bd-4d32-b0ae-3baf1a18d436
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: cea00763-51a0-4212-bd57-d6694970cfbd
                         "estático*": true
@@ -3772,11 +3963,13 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             1ddbd0512b367caf4469eb39c9220865: ref!! c1da41d9-8786-40b3-94b1-1323677b85a7
+                            67fb11baa9aa49710c0007849722ced6: ref!! cf6a2f31-b1d0-45da-839a-7fe16b8cf975
                     288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
                         Id: bb0f9e8f-4daa-4b4d-994b-41b4a02a3183
                         instantanea: false
                         activaciones: 1
                         modelo: ref!! c1da41d9-8786-40b3-94b1-1323677b85a7
+                        emisor: ref!! eda9ddea-6d97-4ecc-8a45-b17be16e952f
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
@@ -3878,6 +4071,7 @@ Hierarchy:
                             f14eafd2887605601cb783e4e612d427: ref!! e7426f2d-f038-4b97-80ab-353827230af7
                             b0616bd3e59c50d54fa88ad23e8366f7: ref!! c077e950-a6d9-4085-aaa1-a4407962c697
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 673ad655-53ac-4a05-b5d6-3a6689137fc6
+                            2107929ced40ff7600a42bec2fe1c3f9: ref!! ccb9af5f-e851-422d-a1e4-93b167f3cf59
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! 2b72d44b-b886-4718-bda9-b866a5996a99
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: d0c96a68-b7ba-41cd-aaf5-ffea27e91c7a
@@ -3885,6 +4079,7 @@ Hierarchy:
                         invisible*: true
                         "armaMelé": ref!! 2b85fa8c-5bea-47c9-8554-73d9e853e478
                         armaRango: null
+                        emisor: ref!! 86bc9d61-e735-424b-877d-fccaa2069e58
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 75be94a8-8b9f-4e0c-a59a-cfb5e84452a4
                         "estático": false
@@ -4078,6 +4273,7 @@ Hierarchy:
                             f14eafd2887605601cb783e4e612d427: ref!! 8673c616-a88a-4c12-a46a-3e9299ad18e8
                             b0616bd3e59c50d54fa88ad23e8366f7: ref!! fdd91fb6-7100-44ab-85c0-f25ad998325a
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! b34095f0-7763-40f4-b2e5-5aa5c6c3004e
+                            d4fef4c96ac0afa244746e59d9759ac9: ref!! 2a0c0bd0-cbd8-4b88-80fd-18a0195abe7d
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! e5f733c2-e6e4-4f10-ae56-ea59e9e282fd
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 0863067d-987e-4c88-8e18-e9bbe2fba7a4
@@ -4085,6 +4281,7 @@ Hierarchy:
                         invisible: false
                         "armaMelé": ref!! 64c39503-baa5-4b36-86b1-f98bd2eaa51f
                         armaRango: null
+                        emisor: ref!! bb842453-f0f2-4e38-b2fe-af20eb48699c
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 6273a746-4571-4baa-ba29-9cdb75bafaa9
                         "estático": false
@@ -4168,11 +4365,13 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c18e2e620794c306862b4c33a9f5d767: ref!! aa22bde9-4f18-4564-92b1-711927934c22
+                            2807e6fbce8e3d497610dc550b7bcc28: ref!! 5091d038-2e87-4800-aae4-af55a6e13398
                     288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
                         Id: c12cc01a-94f6-4aa1-a67a-42c0fd535afa
                         instantanea: false
                         activaciones: 1
                         modelo: ref!! aa22bde9-4f18-4564-92b1-711927934c22
+                        emisor: ref!! 36c18fa5-7ce0-42bc-9524-82d3e5b02e7b
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
@@ -4526,6 +4725,29 @@ Hierarchy:
                         Id: c1acaa60-0d98-4788-9819-0d8e661bd257
                         Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Entorno/Rampa/Rampa
                         Materials: {}
+        -   Entity:
+                Id: a6da079c-65e8-4866-8f2c-93c7fae5e8e3
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: ccb9af5f-e851-422d-a1e4-93b167f3cf59
+                        Position: {X: 0.0, Y: 1.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 86bc9d61-e735-424b-877d-fccaa2069e58
+                        Sounds:
+                            77654c9207313432df1094f1bac845c9~atacar: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            "225e0fa471669017da53479ca07a123a~daño": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            b4a4b5f9c4cd20149d1933cd4cacb798~morir: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4a60d4e8-39c8-4965-bd7f-125c563e38bb
+                InstanceId: fc0d6ee1-e034-4860-b925-6232f35f9f31
         -   Folder: null
             Entity:
                 Id: a7cf3a65-ca02-44b2-ab58-ac47e21215be
@@ -4570,6 +4792,28 @@ Hierarchy:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
                 InstanceId: affaa42e-d400-469e-97e5-dcc905234d2f
+        -   Entity:
+                Id: a8fadfd9-6fba-4846-bf3d-76b309d8ad0e
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: cf6a2f31-b1d0-45da-839a-7fe16b8cf975
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: eda9ddea-6d97-4ecc-8a45-b17be16e952f
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: 814853e4-d0ae-458c-a2bf-8a7b59346bdc
         -   Folder: MuestraEnemigos
             Entity:
                 Id: a9178381-0e65-41e7-b367-ddfb062cebe6
@@ -4585,6 +4829,28 @@ Hierarchy:
                         Id: d6a5e338-afa8-4a79-a142-2586652224f2
                         Model: e5264c9f-ce07-44c3-804e-cfe48eae8f2a:Modelos/Enemigos/Babosa/Babosa
                         Materials: {}
+        -   Entity:
+                Id: a975e3a2-1581-4dd2-bf3b-6f8ec22ddc5a
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: ed968079-e6cf-41a3-ab86-034adecd2c29
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: f7ac94e1-4bf9-4a9b-80b9-d8aa9dda8a7e
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: 45cbff65-19f6-4c05-ba8a-03c032d56655
         -   Folder: null
             Entity:
                 Id: a9980765-91dd-436e-b643-37fa777d94f4
@@ -4637,6 +4903,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 32524af0-94ba-4b91-af3d-fabb7dd890b3
+                            fe302b62a0bfba3085d92d3d56dcd5cf: ref!! 7f9ec5c0-00b3-4986-9c4a-314fd4b36cae
                             38db358ff4b3dde441141826ce1b69b1: ref!! c0573fd3-5f45-4be4-845b-45fbb33b5d5f
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: d48becce-513c-4054-b703-9b6eca059507
@@ -4661,6 +4928,7 @@ Hierarchy:
                         llave: roja
                         modelo: ref!! 32524af0-94ba-4b91-af3d-fabb7dd890b3
                         "partículas": ref!! a66b8ec0-0eeb-4aa1-9eac-d49be8478e77
+                        emisor: ref!! 4a8538fd-4dfd-4d19-9ef2-3947288bd0f4
             Base:
                 BasePartAsset: "2c6736d1-0a31-4e49-b281-0e17303b2b12:Prefabs/EntornoDinámico/Llave (Roja)"
                 BasePartId: 276dc3fe-34c9-4bdd-8eb3-33c3400fb4e0
@@ -4801,16 +5069,40 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             cd1b6052f5986670fbc4dd61fd046e2d: ref!! a2ebcd3e-500a-4e90-a2d5-9528818a0208
+                            ac11aee201119f78c271c115c2352ffd: ref!! dab259f0-ef21-4a67-8ccc-e2ef7dfba51f
                     288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
                         Id: fca2c93f-8884-470f-a142-ec80ddfa1e26
                         instantanea: false
                         activaciones: 1
                         modelo: ref!! a2ebcd3e-500a-4e90-a2d5-9528818a0208
+                        emisor: ref!! 3a5fef0f-0a2d-4882-bea0-b012fbc73258
                         "posiciónAbierta": {X: 0.0, Y: 3.0, Z: 0.0}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: affaa42e-d400-469e-97e5-dcc905234d2f
+        -   Entity:
+                Id: b9a98c84-4739-4b9a-b1ef-534ed0b78926
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 5091d038-2e87-4800-aae4-af55a6e13398
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 36c18fa5-7ce0-42bc-9524-82d3e5b02e7b
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: b7aa5ff0-129f-49d4-b606-fd1b945a7c67
         -   Folder: null
             Entity:
                 Id: bc2ffddc-e3e5-47f9-b546-08491df3f59a
@@ -4961,6 +5253,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 6f497df9-acb3-4047-b451-d4d070ad90c1
+                            157fa2eefdfa128049150442445ac284: ref!! 6385e688-d917-4bbb-bc20-a0dc740c3000
                             5e86b0d84bef9470c9acea9efc2918a9: ref!! 28247fa0-981d-40c3-baf1-ae43675dd2b0
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: a7f8e502-71c8-44b2-b8f8-b0e64d3f0659
@@ -4985,6 +5278,7 @@ Hierarchy:
                         poder: "daño"
                         modelo: ref!! 6f497df9-acb3-4047-b451-d4d070ad90c1
                         "partículas": ref!! 22217a6f-3ba8-43df-9bd6-3321d677aa38
+                        emisor: ref!! 1d5150c3-15fa-489b-8ac0-4b439e646137
             Base:
                 BasePartAsset: "3058a8fb-6fd5-4bc9-8df4-19fe486ca86e:Prefabs/EntornoDinámico/Poder (Daño)"
                 BasePartId: 135ae145-305c-4c0e-a9fb-bcb9860bb7db
@@ -5033,6 +5327,22 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 86fc6b06-f3ee-4510-a53f-3e5ecd54bb0b
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Entity:
+                Id: c4248584-4599-4c6b-bc31-3e8c52dcb4d7
+                Name: Oyente
+                Components:
+                    745c4c1a93148a30a4bf981a94af8527: !TransformComponent
+                        Id: 0cc91c02-7e12-4386-9463-c33830704488
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    347bb88b006c59d36c3d4dcd8de1ca2b: !AudioListenerComponent
+                        Id: 026efb9f-8c28-466b-950b-280007313463
+            Base:
+                BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
+                BasePartId: b68e92f4-525b-46d7-9ba4-240b06194677
+                InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
         -   Folder: null
             Entity:
                 Id: c58d926c-83a3-494b-acac-062f750e87dc
@@ -5077,6 +5387,27 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
                 InstanceId: 5e87710b-8767-46b6-a137-8996c846998b
+        -   Entity:
+                Id: c58de977-9ad8-483c-b741-63a5bb8998db
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: d348cef0-c87e-417e-8797-3d0c44964c48
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 2a822dca-4d21-4475-9821-380c9e9e1bec
+                        Sounds:
+                            f6ff0bc540a30aa830334fe03cf0f94f~sonido: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: "f104c990-42cd-4a37-ac04-9c9181fbe8ed:Prefabs/EntornoDinámico/Llave (Azul)"
+                BasePartId: b574467b-383f-4305-bb6e-d6e308f88127
+                InstanceId: 78864342-0445-470e-b845-5cde3769de17
         -   Entity:
                 Id: c9dd8130-9916-4bd5-8f84-a204485e033a
                 Name: "Partículas"
@@ -6223,6 +6554,28 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: f10d2475-185f-4c3e-9813-427d4150de9f
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Entity:
+                Id: e4460d8a-feac-4c9a-86ba-4bd7bfa4ff48
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: de09b6e6-e56a-42be-9085-b7dc4175b0d9
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 9fb0ff61-3d58-4be6-81cf-093a863ab21d
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: 10396d09-c3d0-4716-b888-450afcf55538
         -   Folder: null
             Entity:
                 Id: e53f44cb-2567-4250-85f4-6328e541ebc5
@@ -6573,7 +6926,7 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 2.0
+                                            SpawnCount: 4.0
                                     Initializers:
                                         104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
                                             InheritPosition: true
@@ -6960,6 +7313,29 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
                 InstanceId: 09a48882-bda0-4afb-b531-69859893d44a
+        -   Entity:
+                Id: fdb33914-d52e-4abc-baff-819b6064aed8
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 9ebf82b4-36cd-41d8-a591-6ecd6a08f487
+                        Position: {X: 0.0, Y: 1.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: cde3cdb1-c138-4e19-b837-256f99cf815d
+                        Sounds:
+                            77654c9207313432df1094f1bac845c9~atacar: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            "225e0fa471669017da53479ca07a123a~daño": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            b4a4b5f9c4cd20149d1933cd4cacb798~morir: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
+                BasePartId: 4a60d4e8-39c8-4965-bd7f-125c563e38bb
+                InstanceId: 5e87710b-8767-46b6-a137-8996c846998b
         -   Folder: null
             Entity:
                 Id: fe9a458d-b997-40e2-ad3b-2559fad03ce8

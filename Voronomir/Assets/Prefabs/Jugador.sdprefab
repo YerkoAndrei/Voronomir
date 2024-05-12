@@ -1249,6 +1249,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             36d3c59ff298eb8b6306d66d61ab4b87: ref!! 5d1615c0-a8a8-4046-bad2-a4820162f132
+                            c636fa73736044ea09d3cf7274ea6290: ref!! c85680d4-6621-4d89-9c37-8f6cd7960356
                             8452a0c16a9ea414407864b8b8c87048: ref!! 336c61ff-b418-4e99-9fe0-44842a32fccb
                             6a29955c10063a64daa1d56f368541fa: ref!! 6064f21e-a27c-4b3c-9b56-0b5f2a872e10
                             5c814983963e13056fea52f24dc70768: ref!! f232d96c-e174-4590-82b0-2e79eb23e39d
@@ -1455,6 +1456,18 @@ Hierarchy:
                             Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         RenderGroup: Group10
+        -   Entity:
+                Id: b68e92f4-525b-46d7-9ba4-240b06194677
+                Name: Oyente
+                Components:
+                    745c4c1a93148a30a4bf981a94af8527: !TransformComponent
+                        Id: c85680d4-6621-4d89-9c37-8f6cd7960356
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    347bb88b006c59d36c3d4dcd8de1ca2b: !AudioListenerComponent
+                        Id: 10c5c62d-6eb0-4734-b5bf-6bbf470a76ee
         -   Folder: null
             Entity:
                 Id: be33c8de-5ac2-44b8-a446-61d76ba7a173

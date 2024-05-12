@@ -165,6 +165,7 @@ Hierarchy:
                             7b2b17de96d9e06c33d811d00c284814: ref!! 981f9228-bcc6-4442-89b4-e15da243d96c
                             6c449980db9daada232188b4e54fef7b: ref!! 4e6da196-1aa1-42a0-83c7-b592514232ef
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 713e1b7d-f71c-4e42-8a80-6b226356d591
+                            8ce574208dc4fbd346d4ede37fa31db3: ref!! da6d62a6-dd4c-4033-b0ce-662bc94778e6
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! 34ccecee-8594-4129-974a-843b0c2fba9b
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 56c9107d-eaae-434c-96ea-6d9d41abbeac
@@ -172,6 +173,7 @@ Hierarchy:
                         invisible: false
                         "armaMelé": null
                         armaRango: ref!! d7fc863f-43cd-4879-a47f-ea890762fdc2
+                        emisor: ref!! 19647c05-ba87-484e-a8b4-ff2b6aff739c
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 9cb8a6d0-7ffb-442d-9c71-0584b6ebc293
                         "estático": false
@@ -191,6 +193,25 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
+        -   Entity:
+                Id: a0b04e52-6591-4bee-ac88-264aa2dc1814
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: da6d62a6-dd4c-4033-b0ce-662bc94778e6
+                        Position: {X: 0.0, Y: 1.6, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 19647c05-ba87-484e-a8b4-ff2b6aff739c
+                        Sounds:
+                            77654c9207313432df1094f1bac845c9~atacar: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            "225e0fa471669017da53479ca07a123a~daño": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            b4a4b5f9c4cd20149d1933cd4cacb798~morir: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
         -   Folder: null
             Entity:
                 Id: b18829c4-26fb-4449-a8dd-89df2409a40c

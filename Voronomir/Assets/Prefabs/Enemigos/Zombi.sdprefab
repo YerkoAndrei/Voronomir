@@ -139,6 +139,25 @@ Hierarchy:
                         Id: 60dcb0cd-113b-46f6-952b-fb29e7f9d891
                         Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
+        -   Entity:
+                Id: 4a60d4e8-39c8-4965-bd7f-125c563e38bb
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: f0f41295-369e-42a1-9f00-7fa574332afe
+                        Position: {X: 0.0, Y: 1.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 95ab3b56-6de3-4916-85af-a80e17d96849
+                        Sounds:
+                            77654c9207313432df1094f1bac845c9~atacar: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            "225e0fa471669017da53479ca07a123a~daño": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            b4a4b5f9c4cd20149d1933cd4cacb798~morir: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
         -   Folder: null
             Entity:
                 Id: 4bdaaa31-6cb6-4595-839f-9ef2cbde1c1c
@@ -223,6 +242,7 @@ Hierarchy:
                             f14eafd2887605601cb783e4e612d427: ref!! 85423668-5318-4816-8aa2-30469b4caf7d
                             b0616bd3e59c50d54fa88ad23e8366f7: ref!! 3589340e-1e65-4811-93ff-1643242f91cf
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 40e3eefc-72ba-4452-83db-cb396350749b
+                            36619d26b40f7689f0739109f604ed53: ref!! f0f41295-369e-42a1-9f00-7fa574332afe
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! 34a63037-f545-48f5-ae28-e0c5e06fc95f
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: e864318b-8fe4-4f94-b21d-45bdee808ab4
@@ -230,6 +250,7 @@ Hierarchy:
                         invisible: false
                         "armaMelé": ref!! 8fa829d1-ea79-497a-86a7-36f886836356
                         armaRango: null
+                        emisor: ref!! 95ab3b56-6de3-4916-85af-a80e17d96849
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 53bb4bc4-517c-4420-b135-b5c27330ae8f
                         "estático": false

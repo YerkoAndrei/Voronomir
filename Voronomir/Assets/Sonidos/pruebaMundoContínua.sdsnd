@@ -1,0 +1,9 @@
+!Sound
+Id: 486b65f4-1ddd-4e2c-b398-61e9038e61df
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file "pruebaMundoContínua.wav"
+SampleRate: 48000
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: true

@@ -32,6 +32,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             aae55b7d8184320bcf68acab7c4a3f21: ref!! 597e76cf-2701-4009-81e0-98e1754248c7
+                            df8154fa215f0e7e1a647154663a658e: ref!! 3e7b27fe-a748-4e0f-8611-6027b7d9bbcb
                             a41cefb1929e611555852b3d3c7fe8c3: ref!! b45bfe08-0654-4011-9ae9-dfd1d5c83fbe
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: 76e8d2c6-a09c-4ab9-bfab-842d5a99c319
@@ -56,6 +57,24 @@ Hierarchy:
                         llave: azul
                         modelo: ref!! 597e76cf-2701-4009-81e0-98e1754248c7
                         "partículas": ref!! 732cc925-4b6d-43f7-87f8-02eb297afd92
+                        emisor: ref!! 45727053-2b30-4ed1-8456-7aac512a0768
+        -   Entity:
+                Id: b574467b-383f-4305-bb6e-d6e308f88127
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 3e7b27fe-a748-4e0f-8611-6027b7d9bbcb
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 45727053-2b30-4ed1-8456-7aac512a0768
+                        Sounds:
+                            f6ff0bc540a30aa830334fe03cf0f94f~sonido: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
         -   Entity:
                 Id: d0d61085-d49f-4573-aab5-9eb61606f090
                 Name: "Partículas"
@@ -100,7 +119,7 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 2.0
+                                            SpawnCount: 4.0
                                     Initializers:
                                         104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
                                             InheritPosition: true

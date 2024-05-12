@@ -1,0 +1,9 @@
+!Sound
+Id: e5020f71-e4c7-4472-ae4c-dab7a720a069
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file prueba.wav
+SampleRate: 48000
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: true

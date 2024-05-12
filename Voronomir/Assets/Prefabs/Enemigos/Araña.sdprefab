@@ -352,6 +352,7 @@ Hierarchy:
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 9caed9bb-330a-4fb9-aff4-4e6297d27893
                             1b2e1ded652285c1cb23eeab5ec9d185: ref!! 74cd8091-e66e-4cc5-abe8-17b896e8a1f6
                             ee17d6528a0b76eb15939ab86746f28c: ref!! d75465bf-f13c-4de1-a697-cb7c9be6b48f
+                            86c42a55c2a960dc8d8c5390dd8c2231: ref!! 5ccad1c4-4474-421a-be38-f51a3895f9b5
                             63b95ab0ea266c6095491d3a588b3141: ref!! 3361a7a9-0413-4093-9180-6d63d5ad6e12
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 0de03905-32b0-4217-b129-041f1d024130
@@ -359,6 +360,7 @@ Hierarchy:
                         invisible: false
                         "armaMelé": null
                         armaRango: ref!! 4a9ca052-67a5-4cf2-a972-753ae99d4102
+                        emisor: ref!! 1ceaf2d0-c5e4-4be7-98f7-7b14a93fce04
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 4ba9a486-b7da-4603-8605-cda247797342
                         "estático": false
@@ -385,6 +387,25 @@ Hierarchy:
                         Id: a499c6d7-b229-4995-a0cb-d00b50d65824
                         Model: "db867d68-4431-4e52-9abb-f81df0c158eb:Modelos/Enemigos/Araña/Araña"
                         Materials: {}
+        -   Entity:
+                Id: ca19035f-9a66-45a6-9edb-78226aa34f80
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 5ccad1c4-4474-421a-be38-f51a3895f9b5
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 1ceaf2d0-c5e4-4be7-98f7-7b14a93fce04
+                        Sounds:
+                            77654c9207313432df1094f1bac845c9~atacar: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            "225e0fa471669017da53479ca07a123a~daño": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            b4a4b5f9c4cd20149d1933cd4cacb798~morir: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
         -   Entity:
                 Id: e75ac34a-8466-40b4-951a-42c112056cba
                 Name: OjoIzq

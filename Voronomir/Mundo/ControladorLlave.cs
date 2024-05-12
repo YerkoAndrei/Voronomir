@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Particles.Components;
+using Stride.Audio;
 using Stride.Engine;
 
 namespace Voronomir;
@@ -12,9 +13,11 @@ public class ControladorLlave : AsyncScript
     public Llaves llave;
     public TransformComponent modelo;
     public ParticleSystemComponent partículas;
+    public AudioEmitterComponent emisor;
     private bool activo;
 
     private PhysicsComponent cuerpo;
+    private AudioEmitterSoundController sonido;
     private float velocidadRotación;
     private Vector3 posiciónArriba;
     private Vector3 posiciónAbajo;
@@ -22,6 +25,7 @@ public class ControladorLlave : AsyncScript
     public override async Task Execute()
     {
         cuerpo = Entity.Get<PhysicsComponent>();
+        sonido = emisor["sonido"];
 
         posiciónArriba = modelo.Position + new Vector3(0, 0.4f, 0);
         posiciónAbajo = modelo.Position;
@@ -33,6 +37,10 @@ public class ControladorLlave : AsyncScript
 
         partículas.Enabled = true;
         partículas.ParticleSystem.ResetSimulation();
+
+        sonido.IsLooping = true;
+        sonido.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+        sonido.Play();
 
         while (Game.IsRunning)
         {
@@ -110,14 +118,21 @@ public class ControladorLlave : AsyncScript
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             modelo.Scale = Vector3.Lerp(inicio, Vector3.Zero, tiempo);
+            sonido.Volume = MathUtil.Lerp(SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos), 0, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
 
         activo = false;
+        sonido.Stop();
 
         await Task.Delay(2000);
         partículas.Enabled = false;
+    }
+
+    public void ActualizarVolumen()
+    {
+        sonido.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
     }
 }

@@ -6,7 +6,7 @@ DefaultScene: 5b37a5d0-1466-42dc-9341-692a97726971:Escenas/Sistemas
 GraphicsCompositor: 0bae112a-61a6-4ee8-aae1-357a7cb70d8f:GraphicsCompositor (Alto)
 Defaults:
     - !Stride.Audio.AudioEngineSettings,Stride.Audio
-        HrtfSupport: false
+        HrtfSupport: true
     - !Stride.Assets.EditorSettings,Stride.Assets
         RenderingMode: HDR
     - !Stride.Graphics.RenderingSettings,Stride.Graphics
