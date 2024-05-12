@@ -7030,6 +7030,53 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
+                    dc431d27263a62274d6a99254db9175c: !Voronomir.InterfazOpciones,Voronomir.Proyecto
+                        Id: 107e2bae-3ef4-4478-b1f8-a8858b5ea30d
+                    bd0c679f027570b9053acd27755dbca2: !Voronomir.InterfazTraducciones,Voronomir.Proyecto
+                        Id: 288da79e-56d5-4c6e-b5ee-0598557b2388
+                        "códigos":
+                            4df83db5d2b8dc8575affaa8656a8009~txtFinal: final
+                            586a9446731a7717fe1488338b0edde7~txtPausa: pausa
+                            4c31fc9c85d5757868d91041f00a8298~txtMuerte: muerte
+                            e0c6e61834f1425d8729034022ed357a~txtReanudar: reanudar
+                            f740fbbc980c796836b529b3d12523db~txtReiniciar: reiniciar
+                            e47cf508533be6c78e54f0ca56e51c3a~txtOpciones: opciones
+                            0f3990d74bbc2698889022477e1cc24f~txtPausaSalir: salir
+                            696116a9b03b2a10a59f82cdadbab018~txtMuerteSalir: salir
+                            809825719c59b6a9b90bb7fbfb7e212a~txtFinalSalir: salir
+                            99e7528ef5adac37d3d213dd9ae55ef4~txtContinuar: continuar
+                            3691e31e0e799cd658a05310e6355a54~txtReintentar: reintentar
+                            2f6d9291adf700827b187363d97a338d~lblMuerteTiempo: tiempo
+                            a28a6ee517ee3c7692812dfa83dd93c5~lblEnemigos: enemigos
+                            902494c141ad0ad68dea6780e3efd36c~lblFinalTiempo: tiempo
+                            29973cd1054751568e4675afceb380b3~lblSecretos: secretos
+                    077dc506e12c9a3079d7df18bd084356: !Voronomir.InterfazTraducciones,Voronomir.Proyecto
+                        Id: caf5111e-7947-43cd-a70a-54fcba219f51
+                        "códigos":
+                            3b7e1c9d1f9d6b0d752ce315d0394cac~txtVolver: volver
+                            7f9e62b863b9748500f106bab6cfa408~txtDatos: datos
+                            "a8be6221cc711acd1bc0f71901c79cf0~txtCampoVisión": "campoVisión"
+                            484b324a57f81707e3cff98fa3ecfa21~txtSensibilidad: sensibilidad
+                            2783625bd893ec7d6a8b0adc72b8ec88~txtVolumenGeneral: volumenGeneral
+                            "f96da64416324b68b18f8aca45a5b055~txtVolumenMúsica": "volumenMúsica"
+                            0d05e0d79b8a1c0243f86ad5a95cfebe~txtVolumenEfectos: volumenEfectos
+                            cdb5a9f8c2133c5685cbc06def558cc3~txtVSync: vSync
+                            b28e3660e3465eec5249a63859832e0f~txtSombras: sombras
+                            e2c785698c7fc99c4a9dad53667a1f81~txtCalidad: calidad
+                            ee6ae4a419f43adeb7a2d52fb9629229~txtPantallaCompleta: pantallaCompleta
+                            "e85179bd5167acab60300e55542f07c2~txtResolución": "resolución"
+                            5e62eb9c7a9bbc0e60f0b8be9696d26c~txtJuego: juego
+                            "62bb06e78ebaba92d18f71cd27c16542~txtGráficos": "gráficos"
+                            a77c34802cfc028ec246bbdc59e93e26~txtSonidos: sonidos
+                            "9ff0699723e4f0a6585c3ef28e12806f~txtTítuloOpciones": opciones
+                            79208384c5f6e2216ab97f23e6c6b414~txtIdioma: idioma
+                            8fda5f20f0cdc2b79fc7ce3b345ad26a~txtReinicio: reinicio
+                            "32c7b06f89814bc2adad3f0ec509aa81~txtPantallaSí": "sí"
+                            9f754da605d225c8e083554935a64bb3~txtPantallaNo: no
+                            "b47abe713491a2ca03ea864e2587ad8e~txtVSyncSí": "sí"
+                            39e67dfdeef801db2cb08bf194b37b87~txtVSyncNo: no
+                            "bd44e3bcf550bbc9aa89a15e7bdf0585~txtDatosSí": "sí"
+                            7f59266e481a8a91dd0c5ac41afb5b4b~txtDatosNo: no
                     f3a22f8e1824704a6bc6e9eb03a4f8da: !UIComponent
                         Id: 6e48cc9f-2b1d-427d-bcec-8076cdc55154
                         Page: d8d2b8e8-b800-4e51-94a9-d59d5fb618bc:Interfaz/Juego

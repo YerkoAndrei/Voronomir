@@ -67,6 +67,41 @@ Hierarchy:
                         Children: {}
                     901bef4181ce7b23ef38c7e7914b69e0: !Voronomir.InterfazOpciones,Voronomir.Proyecto
                         Id: c9cc97dd-1458-41ba-af00-0ef61cd31f37
+                    106776b6f6585e763babb8c06ecaf2f1: !Voronomir.InterfazTraducciones,Voronomir.Proyecto
+                        Id: b2a8fe6e-b19f-4db2-b002-15d50fb4e04b
+                        "códigos":
+                            "2f92c631ad1a003765634f49bbcff7ca~txtTítulo": nombreJuego
+                            2cae1598ae5b05bfc46082f43e5dab2b~txtJugar: jugar
+                            2b06cf241702a2a782b65f84e12fd138~txtDemo: demo
+                            580376c59f15491a2db4e16c5ef42255~txtOpciones: opciones
+                            0b951165878e8b0777498448bfcfb103~txtSalir: salir
+                    f6016bf12254140d4fb94d3bcaee2853: !Voronomir.InterfazTraducciones,Voronomir.Proyecto
+                        Id: 5f99dc94-dcb1-4398-a617-3eb834e8a8ac
+                        "códigos":
+                            3b7e1c9d1f9d6b0d752ce315d0394cac~txtVolver: volver
+                            7f9e62b863b9748500f106bab6cfa408~txtDatos: datos
+                            "a8be6221cc711acd1bc0f71901c79cf0~txtCampoVisión": "campoVisión"
+                            484b324a57f81707e3cff98fa3ecfa21~txtSensibilidad: sensibilidad
+                            2783625bd893ec7d6a8b0adc72b8ec88~txtVolumenGeneral: volumenGeneral
+                            "f96da64416324b68b18f8aca45a5b055~txtVolumenMúsica": "volumenMúsica"
+                            0d05e0d79b8a1c0243f86ad5a95cfebe~txtVolumenEfectos: volumenEfectos
+                            cdb5a9f8c2133c5685cbc06def558cc3~txtVSync: vSync
+                            b28e3660e3465eec5249a63859832e0f~txtSombras: sombras
+                            e2c785698c7fc99c4a9dad53667a1f81~txtCalidad: calidad
+                            ee6ae4a419f43adeb7a2d52fb9629229~txtPantallaCompleta: pantallaCompleta
+                            "e85179bd5167acab60300e55542f07c2~txtResolución": "resolución"
+                            5e62eb9c7a9bbc0e60f0b8be9696d26c~txtJuego: juego
+                            "62bb06e78ebaba92d18f71cd27c16542~txtGráficos": "gráficos"
+                            a77c34802cfc028ec246bbdc59e93e26~txtSonidos: sonidos
+                            "9ff0699723e4f0a6585c3ef28e12806f~txtTítuloOpciones": opciones
+                            79208384c5f6e2216ab97f23e6c6b414~txtIdioma: idioma
+                            8fda5f20f0cdc2b79fc7ce3b345ad26a~txtReinicio: reinicio
+                            "32c7b06f89814bc2adad3f0ec509aa81~txtPantallaSí": "sí"
+                            9f754da605d225c8e083554935a64bb3~txtPantallaNo: no
+                            "b47abe713491a2ca03ea864e2587ad8e~txtVSyncSí": "sí"
+                            39e67dfdeef801db2cb08bf194b37b87~txtVSyncNo: no
+                            "bd44e3bcf550bbc9aa89a15e7bdf0585~txtDatosSí": "sí"
+                            7f59266e481a8a91dd0c5ac41afb5b4b~txtDatosNo: no
                     2a3f5fd9b4d9f74d08afc9b240c3f933: !UIComponent
                         Id: 6fe1333c-8c6e-459b-a3be-af9814613a43
                         Page: "2973b9e0-75a7-45db-bc7a-1d6a505e0191:Interfaz/Menú"

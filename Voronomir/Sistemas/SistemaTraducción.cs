@@ -96,10 +96,14 @@ public class SistemaTraducción : StartupScript
     public static void ActualizarTextosEscena()
     {
         // Busca controladores de traducción en escena hija (SistemaEscena solo permite una escena hija al mismo tiempo)
-        var traductores = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<InterfazTraducciones>() != null).ToArray();
-        foreach (var traductor in traductores)
+        var entidades = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<InterfazTraducciones>() != null).ToArray();
+        foreach (var entidad in entidades)
         {
-            traductor.Get<InterfazTraducciones>().Traducir();
+            var traductores = entidad.GetAll<InterfazTraducciones>();
+            foreach (var traductor in traductores)
+            {
+                traductor.Traducir();
+            }
         }
     }
 

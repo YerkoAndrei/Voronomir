@@ -99,7 +99,7 @@ public class SistemaAnimación : AsyncScript
 
     private void Animar()
     {
-        tiempoDelta += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+        tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
         switch (tipoCurva)
         {
             case TipoCurva.nada:
