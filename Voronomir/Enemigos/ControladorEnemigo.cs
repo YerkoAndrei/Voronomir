@@ -194,16 +194,19 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         return despierto && !activo;
     }
 
-    private void Morir()
+    private async void Morir()
     {
         activo = false;
         cuerpo.SetVelocity(Vector3.Zero);
         persecutor.EliminarPersecutor();
 
+        ControladorPartida.SumarEnemigo();
         CrearMarcaMuerte();
         Esconder();
+
+        // 1 frame de física
+        await Task.Delay(17);
         cuerpo.Enabled = false;
-        ControladorPartida.SumarEnemigo();
 
         // PENDIENTE: efectos
         // PENDIENTE: ragdoll
