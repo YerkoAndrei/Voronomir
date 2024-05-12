@@ -46,18 +46,8 @@ Hierarchy:
                 Id: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
                 Name: Modelo
                 Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: a5c3a2ac-019e-49bd-aad9-4f37c7d8ea68
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 5126a893-7e55-4e6d-8e05-82bd8b7cce9c
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
-                        Materials: {}
-                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: 2e85a850-8312-41fe-a003-4c546aff04a0
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: d787432f-91a0-418e-b0c9-bac38cc32789
                         CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
@@ -77,6 +67,16 @@ Hierarchy:
                         ColliderShapes:
                             c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 3.0, Y: 3.0, Z: 0.4}
+                                Size: {X: 3.0, Y: 3.0, Z: 0.6}
                                 LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: a5c3a2ac-019e-49bd-aad9-4f37c7d8ea68
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 5126a893-7e55-4e6d-8e05-82bd8b7cce9c
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
+                        Materials: {}

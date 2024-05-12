@@ -297,18 +297,8 @@ Hierarchy:
                 Id: 089e6c39-a3da-443c-97d7-437659f63eff
                 Name: Modelo
                 Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: bb99c06b-1a0b-49fd-806b-d32041837a3e
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 797424c9-c7fe-4281-975a-0fc200f33191
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
-                        Materials: {}
-                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: 0a1bda25-a917-4ef7-9fd7-e9816ff83b32
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: 2db54a39-f04f-4c6b-b8a1-8558ee810444
                         CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
@@ -328,9 +318,19 @@ Hierarchy:
                         ColliderShapes:
                             c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 3.0, Y: 3.0, Z: 0.4}
+                                Size: {X: 3.0, Y: 3.0, Z: 0.6}
                                 LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: bb99c06b-1a0b-49fd-806b-d32041837a3e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 797424c9-c7fe-4281-975a-0fc200f33191
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
+                        Materials: {}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
@@ -390,18 +390,8 @@ Hierarchy:
                 Id: 120ed277-7701-42d1-a21a-c8b2254e6289
                 Name: Modelo
                 Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: e6c52ee0-d486-4cbf-b99e-9addbbbd1eda
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 9148b084-6c1e-4ba5-8e1e-5ae42fe853ad
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
-                        Materials: {}
-                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: 7878984b-a290-4b0b-a2af-7ff8df4b47b3
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: 4635f0c4-d97a-48fa-bc18-4defa9ea787e
                         CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
@@ -421,9 +411,19 @@ Hierarchy:
                         ColliderShapes:
                             c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 3.0, Y: 3.0, Z: 0.4}
+                                Size: {X: 3.0, Y: 3.0, Z: 0.6}
                                 LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: e6c52ee0-d486-4cbf-b99e-9addbbbd1eda
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 9148b084-6c1e-4ba5-8e1e-5ae42fe853ad
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
+                        Materials: {}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
@@ -1330,18 +1330,8 @@ Hierarchy:
                 Id: 39dc6c0e-6112-4a97-80a7-ba5e549e40fc
                 Name: Modelo
                 Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: c1da41d9-8786-40b3-94b1-1323677b85a7
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: f66c9591-7afb-4864-a634-ac0826b5e455
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
-                        Materials: {}
-                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: 4368cf52-09a3-4160-9837-c858b515eb52
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: d6511e34-4ce7-40ca-b33f-8bdd0bbce418
                         CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
@@ -1361,9 +1351,19 @@ Hierarchy:
                         ColliderShapes:
                             c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 3.0, Y: 3.0, Z: 0.4}
+                                Size: {X: 3.0, Y: 3.0, Z: 0.6}
                                 LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: c1da41d9-8786-40b3-94b1-1323677b85a7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: f66c9591-7afb-4864-a634-ac0826b5e455
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
+                        Materials: {}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
@@ -4531,19 +4531,8 @@ Hierarchy:
                 Id: a7cf3a65-ca02-44b2-ab58-ac47e21215be
                 Name: Modelo
                 Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: a2ebcd3e-500a-4e90-a2d5-9528818a0208
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 37e86b2c-b725-4039-9e0f-302798cb10ea
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
-                        Materials:
-                            bc95f6c4209cf9648746a3f1a806ef73*~1: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
-                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: 0626b7b9-602a-4296-a0e2-182459121313
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: 566ec1db-4004-47e4-9cb4-fbe1261798dc
                         CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
@@ -4563,9 +4552,20 @@ Hierarchy:
                         ColliderShapes:
                             c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 3.0, Y: 3.0, Z: 0.4}
+                                Size: {X: 3.0, Y: 3.0, Z: 0.6}
                                 LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: a2ebcd3e-500a-4e90-a2d5-9528818a0208
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 37e86b2c-b725-4039-9e0f-302798cb10ea
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
+                        Materials:
+                            bc95f6c4209cf9648746a3f1a806ef73*~1: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
@@ -6228,18 +6228,8 @@ Hierarchy:
                 Id: e53f44cb-2567-4250-85f4-6328e541ebc5
                 Name: Modelo
                 Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: b133376a-c857-4675-adb5-6314ac7ef543
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 11cffe9e-2aaa-4a4a-9905-711f2c03f957
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
-                        Materials: {}
-                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: f1f54cb6-c04b-4416-9810-e799b8c428d8
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: a500583b-b43d-4d80-81fb-2a1fc60194b5
                         CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
@@ -6259,9 +6249,19 @@ Hierarchy:
                         ColliderShapes:
                             c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 3.0, Y: 3.0, Z: 0.4}
+                                Size: {X: 3.0, Y: 3.0, Z: 0.6}
                                 LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: b133376a-c857-4675-adb5-6314ac7ef543
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 11cffe9e-2aaa-4a4a-9905-711f2c03f957
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
+                        Materials: {}
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
@@ -6450,19 +6450,8 @@ Hierarchy:
                 Id: e8c29c5c-90b6-4934-891f-f3eafa6d6fed
                 Name: Modelo
                 Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: aa22bde9-4f18-4564-92b1-711927934c22
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 65e16933-9120-447f-9e7b-1fa3ff536c95
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
-                        Materials:
-                            9f0f310113bae67ad5ef6389213ba9b2*~1: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
-                    aa8e6544acbe6ca8601bf296c0add157: !RigidbodyComponent
-                        Id: f1ea9bb8-f48a-4e94-bc78-24a6940c42cc
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: 2dddcf11-13f5-416b-b026-768187fc87e3
                         CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
                         CanSleep: false
@@ -6482,9 +6471,20 @@ Hierarchy:
                         ColliderShapes:
                             c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 3.0, Y: 3.0, Z: 0.4}
+                                Size: {X: 3.0, Y: 3.0, Z: 0.6}
                                 LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: aa22bde9-4f18-4564-92b1-711927934c22
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 65e16933-9120-447f-9e7b-1fa3ff536c95
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
+                        Materials:
+                            9f0f310113bae67ad5ef6389213ba9b2*~1: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
