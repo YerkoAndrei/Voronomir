@@ -8,7 +8,7 @@ namespace Voronomir;
 using static Utilidades;
 using static Constantes;
 
-public class ControladorPoder : AsyncScript
+public class ControladorPoder : AsyncScript, ISonidoMundo
 {
     public Poderes poder;
     public TransformComponent modelo;
@@ -21,6 +21,10 @@ public class ControladorPoder : AsyncScript
     private float velocidadRotación;
     private Vector3 posiciónArriba;
     private Vector3 posiciónAbajo;
+
+    private bool finSonido;
+    public float distanciaSonido { get; set; }
+    public float distanciaJugador { get; set; }
 
     public override async Task Execute()
     {
@@ -38,8 +42,9 @@ public class ControladorPoder : AsyncScript
         partículas.Enabled = true;
         partículas.ParticleSystem.ResetSimulation();
 
+        distanciaSonido = 10;
+        ActualizarVolumen();
         sonido.IsLooping = true;
-        sonido.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
         sonido.Play();
 
         while (Game.IsRunning)
@@ -100,7 +105,9 @@ public class ControladorPoder : AsyncScript
 
     private async void AnimarFin()
     {
+        finSonido = true;
         partículas.ParticleSystem.StopEmitters();
+
         var inicio = modelo.Scale;
         float duración = 0.5f;
         float tiempoLerp = 0;
@@ -125,6 +132,22 @@ public class ControladorPoder : AsyncScript
 
     public void ActualizarVolumen()
     {
-        sonido.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+        if (finSonido)
+            return;
+
+        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerCabezaJugador());
+
+        if (distanciaJugador > distanciaSonido)
+            sonido.Volume = 0;
+        else
+            sonido.Volume = ((distanciaSonido - distanciaJugador) / distanciaSonido) * SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+    }
+
+    public void PausarSonidos(bool pausa)
+    {
+        if (pausa)
+            sonido.Pause();
+        else
+            sonido.Play();
     }
 }

@@ -151,6 +151,8 @@ public class SistemaEscenas : AsyncScript
             return;
 
         BloquearCursor(true);
+        SistemaSonidos.AsignarSonidosMundo(null);
+
         instancia.panelOscuro.Opacity = 0;
         instancia.panelOscuro.CanBeHitByUser = true;
 

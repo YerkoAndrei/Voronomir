@@ -41,15 +41,29 @@ public class ControladorPartida : SyncScript
         transformJugador = entidadJugador.Transform;
         cabezaJugador = jugador.cabeza;
 
+        // Interfaz
+        interfaz = Entity.Scene.Entities.Where(o => o.Get<InterfazJuego>() != null).FirstOrDefault().Get<InterfazJuego>();
+
         // Persecutores
         var entidad = Entity.Scene.Entities.Where(o => o.Get<ControladorPersecusionesTrigonométricas>() != null).FirstOrDefault();
         persecutoresTrigonométricos = entidad.GetAll<ControladorPersecusionesTrigonométricas>().ToArray();
 
         // Activadores
         activadoresMuerte = Entity.Scene.Entities.Where(o => o.Get<ControladorActivadorMuerte>() != null)
-                                                     .Select(o => o.Get<ControladorActivadorMuerte>()).ToArray();
-        // Interfaz
-        interfaz = Entity.Scene.Entities.Where(o => o.Get<InterfazJuego>() != null).FirstOrDefault().Get<InterfazJuego>();
+                                                 .Select(o => o.Get<ControladorActivadorMuerte>()).ToArray();
+
+        // Sonidos
+        var entidadesSonido = Entity.Scene.Entities.Where(o => o.Get<ControladorPoder>() != null ||
+                                                               o.Get<ControladorLlave>() != null ||
+                                                               o.Get<ControladorPuerta>() != null ||
+                                                               o.Get<ControladorEnemigo>() != null).ToArray();
+
+        var sonidosMundo = new ISonidoMundo[entidadesSonido.Count()];
+        for (int i = 0; i < sonidosMundo.Length; i++)
+        {
+            sonidosMundo[i] = ObtenerInterfaz<ISonidoMundo>(entidadesSonido[i]);
+        }
+        SistemaSonidos.AsignarSonidosMundo(sonidosMundo);
 
         // Contadores
         maxEnemigos = Entity.Scene.Entities.Where(o => o.Get<ControladorEnemigo>() != null).Count();

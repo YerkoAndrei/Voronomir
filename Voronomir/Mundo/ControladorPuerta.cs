@@ -7,7 +7,7 @@ namespace Voronomir;
 using static Utilidades;
 using static Constantes;
 
-public class ControladorPuerta : AsyncScript, IActivable
+public class ControladorPuerta : AsyncScript, IActivable, ISonidoMundo
 {
     public bool instantanea;
     public int activaciones;
@@ -20,11 +20,16 @@ public class ControladorPuerta : AsyncScript, IActivable
     private AudioEmitterSoundController sonidoRápido;
     private int activadas;
 
+    private bool finSonido;
+    public float distanciaSonido { get; set; }
+    public float distanciaJugador { get; set; }
+
     public override async Task Execute()
     {
         cuerpo = Entity.Get<PhysicsComponent>();
         sonidoLento = emisor["lento"];
         sonidoRápido = emisor["rápido"];
+        distanciaSonido = 20;
 
         while (Game.IsRunning)
         {
@@ -67,16 +72,16 @@ public class ControladorPuerta : AsyncScript, IActivable
         float tiempoLerp = 0;
         float tiempo = 0;
 
+        ActualizarVolumen();
+
         if (instantanea)
         {
             duración = 0.1f;
-            sonidoRápido.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
             sonidoRápido.PlayAndForget();
         }
         else
         {
             await Task.Delay(200);
-            sonidoLento.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
             sonidoLento.PlayAndForget();
         }
 
@@ -88,10 +93,40 @@ public class ControladorPuerta : AsyncScript, IActivable
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
+
+        finSonido = true;
     }
 
     public void ActualizarVolumen()
     {
-        sonidoLento.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+        if (finSonido)
+            return;
+
+        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerCabezaJugador());
+
+        if (distanciaJugador > distanciaSonido)
+        {
+            sonidoRápido.Volume = 0;
+            sonidoLento.Volume = 0;
+        }
+        else
+        {
+            sonidoRápido.Volume = ((distanciaSonido - distanciaJugador) / distanciaSonido) * SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+            sonidoLento.Volume = ((distanciaSonido - distanciaJugador) / distanciaSonido) * SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+        }
+    }
+
+    public void PausarSonidos(bool pausa)
+    {
+        if (pausa)
+        {
+            sonidoRápido.Pause();
+            sonidoLento.Pause();
+        }
+        else
+        {
+            sonidoRápido.Play();
+            sonidoLento.Play();
+        }
     }
 }

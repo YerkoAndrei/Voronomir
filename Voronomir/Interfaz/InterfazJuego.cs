@@ -184,8 +184,9 @@ public class InterfazJuego : SyncScript
     private void Pausar()
     {
         ControladorPartida.Pausar(!ControladorPartida.ObtenerActivo());
+        SistemaSonidos.PausarSonidosMundo(!ControladorPartida.ObtenerActivo());
 
-        if(ControladorPartida.ObtenerActivo())
+        if (ControladorPartida.ObtenerActivo())
         {
             BloquearInterfaz(true);
             panelPausa.Visibility = Visibility.Hidden;

@@ -1,11 +1,12 @@
 ﻿using System.Globalization;
+using System.Threading.Tasks;
 using Stride.Audio;
 using Stride.Engine;
 
 namespace Voronomir;
 using static Constantes;
 
-public class SistemaSonidos : StartupScript
+public class SistemaSonidos : AsyncScript
 {
     //public Sound música;
 
@@ -38,32 +39,34 @@ public class SistemaSonidos : StartupScript
 
     //private SoundInstance música;
 
-    private SoundInstance botónEntra;
-    private SoundInstance botónSale;
+    private static SoundInstance botónEntra;
+    private static SoundInstance botónSale;
 
-    private SoundInstance botón;
-    private SoundInstance llave;
-    private SoundInstance puerta;
-    private SoundInstance cerrado;
-    private SoundInstance secreto;
-    private SoundInstance saltador;
+    private static SoundInstance botón;
+    private static SoundInstance llave;
+    private static SoundInstance puerta;
+    private static SoundInstance cerrado;
+    private static SoundInstance secreto;
+    private static SoundInstance saltador;
 
-    private SoundInstance daño;
-    private SoundInstance salto;
-    private SoundInstance morir;
-    private SoundInstance finalizar;
+    private static SoundInstance daño;
+    private static SoundInstance salto;
+    private static SoundInstance morir;
+    private static SoundInstance finalizar;
 
-    private SoundInstance espada;
-    private SoundInstance escopeta;
-    private SoundInstance metralleta;
-    private SoundInstance rifle;
-    private SoundInstance lanzagranadas;
+    private static SoundInstance espada;
+    private static SoundInstance escopeta;
+    private static SoundInstance metralleta;
+    private static SoundInstance rifle;
+    private static SoundInstance lanzagranadas;
 
-    private SoundInstance poderDaño;
-    private SoundInstance poderInvulnerabilidad;
-    private SoundInstance poderVelocidad;
+    private static SoundInstance poderDaño;
+    private static SoundInstance poderInvulnerabilidad;
+    private static SoundInstance poderVelocidad;
 
-    public override void Start()
+    private static ISonidoMundo[] sonidosMundo;
+
+    public override async Task Execute()
     {
         instancia = this;
 
@@ -91,6 +94,35 @@ public class SistemaSonidos : StartupScript
         poderDaño = sonidoPoderDaño.CreateInstance();
         poderInvulnerabilidad = sonidoPoderInvulnerabilidad.CreateInstance();
         poderVelocidad = sonidoPoderVelocidad.CreateInstance();
+
+        while (Game.IsRunning)
+        {
+            if (ControladorPartida.ObtenerActivo() && sonidosMundo != null)
+                ActualizarVolúmenesMundo();
+
+            await Script.NextFrame();
+        }
+    }
+
+    public static void ActualizarVolúmenesMundo()
+    {
+        foreach (var sonido in sonidosMundo)
+        {
+            sonido.ActualizarVolumen();
+        }
+    }
+
+    public static void PausarSonidosMundo(bool pausa)
+    {
+        foreach (var sonido in sonidosMundo)
+        {
+            sonido.PausarSonidos(pausa);
+        }
+    }
+
+    public static void AsignarSonidosMundo(ISonidoMundo[] _sonidosMundo)
+    {
+        sonidosMundo = _sonidosMundo;
     }
 
     // Mezclador
@@ -113,87 +145,87 @@ public class SistemaSonidos : StartupScript
     // Botones
     public static void SonarBotónEntra()
     {
-        instancia.botónEntra.Stop();
-        instancia.botónEntra.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.botónEntra.PlayExclusive();
+        botónEntra.Stop();
+        botónEntra.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        botónEntra.PlayExclusive();
     }
 
     public static void SonarBotónSale()
     {
-        instancia.botónSale.Stop();
-        instancia.botónSale.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.botónSale.PlayExclusive();
+        botónSale.Stop();
+        botónSale.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        botónSale.PlayExclusive();
     }
 
     // Juego
     public static void SonarBotón()
     {
-        instancia.botón.Stop();
-        instancia.botón.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.botón.PlayExclusive();
+        botón.Stop();
+        botón.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        botón.PlayExclusive();
     }
 
     public static void SonarLlave()
     {
-        instancia.llave.Stop();
-        instancia.llave.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.llave.PlayExclusive();
+        llave.Stop();
+        llave.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        llave.PlayExclusive();
     }
 
     public static void SonarPuerta()
     {
-        instancia.puerta.Stop();
-        instancia.puerta.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.puerta.PlayExclusive();
+        puerta.Stop();
+        puerta.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        puerta.PlayExclusive();
     }
 
     public static void SonarCerrado()
     {
-        instancia.cerrado.Stop();
-        instancia.cerrado.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.cerrado.PlayExclusive();
+        cerrado.Stop();
+        cerrado.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        cerrado.PlayExclusive();
     }
 
     public static void SonarSecreto()
     {
-        instancia.secreto.Stop();
-        instancia.secreto.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.secreto.PlayExclusive();
+        secreto.Stop();
+        secreto.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        secreto.PlayExclusive();
     }
 
     public static void SonarSaltador()
     {
-        instancia.saltador.Stop();
-        instancia.saltador.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.saltador.PlayExclusive();
+        saltador.Stop();
+        saltador.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        saltador.PlayExclusive();
     }
 
     public static void SonarDaño()
     {
-        instancia.daño.Stop();
-        instancia.daño.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.daño.PlayExclusive();
+        daño.Stop();
+        daño.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        daño.PlayExclusive();
     }
 
     public static void SonarSalto()
     {
-        instancia.salto.Stop();
-        instancia.salto.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.salto.PlayExclusive();
+        salto.Stop();
+        salto.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        salto.PlayExclusive();
     }
 
     public static void SonarMorir()
     {
-        instancia.morir.Stop();
-        instancia.morir.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.morir.PlayExclusive();
+        morir.Stop();
+        morir.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        morir.PlayExclusive();
     }
 
     public static void SonarFinalizar()
     {
-        instancia.finalizar.Stop();
-        instancia.finalizar.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.finalizar.PlayExclusive();
+        finalizar.Stop();
+        finalizar.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        finalizar.PlayExclusive();
     }
 
     public static void SonarDisparo(Armas arma)
@@ -201,29 +233,29 @@ public class SistemaSonidos : StartupScript
         switch (arma)
         {
             case Armas.espada:
-                instancia.espada.Stop();
-                instancia.espada.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-                instancia.espada.PlayExclusive();
+                espada.Stop();
+                espada.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                espada.PlayExclusive();
                 break;
             case Armas.escopeta:
-                instancia.escopeta.Stop();
-                instancia.escopeta.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-                instancia.escopeta.PlayExclusive();
+                escopeta.Stop();
+                escopeta.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                escopeta.PlayExclusive();
                 break;
             case Armas.metralleta:
-                instancia.metralleta.Stop();
-                instancia.metralleta.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-                instancia.metralleta.PlayExclusive();
+                metralleta.Stop();
+                metralleta.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                metralleta.PlayExclusive();
                 break;
             case Armas.rifle:
-                instancia.rifle.Stop();
-                instancia.rifle.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-                instancia.rifle.PlayExclusive();
+                rifle.Stop();
+                rifle.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                rifle.PlayExclusive();
                 break;
             case Armas.lanzagranadas:
-                instancia.lanzagranadas.Stop();
-                instancia.lanzagranadas.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-                instancia.lanzagranadas.PlayExclusive();
+                lanzagranadas.Stop();
+                lanzagranadas.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                lanzagranadas.PlayExclusive();
                 break;
         }
     }
@@ -233,35 +265,26 @@ public class SistemaSonidos : StartupScript
         switch (poder)
         {
             case Poderes.daño:
-                instancia.poderDaño.Stop();
-                instancia.poderDaño.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-                instancia.poderDaño.PlayExclusive();
+                poderDaño.Stop();
+                poderDaño.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                poderDaño.PlayExclusive();
                 break;
             case Poderes.invulnerabilidad:
-                instancia.poderInvulnerabilidad.Stop();
-                instancia.poderInvulnerabilidad.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-                instancia.poderInvulnerabilidad.PlayExclusive();
+                poderInvulnerabilidad.Stop();
+                poderInvulnerabilidad.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                poderInvulnerabilidad.PlayExclusive();
                 break;
             case Poderes.velocidad:
-                instancia.poderVelocidad.Stop();
-                instancia.poderVelocidad.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-                instancia.poderVelocidad.PlayExclusive();
+                poderVelocidad.Stop();
+                poderVelocidad.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                poderVelocidad.PlayExclusive();
                 break;
         }
     }
 
-    // Música    
+    // Música
     public static void ActualizarVolumenMúsica()
     {
-        //instancia.música.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
+        //música.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
     }
-    
-    /*
-    public static void SonarPitch()
-    {
-        instancia.algo.Stop();
-        instancia.algo.Volume = MathUtil.Clamp(volumen, 0, 1);
-        instancia.algo.Pitch = RangoAleatorio(0.8f, 1.2f);
-        instancia.algo.Play();
-    }*/
 }

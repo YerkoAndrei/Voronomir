@@ -8,7 +8,7 @@ namespace Voronomir;
 using static Utilidades;
 using static Constantes;
 
-public class ControladorEnemigo : SyncScript, IDañable, IActivable
+public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMundo
 {
     public Enemigos enemigo;
     public bool invisible;
@@ -32,6 +32,9 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
     private Vector3 posiciónInicial;
     private Vector3 gravedadInicial;
 
+    public float distanciaSonido { get; set; }
+    public float distanciaJugador { get; set; }
+
     public override void Start()
     {
         cuerpo = Entity.Get<CharacterComponent>();
@@ -44,6 +47,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         sonidoAtacar = emisor["atacar"];
         sonidoDaño = emisor["daño"];
         sonidoMorir = emisor["morir"];
+        ActualizarVolumen();
 
         var alturaSonido = RangoAleatorio(0.9f, 1.1f);
         sonidoAtacar.Pitch = alturaSonido;
@@ -72,30 +76,38 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         switch (enemigo)
         {
             case Enemigos.meléLigero:
+                distanciaSonido = 10;
                 persecutor.Iniciar(this, animador, 0.1f, 7f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.meléMediano:
+                distanciaSonido = 15;
                 persecutor.Iniciar(this, animador, 0.1f, 4f, 5f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.meléPesado:
+                distanciaSonido = 20;
                 persecutor.Iniciar(this, animador, 1f, 10f, 2f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(),  false);
                 break;
             case Enemigos.rangoLigero:
+                distanciaSonido = 10;
                 persecutor.Iniciar(this, animador, 1f, 4f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.rangoMediano:
+                distanciaSonido = 15;
                 persecutor.Iniciar(this, animador, 0.2f, 2f, 3f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.rangoPesado:
+                distanciaSonido = 20;
                 persecutor.Iniciar(this, animador, 0.2f, 8f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
                 break;
             case Enemigos.especialLigero:
+                distanciaSonido = 10;
                 persecutor.Iniciar(this, animador, 1f, 16f, 0f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), true);
                 break;
             case Enemigos.especialMediano:
 
                 break;
             case Enemigos.especialPesado:
+                distanciaSonido = 15;
                 persecutor.Iniciar(this, animador, 1f, 10f, 4f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), true);
                 break;
         }
@@ -150,10 +162,10 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
 
         if (vida <= 0 && activo)
         {
-            Morir();
-
             sonidoMorir.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
             sonidoMorir.PlayAndForget();
+
+            Morir();
         }
         else
         {
@@ -185,12 +197,12 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
     private void Morir()
     {
         activo = false;
-        cuerpo.Enabled = false;
         cuerpo.SetVelocity(Vector3.Zero);
         persecutor.EliminarPersecutor();
 
         CrearMarcaMuerte();
         Esconder();
+        cuerpo.Enabled = false;
         ControladorPartida.SumarEnemigo();
 
         // PENDIENTE: efectos
@@ -217,6 +229,42 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
                                                      CollisionFilterGroupFlags.StaticFilter);
         if (resultado.Succeeded)
             ControladorCofres.IniciarEfectoEntornoMuerte(enemigo, resultado.Point, resultado.Normal);
+    }
+
+    public void ActualizarVolumen()
+    {
+        if (!activo)
+            return;
+
+        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerCabezaJugador());
+
+        if (distanciaJugador > distanciaSonido)
+        {
+            sonidoAtacar.Volume = 0;
+            sonidoDaño.Volume = 0;
+            sonidoMorir.Volume = 0;
+        }
+        else
+        {
+            sonidoAtacar.Volume = ((distanciaSonido - distanciaJugador) / distanciaSonido) * SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+            sonidoDaño.Volume = ((distanciaSonido - distanciaJugador) / distanciaSonido) * SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+            sonidoMorir.Volume = ((distanciaSonido - distanciaJugador) / distanciaSonido) * SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+        }
+    }
+    public void PausarSonidos(bool pausa)
+    {
+        if (pausa)
+        {
+            sonidoAtacar.Pause();
+            sonidoDaño.Pause();
+            sonidoMorir.Pause();
+        }
+        else
+        {
+            sonidoAtacar.Play();
+            sonidoDaño.Play();
+            sonidoMorir.Pause();
+        }
     }
 
     private int ObtenerVida()
