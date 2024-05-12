@@ -3,6 +3,7 @@ using Stride.Core.Mathematics;
 using Stride.Particles.Components;
 using Stride.Audio;
 using Stride.Engine;
+using Stride.Core;
 
 namespace Voronomir;
 using static Utilidades;
@@ -23,12 +24,14 @@ public class ControladorLlave : AsyncScript, ISonidoMundo
     private Vector3 posiciónAbajo;
 
     private bool finSonido;
-    public float distanciaSonido { get; set; }
-    public float distanciaJugador { get; set; }
+    [DataMemberIgnore] public float distanciaSonido { get; set; }
+    [DataMemberIgnore] public float distanciaJugador { get; set; }
 
     public override async Task Execute()
     {
         cuerpo = Entity.Get<PhysicsComponent>();
+
+        emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
         sonido = emisor["sonido"];
 
         posiciónArriba = modelo.Position + new Vector3(0, 0.4f, 0);
@@ -156,6 +159,10 @@ public class ControladorLlave : AsyncScript, ISonidoMundo
         if (pausa)
             sonido.Pause();
         else
+        {
+            ActualizarVolumen();
+            emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
             sonido.Play();
+        }
     }
 }

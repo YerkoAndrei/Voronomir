@@ -26,6 +26,8 @@
   "calidad": "Quality",
   "sombras": "Shadows",
   "vSync": "v Sync",
+  "hrtf": "HRTF",
+  "descripciónHrtf": "(Better 3D sound)",
   "pantallaCompleta": "Fullscreen",
   "resolución": "Resolution",
   "reinicio": "(Requires restart)",

@@ -7426,8 +7426,8 @@ Hierarchy:
                             a28a6ee517ee3c7692812dfa83dd93c5~lblEnemigos: enemigos
                             902494c141ad0ad68dea6780e3efd36c~lblFinalTiempo: tiempo
                             29973cd1054751568e4675afceb380b3~lblSecretos: secretos
-                    077dc506e12c9a3079d7df18bd084356: !Voronomir.InterfazTraducciones,Voronomir.Proyecto
-                        Id: caf5111e-7947-43cd-a70a-54fcba219f51
+                    34607038754db7de92830254faa697e8: !Voronomir.InterfazTraducciones,Voronomir.Proyecto
+                        Id: 42ac47a8-4a64-4f77-93ff-4857095adeb8
                         "códigos":
                             3b7e1c9d1f9d6b0d752ce315d0394cac~txtVolver: volver
                             7f9e62b863b9748500f106bab6cfa408~txtDatos: datos
@@ -7453,6 +7453,10 @@ Hierarchy:
                             39e67dfdeef801db2cb08bf194b37b87~txtVSyncNo: no
                             "bd44e3bcf550bbc9aa89a15e7bdf0585~txtDatosSí": "sí"
                             7f59266e481a8a91dd0c5ac41afb5b4b~txtDatosNo: no
+                            f200fbdc291c194036c0c010a1815316~txtHRTF: hrtf
+                            "ef4c7fefb9c051e305dbb205489aaaea~txtHRTFSí": "sí"
+                            030fdb8ce3aace92bc8e51a19a5fa6dd~txtHRTFNo: no
+                            "ad2e966219ac77169457c99935a4337c~txtDescripciónHRTF": "descripciónHrtf"
                     f3a22f8e1824704a6bc6e9eb03a4f8da: !UIComponent
                         Id: 6e48cc9f-2b1d-427d-bcec-8076cdc55154
                         Page: d8d2b8e8-b800-4e51-94a9-d59d5fb618bc:Interfaz/Juego

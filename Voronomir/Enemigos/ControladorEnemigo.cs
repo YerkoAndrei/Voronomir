@@ -3,6 +3,7 @@ using Stride.Core.Mathematics;
 using Stride.Physics;
 using Stride.Audio;
 using Stride.Engine;
+using Stride.Core;
 
 namespace Voronomir;
 using static Utilidades;
@@ -32,8 +33,8 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
     private Vector3 posiciónInicial;
     private Vector3 gravedadInicial;
 
-    public float distanciaSonido { get; set; }
-    public float distanciaJugador { get; set; }
+    [DataMemberIgnore] public float distanciaSonido { get; set; }
+    [DataMemberIgnore] public float distanciaJugador { get; set; }
 
     public override void Start()
     {
@@ -44,6 +45,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         despierto = false;
         activo = false;
 
+        emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
         sonidoAtacar = emisor["atacar"];
         sonidoDaño = emisor["daño"];
         sonidoMorir = emisor["morir"];
@@ -264,6 +266,8 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         }
         else
         {
+            ActualizarVolumen();
+            emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
             sonidoAtacar.Play();
             sonidoDaño.Play();
             sonidoMorir.Pause();

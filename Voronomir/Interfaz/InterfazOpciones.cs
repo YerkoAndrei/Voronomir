@@ -60,6 +60,9 @@ public class InterfazOpciones : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVSyncSí"), () => EnClicVSync(true));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVSyncNo"), () => EnClicVSync(false));
 
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnHRTFSí"), () => EnClicHRTF(true));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnHRTFNo"), () => EnClicHRTF(false));
+
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnCompleta"), () => EnClicPantallaCompleta(true));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVentana"), () => EnClicPantallaCompleta(false));
 
@@ -96,6 +99,7 @@ public class InterfazOpciones : StartupScript
         BloquearSombras((NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.sombras)));
         BloquearVSync(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.vSync)));
         BloquearDatos(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.datos)));
+        BloquearHRTF(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf)));
         BloquearPantallaCompleta(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta)));
 
         DesbloquearBotonesResolución();
@@ -243,6 +247,16 @@ public class InterfazOpciones : StartupScript
 
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.volumenEfectos, slider.Value.ToString("n2", CultureInfo.InvariantCulture));
+        MostrarResoluciones(false);
+    }
+
+    private void EnClicHRTF(bool activo)
+    {
+        if (animando)
+            return;
+
+        SistemaMemoria.GuardarConfiguración(Configuraciones.hrtf, activo.ToString());
+        BloquearHRTF(activo);
         MostrarResoluciones(false);
     }
 
@@ -415,6 +429,12 @@ public class InterfazOpciones : StartupScript
     {
         BloquearBotón(página.FindVisualChildOfType<Grid>("btnDatosSí"), datos);
         BloquearBotón(página.FindVisualChildOfType<Grid>("btnDatosNo"), !datos);
+    }
+
+    private void BloquearHRTF(bool hrtf)
+    {
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnHRTFSí"), hrtf);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnHRTFNo"), !hrtf);
     }
 
     private void BloquearPantallaCompleta(bool pantallaCompleta)
