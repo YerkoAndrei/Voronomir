@@ -157,7 +157,7 @@ SharedRenderers:
             Overlays: {}
             RequestPassthrough: false
         SubsurfaceScatteringBlurEffect: null
-        MSAALevel: None
+        MSAALevel*: X8
         MSAAResolver: {}
     d5b2e71c088247e21556decdce138d96: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
         Id: 7332f0ab-4ceb-45ac-8132-210092975e75
@@ -181,7 +181,7 @@ SharedRenderers:
             Overlays: {}
             RequestPassthrough: false
         SubsurfaceScatteringBlurEffect: null
-        MSAALevel: None
+        MSAALevel*: X8
         MSAAResolver: {}
     34ecb9b2633eacfc439ba8744fe05102: !PostProcessingEffects
         Id: 39713196-3f2e-4a55-b898-f671814700bd
@@ -246,7 +246,7 @@ SharedRenderers:
             Overlays: {}
             RequestPassthrough: false
         SubsurfaceScatteringBlurEffect: null
-        MSAALevel: None
+        MSAALevel: X8
         MSAAResolver: {}
     bd8175e46c9b182d2f15fa8d7f2ae63b*: !PostProcessingEffects
         Id: ff20ffa9-de5b-4c83-ae37-8016399516ca
@@ -287,7 +287,9 @@ SharedRenderers:
             Transforms:
                 9028d8c2ac0f9eeaab21afa5efa08ce5: !ToneMap
                     Operator: !ToneMapHejl2Operator {}
-        Antialiasing: !FXAAEffect {}
+        Antialiasing: !FXAAEffect
+            Dither: None
+            Quality: 9
 Game*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
     Id: 33ab4886-1422-4305-86ec-6e3811c6f949
     Children:

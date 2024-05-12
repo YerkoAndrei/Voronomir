@@ -63,9 +63,9 @@ Hierarchy:
                         Priority: 4
                         "escenaMenú": "96aa054d-54af-441d-ace7-62be2c4ea9fd:Escenas/Menú"
                         escenaDemo: d96f9ef1-9ebb-4fd3-a140-1cacde38458e:Escenas/Demo
-                        compositorBajo: null
-                        compositorMedio: null
-                        compositorAlto: null
+                        compositorBajo: f79cc65d-776c-4d5f-9cf3-d8b624b65593:GraphicsCompositor (Bajo)
+                        compositorMedio: 30c63a5c-58b8-4fb8-b31c-15bbd5213e83:GraphicsCompositor (Medio)
+                        compositorAlto: 0bae112a-61a6-4ee8-aae1-357a7cb70d8f:GraphicsCompositor (Alto)
                     07702f8ed2638a99dbc80e83c0e49883: !UIComponent
                         Id: ed2e1c72-019f-402e-b24b-5033cf5fd0d5
                         Page: 332c8334-a4ec-41e0-9ce9-f970181eaade:Interfaz/Sistema

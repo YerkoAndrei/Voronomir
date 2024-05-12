@@ -42,7 +42,7 @@ public class SistemaEscenas : AsyncScript
         // Pantalla completa
         Game.Window.AllowUserResizing = false;
         Game.Window.Title = SistemaTraducción.ObtenerTraducción("nombreJuego");
-        /*
+
         // Resolución
         var resolución = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Split('x');
         var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
@@ -50,7 +50,6 @@ public class SistemaEscenas : AsyncScript
         var ancho = int.Parse(resolución[0]);
         var alto = int.Parse(resolución[1]);
         CambiarPantalla(pantallaCompleta, ancho, alto);
-        */
 
         // Predeterminado
         var página = Entity.Get<UIComponent>().Page.RootElement;

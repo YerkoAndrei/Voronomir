@@ -163,8 +163,8 @@ public class InterfazOpciones : StartupScript
         sliderCampoVisión.TouchUp += (s, a) => { SistemaSonidos.SonarBotónSale(); };
 
         // Actualiza gráficos
-        //ActualizaGráficos((NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
-        //ActualizaSombras();
+        ActualizaGráficos((NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
+        ActualizaSombras();
     }
 
     private void EnClicPestaña(string pestaña)
@@ -285,9 +285,9 @@ public class InterfazOpciones : StartupScript
         if (animando)
             return;
 
-        //SistemaMemoria.GuardarConfiguración(Configuraciones.gráficos, nivel.ToString());
+        SistemaMemoria.GuardarConfiguración(Configuraciones.gráficos, nivel.ToString());
         BloquearGráficos(nivel);
-        //ActualizaGráficos(nivel);
+        ActualizaGráficos(nivel);
         MostrarResoluciones(false);
     }
 
@@ -320,7 +320,7 @@ public class InterfazOpciones : StartupScript
     private void ActualizaSombras()
     {
         var controladorLuces = SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<ControladorSombras>() != null).FirstOrDefault();
-        //controladorLuces.Get<ControladorSombras>().ActualizarSombras();
+        controladorLuces.Get<ControladorSombras>().ActualizarSombras();
     }
 
     private void MostrarResoluciones(bool mostrar)
@@ -355,7 +355,7 @@ public class InterfazOpciones : StartupScript
         }
         
         txtResoluciónActual.Text = resolución.Replace("x", " x ");
-        //SistemaMemoria.GuardarConfiguración(Configuraciones.resolución, resolución);
+        SistemaMemoria.GuardarConfiguración(Configuraciones.resolución, resolución);
         ActualizarResolución(ancho, alto);
         MostrarResoluciones(false);
 
@@ -367,7 +367,7 @@ public class InterfazOpciones : StartupScript
     {
         // Pantalla completa
         var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
-       //SistemaEscenas.CambiarPantalla(pantallaCompleta, ancho, alto);
+       SistemaEscenas.CambiarPantalla(pantallaCompleta, ancho, alto);
     }
 
     private void EnClicPantallaCompleta(bool pantallaCompleta)
@@ -375,11 +375,11 @@ public class InterfazOpciones : StartupScript
         if (animando)
             return;
 
-        //var guardado = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
-        //if (pantallaCompleta == guardado)
-        //    return;
+        var guardado = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
+        if (pantallaCompleta == guardado)
+            return;
 
-        //SistemaMemoria.GuardarConfiguración(Configuraciones.pantallaCompleta, pantallaCompleta.ToString());
+        SistemaMemoria.GuardarConfiguración(Configuraciones.pantallaCompleta, pantallaCompleta.ToString());
         BloquearPantallaCompleta(pantallaCompleta);
         ActualizaPantalla(pantallaCompleta);
         MostrarResoluciones(false);
@@ -392,7 +392,7 @@ public class InterfazOpciones : StartupScript
         var ancho = int.Parse(resolución[0]);
         var alto = int.Parse(resolución[1]);
 
-        //SistemaEscenas.CambiarPantalla(pantallaCompleta, ancho, alto);
+        SistemaEscenas.CambiarPantalla(pantallaCompleta, ancho, alto);
     }
 
     // Bloqueos
