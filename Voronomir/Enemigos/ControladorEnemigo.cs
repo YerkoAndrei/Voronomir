@@ -145,6 +145,11 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable
         return activo;
     }
 
+    public bool ObtenerMuerto()
+    {
+        return despierto && !activo;
+    }
+
     private void Morir()
     {
         activo = false;

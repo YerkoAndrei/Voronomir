@@ -132,8 +132,7 @@ public class ControladorCofres : StartupScript
         else
         {
             var controladores = Entity.Scene.Entities.Where(o => o.Get<ControladorEnemigo>() != null)
-                                                     .Select(o => o.Get<ControladorEnemigo>())
-                                                     .ToArray();
+                                                     .Select(o => o.Get<ControladorEnemigo>()).ToArray();
             // Cuenta enemigos
             if (controladores.Where(o => o.enemigo == Enemigos.rangoLigero).Count() > 0)
                 maxProyectilesPulga = 20;

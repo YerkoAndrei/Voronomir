@@ -15,6 +15,7 @@ public class ControladorPartida : SyncScript
     private static Escenas _siguienteEscena;
 
     private static ControladorPersecusionesTrigonométricas[] persecutoresTrigonométricos;
+    private static ControladorActivadorMuerte[] activadoresMuerte;
     private static ControladorJugador jugador;
     private static TransformComponent transformJugador;
     private static TransformComponent cabezaJugador;
@@ -44,6 +45,9 @@ public class ControladorPartida : SyncScript
         var entidad = Entity.Scene.Entities.Where(o => o.Get<ControladorPersecusionesTrigonométricas>() != null).FirstOrDefault();
         persecutoresTrigonométricos = entidad.GetAll<ControladorPersecusionesTrigonométricas>().ToArray();
 
+        // Activadores
+        activadoresMuerte = Entity.Scene.Entities.Where(o => o.Get<ControladorActivadorMuerte>() != null)
+                                                     .Select(o => o.Get<ControladorActivadorMuerte>()).ToArray();
         // Interfaz
         interfaz = Entity.Scene.Entities.Where(o => o.Get<InterfazJuego>() != null).FirstOrDefault().Get<InterfazJuego>();
 
@@ -105,6 +109,12 @@ public class ControladorPartida : SyncScript
     public static void SumarEnemigo()
     {
         enemigos++;
+
+        // Intenta activar por cada enemigo
+        foreach (var activador in activadoresMuerte)
+        {
+            activador.Activar();
+        }
     }
 
     public static void SumarSecreto()
