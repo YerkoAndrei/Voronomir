@@ -12,12 +12,12 @@ Nodes:
     509d9bed612943c3a7f05e3c8eead46b: {Name: cabeza, Depth: 3}
     560918c8aaef9a7ef47e51833f2be0c9: {Name: cuerpo_01.L, Depth: 2}
     2838407faed0a53a3317c4091a46d60d: {Name: cuerpo_02.L, Depth: 2}
-    ce3295e582f932b116201e691cfb7947: {Name: cuerpo.03.L, Depth: 2}
+    8cb52135764d0cd9e6afa7a6cb8176b1: {Name: cuerpo_03.L, Depth: 2}
     1a25d29d7835250db46d449b460d300c: {Name: cuerpo_01.R, Depth: 2}
     1b0bb659ee35ba03d373d7c8bba458ff: {Name: cuerpo_02.R, Depth: 2}
-    7e4ac8437303503e80fa7d7e32e7e458: {Name: cuerpo.03.R, Depth: 2}
+    45f27f9c656490d00f7f48fe566905a9: {Name: cuerpo_03.R, Depth: 2}
     9acd877a246ea0c901299fed5f496cc5: {Name: cola_01, Depth: 1}
     c10fd9825cb1eae1fb608f6ebf595075: {Name: cola_02, Depth: 2}
     988dd2dee685a5da13fd54a905d5370e: {Name: cola_03, Depth: 3}
 ~SourceHashes:
-    5406758d09147e905554537e33247799~Babosa.glb: 13fed0975c3da3df2c8729013c8e20c7
+    5406758d09147e905554537e33247799~Babosa.glb: 3a21cf94ed0cb91559dad2135cfc51cd
