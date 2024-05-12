@@ -195,6 +195,38 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
         -   Entity:
+                Id: 8b31c421-ae7d-4c03-bc0a-0e48fa016d20
+                Name: Cuerpo
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: fea0c055-1bff-41c9-b5e8-a66193cca7a5
+                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 5fd0fad6-b4c1-49ad-b665-2f6b17b8410f
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
                 Id: bf77fc42-44b9-4f29-a8a2-1e60fe58f1f3
                 Name: ArmaRango
                 Components:
@@ -242,6 +274,7 @@ Hierarchy:
                         Children:
                             0a5042c5122b96b7568d7bafd42c2219: ref!! 58cad4ee-090a-49ea-89ec-2267b4ae444b
                             5335687c323b410f0abeb005c3b0e03f: ref!! c412e2fb-4b70-4874-ad89-83295814309b
+                            255851c9b9799238d8e0f2eaab87c201: ref!! fea0c055-1bff-41c9-b5e8-a66193cca7a5
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 07e87824-3863-43ff-971b-5642118571c8
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: e54a000a-7d20-48df-898b-5fced74ce053
