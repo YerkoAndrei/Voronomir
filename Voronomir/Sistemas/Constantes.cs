@@ -58,11 +58,11 @@ public static class Constantes
     public enum Enemigos
     {
         nada,
-        meléLigero,     // Esqueleto
+        meléLigero,     // Zombi
         meléMediano,    // Lancero
-        meléPesado,     // Minotauro
+        meléPesado,     // Carnicero
 
-        rangoLigero,    // Saltamonte
+        rangoLigero,    // Pulga
         rangoMediano,   // Babosa
         rangoPesado,    // Araña
 
