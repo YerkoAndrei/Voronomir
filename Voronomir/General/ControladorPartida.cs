@@ -53,7 +53,8 @@ public class ControladorPartida : SyncScript
                                                  .Select(o => o.Get<ControladorActivadorMuerte>()).ToArray();
 
         // Sonidos
-        var entidadesSonido = Entity.Scene.Entities.Where(o => o.Get<ControladorPoder>() != null ||
+        var entidadesSonido = Entity.Scene.Entities.Where(o => o.Get<ElementoEfecto>() != null || 
+                                                               o.Get<ControladorPoder>() != null ||
                                                                o.Get<ControladorLlave>() != null ||
                                                                o.Get<ControladorPuerta>() != null ||
                                                                o.Get<ControladorEnemigo>() != null).ToArray();

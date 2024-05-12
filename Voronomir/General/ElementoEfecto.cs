@@ -1,11 +1,13 @@
-﻿using Stride.Core.Mathematics;
+﻿using Stride.Audio;
+using Stride.Core;
+using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Particles.Components;
 
 namespace Voronomir;
 using static Constantes;
 
-public class ElementoEfecto : StartupScript
+public class ElementoEfecto : StartupScript, ISonidoMundo
 {
     // Efectos jugador
     public ParticleSystemComponent bala;
@@ -19,9 +21,19 @@ public class ElementoEfecto : StartupScript
 
     // Efectos entorno
     public ParticleSystemComponent aparición;
+    public AudioEmitterComponent emisor;
+
+    private AudioEmitterSoundController sonidoAparición;
+
+    [DataMemberIgnore] public float distanciaSonido { get; set; }
+    [DataMemberIgnore] public float distanciaJugador { get; set; }
 
     public override void Start()
     {
+        emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
+        sonidoAparición = emisor["aparición"];
+        distanciaSonido = 20;
+
         Apagar();
     }
 
@@ -161,6 +173,9 @@ public class ElementoEfecto : StartupScript
 
         aparición.Enabled = true;
         aparición.ParticleSystem.ResetSimulation();
+
+        ActualizarVolumen();
+        sonidoAparición.PlayAndForget();
     }
 
     private void Apagar()
@@ -174,5 +189,27 @@ public class ElementoEfecto : StartupScript
         hemolinfa.Enabled = false;
 
         aparición.Enabled = false;
+    }
+
+    public void ActualizarVolumen()
+    {
+        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerCabezaJugador());
+
+        if (distanciaJugador > distanciaSonido)
+            sonidoAparición.Volume = 0;
+        else
+            sonidoAparición.Volume = ((distanciaSonido - distanciaJugador) / distanciaSonido) * SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+    }
+
+    public void PausarSonidos(bool pausa)
+    {
+        if (pausa)
+            sonidoAparición.Pause();
+        else
+        {
+            ActualizarVolumen();
+            emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
+            sonidoAparición.Play();
+        }
     }
 }

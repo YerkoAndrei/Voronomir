@@ -414,6 +414,23 @@ Hierarchy:
                                             SeedOffset: 0
                         RenderGroup: Group1
         -   Entity:
+                Id: 52a1f3af-4e3c-4ede-81c9-5a557e1a505d
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: fb62c994-4b6d-4860-b1ad-2387019b869b
+                        Position: {X: 0.0, Y: 1.6, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 53e18ad8-42a8-4da2-8885-58c06ecffcf4
+                        Sounds:
+                            "91d84f261f22c654e29a032538fc64f5~aparición": "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+        -   Entity:
                 Id: 6b32fb5d-c7f8-4fc9-8421-86bc281951ee
                 Name: Bala
                 Components:
@@ -985,6 +1002,7 @@ Hierarchy:
                             89d4bbb888b07499eebf173f5d46f3ca: ref!! ce25b7d5-556e-48c1-9d4a-0bc009a5f74c
                             e6c5f447f086523882c4ed4c65cb6d74: ref!! d88d401a-c601-47b9-8fc4-780063f4c0ac
                             1031aff7789bdaaa363e996cc6185906: ref!! 7773cdb8-115a-4c58-885d-35f4d9c5d32e
+                            7fa8c262d80d2abb61d0c228b89b89cf: ref!! fb62c994-4b6d-4860-b1ad-2387019b869b
                     fdb5a30677b89d06a6187d2576e7c862: !Voronomir.ElementoEfecto,Voronomir.Proyecto
                         Id: eb3326c0-0268-41c0-a1e8-35019e65bb6e
                         bala: ref!! 7f5faf81-1878-462c-a00f-c0f0d529ab31
@@ -994,3 +1012,4 @@ Hierarchy:
                         rayos: ref!! f040fab0-a7d6-428f-8237-adc9e237824b
                         hemolinfa: ref!! 149062bb-e01b-43d6-9743-39dbbb060d69
                         "aparición": ref!! a8e1b840-c8fe-41e0-a801-f1de5b07f4d4
+                        emisor: ref!! 53e18ad8-42a8-4da2-8885-58c06ecffcf4
