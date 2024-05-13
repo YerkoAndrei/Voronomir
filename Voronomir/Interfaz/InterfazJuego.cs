@@ -235,6 +235,7 @@ public class InterfazJuego : SyncScript
 
     private void EnClicContinuar()
     {
+        ControladorCofres.ApagarFísicas();
         SistemaEscenas.CambiarEscena(ControladorPartida.ObtenerSiguienteEscena());
     }
 
