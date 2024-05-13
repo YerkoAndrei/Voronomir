@@ -19,7 +19,7 @@ Hierarchy:
                     9338311ecbb3e1b8edbaf2ec6d27e7c9: !SpriteComponent
                         Id: f1652332-d0d0-47ad-902a-d6f7fb203099
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 33aaf645-1bf7-4c25-9752-ef8ad7783e8b:Sprites/Marca
+                            Sheet: d83bf863-df00-49e1-9f2f-6522dc937ab0:Sprites/Marca
                         Color: {R: 0.3529412, G: 0.3529412, B: 0.3529412, A: 1.0}
         -   Entity:
                 Id: 5bfdc32d-ce31-4338-b875-c3ad36cab97c

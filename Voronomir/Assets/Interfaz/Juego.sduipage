@@ -213,7 +213,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -231,7 +231,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -317,7 +317,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -1503,7 +1503,6 @@ Hierarchy:
                 Id: 21d6f9a8-b5f3-4b2f-ac48-2c359e518eea
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 1280.0
                 Height: 25.0
                 HorizontalAlignment: Center
                 VerticalAlignment: Top
@@ -1750,7 +1749,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: imgDecoE
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: a9207b0c-377d-4627-83a9-2a966c0b095e:Texturas/Interfaz/Estrella
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 0, A: 200}
         -   UIElement: !Grid
@@ -1758,6 +1757,9 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
                 Children:
                     765854fdc81c94fe90f7e3097e76552f: !Grid ref!! 49b75539-86e0-470d-911a-8690f66615b4
                     41cf4519d3dfe66a586aeac22336564d: !UniformGrid ref!! f9c55e83-016c-4bc2-9420-9cb93cdb0f34
@@ -1798,11 +1800,11 @@ Hierarchy:
                 Id: 281cd101-1667-42a9-89e4-1039a3e3a573
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 200.0
-                Height: 100.0
+                Width: 100.0
+                Height: 50.0
                 HorizontalAlignment: Left
                 VerticalAlignment: Bottom
-                Margin: {}
+                Margin: {Left: 300.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -2404,8 +2406,8 @@ Hierarchy:
                 Id: 33975fa5-af25-44ed-9082-4926fa943f8f
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 100.0
-                Height: 100.0
+                Width: 50.0
+                Height: 50.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -3222,8 +3224,8 @@ Hierarchy:
                 Id: 456bce48-7ade-4476-ade0-4a483375e395
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 100.0
-                Height: 100.0
+                Width: 200.0
+                Height: 200.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -3367,7 +3369,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: imgDeco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: a9207b0c-377d-4627-83a9-2a966c0b095e:Texturas/Interfaz/Estrella
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
@@ -4811,8 +4813,9 @@ Hierarchy:
                 DependencyProperties:
                     5daa17ce091205fb0ac9752d805873ea~GridBase.ColumnPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 100.0
-                Height: 100.0
+                Width: 50.0
+                Height: 50.0
+                Depth: 50.0
                 HorizontalAlignment: Right
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -5581,7 +5584,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -5743,7 +5746,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: imgDeco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: a9207b0c-377d-4627-83a9-2a966c0b095e:Texturas/Interfaz/Estrella
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
@@ -6379,8 +6382,8 @@ Hierarchy:
                 Id: 85d08406-1342-4f61-a088-e86ee449acd8
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 100.0
-                Height: 100.0
+                Width: 200.0
+                Height: 200.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -6868,7 +6871,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -7216,7 +7219,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -7398,8 +7401,8 @@ Hierarchy:
                 Id: 9cd2d46b-af16-4a8a-a534-5079740eb5eb
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 700.0
-                Height: 700.0
+                Width: 740.0
+                Height: 740.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -7420,7 +7423,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -7431,8 +7434,8 @@ Hierarchy:
                 Id: 9dcfa9a3-ad60-491d-bb81-359506de19ba
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 100.0
-                Height: 100.0
+                Width: 200.0
+                Height: 200.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -7448,7 +7451,7 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 25.0
                 VerticalAlignment: Top
-                Margin: {Top: 40.0}
+                Margin: {Top: 50.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -7711,22 +7714,17 @@ Hierarchy:
                 Id: a3236013-7dec-49de-8241-b6c77b39ef7e
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 50.0
                 Height: 20.0
-                Margin: {Left: 650.0}
+                Margin*: {Left: 650.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtE
-                Text: (E)
+                Name*: txtE
+                Text*: (E)
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 160, A: 255}
+                TextColor: {R: 255, G: 255, B: 0, A: 200}
                 TextAlignment: Center
-            Base:
-                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
-                BasePartId: d55d9875-b47c-4938-8415-98e65702c058
-                InstanceId: 020292fb-9916-45a2-afb9-5a2063375bb5
         -   UIElement: !Grid
                 Id: a371ba30-2777-4928-bdb5-390ffdceac85
                 DependencyProperties: {}
@@ -7876,8 +7874,8 @@ Hierarchy:
                     b6216b5f9d0529de1593fa7ba5863bbe~GridBase.RowPropertyKey: 0
                     fe7e2efc1ee23dc81ac33b7bd7ac6b43~GridBase.ColumnPropertyKey: 0
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 100.0
-                Height: 100.0
+                Width: 50.0
+                Height: 50.0
                 HorizontalAlignment: Right
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -7979,7 +7977,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -8135,8 +8133,8 @@ Hierarchy:
                 Id: ad9d9f28-8a91-42d4-9074-6c62ccd28aa3
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 100.0
-                Height: 100.0
+                Width: 200.0
+                Height: 200.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -8337,7 +8335,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -8487,8 +8485,8 @@ Hierarchy:
                     356d9dadb49e0cae46d8159625d378e6~GridBase.RowPropertyKey: 0
                     99636d72b66594d1e04eb9f092009f46~GridBase.ColumnPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 100.0
-                Height: 100.0
+                Width: 50.0
+                Height: 50.0
                 HorizontalAlignment: Right
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -8600,7 +8598,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -9112,11 +9110,11 @@ Hierarchy:
                 Id: c4c2b7ef-0c02-445e-9287-a17c60c4fbd9
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 300.0
-                Height: 100.0
+                Width: 150.0
+                Height: 50.0
                 HorizontalAlignment: Right
                 VerticalAlignment: Bottom
-                Margin: {}
+                Margin: {Right: 300.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -9206,7 +9204,6 @@ Hierarchy:
                 Id: cac76349-7209-48f1-b68d-35f0b3dd11a2
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 50.0
                 Height: 20.0
                 Margin: {Left: 650.0}
                 MaximumWidth: 3.4028235E+38
@@ -9216,12 +9213,8 @@ Hierarchy:
                 Text: (E)
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
-                TextColor: {R: 240, G: 240, B: 160, A: 255}
+                TextColor: {R: 255, G: 255, B: 0, A: 200}
                 TextAlignment: Center
-            Base:
-                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
-                BasePartId: d55d9875-b47c-4938-8415-98e65702c058
-                InstanceId: cdd01f71-59cf-4d3d-abbc-e2d5773c1c06
         -   UIElement: !Button
                 Id: cac7e8d4-099c-41a7-b316-e5ec7697fe62
                 DependencyProperties: {}
@@ -9754,12 +9747,8 @@ Hierarchy:
                 Text*: (E)
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
-                TextColor*: {R: 240, G: 240, B: 160, A: 255}
+                TextColor*: {R: 255, G: 255, B: 0, A: 200}
                 TextAlignment: Center
-            Base:
-                BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
-                BasePartId: d55d9875-b47c-4938-8415-98e65702c058
-                InstanceId: 0ae26682-d84f-47fd-8512-b5f0c8144fd9
         -   UIElement: !Grid
                 Id: d5408394-fc05-4083-991a-2022038955fe
                 DependencyProperties:
@@ -10001,7 +9990,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -10132,8 +10121,8 @@ Hierarchy:
                 DependencyProperties:
                     79d8d2826ef3fd1db0b0048b5de81d9e~GridBase.ColumnPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 100.0
-                Height: 100.0
+                Width: 50.0
+                Height: 50.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -10362,7 +10351,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -10665,7 +10654,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -11152,7 +11141,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:

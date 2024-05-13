@@ -1,15 +1,15 @@
 !SpriteSheet
-Id: 33aaf645-1bf7-4c25-9752-ef8ad7783e8b
+Id: d83bf863-df00-49e1-9f2f-6522dc937ab0
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Packing: {}
 Sprites:
-    ae04b3207f9c5281456138ae07ecf8a7:
+    5479e69f96f0ca4d7dc01bb6ab2df725:
         Source: !file ../Texturas/Efectos/Suave.png
         Name: Suave
-        TextureRegion: {X: 0, Y: 0, Width: 128, Height: 128}
+        TextureRegion: {X: 0, Y: 0, Width: 512, Height: 512}
         Center: {X: 0.0, Y: 0.0}
         Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}

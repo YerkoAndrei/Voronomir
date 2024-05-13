@@ -1643,7 +1643,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -2254,7 +2254,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -3796,7 +3796,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -3834,7 +3834,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -4249,7 +4249,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -5248,7 +5248,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -6415,7 +6415,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -7385,7 +7385,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -7422,7 +7422,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -7481,7 +7481,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -8316,7 +8316,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -8590,7 +8590,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -8866,7 +8866,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:
@@ -9009,7 +9009,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Deco
                 Source: !SpriteFromTexture
-                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/Octágono"
+                    Texture: "97ab76ff-4729-4f94-bd3d-1f09fae99d8e:Texturas/Interfaz/BordeOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 40, G: 0, B: 0, A: 255}
             Base:

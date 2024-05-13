@@ -141,7 +141,7 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Estrella
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Brillo
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
@@ -704,7 +704,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 2e1d50e6-8415-4498-a4d2-074d61832d00
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
+                            Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         RenderGroup: Group10
             Base:
@@ -1528,7 +1528,7 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Estrella
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Brillo
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
@@ -1693,7 +1693,7 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Estrella
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Brillo
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
@@ -1985,7 +1985,7 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Estrella
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Brillo
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
@@ -2149,7 +2149,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 4374afb1-1f54-4b88-a010-1410d295d862
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
+                            Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         RenderGroup: Group10
             Base:
@@ -2228,7 +2228,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 04817343-4f13-428b-9d79-819c008583e7
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
+                            Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         RenderGroup: Group10
             Base:
@@ -2504,7 +2504,7 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Estrella
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Brillo
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
@@ -2648,7 +2648,7 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Estrella
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Brillo
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
@@ -2964,7 +2964,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 123f3011-9107-4f02-a3a6-bcd19cec6dce
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
+                            Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         RenderGroup: Group10
             Base:
@@ -3109,7 +3109,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: ba3f4359-5d76-4637-8f7d-85410d44e905
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
+                            Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         RenderGroup: Group10
             Base:
@@ -3457,7 +3457,7 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Estrella
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Brillo
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
@@ -5172,7 +5172,7 @@ Hierarchy:
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 754e9f12-9692-431e-97cf-022c9e8430a0
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: b5e82ecd-ff6c-4252-bd46-323b37d4b72a:Sprites/Fuego
+                            Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         RenderGroup: Group10
             Base:
@@ -6913,7 +6913,7 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Estrella
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Brillo
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
