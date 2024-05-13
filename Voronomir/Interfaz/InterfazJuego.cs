@@ -56,6 +56,9 @@ public class InterfazJuego : SyncScript
     private TextBlock txtEnemigos;
     private TextBlock txtSecretos;
 
+    private ImageElement imgDecoE;
+    private TextBlock txtFinalE;
+
     private Grid btnContinuar;
     private Grid btnFinalSalir;
 
@@ -120,6 +123,9 @@ public class InterfazJuego : SyncScript
         txtEnemigos = página.FindVisualChildOfType<TextBlock>("txtEnemigos");
         txtSecretos = página.FindVisualChildOfType<TextBlock>("txtSecretos");
 
+        imgDecoE = página.FindVisualChildOfType<ImageElement>("imgDecoE");
+        txtFinalE = página.FindVisualChildOfType<TextBlock>("txtFinalE");
+
         // Paneles
         panelDatosFinales = página.FindVisualChildOfType<UniformGrid>("DatosFinales");
         panelPausa = página.FindVisualChildOfType<Grid>("PanelPausa");
@@ -153,6 +159,9 @@ public class InterfazJuego : SyncScript
         panelMuerte.Visibility = Visibility.Hidden;
         panelFinal.Visibility = Visibility.Hidden;
 
+        imgDecoE.Visibility = Visibility.Hidden;
+        txtFinalE.Visibility = Visibility.Hidden;
+
         // Datos
         panelDatos.Visibility = Visibility.Hidden;
         if (bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.datos)))
@@ -171,7 +180,17 @@ public class InterfazJuego : SyncScript
         if (Input.IsKeyPressed(Keys.Escape))
             Pausar();
 
-        if(ControladorPartida.ObtenerActivo() /*&& depuración*/)
+        if (Input.IsKeyPressed(Keys.E))
+        {
+            if (panelPausa.Visibility == Visibility.Visible)
+                Pausar();
+            else if (panelMuerte.Visibility == Visibility.Visible)
+                EnClicReiniciar();
+            else if (panelDatosFinales.Visibility == Visibility.Visible)
+                EnClicContinuar();
+        }
+
+        if (ControladorPartida.ObtenerActivo() && panelDatos.Visibility == Visibility.Visible)
         {
             txtPosición.Text = "P " + ControladorPartida.ObtenerPosiciónJugador().ToString("n3");
             txtTiempo.Text = "T " + FormatearTiempo(ControladorPartida.ObtenerTiempo());
@@ -465,6 +484,8 @@ public class InterfazJuego : SyncScript
         imgFinal.Opacity = 1;        
         panelDatosFinales.Visibility = Visibility.Visible;
         txtFinalNivel.Visibility = Visibility.Visible;
+        imgDecoE.Visibility = Visibility.Visible;
+        txtFinalE.Visibility = Visibility.Visible;
 
         BloquearBotón(btnContinuar, false);
         BloquearBotón(btnFinalSalir, false);

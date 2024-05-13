@@ -727,6 +727,8 @@ Hierarchy:
                     288bb3cba41217ca70828c1288cd1352: !Button ref!! 968db913-6572-4105-bed8-f871928d65c0
                     4ba0ac30b211286f5dbb3efee011a5e8: !ImageElement ref!! 157d46af-f150-4482-988a-cbf2d47e9fed
                     500555a6cf47edf712d2d76bd9bd5974: !TextBlock ref!! a8971fdc-2121-40a0-8329-e60dc4c20995
+                    e3f1b10bef9cc402e96528a6dc3d6a06: !ImageElement ref!! 5fd85750-122c-4815-8222-580a7643d6ea
+                    5e204690ad077e68afe679bbf9a5bd17: !ImageElement ref!! 79f238d4-01b6-4a97-ba5d-3a43fd9ff2a9
                     3df6f2ec72b555713584bc9bc41fd7a4: !Grid ref!! a2bf2219-ab79-4cdf-8511-d6eff7e247bc
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -3296,6 +3298,22 @@ Hierarchy:
                 BasePartId: be3343d6-9f19-4bb4-bc31-b4585ca584af
                 InstanceId: 0564924a-584e-47d3-a8e9-d716c46f7bd8
         -   UIElement: !ImageElement
+                Id: 5fd85750-122c-4815-8222-580a7643d6ea
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.5
+                Width: 30.0
+                Height: 30.0
+                Margin: {Right: 500.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgDeco 0
+                Source: !SpriteFromTexture
+                    Texture: aebbbc6d-6742-4d4a-a85d-a4c71c74a64d:Texturas/Interfaz/Engranaje
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !ImageElement
                 Id: 5fdac790-a72a-4ff7-8917-9c2572ed836b
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -4314,6 +4332,22 @@ Hierarchy:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
                 BasePartId: 4631910d-b8ba-46e9-b479-13c2ef8e0ac6
                 InstanceId: 53dff2cf-a8ac-495e-a440-19b40c69a6f8
+        -   UIElement: !ImageElement
+                Id: 79f238d4-01b6-4a97-ba5d-3a43fd9ff2a9
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.5
+                Width: 30.0
+                Height: 30.0
+                Margin: {Left: 500.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgDeco 1
+                Source: !SpriteFromTexture
+                    Texture: aebbbc6d-6742-4d4a-a85d-a4c71c74a64d:Texturas/Interfaz/Engranaje
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !TextBlock
                 Id: 7a6c5cf1-018e-493d-9143-989a9ce03a0f
                 DependencyProperties:

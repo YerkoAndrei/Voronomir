@@ -1,0 +1,7 @@
+!Texture
+Id: aebbbc6d-6742-4d4a-a85d-a4c71c74a64d
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Engranaje.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
