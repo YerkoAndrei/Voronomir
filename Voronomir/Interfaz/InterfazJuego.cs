@@ -209,6 +209,11 @@ public class InterfazJuego : SyncScript
         {
             BloquearInterfaz(true);
             panelPausa.Visibility = Visibility.Hidden;
+
+            if (bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.datos)))
+                panelDatos.Visibility = Visibility.Visible;
+            else
+                panelDatos.Visibility = Visibility.Hidden;
         }
         else
         {
