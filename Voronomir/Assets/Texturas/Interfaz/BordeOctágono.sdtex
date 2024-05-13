@@ -2,6 +2,6 @@
 Id: 97ab76ff-4729-4f94-bd3d-1f09fae99d8e
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Source: !file "Octágono.png"
+Source: !file "BordeOctágono.png"
 Type: !ColorTextureType
     ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
