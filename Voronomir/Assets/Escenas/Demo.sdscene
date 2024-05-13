@@ -699,13 +699,13 @@ Hierarchy:
                         Id: 3cf19176-19d3-438c-9223-6398785519f5
                         Position: {X: 0.0, Y: 0.0, Z: -2.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 1.0}
+                        Scale: {X: 0.15, Y: 0.15, Z: 1.0}
                         Children: {}
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 2e1d50e6-8415-4498-a4d2-074d61832d00
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 1.0}
                         RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -2144,13 +2144,13 @@ Hierarchy:
                         Id: 754ab516-f06d-4fd5-80e1-06f3d8dc5494
                         Position: {X: 0.0, Y: 0.0, Z: -0.7}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.25, Y: 0.25, Z: 1.0}
+                        Scale: {X: 0.06, Y: 0.06, Z: 1.0}
                         Children: {}
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 4374afb1-1f54-4b88-a010-1410d295d862
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 1.0}
                         RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -2223,13 +2223,13 @@ Hierarchy:
                         Id: 671666da-deb6-4621-b2c8-9fdd27aace8e
                         Position: {X: 0.0, Y: 0.01, Z: -0.67}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.2, Y: 0.2, Z: 1.0}
+                        Scale: {X: 0.06, Y: 0.06, Z: 1.0}
                         Children: {}
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 04817343-4f13-428b-9d79-819c008583e7
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 1.0}
                         RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -2959,13 +2959,13 @@ Hierarchy:
                         Id: 4a69c073-144f-4fb9-864d-b0db78a58a85
                         Position: {X: 0.0, Y: 0.0, Z: -2.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 1.0}
+                        Scale: {X: 0.15, Y: 0.15, Z: 1.0}
                         Children: {}
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 123f3011-9107-4f02-a3a6-bcd19cec6dce
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 1.0}
                         RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -3104,13 +3104,13 @@ Hierarchy:
                         Id: 4b179cc8-5f76-46b2-ab50-d0d857dc7a8a
                         Position: {X: 0.0, Y: 0.0, Z: -0.7}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.25, Y: 0.25, Z: 1.0}
+                        Scale: {X: 0.06, Y: 0.06, Z: 1.0}
                         Children: {}
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: ba3f4359-5d76-4637-8f7d-85410d44e905
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 1.0}
                         RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -5167,13 +5167,13 @@ Hierarchy:
                         Id: 5082a611-b781-4b28-b66c-1356b5f86498
                         Position: {X: 0.0, Y: 0.01, Z: -0.67}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.2, Y: 0.2, Z: 1.0}
+                        Scale: {X: 0.06, Y: 0.06, Z: 1.0}
                         Children: {}
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 754e9f12-9692-431e-97cf-022c9e8430a0
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 1.0}
                         RenderGroup: Group10
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador

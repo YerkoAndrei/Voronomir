@@ -223,8 +223,6 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
 
     private async void CrearMarcaMuerte()
     {
-        await Task.Delay(100);
-
         // Rayo para crear marca
         var inicioRayo = Entity.Transform.WorldMatrix.TranslationVector + (Vector3.UnitY * 0.5f);
         var dirección = inicioRayo - Vector3.UnitY;
@@ -232,6 +230,8 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                                                      dirección,
                                                      CollisionFilterGroups.DefaultFilter,
                                                      CollisionFilterGroupFlags.StaticFilter);
+        await Task.Delay(100);
+
         if (resultado.Succeeded)
             ControladorCofres.IniciarEfectoEntornoMuerte(enemigo, resultado.Point, resultado.Normal);
     }

@@ -285,13 +285,13 @@ Hierarchy:
                         Id: 6b653811-a963-4a12-b8d6-adc41935d463
                         Position: {X: 0.0, Y: 0.01, Z: -0.67}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.2, Y: 0.2, Z: 1.0}
+                        Scale: {X: 0.06, Y: 0.06, Z: 1.0}
                         Children: {}
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 9df59465-e291-4f94-84aa-8133c650c216
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 1.0}
                         RenderGroup: Group10
         -   Entity:
                 Id: 1ec15dbd-c871-4f5e-b556-fb190ee401bb
@@ -565,13 +565,13 @@ Hierarchy:
                         Id: de21ec37-6aae-42ea-b3bc-889ad3d0b0fa
                         Position: {X: 0.0, Y: 0.0, Z: -0.7}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.25, Y: 0.25, Z: 1.0}
+                        Scale: {X: 0.06, Y: 0.06, Z: 1.0}
                         Children: {}
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 87358d27-6879-48fa-9d6c-8972dd9594f8
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 1.0}
                         RenderGroup: Group10
         -   Entity:
                 Id: 3594fe7c-b7ec-48ee-832c-00fde6ed809f
@@ -1263,13 +1263,13 @@ Hierarchy:
                         Id: c546dc16-cf6c-4c74-badd-1e3fa6d741dd
                         Position: {X: 0.0, Y: 0.0, Z: -0.7}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.25, Y: 0.25, Z: 1.0}
+                        Scale: {X: 0.06, Y: 0.06, Z: 1.0}
                         Children: {}
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 7d72fb8c-c7ea-4c37-826f-2dec2eaae339
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 1.0}
                         RenderGroup: Group10
         -   Entity:
                 Id: a797918f-0191-4c40-a2ce-1809dc134eca
@@ -1448,13 +1448,13 @@ Hierarchy:
                         Id: b22f72ac-f5f4-4c43-8a6d-4c2e6ae355b7
                         Position: {X: 0.0, Y: 0.01, Z: -0.67}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.2, Y: 0.2, Z: 1.0}
+                        Scale: {X: 0.06, Y: 0.06, Z: 1.0}
                         Children: {}
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 93009d42-d5f8-4016-9694-761107bb345c
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 1.0}
                         RenderGroup: Group10
         -   Entity:
                 Id: b68e92f4-525b-46d7-9ba4-240b06194677
@@ -1704,13 +1704,13 @@ Hierarchy:
                         Id: b9439ba8-b68a-49f0-bca7-d001b980bf0f
                         Position: {X: 0.0, Y: 0.0, Z: -2.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 1.0}
+                        Scale: {X: 0.15, Y: 0.15, Z: 1.0}
                         Children: {}
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 3ac11445-ac45-4540-901f-c8ef603cad2a
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 1.0}
                         RenderGroup: Group10
         -   Entity:
                 Id: e1f6681a-f5c0-4a3c-83b5-6b117a74df1c
@@ -1720,13 +1720,13 @@ Hierarchy:
                         Id: cf350b03-e4bd-468f-b308-52148213f2d7
                         Position: {X: 0.0, Y: 0.0, Z: -2.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 1.0}
+                        Scale: {X: 0.15, Y: 0.15, Z: 1.0}
                         Children: {}
                     b676317d4f88e0647dacb5ea282f27a9: !SpriteComponent
                         Id: 58f50ad1-e4a7-4d54-8eca-f704ce63b482
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4894693f-3aec-4978-a14d-a25c96f31908:Sprites/Fuego
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 1.0}
                         RenderGroup: Group10
         -   Entity:
                 Id: e3ffef3f-7d1d-44bb-b143-6ecceeb66783

@@ -610,7 +610,7 @@ Hierarchy:
                         Control:
                             ResetSeconds: 2.0
                             Control: Play
-                        Color: {R: 0.78431374, G: 0.78431374, B: 0.78431374, A: 0.39215687}
+                        Color: {R: 0.0, G: 0.0, B: 0.0, A: 0.78431374}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
@@ -618,6 +618,7 @@ Hierarchy:
                             Emitters:
                                 354399268ecb80863fbcd44a7de54c62:
                                     ParticleLifetime: {X: 0.2, Y: 0.6}
+                                    DrawPriority: 1
                                     SortingPolicy: ByDepth
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         SamplerPosition: null
@@ -638,7 +639,7 @@ Hierarchy:
                                             LoopCondition: OneShot
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 32
+                                            SpawnCount: 40
                                     Initializers:
                                         ee72ebc2f93cf12825ea2538a284a63f: !InitialSizeSeed
                                             InheritPosition: true

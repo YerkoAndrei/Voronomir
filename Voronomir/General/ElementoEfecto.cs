@@ -43,27 +43,27 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
         switch (arma)
         {
             case Armas.espada:
-                bala.Entity.Transform.Scale = Vector3.One * 0.2f;
+                bala.Entity.Transform.Scale = Vector3.One * 0.1f;
                 bala.Enabled = true;
                 bala.ParticleSystem.ResetSimulation();
                 break;
             case Armas.escopeta:
-                bala.Entity.Transform.Scale = Vector3.One * 0.25f;
+                bala.Entity.Transform.Scale = Vector3.One * 0.14f;
                 bala.Enabled = true;
                 bala.ParticleSystem.ResetSimulation();
                 break;
             case Armas.metralleta:
-                bala.Entity.Transform.Scale = Vector3.One * 0.4f;
+                bala.Entity.Transform.Scale = Vector3.One * 0.2f;
                 bala.Enabled = true;
                 bala.ParticleSystem.ResetSimulation();
                 break;
             case Armas.rifle:
-                explosión.Entity.Transform.Scale = Vector3.One * 0.8f;
+                explosión.Entity.Transform.Scale = Vector3.One * 0.4f;
                 explosión.Enabled = true;
                 explosión.ParticleSystem.ResetSimulation();
                 break;
             case Armas.lanzagranadas:
-                explosión.Entity.Transform.Scale = Vector3.One * 1.2f;
+                explosión.Entity.Transform.Scale = Vector3.One * 0.6f;
                 explosión.Enabled = true;
                 explosión.ParticleSystem.ResetSimulation();
 

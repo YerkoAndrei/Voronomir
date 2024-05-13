@@ -25,27 +25,27 @@ public class ElementoMarca : StartupScript
         {
             case Armas.espada:
                 textura.SpriteProvider = ObtenerSprite(marcaFuerte);
-                textura.Entity.Transform.Scale = Vector3.One * 0.08f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.015f;
                 textura.Color = new Color(90, 90, 90);
                 break;
             case Armas.escopeta:
                 textura.SpriteProvider = ObtenerSprite(marcaSuave);
-                textura.Entity.Transform.Scale = Vector3.One * 0.04f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.005f;
                 textura.Color = new Color(100, 100, 100);
                 break;
             case Armas.metralleta:
                 textura.SpriteProvider = ObtenerSprite(marcaSuave);
-                textura.Entity.Transform.Scale = Vector3.One * 0.05f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.01f;
                 textura.Color = new Color(100, 100, 100);
                 break;
             case Armas.rifle:
                 textura.SpriteProvider = ObtenerSprite(marcaSuave);
-                textura.Entity.Transform.Scale = Vector3.One * 0.15f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.02f;
                 textura.Color = new Color(80, 80, 80);
                 break;
             case Armas.lanzagranadas:
                 textura.SpriteProvider = ObtenerSprite(marcaFuerte);
-                textura.Entity.Transform.Scale = Vector3.One * 0.2f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.03f;
                 textura.Color = new Color(60, 60, 60);
                 break;
         }
@@ -62,32 +62,32 @@ public class ElementoMarca : StartupScript
         {
             case Enemigos.meléLigero:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = Vector3.One * 0.8f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.15f;
                 textura.Color = new Color(100, 0, 0, 200);
                 break;
             case Enemigos.meléMediano:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = Vector3.One * 0.8f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.15f;
                 textura.Color = new Color(100, 0, 0, 200);
                 break;
             case Enemigos.meléPesado:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = Vector3.One * 1.4f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.25f;
                 textura.Color = new Color(100, 0, 0, 200);
                 break;
             case Enemigos.rangoLigero:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = Vector3.One * 0.6f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.1f;
                 textura.Color = new Color(0, 100, 0, 200);
                 break;
             case Enemigos.rangoMediano:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = Vector3.One * 1.0f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.2f;
                 textura.Color = new Color(100, 0, 0, 200);
                 break;
             case Enemigos.rangoPesado:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = Vector3.One * 1.2f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.25f;
                 textura.Color = new Color(0, 100, 0, 200);
                 break;
             case Enemigos.especialLigero:
@@ -97,7 +97,7 @@ public class ElementoMarca : StartupScript
                 break;
             case Enemigos.especialPesado:
                 textura.SpriteProvider = ObtenerSprite(marcaFuerte);
-                textura.Entity.Transform.Scale = Vector3.One * 0.6f;
+                textura.Entity.Transform.Scale = Vector3.One * 0.15f;
                 textura.Color = new Color(0, 0, 100, 200);
                 break;
         }
