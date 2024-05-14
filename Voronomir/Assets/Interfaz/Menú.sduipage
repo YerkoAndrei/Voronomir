@@ -23,7 +23,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -43,7 +43,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -64,7 +64,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -135,7 +135,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -201,7 +201,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -222,7 +222,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -243,7 +243,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -264,12 +264,27 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: 89dd1d77-9b63-40fd-ad37-22001e600946
                 InstanceId: 0564924a-584e-47d3-a8e9-d716c46f7bd8
+        -   UIElement: !ImageElement
+                Id: 08238ab2-8fec-4880-8481-5646b206bbfc
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 30.0
+                Height: 30.0
+                Margin: {Left: 680.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgDeco 1
+                Source: !SpriteFromTexture
+                    Texture: a9207b0c-377d-4627-83a9-2a966c0b095e:Texturas/Interfaz/Estrella
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !TextBlock
                 Id: 08f5b9f2-7492-46e1-a530-adeaf270016f
                 DependencyProperties: {}
@@ -304,7 +319,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -324,7 +339,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -345,7 +360,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -385,7 +400,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -406,7 +421,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -426,7 +441,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -446,7 +461,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -564,7 +579,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -584,7 +599,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color*: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -604,7 +619,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -625,7 +640,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -645,7 +660,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -666,7 +681,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -687,7 +702,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -705,7 +720,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -748,7 +763,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -790,7 +805,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -810,7 +825,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -831,7 +846,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -849,7 +864,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -869,7 +884,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -910,7 +925,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -955,7 +970,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -976,7 +991,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -997,7 +1012,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1018,7 +1033,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1062,7 +1077,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1107,7 +1122,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1127,7 +1142,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1175,7 +1190,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1232,7 +1247,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1253,7 +1268,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1274,12 +1289,27 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: 6cd3f14d-e98f-41b4-b9b2-391c31380d0c
                 InstanceId: 0564924a-584e-47d3-a8e9-d716c46f7bd8
+        -   UIElement: !ImageElement
+                Id: 2adb28d9-d5c6-4902-ae3f-fa68b7298652
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 30.0
+                Height: 30.0
+                Margin: {Right: 680.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgDeco 0
+                Source: !SpriteFromTexture
+                    Texture: a9207b0c-377d-4627-83a9-2a966c0b095e:Texturas/Interfaz/Estrella
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !ImageElement
                 Id: 2b8147fa-0db4-4e1b-9c75-7ff55317315e
                 DependencyProperties: {}
@@ -1295,7 +1325,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1315,7 +1345,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1351,7 +1381,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1372,7 +1402,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1393,7 +1423,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1414,12 +1444,27 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: 4a830997-afdb-4654-98c3-1a52fcd03abd
                 InstanceId: 0564924a-584e-47d3-a8e9-d716c46f7bd8
+        -   UIElement: !ImageElement
+                Id: 3090f4ac-930a-47e9-b740-5e4a2897745d
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 30.0
+                Height: 30.0
+                Margin: {Left: 680.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgDeco 1
+                Source: !SpriteFromTexture
+                    Texture: a9207b0c-377d-4627-83a9-2a966c0b095e:Texturas/Interfaz/Estrella
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !ImageElement
                 Id: 3108f2f2-0923-46da-9fe3-a18430d91992
                 DependencyProperties: {}
@@ -1435,7 +1480,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1455,7 +1500,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1476,7 +1521,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1538,7 +1583,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1626,7 +1671,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1665,7 +1710,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1809,7 +1854,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -1830,7 +1875,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -1871,7 +1916,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2011,7 +2056,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2032,7 +2077,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2085,7 +2130,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2133,7 +2178,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2209,7 +2254,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2293,7 +2338,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2366,7 +2411,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2400,7 +2445,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2420,7 +2465,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2440,7 +2485,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2481,7 +2526,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2502,7 +2547,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2557,7 +2602,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2577,7 +2622,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color*: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2597,7 +2642,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2618,7 +2663,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2654,7 +2699,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2674,7 +2719,7 @@ Hierarchy:
                 Text: Voronomir
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 110.0
-                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextColor: {R: 60, G: 9, B: 9, A: 255}
                 TextAlignment: Center
         -   UIElement: !ImageElement
                 Id: 5011cc4b-acdd-4c86-b634-73894fbf9f2f
@@ -2690,7 +2735,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2710,7 +2755,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2730,7 +2775,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2811,7 +2856,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2832,7 +2877,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2904,7 +2949,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -2969,7 +3014,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -2990,7 +3035,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3011,7 +3056,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3032,12 +3077,27 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
                 BasePartId: a29521e8-6f92-4f9f-8eba-01caf0bc8d53
                 InstanceId: f0afc2dc-efd6-4327-b0b4-5e30d05f3bc2
+        -   UIElement: !ImageElement
+                Id: 59cf418b-2836-4282-b1b0-1be493263e22
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 30.0
+                Height: 30.0
+                Margin: {Right: 680.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgDeco 0
+                Source: !SpriteFromTexture
+                    Texture: a9207b0c-377d-4627-83a9-2a966c0b095e:Texturas/Interfaz/Estrella
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !TextBlock
                 Id: 5b145351-ef56-4fa9-be1a-5745559712f4
                 DependencyProperties:
@@ -3073,7 +3133,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3173,7 +3233,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3194,7 +3254,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3325,7 +3385,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3346,7 +3406,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3366,7 +3426,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3387,7 +3447,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3408,7 +3468,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3429,7 +3489,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3450,7 +3510,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3495,7 +3555,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3516,7 +3576,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3537,7 +3597,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3558,7 +3618,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3578,7 +3638,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3598,7 +3658,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3616,7 +3676,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3637,7 +3697,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3656,7 +3716,7 @@ Hierarchy:
                 Text*: Demo
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
-                TextColor*: {R: 240, G: 240, B: 160, A: 255}
+                TextColor*: {R: 240, G: 240, B: 200, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -3676,7 +3736,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3717,7 +3777,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3738,7 +3798,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3758,7 +3818,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3779,7 +3839,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3817,7 +3877,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3874,7 +3934,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3895,7 +3955,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3916,6 +3976,8 @@ Hierarchy:
                     288bb3cba41217ca70828c1288cd1352: !Button ref!! bc3145a9-ab65-4078-99d7-c3414dea6a84
                     4ba0ac30b211286f5dbb3efee011a5e8: !ImageElement ref!! ee9a91ce-0386-4968-a10d-1e716b1ca9ed
                     500555a6cf47edf712d2d76bd9bd5974: !TextBlock ref!! e1d91033-7e7c-4e24-9a10-4d38e12031bf
+                    10f8107905bd2cb6c79c9cc404193994: !ImageElement ref!! 59cf418b-2836-4282-b1b0-1be493263e22
+                    fa4d323e97b2b095183aca323c960d91: !ImageElement ref!! 08238ab2-8fec-4880-8481-5646b206bbfc
                     3df6f2ec72b555713584bc9bc41fd7a4: !Grid ref!! 5dc69f78-3b0f-4d6c-833b-50a32f93d737
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -3956,7 +4018,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -3974,7 +4036,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4015,7 +4077,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4050,7 +4112,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4071,7 +4133,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -4089,7 +4151,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4110,7 +4172,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4130,7 +4192,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4151,7 +4213,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4198,7 +4260,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4271,7 +4333,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4305,7 +4367,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4326,7 +4388,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -4382,7 +4444,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color*: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -4467,7 +4529,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4487,7 +4549,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4507,7 +4569,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4528,7 +4590,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -4571,7 +4633,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4591,7 +4653,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4611,7 +4673,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4632,7 +4694,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4653,7 +4715,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4673,7 +4735,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4750,7 +4812,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4786,7 +4848,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4807,7 +4869,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4828,7 +4890,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -4863,7 +4925,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5009,7 +5071,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5072,7 +5134,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5150,7 +5212,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5170,7 +5232,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5191,7 +5253,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5211,7 +5273,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5231,7 +5293,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5270,7 +5332,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5316,7 +5378,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5336,7 +5398,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5369,7 +5431,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5390,7 +5452,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5429,7 +5491,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -5449,7 +5511,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5470,7 +5532,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5491,7 +5553,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5535,7 +5597,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5556,7 +5618,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5577,7 +5639,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5614,7 +5676,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5702,7 +5764,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5740,7 +5802,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5760,7 +5822,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5781,7 +5843,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5802,7 +5864,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5895,7 +5957,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -5915,7 +5977,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5935,7 +5997,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -5955,7 +6017,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6021,7 +6083,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6042,7 +6104,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6101,7 +6163,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -6198,7 +6260,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6258,7 +6320,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6279,7 +6341,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6300,7 +6362,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6321,7 +6383,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6342,7 +6404,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6378,7 +6440,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6506,7 +6568,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -6527,7 +6589,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6570,7 +6632,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6623,7 +6685,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6644,7 +6706,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6665,7 +6727,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6755,7 +6817,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6775,7 +6837,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6796,7 +6858,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6816,7 +6878,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6857,7 +6919,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -6919,7 +6981,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -6966,7 +7028,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7023,7 +7085,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7045,6 +7107,8 @@ Hierarchy:
                     288bb3cba41217ca70828c1288cd1352: !Button ref!! c2472d65-a03d-4975-9297-d09e68497568
                     4ba0ac30b211286f5dbb3efee011a5e8: !ImageElement ref!! 43373afe-6d05-4d6c-aed0-848162b1e804
                     500555a6cf47edf712d2d76bd9bd5974: !TextBlock ref!! 69dccf24-6995-46ec-9262-a7cc371d83a7
+                    718f853673df06b4415f15465e6e2959: !ImageElement ref!! 2adb28d9-d5c6-4902-ae3f-fa68b7298652
+                    96be9c76c34bf23bbdf8b45f67a477ad: !ImageElement ref!! 3090f4ac-930a-47e9-b740-5e4a2897745d
                     3df6f2ec72b555713584bc9bc41fd7a4: !Grid ref!! 63672359-8879-4f36-94e3-6c5ee9e1aa11
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -7064,7 +7128,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7085,7 +7149,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7180,7 +7244,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7200,7 +7264,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7220,7 +7284,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7263,7 +7327,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -7306,7 +7370,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -7327,7 +7391,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7347,7 +7411,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7368,7 +7432,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7522,7 +7586,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7562,7 +7626,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7597,7 +7661,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -7642,7 +7706,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7662,7 +7726,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7711,7 +7775,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7732,7 +7796,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -7782,7 +7846,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7842,7 +7906,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7908,7 +7972,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7928,7 +7992,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7948,7 +8012,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7969,7 +8033,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -7990,7 +8054,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8010,7 +8074,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8048,7 +8112,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -8068,7 +8132,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8115,7 +8179,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8135,7 +8199,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8183,7 +8247,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8203,7 +8267,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8224,7 +8288,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8244,7 +8308,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -8265,7 +8329,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -8338,7 +8402,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8357,7 +8421,7 @@ Hierarchy:
                 Text*: Jugar
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
-                TextColor*: {R: 240, G: 240, B: 160, A: 255}
+                TextColor*: {R: 240, G: 240, B: 200, A: 255}
                 TextAlignment: Center
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -8378,7 +8442,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8398,7 +8462,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -8419,7 +8483,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8440,7 +8504,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8740,7 +8804,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8761,7 +8825,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8782,7 +8846,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8800,7 +8864,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -8849,7 +8913,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8887,7 +8951,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -8922,7 +8986,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8940,7 +9004,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8958,7 +9022,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -8992,7 +9056,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -9030,7 +9094,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color*: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -9070,7 +9134,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -9091,7 +9155,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -9157,7 +9221,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -9177,7 +9241,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -9212,7 +9276,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
@@ -9233,7 +9297,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
@@ -9347,7 +9411,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"

@@ -22,7 +22,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 100, G: 19, B: 19, A: 255}
+                Color: {R: 100, G: 0, B: 9, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: 0ed75d3a-3998-4f34-8425-0d2145ff3725
@@ -39,7 +39,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: 208d5d4d-5916-4a83-96ce-3ed0a232eecc
@@ -55,7 +55,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
         -   UIElement: !Button
                 Id: 29e403c2-1f00-4214-ba69-7d3981ebbbe5
@@ -82,7 +82,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: 4b011e5c-668b-427a-b756-2cc9bc8b6832
@@ -98,7 +98,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: 8b7dc299-107b-456e-8e58-4adf0cd3702d
@@ -115,7 +115,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: 9956b817-dc14-496c-8f6d-6d3a845a3940
@@ -132,7 +132,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: a29521e8-6f92-4f9f-8eba-01caf0bc8d53
@@ -149,7 +149,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: b05a968b-04bb-4761-8bec-8ad409415f3f
@@ -166,7 +166,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 200, G: 200, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 99, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: b0fd12cd-cbfb-4999-bc52-027a5a0a41f5
@@ -182,7 +182,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
         -   UIElement: !Grid
                 Id: b97cce6f-c671-4e4c-afde-a556a2be51f3
@@ -216,7 +216,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 7a3984b5-a0ba-4432-bb66-e27e66dcea3f:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 40, G: 0, B: 0, A: 255}
+                Color: {R: 40, G: 0, B: 5, A: 255}
                 StretchType: Fill
         -   UIElement: !TextBlock
                 Id: d55d9875-b47c-4938-8415-98e65702c058
