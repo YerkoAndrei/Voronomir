@@ -162,6 +162,15 @@ public class InterfazJuego : SyncScript
         imgDecoE.Visibility = Visibility.Hidden;
         txtFinalE.Visibility = Visibility.Hidden;
 
+        // Campo Visión
+
+        // Mira
+        var colorMira = SistemaMemoria.ObtenerConfiguración(Configuraciones.colorMira).Split(',');
+        var r = float.Parse(colorMira[0]) / 255;
+        var g = float.Parse(colorMira[1]) / 255;
+        var b = float.Parse(colorMira[2]) / 255;
+        ConfigurarMira(new Color(r, g, b));
+
         // Datos
         panelDatos.Visibility = Visibility.Hidden;
         if (bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.datos)))
@@ -213,11 +222,6 @@ public class InterfazJuego : SyncScript
         {
             BloquearInterfaz(true);
             panelPausa.Visibility = Visibility.Hidden;
-
-            if (bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.datos)))
-                panelDatos.Visibility = Visibility.Visible;
-            else
-                panelDatos.Visibility = Visibility.Hidden;
         }
         else
         {
@@ -259,6 +263,23 @@ public class InterfazJuego : SyncScript
         {
             animando = false;
         });
+    }
+
+    public void ConfigurarMira(Color color)
+    {
+        miraEspada.Color = color;
+        miraEscopeta.Color = color;
+        miraMetralleta.Color = color;
+        miraRifle.Color = color;
+        miraLanzagranadas.Color = color;
+    }
+
+    public void ConfigurarDatos(bool activo)
+    {
+        if (activo)
+            panelDatos.Visibility = Visibility.Visible;
+        else
+            panelDatos.Visibility = Visibility.Hidden;
     }
 
     private void EnClicSalir()

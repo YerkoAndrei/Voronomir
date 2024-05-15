@@ -243,4 +243,9 @@ public class ControladorMovimiento : StartupScript
         else
             sensibilidad = sensibilidadBase;
     }
+
+    public void CambiarSensiblidadBase(float _sensibilidad)
+    {
+        sensibilidad = _sensibilidad;
+    }
 }

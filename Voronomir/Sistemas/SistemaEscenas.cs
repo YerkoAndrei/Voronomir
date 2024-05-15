@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Globalization;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Core.Serialization;
 using Stride.Engine;
@@ -47,8 +48,8 @@ public class SistemaEscenas : AsyncScript
         var resolución = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Split('x');
         var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
 
-        var ancho = int.Parse(resolución[0]);
-        var alto = int.Parse(resolución[1]);
+        var ancho = int.Parse(resolución[0], CultureInfo.InvariantCulture);
+        var alto = int.Parse(resolución[1], CultureInfo.InvariantCulture);
         CambiarPantalla(pantallaCompleta, ancho, alto);
 
         // Predeterminado

@@ -301,6 +301,11 @@ public class InterfazOpciones : StartupScript
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.sensibilidad, slider.Value.ToString("n2", CultureInfo.InvariantCulture));
         txtSensibilidadActual.Text = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad), CultureInfo.InvariantCulture).ToString("n2", SistemaTraducción.Cultura);
+
+        // Configuración dinámica
+        var movimiento = Entity.Scene.Entities.Where(o => o.Get<ControladorMovimiento>() != null).FirstOrDefault();
+        if (movimiento != null)
+            movimiento.Get<ControladorMovimiento>().CambiarSensiblidadBase(slider.Value);
     }
 
     private void ConfigurarCampoVisión(object sender, RoutedEventArgs e)
@@ -311,6 +316,11 @@ public class InterfazOpciones : StartupScript
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.campoVisión, slider.Value.ToString("n0", CultureInfo.InvariantCulture));
         txtCampoVisiónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión);
+
+        // Configuración dinámica
+        var jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault();
+        if (jugador != null)
+            jugador.Get<ControladorJugador>().ConfigurarCampoVisión((int)slider.Value);
     }
 
     private void EnClicDatos(bool activo)
@@ -320,6 +330,11 @@ public class InterfazOpciones : StartupScript
 
         SistemaMemoria.GuardarConfiguración(Configuraciones.datos, activo.ToString());
         BloquearDatos(activo);
+
+        // Configuración dinámica
+        var interfaz = Entity.Scene.Entities.Where(o => o.Get<InterfazJuego>() != null).FirstOrDefault();
+        if (interfaz != null)
+            interfaz.Get<InterfazJuego>().ConfigurarDatos(activo);
     }
 
     private void ConfigurarColorMiraR(object sender, RoutedEventArgs e)
@@ -374,6 +389,11 @@ public class InterfazOpciones : StartupScript
         var g = float.Parse(colorMira[1]) / 255;
         var b = float.Parse(colorMira[2]) / 255;
         imgColorMira.Color = new Color(r, g, b);
+
+        // Configuración dinámica
+        var interfaz = Entity.Scene.Entities.Where(o => o.Get<InterfazJuego>() != null).FirstOrDefault();
+        if (interfaz != null)
+            interfaz.Get<InterfazJuego>().ConfigurarMira(new Color(r, g, b));
     }
 
     private void EnClicGráficos(NivelesConfiguración nivel)
@@ -484,8 +504,8 @@ public class InterfazOpciones : StartupScript
     {
         // Resolución
         var resolución = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Split('x');
-        var ancho = int.Parse(resolución[0]);
-        var alto = int.Parse(resolución[1]);
+        var ancho = int.Parse(resolución[0], CultureInfo.InvariantCulture);
+        var alto = int.Parse(resolución[1], CultureInfo.InvariantCulture);
 
         SistemaEscenas.CambiarPantalla(pantallaCompleta, ancho, alto);
     }

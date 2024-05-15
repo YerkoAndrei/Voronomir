@@ -76,9 +76,6 @@ public class ControladorArmas : StartupScript
         tiempoAtascamientoMetralleta = 3f;
         tempoMetralleta = tiempoMaxMetralleta;
 
-        // Campo visión
-        cámara.VerticalFieldOfView = int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión), CultureInfo.InvariantCulture);
-
         // Filtros disparos
         colisionesDisparo = CollisionFilterGroupFlags.StaticFilter | 
                             CollisionFilterGroupFlags.KinematicFilter | 

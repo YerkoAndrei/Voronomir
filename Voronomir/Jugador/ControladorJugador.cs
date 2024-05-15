@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Linq;
 using System.Threading;
+using System.Globalization;
 using Stride.Core.Mathematics;
 using Stride.Physics;
 using Stride.Engine;
@@ -56,6 +57,9 @@ public class ControladorJugador : SyncScript, IDañable
 
         llaveAzul = false;
         llaveRoja = false;
+
+        // Campo visión
+        ConfigurarCampoVisión(int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión), CultureInfo.InvariantCulture));
     }
 
     public override void Update()
@@ -245,6 +249,11 @@ public class ControladorJugador : SyncScript, IDañable
              default:
                 return false;
         }
+    }
+
+    public void ConfigurarCampoVisión(int campoVisión)
+    {
+        cámara.VerticalFieldOfView = campoVisión;
     }
 
     public void VibrarCámara(float fuerza, int iteraciones)

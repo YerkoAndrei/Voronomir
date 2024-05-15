@@ -2092,7 +2092,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: SliderColorMiraB
                 Value: 1.0
-                Maximum: 255.0
+                Maximum: 256.0
                 Step: 1.0
                 TrackBackgroundImage: !SpriteFromTexture
                     Texture: "41a626cf-5002-40ad-b98b-7f2d038bf279:Texturas/Interfaz/Slider/Vacío"
@@ -4105,7 +4105,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: SliderColorMiraG
                 Value: 1.0
-                Maximum: 255.0
+                Maximum: 256.0
                 Step: 1.0
                 TrackBackgroundImage: !SpriteFromTexture
                     Texture: "41a626cf-5002-40ad-b98b-7f2d038bf279:Texturas/Interfaz/Slider/Vacío"
@@ -7786,7 +7786,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: SliderColorMiraR
                 Value: 1.0
-                Maximum: 255.0
+                Maximum: 256.0
                 Step: 1.0
                 TrackBackgroundImage: !SpriteFromTexture
                     Texture: "41a626cf-5002-40ad-b98b-7f2d038bf279:Texturas/Interfaz/Slider/Vacío"
