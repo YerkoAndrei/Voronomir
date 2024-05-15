@@ -721,6 +721,7 @@ Hierarchy:
                         Name: null
                         Projection: Perspective
                         VerticalFieldOfView: 90.0
+                        NearClipPlane: 0.05
                         AspectRatio: 1.777778
                         Slot: 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
         -   Entity:
