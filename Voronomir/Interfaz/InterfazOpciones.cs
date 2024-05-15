@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Globalization;
+using Stride.Core.Mathematics;
 using Stride.UI;
 using Stride.Engine;
 using Stride.UI.Controls;
@@ -24,6 +25,11 @@ public class InterfazOpciones : StartupScript
     private Grid pestañaGráficos;
     private Grid pestañaSonidos;
     private Grid pestañaJuego;
+
+    private ImageElement imgColorMira;
+    private TextBlock txtRActual;
+    private TextBlock txtGActual;
+    private TextBlock txtBActual;
 
     private bool animando;
 
@@ -88,7 +94,7 @@ public class InterfazOpciones : StartupScript
 
         txtCampoVisiónActual = página.FindVisualChildOfType<TextBlock>("txtCampoVisiónActual");
         txtCampoVisiónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión);
-        
+
         resoluciones = página.FindVisualChildOfType<Grid>("ListaResoluciones");
         resoluciones.Visibility = Visibility.Hidden;
 
@@ -128,6 +134,19 @@ public class InterfazOpciones : StartupScript
                 break;
         }
 
+        //Mira
+        imgColorMira = página.FindVisualChildOfType<ImageElement>("imgMira");
+
+        txtRActual = página.FindVisualChildOfType<TextBlock>("txtRActual");
+        txtGActual = página.FindVisualChildOfType<TextBlock>("txtGActual");
+        txtBActual = página.FindVisualChildOfType<TextBlock>("txtBActual");
+
+        var colorMira = SistemaMemoria.ObtenerConfiguración(Configuraciones.colorMira).Split(',');
+        txtRActual.Text = colorMira[0];
+        txtGActual.Text = colorMira[1];
+        txtBActual.Text = colorMira[2];
+        ActualizarColorMira();
+
         // Deslizadores
         var sliderGeneral = página.FindVisualChildOfType<Slider>("SliderGeneral");
         var sliderMúsica = página.FindVisualChildOfType<Slider>("SliderMúsica");
@@ -135,17 +154,31 @@ public class InterfazOpciones : StartupScript
 
         var sliderSensibilidad = página.FindVisualChildOfType<Slider>("SliderSensibilidad");
         var sliderCampoVisión = página.FindVisualChildOfType<Slider>("SliderCampoVisión");
-        
+
+        var sliderColorMiraR = página.FindVisualChildOfType<Slider>("SliderColorMiraR");
+        var sliderColorMiraG = página.FindVisualChildOfType<Slider>("SliderColorMiraG");
+        var sliderColorMiraB = página.FindVisualChildOfType<Slider>("SliderColorMiraB");
+
+        // Valores deslizadores
         sliderGeneral.Value = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenGeneral), CultureInfo.InvariantCulture);
         sliderMúsica.Value = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenMúsica), CultureInfo.InvariantCulture);
         sliderEfectos.Value = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenEfectos), CultureInfo.InvariantCulture);
-        
+
+        sliderColorMiraR.Value = float.Parse(colorMira[0]);
+        sliderColorMiraG.Value = float.Parse(colorMira[1]);
+        sliderColorMiraB.Value = float.Parse(colorMira[2]);
+
         sliderSensibilidad.Value = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad), CultureInfo.InvariantCulture);
         sliderCampoVisión.Value = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión), CultureInfo.InvariantCulture);
 
+        // Configuración sliders
         sliderGeneral.ValueChanged += ConfigurarVolumenGeneral;
         sliderMúsica.ValueChanged += ConfigurarVolumenMúsica;
         sliderEfectos.ValueChanged += ConfigurarVolumenEfectos;
+
+        sliderColorMiraR.ValueChanged += ConfigurarColorMiraR;
+        sliderColorMiraG.ValueChanged += ConfigurarColorMiraG;
+        sliderColorMiraB.ValueChanged += ConfigurarColorMiraB;
 
         sliderSensibilidad.ValueChanged += ConfigurarSensibilidad;
         sliderCampoVisión.ValueChanged += ConfigurarCampoVisión;
@@ -286,6 +319,60 @@ public class InterfazOpciones : StartupScript
 
         SistemaMemoria.GuardarConfiguración(Configuraciones.datos, activo.ToString());
         BloquearDatos(activo);
+    }
+
+    private void ConfigurarColorMiraR(object sender, RoutedEventArgs e)
+    {
+        if (animando)
+            return;
+
+        var slider = (Slider)sender;
+        txtRActual.Text = slider.Value.ToString("000");
+
+        var colorMira = SistemaMemoria.ObtenerConfiguración(Configuraciones.colorMira).Split(',');
+        var nuevoColor = slider.Value.ToString("000") + "," + colorMira[1] + "," + colorMira[2];
+        SistemaMemoria.GuardarConfiguración(Configuraciones.colorMira, nuevoColor);
+        ActualizarColorMira();
+    }
+
+    private void ConfigurarColorMiraG(object sender, RoutedEventArgs e)
+    {
+        if (animando)
+            return;
+
+        var slider = (Slider)sender;
+        txtGActual.Text = slider.Value.ToString("000");
+
+        var colorMira = SistemaMemoria.ObtenerConfiguración(Configuraciones.colorMira).Split(',');
+        var nuevoColor = colorMira[0] + "," + slider.Value.ToString("000") + "," + colorMira[2];
+        SistemaMemoria.GuardarConfiguración(Configuraciones.colorMira, nuevoColor);
+        ActualizarColorMira();
+    }
+
+    private void ConfigurarColorMiraB(object sender, RoutedEventArgs e)
+    {
+        if (animando)
+            return;
+
+        var slider = (Slider)sender;
+        txtBActual.Text = slider.Value.ToString("000");
+
+        var colorMira = SistemaMemoria.ObtenerConfiguración(Configuraciones.colorMira).Split(',');
+        var nuevoColor = colorMira[0] + "," + colorMira[1] + "," + slider.Value.ToString("000");
+        SistemaMemoria.GuardarConfiguración(Configuraciones.colorMira, nuevoColor);
+        ActualizarColorMira();
+    }
+
+    private void ActualizarColorMira()
+    {
+        if (animando)
+            return;
+
+        var colorMira = SistemaMemoria.ObtenerConfiguración(Configuraciones.colorMira).Split(',');
+        var r = float.Parse(colorMira[0]) / 255;
+        var g = float.Parse(colorMira[1]) / 255;
+        var b = float.Parse(colorMira[2]) / 255;
+        imgColorMira.Color = new Color(r, g, b);
     }
 
     private void EnClicGráficos(NivelesConfiguración nivel)

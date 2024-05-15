@@ -7457,6 +7457,7 @@ Hierarchy:
                             "ef4c7fefb9c051e305dbb205489aaaea~txtHRTFSí": "sí"
                             030fdb8ce3aace92bc8e51a19a5fa6dd~txtHRTFNo: no
                             "ad2e966219ac77169457c99935a4337c~txtDescripciónHRTF": "descripciónHrtf"
+                            93cfb7e8fa5718d9c52b1d61b0dc0686~txtColorMira: colorMira
                     f3a22f8e1824704a6bc6e9eb03a4f8da: !UIComponent
                         Id: 6e48cc9f-2b1d-427d-bcec-8076cdc55154
                         Page: d8d2b8e8-b800-4e51-94a9-d59d5fb618bc:Interfaz/Juego

@@ -42,7 +42,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtRActual (2)
+                Name: txtGActual
                 Text: 000
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
@@ -512,7 +512,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
         -   UIElement: !Button
                 Id: 1030ab3b-8a32-4ffe-b0a0-a357127b8971
                 DependencyProperties: {}
@@ -622,9 +621,8 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: SliderColorMiraB
-                Value: 70.0
-                Minimum: 70.0
-                Maximum: 120.0
+                Value: 100.0
+                Maximum: 255.0
                 Step: 1.0
                 TrackBackgroundImage: !SpriteFromTexture
                     Texture: "41a626cf-5002-40ad-b98b-7f2d038bf279:Texturas/Interfaz/Slider/Vacío"
@@ -639,7 +637,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
         -   UIElement: !TextBlock
                 Id: 124b81c5-4f04-412c-a85b-701abb1eb82a
                 DependencyProperties:
@@ -874,7 +871,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtRActual (3)
+                Name: txtBActual
                 Text: 000
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
@@ -943,9 +940,8 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: SliderColorMiraR
-                Value: 70.0
-                Minimum: 70.0
-                Maximum: 120.0
+                Value: 100.0
+                Maximum: 255.0
                 Step: 1.0
                 TrackBackgroundImage: !SpriteFromTexture
                     Texture: "41a626cf-5002-40ad-b98b-7f2d038bf279:Texturas/Interfaz/Slider/Vacío"
@@ -960,7 +956,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
         -   UIElement: !ImageElement
                 Id: 1f4b6a14-2ed2-431d-a503-2fabd4e7c0b6
                 DependencyProperties: {}
@@ -3655,7 +3650,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
         -   UIElement: !ImageElement
                 Id: 7fe503e9-717b-42ba-93af-d71d814c2286
                 DependencyProperties: {}
@@ -3733,7 +3727,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
         -   UIElement: !Button
                 Id: 83c5de56-2345-4025-969d-d8a7ffb87b9e
                 DependencyProperties: {}
@@ -5980,7 +5973,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
         -   UIElement: !ImageElement
                 Id: d7c47fed-d1ae-4521-bebf-3e6602b3d256
                 DependencyProperties: {}
@@ -6089,9 +6081,8 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: SliderColorMiraG
-                Value: 70.0
-                Minimum: 70.0
-                Maximum: 120.0
+                Value: 255.0
+                Maximum: 255.0
                 Step: 1.0
                 TrackBackgroundImage: !SpriteFromTexture
                     Texture: "41a626cf-5002-40ad-b98b-7f2d038bf279:Texturas/Interfaz/Slider/Vacío"
@@ -6106,7 +6097,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
         -   UIElement: !Grid
                 Id: dc5b3663-0550-469c-9e43-eea0d51111e0
                 DependencyProperties: {}
@@ -7373,8 +7363,8 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 DrawLayerNumber: 2
-                Width: 800.0
-                Height: 500.0
+                Width: 1100.0
+                Height: 600.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38

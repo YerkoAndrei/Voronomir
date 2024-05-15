@@ -113,6 +113,7 @@ public static class Constantes
         hrtf,
         sensibilidad,
         campoVisión,
+        colorMira,
         datos
     }
 

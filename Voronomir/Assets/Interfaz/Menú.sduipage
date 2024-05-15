@@ -525,9 +525,8 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: SliderColorMiraR
-                Value: 70.0
-                Minimum: 70.0
-                Maximum: 120.0
+                Value: 100.0
+                Maximum: 255.0
                 Step: 1.0
                 TrackBackgroundImage: !SpriteFromTexture
                     Texture: "41a626cf-5002-40ad-b98b-7f2d038bf279:Texturas/Interfaz/Slider/Vacío"
@@ -542,7 +541,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: 1da979de-0fb0-43b4-93ca-6c1651356327
@@ -662,8 +660,8 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 DrawLayerNumber: 2
-                Width: 800.0
-                Height: 500.0
+                Width: 1100.0
+                Height: 600.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -1308,7 +1306,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtRActual (2)
+                Name: txtGActual
                 Text: 000
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
@@ -1702,7 +1700,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtRActual (3)
+                Name: txtBActual
                 Text: 000
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
@@ -1996,7 +1994,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: 100d683f-5208-4179-bb0f-ae4ac89bbe5f
@@ -2710,7 +2707,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: 7f2caa4a-c805-4991-9ddd-e4085c8230a0
@@ -4578,9 +4574,8 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: SliderColorMiraG
-                Value: 70.0
-                Minimum: 70.0
-                Maximum: 120.0
+                Value: 255.0
+                Maximum: 255.0
                 Step: 1.0
                 TrackBackgroundImage: !SpriteFromTexture
                     Texture: "41a626cf-5002-40ad-b98b-7f2d038bf279:Texturas/Interfaz/Slider/Vacío"
@@ -4595,7 +4590,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: db9bdd77-262b-460f-8e2a-6dabcbcc880d
@@ -5570,7 +5564,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: 82283e33-bb9e-4502-a379-935a22b1efeb
@@ -9329,9 +9322,8 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: SliderColorMiraB
-                Value: 70.0
-                Minimum: 70.0
-                Maximum: 120.0
+                Value: 100.0
+                Maximum: 255.0
                 Step: 1.0
                 TrackBackgroundImage: !SpriteFromTexture
                     Texture: "41a626cf-5002-40ad-b98b-7f2d038bf279:Texturas/Interfaz/Slider/Vacío"
@@ -9346,7 +9338,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: 12326798-395f-4bb6-8e2d-539864425a45
@@ -9449,7 +9440,6 @@ Hierarchy:
                 MouseOverThumbImage: !SpriteFromTexture
                     Texture: 35003da6-4786-4f76-ba85-8dfff79c0c33:Texturas/Interfaz/Slider/PalancaVista
                     Center: {X: 0.0, Y: 0.0}
-                TickOffset: 13.0
             Base:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: d784ca62-a36b-43b6-860a-1c6881b9f9b9

@@ -66,6 +66,7 @@ public class SistemaMemoria : StartupScript
             { Configuraciones.hrtf.ToString(),              true.ToString() },
             { Configuraciones.sensibilidad.ToString(),      "1" },
             { Configuraciones.campoVisión.ToString(),       "90" },
+            { Configuraciones.colorMira.ToString(),         "100,255,100" },
             { Configuraciones.datos.ToString(),             false.ToString() },
         };
     }
