@@ -34,12 +34,12 @@ public class InterfazJuego : SyncScript
     private ImageElement imgRifle;
     private ImageElement imgLanzagranadas;
 
-    private ImageElement imgLlaveAzul;
-    private ImageElement imgLlaveRoja;
+    private Grid imgLlaveAzul;
+    private Grid imgLlaveRoja;
 
-    private ImageElement imgDaño;
-    private ImageElement imgInvulnerabilidad;
-    private ImageElement imgVelocidad;
+    private Grid imgDaño;
+    private Grid imgInvulnerabilidad;
+    private Grid imgVelocidad;
 
     private UniformGrid panelDatos;
     private TextBlock txtMensaje;
@@ -99,12 +99,12 @@ public class InterfazJuego : SyncScript
         imgRifle = página.FindVisualChildOfType<ImageElement>("imgRifle");
         imgLanzagranadas = página.FindVisualChildOfType<ImageElement>("imgLanzagranadas");
 
-        imgLlaveAzul = página.FindVisualChildOfType<ImageElement>("imgLlaveAzul");
-        imgLlaveRoja = página.FindVisualChildOfType<ImageElement>("imgLlaveRoja");
+        imgLlaveAzul = página.FindVisualChildOfType<Grid>("imgLlaveAzul");
+        imgLlaveRoja = página.FindVisualChildOfType<Grid>("imgLlaveRoja");
 
-        imgDaño = página.FindVisualChildOfType<ImageElement>("imgDaño");
-        imgInvulnerabilidad = página.FindVisualChildOfType<ImageElement>("imgInvulnerabilidad");
-        imgVelocidad = página.FindVisualChildOfType<ImageElement>("imgVelocidad");
+        imgDaño = página.FindVisualChildOfType<Grid>("imgDaño");
+        imgInvulnerabilidad = página.FindVisualChildOfType<Grid>("imgInvulnerabilidad");
+        imgVelocidad = página.FindVisualChildOfType<Grid>("imgVelocidad");
 
         panelDatos = página.FindVisualChildOfType<UniformGrid>("Datos");
         txtMensaje = página.FindVisualChildOfType<TextBlock>("txtMensaje");

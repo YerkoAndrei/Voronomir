@@ -7399,8 +7399,8 @@ Hierarchy:
                         Id: ac089fc3-6539-46f3-a199-bf1b524b39f9
                         vidaCompleta: {R: 0, G: 255, B: 0, A: 255}
                         "vidaVacía": {R: 255, G: 0, B: 0, A: 255}
-                        armaNormal: {R: 255, G: 255, B: 255, A: 255}
-                        armaSeleccionada: {R: 255, G: 0, B: 0, A: 255}
+                        armaNormal: {R: 100, G: 100, B: 100, A: 100}
+                        armaSeleccionada: {R: 100, G: 0, B: 9, A: 255}
                     4f1cfdbcc9744c8b9c06d7c94fea91bb: !TransformComponent
                         Id: 3c106bf7-c2f5-4960-9a50-dcdc4555467d
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
