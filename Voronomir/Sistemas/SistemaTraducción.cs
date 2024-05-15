@@ -17,8 +17,9 @@ public class SistemaTraducción : StartupScript
     private static string jsonEspañol;
     private static string jsonInglés;
 
-    public static Idiomas idioma;
-    public static CultureInfo cultura;
+    public static Idiomas Idioma;
+    public static CultureInfo Cultura;
+
     private static Dictionary<string, string> diccionario;
 
     public UrlReference textosEspañol;
@@ -67,18 +68,18 @@ public class SistemaTraducción : StartupScript
 
     public static void CambiarIdioma(Idiomas nuevoIdioma, bool actualizar = true)
     {
-        idioma = nuevoIdioma;
-        SistemaMemoria.GuardarConfiguración(Configuraciones.idioma, idioma.ToString());
+        Idioma = nuevoIdioma;
+        SistemaMemoria.GuardarConfiguración(Configuraciones.idioma, Idioma.ToString());
 
         switch (nuevoIdioma)
         {
             default:
             case Idiomas.español:
-                cultura = CultureInfo.GetCultureInfo("es-cl");
+                Cultura = CultureInfo.GetCultureInfo("es-cl");
                 diccionario = CrearDiccionario(jsonEspañol);
                 break;
             case Idiomas.inglés:
-                cultura = CultureInfo.GetCultureInfo("en");
+                Cultura = CultureInfo.GetCultureInfo("en");
                 diccionario = CrearDiccionario(jsonInglés);
                 break;
         }

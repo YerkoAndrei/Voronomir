@@ -91,7 +91,7 @@ public static class Utilidades
 
         // Texto
         var texto = ObtenerTexto(grid);
-        var colorTexto = new Color(25, 20, 20);
+        var colorTexto = new Color(255, 255, 200);
         if (texto != null)
             colorTexto = texto.TextColor;
 

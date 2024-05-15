@@ -90,7 +90,7 @@ public class InterfazOpciones : StartupScript
         txtResoluciónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Replace("x", " x ");
 
         txtSensibilidadActual = página.FindVisualChildOfType<TextBlock>("txtSensibilidadActual");
-        txtSensibilidadActual.Text = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad)).ToString("n2");
+        txtSensibilidadActual.Text = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad), CultureInfo.InvariantCulture).ToString("n2", SistemaTraducción.Cultura);
 
         txtCampoVisiónActual = página.FindVisualChildOfType<TextBlock>("txtCampoVisiónActual");
         txtCampoVisiónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión);
@@ -250,6 +250,9 @@ public class InterfazOpciones : StartupScript
         SistemaTraducción.CambiarIdioma(idioma);
         BloquearIdioma(idioma);
         MostrarResoluciones(false);
+
+        // Configuraciones con cultura
+        txtSensibilidadActual.Text = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad), CultureInfo.InvariantCulture).ToString("n2", SistemaTraducción.Cultura);
     }
 
     private void ConfigurarVolumenGeneral(object sender, RoutedEventArgs e)
@@ -297,9 +300,7 @@ public class InterfazOpciones : StartupScript
 
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.sensibilidad, slider.Value.ToString("n2", CultureInfo.InvariantCulture));
-
-        var sensibilidadFormateada = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad), SistemaTraducción.cultura);
-        txtSensibilidadActual.Text = sensibilidadFormateada.ToString("n2");
+        txtSensibilidadActual.Text = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad), CultureInfo.InvariantCulture).ToString("n2", SistemaTraducción.Cultura);
     }
 
     private void ConfigurarCampoVisión(object sender, RoutedEventArgs e)

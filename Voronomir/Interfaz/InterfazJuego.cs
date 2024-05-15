@@ -207,6 +207,7 @@ public class InterfazJuego : SyncScript
 
         ControladorPartida.Pausar(!ControladorPartida.ObtenerActivo());
         SistemaSonidos.PausarSonidosMundo(!ControladorPartida.ObtenerActivo());
+        Opciones.Visibility = Visibility.Hidden;
 
         if (ControladorPartida.ObtenerActivo())
         {
