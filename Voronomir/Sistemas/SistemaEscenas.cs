@@ -210,6 +210,11 @@ public class SistemaEscenas : AsyncScript
             ControladorPartida.Pausar(true);
     }
 
+    public static bool ObtenerAnimando()
+    {
+        return abriendo || ocultando;
+    }
+
     public static GraphicsCompositor ObtenerGráficos(NivelesConfiguración nivel)
     {
         switch (nivel)

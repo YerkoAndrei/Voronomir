@@ -202,6 +202,9 @@ public class InterfazJuego : SyncScript
 
     private void Pausar()
     {
+        if (SistemaEscenas.ObtenerAnimando())
+            return;
+
         ControladorPartida.Pausar(!ControladorPartida.ObtenerActivo());
         SistemaSonidos.PausarSonidosMundo(!ControladorPartida.ObtenerActivo());
 
