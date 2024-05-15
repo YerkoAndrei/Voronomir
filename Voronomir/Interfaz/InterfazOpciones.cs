@@ -79,13 +79,12 @@ public class InterfazOpciones : StartupScript
         pestañaGráficos = página.FindVisualChildOfType<Grid>("Gráficos");
         pestañaSonidos = página.FindVisualChildOfType<Grid>("Sonidos");
         pestañaJuego = página.FindVisualChildOfType<Grid>("Juego");
-        EnClicPestaña("Gráficos");
 
         txtResoluciónActual = página.FindVisualChildOfType<TextBlock>("txtResoluciónActual");
         txtResoluciónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Replace("x", " x ");
 
         txtSensibilidadActual = página.FindVisualChildOfType<TextBlock>("txtSensibilidadActual");
-        txtSensibilidadActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad);
+        txtSensibilidadActual.Text = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad)).ToString("n2");
 
         txtCampoVisiónActual = página.FindVisualChildOfType<TextBlock>("txtCampoVisiónActual");
         txtCampoVisiónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión);
@@ -94,6 +93,7 @@ public class InterfazOpciones : StartupScript
         resoluciones.Visibility = Visibility.Hidden;
 
         // Carga
+        EnClicPestaña("Gráficos");
         BloquearIdioma((Idiomas)Enum.Parse(typeof(Idiomas), SistemaMemoria.ObtenerConfiguración(Configuraciones.idioma)));
         BloquearGráficos((NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
         BloquearSombras((NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.sombras)));
@@ -176,6 +176,7 @@ public class InterfazOpciones : StartupScript
         if (animando)
             return;
 
+        MostrarResoluciones(false);
         switch (pestaña)
         {
             case "Gráficos":
@@ -225,7 +226,6 @@ public class InterfazOpciones : StartupScript
 
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.volumenGeneral, slider.Value.ToString("n2", CultureInfo.InvariantCulture));
-        MostrarResoluciones(false);
         SistemaSonidos.ActualizarVolumenMúsica();
     }
 
@@ -236,7 +236,6 @@ public class InterfazOpciones : StartupScript
 
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.volumenMúsica, slider.Value.ToString("n2", CultureInfo.InvariantCulture));
-        MostrarResoluciones(false);
         SistemaSonidos.ActualizarVolumenMúsica();
     }
 
@@ -247,7 +246,6 @@ public class InterfazOpciones : StartupScript
 
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.volumenEfectos, slider.Value.ToString("n2", CultureInfo.InvariantCulture));
-        MostrarResoluciones(false);
     }
 
     private void EnClicHRTF(bool activo)
@@ -257,7 +255,6 @@ public class InterfazOpciones : StartupScript
 
         SistemaMemoria.GuardarConfiguración(Configuraciones.hrtf, activo.ToString());
         BloquearHRTF(activo);
-        MostrarResoluciones(false);
     }
 
     private void ConfigurarSensibilidad(object sender, RoutedEventArgs e)
@@ -269,8 +266,7 @@ public class InterfazOpciones : StartupScript
         SistemaMemoria.GuardarConfiguración(Configuraciones.sensibilidad, slider.Value.ToString("n2", CultureInfo.InvariantCulture));
 
         var sensibilidadFormateada = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad), SistemaTraducción.cultura);
-        txtSensibilidadActual.Text = sensibilidadFormateada.ToString();
-        MostrarResoluciones(false);
+        txtSensibilidadActual.Text = sensibilidadFormateada.ToString("n2");
     }
 
     private void ConfigurarCampoVisión(object sender, RoutedEventArgs e)
@@ -281,7 +277,6 @@ public class InterfazOpciones : StartupScript
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.campoVisión, slider.Value.ToString("n0", CultureInfo.InvariantCulture));
         txtCampoVisiónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión);
-        MostrarResoluciones(false);
     }
 
     private void EnClicDatos(bool activo)
@@ -291,7 +286,6 @@ public class InterfazOpciones : StartupScript
 
         SistemaMemoria.GuardarConfiguración(Configuraciones.datos, activo.ToString());
         BloquearDatos(activo);
-        MostrarResoluciones(false);
     }
 
     private void EnClicGráficos(NivelesConfiguración nivel)
@@ -379,9 +373,8 @@ public class InterfazOpciones : StartupScript
 
     private void ActualizarResolución(int ancho, int alto)
     {
-        // Pantalla completa
         var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
-       SistemaEscenas.CambiarPantalla(pantallaCompleta, ancho, alto);
+        SistemaEscenas.CambiarPantalla(pantallaCompleta, ancho, alto);
     }
 
     private void EnClicPantallaCompleta(bool pantallaCompleta)

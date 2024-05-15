@@ -1,7 +1,7 @@
 !Texture
-Id: a6b2d8cc-e1f7-473b-851a-aa709b7f23dd
+Id: 41a626cf-5002-40ad-b98b-7f2d038bf279
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Source: !file Oscuro.png
+Source: !file "Vacío.png"
 Type: !ColorTextureType
     ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
