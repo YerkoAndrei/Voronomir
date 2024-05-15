@@ -94,7 +94,7 @@ public class ControladorMovimiento : StartupScript
             entradas += Vector3.UnitX;
 
         // Aceleración
-        if (entradas == Vector3.Zero || detención || caminando)
+        if (entradas == Vector3.Zero || detención)
         {
             tempoAceleración = 0;
             tempoIniciación = 0;
@@ -109,7 +109,7 @@ public class ControladorMovimiento : StartupScript
             aceleración = 0;
             detención = false;
         }
-        else if (cuerpo.Collisions.Where(TocaEntornoEstáico).Count() > 1)
+        else if (caminando || cuerpo.Collisions.Where(TocaEntornoEstáico).Count() > 1)
         {
             // 2 pisos o paredes reinician velocidad
             tempoAceleración = 0;
