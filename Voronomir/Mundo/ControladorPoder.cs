@@ -84,7 +84,7 @@ public class ControladorPoder : AsyncScript, ISonidoMundo
     private async void AnimarMovimiento(Vector3 objetivo)
     {
         var inicio = modelo.Position;
-        float duración = 0.5f;
+        float duración = 0.4f;
         float tiempoLerp = 0;
         float tiempo = 0;
 

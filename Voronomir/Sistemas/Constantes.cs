@@ -37,7 +37,8 @@ public static class Constantes
     {
         nada,
         azul,
-        roja
+        roja,
+        amarilla
     }
 
     public enum Poderes

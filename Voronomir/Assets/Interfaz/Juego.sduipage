@@ -955,7 +955,7 @@ Hierarchy:
                 Text: "Н"
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 50.0
-                TextColor: {R: 40, G: 40, B: 40, A: 255}
+                TextColor: {R: 100, G: 100, B: 100, A: 255}
                 TextAlignment: Center
         -   UIElement: !Grid
                 Id: 198c1e49-7906-4106-a913-e416c0782ae0
@@ -1426,6 +1426,7 @@ Hierarchy:
                 Id: 21d6f9a8-b5f3-4b2f-ac48-2c359e518eea
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 1280.0
                 Height: 25.0
                 HorizontalAlignment: Center
                 VerticalAlignment: Top
@@ -1753,11 +1754,11 @@ Hierarchy:
                 Id: 281cd101-1667-42a9-89e4-1039a3e3a573
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 100.0
+                Width: 150.0
                 Height: 50.0
                 HorizontalAlignment: Left
                 VerticalAlignment: Bottom
-                Margin: {Left: 300.0}
+                Margin: {Left: 250.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -1765,7 +1766,8 @@ Hierarchy:
                 Children:
                     81328fb0f24d39403f787d7c481eb664: !Grid ref!! 9e61307a-01f7-4335-95b3-1f70abdb1204
                     b0b0b71d9e77897901857c5302ee71e0: !Grid ref!! 53dfdb9c-aaef-4d7e-b425-13160fbfc54b
-                Columns: 2
+                    3928a9f11548f683730e896dcf330a50: !Grid ref!! c449e0e6-dc33-4beb-b222-b7dd502140f4
+                Columns: 3
         -   UIElement: !Slider
                 Id: 281d9c65-f26b-4c0d-be4b-e0e8e66fac4b
                 DependencyProperties:
@@ -2249,7 +2251,7 @@ Hierarchy:
                 Text: "С"
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 50.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextColor: {R: 100, G: 100, B: 100, A: 255}
                 TextAlignment: Center
         -   UIElement: !TextBlock
                 Id: 3162ec8a-7ad0-4105-b491-3e760f0dccf3
@@ -2273,6 +2275,21 @@ Hierarchy:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: 521049de-6ce6-4899-8485-969bcadaf712
                 InstanceId: 17c2c491-5dbb-4145-b9c9-2b8d3f899935
+        -   UIElement: !TextBlock
+                Id: 31817ebe-2967-4bcf-b216-aeff6c2b8c78
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 50.0
+                Margin: {Left: 8.0, Top: 12.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtLlaveAmarillo
+                Text: "Ж"
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
+                TextSize: 45.0
+                TextColor: {R: 100, G: 100, B: 100, A: 255}
+                TextAlignment: Center
         -   UIElement: !ImageElement
                 Id: 32030615-a53b-47c8-a3bd-15105debe506
                 DependencyProperties: {}
@@ -2388,6 +2405,19 @@ Hierarchy:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: 4652e71a-bb49-44a9-9da7-959204952e55
                 InstanceId: 17c2c491-5dbb-4145-b9c9-2b8d3f899935
+        -   UIElement: !ImageElement
+                Id: 368c70f0-1c22-4ea8-8d67-c09ddecacb75
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgFondoAmarillo
+                Source: !SpriteFromTexture
+                    Texture: "d77187b3-5fe2-4b71-887c-458584ad6750:Texturas/Interfaz/BaseOctágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
                 Id: 36b8b71a-0777-4dc1-b4cc-85bbacdfbbba
                 DependencyProperties: {}
@@ -3206,6 +3236,7 @@ Hierarchy:
                 Id: 456bce48-7ade-4476-ade0-4a483375e395
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.9
                 Width: 200.0
                 Height: 200.0
                 Margin: {}
@@ -4779,7 +4810,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: "d77187b3-5fe2-4b71-887c-458584ad6750:Texturas/Interfaz/BaseOctágono"
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 0, G: 255, B: 255, A: 255}
+                Color: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !TextBlock
                 Id: 61f25a01-f690-4534-925a-57732bbb48a0
                 DependencyProperties:
@@ -6052,7 +6083,7 @@ Hierarchy:
                 Text: "У"
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 50.0
-                TextColor: {R: 40, G: 40, B: 40, A: 255}
+                TextColor: {R: 100, G: 100, B: 100, A: 255}
                 TextAlignment: Center
         -   UIElement: !ImageElement
                 Id: 7abd2c2f-be49-49f4-9b59-d5025ebd2711
@@ -6607,6 +6638,7 @@ Hierarchy:
                 Id: 85d08406-1342-4f61-a088-e86ee449acd8
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.9
                 Width: 200.0
                 Height: 200.0
                 Margin: {}
@@ -7634,6 +7666,7 @@ Hierarchy:
                 Id: 9cd2d46b-af16-4a8a-a534-5079740eb5eb
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.9
                 Width: 740.0
                 Height: 740.0
                 Margin: {}
@@ -7728,6 +7761,7 @@ Hierarchy:
                 Id: 9dcfa9a3-ad60-491d-bb81-359506de19ba
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.9
                 Width: 200.0
                 Height: 200.0
                 Margin: {}
@@ -7794,7 +7828,8 @@ Hierarchy:
                 InstanceId: 17c2c491-5dbb-4145-b9c9-2b8d3f899935
         -   UIElement: !Grid
                 Id: 9e61307a-01f7-4335-95b3-1f70abdb1204
-                DependencyProperties: {}
+                DependencyProperties:
+                    4425cbf9ca3319128b908a9e5c84366f~GridBase.ColumnPropertyKey: 0
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 50.0
                 Height: 50.0
@@ -8472,6 +8507,7 @@ Hierarchy:
                 Id: ad9d9f28-8a91-42d4-9074-6c62ccd28aa3
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.9
                 Width: 200.0
                 Height: 200.0
                 Margin: {}
@@ -9447,6 +9483,24 @@ Hierarchy:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
                 BasePartId: 208d5d4d-5916-4a83-96ce-3ed0a232eecc
                 InstanceId: 589cb458-d6fe-40af-b773-a4665561fe85
+        -   UIElement: !Grid
+                Id: c449e0e6-dc33-4beb-b222-b7dd502140f4
+                DependencyProperties:
+                    e6e9bdde6b652246593261f2b343d0c6~GridBase.ColumnPropertyKey: 2
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 50.0
+                Height: 50.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgLlaveAmarilla
+                Children:
+                    c05a061099ab04ac2bbfc2358a2f1c90: !ImageElement ref!! 368c70f0-1c22-4ea8-8d67-c09ddecacb75
+                    da79e0d5d82cdd9f598b6c1d46a4f62c: !TextBlock ref!! 31817ebe-2967-4bcf-b216-aeff6c2b8c78
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: c4ba272c-fbe3-4ed7-a54b-defa826b15e1
                 DependencyProperties: {}
@@ -9474,7 +9528,7 @@ Hierarchy:
                 Height: 50.0
                 HorizontalAlignment: Right
                 VerticalAlignment: Bottom
-                Margin: {Right: 300.0}
+                Margin: {Right: 250.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -9731,7 +9785,7 @@ Hierarchy:
                 Text: "С"
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 50.0
-                TextColor: {R: 40, G: 40, B: 40, A: 255}
+                TextColor: {R: 100, G: 100, B: 100, A: 255}
                 TextAlignment: Center
         -   UIElement: !ImageElement
                 Id: c8b56081-b157-4cb5-b06d-68ee64c5b8c5
@@ -10838,7 +10892,7 @@ Hierarchy:
                 Text: "К"
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 55.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextColor: {R: 100, G: 100, B: 100, A: 255}
                 TextAlignment: Center
         -   UIElement: !ImageElement
                 Id: de5398eb-3cff-4b21-bce4-6f4a561dafe3
@@ -12006,7 +12060,7 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: "d77187b3-5fe2-4b71-887c-458584ad6750:Texturas/Interfaz/BaseOctágono"
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 255, G: 255, B: 0, A: 255}
+                Color: {R: 0, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
                 Id: f74c2def-403e-4101-8bb7-4ccd6df71803
                 DependencyProperties: {}
@@ -12143,7 +12197,7 @@ Hierarchy:
                 Id: f9c55e83-016c-4bc2-9420-9cb93cdb0f34
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 300.0
+                Width: 275.0
                 Height: 50.0
                 VerticalAlignment: Bottom
                 Margin: {}

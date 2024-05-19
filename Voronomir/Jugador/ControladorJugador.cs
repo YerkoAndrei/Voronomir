@@ -33,6 +33,7 @@ public class ControladorJugador : SyncScript, IDañable
     // Laves
     private bool llaveAzul;
     private bool llaveRoja;
+    private bool llaveAmarilla;
 
     // Poderes
     private float tiempoDaño;
@@ -200,7 +201,10 @@ public class ControladorJugador : SyncScript, IDañable
                 llaveAzul = true;
                 break;
             case Llaves.roja:
-                llaveRoja= true;
+                llaveRoja = true;
+                break;
+            case Llaves.amarilla:
+                llaveAmarilla = true;
                 break;
         }
     }
@@ -215,6 +219,8 @@ public class ControladorJugador : SyncScript, IDañable
                 return llaveAzul;
             case Llaves.roja:
                 return llaveRoja;
+            case Llaves.amarilla:
+                return llaveAmarilla;
             default:
                 return false;
         }

@@ -79,9 +79,10 @@ public class ControladorLlave : AsyncScript, ISonidoMundo
             switch (llave)
             {
                 case Llaves.azul:
+                case Llaves.roja:
                     modelo.Rotation *= Quaternion.RotationY(-velocidadRotación * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
                     break;
-                case Llaves.roja:
+                case Llaves.amarilla:
                     modelo.Rotation *= Quaternion.RotationY(velocidadRotación * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
                     break;
             }
@@ -92,7 +93,7 @@ public class ControladorLlave : AsyncScript, ISonidoMundo
     private async void AnimarMovimiento(Vector3 objetivo)
     {
         var inicio = modelo.Position;
-        float duración = 0.5f;
+        float duración = 0.6f;
         float tiempoLerp = 0;
         float tiempo = 0;
 

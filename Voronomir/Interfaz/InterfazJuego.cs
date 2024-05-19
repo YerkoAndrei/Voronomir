@@ -36,6 +36,7 @@ public class InterfazJuego : SyncScript
 
     private Grid imgLlaveAzul;
     private Grid imgLlaveRoja;
+    private Grid imgLlaveAmarilla;
 
     private Grid imgDaño;
     private Grid imgInvulnerabilidad;
@@ -101,6 +102,7 @@ public class InterfazJuego : SyncScript
 
         imgLlaveAzul = página.FindVisualChildOfType<Grid>("imgLlaveAzul");
         imgLlaveRoja = página.FindVisualChildOfType<Grid>("imgLlaveRoja");
+        imgLlaveAmarilla = página.FindVisualChildOfType<Grid>("imgLlaveAmarilla");
 
         imgDaño = página.FindVisualChildOfType<Grid>("imgDaño");
         imgInvulnerabilidad = página.FindVisualChildOfType<Grid>("imgInvulnerabilidad");
@@ -381,6 +383,7 @@ public class InterfazJuego : SyncScript
     {
         imgLlaveAzul.Visibility = Visibility.Hidden;
         imgLlaveRoja.Visibility = Visibility.Hidden;
+        imgLlaveAmarilla.Visibility = Visibility.Hidden;
     }
 
     public void ActivarLlave(Llaves llave)
@@ -392,6 +395,9 @@ public class InterfazJuego : SyncScript
                 break;
             case Llaves.roja:
                 imgLlaveRoja.Visibility = Visibility.Visible;
+                break;
+            case Llaves.amarilla:
+                imgLlaveAmarilla.Visibility = Visibility.Visible;
                 break;
         }
     }

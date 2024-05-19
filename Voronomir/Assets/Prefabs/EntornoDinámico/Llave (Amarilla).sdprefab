@@ -1,98 +1,28 @@
 !PrefabAsset
-Id: 9ff047a9-a9e8-4838-af1b-5b0a91f53265
+Id: ef15af4c-6c07-4963-bc75-701eb78e548b
 SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 Hierarchy:
     RootParts:
-        - ref!! a5bbf80c-25f8-4ffa-bbdf-0a6f4f966fa9
+        - ref!! 06a65c0a-eb6d-4dc0-a206-7de7e9b25471
     Parts:
         -   Entity:
-                Id: 0f1382bf-6c40-4201-8302-929ad137e015
-                Name: Emisor
-                Components:
-                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
-                        Id: 87375ad0-27cd-45aa-935c-4ead5e08d37b
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
-                        Id: 43cc2d76-f9fc-43f2-8dcb-7bde79201514
-                        Sounds:
-                            f6ff0bc540a30aa830334fe03cf0f94f~sonido: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
-                        UseHRTF: true
-                        DirectionalFactor: 0.5
-                        Environment: Large
-        -   Folder: null
-            Entity:
-                Id: 90ffcfac-272e-49e3-a6c6-2369dd4081fd
-                Name: Modelo
-                Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 8489cd7c-e803-4c64-9421-bdefb11ac9be
-                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 98100479-7008-45fa-a57b-62ef2a318b62
-                        Model: 440cbaed-3492-4a7f-8695-02ab886f0bfe:Modelos/Entorno/PoderRapidez/Rapidez
-                        Materials: {}
-        -   Folder: null
-            Entity:
-                Id: a5bbf80c-25f8-4ffa-bbdf-0a6f4f966fa9
-                Name: Poder (Velocidad)
-                Components:
-                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
-                        Id: 41a0e868-ed87-49a1-b39a-918417405046
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 8489cd7c-e803-4c64-9421-bdefb11ac9be
-                            aab4919473b59fccd23d8c44d8f03271: ref!! 87375ad0-27cd-45aa-935c-4ead5e08d37b
-                            45dac818d5143b939458e25a152f86f6: ref!! 2d5345ca-b387-426c-a974-120660a89c29
-                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: 1245960a-d298-4c4d-b102-5833a4b4eb51
-                        CollisionGroup: SensorTrigger
-                        CanCollideWith: CharacterFilter
-                        CanSleep: true
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: true
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    d4a6cfb5e8fa7e584de806c4e1719eb6: !Voronomir.ControladorPoder,Voronomir.Proyecto
-                        Id: 547e1e13-cc56-48b4-929e-a92fe8d9e2ef
-                        poder: velocidad
-                        modelo: ref!! 8489cd7c-e803-4c64-9421-bdefb11ac9be
-                        "partículas": ref!! 7ebe85fa-d8c2-496e-9449-fa4ed3e9790e
-                        emisor: ref!! 43cc2d76-f9fc-43f2-8dcb-7bde79201514
-        -   Entity:
-                Id: e89b2c58-aca5-4656-9781-fa49ceb00a2b
+                Id: 065b1661-ac2e-4926-a264-3dea81b8af3d
                 Name: "Partículas"
                 Components:
                     ab5f0ff33be84be4576ecc9600f312a1: !TransformComponent
-                        Id: 2d5345ca-b387-426c-a974-120660a89c29
+                        Id: cf366b5f-3545-4afe-9f35-720129e04f10
                         Position: {X: 0.0, Y: 0.2, Z: 0.0}
                         Rotation: {X: -4.371139E-08, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.2, Y: 0.2, Z: 0.2}
                         Children: {}
                     e7b18cdc52fd5dbf42146476aa7acdb5: !ParticleSystemComponent
-                        Id: 7ebe85fa-d8c2-496e-9449-fa4ed3e9790e
+                        Id: 6275d304-8e24-4a3c-ac38-a093755a9889
                         Enabled: false
                         Control:
                             ResetSeconds: 5.0
                             Control: Play
-                        Color: {R: 0.0, G: 1.0, B: 1.0, A: 0.39215687}
+                        Color: {R: 1.0, G: 1.0, B: 0.0, A: 0.39215687}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
@@ -216,3 +146,73 @@ Hierarchy:
                                             SamplerOptional: null
                                             SeedOffset: 0
                         RenderGroup: Group1
+        -   Folder: null
+            Entity:
+                Id: 06a65c0a-eb6d-4dc0-a206-7de7e9b25471
+                Name: Llave (Amarilla)
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 4438ce7e-4785-4cf0-9f24-0a85cb80e275
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! f59d6a25-47fb-4ec0-b6b7-90065380a320
+                            432041765612fbbfbdb21e8b8acb47db: ref!! b0330817-96c3-48af-8b95-498ed430243e
+                            8d9440d5c9dc5a49f7d777c174827ff6: ref!! cf366b5f-3545-4afe-9f35-720129e04f10
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 435fad87-1c71-45ef-bec8-478fd56b3378
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    e77a1d51920c245d1c754c99f0fa0c30: !Voronomir.ControladorLlave,Voronomir.Proyecto
+                        Id: a3dd1be7-f6e0-435b-9903-399a4bfc16d9
+                        llave: amarilla
+                        modelo: ref!! f59d6a25-47fb-4ec0-b6b7-90065380a320
+                        "partículas": ref!! 6275d304-8e24-4a3c-ac38-a093755a9889
+                        emisor: ref!! a428a1fb-c53c-4d99-a2a7-b686a08fab43
+        -   Entity:
+                Id: 235db80c-513d-4dc7-baba-46244842fbb7
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: f59d6a25-47fb-4ec0-b6b7-90065380a320
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: dfa7274a-dca4-4d74-8cb5-f5dbe44616a6
+                        Model: 5b896984-0486-4a70-abf8-1a52f64f29a7:Modelos/Entorno/Llave/Llave
+                        Materials:
+                            29052f4076ada5a695dba44b47be1ac7~0: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/LlaveAmarilla
+        -   Entity:
+                Id: 29fad8a6-04fc-4a7d-8894-ba55137e35c5
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: b0330817-96c3-48af-8b95-498ed430243e
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: a428a1fb-c53c-4d99-a2a7-b686a08fab43
+                        Sounds:
+                            f6ff0bc540a30aa830334fe03cf0f94f~sonido: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large

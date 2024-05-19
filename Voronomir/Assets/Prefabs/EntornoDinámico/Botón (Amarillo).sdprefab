@@ -1,54 +1,39 @@
 !PrefabAsset
-Id: 73f16069-e6ab-4eae-a431-2bbd98bb2fe6
+Id: 4f93362e-7333-4a66-aedd-cac3999f99c0
 SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 Hierarchy:
     RootParts:
-        - ref!! ac76f714-74d1-46fa-9972-1b87615dc7d7
+        - ref!! 63fdb236-87e8-4777-b828-fecb4efc1f27
     Parts:
         -   Entity:
-                Id: 233c6a74-4ed3-4f45-9b13-717901d3fe86
+                Id: 4e85a020-d74f-472b-a553-45341676e4d9
                 Name: Base
                 Components:
                     fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: 8bc31e37-0e62-491a-8b14-2c7bc4ff0819
+                        Id: e600625b-c777-4872-8199-ed0b7d2d031c
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 1906c2bd-0a4f-429f-9bef-f0db482b8843
+                        Id: 8789e2e2-3699-4fc8-bcc7-c0bd1a4221af
                         Model: "afa430e3-cc52-406b-afb3-f5d65198d0f8:Modelos/Entorno/Botón/Base"
                         Materials: {}
         -   Entity:
-                Id: a95bdd9a-d4b5-4794-93a1-c91229340c52
-                Name: Modelo
-                Components:
-                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
-                        Id: dda7771b-323a-4aab-a611-2e9e29fa93b4
-                        Position: {X: 0.0, Y: 0.3, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
-                        Id: 1f2b11ae-badb-4ac6-8c7d-5d24ca222eb2
-                        Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
-                        Materials:
-                            d2b19c308a18a23717508b2aeb6c19bb~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
-        -   Entity:
-                Id: ac76f714-74d1-46fa-9972-1b87615dc7d7
-                Name: "Botón (Rojo)"
+                Id: 63fdb236-87e8-4777-b828-fecb4efc1f27
+                Name: "Botón (Amarillo)"
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
-                        Id: c66fea70-7ac5-4516-9f31-ca6d689fd643
+                        Id: 1955b6b1-c712-47e4-88e5-a495e31fc9ac
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            3788e322f260de9e64a1e85455890478: ref!! 8bc31e37-0e62-491a-8b14-2c7bc4ff0819
-                            aae55b7d8184320bcf68acab7c4a3f21: ref!! dda7771b-323a-4aab-a611-2e9e29fa93b4
+                            3788e322f260de9e64a1e85455890478: ref!! e600625b-c777-4872-8199-ed0b7d2d031c
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! a50474b5-bdd8-4530-a15e-b8722118066f
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
-                        Id: 16bdf170-c9c0-49d0-af3e-f8e47ee73acf
+                        Id: 34ff87e6-99f8-4a12-98c7-c62a425451d4
                         CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter, CharacterFilter
                         CanSleep: true
@@ -66,7 +51,22 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     426564b1b9ac19a951abe600bc6e52b1: !Voronomir.ControladorBot%25C3%25B3n,Voronomir.Proyecto
-                        Id: 019bc280-9606-4fa5-b75c-b0861248c505
-                        llave: roja
+                        Id: 89349636-8fe5-4305-a100-88f5932e7b5c
+                        llave: amarilla
                         activables: {}
-                        modelo: ref!! dda7771b-323a-4aab-a611-2e9e29fa93b4
+                        modelo: ref!! a50474b5-bdd8-4530-a15e-b8722118066f
+        -   Entity:
+                Id: 7abdcfa0-cf1c-4a21-8279-5986c982b2e6
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: a50474b5-bdd8-4530-a15e-b8722118066f
+                        Position: {X: 0.0, Y: 0.3, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 33504be7-5b57-407e-9026-a63dc5041b81
+                        Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
+                        Materials:
+                            d2b19c308a18a23717508b2aeb6c19bb~0: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/LlaveAmarilla
