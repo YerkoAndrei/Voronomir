@@ -23,6 +23,8 @@ public class ControladorJugador : SyncScript, IDañable
     private InterfazJuego interfaz;
 
     private CancellationTokenSource tokenVibración;
+    private CancellationTokenSource tokenCura;
+
     private Vector3 posiciónCabeza;
     private bool curando;
     private float vida;
@@ -53,6 +55,7 @@ public class ControladorJugador : SyncScript, IDañable
         armas.Iniciar(this, movimiento, cámara, interfaz);
 
         tokenVibración = new CancellationTokenSource();
+        tokenCura= new CancellationTokenSource();
         posiciónCabeza = cabeza.Position;
 
         llaveAzul = false;
@@ -93,33 +96,44 @@ public class ControladorJugador : SyncScript, IDañable
 
     private async void Curar()
     {
-        if (curando || vida >= vidaMax || !movimiento.ObtenerEnSuelo())
+        if (curando || vida >= vidaMax || !movimiento.ObtenerEnSuelo() || armas.ObtenerAnimando())
             return;
 
         curando = true;
         movimiento.Bloquear(true);
         armas.Bloquear(true);
+        armas.AnimarSalida();
         await Task.Delay(200);
 
         float vidaActual = vida;
-        float vidaCurada = vida + 10;
+        float vidaCurada = MathUtil.Clamp(vida + 15, 0, vidaMax);
 
         float duración = 1f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
+        var token = tokenVibración.Token;
         while (tiempoLerp < duración)
         {
+            // Recibir daño cancela cura
+            if (token.IsCancellationRequested)
+                break;
+
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             vida = MathUtil.Lerp(vidaActual, vidaCurada, tiempo);
-            vida = MathUtil.Clamp(vida, 0, vidaMax);
             interfaz.ActualizarVida(vida / vidaMax);
 
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
 
-        await Task.Delay(200);
+        await armas.AnimarEntrada();
+        await Task.Delay(100);
+
+        // Control errores en cambio de escena
+        if (!cuerpo.Enabled)
+            return;
+
         movimiento.Bloquear(false);
         armas.Bloquear(false);
         curando = false;
@@ -129,6 +143,9 @@ public class ControladorJugador : SyncScript, IDañable
     {
         if (!ControladorPartida.ObtenerActivo())
             return;
+
+        tokenCura.Cancel();
+        tokenCura = new CancellationTokenSource();
 
         SistemaSonidos.SonarDaño();
         movimiento.DetenerMovimiento();
@@ -155,6 +172,12 @@ public class ControladorJugador : SyncScript, IDañable
         AnimarMuerte();
         ControladorPartida.Morir();
         SistemaSonidos.SonarMorir();
+    }
+
+    public void ApagarFísicas()
+    {
+        cuerpo.SetVelocity(Vector3.Zero);
+        cuerpo.Enabled = false;
     }
 
     public float ObtenerVelocidad()

@@ -67,6 +67,7 @@ public class ControladorMovimiento : StartupScript
     {
         // Correr
         Correr();
+        Rotar();
         Mirar();
 
         // Salto
@@ -82,6 +83,9 @@ public class ControladorMovimiento : StartupScript
 
     private void Correr()
     {
+        if (bloqueo)
+            return;
+
         entradas = new Vector3();
 
         if (Input.IsKeyDown(Keys.W) || Input.IsKeyDown(Keys.Up))
@@ -136,19 +140,18 @@ public class ControladorMovimiento : StartupScript
         }
 
         // Movimiento
-        if(!bloqueo)
-        {
-            if (controlador.ObtenerPoder(Poderes.velocidad))
-                aceleración = maxVelocidad;
+        if (controlador.ObtenerPoder(Poderes.velocidad))
+            aceleración = maxVelocidad;
 
-            movimiento = Vector3.Transform(entradas, cuerpo.Orientation);
-            movimiento.Y = 0;
-            movimiento.Normalize();
+        movimiento = Vector3.Transform(entradas, cuerpo.Orientation);
+        movimiento.Y = 0;
+        movimiento.Normalize();
 
-            cuerpo.SetVelocity(movimiento * multiplicadorVelocidad * aceleración);
-        }
+        cuerpo.SetVelocity(movimiento * multiplicadorVelocidad * aceleración);
+    }
 
-        // Rotación
+    private void Rotar()
+    {
         rotaciónY -= Input.MouseDelta.X * sensibilidad;
         cuerpo.Orientation = Quaternion.RotationY(rotaciónY);
     }
@@ -204,6 +207,7 @@ public class ControladorMovimiento : StartupScript
 
     public void DetenerMovimiento()
     {
+        cuerpo.SetVelocity(Vector3.Zero);
         detención = true;
     }
 
@@ -211,6 +215,7 @@ public class ControladorMovimiento : StartupScript
     {
         detención = true;
         bloqueo = bloquear;
+        aceleración = 0;
         cuerpo.SetVelocity(Vector3.Zero);
     }
 

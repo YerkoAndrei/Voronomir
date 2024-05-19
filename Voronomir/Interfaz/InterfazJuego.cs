@@ -242,13 +242,13 @@ public class InterfazJuego : SyncScript
 
     private void EnClicReiniciar()
     {
-        ControladorCofres.ApagarFísicas();
+        ControladorPartida.ApagarFísicas();
         SistemaEscenas.CambiarEscena(ControladorPartida.ObtenerEscena());
     }
 
     private void EnClicContinuar()
     {
-        ControladorCofres.ApagarFísicas();
+        ControladorPartida.ApagarFísicas();
         SistemaEscenas.CambiarEscena(ControladorPartida.ObtenerSiguienteEscena());
     }
 

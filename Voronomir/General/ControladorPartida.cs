@@ -139,6 +139,12 @@ public class ControladorPartida : SyncScript
         SistemaSonidos.SonarSecreto();
     }
 
+    public static void ApagarFísicas()
+    {
+        ControladorCofres.ApagarFísicas();
+        jugador.ApagarFísicas();
+    }
+
     // Jugador
     public static Vector3 ObtenerPosiciónJugador()
     {

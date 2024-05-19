@@ -572,24 +572,7 @@ public class ControladorArmas : StartupScript
         if (cambiandoArma || nuevaArma == armaActual || usandoMira)
             return;
 
-        switch (armaActual)
-        {
-            case Armas.espada:
-                animadorEspada.AnimarSalidaArma();
-                break;
-            case Armas.escopeta:
-                animadorEscopeta.AnimarSalidaArma();
-                break;
-            case Armas.metralleta:
-                animadorMetralleta.AnimarSalidaArma();
-                break;
-            case Armas.rifle:
-                animadorRife.AnimarSalidaArma();
-                break;
-            case Armas.lanzagranadas:
-                animadorLanzagranadas.AnimarSalidaArma();
-                break;
-        }
+        AnimarSalida();
 
         cambiandoArma = true;
         armaAnterior = armaActual;
@@ -603,26 +586,7 @@ public class ControladorArmas : StartupScript
         partículasMetralletaIzquierda.Enabled = false;
         partículasMetralletaDerecha.Enabled = false;
 
-        switch (armaActual)
-        {
-            case Armas.espada:
-                await animadorEspada.AnimarEntradaArma();
-                break;
-            case Armas.escopeta:
-                await animadorEscopeta.AnimarEntradaArma();
-                break;
-            case Armas.metralleta:
-                partículasMetralletaIzquierda.Enabled = true;
-                partículasMetralletaDerecha.Enabled = true;
-                await animadorMetralleta.AnimarEntradaArma();
-                break;
-            case Armas.rifle:
-                await animadorRife.AnimarEntradaArma();
-                break;
-            case Armas.lanzagranadas:
-                await animadorLanzagranadas.AnimarEntradaArma();
-                break;
-        }
+        await AnimarEntrada();
 
         cambiandoArma = false;
         interfaz.CambiarMira(armaActual);
@@ -754,6 +718,57 @@ public class ControladorArmas : StartupScript
             default:
                 return 0;
         }
+    }
+
+    public void AnimarSalida()
+    {
+        switch (armaActual)
+        {
+            case Armas.espada:
+                animadorEspada.AnimarSalidaArma();
+                break;
+            case Armas.escopeta:
+                animadorEscopeta.AnimarSalidaArma();
+                break;
+            case Armas.metralleta:
+                animadorMetralleta.AnimarSalidaArma();
+                break;
+            case Armas.rifle:
+                animadorRife.AnimarSalidaArma();
+                break;
+            case Armas.lanzagranadas:
+                animadorLanzagranadas.AnimarSalidaArma();
+                break;
+        }
+    }
+
+    public async Task AnimarEntrada()
+    {
+        switch (armaActual)
+        {
+            case Armas.espada:
+                await animadorEspada.AnimarEntradaArma();
+                break;
+            case Armas.escopeta:
+                await animadorEscopeta.AnimarEntradaArma();
+                break;
+            case Armas.metralleta:
+                partículasMetralletaIzquierda.Enabled = true;
+                partículasMetralletaDerecha.Enabled = true;
+                await animadorMetralleta.AnimarEntradaArma();
+                break;
+            case Armas.rifle:
+                await animadorRife.AnimarEntradaArma();
+                break;
+            case Armas.lanzagranadas:
+                await animadorLanzagranadas.AnimarEntradaArma();
+                break;
+        }
+    }
+
+    public bool ObtenerAnimando()
+    {
+        return cambiandoArma;
     }
 
     public void Bloquear(bool bloquear)
