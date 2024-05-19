@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Graphics;
@@ -71,6 +72,11 @@ public static class Utilidades
             }
         }
         return default;
+    }
+
+    public static async Task EsperarCuadroFísica()
+    {
+        await Task.Delay(17);
     }
 
     // Interfaz

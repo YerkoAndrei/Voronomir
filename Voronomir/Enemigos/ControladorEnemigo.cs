@@ -18,6 +18,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
     public ControladorArmaRango armaRango;
     public AudioEmitterComponent emisor;
 
+    private Enemigo datos;
     private CharacterComponent cuerpo;
     private ControladorPersecusión persecutor;
     private IAnimador animador;
@@ -41,11 +42,13 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         cuerpo = Entity.Get<CharacterComponent>();
         persecutor = Entity.Get<ControladorPersecusión>();
 
-        vida = ObtenerVida();
+        datos = GenerarDatos(enemigo);
+        vida = datos.Vida;
         despierto = false;
         activo = false;
 
         emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
+        distanciaSonido = datos.DistanciaSonido;
         sonidoAtacar = emisor["atacar"];
         sonidoDaño = emisor["daño"];
         sonidoMorir = emisor["morir"];
@@ -70,49 +73,12 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
 
         // Armas
         if (armaMelé != null)
-            armaMelé.Iniciar(ObtenerDaño());
+            armaMelé.Iniciar(datos.Daño);
         else if (armaRango != null)
-            armaRango.Iniciar(ObtenerDaño(), ObtenerVelocidadProyectil(), ObtenerRotaciónProyectil(), ObtenerObjetivoProyectil(), enemigo);
+            armaRango.Iniciar(datos.Daño, datos.VelocidadProyectil, datos.RotaciónProyectil, datos.AlturaObjetivo, enemigo);
 
         // Persecución
-        switch (enemigo)
-        {
-            case Enemigos.meléLigero:
-                distanciaSonido = 10;
-                persecutor.Iniciar(this, animador, 0.1f, 7f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
-                break;
-            case Enemigos.meléMediano:
-                distanciaSonido = 15;
-                persecutor.Iniciar(this, animador, 0.1f, 4f, 5f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
-                break;
-            case Enemigos.meléPesado:
-                distanciaSonido = 20;
-                persecutor.Iniciar(this, animador, 1f, 10f, 2f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(),  false);
-                break;
-            case Enemigos.rangoLigero:
-                distanciaSonido = 10;
-                persecutor.Iniciar(this, animador, 1f, 4f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
-                break;
-            case Enemigos.rangoMediano:
-                distanciaSonido = 15;
-                persecutor.Iniciar(this, animador, 0.2f, 2f, 3f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
-                break;
-            case Enemigos.rangoPesado:
-                distanciaSonido = 20;
-                persecutor.Iniciar(this, animador, 0.2f, 8f, 6f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), false);
-                break;
-            case Enemigos.especialLigero:
-                distanciaSonido = 10;
-                persecutor.Iniciar(this, animador, 1f, 16f, 0f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), true);
-                break;
-            case Enemigos.especialMediano:
-
-                break;
-            case Enemigos.especialPesado:
-                distanciaSonido = 15;
-                persecutor.Iniciar(this, animador, 1f, 10f, 4f, ObtenerDistanciaAtaque(), ObtenerDistanciaSalto(), true);
-                break;
-        }
+        persecutor.Iniciar(this, datos, animador);
     }
 
     public void Activar()
@@ -206,8 +172,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         CrearMarcaMuerte();
         Esconder();
 
-        // 1 frame de física
-        await Task.Delay(17);
+        await EsperarCuadroFísica();
         cuerpo.Enabled = false;
 
         // PENDIENTE: efectos
@@ -256,6 +221,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
             sonidoMorir.Volume = ((distanciaSonido - distanciaJugador) / distanciaSonido) * SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
         }
     }
+
     public void PausarSonidos(bool pausa)
     {
         if (pausa)
@@ -273,198 +239,170 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
             sonidoMorir.Pause();
         }
     }
-
-    private int ObtenerVida()
+        
+    public static float ObtenerDistanciaPersecuciónTrigonométrica(Enemigos enemigo)
     {
+        // Radio = DistanciaAtaque - 1;
         switch (enemigo)
         {
-            case Enemigos.meléLigero:
-                return 80;
-            case Enemigos.meléMediano:
-                return 200;
-            case Enemigos.meléPesado:
-                return 1000;
-            case Enemigos.rangoLigero:
-                return 60;
-            case Enemigos.rangoMediano:
-                return 600;
-            case Enemigos.rangoPesado:
-                return 800;
             case Enemigos.especialLigero:
-                return 40;
-            case Enemigos.especialMediano:
-                return 0;
+                return 5;
             case Enemigos.especialPesado:
-                return 100;
+                return 3;
             default:
                 return 0;
         }
     }
 
-    private float ObtenerDaño()
+    private Enemigo GenerarDatos(Enemigos enemigo)
     {
+        var data = new Enemigo();
         switch (enemigo)
         {
             // Melé
             case Enemigos.meléLigero:
-                return 10;
+                data.Vida = 80;
+                data.Daño = 10;
+                data.Cadencia = 0.5f;
+                data.DistanciaAtaque = 1.5f;
+                data.VelocidadMovimiento = 7;
+                data.VelocidadRotación = 6;
+                data.DistanciaSonido = 10;
+                data.TiempoBusqueda = 1;
+
+                data.PreparaciónMelé = 0.25f;
+                break;
             case Enemigos.meléMediano:
-                return 25;
+                data.Vida = 200;
+                data.Daño = 25;
+                data.Cadencia = 0.8f;
+                data.DistanciaAtaque = 2.5f;
+                data.VelocidadMovimiento = 4;
+                data.VelocidadRotación = 5;
+                data.DistanciaSonido = 15;
+                data.TiempoBusqueda = 0.1f;
+
+                data.PreparaciónMelé = 0.4f;
+            break;
             case Enemigos.meléPesado:
-                return 40;
+                data.Vida = 1000;
+                data.Daño = 40;
+                data.Cadencia = 1.5f;
+                data.DistanciaAtaque = 2;
+                data.VelocidadMovimiento = 10;
+                data.VelocidadRotación = 2;
+                data.DistanciaSonido = 20;
+                data.TiempoBusqueda = 0.5f;
+
+                data.PreparaciónMelé = 0.2f;
+            break;
+
             // Rango
             case Enemigos.rangoLigero:
-                return 6;
+                data.Vida = 60;
+                data.Daño = 6;
+                data.Cadencia = 0.4f;
+                data.DistanciaAtaque = 10;
+                data.VelocidadMovimiento = 4;
+                data.VelocidadRotación = 6;
+                data.DistanciaSonido = 10;
+                data.TiempoBusqueda = 1;
+
+                data.VelocidadProyectil = 20;
+                data.AlturaObjetivo = Vector3.UnitY * 1.7f;
+                data.FuerzaSalto = 12;
+                data.DistanciaSalto = 8;
+                break;
             case Enemigos.rangoMediano:
-                return 20;
+                data.Vida = 600;
+                data.Daño = 20;
+                data.Cadencia = 2;
+                data.DistanciaAtaque = 12;
+                data.VelocidadMovimiento = 2;
+                data.VelocidadRotación = 3;
+                data.DistanciaSonido = 15;
+                data.TiempoBusqueda = 0.5f;
+
+                data.VelocidadProyectil = 10;
+                data.RotaciónProyectil = 5;
+                data.AlturaObjetivo = Vector3.UnitY * 0.6f;
+                break;
             case Enemigos.rangoPesado:
-                return 25;
+                data.Vida = 800;
+                data.Daño = 25;
+                data.Cadencia = 1;
+                data.DistanciaAtaque = 16;
+                data.VelocidadMovimiento = 8;
+                data.VelocidadRotación = 6;
+                data.DistanciaSonido = 20;
+                data.TiempoBusqueda = 0.5f;
+
+                data.VelocidadProyectil = 25;
+                data.AlturaObjetivo = Vector3.UnitY * 0.33f;
+                break;
+
             // Especial
             case Enemigos.especialLigero:
-                return 5;
+                data.Vida = 40;
+                data.Daño = 5;
+                data.Cadencia = 0.5f;
+                data.DistanciaAtaque = 6;
+                data.VelocidadMovimiento = 16;
+                data.VelocidadRotación = 0;
+                data.DistanciaSonido = 10;
+                data.TiempoBusqueda = 1;
+                data.PersecutorTrigonométrico = true;
+
+                data.VelocidadProyectil = 15;
+                data.AlturaObjetivo = Vector3.UnitY * 1.4f;
+                break;
             case Enemigos.especialMediano:
-                return 1;
+
+                break;
             case Enemigos.especialPesado:
-                return 0;
-            default:
-                return 0;
-        }
-    }
+                data.Vida = 100;
+                data.Daño = 0;
+                data.Cadencia = 0.5f;
+                data.VelocidadMovimiento = 10;
+                data.VelocidadRotación = 4;
+                data.DistanciaSonido = 15;
+                data.TiempoBusqueda = 1;
+                data.PersecutorTrigonométrico = true;
 
-    public float ObtenerDistanciaAtaque()
-    {
-        switch (enemigo)
-        {
-            case Enemigos.meléLigero:
-                return 1.5f;
-            case Enemigos.meléMediano:
-                return 2.5f;
-            case Enemigos.meléPesado:
-                return 2f;
-            case Enemigos.rangoLigero:
-                return 10f;
-            case Enemigos.rangoMediano:
-                return 12f;
-            case Enemigos.rangoPesado:
-                return 16f;
-            case Enemigos.especialLigero:
-                return 6f;
-            case Enemigos.especialMediano:
-                return 0f;
-            case Enemigos.especialPesado:
-                return 4f;
-            default:
-                return 0;
+                data.DistanciaAtaque = 4;
+                break;
         }
+        return data;
     }
+}
 
-    public float ObtenerCadenciaAtaque()
-    {
-        switch (enemigo)
-        {
-            case Enemigos.meléLigero:
-                return 0.5f;
-            case Enemigos.meléMediano:
-                return 0.8f;
-            case Enemigos.meléPesado:
-                return 1.5f;
-            case Enemigos.rangoLigero:
-                return 0.4f;
-            case Enemigos.rangoMediano:
-                return 2f;
-            case Enemigos.rangoPesado:
-                return 1f;
-            case Enemigos.especialLigero:
-                return 0.5f;
-            case Enemigos.especialMediano:
-                return 0;
-            case Enemigos.especialPesado:
-                return 0.5f;
-            default:
-                return 0;
-        }
-    }
+public class Enemigo
+{
+    public float Vida { get; set; }
+    public float Daño { get; set; }
+    public float Cadencia { get; set; }
+    public float DistanciaAtaque { get; set; }
 
-    public float ObtenerPreparaciónAtaqueMelé()
-    {
-        switch (enemigo)
-        {
-            case Enemigos.meléLigero:
-                return 0.25f;
-            case Enemigos.meléMediano:
-                return 0.4f;
-            case Enemigos.meléPesado:
-                return 0.1f;
-            default:
-                return 0;
-        }
-    }
+    // Persecusión
+    public float VelocidadMovimiento { get; set; }
+    public float VelocidadRotación { get; set; }
+    public float DistanciaSonido { get; set; }
+    public float TiempoBusqueda { get; set; }
+    public bool PersecutorTrigonométrico { get; set; }
 
-    public float ObtenerFuerzaSalto()
-    {
-        switch (enemigo)
-        {
-            case Enemigos.rangoLigero:
-                return 12;
-            default:
-                return 0;
-        }
-    }
+    // Melé
+    public float PreparaciónMelé { get; set; }
 
-    public float ObtenerDistanciaSalto()
-    {
-        switch (enemigo)
-        {
-            case Enemigos.rangoLigero:
-                return 8;
-            default:
-                return 0;
-        }
-    }
+    // Rango
+    public float VelocidadProyectil { get; set; }
 
-    private float ObtenerVelocidadProyectil()
-    {
-        switch (enemigo)
-        {
-            case Enemigos.rangoLigero:
-                return 20;
-            case Enemigos.rangoMediano:
-                return 10;
-            case Enemigos.rangoPesado:
-                return 25;
-            case Enemigos.especialLigero:
-                return 15;
-            default:
-                return 0;
-        }
-    }
+    // Persecutor
+    public float RotaciónProyectil { get; set; }
 
-    private float ObtenerRotaciónProyectil()
-    {
-        switch (enemigo)
-        {
-            case Enemigos.rangoMediano:
-                return 5;
-            default:
-                return 0;
-        }
-    }
+    // Jugador mide 160cm, tiene los ojos en 150cm
+    public Vector3 AlturaObjetivo { get; set; }
 
-    private Vector3 ObtenerObjetivoProyectil()
-    {
-        // Jugador mide 160cm, tiene los ojos en 150cm
-        switch (enemigo)
-        {
-            case Enemigos.rangoLigero:
-                return Vector3.UnitY * 1.7f;
-            case Enemigos.rangoMediano:
-                return Vector3.UnitY * 0.6f;
-            case Enemigos.rangoPesado:
-                return Vector3.UnitY * 0.33f;
-            case Enemigos.especialLigero:
-                return Vector3.UnitY * 1.4f;
-            default:
-                return Vector3.UnitY;
-        }
-    }
+    // Pulga
+    public float FuerzaSalto { get; set; }
+    public float DistanciaSalto { get; set; }
 }

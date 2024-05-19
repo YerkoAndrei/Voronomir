@@ -11,7 +11,8 @@ public class ControladorPersecusión : StartupScript
 {
     public bool estático;
     public List<TransformComponent> ojos = new List<TransformComponent> { };
-
+    
+    private Enemigo datos;
     private ControladorPersecusionesTrigonométricas persecutor;
     private ControladorEnemigo controlador;
     private CharacterComponent cuerpo;
@@ -28,44 +29,30 @@ public class ControladorPersecusión : StartupScript
     private float distanciaJugador;
 
     private int índiceTrigonométrico;
-    private bool persecutorTrigonométrico;
-
     private bool atacando;
-    private float velocidad;
-    private float aceleración;
-    private float distanciaAtaque;
-    private float distanciaSalto;
-
     private float tiempoRotación;
-    private float velocidadRotación;
+    private float tempoBusqueda;
 
     private float tempoAceleración;
     private float tiempoAceleración;
+    private float aceleración;
 
-    private float tempoBusqueda;
-    private float tiempoBusqueda;
 
-    public void Iniciar(ControladorEnemigo _controlador, IAnimador _animador, float _tiempoBusqueda, float _velocidad, float _rotación, float _distanciaAtaque, float _distanciaSalto, bool _persecutorTrigonométrico)
+    public void Iniciar(ControladorEnemigo _controlador, Enemigo _datos, IAnimador _animador)
     {
-        animador = _animador;
         colisionesMirada = CollisionFilterGroupFlags.StaticFilter | CollisionFilterGroupFlags.CharacterFilter;
         cuerpo = Entity.Get<CharacterComponent>();
         navegador = Entity.Get<NavigationComponent>();
         ruta = new List<Vector3>();
 
+        controlador = _controlador;
+        animador = _animador;
+        datos = _datos;
+
+        tempoBusqueda = 0;
         tiempoAceleración = 1;
 
-        controlador = _controlador;
-        tiempoBusqueda = _tiempoBusqueda;
-        tempoBusqueda = 0;
-
-        velocidad = _velocidad;
-        velocidadRotación = _rotación;
-        distanciaAtaque = _distanciaAtaque;
-
-        distanciaSalto = _distanciaSalto;
-        persecutorTrigonométrico = _persecutorTrigonométrico;
-        if (persecutorTrigonométrico)
+        if (datos.PersecutorTrigonométrico)
         {
             // Busca persecutor trigonométrico
             persecutor = ControladorPartida.ObtenerPersecutor(controlador.enemigo);
@@ -79,16 +66,16 @@ public class ControladorPersecusión : StartupScript
 
         if (atacando)
         {
-            MirarJugador(velocidadRotación * 0.5f);
+            MirarJugador(datos.VelocidadRotación * 0.5f);
 
             // Se mueve mientras ataca
-            if (persecutorTrigonométrico && persecutor.PosibleRodearJugador())
+            if (datos.PersecutorTrigonométrico && persecutor.PosibleRodearJugador())
                 ForzarPersecusiónTrigonométrica();
 
             return;
         }
 
-        MirarJugador(velocidadRotación);
+        MirarJugador(datos.VelocidadRotación);
 
         // Estáticos no persiguen y disparan mientras vea al jugador
         if (estático)
@@ -111,9 +98,9 @@ public class ControladorPersecusión : StartupScript
     {
         ruta.Clear();
         índiceRuta = 0;
-        tempoBusqueda = tiempoBusqueda;
+        tempoBusqueda = datos.TiempoBusqueda;
 
-        if(persecutorTrigonométrico && persecutor.PosibleRodearJugador())
+        if(datos.PersecutorTrigonométrico && persecutor.PosibleRodearJugador())
             navegador.TryFindPath(persecutor.ObtenerPosiciónCircular(índiceTrigonométrico), ruta);
         else
             navegador.TryFindPath(ControladorPartida.ObtenerPosiciónJugador(), ruta);
@@ -138,11 +125,11 @@ public class ControladorPersecusión : StartupScript
         distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerPosiciónJugador());
 
         // Salto
-        if (distanciaSalto > 0 && distanciaJugador <= distanciaSalto && cuerpo.IsGrounded)
+        if (datos.DistanciaSalto > 0 && distanciaJugador <= datos.DistanciaSalto && cuerpo.IsGrounded)
             Saltar();
 
         // Ataque
-        if (distanciaJugador <= distanciaAtaque)
+        if (distanciaJugador <= datos.DistanciaAtaque)
         {
             if (MirarJugador())
             {
@@ -165,7 +152,7 @@ public class ControladorPersecusión : StartupScript
             
             dirección.Normalize();
             dirección *= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;                        
-            cuerpo.SetVelocity(dirección * 100 * velocidad * aceleración);
+            cuerpo.SetVelocity(dirección * 100 * datos.VelocidadMovimiento * aceleración);
             animador.Caminar(aceleración);
         }
         else
@@ -179,8 +166,8 @@ public class ControladorPersecusión : StartupScript
 
     public void Saltar()
     {
-        var dirección = (ControladorPartida.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector) * (controlador.ObtenerFuerzaSalto() * 0.25f);
-        dirección.Y = controlador.ObtenerFuerzaSalto();
+        var dirección = (ControladorPartida.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector) * (datos.FuerzaSalto * 0.25f);
+        dirección.Y = datos.FuerzaSalto;
         cuerpo.Jump(dirección);
     }
 
@@ -193,7 +180,7 @@ public class ControladorPersecusión : StartupScript
         dirección = persecutor.ObtenerPosiciónCircular(índiceTrigonométrico) - Entity.Transform.WorldMatrix.TranslationVector;
         dirección.Normalize();
         dirección *= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
-        cuerpo.SetVelocity(dirección * 100 * velocidad * distanciaRuta * 0.2f);
+        cuerpo.SetVelocity(dirección * 100 * datos.VelocidadMovimiento * distanciaRuta * 0.2f);
         animador.Caminar(distanciaRuta * 0.2f);
     }
 
@@ -234,15 +221,15 @@ public class ControladorPersecusión : StartupScript
         cuerpo.SetVelocity(Vector3.Zero);
 
         // Delay de preparación de ataque melé
-        if (controlador.ObtenerPreparaciónAtaqueMelé() > 0)
-            await Task.Delay((int)(controlador.ObtenerPreparaciónAtaqueMelé() * 1000));
+        if (datos.PreparaciónMelé > 0)
+            await Task.Delay((int)(datos.PreparaciónMelé * 1000));
 
         if (!controlador.ObtenerActivo())
             return;
 
         animador.Atacar();
         controlador.Atacar();
-        await Task.Delay((int)(controlador.ObtenerCadenciaAtaque() * 1000));
+        await Task.Delay((int)(datos.Cadencia * 1000));
 
         tempoBusqueda = 0;
         atacando = false;
@@ -250,7 +237,7 @@ public class ControladorPersecusión : StartupScript
 
     public void EliminarPersecutor()
     {
-        if (persecutorTrigonométrico)
+        if (datos.PersecutorTrigonométrico)
             persecutor.EliminarPersecutor(this);
     }
 

@@ -21,11 +21,7 @@ public class ControladorPersecusionesTrigonométricas : SyncScript
     public override void Start()
     {
         persecutores = new List<ControladorPersecusión>();
-
-        // Radio según tipo enemigo
-        var controladorTemp = new ControladorEnemigo();
-        controladorTemp.enemigo = enemigo;
-        radio = controladorTemp.ObtenerDistanciaAtaque() - 1;
+        radio = ControladorEnemigo.ObtenerDistanciaPersecuciónTrigonométrica(enemigo);
     }
 
     public override void Update()
@@ -49,7 +45,7 @@ public class ControladorPersecusionesTrigonométricas : SyncScript
     public Vector3 ObtenerPosiciónCircular(int índice)
     {
         // Persecutores pueden descordinarse por 1 cuadro
-        if (índice >= posicionesCirculares.Count())
+        if (posicionesCirculares == null || índice >= posicionesCirculares.Count())
             return ControladorPartida.ObtenerPosiciónJugador();
 
         return posicionesCirculares[índice];
