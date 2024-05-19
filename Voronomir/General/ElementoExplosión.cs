@@ -5,6 +5,7 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Voronomir;
+using static Utilidades;
 
 public class ElementoExplosión : StartupScript, IImpacto
 {
@@ -45,8 +46,7 @@ public class ElementoExplosión : StartupScript, IImpacto
 
     private async void EsperarCuadro()
     {
-        // 1 frame de física
-        await Task.Delay(17);
+        await EsperarCuadroFísica();
         CalcularDaños();
         Apagar();
     }

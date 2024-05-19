@@ -55,8 +55,8 @@ public class SistemaMemoria : StartupScript
         return new Dictionary<string, string>
         {
             { Configuraciones.idioma.ToString(),            Idiomas.sistema.ToString() },
-            { Configuraciones.gráficos.ToString(),          NivelesConfiguración.alto.ToString() },
-            { Configuraciones.sombras.ToString(),           NivelesConfiguración.alto.ToString() },
+            { Configuraciones.gráficos.ToString(),          NivelesCalidad.alto.ToString() },
+            { Configuraciones.sombras.ToString(),           NivelesCalidad.alto.ToString() },
             { Configuraciones.pantallaCompleta.ToString(),  true.ToString() },
             { Configuraciones.resolución.ToString(),        resolución },
             { Configuraciones.vSync.ToString(),             false.ToString() },

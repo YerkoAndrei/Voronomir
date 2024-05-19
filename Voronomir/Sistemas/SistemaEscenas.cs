@@ -216,16 +216,16 @@ public class SistemaEscenas : AsyncScript
         return abriendo || ocultando;
     }
 
-    public static GraphicsCompositor ObtenerGráficos(NivelesConfiguración nivel)
+    public static GraphicsCompositor ObtenerGráficos(NivelesCalidad nivel)
     {
         switch (nivel)
         {
-            case NivelesConfiguración.bajo:
+            case NivelesCalidad.bajo:
                 return instancia.compositorBajo;
-            case NivelesConfiguración.medio:
+            case NivelesCalidad.medio:
                 return instancia.compositorMedio;
             default:
-            case NivelesConfiguración.alto:
+            case NivelesCalidad.alto:
                 return instancia.compositorAlto;
         }
     }

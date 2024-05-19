@@ -55,13 +55,13 @@ public class InterfazOpciones : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDatosSí"), () => EnClicDatos(true));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDatosNo"), () => EnClicDatos(false));
 
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosBajos"), () => EnClicGráficos(NivelesConfiguración.bajo));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosMedios"), () => EnClicGráficos(NivelesConfiguración.medio));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosAltos"), () => EnClicGráficos(NivelesConfiguración.alto));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosBajos"), () => EnClicGráficos(NivelesCalidad.bajo));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosMedios"), () => EnClicGráficos(NivelesCalidad.medio));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosAltos"), () => EnClicGráficos(NivelesCalidad.alto));
 
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSombrasBajas"), () => EnClicSombras(NivelesConfiguración.bajo));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSombrasMedias"), () => EnClicSombras(NivelesConfiguración.medio));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSombrasAltas"), () => EnClicSombras(NivelesConfiguración.alto));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSombrasBajas"), () => EnClicSombras(NivelesCalidad.bajo));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSombrasMedias"), () => EnClicSombras(NivelesCalidad.medio));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSombrasAltas"), () => EnClicSombras(NivelesCalidad.alto));
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVSyncSí"), () => EnClicVSync(true));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVSyncNo"), () => EnClicVSync(false));
@@ -101,8 +101,8 @@ public class InterfazOpciones : StartupScript
         // Carga
         EnClicPestaña("Gráficos");
         BloquearIdioma((Idiomas)Enum.Parse(typeof(Idiomas), SistemaMemoria.ObtenerConfiguración(Configuraciones.idioma)));
-        BloquearGráficos((NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
-        BloquearSombras((NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.sombras)));
+        BloquearGráficos((NivelesCalidad)Enum.Parse(typeof(NivelesCalidad), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
+        BloquearSombras((NivelesCalidad)Enum.Parse(typeof(NivelesCalidad), SistemaMemoria.ObtenerConfiguración(Configuraciones.sombras)));
         BloquearVSync(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.vSync)));
         BloquearDatos(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.datos)));
         BloquearHRTF(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf)));
@@ -200,7 +200,7 @@ public class InterfazOpciones : StartupScript
         sliderCampoVisión.TouchUp += (s, a) => { SistemaSonidos.SonarBotónSale(); };
 
         // Actualiza gráficos
-        ActualizaGráficos((NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
+        ActualizaGráficos((NivelesCalidad)Enum.Parse(typeof(NivelesCalidad), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
         ActualizaSombras();
     }
 
@@ -396,7 +396,7 @@ public class InterfazOpciones : StartupScript
             interfaz.Get<InterfazJuego>().ConfigurarMira(new Color(r, g, b));
     }
 
-    private void EnClicGráficos(NivelesConfiguración nivel)
+    private void EnClicGráficos(NivelesCalidad nivel)
     {
         if (animando)
             return;
@@ -407,7 +407,7 @@ public class InterfazOpciones : StartupScript
         MostrarResoluciones(false);
     }
 
-    private void EnClicSombras(NivelesConfiguración nivel)
+    private void EnClicSombras(NivelesCalidad nivel)
     {
         if (animando)
             return;
@@ -428,7 +428,7 @@ public class InterfazOpciones : StartupScript
         MostrarResoluciones(false);
     }
 
-    private void ActualizaGráficos(NivelesConfiguración nivel)
+    private void ActualizaGráficos(NivelesCalidad nivel)
     {
         Services.GetService<SceneSystem>().GraphicsCompositor = SistemaEscenas.ObtenerGráficos(nivel);
     }
@@ -550,21 +550,21 @@ public class InterfazOpciones : StartupScript
         BloquearBotón(página.FindVisualChildOfType<Grid>("btnVSyncNo"), !vSync);
     }
 
-    private void BloquearGráficos(NivelesConfiguración nivel)
+    private void BloquearGráficos(NivelesCalidad nivel)
     {
         switch (nivel)
         {
-            case NivelesConfiguración.bajo:
+            case NivelesCalidad.bajo:
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnGráficosBajos"), true);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnGráficosMedios"), false);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnGráficosAltos"), false);
                 break;
-            case NivelesConfiguración.medio:
+            case NivelesCalidad.medio:
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnGráficosBajos"), false);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnGráficosMedios"), true);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnGráficosAltos"), false);
                 break;
-            case NivelesConfiguración.alto:
+            case NivelesCalidad.alto:
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnGráficosBajos"), false);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnGráficosMedios"), false);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnGráficosAltos"), true);
@@ -572,21 +572,21 @@ public class InterfazOpciones : StartupScript
         }
     }
 
-    private void BloquearSombras(NivelesConfiguración nivel)
+    private void BloquearSombras(NivelesCalidad nivel)
     {
         switch (nivel)
         {
-            case NivelesConfiguración.bajo:
+            case NivelesCalidad.bajo:
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnSombrasBajas"), true);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnSombrasMedias"), false);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnSombrasAltas"), false);
                 break;
-            case NivelesConfiguración.medio:
+            case NivelesCalidad.medio:
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnSombrasBajas"), false);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnSombrasMedias"), true);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnSombrasAltas"), false);
                 break;
-            case NivelesConfiguración.alto:
+            case NivelesCalidad.alto:
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnSombrasBajas"), false);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnSombrasMedias"), false);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnSombrasAltas"), true);

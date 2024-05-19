@@ -92,6 +92,20 @@ public static class Constantes
         derecha
     }
 
+    public enum Dificultad
+    {
+        fácil,
+        normal,
+        difícil
+    }
+
+    public enum NivelesCalidad
+    {
+        bajo,
+        medio,
+        alto
+    }
+
     public enum Idiomas
     {
         sistema,
@@ -115,12 +129,5 @@ public static class Constantes
         campoVisión,
         colorMira,
         datos
-    }
-
-    public enum NivelesConfiguración
-    {
-        bajo,
-        medio,
-        alto
     }
 }
