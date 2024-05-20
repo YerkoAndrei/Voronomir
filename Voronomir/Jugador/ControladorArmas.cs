@@ -678,7 +678,7 @@ public class ControladorArmas : StartupScript
         }
 
         // Dificultad
-        if (SistemaMemoria.Dificiltad == Dificultades.fácil)
+        if (SistemaMemoria.Dificultad == Dificultades.fácil)
             daño *= 1.25f;
 
         if (controlador.ObtenerPoder(Poderes.daño))

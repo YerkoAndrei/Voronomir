@@ -101,7 +101,7 @@ public class ControladorJugador : SyncScript, IDañable
             return;
 
         // Dificultad
-        if (SistemaMemoria.Dificiltad == Dificultades.difícil)
+        if (SistemaMemoria.Dificultad == Dificultades.difícil)
             return;
 
         curando = true;
@@ -114,7 +114,7 @@ public class ControladorJugador : SyncScript, IDañable
         var vidaCurada = vida;
 
         // Dificultad
-        switch (SistemaMemoria.Dificiltad)
+        switch (SistemaMemoria.Dificultad)
         {
             case Dificultades.fácil:
                 vidaCurada = MathUtil.Clamp(vida + 45, 0, vidaMax);
@@ -171,7 +171,7 @@ public class ControladorJugador : SyncScript, IDañable
             return;
 
         // Dificultad
-        if (SistemaMemoria.Dificiltad == Dificultades.fácil)
+        if (SistemaMemoria.Dificultad == Dificultades.fácil)
             daño *= 0.75f;
 
         vida -= daño;

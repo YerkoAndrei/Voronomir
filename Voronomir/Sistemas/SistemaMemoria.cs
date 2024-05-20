@@ -17,7 +17,7 @@ public class SistemaMemoria : StartupScript
     private static string archivoConfiguración = "Configuración";
     private static string rutaConfiguración;
 
-    public static Dificultades Dificiltad = Dificultades.normal;
+    public static Dificultades Dificultad;
 
     public override void Start()
     {
@@ -41,6 +41,8 @@ public class SistemaMemoria : StartupScript
         if (File.Exists(rutaConfiguración))
             return;
 
+        Dificultad = Dificultades.normal;
+
         // Guarda valores predeterminados
         var json = JsonConvert.SerializeObject(ObtenerConfiguraciónPredeterminada(ancho, alto));
         var encriptado = DesEncriptar(json);
@@ -57,6 +59,7 @@ public class SistemaMemoria : StartupScript
         return new Dictionary<string, string>
         {
             { Configuraciones.idioma.ToString(),            Idiomas.sistema.ToString() },
+            { Configuraciones.dificultad.ToString(),        Dificultades.normal.ToString() },
             { Configuraciones.gráficos.ToString(),          NivelesCalidad.alto.ToString() },
             { Configuraciones.sombras.ToString(),           NivelesCalidad.alto.ToString() },
             { Configuraciones.pantallaCompleta.ToString(),  true.ToString() },

@@ -79,6 +79,11 @@ public static class Utilidades
         await Task.Delay(17);
     }
 
+    public static string Capitalizar(string texto)
+    {
+        return char.ToUpper(texto[0]) + texto.Substring(1);
+    }
+
     // Interfaz
     public static ISpriteProvider ObtenerSprite(Texture textura)
     {

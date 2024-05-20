@@ -43,7 +43,7 @@ public class InterfazOpciones : StartupScript
         // Botones
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuroOpciones"), EnClicVolver);
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("btnPanel"), () => MostrarResoluciones(false));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicVolver);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnOpcionesVolver"), EnClicVolver);
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficos"), () => EnClicPestaña("Gráficos"));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSonidos"), () => EnClicPestaña("Sonidos"));

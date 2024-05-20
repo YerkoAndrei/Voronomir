@@ -69,7 +69,7 @@ public class InterfazJuego : SyncScript
     private Grid panelMuerte;
     private Grid panelFinal;
 
-    private Grid Opciones;
+    private Grid opciones;
     private Grid animOpciones;
 
     private bool animando;
@@ -80,9 +80,9 @@ public class InterfazJuego : SyncScript
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
 
-        Opciones = página.FindVisualChildOfType<Grid>("Opciones");
+        opciones = página.FindVisualChildOfType<Grid>("Opciones");
         animOpciones = página.FindVisualChildOfType<Grid>("animOpciones");
-        Opciones.Visibility = Visibility.Hidden;
+        opciones.Visibility = Visibility.Hidden;
 
         // Interfaz
         imgVida = página.FindVisualChildOfType<ImageElement>("imgVida");
@@ -220,7 +220,7 @@ public class InterfazJuego : SyncScript
 
         ControladorPartida.Pausar(!ControladorPartida.ObtenerActivo());
         SistemaSonidos.PausarSonidosMundo(!ControladorPartida.ObtenerActivo());
-        Opciones.Visibility = Visibility.Hidden;
+        opciones.Visibility = Visibility.Hidden;
 
         if (ControladorPartida.ObtenerActivo())
         {
@@ -262,7 +262,7 @@ public class InterfazJuego : SyncScript
             return;
 
         animando = true;
-        Opciones.Visibility = Visibility.Visible;
+        opciones.Visibility = Visibility.Visible;
         SistemaAnimación.AnimarElemento(animOpciones, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () =>
         {
             animando = false;
@@ -493,7 +493,7 @@ public class InterfazJuego : SyncScript
 
         // Datos
         txtFinalNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
-        txtDificultad.Text = SistemaTraducción.ObtenerTraducción(SistemaMemoria.Dificiltad.ToString());
+        txtDificultad.Text = SistemaTraducción.ObtenerTraducción(SistemaMemoria.Dificultad.ToString());
         txtFinalTiempo.Text = ControladorPartida.ObtenerTextoDuración();
         txtEnemigos.Text = ControladorPartida.ObtenerTextoEnemigos();
         txtSecretos.Text = ControladorPartida.ObtenerTextoSecretos();

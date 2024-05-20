@@ -122,6 +122,7 @@ public static class Constantes
     public enum Configuraciones
     {
         idioma,
+        dificultad,
         gráficos,
         sombras,
         pantallaCompleta,

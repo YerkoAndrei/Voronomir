@@ -494,7 +494,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: SliderColorMiraB
-                Value: 100.0
+                Value: 1.0
                 Maximum: 256.0
                 Step: 1.0
                 TrackBackgroundImage: !SpriteFromTexture
@@ -988,7 +988,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: SliderColorMiraR
-                Value: 100.0
+                Value: 1.0
                 Maximum: 256.0
                 Step: 1.0
                 TrackBackgroundImage: !SpriteFromTexture
@@ -3153,7 +3153,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name*: btnVolver
+                Name*: btnOpcionesVolver
                 Children:
                     288bb3cba41217ca70828c1288cd1352: !Button ref!! 170bf90c-c767-4d4b-a9ec-a2fb17c6a89b
                     4ba0ac30b211286f5dbb3efee011a5e8: !ImageElement ref!! 07373235-7936-4f83-b23e-72fd056dfdf1
@@ -4832,7 +4832,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name*: txtVolver
+                Name*: txtOpcionesVolver
                 Text*: Volver
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
@@ -6024,7 +6024,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: "SliderCampoVisión"
-                Value: 90.0
+                Value: 70.0
                 Minimum: 70.0
                 Maximum: 110.0
                 Step: 1.0
@@ -6150,7 +6150,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: SliderColorMiraG
-                Value: 255.0
+                Value: 1.0
                 Maximum: 256.0
                 Step: 1.0
                 TrackBackgroundImage: !SpriteFromTexture
