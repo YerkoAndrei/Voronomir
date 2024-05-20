@@ -10,7 +10,8 @@ using static Constantes;
 
 public class InterfazMenú : StartupScript
 {
-    private UniformGrid menú;
+    private Grid título;
+    private Grid menú;
     private Grid episodios;
 
     private Grid opciones;
@@ -27,7 +28,8 @@ public class InterfazMenú : StartupScript
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
 
-        menú = página.FindVisualChildOfType<UniformGrid>("Menú");
+        título = página.FindVisualChildOfType<Grid>("Título");
+        menú = página.FindVisualChildOfType<Grid>("Menú");
         episodios = página.FindVisualChildOfType<Grid>("Episodios");
 
         opciones = página.FindVisualChildOfType<Grid>("Opciones");
@@ -69,15 +71,41 @@ public class InterfazMenú : StartupScript
 
     private void EnClicJugar()
     {
-        // PENDIENTE: animar
-        menú.Visibility = Visibility.Hidden;
+        if (animando)
+            return;
+
+        animando = true;
+        título.Visibility = Visibility.Visible;
+        menú.Visibility = Visibility.Visible;
         episodios.Visibility = Visibility.Visible;
+
+        SistemaAnimación.AnimarElemento(título, 0.4f, false, Direcciones.arriba, TipoCurva.rápida, null);
+        SistemaAnimación.AnimarElemento(menú, 0.2f, false, Direcciones.derecha, TipoCurva.rápida, null);
+        SistemaAnimación.AnimarElemento(episodios, 0.2f, true, Direcciones.izquierda, TipoCurva.rápida, () =>
+        {
+            animando = false;
+            título.Visibility = Visibility.Hidden;
+            menú.Visibility = Visibility.Hidden;
+        });
     }
 
     private void EnClicVolver()
     {
+        if (animando)
+            return;
+
+        animando = true;
+        título.Visibility = Visibility.Visible;
         menú.Visibility = Visibility.Visible;
-        episodios.Visibility = Visibility.Hidden;
+        episodios.Visibility = Visibility.Visible;
+
+        SistemaAnimación.AnimarElemento(título, 0.4f, true, Direcciones.arriba, TipoCurva.rápida, null);
+        SistemaAnimación.AnimarElemento(episodios, 0.2f, false, Direcciones.izquierda, TipoCurva.rápida, null);
+        SistemaAnimación.AnimarElemento(menú, 0.2f, true, Direcciones.derecha, TipoCurva.rápida, () =>
+        {
+            animando = false;
+            episodios.Visibility = Visibility.Hidden;
+        });
     }
 
     private void EnClicDificultad(Dificultades dificultad)
@@ -110,10 +138,7 @@ public class InterfazMenú : StartupScript
 
         animando = true;
         opciones.Visibility = Visibility.Visible;
-        SistemaAnimación.AnimarElemento(animOpciones, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () =>
-        {
-            animando = false;
-        });
+        SistemaAnimación.AnimarElemento(animOpciones, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () => animando = false);
     }
 
     private void EnClicSalir()

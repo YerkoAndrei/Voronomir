@@ -207,6 +207,20 @@ Hierarchy:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: 3b9f53e3-a9a5-486c-932a-f1e5685116c2
                 InstanceId: 7d749f2c-a02b-4773-abf9-045c80ee6b5e
+        -   UIElement: !Grid
+                Id: 03b6adce-cd8a-45d5-be91-5ca4870a8f97
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "Menú"
+                Children:
+                    4de6e61fd9d98800a5bd4922e31bec50: !UniformGrid ref!! 35a2558b-c39d-418d-90d3-216d8bfffe32
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: 03f62594-16df-44ee-ade9-7925589715de
                 DependencyProperties: {}
@@ -2105,6 +2119,21 @@ Hierarchy:
                 BasePartId: d14c61c7-4400-45fa-9eca-2bddbe9699db
                 InstanceId: 7d749f2c-a02b-4773-abf9-045c80ee6b5e
         -   UIElement: !Grid
+                Id: 2fa06ede-a99b-46aa-a4fb-312c36462e37
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "Título"
+                Children:
+                    d208e49cb0fa35370023ef9f1ef51cf9: !ImageElement ref!! fcf83c41-2bde-4ded-9ec3-aeb251822526
+                    9c327086ec6a79a8b6012f31222ee8a6: !TextBlock ref!! 4fecb162-c19a-4549-bcd7-686b483647a1
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
                 Id: 30fc2d7b-6d83-4846-887e-d898b2238123
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -2459,7 +2488,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: "Menú"
+                Name: Botones
                 Children:
                     7bab8bacc5ba64e5e1e641adb9fe4e6b: !Grid ref!! 6d4305ed-1fba-4b8d-a9b3-cf40859f1f01
                     69fdd48da6f6c49e08dd84591bd55e94: !Grid ref!! 15b2828b-d3eb-49ef-bcd8-285b91de5bce
@@ -6762,6 +6791,24 @@ Hierarchy:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
                 BasePartId: 29e403c2-1f00-4214-ba69-7d3981ebbbe5
                 InstanceId: 3c469181-49fd-4378-8ee9-573906233e98
+        -   UIElement: !Grid
+                Id: 96c00c94-7eb6-4ea3-b1bd-1e0eb111df4b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Episodios
+                Children:
+                    3899237d96cb8d64dbdd4e534390d6de: !UniformGrid ref!! e60b4586-7c91-4639-abac-1dce722cedba
+                    f136a0e6ac2808229692c0ba44113410: !UniformGrid ref!! b382c307-2fa0-4c78-9fff-6a0cd76bfe16
+                    3a513889d7c1f7e769606647054eff31: !TextBlock ref!! e61f528b-73cb-4889-b2f2-8106922d85bb
+                    a4e9f12b36aec31f0783b48bb1905fd8: !Grid ref!! fcd27c1d-aec7-4608-b66e-f3866f6ea0ad
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: 96c75424-757d-4778-b83b-13904207561b
                 DependencyProperties:
@@ -7399,24 +7446,6 @@ Hierarchy:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: e85236fe-61df-4ccd-803e-cf086ce5f4a6
                 InstanceId: 7d749f2c-a02b-4773-abf9-045c80ee6b5e
-        -   UIElement: !Grid
-                Id: a72f77a3-9be1-42a0-901c-74e99654e65f
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Visibility: Hidden
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: Episodios
-                Children:
-                    e4f7070ae9027f59eaa93b2b771cddc5: !UniformGrid ref!! e60b4586-7c91-4639-abac-1dce722cedba
-                    0a86cc950cafd6e206a241092e8ab192: !UniformGrid ref!! b382c307-2fa0-4c78-9fff-6a0cd76bfe16
-                    9579d449dc170edbc8d3ac0a6e167932: !TextBlock ref!! e61f528b-73cb-4889-b2f2-8106922d85bb
-                    b7bd36042c6c66ee025835bf439a0b8a: !Grid ref!! fcd27c1d-aec7-4608-b66e-f3866f6ea0ad
-                RowDefinitions: {}
-                ColumnDefinitions: {}
-                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: a7de47bb-7632-4b58-b16a-774c0d45e2c9
                 DependencyProperties: {}
@@ -11209,10 +11238,9 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Children:
-                    08310940e33ec8d7a58394158ffd88d4: !ImageElement ref!! fcf83c41-2bde-4ded-9ec3-aeb251822526
-                    04621074ec222c62baa1c9efd4b27837: !TextBlock ref!! 4fecb162-c19a-4549-bcd7-686b483647a1
-                    38f43a1f642f56519fb186078d6026c0: !UniformGrid ref!! 35a2558b-c39d-418d-90d3-216d8bfffe32
-                    de9f67c7d7123b8528ed7756ac1ae3e6: !Grid ref!! a72f77a3-9be1-42a0-901c-74e99654e65f
+                    6fbf6b2e0db46d2f70c469068fa81bae: !Grid ref!! 2fa06ede-a99b-46aa-a4fb-312c36462e37
+                    279be075cb477ac755b29275a263b782: !Grid ref!! 03b6adce-cd8a-45d5-be91-5ca4870a8f97
+                    f1c252f92a65f427711355e0b5cb40f2: !Grid ref!! 96c00c94-7eb6-4ea3-b1bd-1e0eb111df4b
                     e2c630a3150b991cde17102c54818853: !Grid ref!! 41421faf-8b9a-46d2-8cf2-eaf724dde773
                 RowDefinitions: {}
                 ColumnDefinitions: {}

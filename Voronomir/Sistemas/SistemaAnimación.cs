@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Stride.Engine;
-using Stride.Animations;
+using System.Collections.Generic;
 using Stride.Core.Mathematics;
+using Stride.Animations;
+using Stride.Engine;
 using Stride.UI.Panels;
 using Stride.UI;
 
@@ -14,27 +15,23 @@ public class SistemaAnimación : AsyncScript
     public ComputeCurveSampler<float> curvaRápida;
 
     private static SistemaAnimación instancia;
-
-    // Animación
-    private static Grid elemento;
-    private static bool animando;
-    private static float duración;
-    private static float tiempoDelta;
-    private static float tiempo;
-    private static TipoCurva tipoCurva;
-    private static Thickness margenInicio;
-    private static Thickness margenObjetivo;
-    private static Action enFin;
+    private static List<AnimaciónInterfaz> animaciones;
 
     public override async Task Execute()
     {
         instancia = this;
+        animaciones = new List<AnimaciónInterfaz>();
 
         while (Game.IsRunning)
         {
-            if (animando)
-                Animar();
-
+            if (animaciones.Count > 0)
+            {
+                // ToArray() evita usar lista cambiante
+                foreach (var animación in animaciones.ToArray())
+                {
+                    Animar(animación, (float)Game.UpdateTime.Elapsed.TotalSeconds);
+                }
+            }
             await Script.NextFrame();
         }
     }
@@ -60,82 +57,88 @@ public class SistemaAnimación : AsyncScript
         switch (dirección)
         {
             case Direcciones.arriba:
-                fuera = new Thickness(0, 0, 0, 1500);
+                fuera = new Thickness(0, 0, 0, 1620);
                 break;
             case Direcciones.abajo:
-                fuera = new Thickness(0, 1500, 0, 0);
+                fuera = new Thickness(0, 1620, 0, 0);
                 break;
             case Direcciones.izquierda:
-                fuera = new Thickness(0, 0, 3000, 0);
+                fuera = new Thickness(0, 0, 2880, 0);
                 break;
             case Direcciones.derecha:
-                fuera = new Thickness(3000, 0, 0, 0);
+                fuera = new Thickness(2880, 0, 0, 0);
                 break;
         }
+
+        var margenInicio = new Thickness();
+        var margenObjetivo = new Thickness();
 
         if (entrando)
-        {
             margenInicio = fuera;
-            margenObjetivo = new Thickness();
-        }
         else
-        {
-            margenInicio = new Thickness();
             margenObjetivo = fuera;
-        }
 
-        // Predeterminados
-        elemento = _elemento;
-        duración = _duración;
-        tipoCurva = _tipoCurva;
-        enFin = _enFin;
+        // Crea animación
+        var nuevaAnimación = new AnimaciónInterfaz
+        {
+            Elemento = _elemento,
+            Duración = _duración,
+            TiempoDelta = 0,
+            Tiempo = 0,
+            TipoCurva = _tipoCurva,
+            MargenInicio = margenInicio,
+            MargenObjetivo = margenObjetivo,
+            EnFin = _enFin,
+        };
 
-        elemento.Margin = margenInicio;
-
-        tiempoDelta = 0;
-        tiempo = 0;
-        animando = true;
+        nuevaAnimación.Elemento.Margin = nuevaAnimación.MargenInicio;
+        animaciones.Add(nuevaAnimación);
     }
 
-    private void Animar()
+    private static void Animar(AnimaciónInterfaz animación, float tiempo)
     {
-        tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-        switch (tipoCurva)
+        animación.TiempoDelta += tiempo;
+        switch (animación.TipoCurva)
         {
             case TipoCurva.nada:
-                tiempo = tiempoDelta / duración;
+                animación.Tiempo = animación.TiempoDelta / animación.Duración;
                 break;
             case TipoCurva.suave:
-                tiempo = EvaluarSuave(tiempoDelta / duración);
+                animación.Tiempo = EvaluarSuave(animación.TiempoDelta / animación.Duración);
                 break;
             case TipoCurva.rápida:
-                tiempo = EvaluarRápido(tiempoDelta / duración);
+                animación.Tiempo = EvaluarRápido(animación.TiempoDelta / animación.Duración);
                 break;
         }
 
-        elemento.Margin = new Thickness(MathUtil.Lerp(margenInicio.Left, margenObjetivo.Left, tiempo),
-                                        MathUtil.Lerp(margenInicio.Top, margenObjetivo.Top, tiempo),
-                                        MathUtil.Lerp(margenInicio.Right, margenObjetivo.Right, tiempo),
-                                        MathUtil.Lerp(margenInicio.Bottom, margenObjetivo.Bottom, tiempo));
+        animación.Elemento.Margin = new Thickness(MathUtil.Lerp(animación.MargenInicio.Left, animación.MargenObjetivo.Left, animación.Tiempo),
+                                        MathUtil.Lerp(animación.MargenInicio.Top, animación.MargenObjetivo.Top, animación.Tiempo),
+                                        MathUtil.Lerp(animación.MargenInicio.Right, animación.MargenObjetivo.Right, animación.Tiempo),
+                                        MathUtil.Lerp(animación.MargenInicio.Bottom, animación.MargenObjetivo.Bottom, animación.Tiempo));
         // Fin
-        if (tiempoDelta >= duración)
+        if (animación.TiempoDelta >= animación.Duración)
         {
-            elemento.Margin = margenObjetivo;
-            TerminarLerp();
+            // Llamado
+            if (animación.EnFin != null)
+            {
+                animación.EnFin.Invoke();
+                animación.EnFin = null;
+            }
+
+            animación.Elemento.Margin = animación.MargenObjetivo;
+            animaciones.Remove(animación);
         }
     }
+}
 
-    private void TerminarLerp()
-    {
-        animando = false;
-        tiempoDelta = 0;
-        tiempo = 0;
-
-        // Llamado
-        if (enFin != null)
-        {
-            enFin.Invoke();
-            enFin = null;
-        }
-    }
+public class AnimaciónInterfaz()
+{
+     public Grid Elemento { get; set; }
+     public float Duración { get; set; }
+     public float TiempoDelta { get; set; }
+     public float Tiempo { get; set; }
+     public TipoCurva TipoCurva { get; set; }
+     public Thickness MargenInicio { get; set; }
+     public Thickness MargenObjetivo { get; set; }
+     public Action EnFin { get; set; }
 }
