@@ -35,6 +35,12 @@
   "volumenGeneral": "General volume",
   "volumenMúsica": "Music volume",
   "volumenEfectos": "Effects volume",
+  "fácil": "Easy",
+  "normal": "Normal",
+  "difícil": "Hard",
+  "descripciónFácil": "(Do more damage, take less damage, heal more)",
+  "descripciónNormal": "(It's a hard game)",
+  "descripciónDifícil": "(No healing)",
 
   "tiempo": "Time",
   "enemigos": "Enemies",

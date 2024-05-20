@@ -53,6 +53,7 @@ public class InterfazJuego : SyncScript
     private TextBlock txtMuerteTiempo;
 
     private TextBlock txtFinalNivel;
+    private TextBlock txtDificultad;
     private TextBlock txtFinalTiempo;
     private TextBlock txtEnemigos;
     private TextBlock txtSecretos;
@@ -121,6 +122,7 @@ public class InterfazJuego : SyncScript
         // Datos finales
         txtMuerteTiempo = página.FindVisualChildOfType<TextBlock>("txtMuerteTiempo");
         txtFinalNivel = página.FindVisualChildOfType<TextBlock>("txtFinalNivel");
+        txtDificultad = página.FindVisualChildOfType<TextBlock>("txtDificultad");
         txtFinalTiempo = página.FindVisualChildOfType<TextBlock>("txtFinalTiempo");
         txtEnemigos = página.FindVisualChildOfType<TextBlock>("txtEnemigos");
         txtSecretos = página.FindVisualChildOfType<TextBlock>("txtSecretos");
@@ -491,11 +493,13 @@ public class InterfazJuego : SyncScript
 
         // Datos
         txtFinalNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
+        txtDificultad.Text = SistemaTraducción.ObtenerTraducción(SistemaMemoria.Dificiltad.ToString());
         txtFinalTiempo.Text = ControladorPartida.ObtenerTextoDuración();
         txtEnemigos.Text = ControladorPartida.ObtenerTextoEnemigos();
         txtSecretos.Text = ControladorPartida.ObtenerTextoSecretos();
 
         txtFinalNivel.Visibility = Visibility.Hidden;
+        txtDificultad.Visibility = Visibility.Hidden;
         panelFinal.Visibility = Visibility.Visible;
 
         SistemaSonidos.SonarPuerta();
@@ -521,6 +525,7 @@ public class InterfazJuego : SyncScript
         imgFinal.Opacity = 1;        
         panelDatosFinales.Visibility = Visibility.Visible;
         txtFinalNivel.Visibility = Visibility.Visible;
+        txtDificultad.Visibility = Visibility.Visible;
         imgDecoE.Visibility = Visibility.Visible;
         txtFinalE.Visibility = Visibility.Visible;
 
