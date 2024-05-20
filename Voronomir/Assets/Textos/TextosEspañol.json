@@ -2,7 +2,6 @@
   "nombreJuego": "Voronomir",
 
   "jugar": "Jugar",
-  "demo": "Demo",
   "reanudar": "Reanudar",
   "reiniciar": "Reiniciar",
   "reintentar": "Reintentar",
@@ -39,7 +38,7 @@
   "normal": "Normal",
   "difícil": "Difícil",
   "descripciónFácil": "(Haces más daño, recibes menos daño, te curas más)",
-  "descripciónNormal": "(Es un juego dificil)",
+  "descripciónNormal": "(Es un juego difícil)",
   "descripciónDifícil": "(Sin cura)",
 
   "tiempo": "Tiempo",
@@ -56,5 +55,11 @@
   "secreto": "Secreto revelado",
   "poderDaño": "Triple Daño",
   "poderInvulnerabilidad": "Invulnerabilidad",
-  "poderVelocidad": "Velocidad"
+  "poderVelocidad": "Velocidad",
+
+  "demo": "Demo",
+  "E1M1": "E1M1",
+  "E1M2": "E1M2",
+  "E1M3": "E1M3",
+  "E1M4": "E1M4"
 }

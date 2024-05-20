@@ -120,6 +120,22 @@ public class SistemaMemoria : StartupScript
         return File.Exists(rutaConfiguración);
     }
 
+    // Partidas
+    public static string ObtenerTiempo(Escenas escena)
+    {
+        return string.Empty;
+    }
+
+    public static string ObtenerEnemigos(Escenas escena)
+    {
+        return string.Empty;
+    }
+
+    public static string ObtenerSecretos(Escenas escena)
+    {
+        return string.Empty;
+    }
+
     // XOR
     private static string DesEncriptar(string texto)
     {

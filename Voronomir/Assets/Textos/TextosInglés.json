@@ -2,7 +2,6 @@
   "nombreJuego": "Voronomir",
 
   "jugar": "Play",
-  "demo": "Demo",
   "reanudar": "Resume",
   "reiniciar": "Restart",
   "reintentar": "Retry",
@@ -56,5 +55,11 @@
   "secreto": "Secret revealed",
   "poderDaño": "Triple Damage",
   "poderInvulnerabilidad": "Invulnerability",
-  "poderVelocidad": "Velocity"
+  "poderVelocidad": "Velocity",
+
+  "demo": "Demo",
+  "E1M1": "E1M1",
+  "E1M2": "E1M2",
+  "E1M3": "E1M3",
+  "E1M4": "E1M4"
 }

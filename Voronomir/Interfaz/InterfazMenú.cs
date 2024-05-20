@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;
@@ -22,6 +23,14 @@ public class InterfazMenú : StartupScript
     private Grid btnNormal;
     private Grid btnDifícil;
 
+    private Grid btnJugar;
+    private TextBlock txtTiempo;
+    private TextBlock txtEnemigos;
+    private TextBlock txtSecretos;
+
+    private Grid[] btnsMundo;
+
+    private Escenas escenaElegida;
     private bool animando;
 
     public override void Start()
@@ -41,6 +50,12 @@ public class InterfazMenú : StartupScript
         btnNormal = página.FindVisualChildOfType<Grid>("btnNormal");
         btnDifícil = página.FindVisualChildOfType<Grid>("btnDifícil");
 
+        txtTiempo = página.FindVisualChildOfType<TextBlock>("txtTiempo");
+        txtEnemigos = página.FindVisualChildOfType<TextBlock>("txtEnemigos");
+        txtSecretos = página.FindVisualChildOfType<TextBlock>("txtSecretos");
+
+        btnJugar = página.FindVisualChildOfType<Grid>("btnEpisodioJugar");
+
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnJugar"), EnClicJugar);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnOpciones"), EnClicOpciones);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSalir"), EnClicSalir);
@@ -48,15 +63,24 @@ public class InterfazMenú : StartupScript
         ConfigurarBotón(btnFácil, () => EnClicDificultad(Dificultades.fácil));
         ConfigurarBotón(btnNormal, () => EnClicDificultad(Dificultades.normal));
         ConfigurarBotón(btnDifícil, () => EnClicDificultad(Dificultades.difícil));
+
+        ConfigurarBotón(btnJugar, EnClicJugarEscena);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicVolver);
 
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDemo"), EnClicDemo);
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnEpisodio1"), null);
+        // Episodios
+        btnsMundo = página.FindVisualChildOfType<UniformGrid>("Mundos").FindVisualChildrenOfType<Grid>().Where(o => o.Name.Contains("btn")).ToArray();
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDemo"), () => ElegirEscena(Escenas.demo));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnE1M1"), () => ElegirEscena(Escenas.E1M1));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnE1M2"), () => ElegirEscena(Escenas.E1M2));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnE1M3"), () => ElegirEscena(Escenas.E1M3));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnE1M4"), () => ElegirEscena(Escenas.E1M4));
 
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnEpisodio1"), true);
-
+        // Predeterminado
+        ReiniciarEpisodios();
         EnClicDificultad(SistemaMemoria.Dificultad);
+        BloquearBotón(btnJugar, true);
 
+        título.Visibility = Visibility.Visible;
         menú.Visibility = Visibility.Visible;
         episodios.Visibility = Visibility.Hidden;
 
@@ -64,9 +88,21 @@ public class InterfazMenú : StartupScript
         Game.UpdateTime.Factor = 1;
     }
 
-    private void EnClicDemo()
+    private void ElegirEscena(Escenas escena)
     {
-        SistemaEscenas.CambiarEscena(Escenas.demo);
+        escenaElegida = escena;
+        ReiniciarEpisodios();
+
+        BloquearBotón(btnJugar, false);
+        txtTiempo.Text = SistemaMemoria.ObtenerTiempo(escenaElegida);
+        txtEnemigos.Text = SistemaMemoria.ObtenerEnemigos(escenaElegida);
+        txtSecretos.Text = SistemaMemoria.ObtenerSecretos(escenaElegida);
+    }
+
+    private void EnClicJugarEscena()
+    {
+        animando = true;
+        SistemaEscenas.CambiarEscena(escenaElegida);
     }
 
     private void EnClicJugar()
@@ -105,6 +141,7 @@ public class InterfazMenú : StartupScript
         {
             animando = false;
             episodios.Visibility = Visibility.Hidden;
+            ReiniciarEpisodios();
         });
     }
 
@@ -139,6 +176,26 @@ public class InterfazMenú : StartupScript
         animando = true;
         opciones.Visibility = Visibility.Visible;
         SistemaAnimación.AnimarElemento(animOpciones, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () => animando = false);
+    }
+
+    private void ReiniciarEpisodios()
+    {
+        BloquearBotón(btnJugar, true);
+
+        txtTiempo.Text = string.Empty;
+        txtEnemigos.Text = string.Empty;
+        txtSecretos.Text = string.Empty;
+
+        foreach(var botón in btnsMundo)
+        {
+            BloquearBotón(botón, false);
+        }
+
+        // PENDIENTE: asignar episodios
+        BloquearBotón(Entity.Get<UIComponent>().Page.RootElement.FindVisualChildOfType<Grid>("btnE1M1"), true);
+        BloquearBotón(Entity.Get<UIComponent>().Page.RootElement.FindVisualChildOfType<Grid>("btnE1M2"), true);
+        BloquearBotón(Entity.Get<UIComponent>().Page.RootElement.FindVisualChildOfType<Grid>("btnE1M3"), true);
+        BloquearBotón(Entity.Get<UIComponent>().Page.RootElement.FindVisualChildOfType<Grid>("btnE1M4"), true);
     }
 
     private void EnClicSalir()
