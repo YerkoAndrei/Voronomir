@@ -12,6 +12,11 @@ public static class Constantes
     // Custom1      - Proyectiles enemigos simples
     // Custom2      - Proyectiles enemigos persecutores
 
+    // Dificultades:
+    // Fácil        - Hace 25% más daño, recibe 25% menos daño, triple cura
+    // Normal       - El juego es bastante difícil
+    // Difícil      - Sin cura
+
     // Juego
     public enum Escenas
     {
@@ -93,7 +98,7 @@ public static class Constantes
         derecha
     }
 
-    public enum Dificultad
+    public enum Dificultades
     {
         fácil,
         normal,

@@ -17,6 +17,8 @@ public class SistemaMemoria : StartupScript
     private static string archivoConfiguración = "Configuración";
     private static string rutaConfiguración;
 
+    public static Dificultades Dificiltad = Dificultades.normal;
+
     public override void Start()
     {
         EstablecerRutas();

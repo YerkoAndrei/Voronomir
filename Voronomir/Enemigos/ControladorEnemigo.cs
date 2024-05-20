@@ -239,7 +239,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
             sonidoMorir.Pause();
         }
     }
-        
+
     public static float ObtenerDistanciaPersecuciónTrigonométrica(Enemigos enemigo)
     {
         // Radio = DistanciaAtaque - 1;

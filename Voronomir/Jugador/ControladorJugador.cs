@@ -100,14 +100,29 @@ public class ControladorJugador : SyncScript, IDañable
         if (curando || vida >= vidaMax || !movimiento.ObtenerEnSuelo() || armas.ObtenerAnimando())
             return;
 
+        // Dificultad
+        if (SistemaMemoria.Dificiltad == Dificultades.difícil)
+            return;
+
         curando = true;
         movimiento.Bloquear(true);
         armas.Bloquear(true);
         armas.AnimarSalida();
         await Task.Delay(200);
 
-        float vidaActual = vida;
-        float vidaCurada = MathUtil.Clamp(vida + 15, 0, vidaMax);
+        var vidaActual = vida;
+        var vidaCurada = vida;
+
+        // Dificultad
+        switch (SistemaMemoria.Dificiltad)
+        {
+            case Dificultades.fácil:
+                vidaCurada = MathUtil.Clamp(vida + 45, 0, vidaMax);
+                break;
+            case Dificultades.normal:
+                vidaCurada = MathUtil.Clamp(vida + 15, 0, vidaMax);
+                break;
+        }
 
         float duración = 1f;
         float tiempoLerp = 0;
@@ -154,6 +169,10 @@ public class ControladorJugador : SyncScript, IDañable
 
         if (ObtenerPoder(Poderes.invulnerabilidad))
             return;
+
+        // Dificultad
+        if (SistemaMemoria.Dificiltad == Dificultades.fácil)
+            daño *= 0.75f;
 
         vida -= daño;
         interfaz.ActualizarVida(vida / vidaMax);
