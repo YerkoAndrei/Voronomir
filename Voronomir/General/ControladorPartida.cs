@@ -104,6 +104,8 @@ public class ControladorPartida : SyncScript
     {
         activo = false;
         interfaz.Finalizar();
+
+        SistemaMemoria.GuardarMáximo(_escena, tiempo);
     }
 
     public static float ObtenerTiempo()

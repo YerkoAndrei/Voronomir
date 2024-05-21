@@ -225,10 +225,10 @@ public static class Utilidades
     public static string FormatearTiempo(float segundos)
     {
         var tiempo = TimeSpan.FromSeconds(segundos);
-        var formateado = tiempo.ToString(@"mm\:ss\:ff");
+        var formateado = tiempo.ToString(@"mm\:ss\:fff");
 
         if(tiempo.TotalHours > 1)
-            formateado = tiempo.ToString(@"hh\:mm\:ss\:ff");
+            formateado = tiempo.ToString(@"hh\:mm\:ss\:fff");
 
         return formateado;
     }

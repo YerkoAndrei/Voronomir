@@ -6,6 +6,7 @@ using Stride.Engine;
 using Newtonsoft.Json;
 
 namespace Voronomir;
+using static Utilidades;
 using static Constantes;
 
 public class SistemaMemoria : StartupScript
@@ -15,19 +16,25 @@ public class SistemaMemoria : StartupScript
     private static string producto = "Voronomir";
 
     private static string archivoConfiguración = "Configuración";
+    private static string archivoMáximos = "Máximos";
     private static string rutaConfiguración;
+    private static string rutaMáximos;
 
     public static Dificultades Dificultad;
 
     public override void Start()
     {
         EstablecerRutas();
+
+        // Dificultad
+        Dificultad = (Dificultades)Enum.Parse(typeof(Dificultades), ObtenerConfiguración(Configuraciones.dificultad));
     }
 
     private static void EstablecerRutas()
     {
         carpetaPersistente = string.Format(carpetaPersistente, Environment.UserName, desarrollador, producto);
         rutaConfiguración = Path.Combine(carpetaPersistente, archivoConfiguración);
+        rutaMáximos = Path.Combine(carpetaPersistente, archivoMáximos);
     }
 
     // Configuración
@@ -40,8 +47,6 @@ public class SistemaMemoria : StartupScript
 
         if (File.Exists(rutaConfiguración))
             return;
-
-        Dificultad = Dificultades.normal;
 
         // Guarda valores predeterminados
         var json = JsonConvert.SerializeObject(ObtenerConfiguraciónPredeterminada(ancho, alto));
@@ -121,19 +126,43 @@ public class SistemaMemoria : StartupScript
     }
 
     // Partidas
-    public static string ObtenerTiempo(Escenas escena)
+    public static void GuardarMáximo(Escenas escena, float segundos)
     {
-        return string.Empty;
+        var diccionarioTiempo = new Dictionary<string, float>();
+
+        // Lee archivo
+        if (File.Exists(rutaMáximos))
+        {
+            var archivo = File.ReadAllText(rutaMáximos);
+            var desencriptado = DesEncriptar(archivo);
+            diccionarioTiempo = JsonConvert.DeserializeObject<Dictionary<string, float>>(desencriptado);
+
+            // Solo tiempo menores
+            if (segundos >= diccionarioTiempo[escena.ToString()])
+                return;
+        }
+
+        // Sobreescribe nuevo máximo
+        diccionarioTiempo[escena.ToString()] = segundos;
+        var json = JsonConvert.SerializeObject(diccionarioTiempo);
+        var encriptado = DesEncriptar(json);
+        File.WriteAllText(rutaMáximos, encriptado);
     }
 
-    public static string ObtenerEnemigos(Escenas escena)
+    public static string ObtenerMáximo(Escenas escena)
     {
-        return string.Empty;
-    }
+        // Lee archivo
+        if (!File.Exists(rutaMáximos))
+            return string.Empty;
 
-    public static string ObtenerSecretos(Escenas escena)
-    {
-        return string.Empty;
+        var archivo = File.ReadAllText(rutaMáximos);
+        var desencriptado = DesEncriptar(archivo);
+        var diccionarioTiempo = JsonConvert.DeserializeObject<Dictionary<string, float>>(desencriptado);
+
+        if(!diccionarioTiempo.ContainsKey(escena.ToString()))
+            return string.Empty;
+
+        return FormatearTiempo(diccionarioTiempo[escena.ToString()]);
     }
 
     // XOR
