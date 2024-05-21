@@ -47,8 +47,9 @@ public class AnimadorArmas : AsyncScript
     private Vector3 tamañoFuegoDerecha;
 
     private ControladorArmas controlador;
-    private CancellationTokenSource tokenEspadaIzquierda;
-    private CancellationTokenSource tokenEspadaDerecha;
+    private CancellationTokenSource tokenDisparo;
+    private CancellationTokenSource tokenIzquierda;
+    private CancellationTokenSource tokenDerecha;
 
     public void Iniciar(ControladorArmas _controlador)
     {
@@ -61,8 +62,9 @@ public class AnimadorArmas : AsyncScript
         // Animación movimiento
         bajando = true;
         activa = false;
-        tokenEspadaIzquierda = new CancellationTokenSource();
-        tokenEspadaDerecha = new CancellationTokenSource();
+        tokenDisparo = new CancellationTokenSource();
+        tokenIzquierda = new CancellationTokenSource();
+        tokenDerecha = new CancellationTokenSource();
 
         centroIzquierda = modeloIzquierda.Entity.Transform.Rotation;
         centroDerecha = modeloDerecha.Entity.Transform.Rotation;
@@ -196,6 +198,8 @@ public class AnimadorArmas : AsyncScript
     public async void AnimarSalidaArma()
     {
         activa = false;
+        CancelarAnimaciones();
+
         var rotaciónSale = Quaternion.RotationX(MathUtil.DegreesToRadians(-60));
         var pocisiónSalida = Vector3.UnitZ * -0.1f;
 
@@ -258,11 +262,15 @@ public class AnimadorArmas : AsyncScript
         }
 
         // Evita repetición de animación
+        var token = tokenDisparo.Token;
         switch (tipoDisparo)
         {
             case TipoDisparo.espejo:
                 while (tiempoLerpIzquierda < duración)
                 {
+                    if (token.IsCancellationRequested)
+                        return;
+
                     tiempoIzquierda = SistemaAnimación.EvaluarSuave(tiempoLerpIzquierda / duración);
                     ejeIzquierda.Position = Vector3.Lerp(posiciónDisparoIzquierda, posiciónInicialIzquierda, tiempoIzquierda);
                     ejeDerecha.Position = Vector3.Lerp(posiciónDisparoDerecha, posiciónInicialDerecha, tiempoIzquierda);
@@ -271,8 +279,15 @@ public class AnimadorArmas : AsyncScript
                 }
                 break;
             case TipoDisparo.izquierda:
+                tokenIzquierda.Cancel();
+                tokenIzquierda = new CancellationTokenSource();
+
+                var tokenIzq = tokenIzquierda.Token;
                 while (tiempoLerpIzquierda < duración)
                 {
+                    if (token.IsCancellationRequested || tokenIzq.IsCancellationRequested)
+                        return;
+
                     tiempoIzquierda = SistemaAnimación.EvaluarSuave(tiempoLerpIzquierda / duración);
                     ejeIzquierda.Position = Vector3.Lerp(posiciónDisparoIzquierda, posiciónInicialIzquierda, tiempoIzquierda);
                     tiempoLerpIzquierda += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
@@ -280,8 +295,15 @@ public class AnimadorArmas : AsyncScript
                 }
                 break;
             case TipoDisparo.derecha:
+                tokenDerecha.Cancel();
+                tokenDerecha = new CancellationTokenSource();
+
+                var tokenDer = tokenDerecha.Token;
                 while (tiempoLerpDerecha < duración)
                 {
+                    if (token.IsCancellationRequested || tokenDer.IsCancellationRequested)
+                        return;
+
                     tiempoDerecha = SistemaAnimación.EvaluarSuave(tiempoLerpDerecha / duración);
                     ejeDerecha.Position = Vector3.Lerp(posiciónDisparoDerecha, posiciónInicialDerecha, tiempoDerecha);
                     tiempoLerpDerecha += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
@@ -417,31 +439,27 @@ public class AnimadorArmas : AsyncScript
         partículasIzquierda.Enabled = true;
         partículasDerecha.Enabled = true;
 
+        // Cancela animación
+        tokenIzquierda.Cancel();
+        tokenDerecha.Cancel();
+        tokenIzquierda = new CancellationTokenSource();
+        tokenDerecha = new CancellationTokenSource();
+
         switch (tipoDisparo)
         {
             case TipoDisparo.izquierda:
-                // Cancela ataque
-                tokenEspadaIzquierda.Cancel();
-                tokenEspadaIzquierda = new CancellationTokenSource();
-
                 AnimarEspada(ejeIzquierda, rotaciónAtaqueIzquierda, 0.12f);
-
-                var tokenIzq = tokenEspadaIzquierda.Token;
+                var tokenIzq = tokenIzquierda.Token;
                 if (!tokenIzq.IsCancellationRequested)
-                    await Task.Delay(80);
+                    await Task.Delay(100);
 
                 AnimarEspada(ejeDerecha, rotaciónAtaqueDerecha, 0.12f);
                 break;
             case TipoDisparo.derecha:
-                // Cancela ataque
-                tokenEspadaDerecha.Cancel();
-                tokenEspadaDerecha = new CancellationTokenSource();
-
                 AnimarEspada(ejeDerecha, rotaciónAtaqueDerecha, 0.12f);
-
-                var tokenDer = tokenEspadaDerecha.Token;
+                var tokenDer = tokenDerecha.Token;
                 if (!tokenDer.IsCancellationRequested)
-                    await Task.Delay(80);
+                    await Task.Delay(100);
 
                 AnimarEspada(ejeIzquierda, rotaciónAtaqueIzquierda, 0.12f);
                 break;
@@ -459,8 +477,8 @@ public class AnimadorArmas : AsyncScript
         float tiempoLerp = 0;
         float tiempo = 0;
 
-        var tokenIzq = tokenEspadaIzquierda.Token;
-        var tokenDer = tokenEspadaDerecha.Token;
+        var tokenIzq = tokenIzquierda.Token;
+        var tokenDer = tokenDerecha.Token;
         while (tiempoLerp < duración)
         {
             if ((tokenIzq.IsCancellationRequested && espada == ejeIzquierda) ||
@@ -474,5 +492,16 @@ public class AnimadorArmas : AsyncScript
             await Task.Delay(1);
         }
         espada.Rotation = Quaternion.Identity;
+    }
+
+    private void CancelarAnimaciones()
+    {
+        tokenDisparo.Cancel();
+        tokenIzquierda.Cancel();
+        tokenDerecha.Cancel();
+
+        tokenDisparo = new CancellationTokenSource();
+        tokenIzquierda = new CancellationTokenSource();
+        tokenDerecha = new CancellationTokenSource();
     }
 }

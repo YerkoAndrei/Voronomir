@@ -260,13 +260,13 @@ public class ControladorArmas : StartupScript
                 // Metralleta se vuelve impresisa según calentamiento
                 CalcularRayo(((tiempoMaxMetralleta - tempoMetralleta) / tiempoMaxMetralleta) * 0.1f);
                 ActivarLuz();
-                animadorMetralleta.AnimarDisparo(0.1f, 0.09f, turnoMetralleta);
+                animadorMetralleta.AnimarDisparo(0.1f, 0.1f, turnoMetralleta);
                 últimoDisparoMetralleta = ControladorPartida.ObtenerTiempo();
                 break;
             case Armas.rifle:
                 movimiento.DetenerMovimiento();
                 CalcularRayoPenetrante();
-                controlador.VibrarCámara(20, 12);
+                controlador.VibrarCámara(20, 14);
                 ActivarLuz();
                 animadorRife.AnimarDisparo(2f, 0.4f, TipoDisparo.espejo);
                 últimoDisparoRifle = ControladorPartida.ObtenerTiempo();

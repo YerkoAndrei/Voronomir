@@ -14,7 +14,7 @@ public static class Constantes
 
     // Dificultades:
     // Fácil        - Hace 25% más daño, recibe 25% menos daño, triple cura
-    // Normal       - El juego es bastante difícil
+    // Normal       - El juego debería ser bastante difícil
     // Difícil      - Sin cura
 
     // Juego
