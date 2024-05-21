@@ -175,7 +175,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: b95240ff-2842-485d-9d0c-77f7cb0c2f30
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter3
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0

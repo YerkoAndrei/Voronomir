@@ -3,7 +3,7 @@
 public static class Constantes
 {
     // Filtros:
-    // Default      - Disparos jugador, daño ambiente
+    // Default      - Disparos jugador
     // Static       - Entorno
     // Kinematic    - Enemigos (navegación y dañable)
     // Debris       - Escombros, muertos
@@ -11,6 +11,7 @@ public static class Constantes
     // Character    - Jugador
     // Custom1      - Proyectiles enemigos simples
     // Custom2      - Proyectiles enemigos persecutores
+    // Custom3      - Daño contínuo
 
     // Dificultades:
     // Fácil        - Hace 25% más daño, recibe 25% menos daño, triple cura

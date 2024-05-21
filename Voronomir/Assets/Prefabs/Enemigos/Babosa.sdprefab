@@ -85,7 +85,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: 542a3a24-2b94-4dd7-a4ee-782c88e45c9a
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter3
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -241,9 +241,9 @@ Hierarchy:
                 Components:
                     1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
                         Id: 0140fde5-d500-4f7c-ae52-6df913e6c508
-                        Position: {X: 0.0, Y: 0.6, Z: -0.07}
+                        Position: {X: 0.0, Y: 0.5, Z: -0.07}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.4, Y: 0.9, Z: 0.8}
+                        Scale: {X: 1.4, Y: 1.0, Z: 0.8}
                         Children: {}
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: fcaa9200-384e-431c-8afa-1d5e4c93c294
