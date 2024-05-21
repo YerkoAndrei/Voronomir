@@ -204,13 +204,7 @@ public class InterfazJuego : SyncScript
         }
 
         if (ControladorPartida.ObtenerActivo() && panelDatos.Visibility == Visibility.Visible)
-        {
-            txtPosición.Text = "P " + ControladorPartida.ObtenerPosiciónJugador().ToString("n3");
-            txtTiempo.Text = "T " + FormatearTiempo(ControladorPartida.ObtenerTiempo());
-            txtVelocidad.Text = "V " + (ControladorPartida.ObtenerVelocidad() * 10).ToString("n3");
-            txtAceleración.Text = "A " + ControladorPartida.ObtenerAceleración().ToString("n3");
-            txtFPS.Text = "C " + Game.UpdateTime.FramePerSecond.ToString("000");
-        }
+            ActualizarDatos();
     }
 
     private void Pausar()
@@ -491,7 +485,10 @@ public class InterfazJuego : SyncScript
         ControladorPartida.Pausar(false);
         BloquearInterfaz(false);
 
-        // Datos
+        if (panelDatos.Visibility == Visibility.Visible)
+            ActualizarDatos();
+
+        // Datos final
         txtFinalNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
         txtDificultad.Text = SistemaTraducción.ObtenerTraducción(SistemaMemoria.Dificultad.ToString());
         txtFinalTiempo.Text = ControladorPartida.ObtenerTextoDuración();
@@ -532,5 +529,14 @@ public class InterfazJuego : SyncScript
         BloquearBotón(btnContinuar, false);
         BloquearBotón(btnFinalSalir, false);
         SistemaSonidos.SonarFinalizar();
+    }
+
+    private void ActualizarDatos()
+    {
+        txtPosición.Text = "P " + ControladorPartida.ObtenerPosiciónJugador().ToString("n3");
+        txtTiempo.Text = "T " + FormatearTiempo(ControladorPartida.ObtenerTiempo());
+        txtVelocidad.Text = "V " + (ControladorPartida.ObtenerVelocidad() * 10).ToString("n3");
+        txtAceleración.Text = "A " + ControladorPartida.ObtenerAceleración().ToString("n3");
+        txtFPS.Text = "C " + Game.UpdateTime.FramePerSecond.ToString("000");
     }
 }
