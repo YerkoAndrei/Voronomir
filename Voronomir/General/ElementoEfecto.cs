@@ -21,6 +21,7 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
 
     // Efectos entorno
     public ParticleSystemComponent aparición;
+    public ParticleSystemComponent lava;
     public AudioEmitterComponent emisor;
 
     private AudioEmitterSoundController sonidoAparición;
@@ -176,6 +177,33 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
 
         ActualizarVolumen();
         sonidoAparición.PlayAndForget();
+    }
+
+    public void IniciarEfectoDañoContinuo(Armas arma, Vector3 posición, Vector3 normal)
+    {
+        Apagar();
+        switch (arma)
+        {
+            case Armas.espada:
+                lava.Entity.Transform.Scale = Vector3.One * 0.1f;
+                break;
+            case Armas.escopeta:
+                lava.Entity.Transform.Scale = Vector3.One * 0.14f;
+                break;
+            case Armas.metralleta:
+                lava.Entity.Transform.Scale = Vector3.One * 0.2f;
+                break;
+            case Armas.rifle:
+                lava.Entity.Transform.Scale = Vector3.One * 0.4f;
+                break;
+            case Armas.lanzagranadas:
+                lava.Entity.Transform.Scale = Vector3.One * 0.6f;
+                break;
+        }
+
+        lava.Enabled = true;
+        lava.ParticleSystem.ResetSimulation();
+        Entity.Transform.Position = posición + (normal * 0.01f);
     }
 
     private void Apagar()

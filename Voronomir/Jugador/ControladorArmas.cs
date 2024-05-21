@@ -81,7 +81,8 @@ public class ControladorArmas : StartupScript
                             CollisionFilterGroupFlags.KinematicFilter | 
                             CollisionFilterGroupFlags.SensorTrigger |
                             CollisionFilterGroupFlags.CustomFilter1 |
-                            CollisionFilterGroupFlags.CustomFilter2;
+                            CollisionFilterGroupFlags.CustomFilter2 |
+                            CollisionFilterGroupFlags.CustomFilter3;
 
         rayosMelé = new Vector3[3]
         {
@@ -310,6 +311,12 @@ public class ControladorArmas : StartupScript
             return;
         }
 
+        if (resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter3)
+        {
+            ControladorCofres.IniciarEfectoDañoContinuo(armaActual, resultado.Point, resultado.Normal);
+            return;
+        }
+
         var dañable = resultado.Collider.Entity.Get<ElementoDañable>();
         if (dañable == null)
             return;
@@ -359,6 +366,12 @@ public class ControladorArmas : StartupScript
                     ActivarBotón(resultado.Collider);
 
                 ControladorCofres.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal, !sensor);
+                return;
+            }
+
+            if (resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter3)
+            {
+                ControladorCofres.IniciarEfectoDañoContinuo(armaActual, resultado.Point, resultado.Normal);
                 return;
             }
 
@@ -426,6 +439,7 @@ public class ControladorArmas : StartupScript
 
         // 3 rayos
         // Distancia máxima de disparo: 2
+        var entorno = true;
         var posición = Vector3.Zero;
         var normal = Vector3.Zero;
         foreach (var posiciónRayo in direccionRayos)
@@ -474,11 +488,24 @@ public class ControladorArmas : StartupScript
             {
                 posición = resultado.Point;
                 normal = resultado.Normal;
+                entorno = true;
+            }
+            // Lava
+            else if (resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter3)
+            {
+                posición = resultado.Point;
+                normal = resultado.Normal;
+                entorno = false;
             }
         }
 
         if (posición != Vector3.Zero && normal != Vector3.Zero)
-            ControladorCofres.IniciarEfectoEntorno(armaActual, posición, normal, true);
+        {
+            if(entorno)
+                ControladorCofres.IniciarEfectoEntorno(armaActual, posición, normal, true);
+            else
+                ControladorCofres.IniciarEfectoDañoContinuo(armaActual, posición, normal);
+        }
     }
 
     private void EnfriarMetralleta()

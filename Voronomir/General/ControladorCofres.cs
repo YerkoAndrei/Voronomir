@@ -269,6 +269,17 @@ public class ControladorCofres : StartupScript
             efectoActual = 0;
     }
 
+    public static void IniciarEfectoDañoContinuo(Armas arma, Vector3 posición, Vector3 normal)
+    {
+        // Lava
+        efectos[efectoActual].IniciarEfectoDañoContinuo(arma, posición, normal);
+        efectoActual++;
+
+        if (efectoActual >= maxEfectos)
+            efectoActual = 0;
+    }
+
+    // Granada
     public static void IniciarGranada(float daño, float velocidad, Vector3 posición, Quaternion rotación)
     {
         granadas[granadaActual].Iniciar(daño, velocidad, rotación, posición, Enemigos.nada);

@@ -4693,7 +4693,7 @@ Hierarchy:
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
                         Id: abaf8e24-4516-4d42-a487-e58dca762af0
                         CollisionGroup: CustomFilter3
-                        CanCollideWith: KinematicFilter, CharacterFilter
+                        CanCollideWith: DefaultFilter, KinematicFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
