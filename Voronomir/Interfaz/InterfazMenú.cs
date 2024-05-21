@@ -128,10 +128,9 @@ public class InterfazMenú : StartupScript
 
     private void EnClicDificultad(Dificultades dificultad)
     {
-        txtDescripciónDificultad.Text = SistemaTraducción.ObtenerTraducción("descripción" + Capitalizar(dificultad.ToString()));
-
         SistemaMemoria.GuardarConfiguración(Configuraciones.dificultad, dificultad.ToString());
         SistemaMemoria.Dificultad = dificultad;
+        Traducir();
 
         BloquearBotón(btnFácil, false);
         BloquearBotón(btnNormal, false);
@@ -149,6 +148,11 @@ public class InterfazMenú : StartupScript
                 BloquearBotón(btnDifícil, true);
                 break;
         }
+    }
+
+    public void Traducir()
+    {
+        txtDescripciónDificultad.Text = SistemaTraducción.ObtenerTraducción("descripción" + Capitalizar(SistemaMemoria.Dificultad.ToString()));
     }
 
     private void EnClicOpciones()

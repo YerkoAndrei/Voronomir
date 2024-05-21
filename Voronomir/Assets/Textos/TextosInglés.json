@@ -16,6 +16,7 @@
   "no": "No",
 
   "idioma": "Languaje",
+  "dificultad": "Difficulty",
   "gráficos": "Graphics",
   "sonidos": "Sounds",
   "juego": "Game",
@@ -38,7 +39,7 @@
   "normal": "Normal",
   "difícil": "Hard",
   "descripciónFácil": "(Do more damage, take less damage, heal more)",
-  "descripciónNormal": "(It's a hard game)",
+  "descripciónNormal": "(It's a hard journey)",
   "descripciónDifícil": "(No healing)",
 
   "tiempo": "Time",

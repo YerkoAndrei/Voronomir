@@ -75,6 +75,11 @@ Hierarchy:
                             2b06cf241702a2a782b65f84e12fd138~txtDemo: demo
                             580376c59f15491a2db4e16c5ef42255~txtOpciones: opciones
                             0b951165878e8b0777498448bfcfb103~txtSalir: salir
+                            8c1a7e0dc68623fd8e1fc052adf5c68e~txtVolver: volver
+                            "e92a484a8f550446a2616f86cd5227a1~txtFácil": "fácil"
+                            1458db74e71f0f15c7f8dfa9f1f2f2b6~txtNormal: normal
+                            "154d757cde4c0f598328d56b4bbfea05~txtDifícil": "difícil"
+                            3f72d46676e0dc063b4650a2ca5c6214~txtDificultad: dificultad
                     f6016bf12254140d4fb94d3bcaee2853: !Voronomir.InterfazTraducciones,Voronomir.Proyecto
                         Id: 5f99dc94-dcb1-4398-a617-3eb834e8a8ac
                         "códigos":

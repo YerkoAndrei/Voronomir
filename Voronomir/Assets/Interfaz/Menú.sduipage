@@ -211,6 +211,7 @@ Hierarchy:
                 Id: 03b6adce-cd8a-45d5-be91-5ca4870a8f97
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -2234,6 +2235,7 @@ Hierarchy:
                 Id: 2fa06ede-a99b-46aa-a4fb-312c36462e37
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -7351,7 +7353,6 @@ Hierarchy:
                 Id: 96c00c94-7eb6-4ea3-b1bd-1e0eb111df4b
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Visibility: Hidden
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -7360,6 +7361,7 @@ Hierarchy:
                 Children:
                     3899237d96cb8d64dbdd4e534390d6de: !UniformGrid ref!! e60b4586-7c91-4639-abac-1dce722cedba
                     f136a0e6ac2808229692c0ba44113410: !UniformGrid ref!! b382c307-2fa0-4c78-9fff-6a0cd76bfe16
+                    352e59bba95e0cb5e3da68337aaa8a81: !TextBlock ref!! a4743ca8-2622-49e5-bfa4-f750ebf4e343
                     3a513889d7c1f7e769606647054eff31: !TextBlock ref!! e61f528b-73cb-4889-b2f2-8106922d85bb
                     a4e9f12b36aec31f0783b48bb1905fd8: !Grid ref!! fcd27c1d-aec7-4608-b66e-f3866f6ea0ad
                 RowDefinitions: {}
@@ -8035,6 +8037,22 @@ Hierarchy:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: 1c5b8360-5fd6-4046-95fc-e5f9a459d4b5
                 InstanceId: 7d749f2c-a02b-4773-abf9-045c80ee6b5e
+        -   UIElement: !TextBlock
+                Id: a4743ca8-2622-49e5-bfa4-f750ebf4e343
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 1280.0
+                Height: 20.0
+                Margin: {Bottom: 680.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtDificultad
+                Text: Dificultad
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
+                TextSize: 25.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextAlignment: Center
         -   UIElement: !Grid
                 Id: a5a5cf26-92c7-4e5d-a50a-e519a095d42c
                 DependencyProperties:
@@ -8736,7 +8754,7 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 1000.0
                 Height: 0.0
-                Margin: {Bottom: 600.0}
+                Margin: {Bottom: 500.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -11229,7 +11247,7 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 1000.0
                 Height: 400.0
-                Margin: {}
+                Margin: {Top: 50.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -11253,7 +11271,7 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 1280.0
                 Height: 20.0
-                Margin: {Bottom: 480.0}
+                Margin: {Bottom: 620.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38

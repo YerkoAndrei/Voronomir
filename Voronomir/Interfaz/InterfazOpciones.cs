@@ -253,6 +253,11 @@ public class InterfazOpciones : StartupScript
 
         // Configuraciones con cultura
         txtSensibilidadActual.Text = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad), CultureInfo.InvariantCulture).ToString("n2", SistemaTraducción.Cultura);
+
+        // Traduce menú
+        var menú = Entity.Scene.Entities.Where(o => o.Get<InterfazMenú>() != null).FirstOrDefault();
+        if (menú != null)
+            menú.Get<InterfazMenú>().Traducir();
     }
 
     private void ConfigurarVolumenGeneral(object sender, RoutedEventArgs e)
