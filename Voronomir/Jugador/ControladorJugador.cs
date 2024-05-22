@@ -56,7 +56,7 @@ public class ControladorJugador : SyncScript, IDañable
         armas.Iniciar(this, movimiento, cámara, interfaz);
 
         tokenVibración = new CancellationTokenSource();
-        tokenCura= new CancellationTokenSource();
+        tokenCura = new CancellationTokenSource();
         posiciónCabeza = cabeza.Position;
 
         llaveAzul = false;
@@ -128,7 +128,7 @@ public class ControladorJugador : SyncScript, IDañable
         float tiempoLerp = 0;
         float tiempo = 0;
 
-        var token = tokenVibración.Token;
+        var token = tokenCura.Token;
         while (tiempoLerp < duración)
         {
             // Recibir daño cancela cura
