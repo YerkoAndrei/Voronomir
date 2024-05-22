@@ -278,7 +278,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                 data.VelocidadMovimiento = 7;
                 data.VelocidadRotación = 6;
                 data.DistanciaSonido = 10;
-                data.TiempoBusqueda = 1;
+                data.TiempoBusqueda = RangoAleatorio(0.1f, 0.4f);
 
                 data.PreparaciónMelé = 0.25f;
                 break;
@@ -302,7 +302,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                 data.VelocidadMovimiento = 10;
                 data.VelocidadRotación = 2;
                 data.DistanciaSonido = 20;
-                data.TiempoBusqueda = 0.5f;
+                data.TiempoBusqueda = 0.1f;
 
                 data.PreparaciónMelé = 0.2f;
             break;
@@ -331,7 +331,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                 data.VelocidadMovimiento = 2;
                 data.VelocidadRotación = 3;
                 data.DistanciaSonido = 15;
-                data.TiempoBusqueda = 0.5f;
+                data.TiempoBusqueda = 0.2f;
 
                 data.VelocidadProyectil = 10;
                 data.RotaciónProyectil = 5;
@@ -345,7 +345,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                 data.VelocidadMovimiento = 8;
                 data.VelocidadRotación = 6;
                 data.DistanciaSonido = 20;
-                data.TiempoBusqueda = 0.5f;
+                data.TiempoBusqueda = 0.2f;
 
                 data.VelocidadProyectil = 25;
                 data.AlturaObjetivo = Vector3.UnitY * 0.33f;
@@ -360,7 +360,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                 data.VelocidadMovimiento = 16;
                 data.VelocidadRotación = 0;
                 data.DistanciaSonido = 10;
-                data.TiempoBusqueda = 1;
+                data.TiempoBusqueda = 0.1f;
                 data.PersecutorTrigonométrico = true;
 
                 data.VelocidadProyectil = 15;
@@ -376,7 +376,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                 data.VelocidadMovimiento = 10;
                 data.VelocidadRotación = 4;
                 data.DistanciaSonido = 15;
-                data.TiempoBusqueda = 1;
+                data.TiempoBusqueda = 0.1f;
                 data.PersecutorTrigonométrico = true;
 
                 data.DistanciaAtaque = 4;
