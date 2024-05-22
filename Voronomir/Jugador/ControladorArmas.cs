@@ -315,16 +315,19 @@ public class ControladorArmas : StartupScript
 
         if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
         {
+            // Botón
             var sensor = resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger;
             if (sensor)
                 ActivarBotón(resultado.Collider);
 
+            // Efecto entorno
             ControladorCofres.IniciarEfectoEntorno(armaActual, resultado.Point, resultado.Normal, !sensor);
             return;
         }
 
         if (resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter3)
         {
+            // Efecto lava
             ControladorCofres.IniciarEfectoDañoContinuo(armaActual, resultado.Point, resultado.Normal);
             return;
         }
@@ -373,6 +376,7 @@ public class ControladorArmas : StartupScript
         {
             if (resultado.Collider.CollisionGroup == CollisionFilterGroups.StaticFilter || resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger)
             {
+                // Botón
                 var sensor = resultado.Collider.CollisionGroup == CollisionFilterGroups.SensorTrigger;
                 if (sensor)
                     ActivarBotón(resultado.Collider);
@@ -383,6 +387,7 @@ public class ControladorArmas : StartupScript
 
             if (resultado.Collider.CollisionGroup == CollisionFilterGroups.CustomFilter3)
             {
+                // Efecto entorno
                 ControladorCofres.IniciarEfectoDañoContinuo(armaActual, resultado.Point, resultado.Normal);
                 return;
             }
