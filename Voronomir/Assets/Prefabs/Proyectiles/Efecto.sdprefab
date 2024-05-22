@@ -339,8 +339,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            VelocityMin: {X: -3.0, Y: 2.0, Z: -3.0}
-                                            VelocityMax: {X: 3.0, Y: 4.0, Z: 3.0}
+                                            VelocityMin: {X: -3.0, Y: 1.0, Z: -3.0}
+                                            VelocityMax: {X: 3.0, Y: 6.0, Z: 3.0}
                                         2c19c8de711ac0a342f89bccb2476422: !InitialRotationSeed
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -537,29 +537,6 @@ Hierarchy:
                                             DisplayParticleScaleUniform: false
                                             AngularRotation: {X: -360.0, Y: 360.0}
                                     Updaters:
-                                        75b073a481ac7c5736754d17befa5b44: !UpdaterForceField
-                                            InheritPosition: true
-                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                                            InheritRotation: true
-                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                            InheritScale: true
-                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                                            ScaleUniform: 1.0
-                                            DisplayParticlePosition: true
-                                            FieldShape: null
-                                            DisplayParticleRotation: true
-                                            DisplayParticleScale: true
-                                            DisplayParticleScaleUniform: false
-                                            FieldFalloff:
-                                                StrengthInside: 1.0
-                                                FalloffStart: 0.1
-                                                StrengthOutside: 1.0
-                                                FalloffEnd: 0.9
-                                            EnergyConservation: 1.0
-                                            ForceDirected: 0.0
-                                            ForceVortex: 0.0
-                                            ForceRepulsive: 0.0
-                                            ForceFixed: {X: 0.0, Y: -4.0, Z: 0.0}
                                         519e69f8366514ed595aee0b7374e7ee: !UpdaterSizeOverTime
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -943,7 +920,7 @@ Hierarchy:
                                             LoopCondition: OneShot
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 40
+                                            SpawnCount: 64
                                     Initializers:
                                         ee72ebc2f93cf12825ea2538a284a63f: !InitialSizeSeed
                                             InheritPosition: true

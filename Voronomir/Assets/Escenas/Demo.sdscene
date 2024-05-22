@@ -6762,7 +6762,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: 606a17c9-924a-4512-8e4f-49eb8341921d
                         CollisionGroup: CharacterFilter
-                        CanCollideWith: CustomFilter1, CustomFilter2, CustomFilter3
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter3
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0

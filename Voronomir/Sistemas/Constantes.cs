@@ -3,7 +3,7 @@
 public static class Constantes
 {
     // Filtros:
-    // Default      - Disparos jugador
+    // Default      - Disparos jugador, explosiones
     // Static       - Entorno
     // Kinematic    - Enemigos (navegación y dañable)
     // Debris       - Escombros, muertos
