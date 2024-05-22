@@ -185,22 +185,30 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
 
     private async void MarcarMuerte()
     {
-        // PENDIENTE: objeto físico o ragdoll
+        // Efecto y cuerpo
+        ControladorCofres.IniciarEfectoMuerte(enemigo, Entity.Transform.WorldMatrix.TranslationVector);
 
-        // Efecto
-        ControladorCofres.IniciarEfectoMuerte(enemigo,Entity.Transform.WorldMatrix.TranslationVector);
+        // Dron no deja marca
+        if (enemigo == Enemigos.especialLigero)
+            return;
 
-        // Rayo para crear marca
+        // Marcas
         var inicioRayo = Entity.Transform.WorldMatrix.TranslationVector + (Vector3.UnitY * 0.5f);
-        var dirección = inicioRayo - Vector3.UnitY;
-        var resultado = this.GetSimulation().Raycast(inicioRayo,
-                                                     dirección,
-                                                     CollisionFilterGroups.DefaultFilter,
-                                                     CollisionFilterGroupFlags.StaticFilter);
-        await Task.Delay(200);
+        for (int i = 0; i < 3; i++)
+        {
+            await Task.Delay(100);
+            var tamaño = RangoAleatorio(0.2f, 1f);
+            inicioRayo.X += RangoAleatorio(-0.6f, 0.6f);
+            inicioRayo.Z += RangoAleatorio(-0.6f, 0.6f);
 
-        if (resultado.Succeeded)
-            ControladorCofres.IniciarEfectoEntornoMuerte(enemigo, resultado.Point, resultado.Normal);
+            // Rayo para crear marca
+            var dirección = inicioRayo - Vector3.UnitY;
+            var resultado = this.GetSimulation().Raycast(inicioRayo, dirección,
+                                                         CollisionFilterGroups.DefaultFilter,
+                                                         CollisionFilterGroupFlags.StaticFilter);
+            if (resultado.Succeeded)
+                ControladorCofres.IniciarEfectoEntornoMuerte(enemigo, tamaño, resultado.Point, resultado.Normal);
+        }
     }
 
     public void ActualizarVolumen()

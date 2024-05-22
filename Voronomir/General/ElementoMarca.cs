@@ -55,39 +55,39 @@ public class ElementoMarca : StartupScript
         Entity.Transform.Rotation = Quaternion.LookRotation(normal, posición);
     }
 
-    public void IniciarMarcaMuerte(Enemigos enemigo, Vector3 posición, Vector3 normal)
+    public void IniciarMarcaMuerte(Enemigos enemigo, float multiplicador, Vector3 posición, Vector3 normal)
     {
         var crear = true;
         switch (enemigo)
         {
             case Enemigos.meléLigero:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = Vector3.One * 0.15f;
+                textura.Entity.Transform.Scale = multiplicador * Vector3.One * 0.15f;
                 textura.Color = new Color(100, 0, 0, 200);
                 break;
             case Enemigos.meléMediano:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = Vector3.One * 0.15f;
+                textura.Entity.Transform.Scale = multiplicador * Vector3.One * 0.15f;
                 textura.Color = new Color(100, 0, 0, 200);
                 break;
             case Enemigos.meléPesado:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = Vector3.One * 0.25f;
+                textura.Entity.Transform.Scale = multiplicador * Vector3.One * 0.25f;
                 textura.Color = new Color(100, 0, 0, 200);
                 break;
             case Enemigos.rangoLigero:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = Vector3.One * 0.1f;
+                textura.Entity.Transform.Scale = multiplicador * Vector3.One * 0.1f;
                 textura.Color = new Color(0, 100, 0, 200);
                 break;
             case Enemigos.rangoMediano:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = Vector3.One * 0.2f;
+                textura.Entity.Transform.Scale = multiplicador * Vector3.One * 0.2f;
                 textura.Color = new Color(100, 0, 0, 200);
                 break;
             case Enemigos.rangoPesado:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = Vector3.One * 0.25f;
+                textura.Entity.Transform.Scale = multiplicador * Vector3.One * 0.25f;
                 textura.Color = new Color(0, 100, 0, 200);
                 break;
             case Enemigos.especialLigero:
@@ -97,7 +97,7 @@ public class ElementoMarca : StartupScript
                 break;
             case Enemigos.especialPesado:
                 textura.SpriteProvider = ObtenerSprite(marcaFuerte);
-                textura.Entity.Transform.Scale = Vector3.One * 0.15f;
+                textura.Entity.Transform.Scale = multiplicador * Vector3.One * 0.15f;
                 textura.Color = new Color(0, 0, 100, 200);
                 break;
         }

@@ -74,7 +74,7 @@ public class ControladorCofres : StartupScript
         cofreEnemigos = new Vector3(-13, -10, 0);
 
         // Cofre jugador / efectos
-
+        // PENDIENTE: configurar cantidad efectos
         //switch (SistemaMemoria.ObtenerConfiguración(Configuraciones.efectos))
         maxMarcas = 100;
         maxEfectos = 100;
@@ -221,9 +221,9 @@ public class ControladorCofres : StartupScript
             efectoActual = 0;
     }
 
-    public static void IniciarEfectoEntornoMuerte(Enemigos enemigo, Vector3 posición, Vector3 normal)
+    public static void IniciarEfectoEntornoMuerte(Enemigos enemigo, float multiplicador, Vector3 posición, Vector3 normal)
     {
-        marcas[marcaActual].IniciarMarcaMuerte(enemigo, posición, normal);
+        marcas[marcaActual].IniciarMarcaMuerte(enemigo, multiplicador, posición, normal);
         marcaActual++;
 
         if (marcaActual >= maxMarcas)
@@ -264,6 +264,23 @@ public class ControladorCofres : StartupScript
 
     public static void IniciarEfectoMuerte(Enemigos enemigo, Vector3 posición)
     {
+        // PENDIENTE: objeto físico o ragdoll
+        switch (enemigo)
+        {
+            case Enemigos.meléLigero:
+                break;
+            case Enemigos.meléMediano:
+                break;
+            case Enemigos.meléPesado:
+                break;
+            case Enemigos.rangoMediano:
+                break;
+            case Enemigos.rangoPesado:
+                break;
+            case Enemigos.especialPesado:
+                break;
+        }
+
         efectos[efectoActual].IniciarEfectoMuerte(enemigo, posición);
         efectoActual++;
 
