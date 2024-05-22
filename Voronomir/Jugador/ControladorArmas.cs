@@ -37,6 +37,7 @@ public class ControladorArmas : StartupScript
     private Armas armaActual;
     private Armas armaAnterior;
     private bool bloqueo;
+    private float ruedaRatón;
     private float dañoMínimo;
     private float dañoMáximo;
 
@@ -69,8 +70,8 @@ public class ControladorArmas : StartupScript
         cámara = _cámara;
         interfaz = _interfaz;
 
-        dañoMínimo = 1f;
-        dañoMáximo = 200f;
+        dañoMínimo = 1;
+        dañoMáximo = 200;
 
         tiempoMaxMetralleta = 6f;
         tiempoAtascamientoMetralleta = 3f;
@@ -189,6 +190,17 @@ public class ControladorArmas : StartupScript
 
         if (Input.IsKeyPressed(Keys.Q))
             CambiarArma(armaAnterior);
+
+        // Cambio arma con rueda
+        if (Input.MouseWheelDelta != 0)
+        {
+            ruedaRatón += Input.MouseWheelDelta;
+            if (ruedaRatón >= 1)
+                CambiarSiguenteArma(true);
+            else if (ruedaRatón <= -1)
+                CambiarSiguenteArma(false);
+
+        }
     }
 
     private void Disparar(bool clicIzquierdo = true)
@@ -321,7 +333,7 @@ public class ControladorArmas : StartupScript
         if (dañable == null)
             return;
 
-        // Daño segun distancia
+        // Daño se reduce según distancia
         var distancia = Vector3.Distance(cámara.Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
         var reducción = 0f;
         if(distancia > ObtenerDistanciaMáxima(armaActual))
@@ -379,7 +391,7 @@ public class ControladorArmas : StartupScript
             if (dañable == null)
                 continue;
 
-            // Daño segun distancia
+            // Daño aumenta según distancia
             var distancia = Vector3.Distance(cámara.Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
             var aumento = 0f;
             if (distancia > ObtenerDistanciaMáxima(armaActual))
@@ -619,6 +631,24 @@ public class ControladorArmas : StartupScript
         interfaz.CambiarMira(armaActual);
     }
 
+    private void CambiarSiguenteArma(bool adelante)
+    {
+        ruedaRatón = 0;
+        var nuevaArma = (int)armaActual;
+
+        if (adelante)
+            nuevaArma += 1;
+        else
+            nuevaArma -= 1;
+
+        if (nuevaArma >= 5)
+            nuevaArma = 0;
+        else if (nuevaArma < 0)
+            nuevaArma = 4;
+
+        CambiarArma((Armas)nuevaArma);
+    }
+
     public float[] ObtenerParametrosAnimación()
     {
         var duraciónAnimación = 1.9f - movimiento.ObtenerAceleración();
@@ -728,7 +758,7 @@ public class ControladorArmas : StartupScript
             case Armas.rifle:
                 return 10;
             case Armas.lanzagranadas:
-                return 10;
+                return 0;
         }
     }
 
