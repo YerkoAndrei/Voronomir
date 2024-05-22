@@ -12,7 +12,7 @@ public class ElementoGranada : AsyncScript, IProyectil
 {
     public ModelComponent modelo;
     public TransformComponent cola;
-    public ParticleSystemComponent partícula;
+    public ParticleSystemComponent partículas;
 
     private RigidbodyComponent cuerpo;
     private float dañoImpacto;
@@ -39,7 +39,7 @@ public class ElementoGranada : AsyncScript, IProyectil
 
     public void Apagar()
     {
-        partícula.Enabled = false;
+        partículas.Enabled = false;
         cuerpo.LinearVelocity = Vector3.Zero;
         modelo.Enabled = false;
         cuerpo.IsKinematic = true;
@@ -73,8 +73,8 @@ public class ElementoGranada : AsyncScript, IProyectil
 
         // Granadas duran 10 segundos
         cuerpo.Enabled = true;
-        partícula.Enabled = true;
-        partícula.ParticleSystem.ResetSimulation();
+        partículas.Enabled = true;
+        partículas.ParticleSystem.ResetSimulation();
 
         tempo = 10f;
         ContarVida();

@@ -18,7 +18,6 @@ Hierarchy:
                         Children: {}
                     d72211c0ad36ba4e1a6fcfe43e525d97: !ParticleSystemComponent
                         Id: 52fecfce-ffd7-49a0-9b03-cccd4ccc3276
-                        Enabled: false
                         Control:
                             ResetSeconds: 5.0
                             Control: Play
@@ -49,7 +48,7 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 32.0
+                                            SpawnCount: 40.0
                                     Initializers:
                                         ba02aad232d24fe122ac0b41fc9c1f49: !InitialSizeSeed
                                             InheritPosition: true
@@ -197,7 +196,7 @@ Hierarchy:
                         Id: e05b5d43-1198-4b60-802c-d82945a4ae9f
                         modelo: ref!! eaf03fe5-4edd-4d6f-9c4d-2f704c2a5aaa
                         "cuerpoDañable": ref!! ca4626ef-f3fd-47be-8ccd-ba4de24b1dfd
-                        "partícula": ref!! 52fecfce-ffd7-49a0-9b03-cccd4ccc3276
+                        "partículas": ref!! 52fecfce-ffd7-49a0-9b03-cccd4ccc3276
         -   Entity:
                 Id: fe3fbc5c-a4d9-49bf-bb5a-795caf0665db
                 Name: "Dañable"

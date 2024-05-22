@@ -24,6 +24,105 @@ Hierarchy:
                         Materials:
                             90accdfd0dfb494b39fe5127fbfe4301~0: c037cb85-dcbe-429b-95c1-4b17ad81a48a:Materiales/Electricidad
         -   Entity:
+                Id: 57f09fd6-097b-4ed8-bf23-026be77765f4
+                Name: "Partículas"
+                Components:
+                    fe7b474a699861083b1d9d88008e8324: !TransformComponent
+                        Id: 676f38fc-b815-4ef6-a4a1-7b4e8dc5486f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.5}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: {}
+                    8e93eb51333a3313a8870bdb46abe025: !ParticleSystemComponent
+                        Id: 1856d92e-6cec-466d-a47b-c7111463d904
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 0.0, G: 0.0, B: 1.0, A: 0.78431374}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                2bdf3a426e53d30a5121432f7898a3ee:
+                                    ParticleLifetime: {X: 1.0, Y: 1.0}
+                                    SortingPolicy: ByOrder
+                                    ShapeBuilder: !ShapeBuilderRibbon
+                                        SmoothingPolicy: Fast
+                                        Segments: 5
+                                        TextureCoordinatePolicy: Stretched
+                                        TexCoordsFactor: 1.0
+                                        UVRotate:
+                                            FlipX: false
+                                            FlipY: false
+                                            UVClockwise: Degree0
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeColor
+                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        d6066c5db600c36e9d3449df451083a1: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 20.0
+                                    Initializers:
+                                        2d5c5057d4d873cf043cd5828bb8e7f7: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: 2.0, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 2.0, Z: 1.0}
+                                        b61e74266aab8e8315efc007c916efd0: !InitialSpawnOrder
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                    Updaters:
+                                        141b10b491284f14c64244de7fd11959: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        4169a8fd20b6b93a02214e61a46207eb:
+                                                            Key: 0.0
+                                                            Value: 0.1
+                                                            TangentType: Linear
+                                                        ef71fc37c0b0a997a923bcf6b8cc66f5:
+                                                            Key: 0.9
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+        -   Entity:
                 Id: b5e7a671-aabc-4e15-bad5-e7c32d6f0e7d
                 Name: ProyectilDron
                 Components:
@@ -59,8 +158,9 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             65bcef327949f5b575d0c1ec2a98f9a3: ref!! e4d4e89f-ee45-4a51-9dcb-28942f9d14ca
+                            2dc2101240ab835bf37fbc4cd59bd017: ref!! 676f38fc-b815-4ef6-a4a1-7b4e8dc5486f
                     2f7c3e8089300ae2e8806e507c594375: !Voronomir.ElementoProyectilSimple,Voronomir.Proyecto
                         Id: 78fbd8bc-666c-4d97-adc1-9acc9095314f
                         modelo: ref!! 39bd3370-36d4-4e32-8db2-7ef710753930
                         cola: null
-                        "partícula": null
+                        "partículas": ref!! 1856d92e-6cec-466d-a47b-c7111463d904

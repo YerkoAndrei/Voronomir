@@ -13,7 +13,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
 {
     public ModelComponent modelo;
     public TransformComponent cola;
-    public ParticleSystemComponent partícula;
+    public ParticleSystemComponent partículas;
 
     [DataMemberIgnore]
     public Enemigos disparador;
@@ -75,8 +75,8 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
         cuerpo.IsKinematic = true;
         cuerpo.Enabled = false;
 
-        if (partícula != null)
-            partícula.Enabled = false;
+        if (partículas != null)
+            partículas.Enabled = false;
     }
 
     public void Destruir()
@@ -109,10 +109,10 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
         modelo.Enabled = true;
         cuerpo.Enabled = true;
 
-        if (partícula != null)
+        if (partículas != null)
         {
-            partícula.Enabled = true;
-            partícula.ParticleSystem.ResetSimulation();
+            partículas.Enabled = true;
+            partículas.ParticleSystem.ResetSimulation();
         }
 
         // Proyectiles simples duran 10 segundos

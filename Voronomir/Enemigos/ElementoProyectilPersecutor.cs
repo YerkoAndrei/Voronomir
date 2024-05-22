@@ -13,7 +13,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
 {
     public ModelComponent modelo;
     public RigidbodyComponent cuerpoDañable;
-    public ParticleSystemComponent partícula;
+    public ParticleSystemComponent partículas;
 
     private Enemigos disparador;
     private RigidbodyComponent cuerpo;
@@ -77,8 +77,8 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
         cuerpo.Enabled = false;
         cuerpoDañable.Enabled = false;
 
-        if (partícula != null)
-            partícula.Enabled = false;
+        if (partículas != null)
+            partículas.Enabled = false;
     }
 
     public void Destruir()
@@ -114,10 +114,10 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
         cuerpo.Enabled = true;
         cuerpoDañable.Enabled = true;
 
-        if (partícula != null)
+        if (partículas != null)
         {
-            partícula.Enabled = true;
-            partícula.ParticleSystem.ResetSimulation();
+            partículas.Enabled = true;
+            partículas.ParticleSystem.ResetSimulation();
         }
 
         // Proyectiles persecutores duran 30 segundos
