@@ -59,7 +59,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 2e7169b7-b476-4f11-91f9-4c201c3fdc70
                         controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
-                        "inmunidadExplosión": true
                         multiplicador: 1.2
         -   Entity:
                 Id: 5984df18-147f-4744-a394-935be627a03e
@@ -109,7 +108,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: a01bcb72-8d8a-41a1-9b46-ce60a7c6550d
                         controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
-                        "inmunidadExplosión": true
                         multiplicador: 0.5
         -   Folder: null
             Entity:
@@ -248,7 +246,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: fcaa9200-384e-431c-8afa-1d5e4c93c294
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter4
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -272,7 +270,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: abbbe5fc-5902-41a2-9a3f-843d1219fa51
                         controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
-                        "inmunidadExplosión": false
                         multiplicador: 1.0
         -   Folder: null
             Entity:
@@ -312,5 +309,4 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 069be702-aeca-45f6-99d0-a4498c440bd3
                         controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
-                        "inmunidadExplosión": true
                         multiplicador: 1.0

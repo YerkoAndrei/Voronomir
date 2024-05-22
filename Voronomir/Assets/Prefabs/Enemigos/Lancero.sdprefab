@@ -82,7 +82,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: 58908665-f40c-40b4-8ac0-b6456a111568
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter4
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -106,7 +106,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 147f8eae-b821-489b-a084-2c93b315709d
                         controlador: ref!! c9e799f5-5b9a-49c2-8d71-11b62ba6434c
-                        "inmunidadExplosión": false
                         multiplicador: 1.0
         -   Entity:
                 Id: 5a07eb28-4ef8-4e99-8edf-3fe2a4495759
@@ -156,7 +155,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: a655f295-dbc1-4ec9-95c6-a314daf0b704
                         controlador: ref!! c9e799f5-5b9a-49c2-8d71-11b62ba6434c
-                        "inmunidadExplosión": true
                         multiplicador: 0.5
         -   Entity:
                 Id: 9bb91e11-da34-4aad-aa42-24008efe719b
@@ -319,5 +317,4 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 3cb0fddf-3833-4fe9-b2a0-cc572b29775a
                         controlador: ref!! c9e799f5-5b9a-49c2-8d71-11b62ba6434c
-                        "inmunidadExplosión": true
                         multiplicador: 1.5

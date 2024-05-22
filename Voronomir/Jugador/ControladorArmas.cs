@@ -342,7 +342,7 @@ public class ControladorArmas : StartupScript
         // Daña enemigo
         var dañoFinal = ObtenerDaño(armaActual) - reducción;
         dañoFinal = MathUtil.Clamp(dañoFinal, dañoMínimo, dañoMáximo);
-        dañable.RecibirDaño(dañoFinal, false);
+        dañable.RecibirDaño(dañoFinal);
 
         // Retroalimentación daño
         ControladorCofres.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
@@ -400,7 +400,7 @@ public class ControladorArmas : StartupScript
             // Daña enemigo
             var dañoFinal = ObtenerDaño(armaActual) + aumento;
             dañoFinal = MathUtil.Clamp(dañoFinal, dañoMínimo, dañoMáximo);
-            dañable.RecibirDaño(dañoFinal, false);
+            dañable.RecibirDaño(dañoFinal);
 
             // Retroalimentación daño
             ControladorCofres.IniciarEfectoDaño(armaActual, dañable.enemigo, dañable.multiplicador, resultado.Point, resultado.Normal);
@@ -474,7 +474,7 @@ public class ControladorArmas : StartupScript
                 if (dañable == null)
                     return;
 
-                dañable.RecibirDaño(ObtenerDaño(Armas.espada), false);
+                dañable.RecibirDaño(ObtenerDaño(Armas.espada));
                 posición = Vector3.Zero;
                 normal = Vector3.Zero;
 

@@ -1664,7 +1664,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 066e217e-9f0f-40e2-af2f-befc08b36545
                         controlador: ref!! 293f7583-6c3c-4921-a3ca-4853773072d5
-                        "inmunidadExplosión": true
                         multiplicador: 1.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -2457,7 +2456,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: d15590a9-b875-4d17-970a-55de656976ef
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter4
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -2481,7 +2480,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 11a13a03-c127-450a-acbc-e69a351659ed
                         controlador: ref!! 9466ef07-c364-447b-94db-14d4447fda74
-                        "inmunidadExplosión": false
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -3385,7 +3383,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: b30d9600-00a8-4e21-8e6f-05871be9aa66
                         controlador: ref!! 9003c97f-e6c6-4e78-ba13-390eef43db89
-                        "inmunidadExplosión": true
                         multiplicador: 0.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -4306,7 +4303,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 25603cab-663f-4b4b-a36c-86c3b5347a6d
                         controlador: ref!! 9466ef07-c364-447b-94db-14d4447fda74
-                        "inmunidadExplosión": true
                         multiplicador: 1.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -5610,7 +5606,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: 33fa3acc-c81a-4d93-939d-04b8266859f9
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter4
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -5634,7 +5630,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: c84007cd-7832-4fdf-8735-b16970f34621
                         controlador: ref!! 8453a3e0-4d61-4f66-950c-12fa89c30bac
-                        "inmunidadExplosión": false
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Enemigos/Dron
@@ -5798,7 +5793,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 081d2d76-bd92-4e02-8066-5fdd91faf803
                         controlador: ref!! 293f7583-6c3c-4921-a3ca-4853773072d5
-                        "inmunidadExplosión": true
                         multiplicador: 0.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -6206,7 +6200,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: b6fe990b-2b79-4697-859b-8e0e6ebceb51
                         controlador: ref!! 9003c97f-e6c6-4e78-ba13-390eef43db89
-                        "inmunidadExplosión": true
                         multiplicador: 1.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -6410,7 +6403,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: d630aa7a-c81d-4bd8-80f3-7e447bbcf3f7
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter4
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -6434,7 +6427,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: ab631ab3-07b8-4f81-92ea-b048addb42fd
                         controlador: ref!! 293f7583-6c3c-4921-a3ca-4853773072d5
-                        "inmunidadExplosión": false
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -6762,7 +6754,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: 606a17c9-924a-4512-8e4f-49eb8341921d
                         CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter3
+                        CanCollideWith: CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -6785,7 +6777,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 2339e9b1-93eb-4839-932b-e85dee6d2320
                         controlador: ref!! 26ce6f3f-2202-40ae-a9fc-481d6a6f7495
-                        "inmunidadExplosión": false
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -7185,7 +7176,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: f28acd94-d4f2-44ab-bb9c-ab38b257be2b
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter4
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -7209,7 +7200,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: ad3e7e60-71fa-4ab3-987f-bcced8d0197d
                         controlador: ref!! 9003c97f-e6c6-4e78-ba13-390eef43db89
-                        "inmunidadExplosión": false
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -7724,7 +7714,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 761c8adc-a5b4-49b9-8fa0-d822ef271590
                         controlador: ref!! 9466ef07-c364-447b-94db-14d4447fda74
-                        "inmunidadExplosión": true
                         multiplicador: 0.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi

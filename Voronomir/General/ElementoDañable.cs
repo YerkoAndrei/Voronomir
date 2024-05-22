@@ -9,7 +9,6 @@ using static Constantes;
 public class ElementoDañable : StartupScript
 {
     public Entity controlador;
-    public bool inmunidadExplosión;
     public float multiplicador;
 
     [DataMemberIgnore]
@@ -28,12 +27,8 @@ public class ElementoDañable : StartupScript
             enemigo = Enemigos.nada;
     }
 
-    public void RecibirDaño(float daño, bool explosión)
+    public void RecibirDaño(float daño)
     {
-        // Explosiones solo dañan cuerpo principal
-        if (explosión && inmunidadExplosión)
-            return;
-
         interfaz.RecibirDaño(daño * multiplicador);
     }
 

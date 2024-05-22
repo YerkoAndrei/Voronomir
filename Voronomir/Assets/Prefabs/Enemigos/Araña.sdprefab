@@ -44,7 +44,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: bf0f2e81-39b4-4d97-957e-4d8103dd3fb0
                         controlador: ref!! b12a1fec-9e79-4bf7-b177-44705a334650
-                        "inmunidadExplosión": true
                         multiplicador: 0.8
         -   Folder: null
             Entity:
@@ -60,7 +59,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: 2b72a648-b657-475b-9b27-d8e7bcabde3b
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter4
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -84,7 +83,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: db1c9016-61ea-48a7-895b-c830459b8c83
                         controlador: ref!! b12a1fec-9e79-4bf7-b177-44705a334650
-                        "inmunidadExplosión": false
                         multiplicador: 1.0
         -   Folder: null
             Entity:
@@ -439,11 +437,10 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            d847a0002c0a60c2ddab18b7747892e7: ref!! 8c11204d-03e0-4e2f-baae-45870590e4e3
                             eb99b1e64a4f9fdca4c26543319c89fb: ref!! 9dfce3ae-ad8a-42fa-9db4-893b7d4348de
                             b3f6cdf00baa9359d2b32841a2e4f4a7: ref!! 777c3a8f-f9d2-4dc3-bb44-13d99a293b4e
-                            793223e93f42e9579f017a3ce2e2021b: ref!! 8c11204d-03e0-4e2f-baae-45870590e4e3
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: f275e647-639c-42b0-85ef-d8266509991d
                 Name: "Dañable cabeza"
                 Components:
@@ -480,5 +477,4 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 15180237-d43a-4bca-801b-09f7debd8908
                         controlador: ref!! b12a1fec-9e79-4bf7-b177-44705a334650
-                        "inmunidadExplosión": true
                         multiplicador: 1.5

@@ -51,7 +51,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
             if (TocaJugador(colisión))
             {
                 // Daña jugador
-                dañable.RecibirDaño(daño, false);
+                dañable.RecibirDaño(daño);
                 Destruir();
             }
             else if (TocaEnemigo(colisión))
@@ -61,7 +61,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
                     continue;
 
                 // Daña enemigos un 50%
-                dañable.RecibirDaño(daño * 0.5f, false);
+                dañable.RecibirDaño(daño * 0.5f);
                 Destruir();
             }
             await Script.NextFrame();

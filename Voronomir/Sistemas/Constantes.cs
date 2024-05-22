@@ -12,6 +12,7 @@ public static class Constantes
     // Custom1      - Proyectiles enemigos simples
     // Custom2      - Proyectiles enemigos persecutores
     // Custom3      - Daño contínuo
+    // Custom4      - Explosiones
 
     // Dificultades:
     // Fácil        - Hace 25% más daño, recibe 25% menos daño, triple cura

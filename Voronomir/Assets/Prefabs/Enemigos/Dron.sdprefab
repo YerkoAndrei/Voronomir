@@ -158,7 +158,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: b6acb4b1-f705-4fa2-976d-216152784495
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter4
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -182,7 +182,6 @@ Hierarchy:
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: d75d85ce-c3e7-4d8a-b4eb-3e39a9b85108
                         controlador: ref!! c9de616d-fc44-4005-a31a-6d8dcd5084c0
-                        "inmunidadExplosión": false
                         multiplicador: 1.0
         -   Entity:
                 Id: 786ebb12-3b47-4ea1-9eb2-6723836cdf94

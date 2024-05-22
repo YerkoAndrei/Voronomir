@@ -20,6 +20,7 @@ Hierarchy:
                     10febf0414810204af56e165b5692877: !RigidbodyComponent
                         Id: c8e7910c-24b6-4494-a4ff-81ffb95cc1ac
                         Enabled: false
+                        CollisionGroup: CustomFilter4
                         CanCollideWith: KinematicFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
