@@ -46,7 +46,7 @@ Hierarchy:
                         Id: 96a5a582-2b46-47cc-8697-c58791423a23
                         modelo: ref!! bcfa47ae-0dd0-4769-a445-d735a0e125b7
                         cola: ref!! 95c5a446-dce7-481a-9fca-664498512723
-                        "partícula": ref!! cbbdf730-95d2-4c05-9a55-b50b5a6beb4a
+                        "partículas": ref!! cbbdf730-95d2-4c05-9a55-b50b5a6beb4a
         -   Folder: null
             Entity:
                 Id: b064d13d-cac9-4610-a9bc-5c426819dada
@@ -88,7 +88,7 @@ Hierarchy:
                         Control:
                             ResetSeconds: 5.0
                             Control: Play
-                        Color: {R: 0.78431374, G: 0.39215687, B: 0.0, A: 0.78431374}
+                        Color: {R: 0.19607843, G: 0.19607843, B: 0.19607843, A: 0.78431374}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}

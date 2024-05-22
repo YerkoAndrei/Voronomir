@@ -520,8 +520,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            VelocityMin: {X: -6.0, Y: 4.0, Z: -6.0}
-                                            VelocityMax: {X: 6.0, Y: 6.0, Z: 6.0}
+                                            VelocityMin: {X: -10.0, Y: -2.0, Z: -10.0}
+                                            VelocityMax: {X: 10.0, Y: 10.0, Z: 10.0}
                                         2c19c8de711ac0a342f89bccb2476422: !InitialRotationSeed
                                             InheritPosition: true
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -1645,11 +1645,11 @@ Hierarchy:
                         "explosión": ref!! 95411ba9-c66e-4641-9336-33a186e96a21
                         granada: ref!! 750be063-e6c5-4786-9dd4-4fedc756bc6d
                         sangre: ref!! 6b2918ac-7f8b-4b8d-9766-d37889aff734
-                        rayos: ref!! f040fab0-a7d6-428f-8237-adc9e237824b
                         hemolinfa: ref!! 149062bb-e01b-43d6-9743-39dbbb060d69
+                        rayos: ref!! f040fab0-a7d6-428f-8237-adc9e237824b
                         muerteSangre: ref!! 925bed60-51d5-44d0-8cf1-106c500d45e0
-                        muerteRayos: ref!! 6e2c9906-b888-4cee-9547-5a8f0acf3809
                         muerteHemolinfa: ref!! 93b5032b-aab2-468b-8dae-0faa41fb73f1
+                        muerteRayos: ref!! 6e2c9906-b888-4cee-9547-5a8f0acf3809
                         "aparición": ref!! a8e1b840-c8fe-41e0-a801-f1de5b07f4d4
                         lava: ref!! e28c8193-abab-4a0d-8b6f-8339887b0eeb
                         emisor: ref!! 53e18ad8-42a8-4da2-8885-58c06ecffcf4
