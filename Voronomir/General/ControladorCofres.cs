@@ -74,6 +74,8 @@ public class ControladorCofres : StartupScript
         cofreEnemigos = new Vector3(-13, -10, 0);
 
         // Cofre jugador / efectos
+
+        //switch (SistemaMemoria.ObtenerConfiguración(Configuraciones.efectos))
         maxMarcas = 100;
         maxEfectos = 100;
         maxGranadas = 4;
@@ -254,6 +256,15 @@ public class ControladorCofres : StartupScript
         }
 
         efectos[efectoActual].IniciarEfectoEnemigo(enemigo, multiplicadorDaño, posición, normal);
+        efectoActual++;
+
+        if (efectoActual >= maxEfectos)
+            efectoActual = 0;
+    }
+
+    public static void IniciarEfectoMuerte(Enemigos enemigo, Vector3 posición)
+    {
+        efectos[efectoActual].IniciarEfectoMuerte(enemigo, posición);
         efectoActual++;
 
         if (efectoActual >= maxEfectos)

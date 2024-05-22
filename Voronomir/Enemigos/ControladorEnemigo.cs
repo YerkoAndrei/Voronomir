@@ -169,14 +169,11 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         persecutor.EliminarPersecutor();
 
         ControladorPartida.SumarEnemigo();
-        CrearMarcaMuerte();
+        MarcarMuerte();
         Esconder();
 
         await EsperarCuadroFísica();
         cuerpo.Enabled = false;
-
-        // PENDIENTE: efectos
-        // PENDIENTE: ragdoll
     }
 
     private void Esconder()
@@ -186,8 +183,13 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         cuerpo.Teleport(ControladorCofres.ObtenerCofreEnemigos());
     }
 
-    private async void CrearMarcaMuerte()
+    private async void MarcarMuerte()
     {
+        // PENDIENTE: objeto físico o ragdoll
+
+        // Efecto
+        ControladorCofres.IniciarEfectoMuerte(enemigo,Entity.Transform.WorldMatrix.TranslationVector);
+
         // Rayo para crear marca
         var inicioRayo = Entity.Transform.WorldMatrix.TranslationVector + (Vector3.UnitY * 0.5f);
         var dirección = inicioRayo - Vector3.UnitY;
@@ -195,7 +197,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                                                      dirección,
                                                      CollisionFilterGroups.DefaultFilter,
                                                      CollisionFilterGroupFlags.StaticFilter);
-        await Task.Delay(100);
+        await Task.Delay(200);
 
         if (resultado.Succeeded)
             ControladorCofres.IniciarEfectoEntornoMuerte(enemigo, resultado.Point, resultado.Normal);

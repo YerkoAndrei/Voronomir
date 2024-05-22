@@ -14,10 +14,15 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
     public ParticleSystemComponent explosión;
     public ParticleSystemComponent granada;
 
-    // Efectos enemigos
+    // Efectos daño enemigos
     public ParticleSystemComponent sangre;
-    public ParticleSystemComponent rayos;
     public ParticleSystemComponent hemolinfa;
+    public ParticleSystemComponent rayos;
+
+    // Efectos muerte enemigos
+    public ParticleSystemComponent muerteSangre;
+    public ParticleSystemComponent muerteHemolinfa;
+    public ParticleSystemComponent muerteRayos;
 
     // Efectos entorno
     public ParticleSystemComponent aparición;
@@ -177,6 +182,67 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
 
         ActualizarVolumen();
         sonidoAparición.PlayAndForget();
+    }
+
+    public void IniciarEfectoMuerte(Enemigos enemigo, Vector3 posición)
+    {
+        Apagar();
+        switch (enemigo)
+        {
+            case Enemigos.meléLigero:
+                muerteSangre.Entity.Transform.Scale = Vector3.One * 0.6f;
+                muerteSangre.Entity.Transform.Position += (Vector3.UnitY * 0.5f);
+                muerteSangre.Enabled = true;
+                muerteSangre.ParticleSystem.ResetSimulation();
+                break;
+            case Enemigos.meléMediano:
+                muerteSangre.Entity.Transform.Scale = Vector3.One * 0.6f;
+                muerteSangre.Entity.Transform.Position += (Vector3.UnitY * 0.5f);
+                muerteSangre.Enabled = true;
+                muerteSangre.ParticleSystem.ResetSimulation();
+                break;
+            case Enemigos.meléPesado:
+                muerteSangre.Entity.Transform.Scale = Vector3.One * 1f;
+                muerteSangre.Entity.Transform.Position += (Vector3.UnitY * 1f);
+                muerteSangre.Enabled = true;
+                muerteSangre.ParticleSystem.ResetSimulation();
+                break;
+            case Enemigos.rangoLigero:
+                muerteHemolinfa.Entity.Transform.Scale = Vector3.One * 0.5f;
+                muerteHemolinfa.Entity.Transform.Position += (Vector3.UnitY * 0.2f);
+                muerteHemolinfa.Enabled = true;
+                muerteHemolinfa.ParticleSystem.ResetSimulation();
+                break;
+            case Enemigos.rangoMediano:
+                muerteSangre.Entity.Transform.Scale = Vector3.One * 0.8f;
+                muerteSangre.Entity.Transform.Position += (Vector3.UnitY * 0.5f);
+                muerteSangre.Enabled = true;
+                muerteSangre.ParticleSystem.ResetSimulation();
+                break;
+            case Enemigos.rangoPesado:
+                muerteHemolinfa.Entity.Transform.Scale = Vector3.One * 1f;
+                muerteHemolinfa.Entity.Transform.Position += (Vector3.UnitY * 0.5f);
+                muerteHemolinfa.Enabled = true;
+                muerteHemolinfa.ParticleSystem.ResetSimulation();
+                break;
+            case Enemigos.especialLigero:
+                muerteRayos.Entity.Transform.Scale = Vector3.One * 0.4f;
+                muerteRayos.Entity.Transform.Position += (Vector3.UnitY * 2.8f);
+                muerteRayos.Enabled = true;
+                muerteRayos.ParticleSystem.ResetSimulation();
+                break;
+            case Enemigos.especialMediano:
+
+                break;
+            case Enemigos.especialPesado:
+                muerteRayos.Entity.Transform.Scale = Vector3.One * 0.5f;
+                muerteRayos.Entity.Transform.Position += (Vector3.UnitY * 0.5f);
+                muerteRayos.Enabled = true;
+                muerteRayos.ParticleSystem.ResetSimulation();
+                break;
+        }
+
+        Entity.Transform.Position = posición;
     }
 
     public void IniciarEfectoDañoContinuo(Armas arma, Vector3 posición, Vector3 normal)
