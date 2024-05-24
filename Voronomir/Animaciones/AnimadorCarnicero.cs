@@ -64,6 +64,21 @@ public class AnimadorCarnicero : StartupScript, IAnimador
         AnimarAtaque();
     }
 
+    public void Morir()
+    {
+        modelo.Entity.Transform.Position = new Vector3(0, 0, 1.8f);
+        modelo.Entity.Transform.Rotation = Quaternion.RotationX(MathUtil.DegreesToRadians(-84));
+
+        for (int i = 0; i < idBrazos.Length; i++)
+        {
+            esqueleto.NodeTransformations[idBrazos[i]].Transform.Scale = Vector3.Zero;
+        }
+        for (int i = 0; i < idPiernas.Length; i++)
+        {
+            esqueleto.NodeTransformations[idPiernas[i]].Transform.Scale = Vector3.Zero;
+        }
+    }
+
     private async void AnimarAtaque()
     {
         var rotaciónAtaque0 = Quaternion.RotationZ(MathUtil.DegreesToRadians(-100));

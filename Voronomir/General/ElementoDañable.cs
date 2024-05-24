@@ -22,9 +22,19 @@ public class ElementoDañable : StartupScript
 
         // Enemigo / Jugador
         if (controlador.Get<ControladorEnemigo>() != null)
+        {
             enemigo = controlador.Get<ControladorEnemigo>().enemigo;
+            controlador.Get<ControladorEnemigo>().AgregarDañable(this);
+        }
         else
             enemigo = Enemigos.nada;
+    }
+
+    public void Desactivar()
+    {
+        Entity.Get<PhysicsComponent>().Enabled = false;
+        Entity.Get<PhysicsComponent>().CanSleep = true;
+        Entity.Transform.Scale = Vector3.Zero;
     }
 
     public void RecibirDaño(float daño)

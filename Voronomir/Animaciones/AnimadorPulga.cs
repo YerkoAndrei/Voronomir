@@ -113,6 +113,11 @@ public class AnimadorPulga : StartupScript, IAnimador
         AnimarAtaque();
     }
 
+    public void Morir()
+    {
+        // Siempre explota
+    }
+
     private async void AnimarAtaque()
     {
         var rotaciónAtaqueCabeza = Quaternion.RotationX(MathUtil.DegreesToRadians(-90));

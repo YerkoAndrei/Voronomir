@@ -43,6 +43,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: bf0f2e81-39b4-4d97-957e-4d8103dd3fb0
+                        Priority: 1
                         controlador: ref!! b12a1fec-9e79-4bf7-b177-44705a334650
                         multiplicador: 0.8
         -   Folder: null
@@ -82,6 +83,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: db1c9016-61ea-48a7-895b-c830459b8c83
+                        Priority: 1
                         controlador: ref!! b12a1fec-9e79-4bf7-b177-44705a334650
                         multiplicador: 1.0
         -   Folder: null
@@ -270,12 +272,13 @@ Hierarchy:
                 Components:
                     b7ea4a4fefe468631620f7f375648eef: !TransformComponent
                         Id: d75465bf-f13c-4de1-a697-cb7c9be6b48f
-                        Position: {X: 0.0, Y: 2.0, Z: -0.6}
+                        Position: {X: 0.0, Y: 1.6, Z: -0.6}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 4.0, Y: 0.2, Z: 3.5}
+                        Scale: {X: 2.0, Y: 1.0, Z: 1.5}
                         Children: {}
                     f517499a8e8a140f81317fcaf2bc9f0a: !RigidbodyComponent
                         Id: a6ba3f7b-3276-494b-a6c1-eb06ce4e527d
+                        CollisionGroup: CustomFilter3
                         CanCollideWith: KinematicFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -293,6 +296,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             e0f17c1eb8f3b49cf4f3c8fe99745cdb: !CylinderColliderShapeDesc
+                                Radius: 1.0
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     ad4cd4f1fee9916633c4d8642aa267cf: !Voronomir.ControladorDa%25C3%25B1oContinuo,Voronomir.Proyecto
@@ -382,6 +386,23 @@ Hierarchy:
                             a1aa4041480f4818a277a06814af251e: pata.2_03.R
                             3a60c392506c72ab62c1051f24687dcf: pata.3_03.R
                             c0e672ffdc0ddad77e91ec6b9d8c6d2f: pata.4_03.R
+                        patasCompletas:
+                            7adfeb7f9812391bb2c40a1d3399e7ae: pata.1_02.L
+                            64d799c408b8381702157da7bcceda19: pata.1_03.L
+                            e5028e88f8b14e3c975b8b708a8e8e77: pata.2_02.L
+                            db94cfb917f3f9897603829f1ce120e8: pata.2_03.L
+                            594dcc95029c4f5d5d2dd05dd166ab5a: pata.3_02.L
+                            4fc9628272893018b12f93c2fc8f36c5: pata.3_03.L
+                            dcfd855ce59d6861d79fdc9c7f80cd42: pata.4_02.L
+                            61b521a8ddb73751a5715074b7d4bdc5: pata.4_03.L
+                            fac884a16d7edbc53b66869b8d4d99c6: pata.1_02.R
+                            c9aedfcbba371f3a6bceec2077479f27: pata.1_03.R
+                            e06875d123717e84699ae102728f1568: pata.2_02.R
+                            93e05e35cf177b1a920336fc629cdd8b: pata.2_03.R
+                            4569927b76d19594809c1dd53b80f93d: pata.3_02.R
+                            2ae0e85fb9b14e85ba5e235bf7f7b0a9: pata.3_03.R
+                            17e85e75892e34e67741885697bbcfd0: pata.4_02.R
+                            3eb89f9a4985fe20e0f0f9489f3f2bf0: pata.4_03.R
         -   Folder: null
             Entity:
                 Id: c89d458b-f954-4d3f-9032-14652b88b729
@@ -476,5 +497,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 15180237-d43a-4bca-801b-09f7debd8908
+                        Priority: 1
                         controlador: ref!! b12a1fec-9e79-4bf7-b177-44705a334650
                         multiplicador: 1.5

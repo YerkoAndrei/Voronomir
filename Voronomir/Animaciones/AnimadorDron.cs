@@ -42,4 +42,8 @@ public class AnimadorDron : StartupScript, IAnimador
 
     }
 
+    public void Morir()
+    {
+        // Siempre explota
+    }
 }

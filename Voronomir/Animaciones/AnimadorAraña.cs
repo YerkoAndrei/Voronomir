@@ -18,12 +18,14 @@ public class AnimadorAraña : StartupScript, IAnimador
     public string poto;
     public List<string> patasIzq = new List<string> { };
     public List<string> patasDer = new List<string> { };
+    public List<string> patasCompletas = new List<string> { };
 
     private SkeletonUpdater esqueleto;
     private int idCabeza;
     private int idPoto;
     private int[] idPatasIzq;
     private int[] idPatasDer;
+    private int[] idPatasCompletas;
 
     private Quaternion[] rotacionesInicioPatasIzq;
     private Quaternion[] rotacionesInicioPatasDer;
@@ -37,6 +39,7 @@ public class AnimadorAraña : StartupScript, IAnimador
 
         idPatasIzq = new int[patasIzq.Count];
         idPatasDer = new int[patasDer.Count];
+        idPatasCompletas = new int[patasCompletas.Count];
 
         rotacionesInicioPatasIzq = new Quaternion[patasIzq.Count];
         rotacionesInicioPatasDer = new Quaternion[patasDer.Count];
@@ -60,6 +63,12 @@ public class AnimadorAraña : StartupScript, IAnimador
                     idPatasDer[ii] = i;
                     rotacionesInicioPatasDer[ii] = esqueleto.NodeTransformations[ii].Transform.Rotation;
                 }
+            }
+
+            for (int ii = 0; ii < patasCompletas.Count; ii++)
+            {
+                if (esqueleto.Nodes[i].Name == patasCompletas[ii])
+                    idPatasCompletas[ii] = i;
             }
 
             if (esqueleto.Nodes[i].Name == cabeza)
@@ -104,6 +113,20 @@ public class AnimadorAraña : StartupScript, IAnimador
     public void Atacar()
     {
         AnimarAtaque();
+    }
+
+    public void Morir()
+    {
+        modelo.Entity.Transform.Position = new Vector3(0, -0.8f, 0);
+        partículas.Entity.Transform.Position = new Vector3(0, 0.2f, 0);
+
+        veneno.Entity.Transform.Position = new Vector3(0, 0, 0);
+        veneno.Entity.Transform.Scale = new Vector3(1.5f, 0, 1.5f);
+
+        for (int i = 0; i < idPatasCompletas.Length; i++)
+        {
+            esqueleto.NodeTransformations[idPatasCompletas[i]].Transform.Scale = Vector3.Zero;
+        }
     }
 
     private async void AnimarAtaque()

@@ -181,6 +181,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: d75d85ce-c3e7-4d8a-b4eb-3e39a9b85108
+                        Priority: 1
                         controlador: ref!! c9de616d-fc44-4005-a31a-6d8dcd5084c0
                         multiplicador: 1.0
         -   Entity:

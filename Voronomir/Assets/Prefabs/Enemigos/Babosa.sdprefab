@@ -58,6 +58,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 2e7169b7-b476-4f11-91f9-4c201c3fdc70
+                        Priority: 1
                         controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
                         multiplicador: 1.2
         -   Entity:
@@ -107,6 +108,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: a01bcb72-8d8a-41a1-9b46-ce60a7c6550d
+                        Priority: 1
                         controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
                         multiplicador: 0.5
         -   Folder: null
@@ -269,6 +271,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: abbbe5fc-5902-41a2-9a3f-843d1219fa51
+                        Priority: 1
                         controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
                         multiplicador: 1.0
         -   Folder: null
@@ -308,5 +311,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 069be702-aeca-45f6-99d0-a4498c440bd3
+                        Priority: 1
                         controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
                         multiplicador: 1.0

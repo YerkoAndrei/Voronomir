@@ -7,4 +7,5 @@ public interface IAnimador
     public void Activar(bool activar);
     public void Caminar(float velocidad);
     public void Atacar();
+    public void Morir();
 }

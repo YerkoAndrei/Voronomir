@@ -47,4 +47,8 @@ public class AnimadorCerebro : StartupScript, IAnimador
 
     }
 
+    public void Morir()
+    {
+
+    }
 }

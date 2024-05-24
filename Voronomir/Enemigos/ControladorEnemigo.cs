@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using System.Collections.Generic;
 using Stride.Core.Mathematics;
 using Stride.Physics;
 using Stride.Audio;
@@ -30,6 +31,8 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
     private AudioEmitterSoundController sonidoDaño;
     private AudioEmitterSoundController sonidoMorir;
 
+    private List<ElementoDañable> dañables;
+
     // Invisible
     private Vector3 posiciónInicial;
     private Vector3 gravedadInicial;
@@ -41,6 +44,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
     {
         cuerpo = Entity.Get<CharacterComponent>();
         persecutor = Entity.Get<ControladorPersecusión>();
+        dañables = new List<ElementoDañable>();
 
         datos = GenerarDatos(enemigo);
         vida = datos.Vida;
@@ -125,26 +129,33 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
 
     public void RecibirDaño(float daño)
     {
+        if (ObtenerMuerto())
+            return;
+
         Activar();
         vida -= daño;
 
-        if (vida <= 0 && activo)
-        {
-            sonidoMorir.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
-            sonidoMorir.PlayAndForget();
-
-            Morir();
-        }
-        else
+        if (vida > 0)
         {
             sonidoDaño.Stop();
             sonidoDaño.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
             sonidoDaño.Play();
         }
+        else
+        {
+            sonidoMorir.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+            sonidoMorir.PlayAndForget();
+
+            // Si recibe mucho daño al morir, explota (10% de la vida máxima)
+            Morir(vida < -(datos.Vida * 0.1f));
+        }
     }
 
     public void Empujar(Vector3 dirección)
     {
+        if (ObtenerMuerto())
+            return;
+
         // Evita que salten tanto
         dirección.Y *= 0.5f;
         dirección.Y = MathUtil.Clamp(dirección.Y, 0, 2);
@@ -152,17 +163,12 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         cuerpo.Jump(dirección * cuerpo.JumpSpeed);
     }
 
-    public bool ObtenerActivo()
+    public void AgregarDañable(ElementoDañable dañable)
     {
-        return activo;
+        dañables.Add(dañable);
     }
 
-    public bool ObtenerMuerto()
-    {
-        return despierto && !activo;
-    }
-
-    private async void Morir()
+    private async void Morir(bool explotar)
     {
         activo = false;
         cuerpo.SetVelocity(Vector3.Zero);
@@ -170,10 +176,27 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
 
         ControladorPartida.SumarEnemigo();
         MarcarMuerte();
-        Esconder();
+
+        // Desactivar Dañables
+        foreach (var dañable in dañables)
+        {
+            dañable.Desactivar();
+        }
+
+        // Enemigos pequeños siempre explotan y cerebro nunca
+        if (enemigo == Enemigos.rangoLigero || enemigo == Enemigos.especialLigero)
+            explotar = true;
+        else if (enemigo == Enemigos.especialPesado)
+            explotar = false;
+
+        // Animación de muerte o explosión
+        if (explotar)
+            Esconder();
+        else
+            animador.Morir();
 
         await EsperarCuadroFísica();
-        cuerpo.Enabled = false;
+        Entity.Remove(cuerpo);
     }
 
     private void Esconder()
@@ -209,6 +232,16 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
             if (resultado.Succeeded)
                 ControladorCofres.IniciarEfectoEntornoMuerte(enemigo, tamaño, resultado.Point, resultado.Normal);
         }
+    }
+
+    public bool ObtenerActivo()
+    {
+        return activo;
+    }
+
+    public bool ObtenerMuerto()
+    {
+        return despierto && !activo;
     }
 
     public void ActualizarVolumen()

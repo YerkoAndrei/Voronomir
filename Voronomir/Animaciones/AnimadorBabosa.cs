@@ -129,6 +129,15 @@ public class AnimadorBabosa : StartupScript, IAnimador
         AnimarAtaque();
     }
 
+    public void Morir()
+    {
+        modelo.Entity.Transform.Position = new Vector3(0, 0.2f, 0.5f);
+        modelo.Entity.Transform.Rotation = Quaternion.RotationX(MathUtil.DegreesToRadians(-90));
+
+        esqueleto.NodeTransformations[idCabeza].Transform.Scale = Vector3.Zero;
+        esqueleto.NodeTransformations[idCola].Transform.Scale = Vector3.Zero;
+    }
+
     private async void AnimarAtaque()
     {
         var tamañoDisparo = Vector3.One * 0.2f;

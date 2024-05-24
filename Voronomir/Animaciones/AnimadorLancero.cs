@@ -82,6 +82,21 @@ public class AnimadorLancero : StartupScript, IAnimador
         AnimarAtaque();
     }
 
+    public void Morir()
+    {
+        modelo.Entity.Transform.Position = new Vector3(0, -0.9f, 0.1f);
+        modelo.Entity.Transform.Rotation = Quaternion.RotationX(MathUtil.DegreesToRadians(-5));
+
+        for (int i = 0; i < idBrazos.Length; i++)
+        {
+            esqueleto.NodeTransformations[idBrazos[i]].Transform.Scale = Vector3.Zero;
+        }
+        for (int i = 0; i < idPiernas.Length; i++)
+        {
+            esqueleto.NodeTransformations[idPiernas[i]].Transform.Scale = Vector3.Zero;
+        }
+    }
+
     private void ApuntarLanza()
     {
         ánguloDiferencia = ControladorPartida.ObtenerCabezaJugador().Y - lanza.WorldMatrix.TranslationVector.Y;
