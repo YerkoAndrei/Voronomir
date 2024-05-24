@@ -125,7 +125,7 @@ public class AnimadorAraña : StartupScript, IAnimador
 
         for (int i = 0; i < idPatasCompletas.Length; i++)
         {
-            esqueleto.NodeTransformations[idPatasCompletas[i]].Transform.Scale = Vector3.Zero;
+            esqueleto.NodeTransformations[idPatasCompletas[i]].Transform.Position = Vector3.Zero;
         }
     }
 
