@@ -1,0 +1,7 @@
+!Texture
+Id: 9bfedbcf-15af-4381-8568-a674d7cc9e65
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file FondoSuperior.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

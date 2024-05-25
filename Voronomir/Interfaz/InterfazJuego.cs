@@ -466,8 +466,7 @@ public class InterfazJuego : SyncScript
 
     public void Morir()
     {
-        imgVida.Color = vidaVacía;
-        imgVida.Width = tamañoVida;
+        imgVida.Width = 0;
 
         ApagarMiras();
         ApagarLlaves();

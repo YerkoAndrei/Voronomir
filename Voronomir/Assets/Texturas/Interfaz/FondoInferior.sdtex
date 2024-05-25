@@ -1,0 +1,7 @@
+!Texture
+Id: d1efd131-84dd-4099-b664-818d2c520d43
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file FondoInferior.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
