@@ -78,8 +78,8 @@ public class ControladorArmas : StartupScript
         tempoMetralleta = tiempoMaxMetralleta;
 
         // Filtros disparos
-        colisionesDisparo = CollisionFilterGroupFlags.StaticFilter | 
-                            CollisionFilterGroupFlags.KinematicFilter | 
+        colisionesDisparo = CollisionFilterGroupFlags.StaticFilter |
+                            CollisionFilterGroupFlags.KinematicFilter |
                             CollisionFilterGroupFlags.SensorTrigger |
                             CollisionFilterGroupFlags.CustomFilter1 |
                             CollisionFilterGroupFlags.CustomFilter2 |

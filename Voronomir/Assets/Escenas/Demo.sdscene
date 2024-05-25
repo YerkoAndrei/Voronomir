@@ -2762,8 +2762,8 @@ Hierarchy:
                 Components:
                     44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
                         Id: 3580e87f-8a96-4708-9b1c-4b1430647f4f
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: KinematicFilter, CharacterFilter
+                        CollisionGroup: StaticFilter
+                        CanCollideWith: KinematicFilter, DebrisFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -5632,8 +5632,8 @@ Hierarchy:
                 Components:
                     44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
                         Id: 2642c512-179c-40f4-97e4-318bd8323afd
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: KinematicFilter, CharacterFilter
+                        CollisionGroup: StaticFilter
+                        CanCollideWith: KinematicFilter, DebrisFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
