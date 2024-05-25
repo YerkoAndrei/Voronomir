@@ -59,9 +59,10 @@
   "poderInvulnerabilidad": "Invulnerabilidad",
   "poderVelocidad": "Velocidad",
 
+  "mundos": "Mundos",
   "demo": "Demo",
-  "E1M1": "E1M1",
-  "E1M2": "E1M2",
-  "E1M3": "E1M3",
-  "E1M4": "E1M4"
+  "M1E1": "Mundo 1",
+  "M1E2": "Mundo 2",
+  "M1E3": "Mundo 3",
+  "M1E4": "Mundo 4"
 }

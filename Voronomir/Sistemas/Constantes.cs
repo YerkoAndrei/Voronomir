@@ -19,16 +19,21 @@ public static class Constantes
     // Normal       - El juego debería ser bastante difícil
     // Difícil      - Sin cura
 
+    // Textos interfaz:
+    // Botones      - 20
+    // Números      - 25
+    // Títulos      - 40
+
     // Juego
     public enum Escenas
     {
         menú,
         demo,
         //supervivencia,
-        E1M1,
-        E1M2,
-        E1M3,
-        E1M4
+        M1E1,
+        M1E2,
+        M1E3,
+        M1E4
     }
 
     public enum Armas

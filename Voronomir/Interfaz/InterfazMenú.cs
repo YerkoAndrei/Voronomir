@@ -10,9 +10,8 @@ using static Constantes;
 
 public class InterfazMenú : StartupScript
 {
-    private Grid título;
     private Grid menú;
-    private Grid episodios;
+    private Grid jugar;
 
     private Grid opciones;
     private Grid animOpciones;
@@ -28,9 +27,8 @@ public class InterfazMenú : StartupScript
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
 
-        título = página.FindVisualChildOfType<Grid>("Título");
         menú = página.FindVisualChildOfType<Grid>("Menú");
-        episodios = página.FindVisualChildOfType<Grid>("Episodios");
+        jugar = página.FindVisualChildOfType<Grid>("Jugar");
 
         opciones = página.FindVisualChildOfType<Grid>("Opciones");
         animOpciones = página.FindVisualChildOfType<Grid>("animOpciones");
@@ -52,30 +50,29 @@ public class InterfazMenú : StartupScript
 
         // Episodios
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDemo"), () => EnClicEscena(Escenas.demo));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnE1M1"), () => EnClicEscena(Escenas.E1M1));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnE1M2"), () => EnClicEscena(Escenas.E1M2));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnE1M3"), () => EnClicEscena(Escenas.E1M3));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnE1M4"), () => EnClicEscena(Escenas.E1M4));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnM1E1"), () => EnClicEscena(Escenas.M1E1));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnM1E2"), () => EnClicEscena(Escenas.M1E2));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnM1E3"), () => EnClicEscena(Escenas.M1E3));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnM1E4"), () => EnClicEscena(Escenas.M1E4));
 
         // Tiempos máximos
         página.FindVisualChildOfType<TextBlock>("txtTiempoDemo").Text = SistemaMemoria.ObtenerMáximo(Escenas.demo);
-        página.FindVisualChildOfType<TextBlock>("txtTiempoE1M1").Text = SistemaMemoria.ObtenerMáximo(Escenas.E1M1);
-        página.FindVisualChildOfType<TextBlock>("txtTiempoE1M2").Text = SistemaMemoria.ObtenerMáximo(Escenas.E1M2);
-        página.FindVisualChildOfType<TextBlock>("txtTiempoE1M3").Text = SistemaMemoria.ObtenerMáximo(Escenas.E1M3);
-        página.FindVisualChildOfType<TextBlock>("txtTiempoE1M4").Text = SistemaMemoria.ObtenerMáximo(Escenas.E1M4);
+        página.FindVisualChildOfType<TextBlock>("txtTiempoM1E1").Text = SistemaMemoria.ObtenerMáximo(Escenas.M1E1);
+        página.FindVisualChildOfType<TextBlock>("txtTiempoM1E2").Text = SistemaMemoria.ObtenerMáximo(Escenas.M1E2);
+        página.FindVisualChildOfType<TextBlock>("txtTiempoM1E3").Text = SistemaMemoria.ObtenerMáximo(Escenas.M1E3);
+        página.FindVisualChildOfType<TextBlock>("txtTiempoM1E4").Text = SistemaMemoria.ObtenerMáximo(Escenas.M1E4);
 
         // PENDIENTE: desbloquear episodios
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnE1M1"), true);
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnE1M2"), true);
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnE1M3"), true);
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnE1M4"), true);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnM1E1"), true);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnM1E2"), true);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnM1E3"), true);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnM1E4"), true);
 
         // Predeterminado
         EnClicDificultad(SistemaMemoria.Dificultad);
 
-        título.Visibility = Visibility.Visible;
         menú.Visibility = Visibility.Visible;
-        episodios.Visibility = Visibility.Hidden;
+        jugar.Visibility = Visibility.Hidden;
 
         SistemaEscenas.BloquearCursor(false);
         Game.UpdateTime.Factor = 1;
@@ -93,16 +90,13 @@ public class InterfazMenú : StartupScript
             return;
 
         animando = true;
-        título.Visibility = Visibility.Visible;
         menú.Visibility = Visibility.Visible;
-        episodios.Visibility = Visibility.Visible;
+        jugar.Visibility = Visibility.Visible;
 
-        SistemaAnimación.AnimarElemento(título, 0.4f, false, Direcciones.arriba, TipoCurva.rápida, null);
         SistemaAnimación.AnimarElemento(menú, 0.2f, false, Direcciones.derecha, TipoCurva.rápida, null);
-        SistemaAnimación.AnimarElemento(episodios, 0.2f, true, Direcciones.izquierda, TipoCurva.rápida, () =>
+        SistemaAnimación.AnimarElemento(jugar, 0.2f, true, Direcciones.izquierda, TipoCurva.rápida, () =>
         {
             animando = false;
-            título.Visibility = Visibility.Hidden;
             menú.Visibility = Visibility.Hidden;
         });
     }
@@ -113,16 +107,14 @@ public class InterfazMenú : StartupScript
             return;
 
         animando = true;
-        título.Visibility = Visibility.Visible;
         menú.Visibility = Visibility.Visible;
-        episodios.Visibility = Visibility.Visible;
+        jugar.Visibility = Visibility.Visible;
 
-        SistemaAnimación.AnimarElemento(título, 0.4f, true, Direcciones.arriba, TipoCurva.rápida, null);
-        SistemaAnimación.AnimarElemento(episodios, 0.2f, false, Direcciones.izquierda, TipoCurva.rápida, null);
+        SistemaAnimación.AnimarElemento(jugar, 0.2f, false, Direcciones.izquierda, TipoCurva.rápida, null);
         SistemaAnimación.AnimarElemento(menú, 0.2f, true, Direcciones.derecha, TipoCurva.rápida, () =>
         {
             animando = false;
-            episodios.Visibility = Visibility.Hidden;
+            jugar.Visibility = Visibility.Hidden;
         });
     }
 

@@ -29,7 +29,7 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Visibility: Hidden
-                Width: 5.0
+                Width: 4.0
                 HorizontalAlignment: Right
                 Margin: {Right: 30.0}
                 MaximumWidth: 3.4028235E+38
@@ -45,7 +45,7 @@ Hierarchy:
                 Id: 208d5d4d-5916-4a83-96ce-3ed0a232eecc
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 5.0
+                Width: 4.0
                 HorizontalAlignment: Right
                 Margin: {Right: 10.0}
                 MaximumWidth: 3.4028235E+38
@@ -72,7 +72,7 @@ Hierarchy:
                 DependencyProperties:
                     8b382fd864570b49ccfbe09505090ec0~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 5.0
+                Height: 4.0
                 VerticalAlignment: Top
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -88,7 +88,7 @@ Hierarchy:
                 Id: 4b011e5c-668b-427a-b756-2cc9bc8b6832
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 5.0
+                Width: 4.0
                 HorizontalAlignment: Left
                 Margin: {Left: 10.0}
                 MaximumWidth: 3.4028235E+38
@@ -105,7 +105,7 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Visibility: Hidden
-                Width: 5.0
+                Width: 4.0
                 HorizontalAlignment: Left
                 Margin: {Left: 30.0}
                 MaximumWidth: 3.4028235E+38
@@ -122,7 +122,7 @@ Hierarchy:
                 DependencyProperties:
                     741b7054631567115b575e174c362841~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 5.0
+                Height: 4.0
                 VerticalAlignment: Bottom
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -139,7 +139,7 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Visibility: Hidden
-                Width: 5.0
+                Width: 4.0
                 HorizontalAlignment: Right
                 Margin: {Right: 20.0}
                 MaximumWidth: 3.4028235E+38
@@ -156,7 +156,7 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Visibility: Hidden
-                Width: 5.0
+                Width: 4.0
                 HorizontalAlignment: Left
                 Margin: {Left: 20.0}
                 MaximumWidth: 3.4028235E+38
@@ -172,7 +172,7 @@ Hierarchy:
                 Id: b0fd12cd-cbfb-4999-bc52-027a5a0a41f5
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 5.0
+                Width: 4.0
                 HorizontalAlignment: Left
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -188,7 +188,7 @@ Hierarchy:
                 Id: b97cce6f-c671-4e4c-afde-a556a2be51f3
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 50.0
+                Height: 40.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -206,7 +206,7 @@ Hierarchy:
                 Id: bbdb2ba4-1df7-4383-8b41-db0803d2b7ad
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 5.0
+                Width: 4.0
                 HorizontalAlignment: Right
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -222,7 +222,7 @@ Hierarchy:
                 Id: d55d9875-b47c-4938-8415-98e65702c058
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 20.0
+                Height: 15.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -230,7 +230,7 @@ Hierarchy:
                 Name: txt
                 Text: "Botón"
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
-                TextSize: 25.0
+                TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
         -   UIElement: !Grid

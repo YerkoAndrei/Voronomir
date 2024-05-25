@@ -4,6 +4,5 @@ SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 FontSource: !FileFontProvider
     Source: !file Kroftsmann.ttf
-FontType: !RuntimeRasterizedSpriteFontType
-    Size: 25.0
+FontType: !RuntimeRasterizedSpriteFontType {}
 Spacing: 4.0
