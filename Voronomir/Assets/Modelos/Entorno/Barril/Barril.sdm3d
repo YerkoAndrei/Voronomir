@@ -1,0 +1,19 @@
+!Model
+Id: c4e749bb-4884-4a6a-9ba6-558a90bd6774
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Barril.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    f4084a4606205088c705246d87706069:
+        Name: Barril
+        MaterialInstance:
+            Material: 47e3e34d-9bc8-417a-a8e8-8629308b8903:Modelos/Entorno/Barril/Materiales/Barril
+    44dad5f0aa85ca8b0b95c853112dda29:
+        Name: "Daño"
+        MaterialInstance:
+            Material: "28124e91-df86-45c1-87bb-ed4dd0e8446e:Modelos/Entorno/Barril/Materiales/Daño"
+Modifiers: {}
+~SourceHashes:
+    6396fe5ea38af57005c6e9bd743f069f~Barril.glb: 5520b4e1e0cdd15adaffe9ec447cf4e6
