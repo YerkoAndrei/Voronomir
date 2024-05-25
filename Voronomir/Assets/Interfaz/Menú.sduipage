@@ -360,7 +360,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: imgDeco 1
                 Source: !SpriteFromTexture
-                    Texture: a9207b0c-377d-4627-83a9-2a966c0b095e:Texturas/Interfaz/Estrella
+                    Texture: ab5b52ec-c4af-47c1-8c29-d61259c348a3:Texturas/Interfaz/EstrellaDerecha
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !ImageElement
