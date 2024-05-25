@@ -26,6 +26,8 @@ public class ElementoDañable : StartupScript
             enemigo = controlador.Get<ControladorEnemigo>().enemigo;
             controlador.Get<ControladorEnemigo>().AgregarDañable(this);
         }
+        else if (controlador.Get<ControladorBarril>() != null)
+            controlador.Get<ControladorBarril>().AgregarDañable(this);
         else
             enemigo = Enemigos.nada;
     }

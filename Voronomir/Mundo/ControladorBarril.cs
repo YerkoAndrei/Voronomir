@@ -1,0 +1,50 @@
+﻿using Stride.Core.Mathematics;
+using Stride.Particles.Components;
+using Stride.Engine;
+
+namespace Voronomir;
+
+public class ControladorBarril : StartupScript, IDañable
+{
+    public ModelComponent modelo;
+    public ParticleSystemComponent partículas;
+    
+    private PhysicsComponent cuerpo;
+    private ElementoDañable dañable;
+    private float vida;
+    private float dañoExplosión;
+
+    public override void Start()
+    {
+        cuerpo = Entity.Get<PhysicsComponent>();
+        vida = 20;          // 2 balas de metralleta
+        dañoExplosión = 70; // 10 menos que lanzagranadas
+    }
+
+    public void RecibirDaño(float daño)
+    {
+        if (vida <= 0)
+            return;
+
+        vida -= daño;
+        if (vida > 0)
+            return;
+
+        // Explotar
+        dañable.Desactivar();
+        modelo.Enabled = false;
+        cuerpo.Enabled = false;
+        partículas.ParticleSystem.StopEmitters();
+        ControladorCofres.IniciarExplosión(dañoExplosión, Entity.Transform.WorldMatrix.TranslationVector + (Vector3.One * 0.5f), Vector3.Zero);
+    }
+
+    public void AgregarDañable(ElementoDañable _dañable)
+    {
+        dañable = _dañable;
+    }
+
+    public void Empujar(Vector3 dirección)
+    {
+
+    }
+}
