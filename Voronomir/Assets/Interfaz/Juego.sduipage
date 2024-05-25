@@ -8535,7 +8535,7 @@ Hierarchy:
                 Id: a3236013-7dec-49de-8241-b6c77b39ef7e
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 20.0
+                Height: 15.0
                 Margin*: {Left: 680.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -8543,7 +8543,7 @@ Hierarchy:
                 Name*: txtE
                 Text*: (E)
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
-                TextSize: 25.0
+                TextSize: 20.0
                 TextColor: {R: 255, G: 255, B: 99, A: 255}
                 TextAlignment: Center
         -   UIElement: !ImageElement
@@ -10563,7 +10563,7 @@ Hierarchy:
                 Id: cac76349-7209-48f1-b68d-35f0b3dd11a2
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 20.0
+                Height: 15.0
                 Margin: {Left: 680.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -10571,7 +10571,7 @@ Hierarchy:
                 Name*: txtFinalE
                 Text: (E)
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
-                TextSize: 25.0
+                TextSize: 20.0
                 TextColor: {R: 255, G: 255, B: 99, A: 255}
                 TextAlignment: Center
         -   UIElement: !Button
