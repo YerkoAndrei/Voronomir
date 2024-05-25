@@ -183,6 +183,10 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
             dañable.Desactivar();
         }
 
+        // En aire siempre explotan
+        if (!cuerpo.IsGrounded)
+            explotar = true;
+
         // Enemigos pequeños siempre explotan y cerebro nunca
         if (enemigo == Enemigos.rangoLigero || enemigo == Enemigos.especialLigero)
             explotar = true;
