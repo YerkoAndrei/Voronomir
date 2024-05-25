@@ -112,6 +112,7 @@ Hierarchy:
                             030fdb8ce3aace92bc8e51a19a5fa6dd~txtHRTFNo: no
                             "ad2e966219ac77169457c99935a4337c~txtDescripciónHRTF": "descripciónHrtf"
                             4d971fef3dee94c53ac60e361cebc5e3~txtColorMira: colorMira
+                            90abc67678b65decbb561cac341d1216~txtEfectos: efectos
                     2a3f5fd9b4d9f74d08afc9b240c3f933: !UIComponent
                         Id: 6fe1333c-8c6e-459b-a3be-af9814613a43
                         Page: "2973b9e0-75a7-45db-bc7a-1d6a505e0191:Interfaz/Menú"

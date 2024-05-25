@@ -26,6 +26,7 @@
   "campoVisión": "Field of View",
   "calidad": "Quality",
   "sombras": "Shadows",
+  "efectos": "Effects quantity",
   "vSync": "v Sync",
   "hrtf": "HRTF",
   "descripciónHrtf": "(Better 3D sound)",

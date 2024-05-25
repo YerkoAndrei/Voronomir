@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Stride.Core.Mathematics;
 using Stride.Engine;
+using System;
 
 namespace Voronomir;
 using static Utilidades;
@@ -69,17 +70,30 @@ public class ControladorCofres : StartupScript
 
     public override void Start()
     {
-        // Cofre enemigos
+        // Posición cofre enemigos
         cofreProyectiles = new Vector3(0, -10, 0);
         cofreEnemigos = new Vector3(-13, -10, 0);
 
-        // Cofre jugador / efectos
-        // PENDIENTE: configurar cantidad efectos
-        //switch (SistemaMemoria.ObtenerConfiguración(Configuraciones.efectos))
-        maxMarcas = 100;
-        maxEfectos = 100;
+        // Cofre jugador
         maxGranadas = 4;
-        maxExplosiones = 4;
+        maxExplosiones = 8;
+
+        // Cofre efectos
+        switch ((Calidades)Enum.Parse(typeof(Calidades), SistemaMemoria.ObtenerConfiguración(Configuraciones.efectos)))
+        {
+            case Calidades.bajo:
+                maxMarcas = 50;
+                maxEfectos = 50;
+                break;
+            case Calidades.medio:
+                maxMarcas = 100;
+                maxEfectos = 100;
+                break;
+            case Calidades.alto:
+                maxMarcas = 200;
+                maxEfectos = 200;
+                break;
+        }
 
         // Marcas
         marcas = new ElementoMarca[maxMarcas];

@@ -65,8 +65,9 @@ public class SistemaMemoria : StartupScript
         {
             { Configuraciones.idioma.ToString(),            Idiomas.sistema.ToString() },
             { Configuraciones.dificultad.ToString(),        Dificultades.normal.ToString() },
-            { Configuraciones.gráficos.ToString(),          NivelesCalidad.alto.ToString() },
-            { Configuraciones.sombras.ToString(),           NivelesCalidad.alto.ToString() },
+            { Configuraciones.gráficos.ToString(),          Calidades.alto.ToString() },
+            { Configuraciones.efectos.ToString(),           Calidades.medio.ToString() },
+            { Configuraciones.sombras.ToString(),           Calidades.alto.ToString() },
             { Configuraciones.pantallaCompleta.ToString(),  true.ToString() },
             { Configuraciones.resolución.ToString(),        resolución },
             { Configuraciones.vSync.ToString(),             false.ToString() },

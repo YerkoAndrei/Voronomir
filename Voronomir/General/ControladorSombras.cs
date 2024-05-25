@@ -29,17 +29,17 @@ public class ControladorSombras : StartupScript
         if (luz == null)
             ReferenciarLuz();
 
-        var nivel = (NivelesCalidad)Enum.Parse(typeof(NivelesCalidad), SistemaMemoria.ObtenerConfiguración(Configuraciones.sombras));
+        var nivel = (Calidades)Enum.Parse(typeof(Calidades), SistemaMemoria.ObtenerConfiguración(Configuraciones.sombras));
         switch (nivel)
         {
-            case NivelesCalidad.bajo:
+            case Calidades.bajo:
                 luz.Shadow.Enabled = false;
                 break;
-            case NivelesCalidad.medio:
+            case Calidades.medio:
                 luz.Shadow.Enabled = true;
                 luz.Shadow.Size = LightShadowMapSize.Medium;
                 break;
-            case NivelesCalidad.alto:
+            case Calidades.alto:
                 luz.Shadow.Enabled = true;
                 luz.Shadow.Size = LightShadowMapSize.XLarge;
                 break;

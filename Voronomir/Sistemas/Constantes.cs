@@ -107,7 +107,7 @@ public static class Constantes
         difícil
     }
 
-    public enum NivelesCalidad
+    public enum Calidades
     {
         bajo,
         medio,
@@ -127,6 +127,7 @@ public static class Constantes
         dificultad,
         gráficos,
         sombras,
+        efectos,
         pantallaCompleta,
         resolución,
         vSync,
