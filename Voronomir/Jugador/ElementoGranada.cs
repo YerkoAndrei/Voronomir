@@ -104,11 +104,11 @@ public class ElementoGranada : AsyncScript, IProyectil
                                                          colisionesMarca);
 
             if (resultado.Succeeded)
-                ControladorCofres.IniciarImpactoGranada(dañoImpacto, resultado.Point, resultado.Normal);
+                ControladorCofres.IniciarExplosión(dañoImpacto, resultado.Point, resultado.Normal);
             else
-                ControladorCofres.IniciarImpactoGranada(dañoImpacto, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
+                ControladorCofres.IniciarExplosión(dañoImpacto, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
         }
         else
-            ControladorCofres.IniciarImpactoGranada(dañoImpacto, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
+            ControladorCofres.IniciarExplosión(dañoImpacto, Entity.Transform.WorldMatrix.TranslationVector, Vector3.Zero);
     }
 }

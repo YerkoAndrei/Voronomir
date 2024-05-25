@@ -317,7 +317,7 @@ public class ControladorCofres : StartupScript
             granadaActual = 0;
     }
 
-    public static void IniciarImpactoGranada(float daño, Vector3 posición, Vector3 normal)
+    public static void IniciarExplosión(float daño, Vector3 posición, Vector3 normal)
     {
         explosiones[explosiónActual].Iniciar(posición, normal, daño);
 

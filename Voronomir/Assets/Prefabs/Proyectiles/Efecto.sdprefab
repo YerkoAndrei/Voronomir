@@ -427,6 +427,7 @@ Hierarchy:
                         Id: 53e18ad8-42a8-4da2-8885-58c06ecffcf4
                         Sounds:
                             "91d84f261f22c654e29a032538fc64f5~aparición": "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                            "783933b78e5c6b9f3ffade30e0984bed~explosión": "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
                         UseHRTF: true
                         DirectionalFactor: 0.5
                         Environment: Large

@@ -30,6 +30,7 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
     public AudioEmitterComponent emisor;
 
     private AudioEmitterSoundController sonidoAparición;
+    private AudioEmitterSoundController sonidoExplosión;
 
     [DataMemberIgnore] public float distanciaSonido { get; set; }
     [DataMemberIgnore] public float distanciaJugador { get; set; }
@@ -38,6 +39,7 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
     {
         emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
         sonidoAparición = emisor["aparición"];
+        sonidoExplosión = emisor["explosión"];
         distanciaSonido = 20;
 
         Apagar();
@@ -76,6 +78,9 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
                 granada.Entity.Transform.Scale = Vector3.One * 0.4f;
                 granada.Enabled = true;
                 granada.ParticleSystem.ResetSimulation();
+
+                // Sonido explosión
+                sonidoExplosión.PlayAndForget();
                 break;
         }
 
@@ -290,20 +295,30 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
         distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerCabezaJugador());
 
         if (distanciaJugador > distanciaSonido)
+        {
             sonidoAparición.Volume = 0;
+            sonidoExplosión.Volume = 0;
+        }
         else
+        {
             sonidoAparición.Volume = ((distanciaSonido - distanciaJugador) / distanciaSonido) * SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+            sonidoExplosión.Volume = ((distanciaSonido - distanciaJugador) / distanciaSonido) * SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+        }
     }
 
     public void PausarSonidos(bool pausa)
     {
         if (pausa)
+        {
             sonidoAparición.Pause();
+            sonidoExplosión.Pause();
+        }
         else
         {
             ActualizarVolumen();
             emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
             sonidoAparición.Play();
+            sonidoExplosión.Play();
         }
     }
 }
