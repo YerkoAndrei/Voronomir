@@ -3,6 +3,7 @@ using Stride.Particles.Components;
 using Stride.Engine;
 
 namespace Voronomir;
+using static Utilidades;
 
 public class ControladorBarril : StartupScript, IDañable
 {
@@ -35,6 +36,12 @@ public class ControladorBarril : StartupScript, IDañable
         modelo.Enabled = false;
         cuerpo.Enabled = false;
         partículas.ParticleSystem.StopEmitters();
+        EsperarCuadro();
+    }
+
+    public async void EsperarCuadro()
+    {
+        await EsperarCuadroFísica();
         ControladorCofres.IniciarExplosión(dañoExplosión, Entity.Transform.WorldMatrix.TranslationVector + (Vector3.One * 0.5f), Vector3.Zero);
     }
 
