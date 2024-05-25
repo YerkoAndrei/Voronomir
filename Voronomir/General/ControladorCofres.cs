@@ -264,7 +264,7 @@ public class ControladorCofres : StartupScript
 
     public static void IniciarEfectoMuerte(Enemigos enemigo, Vector3 posición)
     {
-        // PENDIENTE: objeto físico o ragdoll
+        // PENDIENTE: objetos físicos o ragdoll
         switch (enemigo)
         {
             case Enemigos.meléLigero:
