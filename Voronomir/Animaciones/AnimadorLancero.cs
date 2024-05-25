@@ -87,6 +87,9 @@ public class AnimadorLancero : StartupScript, IAnimador
         modelo.Entity.Transform.Position = new Vector3(0, -0.9f, 0.1f);
         modelo.Entity.Transform.Rotation = Quaternion.RotationX(MathUtil.DegreesToRadians(-5));
 
+        lanza.Position = new Vector3(-0.3f, 0.08f, 0);
+        lanza.Rotation = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(10), MathUtil.DegreesToRadians(89), 0);
+
         for (int i = 0; i < idBrazos.Length; i++)
         {
             esqueleto.NodeTransformations[idBrazos[i]].Transform.Scale = Vector3.Zero;

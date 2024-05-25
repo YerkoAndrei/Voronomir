@@ -53,7 +53,7 @@ Hierarchy:
                     e8f9cf0aa966229b689d889367899aac: !TransformComponent
                         Id: 2f42f099-981c-463c-967d-0db778a7ebba
                         Position: {X: 0.0, Y: 0.35, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
@@ -290,6 +290,41 @@ Hierarchy:
                         Priority: 1
                         controlador: ref!! d690be62-0e38-4c20-b3c6-2b570dbd4e93
                         multiplicador: 0.5
+        -   Entity:
+                Id: a32e6735-123f-45ec-be68-0540b79e9e4b
+                Name: Escudo
+                Components:
+                    32f4d3a8978134baf0fc408dfeb6f986: !TransformComponent
+                        Id: e1626d6d-f8ca-44f8-bd81-7b4b0bc15f58
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    0a1af2486fdb78d719164131845886c3: !RigidbodyComponent
+                        Id: 5074c681-14f1-4083-b2b1-85f5037efca8
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            0d7f138a96b5b7cb87e0c1dd04da748b: !ColliderShapeAssetDesc
+                                Shape: 1c5a6c8a-b0cd-4874-82b6-cd5b81822fec:Modelos/Enemigos/Cerebro/ColliderEscudo
+                    b7a4846150744a3c3a56a84f38277ded: !ModelComponent
+                        Id: cb79a903-0ac3-4c3b-a45c-602710d5b71f
+                        Model: 3fb5550c-9e46-454e-a636-e6798f0bac5f:Modelos/Enemigos/Cerebro/Escudo
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: ad748dd7-2c60-492d-a797-f86fa8178d02
@@ -369,6 +404,7 @@ Hierarchy:
                             e99fd69243b07ffb3cb8b699d64c5a6b: ref!! f351aac3-baa2-4941-9565-feb3cbc9e8a3
                             90a7e5f1db7e84c8ee409bc4ec194c69: ref!! 84b963ff-9a5c-435c-ab48-c14129d1909e
                             b98853d48efd39aba09a0bffdc276403: ref!! b2edc07b-41e7-42f5-acc0-d56498828145
+                            7299011f61e471dc88d33faa9e680fdf: ref!! e1626d6d-f8ca-44f8-bd81-7b4b0bc15f58
                             a13b75650fedf82dde8922f68f6be026: ref!! 76e2a775-7afe-484e-a5df-b8b85b4dc932
                             e40d5481cf1e218611340ca1ddf40eed: ref!! 2f42f099-981c-463c-967d-0db778a7ebba
                             4cb2311def5d3d8291f34346afbb85a8: ref!! 7fb5ad80-e0ec-4e85-bd9b-0291a033de08
@@ -388,12 +424,12 @@ Hierarchy:
                     1dd64e1afcd5512cedf9e97ef1931ca5: !Voronomir.AnimadorCerebro,Voronomir.Proyecto
                         Id: a63307c3-bda5-4b9a-9601-55a51fc27887
                         rueda: ref!! 2f42f099-981c-463c-967d-0db778a7ebba
+                        cerebro: ref!! fac3214c-fe70-406b-a095-bed2c63fd8fb
+                        modeloEscudo: ref!! cb79a903-0ac3-4c3b-a45c-602710d5b71f
+                        cuerpoEscudo: ref!! 5074c681-14f1-4083-b2b1-85f5037efca8
+                        escudoMuerte: ref!! fdcabb40-b9a7-4016-9adc-adfb1e4dc4e9
                         "partículas": ref!! 022044a0-c005-4ee1-9ebd-87ef16318f29
                         saltador: ref!! 83b2816f-85f4-4d4f-837d-601ff844428d
-                        modelos:
-                            a5d171ca5a62c66362aa02b7a81ebab0: ref!! fac3214c-fe70-406b-a095-bed2c63fd8fb
-                            ecff80b0fac0ec2b368f6d056e6ae965: ref!! 6ebf5e89-67f5-48e6-a778-fab520d51d82
-                            f49c40c4e250c9751031466e80e37013: ref!! 76401dda-ec5b-441f-98c0-f55928eb29b9
         -   Folder: null
             Entity:
                 Id: edbfe97a-f7ca-4741-8daf-861fb66dc9e0
@@ -446,18 +482,18 @@ Hierarchy:
                         Children: {}
         -   Entity:
                 Id: fdcabb40-b9a7-4016-9adc-adfb1e4dc4e9
-                Name: Escudo
+                Name: EscudoMuerte
                 Components:
                     32f4d3a8978134baf0fc408dfeb6f986: !TransformComponent
                         Id: 76e2a775-7afe-484e-a5df-b8b85b4dc932
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -0.6, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     0a1af2486fdb78d719164131845886c3: !RigidbodyComponent
                         Id: fcdfbd81-5ec0-4ab5-b372-8fbe769a30a5
-                        CollisionGroup: SensorTrigger
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        Enabled: false
+                        CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -477,5 +513,6 @@ Hierarchy:
                                 Shape: 1c5a6c8a-b0cd-4874-82b6-cd5b81822fec:Modelos/Enemigos/Cerebro/ColliderEscudo
                     b7a4846150744a3c3a56a84f38277ded: !ModelComponent
                         Id: 6ebf5e89-67f5-48e6-a778-fab520d51d82
+                        Enabled: false
                         Model: 3fb5550c-9e46-454e-a636-e6798f0bac5f:Modelos/Enemigos/Cerebro/Escudo
                         Materials: {}
