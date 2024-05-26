@@ -6,7 +6,7 @@ using Stride.Rendering;
 
 namespace Voronomir;
 
-public class AnimadorPata : SyncScript
+public class AnimadorPrueba : SyncScript
 {
     public TransformComponent objetivo;
     public List<string> huesos = new List<string> { };
