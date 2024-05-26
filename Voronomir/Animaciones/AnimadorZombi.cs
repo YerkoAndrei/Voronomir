@@ -17,8 +17,8 @@ public class AnimadorZombi : StartupScript, IAnimador
     private int[] idBrazos;
     private int[] idPiernas;
 
-    private Quaternion rotaciónInicio0;
-    private Quaternion rotaciónInicio1;
+    private Quaternion rotaciónInicioBrazoIzq;
+    private Quaternion rotaciónInicioBrazoDer;
 
     public void Iniciar()
     {
@@ -44,10 +44,10 @@ public class AnimadorZombi : StartupScript, IAnimador
                     idPiernas[ii] = i;
             }
         }
-        rotaciónInicio0 = esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation;
-        rotaciónInicio1 = esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation;
-    }
 
+        rotaciónInicioBrazoIzq = esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation;
+        rotaciónInicioBrazoDer = esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation;
+    }
 
     public void Actualizar()
     {
@@ -67,14 +67,16 @@ public class AnimadorZombi : StartupScript, IAnimador
 
     public void Atacar()
     {
-        AnimarAtaque();
+        AnimarAtaque(Quaternion.RotationZ(MathUtil.DegreesToRadians(-100)), 
+                     Quaternion.RotationZ(MathUtil.DegreesToRadians(100)));
     }
 
     public void Morir()
     {
-        modelo.Entity.Transform.Position = new Vector3(0, 0, 1.2f);
-        modelo.Entity.Transform.Rotation = Quaternion.RotationX(MathUtil.DegreesToRadians(-86));
-        
+        AnimarMuerte(modelo.Entity.Transform.Position, modelo.Entity.Transform.Rotation,
+                     new Vector3(0, 0, 1.2f), Quaternion.RotationX(MathUtil.DegreesToRadians(-86)));
+
+        // Apagar extremidades
         for (int i = 0; i < idBrazos.Length; i++)
         {
             esqueleto.NodeTransformations[idBrazos[i]].Transform.Scale = Vector3.Zero;
@@ -85,10 +87,9 @@ public class AnimadorZombi : StartupScript, IAnimador
         }
     }
 
-    private async void AnimarAtaque()
+    // Animaciones
+    private async void AnimarAtaque(Quaternion objetivoIzq, Quaternion objetivoDer)
     {
-        var rotaciónAtaque0 = Quaternion.RotationZ(MathUtil.DegreesToRadians(-100));
-        var rotaciónAtaque1 = Quaternion.RotationZ(MathUtil.DegreesToRadians(100));
         float duración = 0.4f;
         float tiempoLerp = 0;
         float tiempo = 0;
@@ -97,15 +98,37 @@ public class AnimadorZombi : StartupScript, IAnimador
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
 
-            esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = Quaternion.Lerp(rotaciónAtaque0, rotaciónInicio0, tiempo);
-            esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = Quaternion.Lerp(rotaciónAtaque1, rotaciónInicio1, tiempo);
+            esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = Quaternion.Lerp(objetivoIzq, rotaciónInicioBrazoIzq, tiempo);
+            esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = Quaternion.Lerp(objetivoDer, rotaciónInicioBrazoDer, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
 
         // Fin
-        esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = rotaciónInicio0;
-        esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = rotaciónInicio1;
+        esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = rotaciónInicioBrazoIzq;
+        esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = rotaciónInicioBrazoDer;
+    }
+
+    private async void AnimarMuerte(Vector3 posiciónInicio, Quaternion rotaciónInicio, Vector3 posiciónObjetivo, Quaternion rotaciónObjetivo)
+    {
+        float duración = 0.3f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = tiempoLerp / duración;
+
+            modelo.Entity.Transform.Position = Vector3.Lerp(posiciónInicio, posiciónObjetivo, tiempo);
+            modelo.Entity.Transform.Rotation = Quaternion.Lerp(rotaciónInicio, rotaciónObjetivo, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+
+        // Fin
+        modelo.Entity.Transform.Position = posiciónObjetivo;
+        modelo.Entity.Transform.Rotation = rotaciónObjetivo;
     }
 }

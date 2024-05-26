@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
-using Stride.Engine;
 using Stride.Rendering;
+using Stride.Engine;
 
 namespace Voronomir;
 
@@ -24,8 +24,8 @@ public class AnimadorLancero : StartupScript, IAnimador
     private Vector3 pociciónLanzaInicio;
     private Vector3 pociciónLanzaAtaque;
 
-    private Quaternion rotaciónInicio0;
-    private Quaternion rotaciónInicio1;
+    private Quaternion rotaciónInicioBrazoIzq;
+    private Quaternion rotaciónInicioBrazoDer;
 
     public void Iniciar()
     {
@@ -48,8 +48,8 @@ public class AnimadorLancero : StartupScript, IAnimador
             }
         }
 
-        rotaciónInicio0 = esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation;
-        rotaciónInicio1 = esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation;
+        rotaciónInicioBrazoIzq = esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation;
+        rotaciónInicioBrazoDer = esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation;
 
         pociciónLanzaInicio = lanza.Position;
         pociciónLanzaAtaque = lanza.Position + new Vector3(0, 0, 1.5f);
@@ -79,17 +79,19 @@ public class AnimadorLancero : StartupScript, IAnimador
     public void Atacar()
     {
         ApuntarLanza();
-        AnimarAtaque();
+        AnimarAtaque(Quaternion.RotationZ(MathUtil.DegreesToRadians(-110)),
+                     Quaternion.RotationZ(MathUtil.DegreesToRadians(110)));
     }
 
     public void Morir()
     {
-        modelo.Entity.Transform.Position = new Vector3(0, -0.9f, 0.1f);
-        modelo.Entity.Transform.Rotation = Quaternion.RotationX(MathUtil.DegreesToRadians(-5));
+        AnimarMuerte(modelo.Entity.Transform.Position, modelo.Entity.Transform.Rotation,
+                     new Vector3(0, 0, 1.0f), Quaternion.RotationX(MathUtil.DegreesToRadians(-86)));
 
-        lanza.Position = new Vector3(-0.3f, 0.08f, 0);
-        lanza.Rotation = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(10), MathUtil.DegreesToRadians(89), 0);
+        AnimarLanzaMuerte(new Vector3(-0.3f, 0.08f, 0),
+                          Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(25), MathUtil.DegreesToRadians(89), 0));
 
+        // Apagar extremidades
         for (int i = 0; i < idBrazos.Length; i++)
         {
             esqueleto.NodeTransformations[idBrazos[i]].Transform.Scale = Vector3.Zero;
@@ -106,10 +108,9 @@ public class AnimadorLancero : StartupScript, IAnimador
         lanza.Rotation = rotaciónLanzaInicial * Quaternion.RotationX(MathUtil.DegreesToRadians(85 - (ánguloDiferencia * 10)));
     }
 
-    private async void AnimarAtaque()
+    // Animaciones
+    private async void AnimarAtaque(Quaternion objetivoIzq, Quaternion objetivoDer)
     {
-        var rotaciónAtaque0 = Quaternion.RotationZ(MathUtil.DegreesToRadians(-120));
-        var rotaciónAtaque1 = Quaternion.RotationZ(MathUtil.DegreesToRadians(120));
         float duración = 0.4f;
         float tiempoLerp = 0;
         float tiempo = 0;
@@ -120,8 +121,8 @@ public class AnimadorLancero : StartupScript, IAnimador
 
             lanza.Position = Vector3.Lerp(pociciónLanzaAtaque, pociciónLanzaInicio, tiempo);
 
-            esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = Quaternion.Lerp(rotaciónAtaque0, rotaciónInicio0, tiempo);
-            esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = Quaternion.Lerp(rotaciónAtaque1, rotaciónInicio1, tiempo);
+            esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = Quaternion.Lerp(objetivoIzq, rotaciónInicioBrazoIzq, tiempo);
+            esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = Quaternion.Lerp(objetivoDer, rotaciónInicioBrazoDer, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
@@ -130,7 +131,56 @@ public class AnimadorLancero : StartupScript, IAnimador
         // Fin
         lanza.Position = pociciónLanzaInicio;
 
-        esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = rotaciónInicio0;
-        esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = rotaciónInicio1;
+        esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = rotaciónInicioBrazoIzq;
+        esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = rotaciónInicioBrazoDer;
+    }
+
+    private async void AnimarMuerte(Vector3 posiciónInicio, Quaternion rotaciónInicio, Vector3 posiciónObjetivo, Quaternion rotaciónObjetivo)
+    {
+        float duración = 0.3f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = tiempoLerp / duración;
+
+            modelo.Entity.Transform.Position = Vector3.Lerp(posiciónInicio, posiciónObjetivo, tiempo);
+            modelo.Entity.Transform.Rotation = Quaternion.Lerp(rotaciónInicio, rotaciónObjetivo, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+
+        // Fin
+        modelo.Entity.Transform.Position = posiciónObjetivo;
+        modelo.Entity.Transform.Rotation = rotaciónObjetivo;
+    }
+
+    private async void AnimarLanzaMuerte(Vector3 posiciónObjetivo, Quaternion rotaciónObjetivo)
+    {
+        await Task.Delay(200);
+
+        var posiciónInicio = lanza.Position;
+        var rotaciónInicio = lanza.Rotation;
+
+        float duración = 0.2f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = tiempoLerp / duración;
+
+            lanza.Position = Vector3.Lerp(posiciónInicio, posiciónObjetivo, tiempo);
+            lanza.Rotation = Quaternion.Lerp(rotaciónInicio, rotaciónObjetivo, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+
+        // Fin
+        lanza.Position = posiciónObjetivo;
+        lanza.Rotation = rotaciónObjetivo;
     }
 }

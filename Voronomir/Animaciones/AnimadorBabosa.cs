@@ -1,8 +1,8 @@
-﻿using Stride.Core.Mathematics;
-using Stride.Engine;
-using Stride.Rendering;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Stride.Core.Mathematics;
+using Stride.Rendering;
+using Stride.Engine;
 
 namespace Voronomir;
 using static Utilidades;
@@ -27,9 +27,10 @@ public class AnimadorBabosa : StartupScript, IAnimador
     private Vector3[] tamañosInicioCuerpos;
     private Vector3[] tamañosMaxCuerpos;
 
-    private float duración;
-    private float[] tiempo;
-    private float[] tiempoLerp;
+    private float duraciónCaminata;
+    private float duraciónPalpitar;
+    private float[] tiempos;
+    private float[] tiemposLerp;
     private bool[] expandiendo;
 
     private float tiempoCaminar;
@@ -44,7 +45,8 @@ public class AnimadorBabosa : StartupScript, IAnimador
         tamañosInicioCuerpos = new Vector3[cuerpos.Count];
         tamañosMaxCuerpos = new Vector3[cuerpos.Count];
 
-        duración = 0.5f;
+        duraciónCaminata = 0.8f;
+        duraciónPalpitar = 0.4f;
 
         // Encuentra huesos por nombre
         for (int i = 0; i < esqueleto.Nodes.Length; i++)
@@ -71,32 +73,33 @@ public class AnimadorBabosa : StartupScript, IAnimador
         tamañoMaxCola = tamañoInicioCola * 1.5f;
 
         // Aleatorización
-        tiempo = new float[cuerpos.Count];
-        tiempoLerp = new float[cuerpos.Count];
+        tiempos = new float[cuerpos.Count];
+        tiemposLerp = new float[cuerpos.Count];
         expandiendo = new bool[cuerpos.Count];
 
         for (int i = 0; i < idCuerpos.Length; i++)
         {
-            tiempoLerp[i] = RangoAleatorio(0, 1);
+            tiemposLerp[i] = RangoAleatorio(0, 1);
             expandiendo[i] = true;
         }
     }
 
     public void Actualizar()
     {
+        // Palpitación aleatorioa del cuerpo
         for (int i = 0; i < idCuerpos.Length; i++)
         {
-            tiempo[i] = SistemaAnimación.EvaluarSuave(tiempoLerp[i] / duración);
-            tiempoLerp[i] += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempos[i] = SistemaAnimación.EvaluarSuave(tiemposLerp[i] / duraciónPalpitar);
+            tiemposLerp[i] += (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
             if (expandiendo[i])
-                esqueleto.NodeTransformations[idCuerpos[i]].Transform.Scale = Vector3.Lerp(tamañosInicioCuerpos[i], tamañosMaxCuerpos[i], tiempo[i]);
+                esqueleto.NodeTransformations[idCuerpos[i]].Transform.Scale = Vector3.Lerp(tamañosInicioCuerpos[i], tamañosMaxCuerpos[i], tiempos[i]);
             else
-                esqueleto.NodeTransformations[idCuerpos[i]].Transform.Scale = Vector3.Lerp(tamañosMaxCuerpos[i], tamañosInicioCuerpos[i], tiempo[i]);
+                esqueleto.NodeTransformations[idCuerpos[i]].Transform.Scale = Vector3.Lerp(tamañosMaxCuerpos[i], tamañosInicioCuerpos[i], tiempos[i]);
 
-            if (tiempoLerp[i] > duración)
+            if (tiemposLerp[i] > duraciónPalpitar)
             {
-                tiempoLerp[i] = 0;
+                tiemposLerp[i] = 0;
                 expandiendo[i] = !expandiendo[i];
             }
         }
@@ -109,7 +112,7 @@ public class AnimadorBabosa : StartupScript, IAnimador
 
     public void Caminar(float velocidad)
     {
-        tiempoCaminar = SistemaAnimación.EvaluarSuave(tiempoLerpCaminar / duración);
+        tiempoCaminar = SistemaAnimación.EvaluarSuave(tiempoLerpCaminar / duraciónCaminata);
         tiempoLerpCaminar += (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
         if (expandiendoCaminar)
@@ -117,7 +120,7 @@ public class AnimadorBabosa : StartupScript, IAnimador
         else
             esqueleto.NodeTransformations[idCola].Transform.Scale = Vector3.Lerp(tamañoMaxCola, tamañoInicioCola, tiempoCaminar);
 
-        if (tiempoLerpCaminar > duración)
+        if (tiempoLerpCaminar > duraciónCaminata)
         {
             tiempoLerpCaminar = 0;
             expandiendoCaminar = !expandiendoCaminar;
@@ -126,21 +129,21 @@ public class AnimadorBabosa : StartupScript, IAnimador
 
     public void Atacar()
     {
-        AnimarAtaque();
+        AnimarAtaque(Vector3.One * 0.5f);
     }
 
     public void Morir()
     {
-        modelo.Entity.Transform.Position = new Vector3(0, 0.2f, 0.5f);
-        modelo.Entity.Transform.Rotation = Quaternion.RotationX(MathUtil.DegreesToRadians(-90));
+        AnimarMuerte(modelo.Entity.Transform.Position, modelo.Entity.Transform.Scale,
+                     new Vector3(0, -0.2f, -0.2f), Vector3.One * 0.65f);
 
         esqueleto.NodeTransformations[idCabeza].Transform.Scale = Vector3.Zero;
         esqueleto.NodeTransformations[idCola].Transform.Scale = Vector3.Zero;
     }
 
-    private async void AnimarAtaque()
+    // Animaciones
+    private async void AnimarAtaque(Vector3 tamañoObjetivo)
     {
-        var tamañoDisparo = Vector3.One * 0.2f;
         float duración = 0.2f;
         float tiempoLerp = 0;
         float tiempo = 0;
@@ -148,7 +151,7 @@ public class AnimadorBabosa : StartupScript, IAnimador
         while (tiempoLerp < duración)
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-            esqueleto.NodeTransformations[idCabeza].Transform.Scale = Vector3.Lerp(tamañoDisparo, tamañoInicioCabeza, tiempo);
+            esqueleto.NodeTransformations[idCabeza].Transform.Scale = Vector3.Lerp(tamañoObjetivo, tamañoInicioCabeza, tiempo);
             
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
@@ -156,5 +159,27 @@ public class AnimadorBabosa : StartupScript, IAnimador
 
         // Fin
         esqueleto.NodeTransformations[idCabeza].Transform.Scale = tamañoInicioCabeza;
+    }
+
+    private async void AnimarMuerte(Vector3 posiciónInicio, Vector3 tamañoInicio, Vector3 posiciónObjetivo, Vector3 tamañoObjetivo)
+    {
+        float duración = 0.4f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = tiempoLerp / duración;
+
+            modelo.Entity.Transform.Position = Vector3.Lerp(posiciónInicio, posiciónObjetivo, tiempo);
+            modelo.Entity.Transform.Scale = Vector3.Lerp(tamañoInicio, tamañoObjetivo, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            await Task.Delay(1);
+        }
+
+        // Fin
+        modelo.Entity.Transform.Position = posiciónObjetivo;
+        modelo.Entity.Transform.Scale = tamañoObjetivo;
     }
 }
