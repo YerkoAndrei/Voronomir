@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Rendering;
@@ -20,9 +21,13 @@ public class AnimadorZombi : StartupScript, IAnimador
     private Quaternion rotaciónInicioBrazoIzq;
     private Quaternion rotaciónInicioBrazoDer;
 
+    private CancellationTokenSource tokenAtaque;
+
     public void Iniciar()
     {
         esqueleto = modelo.Skeleton;
+        tokenAtaque = new CancellationTokenSource();
+
         idBrazos = new int[brazos.Count];
         idPiernas = new int[piernas.Count];
 
@@ -73,6 +78,9 @@ public class AnimadorZombi : StartupScript, IAnimador
 
     public void Morir()
     {
+        tokenAtaque.Cancel();
+        tokenAtaque = new CancellationTokenSource();
+
         AnimarMuerte(modelo.Entity.Transform.Position, modelo.Entity.Transform.Rotation,
                      new Vector3(0, 0, 1.2f), Quaternion.RotationX(MathUtil.DegreesToRadians(-86)));
 
@@ -94,10 +102,13 @@ public class AnimadorZombi : StartupScript, IAnimador
         float tiempoLerp = 0;
         float tiempo = 0;
 
+        var token = tokenAtaque.Token;
         while (tiempoLerp < duración)
         {
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+            if (token.IsCancellationRequested)
+                break;
 
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = Quaternion.Lerp(objetivoIzq, rotaciónInicioBrazoIzq, tiempo);
             esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = Quaternion.Lerp(objetivoDer, rotaciónInicioBrazoDer, tiempo);
 

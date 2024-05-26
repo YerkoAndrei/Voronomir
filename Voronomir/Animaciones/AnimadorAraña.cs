@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Particles.Components;
 using Stride.Rendering;
-using Stride.Physics;
 using Stride.Engine;
-using System.Threading.Tasks;
+using Stride.Physics;
 
 namespace Voronomir;
 
@@ -33,9 +34,12 @@ public class AnimadorAraña : StartupScript, IAnimador
     private Quaternion rotaciónInicioCabeza;
     private Quaternion rotaciónInicioPoto;
 
+    private CancellationTokenSource tokenAtaque;
+
     public void Iniciar()
     {
         esqueleto = modelo.Skeleton;
+        tokenAtaque = new CancellationTokenSource();
 
         idPatasIzq = new int[patasIzq.Count];
         idPatasDer = new int[patasDer.Count];
@@ -117,6 +121,9 @@ public class AnimadorAraña : StartupScript, IAnimador
 
     public void Morir()
     {
+        tokenAtaque.Cancel();
+        tokenAtaque = new CancellationTokenSource();
+
         AnimarMuerte(modelo.Entity.Transform.Position,
                      new Vector3(0, -0.8f, -0.4f));
 
@@ -138,8 +145,12 @@ public class AnimadorAraña : StartupScript, IAnimador
         float tiempoLerp = 0;
         float tiempo = 0;
 
+        var token = tokenAtaque.Token;
         while (tiempoLerp < duración)
         {
+            if (token.IsCancellationRequested)
+                break;
+
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             esqueleto.NodeTransformations[idCabeza].Transform.Rotation = Quaternion.Lerp(objetivoCabeza, rotaciónInicioCabeza, tiempo);
             esqueleto.NodeTransformations[idPoto].Transform.Rotation = Quaternion.Lerp(objetivoPoto, rotaciónInicioPoto, tiempo);

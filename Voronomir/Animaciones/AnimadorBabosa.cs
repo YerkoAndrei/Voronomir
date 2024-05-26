@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Rendering;
@@ -37,9 +38,12 @@ public class AnimadorBabosa : StartupScript, IAnimador
     private float tiempoLerpCaminar;
     private bool expandiendoCaminar;
 
+    private CancellationTokenSource tokenAtaque;
+
     public void Iniciar()
     {
         esqueleto = modelo.Skeleton;
+        tokenAtaque = new CancellationTokenSource();
 
         idCuerpos = new int[cuerpos.Count];
         tamañosInicioCuerpos = new Vector3[cuerpos.Count];
@@ -134,6 +138,9 @@ public class AnimadorBabosa : StartupScript, IAnimador
 
     public void Morir()
     {
+        tokenAtaque.Cancel();
+        tokenAtaque = new CancellationTokenSource();
+
         AnimarMuerte(modelo.Entity.Transform.Position, modelo.Entity.Transform.Scale,
                      new Vector3(0, -0.2f, -0.2f), Vector3.One * 0.65f);
 
@@ -148,8 +155,12 @@ public class AnimadorBabosa : StartupScript, IAnimador
         float tiempoLerp = 0;
         float tiempo = 0;
 
+        var token = tokenAtaque.Token;
         while (tiempoLerp < duración)
         {
+            if (token.IsCancellationRequested)
+                break;
+
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             esqueleto.NodeTransformations[idCabeza].Transform.Scale = Vector3.Lerp(tamañoObjetivo, tamañoInicioCabeza, tiempo);
             
