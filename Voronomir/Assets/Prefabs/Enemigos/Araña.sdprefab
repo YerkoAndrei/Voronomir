@@ -387,22 +387,14 @@ Hierarchy:
                             3a60c392506c72ab62c1051f24687dcf: pata.3_03.R
                             c0e672ffdc0ddad77e91ec6b9d8c6d2f: pata.4_03.R
                         patasCompletas:
-                            7adfeb7f9812391bb2c40a1d3399e7ae: pata.1_02.L
-                            64d799c408b8381702157da7bcceda19: pata.1_03.L
-                            e5028e88f8b14e3c975b8b708a8e8e77: pata.2_02.L
-                            db94cfb917f3f9897603829f1ce120e8: pata.2_03.L
-                            594dcc95029c4f5d5d2dd05dd166ab5a: pata.3_02.L
-                            4fc9628272893018b12f93c2fc8f36c5: pata.3_03.L
-                            dcfd855ce59d6861d79fdc9c7f80cd42: pata.4_02.L
-                            61b521a8ddb73751a5715074b7d4bdc5: pata.4_03.L
-                            fac884a16d7edbc53b66869b8d4d99c6: pata.1_02.R
-                            c9aedfcbba371f3a6bceec2077479f27: pata.1_03.R
-                            e06875d123717e84699ae102728f1568: pata.2_02.R
-                            93e05e35cf177b1a920336fc629cdd8b: pata.2_03.R
-                            4569927b76d19594809c1dd53b80f93d: pata.3_02.R
-                            2ae0e85fb9b14e85ba5e235bf7f7b0a9: pata.3_03.R
-                            17e85e75892e34e67741885697bbcfd0: pata.4_02.R
-                            3eb89f9a4985fe20e0f0f9489f3f2bf0: pata.4_03.R
+                            7adfeb7f9812391bb2c40a1d3399e7ae: pata.1_01.L
+                            e5028e88f8b14e3c975b8b708a8e8e77: pata.2_01.L
+                            594dcc95029c4f5d5d2dd05dd166ab5a: pata.3_01.L
+                            dcfd855ce59d6861d79fdc9c7f80cd42: pata.4_01.L
+                            fac884a16d7edbc53b66869b8d4d99c6: pata.1_01.R
+                            e06875d123717e84699ae102728f1568: pata.2_01.R
+                            4569927b76d19594809c1dd53b80f93d: pata.3_01.R
+                            17e85e75892e34e67741885697bbcfd0: pata.4_01.R
         -   Folder: null
             Entity:
                 Id: c89d458b-f954-4d3f-9032-14652b88b729
@@ -416,7 +408,7 @@ Hierarchy:
                         Children: {}
                     74b755a74675b6a6b8fad044f1f919e6: !ModelComponent
                         Id: a499c6d7-b229-4995-a0cb-d00b50d65824
-                        Model: "db867d68-4431-4e52-9abb-f81df0c158eb:Modelos/Enemigos/Araña/Araña"
+                        Model: "0efa5560-bf3b-4c3c-9a04-16d64447c18c:Modelos/Enemigos/Araña/Araña"
                         Materials: {}
         -   Entity:
                 Id: ca19035f-9a66-45a6-9edb-78226aa34f80

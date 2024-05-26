@@ -87,7 +87,7 @@ public class ElementoMarca : StartupScript
                 break;
             case Enemigos.rangoPesado:
                 textura.SpriteProvider = ObtenerSprite(marcaOctágono);
-                textura.Entity.Transform.Scale = multiplicador * Vector3.One * 0.4f;
+                textura.Entity.Transform.Scale = multiplicador * Vector3.One * 0.35f;
                 textura.Color = new Color(0, 100, 0, 200);
                 break;
             case Enemigos.especialLigero:

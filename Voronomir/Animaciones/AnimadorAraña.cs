@@ -26,7 +26,7 @@ public class AnimadorAraña : StartupScript, IAnimador
     private int idPoto;
     private int[] idPatasIzq;
     private int[] idPatasDer;
-    private int[] idPatasCompletas;
+    private int[] idPatasInicio;
 
     private Quaternion[] rotacionesInicioPatasIzq;
     private Quaternion[] rotacionesInicioPatasDer;
@@ -43,7 +43,7 @@ public class AnimadorAraña : StartupScript, IAnimador
 
         idPatasIzq = new int[patasIzq.Count];
         idPatasDer = new int[patasDer.Count];
-        idPatasCompletas = new int[patasCompletas.Count];
+        idPatasInicio = new int[patasCompletas.Count];
 
         rotacionesInicioPatasIzq = new Quaternion[patasIzq.Count];
         rotacionesInicioPatasDer = new Quaternion[patasDer.Count];
@@ -72,7 +72,7 @@ public class AnimadorAraña : StartupScript, IAnimador
             for (int ii = 0; ii < patasCompletas.Count; ii++)
             {
                 if (esqueleto.Nodes[i].Name == patasCompletas[ii])
-                    idPatasCompletas[ii] = i;
+                    idPatasInicio[ii] = i;
             }
 
             if (esqueleto.Nodes[i].Name == cabeza)
@@ -132,9 +132,9 @@ public class AnimadorAraña : StartupScript, IAnimador
         partículas.Entity.Transform.Position = new Vector3(0, 0.2f, 0);
 
         // Apagar extremidades
-        for (int i = 0; i < idPatasCompletas.Length; i++)
+        for (int i = 0; i < idPatasInicio.Length; i++)
         {
-            esqueleto.NodeTransformations[idPatasCompletas[i]].Transform.Position = Vector3.Zero;
+            esqueleto.NodeTransformations[idPatasInicio[i]].Transform.Scale = Vector3.Zero;
         }
     }
 

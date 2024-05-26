@@ -1,23 +1,23 @@
 !Model
-Id: db867d68-4431-4e52-9abb-f81df0c158eb
+Id: 0efa5560-bf3b-4c3c-9a04-16d64447c18c
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Source: !file "Araña.glb"
-Skeleton: "f0103a02-4bc3-4826-a8ef-64d196ec5532:Modelos/Enemigos/Araña/Araña Skeleton"
+Skeleton: "9c27871a-9398-42c9-86df-b1e44f798eba:Modelos/Enemigos/Araña/Araña Skeleton"
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Materials:
-    f809617cf33d55fdeda6e5f4e91dd7dc:
+    7bbb96bf1f8c0e18841ce5a73adcef44:
         Name: Cuerpo
         MaterialInstance:
-            Material: "4b3ffe04-b4cb-4ea2-a139-f81329788b99:Modelos/Enemigos/Araña/Materiales/Cuerpo"
-    b78bb31822c29523fcb4cc1f70c98ed2:
+            Material: "9b343b00-f0db-4574-aa69-cf919a3b25db:Modelos/Enemigos/Araña/Materiales/Cuerpo"
+    481d89fc014304ba770080e512716196:
         Name: Patas
         MaterialInstance:
-            Material: "e92cf081-80d4-4ce3-81f7-95eb4c834e23:Modelos/Enemigos/Araña/Materiales/Patas"
-    b47c850dc3f2c7ad492c3072c819756a:
+            Material: "bab14416-85df-4558-9685-7afc52ac7d78:Modelos/Enemigos/Araña/Materiales/Patas"
+    8c26668c56a367f3659ac42a3def7c69:
         Name: Carne
         MaterialInstance:
-            Material: "6f54f1c1-c5de-45e1-924b-95d0dc51fb90:Modelos/Enemigos/Araña/Materiales/Carne"
+            Material: "227f0ed5-f0d7-4289-816d-16718791e939:Modelos/Enemigos/Araña/Materiales/Carne"
 Modifiers: {}
 ~SourceHashes:
-    "4653d7df2f43b1439f225debc0edfeed~Araña.glb": 98e95ee3c66b59a95cee85545e63c6af
+    "d662aabe4b158efda9ad1d1f494e72e3~Araña.glb": 98e95ee3c66b59a95cee85545e63c6af

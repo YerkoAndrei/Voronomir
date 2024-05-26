@@ -8066,7 +8066,7 @@ Hierarchy:
                         Children: {}
                     818d2b15beb58c637493a9d06bc8c8e8: !ModelComponent
                         Id: 6404f16f-2cb3-4a91-957d-456dfd08cda6
-                        Model: "db867d68-4431-4e52-9abb-f81df0c158eb:Modelos/Enemigos/Araña/Araña"
+                        Model: "0efa5560-bf3b-4c3c-9a04-16d64447c18c:Modelos/Enemigos/Araña/Araña"
                         Materials: {}
         -   Folder: null
             Entity:
