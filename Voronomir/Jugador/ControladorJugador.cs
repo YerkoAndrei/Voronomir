@@ -310,7 +310,7 @@ public class ControladorJugador : SyncScript, IDañable
         tokenVibración.Cancel();
         tokenVibración = new CancellationTokenSource();
 
-        var duración = 0.01f;
+        var duración = 0.014f;
         RotarCámara(duración, fuerza, iteraciones);
 
         var duraciónMovimiento = duración * iteraciones;
@@ -328,11 +328,10 @@ public class ControladorJugador : SyncScript, IDañable
         aleatorios = aleatorios.OrderByDescending(o => Vector2.Distance(o, Vector2.Zero)).ToList();
 
         // Vectores ordenados a cuaterniones
-        var rotaciónCabeza = cámara.Entity.Transform.Rotation;
         var rotaciones = new List<Quaternion>();
         for (int i = 0; i < iteraciones; i++)
         {
-            var rotación = rotaciónCabeza;
+            var rotación = Quaternion.Identity;
             rotación *= Quaternion.RotationX(aleatorios[i].X);
             rotación *= Quaternion.RotationY(aleatorios[i].Y);
             rotaciones.Add(rotación * fuerza);
@@ -363,8 +362,9 @@ public class ControladorJugador : SyncScript, IDañable
                 tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
                 await Task.Delay(1);
             }
+            cámara.Entity.Transform.Rotation = objetivo;
         }
-        cámara.Entity.Transform.Rotation = rotaciónCabeza;
+        cámara.Entity.Transform.Rotation = Quaternion.Identity;
     }
 
     private async void MoverCámara(float duración, float fuerza)
