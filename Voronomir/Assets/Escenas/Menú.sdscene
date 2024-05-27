@@ -50,7 +50,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 8a0524b4-2f4d-486c-a1d0-1a306d0ef549
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Pared
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
                         IsShadowCaster: false
                         Materials: {}
         -   Entity:
@@ -213,7 +213,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 13fc660f-c1cc-4f3a-a6e9-f26c4c6bad6f
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Pared
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
                         IsShadowCaster: false
                         Materials: {}
         -   Folder: Entorno
@@ -277,7 +277,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 4d4bf350-79ae-478c-81cd-2a6cced2688f
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Pared
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
                         IsShadowCaster: false
                         Materials: {}
         -   Entity:
@@ -339,7 +339,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 85e348cc-b9d7-4c31-be4f-349cc196d033
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Pared
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
                         IsShadowCaster: false
                         Materials: {}
         -   Entity:

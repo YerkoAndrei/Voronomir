@@ -2,7 +2,7 @@
 Id: c01e661c-0165-4b93-a5ef-b62401b80024
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Source: !file Pared.glb
+Source: !file Muro.glb
 Skeleton: null
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Materials:
@@ -13,4 +13,4 @@ Materials:
 DeduplicateMaterials: false
 Modifiers: {}
 ~SourceHashes:
-    b3dda34530efe935780475aaca67dea6~Pared.glb: 15e9d8311123a104eea61715a7e0f9f1
+    b2bfeff519b712d5d604ac2f116d9ea0~Muro.glb: 0afe104ad60d68ff2999929573341f02
