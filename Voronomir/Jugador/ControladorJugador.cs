@@ -41,7 +41,6 @@ public class ControladorJugador : SyncScript, IDañable
     private float tiempoInvulnerabilidad;
     private float tiempoVelocidad;
 
-
     public override void Start()
     {
         vidaMax = 100;
