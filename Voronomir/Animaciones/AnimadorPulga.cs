@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Rendering;
@@ -28,10 +29,16 @@ public class AnimadorPulga : StartupScript, IAnimador
     private Quaternion rotaciónInicioCabeza;
     private Quaternion rotaciónInicioPoto;
 
+    private CancellationTokenSource tokenAtaque;
+
+    private Quaternion rotaciónAcumuladaIzq;
+    private Quaternion rotaciónAcumuladaDer;
+
     public void Iniciar()
     {
-        cuerpo = Entity.Get<CharacterComponent>();
         esqueleto = modelo.Skeleton;
+        cuerpo = Entity.Get<CharacterComponent>();
+        tokenAtaque = new CancellationTokenSource();
 
         idPatasIzq = new int[patasIzq.Count];
         idPatasDer = new int[patasDer.Count];
@@ -47,7 +54,7 @@ public class AnimadorPulga : StartupScript, IAnimador
                 if (esqueleto.Nodes[i].Name == patasIzq[ii])
                 {
                     idPatasIzq[ii] = i;
-                    rotacionesInicioPatasIzq[ii] = esqueleto.NodeTransformations[ii].Transform.Rotation;
+                    rotacionesInicioPatasIzq[ii] = esqueleto.NodeTransformations[i].Transform.Rotation;
                 }
             }
 
@@ -56,7 +63,7 @@ public class AnimadorPulga : StartupScript, IAnimador
                 if (esqueleto.Nodes[i].Name == patasDer[ii])
                 {
                     idPatasDer[ii] = i;
-                    rotacionesInicioPatasDer[ii] = esqueleto.NodeTransformations[ii].Transform.Rotation;
+                    rotacionesInicioPatasDer[ii] = esqueleto.NodeTransformations[i].Transform.Rotation;
                 }
             }
 
@@ -69,6 +76,9 @@ public class AnimadorPulga : StartupScript, IAnimador
 
         rotaciónInicioCabeza = esqueleto.NodeTransformations[idCabeza].Transform.Rotation;
         rotaciónInicioPoto = esqueleto.NodeTransformations[idPoto].Transform.Rotation;
+
+        rotaciónAcumuladaIzq = esqueleto.NodeTransformations[idPatasIzq[0]].Transform.Rotation;
+        rotaciónAcumuladaDer = esqueleto.NodeTransformations[idPatasDer[0]].Transform.Rotation;
     }
 
     public void Actualizar()
@@ -76,17 +86,16 @@ public class AnimadorPulga : StartupScript, IAnimador
         for (int i = 0; i < idPatasIzq.Length; i++)
         {
             if (cuerpo.IsGrounded)
-                esqueleto.NodeTransformations[i].Transform.Rotation = rotacionesInicioPatasIzq[i];
+                esqueleto.NodeTransformations[idPatasIzq[i]].Transform.Rotation = rotacionesInicioPatasIzq[i];
             else
-                esqueleto.NodeTransformations[i].Transform.Rotation = rotacionesInicioPatasIzq[i] * Quaternion.RotationX(MathUtil.DegreesToRadians(18));
+                esqueleto.NodeTransformations[idPatasIzq[i]].Transform.Rotation = rotacionesInicioPatasIzq[i] * Quaternion.RotationX(MathUtil.DegreesToRadians(90));
         }
-
         for (int i = 0; i < idPatasDer.Length; i++)
         {
             if (cuerpo.IsGrounded)
-                esqueleto.NodeTransformations[i].Transform.Rotation = rotacionesInicioPatasDer[i];
+                esqueleto.NodeTransformations[idPatasDer[i]].Transform.Rotation = rotacionesInicioPatasDer[i];
             else
-                esqueleto.NodeTransformations[i].Transform.Rotation = rotacionesInicioPatasDer[i] * Quaternion.RotationX(MathUtil.DegreesToRadians(-80));
+                esqueleto.NodeTransformations[idPatasDer[i]].Transform.Rotation = rotacionesInicioPatasDer[i] * Quaternion.RotationX(MathUtil.DegreesToRadians(90));
         }
     }
 
@@ -99,18 +108,23 @@ public class AnimadorPulga : StartupScript, IAnimador
     {
         for (int i = 0; i < idPatasIzq.Length; i++)
         {
-            esqueleto.NodeTransformations[idPatasIzq[i]].Transform.Rotation *= Quaternion.RotationY(-velocidad * 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
+            rotaciónAcumuladaIzq *= Quaternion.RotationY(-velocidad * 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
+            esqueleto.NodeTransformations[idPatasIzq[i]].Transform.Rotation = rotaciónAcumuladaIzq;
         }
-
         for (int i = 0; i < idPatasDer.Length; i++)
         {
-            esqueleto.NodeTransformations[idPatasDer[i]].Transform.Rotation *= Quaternion.RotationY(velocidad * 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
-        }        
+            rotaciónAcumuladaDer *= Quaternion.RotationY(velocidad * 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
+            esqueleto.NodeTransformations[idPatasDer[i]].Transform.Rotation = rotaciónAcumuladaDer;
+        }
     }
 
     public void Atacar()
     {
-        AnimarAtaque();
+        tokenAtaque.Cancel();
+        tokenAtaque = new CancellationTokenSource();
+
+        AnimarAtaque(Quaternion.RotationX(MathUtil.DegreesToRadians(-90)),
+                     Quaternion.RotationX(MathUtil.DegreesToRadians(-160)));
     }
 
     public void Morir()
@@ -118,19 +132,21 @@ public class AnimadorPulga : StartupScript, IAnimador
         // Siempre explota
     }
 
-    private async void AnimarAtaque()
+    private async void AnimarAtaque(Quaternion objetivoCabeza, Quaternion objetivoPoto)
     {
-        var rotaciónAtaqueCabeza = Quaternion.RotationX(MathUtil.DegreesToRadians(-90));
-        var rotaciónAtaquePoto = Quaternion.RotationX(MathUtil.DegreesToRadians(190));
         float duración = 0.2f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
+        var token = tokenAtaque.Token;
         while (tiempoLerp < duración)
         {
+            if (token.IsCancellationRequested)
+                break;
+
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-            esqueleto.NodeTransformations[idCabeza].Transform.Rotation = Quaternion.Lerp(rotaciónAtaqueCabeza, rotaciónInicioCabeza, tiempo);
-            esqueleto.NodeTransformations[idPoto].Transform.Rotation = Quaternion.Lerp(rotaciónAtaquePoto, rotaciónInicioPoto, tiempo);
+            esqueleto.NodeTransformations[idCabeza].Transform.Rotation = Quaternion.Lerp(objetivoCabeza, rotaciónInicioCabeza, tiempo);
+            esqueleto.NodeTransformations[idPoto].Transform.Rotation = Quaternion.Lerp(objetivoPoto, rotaciónInicioPoto, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);

@@ -96,13 +96,13 @@ Hierarchy:
                         cabeza: cabeza
                         poto: poto
                         patasIzq:
-                            a52948bea5859dc6f772c3716dd5dbc7: pata.1_02.L
-                            458ef93db17ce35d21fbed1debc0d490: pata.2_02.L
-                            6f8e4c91f7a732876521926f1daaa441: pata.3_02.L
+                            a52948bea5859dc6f772c3716dd5dbc7: pata.1_03.L
+                            458ef93db17ce35d21fbed1debc0d490: pata.2_03.L
+                            6f8e4c91f7a732876521926f1daaa441: pata.3_03.L
                         patasDer:
-                            10e99fafcefdd6a3074fc349d55c66de: pata.1_02.R
-                            8e65a6aaad4f40c73ca1bd72c9209c13: pata.2_02.R
-                            438093aea2917a1a7ecb22d55370c1c6: pata.3_02.R
+                            10e99fafcefdd6a3074fc349d55c66de: pata.1_03.R
+                            8e65a6aaad4f40c73ca1bd72c9209c13: pata.2_03.R
+                            438093aea2917a1a7ecb22d55370c1c6: pata.3_03.R
         -   Entity:
                 Id: 74b17871-cc22-41ba-ba6f-d19852fa124b
                 Name: Emisor
