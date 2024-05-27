@@ -16,9 +16,9 @@ public class SistemaMemoria : StartupScript
     private static string producto = "Voronomir";
 
     private static string archivoConfiguración = "Configuración";
-    private static string archivoMáximos = "Máximos";
+    private static string archivoTiempos = "Tiempos";
     private static string rutaConfiguración;
-    private static string rutaMáximos;
+    private static string rutaTiempos;
 
     public static Dificultades Dificultad;
 
@@ -34,7 +34,7 @@ public class SistemaMemoria : StartupScript
     {
         carpetaPersistente = string.Format(carpetaPersistente, Environment.UserName, desarrollador, producto);
         rutaConfiguración = Path.Combine(carpetaPersistente, archivoConfiguración);
-        rutaMáximos = Path.Combine(carpetaPersistente, archivoMáximos);
+        rutaTiempos = Path.Combine(carpetaPersistente, archivoTiempos);
     }
 
     // Configuración
@@ -127,43 +127,68 @@ public class SistemaMemoria : StartupScript
     }
 
     // Partidas
-    public static void GuardarMáximo(Escenas escena, float segundos)
+    public static void GuardarTiempo(Escenas escena, float segundos)
     {
-        var diccionarioTiempo = new Dictionary<string, float>();
+        var tiempos = new Tiempos();
 
         // Lee archivo
-        if (File.Exists(rutaMáximos))
+        if (File.Exists(rutaTiempos))
         {
-            var archivo = File.ReadAllText(rutaMáximos);
+            var archivo = File.ReadAllText(rutaTiempos);
             var desencriptado = DesEncriptar(archivo);
-            diccionarioTiempo = JsonConvert.DeserializeObject<Dictionary<string, float>>(desencriptado);
-
-            // Solo tiempo menores
-            if (segundos >= diccionarioTiempo[escena.ToString()])
-                return;
+            tiempos = JsonConvert.DeserializeObject<Tiempos>(desencriptado);
         }
 
-        // Sobreescribe nuevo máximo
-        diccionarioTiempo[escena.ToString()] = segundos;
-        var json = JsonConvert.SerializeObject(diccionarioTiempo);
+        // Sobreescribe si es menor o crea si no existe
+        switch (Dificultad)
+        {
+            case Dificultades.fácil:
+                if (!tiempos.TiemposFácil.ContainsKey(escena.ToString()) || segundos < tiempos.TiemposFácil[escena.ToString()])
+                    tiempos.TiemposFácil[escena.ToString()] = segundos;
+                break;
+            case Dificultades.normal:
+                if (!tiempos.TiemposNormal.ContainsKey(escena.ToString()) || segundos < tiempos.TiemposNormal[escena.ToString()])
+                    tiempos.TiemposNormal[escena.ToString()] = segundos;
+                break;
+            case Dificultades.difícil:
+                if (!tiempos.TiemposDifícil.ContainsKey(escena.ToString()) || segundos < tiempos.TiemposDifícil[escena.ToString()])
+                    tiempos.TiemposDifícil[escena.ToString()] = segundos;
+                break;
+        }
+
+        var json = JsonConvert.SerializeObject(tiempos);
         var encriptado = DesEncriptar(json);
-        File.WriteAllText(rutaMáximos, encriptado);
+        File.WriteAllText(rutaTiempos, encriptado);
     }
 
-    public static string ObtenerMáximo(Escenas escena)
+    public static string ObtenerTiempo(Escenas escena)
     {
         // Lee archivo
-        if (!File.Exists(rutaMáximos))
+        if (!File.Exists(rutaTiempos))
             return string.Empty;
 
-        var archivo = File.ReadAllText(rutaMáximos);
+        var archivo = File.ReadAllText(rutaTiempos);
         var desencriptado = DesEncriptar(archivo);
-        var diccionarioTiempo = JsonConvert.DeserializeObject<Dictionary<string, float>>(desencriptado);
+        var tiempos = JsonConvert.DeserializeObject<Tiempos>(desencriptado);
+        var diccionario = new Dictionary<string, float>();
 
-        if(!diccionarioTiempo.ContainsKey(escena.ToString()))
+        switch (Dificultad)
+        {
+            case Dificultades.fácil:
+                diccionario = tiempos.TiemposFácil;
+                break;
+            case Dificultades.normal:
+                diccionario = tiempos.TiemposNormal;
+                break;
+            case Dificultades.difícil:
+                diccionario = tiempos.TiemposDifícil;
+                break;
+        }
+
+        if (!diccionario.ContainsKey(escena.ToString()))
             return string.Empty;
 
-        return FormatearTiempo(diccionarioTiempo[escena.ToString()]);
+        return FormatearTiempo(diccionario[escena.ToString()]);
     }
 
     // XOR
@@ -180,5 +205,19 @@ public class SistemaMemoria : StartupScript
             salida.Append(c);
         }
         return salida.ToString();
+    }
+}
+
+public class Tiempos
+{
+    public Dictionary<string, float> TiemposFácil {  get; set; }
+    public Dictionary<string, float> TiemposNormal { get; set; }
+    public Dictionary<string, float> TiemposDifícil { get; set; }
+
+    public Tiempos()
+    {
+        TiemposFácil = new Dictionary<string, float>();
+        TiemposNormal = new Dictionary<string, float>();
+        TiemposDifícil = new Dictionary<string, float>();
     }
 }

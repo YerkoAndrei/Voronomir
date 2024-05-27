@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;
@@ -20,6 +21,9 @@ public class InterfazMenú : StartupScript
     private Grid btnFácil;
     private Grid btnNormal;
     private Grid btnDifícil;
+
+    private Dictionary<Escenas, TextBlock> txtTiempos;
+    private Dictionary<Escenas, Grid> btnEtapas;
 
     private bool animando;
 
@@ -48,34 +52,43 @@ public class InterfazMenú : StartupScript
         ConfigurarBotón(btnNormal, () => EnClicDificultad(Dificultades.normal));
         ConfigurarBotón(btnDifícil, () => EnClicDificultad(Dificultades.difícil));
 
-        // Episodios
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDemo"), () => EnClicEscena(Escenas.demo));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnM1E1"), () => EnClicEscena(Escenas.M1E1));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnM1E2"), () => EnClicEscena(Escenas.M1E2));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnM1E3"), () => EnClicEscena(Escenas.M1E3));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnM1E4"), () => EnClicEscena(Escenas.M1E4));
+        // Tiempos
+        txtTiempos = new Dictionary<Escenas, TextBlock>
+        {
+            { Escenas.demo, página.FindVisualChildOfType<TextBlock>("txtTiempoDemo") },
+            { Escenas.M1E1, página.FindVisualChildOfType<TextBlock>("txtTiempoM1E1") },
+            { Escenas.M1E2, página.FindVisualChildOfType<TextBlock>("txtTiempoM1E2") },
+            { Escenas.M1E3, página.FindVisualChildOfType<TextBlock>("txtTiempoM1E3") },
+            { Escenas.M1E4, página.FindVisualChildOfType<TextBlock>("txtTiempoM1E4") }
+        };
 
-        // Tiempos máximos
-        página.FindVisualChildOfType<TextBlock>("txtTiempoDemo").Text = SistemaMemoria.ObtenerMáximo(Escenas.demo);
-        página.FindVisualChildOfType<TextBlock>("txtTiempoM1E1").Text = SistemaMemoria.ObtenerMáximo(Escenas.M1E1);
-        página.FindVisualChildOfType<TextBlock>("txtTiempoM1E2").Text = SistemaMemoria.ObtenerMáximo(Escenas.M1E2);
-        página.FindVisualChildOfType<TextBlock>("txtTiempoM1E3").Text = SistemaMemoria.ObtenerMáximo(Escenas.M1E3);
-        página.FindVisualChildOfType<TextBlock>("txtTiempoM1E4").Text = SistemaMemoria.ObtenerMáximo(Escenas.M1E4);
+        // Mundos / Etapas
+        btnEtapas = new Dictionary<Escenas, Grid>
+        {
+            { Escenas.demo, página.FindVisualChildOfType<Grid>("btnDemo") },
+            { Escenas.M1E1, página.FindVisualChildOfType<Grid>("btnM1E1") },
+            { Escenas.M1E2, página.FindVisualChildOfType<Grid>("btnM1E2") },
+            { Escenas.M1E3, página.FindVisualChildOfType<Grid>("btnM1E3") },
+            { Escenas.M1E4, página.FindVisualChildOfType<Grid>("btnM1E4") }
+        };
 
-        // PENDIENTE: desbloquear episodios
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnM1E1"), true);
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnM1E2"), true);
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnM1E3"), true);
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnM1E4"), true);
+        foreach (var botón in btnEtapas)
+        {
+            ConfigurarBotón(botón.Value, () => EnClicEscena(botón.Key));
+        }
 
         // Predeterminado
         EnClicDificultad(SistemaMemoria.Dificultad);
+        ActualizarTiempos();
+        DesbloquearEtapas();
 
         menú.Visibility = Visibility.Visible;
         jugar.Visibility = Visibility.Hidden;
 
         SistemaEscenas.BloquearCursor(false);
         Game.UpdateTime.Factor = 1;
+
+        //SistemaEscenas.CambiarEscena(Escenas.demo);
     }
 
     private void EnClicEscena(Escenas escena)
@@ -122,6 +135,8 @@ public class InterfazMenú : StartupScript
     {
         SistemaMemoria.GuardarConfiguración(Configuraciones.dificultad, dificultad.ToString());
         SistemaMemoria.Dificultad = dificultad;
+        ActualizarTiempos();
+        DesbloquearEtapas();
         Traducir();
 
         BloquearBotón(btnFácil, false);
@@ -140,6 +155,28 @@ public class InterfazMenú : StartupScript
                 BloquearBotón(btnDifícil, true);
                 break;
         }
+    }
+
+    public void ActualizarTiempos()
+    {
+        foreach(var tiempo in txtTiempos)
+        {
+            tiempo.Value.Text = SistemaMemoria.ObtenerTiempo(tiempo.Key);
+        }
+    }
+
+    public void DesbloquearEtapas()
+    {
+        // Desbloquear episodios según tiempo anterior
+        foreach (var botón in btnEtapas)
+        {
+            //var etapaAnterior = (Escenas)((int)botón.Key - 1);
+            //BloquearBotón(botón.Value, (SistemaMemoria.ObtenerTiempo(etapaAnterior) == string.Empty));
+            BloquearBotón(botón.Value, true);
+        }
+
+        // Demo siempre disponible
+        BloquearBotón(btnEtapas[Escenas.demo], false);
     }
 
     public void Traducir()
