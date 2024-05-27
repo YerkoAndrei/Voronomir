@@ -53,8 +53,11 @@ public class AnimadorLancero : StartupScript, IAnimador
             }
         }
 
-        rotaciónInicioBrazoIzq = esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation;
-        rotaciónInicioBrazoDer = esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation;
+        rotaciónInicioBrazoIzq = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(100), 0, MathUtil.DegreesToRadians(140));
+        rotaciónInicioBrazoDer = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-100), 0, MathUtil.DegreesToRadians(-140));
+
+        esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = rotaciónInicioBrazoIzq;
+        esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = rotaciónInicioBrazoDer;
 
         pociciónLanzaInicio = lanza.Position;
         pociciónLanzaAtaque = lanza.Position + new Vector3(0, 0, 1.5f);
@@ -64,7 +67,7 @@ public class AnimadorLancero : StartupScript, IAnimador
 
     public void Actualizar()
     {
-
+        ApuntarLanza();
     }
 
     public void Activar(bool activar)
@@ -77,8 +80,6 @@ public class AnimadorLancero : StartupScript, IAnimador
     {
         esqueleto.NodeTransformations[idPiernas[0]].Transform.Rotation *= Quaternion.RotationY(-velocidad * 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
         esqueleto.NodeTransformations[idPiernas[1]].Transform.Rotation *= Quaternion.RotationY(velocidad * 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
-
-        ApuntarLanza();
     }
 
     public void Atacar()
@@ -86,9 +87,8 @@ public class AnimadorLancero : StartupScript, IAnimador
         tokenAtaque.Cancel();
         tokenAtaque = new CancellationTokenSource();
 
-        ApuntarLanza();
-        AnimarAtaque(Quaternion.RotationZ(MathUtil.DegreesToRadians(-110)),
-                     Quaternion.RotationZ(MathUtil.DegreesToRadians(110)));
+        AnimarAtaque(Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(100), 0, MathUtil.DegreesToRadians(90)),
+                     Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-100), 0, MathUtil.DegreesToRadians(-90)));
     }
 
     public void Morir()

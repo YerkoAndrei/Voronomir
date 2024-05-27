@@ -50,8 +50,11 @@ public class AnimadorZombi : StartupScript, IAnimador
             }
         }
 
-        rotaciónInicioBrazoIzq = esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation;
-        rotaciónInicioBrazoDer = esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation;
+        rotaciónInicioBrazoIzq = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-10), 0, MathUtil.DegreesToRadians(-70));
+        rotaciónInicioBrazoDer = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(10), 0, MathUtil.DegreesToRadians(70));
+
+        esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = rotaciónInicioBrazoIzq;
+        esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = rotaciónInicioBrazoDer;
     }
 
     public void Actualizar()
@@ -75,8 +78,8 @@ public class AnimadorZombi : StartupScript, IAnimador
         tokenAtaque.Cancel();
         tokenAtaque = new CancellationTokenSource();
 
-        AnimarAtaque(Quaternion.RotationZ(MathUtil.DegreesToRadians(-100)), 
-                     Quaternion.RotationZ(MathUtil.DegreesToRadians(100)));
+        AnimarAtaque(Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(90), 0, MathUtil.DegreesToRadians(-90)),
+                     Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-90), 0, MathUtil.DegreesToRadians(90)));
     }
 
     public void Morir()
