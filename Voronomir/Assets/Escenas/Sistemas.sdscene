@@ -25,7 +25,7 @@ Hierarchy:
                         Children: {}
                     57ffb4e631355b8c92d59e397913898b: !Voronomir.SistemaSonidos,Voronomir.Proyecto
                         Id: f996b8f6-c2cc-405c-a06e-efda17240c69
-                        Priority: -4
+                        Priority: -3
                         "sonidoBotónEntra": "3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/pruebaEstático"
                         "sonidoBotónSale": "3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/pruebaEstático"
                         "sonidoBotón": "3cf35814-85e8-4500-b48f-5f94a9061a5b:Sonidos/pruebaEstático"
@@ -60,7 +60,7 @@ Hierarchy:
                             41346df47bd90273b1a4fd9b35c90d63: ref!! b291b176-1ea8-4be9-b6dc-99c9660ca4b8
                     b87e4e66fa2811191dcd016271e1728d: !Voronomir.SistemaEscenas,Voronomir.Proyecto
                         Id: 96903a2a-e245-43e8-9b6e-08fe6696783a
-                        Priority: -2
+                        Priority: 10
                         "escenaMenú": "96aa054d-54af-441d-ace7-62be2c4ea9fd:Escenas/Menú"
                         escenaDemo: d96f9ef1-9ebb-4fd3-a140-1cacde38458e:Escenas/Demo
                         compositorBajo: f79cc65d-776c-4d5f-9cf3-d8b624b65593:GraphicsCompositor (Bajo)
@@ -85,7 +85,7 @@ Hierarchy:
                         Children: {}
                     1a2f0278c070fbe68d1a41626502d394: !Voronomir.SistemaMemoria,Voronomir.Proyecto
                         Id: a2c1e958-c442-4c9e-bacc-bf1742c32325
-                        Priority: -6
+                        Priority: -5
         -   Folder: null
             Entity:
                 Id: 46c7fdfe-9f29-4fde-be2f-ea04da13a001
@@ -99,7 +99,7 @@ Hierarchy:
                         Children: {}
                     adc7023ce2c974cf56472b2d3cbf0847: !Voronomir.SistemaAnimaci%25C3%25B3n,Voronomir.Proyecto
                         Id: 69e8d777-93cd-478c-b632-fa568d0159b4
-                        Priority: -5
+                        Priority: -4
                         "curvaRápida": !ComputeCurveSamplerFloat
                             Curve: !ComputeAnimationCurveFloat
                                 KeyFrames:
@@ -128,7 +128,7 @@ Hierarchy:
                         Children: {}
                     74df27f190b8dbdcac02e613682d5d88: !Voronomir.SistemaTraducci%25C3%25B3n,Voronomir.Proyecto
                         Id: 1f3991f5-e598-4785-b4d6-a93b177455c4
-                        Priority: -3
+                        Priority: -2
                         "textosEspañol": "302f6bd6-251a-4f65-b982-98fa94597caa:Textos/TextosEspañol"
                         "textosInglés": "adb9b7ae-d3e7-482a-a5a2-47e5f402d77a:Textos/TextosInglés"
         -   Entity:
