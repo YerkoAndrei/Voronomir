@@ -259,6 +259,7 @@ Hierarchy:
                         Children: {}
                     67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
                         Id: 9709cef5-2cb1-4dde-8532-26eeb45ffc85
+                        CollisionGroup: CustomFilter5
                         CanCollideWith: CharacterFilter
                         CanSleep: false
                         Restitution: 0.0

@@ -15,6 +15,7 @@ public class ElementoDañable : StartupScript
     public Enemigos enemigo;
 
     private IDañable interfaz;
+    private bool activo;
 
     public override void Start()
     {
@@ -30,6 +31,8 @@ public class ElementoDañable : StartupScript
             controlador.Get<ControladorBarril>().AgregarDañable(this);
         else
             enemigo = Enemigos.nada;
+
+        activo = true;
     }
 
     public void Desactivar()
@@ -37,15 +40,22 @@ public class ElementoDañable : StartupScript
         Entity.Get<PhysicsComponent>().Enabled = false;
         Entity.Get<PhysicsComponent>().CanSleep = true;
         Entity.Transform.Scale = Vector3.Zero;
+        activo = false;
     }
 
     public void RecibirDaño(float daño)
     {
+        if (!activo)
+            return;
+
         interfaz.RecibirDaño(daño * multiplicador);
     }
 
     public void Empujar(Vector3 dirección)
     {
+        if (!activo)
+            return;
+
         interfaz.Empujar(dirección);
     }
 }

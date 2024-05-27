@@ -134,10 +134,11 @@ Hierarchy:
                         Id: 2b94182d-eb43-40c2-9e7b-a3aeb121b0db
                         Position: {X: 0.0, Y: 1.0, Z: 1.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 2.0, Z: 2.0}
+                        Scale: {X: 1.5, Y: 2.0, Z: 2.0}
                         Children: {}
                     67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
                         Id: 16717fe5-f74a-4bfb-a72b-9e5e4a9d99fe
+                        CollisionGroup: CustomFilter5
                         CanCollideWith: CharacterFilter
                         CanSleep: false
                         Restitution: 0.0

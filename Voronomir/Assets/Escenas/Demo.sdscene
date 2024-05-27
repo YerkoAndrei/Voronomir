@@ -3876,6 +3876,7 @@ Hierarchy:
                         Children: {}
                     67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
                         Id: 57501663-3114-4855-b253-857ad14ea29e
+                        CollisionGroup: CustomFilter5
                         CanCollideWith: CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -5711,6 +5712,7 @@ Hierarchy:
                         Children: {}
                     67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
                         Id: 54454e32-5dc3-4536-a442-68a9b3870dfd
+                        CollisionGroup: CustomFilter5
                         CanCollideWith: CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -7235,7 +7237,7 @@ Hierarchy:
                     da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
                         Id: 606a17c9-924a-4512-8e4f-49eb8341921d
                         CollisionGroup: CharacterFilter
-                        CanCollideWith: CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4
+                        CanCollideWith: CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -7744,6 +7746,7 @@ Hierarchy:
                         Children: {}
                     67ac1acffc25e29c5428a84346b90cb4: !RigidbodyComponent
                         Id: 1a8a9dd7-e97a-463d-861c-4d9c896699ef
+                        CollisionGroup: CustomFilter5
                         CanCollideWith: CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
