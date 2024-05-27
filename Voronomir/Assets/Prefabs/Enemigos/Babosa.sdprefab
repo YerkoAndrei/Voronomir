@@ -58,8 +58,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 2e7169b7-b476-4f11-91f9-4c201c3fdc70
-                        Priority: 1
-                        controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
                         multiplicador: 1.2
         -   Entity:
                 Id: 5984df18-147f-4744-a394-935be627a03e
@@ -108,8 +106,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: a01bcb72-8d8a-41a1-9b46-ce60a7c6550d
-                        Priority: 1
-                        controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
                         multiplicador: 0.5
         -   Folder: null
             Entity:
@@ -174,8 +170,14 @@ Hierarchy:
                         "armaMelé": null
                         armaRango: ref!! d7fc863f-43cd-4879-a47f-ea890762fdc2
                         emisor: ref!! 19647c05-ba87-484e-a8b4-ff2b6aff739c
+                        "dañables":
+                            f4d3e294d366dfbe4ea85d1a9b34f0d3: ref!! 2e7169b7-b476-4f11-91f9-4c201c3fdc70
+                            b97035ea8a0ef8e36c4a5e185c8a8b72: ref!! 069be702-aeca-45f6-99d0-a4498c440bd3
+                            43c724edf0609cb7e4cba2186fa9abf8: ref!! abbbe5fc-5902-41a2-9a3f-843d1219fa51
+                            f7d54aa2d4c0e28023220753bc19f9c9: ref!! a01bcb72-8d8a-41a1-9b46-ce60a7c6550d
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 9cb8a6d0-7ffb-442d-9c71-0584b6ebc293
+                        Priority: 1
                         "estático": false
                         ojos:
                             a155963e307498a8bb9d2076aed1db20: ref!! 4e6da196-1aa1-42a0-83c7-b592514232ef
@@ -271,8 +273,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: abbbe5fc-5902-41a2-9a3f-843d1219fa51
-                        Priority: 1
-                        controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
                         multiplicador: 1.0
         -   Folder: null
             Entity:
@@ -311,6 +311,4 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 069be702-aeca-45f6-99d0-a4498c440bd3
-                        Priority: 1
-                        controlador: ref!! 9c01c5c5-5d3a-405c-b244-2393c762057f
                         multiplicador: 1.0

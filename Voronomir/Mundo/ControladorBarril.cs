@@ -1,4 +1,5 @@
-﻿using Stride.Core.Mathematics;
+﻿using System.Collections.Generic;
+using Stride.Core.Mathematics;
 using Stride.Particles.Components;
 using Stride.Engine;
 
@@ -9,7 +10,8 @@ public class ControladorBarril : StartupScript, IDañable
 {
     public ModelComponent modelo;
     public ParticleSystemComponent partículas;
-    
+    public List<ElementoDañable> dañables { get; set; }
+
     private PhysicsComponent cuerpo;
     private ElementoDañable dañable;
     private float vida;
@@ -18,6 +20,11 @@ public class ControladorBarril : StartupScript, IDañable
     public override void Start()
     {
         cuerpo = Entity.Get<PhysicsComponent>();
+        foreach (var dañable in dañables)
+        {
+            dañable.Iniciar(this);
+        }
+
         vida = 20;          // 2 balas de metralleta
         dañoExplosión = 70; // 10 menos que lanzagranadas
     }
@@ -43,11 +50,6 @@ public class ControladorBarril : StartupScript, IDañable
     {
         await EsperarCuadroFísica();
         ControladorCofres.IniciarExplosión(dañoExplosión, Entity.Transform.WorldMatrix.TranslationVector + (Vector3.One * 0.5f), Vector3.Zero);
-    }
-
-    public void AgregarDañable(ElementoDañable _dañable)
-    {
-        dañable = _dañable;
     }
 
     public void Empujar(Vector3 dirección)

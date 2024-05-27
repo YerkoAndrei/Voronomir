@@ -14,6 +14,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
     public ModelComponent modelo;
     public RigidbodyComponent cuerpoDañable;
     public ParticleSystemComponent partículas;
+    public List<ElementoDañable> dañables { get; set; }
 
     private Enemigos disparador;
     private RigidbodyComponent cuerpo;
@@ -28,8 +29,12 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
     public override async Task Execute()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
-        Apagar();
+        foreach (var dañable in dañables)
+        {
+            dañable.Iniciar(this);
+        }
 
+        Apagar();
         while (Game.IsRunning)
         {
             var colisión = await cuerpo.NewCollision();
@@ -58,7 +63,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
             else if (TocaEnemigo(colisión))
             {
                 // No daña a su mismo tipo
-                if (disparador == dañable.controlador.Get<ControladorEnemigo>().enemigo)
+                if (disparador == dañable.enemigo)
                     continue;
 
                 // Daña enemigos un 50%

@@ -181,8 +181,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: d75d85ce-c3e7-4d8a-b4eb-3e39a9b85108
-                        Priority: 1
-                        controlador: ref!! c9de616d-fc44-4005-a31a-6d8dcd5084c0
                         multiplicador: 1.0
         -   Entity:
                 Id: 786ebb12-3b47-4ea1-9eb2-6723836cdf94
@@ -303,8 +301,11 @@ Hierarchy:
                         "armaMelé": null
                         armaRango: ref!! 7c0c0baa-c7d8-4edc-bfe9-0f947660bd35
                         emisor: ref!! 18b70f1f-f4a0-4d81-abe9-43a83186f5bf
+                        "dañables":
+                            a930992ba198deae56578f295667f0e1: ref!! d75d85ce-c3e7-4d8a-b4eb-3e39a9b85108
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: a856b63a-c2d6-4b60-9a27-0727b457357a
+                        Priority: 1
                         "estático": false
                         ojos:
                             4db60a51e1f224185a1f775371f2eeb2: ref!! 58cad4ee-090a-49ea-89ec-2267b4ae444b

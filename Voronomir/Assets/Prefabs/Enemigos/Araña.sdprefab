@@ -43,8 +43,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: bf0f2e81-39b4-4d97-957e-4d8103dd3fb0
-                        Priority: 1
-                        controlador: ref!! b12a1fec-9e79-4bf7-b177-44705a334650
                         multiplicador: 0.8
         -   Folder: null
             Entity:
@@ -83,8 +81,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: db1c9016-61ea-48a7-895b-c830459b8c83
-                        Priority: 1
-                        controlador: ref!! b12a1fec-9e79-4bf7-b177-44705a334650
                         multiplicador: 1.0
         -   Folder: null
             Entity:
@@ -363,8 +359,13 @@ Hierarchy:
                         "armaMelé": null
                         armaRango: ref!! 4a9ca052-67a5-4cf2-a972-753ae99d4102
                         emisor: ref!! 1ceaf2d0-c5e4-4be7-98f7-7b14a93fce04
+                        "dañables":
+                            170d1f4cee132fa3dca245a187472362: ref!! 15180237-d43a-4bca-801b-09f7debd8908
+                            2b78ef402a39d9e85dc03414af3e1460: ref!! db1c9016-61ea-48a7-895b-c830459b8c83
+                            0445b96623cbd0965a6f7767f90ef860: ref!! bf0f2e81-39b4-4d97-957e-4d8103dd3fb0
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 4ba9a486-b7da-4603-8605-cda247797342
+                        Priority: 1
                         "estático": false
                         ojos:
                             2824235e2bd7176f130bad5360091c8c: ref!! cedfb71a-e8d0-42bb-9ca2-313994b8d025
@@ -489,6 +490,4 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 15180237-d43a-4bca-801b-09f7debd8908
-                        Priority: 1
-                        controlador: ref!! b12a1fec-9e79-4bf7-b177-44705a334650
                         multiplicador: 1.5

@@ -57,7 +57,7 @@ public class ElementoProyectilSimple : AsyncScript, IProyectil
             else if (TocaEnemigo(colisión))
             {
                 // No daña a su mismo tipo
-                if (disparador == dañable.controlador.Get<ControladorEnemigo>().enemigo)
+                if (disparador == dañable.enemigo)
                     continue;
 
                 // Daña enemigos un 50%

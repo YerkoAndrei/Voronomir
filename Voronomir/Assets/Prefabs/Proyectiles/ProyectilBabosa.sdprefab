@@ -197,6 +197,8 @@ Hierarchy:
                         modelo: ref!! eaf03fe5-4edd-4d6f-9c4d-2f704c2a5aaa
                         "cuerpoDañable": ref!! ca4626ef-f3fd-47be-8ccd-ba4de24b1dfd
                         "partículas": ref!! 52fecfce-ffd7-49a0-9b03-cccd4ccc3276
+                        "dañables":
+                            9ca3813842c814405455ad232e09da20: ref!! 8fefcde3-1523-49ee-b3a1-61d002d1cde7
         -   Entity:
                 Id: fe3fbc5c-a4d9-49bf-bb5a-795caf0665db
                 Name: "Dañable"
@@ -232,5 +234,4 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 8fefcde3-1523-49ee-b3a1-61d002d1cde7
-                        controlador: ref!! 86c20c07-f561-40f8-a878-11b31ee66fe1
                         multiplicador: 1.0

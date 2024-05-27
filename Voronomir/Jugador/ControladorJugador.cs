@@ -16,6 +16,7 @@ public class ControladorJugador : SyncScript, IDañable
 {
     public TransformComponent cabeza;
     public CameraComponent cámara;
+    public List<ElementoDañable> dañables { get; set; }
 
     private CharacterComponent cuerpo;
     private ControladorMovimiento movimiento;
@@ -40,6 +41,7 @@ public class ControladorJugador : SyncScript, IDañable
     private float tiempoInvulnerabilidad;
     private float tiempoVelocidad;
 
+
     public override void Start()
     {
         vidaMax = 100;
@@ -50,8 +52,12 @@ public class ControladorJugador : SyncScript, IDañable
 
         cuerpo = Entity.Get<CharacterComponent>();
         movimiento = Entity.Get<ControladorMovimiento>();
-        armas = Entity.Get<ControladorArmas>();
-        
+        armas = Entity.Get<ControladorArmas>();        
+        foreach (var dañable in dañables)
+        {
+            dañable.Iniciar(this);
+        }
+
         movimiento.Iniciar(this, cuerpo, cabeza, cámara.Entity.Transform);
         armas.Iniciar(this, movimiento, cámara, interfaz);
 

@@ -142,7 +142,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: cdfcf675-421f-45af-aa17-f0374ccaf5ab
-                        controlador: ref!! 4286558c-21f8-4c73-8ce1-d58ae4daec5d
                         multiplicador: 1.0
         -   Entity:
                 Id: 147e9c1b-6e08-4fa2-8b4a-a4f0b80d0ed8
@@ -752,6 +751,8 @@ Hierarchy:
                         Id: 7697bae4-e288-40f2-bf34-020e8b7344f8
                         cabeza: ref!! e7e6b6ac-7363-4aeb-9582-a1e16e76b1ae
                         "cámara": ref!! c94d7988-37c0-4840-b16f-27912a8f4a17
+                        "dañables":
+                            41a0571933b1f0a77ac4cc4031fa8c79: ref!! cdfcf675-421f-45af-aa17-f0374ccaf5ab
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 0f68b383-7401-4067-8520-9e9ff0ddfc18
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}

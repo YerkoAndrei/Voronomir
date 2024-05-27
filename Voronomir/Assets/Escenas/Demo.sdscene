@@ -1202,6 +1202,8 @@ Hierarchy:
                         Id: 6f366a40-a7cf-4031-bcf9-b6d17ce214d2
                         cabeza: ref!! a0b3f98f-2764-44c6-be18-c8ee43f5d9ba
                         "cámara": ref!! 2252214f-6036-4ac3-b0d4-fa427cd7456d
+                        "dañables":
+                            41a0571933b1f0a77ac4cc4031fa8c79: ref!! 2339e9b1-93eb-4839-932b-e85dee6d2320
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: e3576cb5-c000-45aa-8fc7-3d32786ba8cf
                         Position*: {X: 0.0, Y: 0.0, Z: 4.0}
@@ -1298,8 +1300,13 @@ Hierarchy:
                         "armaMelé": ref!! f6db328c-a355-410a-94eb-463252bb627d
                         armaRango: null
                         emisor: ref!! cde3cdb1-c138-4e19-b837-256f99cf815d
+                        "dañables":
+                            5d89a98981aea1ade79c169e677ea9fa: ref!! 066e217e-9f0f-40e2-af2f-befc08b36545
+                            e59d7b90de0cdef5695764f0e0e3d2d2: ref!! ab631ab3-07b8-4f81-92ea-b048addb42fd
+                            552b2bbbc62010893a06ac7aa339e036: ref!! 081d2d76-bd92-4e02-8066-5fdd91faf803
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 274dece1-ca9b-480f-9924-13a5363f3d01
+                        Priority: 1
                         "estático": false
                         ojos:
                             44e390ec37f8924a7039eeab0e0141fc: ref!! fb05c347-77c8-46b6-9d5c-5de8d8a15656
@@ -1995,8 +2002,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 066e217e-9f0f-40e2-af2f-befc08b36545
-                        Priority: 1
-                        controlador: ref!! 293f7583-6c3c-4921-a3ca-4853773072d5
                         multiplicador: 1.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -2830,8 +2835,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 11a13a03-c127-450a-acbc-e69a351659ed
-                        Priority: 1
-                        controlador: ref!! 9466ef07-c364-447b-94db-14d4447fda74
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -2922,6 +2925,8 @@ Hierarchy:
                         Id: ba6f5fc6-48f0-4a5c-a423-b09ea89dbac9
                         modelo: ref!! 2e6f507e-9fe4-4e42-87bc-075bac7d9407
                         "partículas": ref!! 44c3d64a-5f1d-4083-a5f2-300fe4e381f5
+                        "dañables":
+                            c1b66228a57d90e7d9d8cbb91d355bf1: ref!! 3b3dda1b-3b3b-4d4f-a2db-2f70257e15d2
             Base:
                 BasePartAsset: "4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/EntornoDinámico/BarrilExplosivo"
                 BasePartId: e8a114c4-1de9-4991-b0c5-c0a3a78869ba
@@ -3050,6 +3055,8 @@ Hierarchy:
                         Id: a1b491ee-5c63-4370-b7b4-06eb9da81eb0
                         modelo: ref!! 77ce6694-2239-4557-8a73-e60973fc5c11
                         "partículas": ref!! 49c90e4a-5e2d-4abb-b8a5-8c37bf0fe7e8
+                        "dañables":
+                            c1b66228a57d90e7d9d8cbb91d355bf1: ref!! 3bb6c6b6-9925-4106-ac29-845d6200350b
             Base:
                 BasePartAsset: "4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/EntornoDinámico/BarrilExplosivo"
                 BasePartId: e8a114c4-1de9-4991-b0c5-c0a3a78869ba
@@ -3814,8 +3821,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: b30d9600-00a8-4e21-8e6f-05871be9aa66
-                        Priority: 1
-                        controlador: ref!! 9003c97f-e6c6-4e78-ba13-390eef43db89
                         multiplicador: 0.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -4427,8 +4432,11 @@ Hierarchy:
                         "armaMelé": null
                         armaRango: ref!! 3465134a-e5ea-42bb-9ce4-65f62b006cc2
                         emisor: ref!! 83666af7-18bd-4d32-b0ae-3baf1a18d436
+                        "dañables":
+                            a930992ba198deae56578f295667f0e1: ref!! c84007cd-7832-4fdf-8735-b16970f34621
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: cea00763-51a0-4212-bd57-d6694970cfbd
+                        Priority: 1
                         "estático*": true
                         ojos:
                             4db60a51e1f224185a1f775371f2eeb2: ref!! 44b40718-202e-4536-be60-a8b2232fc621
@@ -4736,8 +4744,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 25603cab-663f-4b4b-a36c-86c3b5347a6d
-                        Priority: 1
-                        controlador: ref!! 9466ef07-c364-447b-94db-14d4447fda74
                         multiplicador: 1.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -4890,8 +4896,13 @@ Hierarchy:
                         "armaMelé": ref!! 2b85fa8c-5bea-47c9-8554-73d9e853e478
                         armaRango: null
                         emisor: ref!! 86bc9d61-e735-424b-877d-fccaa2069e58
+                        "dañables":
+                            5d89a98981aea1ade79c169e677ea9fa: ref!! b6fe990b-2b79-4697-859b-8e0e6ebceb51
+                            e59d7b90de0cdef5695764f0e0e3d2d2: ref!! ad3e7e60-71fa-4ab3-987f-bcced8d0197d
+                            552b2bbbc62010893a06ac7aa339e036: ref!! b30d9600-00a8-4e21-8e6f-05871be9aa66
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 75be94a8-8b9f-4e0c-a59a-cfb5e84452a4
+                        Priority: 1
                         "estático": false
                         ojos:
                             44e390ec37f8924a7039eeab0e0141fc: ref!! c077e950-a6d9-4085-aaa1-a4407962c697
@@ -5092,8 +5103,13 @@ Hierarchy:
                         "armaMelé": ref!! 64c39503-baa5-4b36-86b1-f98bd2eaa51f
                         armaRango: null
                         emisor: ref!! bb842453-f0f2-4e38-b2fe-af20eb48699c
+                        "dañables":
+                            5d89a98981aea1ade79c169e677ea9fa: ref!! 25603cab-663f-4b4b-a36c-86c3b5347a6d
+                            e59d7b90de0cdef5695764f0e0e3d2d2: ref!! 11a13a03-c127-450a-acbc-e69a351659ed
+                            552b2bbbc62010893a06ac7aa339e036: ref!! 761c8adc-a5b4-49b9-8fa0-d822ef271590
                     33ce25eb8ee99f15b44e0a062cbfffd2: !Voronomir.ControladorPersecusi%25C3%25B3n,Voronomir.Proyecto
                         Id: 6273a746-4571-4baa-ba29-9cdb75bafaa9
+                        Priority: 1
                         "estático": false
                         ojos:
                             44e390ec37f8924a7039eeab0e0141fc: ref!! fdd91fb6-7100-44ab-85c0-f25ad998325a
@@ -5835,7 +5851,6 @@ Hierarchy:
                     721ca503963ff4f73832348472556aea: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 3bb6c6b6-9925-4106-ac29-845d6200350b
                         Priority: 1
-                        controlador: ref!! 601cf0e1-d744-4095-924d-58499db204a0
                         multiplicador: 1.0
             Base:
                 BasePartAsset: "4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/EntornoDinámico/BarrilExplosivo"
@@ -6108,8 +6123,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: c84007cd-7832-4fdf-8735-b16970f34621
-                        Priority: 1
-                        controlador: ref!! 8453a3e0-4d61-4f66-950c-12fa89c30bac
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Enemigos/Dron
@@ -6272,8 +6285,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 081d2d76-bd92-4e02-8066-5fdd91faf803
-                        Priority: 1
-                        controlador: ref!! 293f7583-6c3c-4921-a3ca-4853773072d5
                         multiplicador: 0.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -6680,8 +6691,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: b6fe990b-2b79-4697-859b-8e0e6ebceb51
-                        Priority: 1
-                        controlador: ref!! 9003c97f-e6c6-4e78-ba13-390eef43db89
                         multiplicador: 1.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -6908,8 +6917,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: ab631ab3-07b8-4f81-92ea-b048addb42fd
-                        Priority: 1
-                        controlador: ref!! 293f7583-6c3c-4921-a3ca-4853773072d5
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -7259,7 +7266,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 2339e9b1-93eb-4839-932b-e85dee6d2320
-                        controlador: ref!! 26ce6f3f-2202-40ae-a9fc-481d6a6f7495
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
@@ -7682,8 +7688,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: ad3e7e60-71fa-4ab3-987f-bcced8d0197d
-                        Priority: 1
-                        controlador: ref!! 9003c97f-e6c6-4e78-ba13-390eef43db89
                         multiplicador: 1.0
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -8198,8 +8202,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 761c8adc-a5b4-49b9-8fa0-d822ef271590
-                        Priority: 1
-                        controlador: ref!! 9466ef07-c364-447b-94db-14d4447fda74
                         multiplicador: 0.5
             Base:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
@@ -8242,7 +8244,6 @@ Hierarchy:
                     721ca503963ff4f73832348472556aea: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 3b3dda1b-3b3b-4d4f-a2db-2f70257e15d2
                         Priority: 1
-                        controlador: ref!! 5a803b1f-63e9-45ec-a338-c495dd075143
                         multiplicador: 1.0
             Base:
                 BasePartAsset: "4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/EntornoDinámico/BarrilExplosivo"

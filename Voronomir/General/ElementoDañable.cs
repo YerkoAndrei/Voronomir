@@ -3,12 +3,10 @@ using Stride.Core.Mathematics;
 using Stride.Engine;
 
 namespace Voronomir;
-using static Utilidades;
 using static Constantes;
 
 public class ElementoDañable : StartupScript
 {
-    public Entity controlador;
     public float multiplicador;
 
     [DataMemberIgnore]
@@ -17,21 +15,10 @@ public class ElementoDañable : StartupScript
     private IDañable interfaz;
     private bool activo;
 
-    public override void Start()
+    public void Iniciar(IDañable _interfaz, Enemigos _enemigo = Enemigos.nada)
     {
-        interfaz = ObtenerInterfaz<IDañable>(controlador);
-
-        // Enemigo / Jugador
-        if (controlador.Get<ControladorEnemigo>() != null)
-        {
-            enemigo = controlador.Get<ControladorEnemigo>().enemigo;
-            controlador.Get<ControladorEnemigo>().AgregarDañable(this);
-        }
-        else if (controlador.Get<ControladorBarril>() != null)
-            controlador.Get<ControladorBarril>().AgregarDañable(this);
-        else
-            enemigo = Enemigos.nada;
-
+        interfaz = _interfaz;
+        enemigo = _enemigo;
         activo = true;
     }
 

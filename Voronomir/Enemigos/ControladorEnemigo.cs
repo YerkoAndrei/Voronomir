@@ -19,6 +19,8 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
     public ControladorArmaRango armaRango;
     public AudioEmitterComponent emisor;
 
+    public List<ElementoDañable> dañables { get; set; }
+
     private Enemigo datos;
     private CharacterComponent cuerpo;
     private ControladorPersecusión persecutor;
@@ -31,8 +33,6 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
     private AudioEmitterSoundController sonidoDaño;
     private AudioEmitterSoundController sonidoMorir;
 
-    private List<ElementoDañable> dañables;
-
     // Invisible
     private Vector3 posiciónInicial;
     private Vector3 gravedadInicial;
@@ -44,7 +44,10 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
     {
         cuerpo = Entity.Get<CharacterComponent>();
         persecutor = Entity.Get<ControladorPersecusión>();
-        dañables = new List<ElementoDañable>();
+        foreach (var dañable in dañables)
+        {
+            dañable.Iniciar(this, enemigo);
+        }
 
         datos = GenerarDatos(enemigo);
         vida = datos.Vida;
@@ -161,11 +164,6 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         dirección.Y = MathUtil.Clamp(dirección.Y, 0, 2);
 
         cuerpo.Jump(dirección * cuerpo.JumpSpeed);
-    }
-
-    public void AgregarDañable(ElementoDañable dañable)
-    {
-        dañables.Add(dañable);
     }
 
     private async void Morir(bool explotar)

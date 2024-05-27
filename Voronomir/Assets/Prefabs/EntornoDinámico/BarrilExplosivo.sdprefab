@@ -43,7 +43,6 @@ Hierarchy:
                     721ca503963ff4f73832348472556aea: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: bff60591-85d3-4048-9428-d5a733d7f903
                         Priority: 1
-                        controlador: ref!! e8a114c4-1de9-4991-b0c5-c0a3a78869ba
                         multiplicador: 1.0
         -   Entity:
                 Id: 5eccdee2-ce1a-41cc-aac6-c215de42cbdf
@@ -246,3 +245,5 @@ Hierarchy:
                         Id: 60d500b4-dac1-4e47-a447-5fdb1eb87a80
                         modelo: ref!! 665519cd-4d78-42a1-b9df-d5c4725142ad
                         "partículas": ref!! 356a6800-1d58-4d8a-af48-afa0f2c1013b
+                        "dañables":
+                            c1b66228a57d90e7d9d8cbb91d355bf1: ref!! bff60591-85d3-4048-9428-d5a733d7f903
