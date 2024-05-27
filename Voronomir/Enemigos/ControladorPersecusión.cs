@@ -29,6 +29,8 @@ public class ControladorPersecusión : StartupScript
     private float distanciaJugador;
 
     private int índiceTrigonométrico;
+    private float acelaraciónTrigonométrica;
+
     private bool atacando;
     private float tiempoRotación;
     private float tempoBusqueda;
@@ -36,7 +38,6 @@ public class ControladorPersecusión : StartupScript
     private float tempoAceleración;
     private float tiempoAceleración;
     private float aceleración;
-
 
     public void Iniciar(ControladorEnemigo _controlador, Enemigo _datos, IAnimador _animador)
     {
@@ -50,7 +51,8 @@ public class ControladorPersecusión : StartupScript
         datos = _datos;
 
         tempoBusqueda = 0;
-        tiempoAceleración = 1;
+        tiempoAceleración = 1.2f;
+        acelaraciónTrigonométrica = 0.2f;
 
         if (datos.PersecutorTrigonométrico)
         {
@@ -142,10 +144,11 @@ public class ControladorPersecusión : StartupScript
         if (distanciaRuta > 0.1f)
         {
             tempoAceleración += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
-            aceleración = MathUtil.SmoothStep(tempoAceleración / tiempoAceleración);
-            
+            aceleración = SistemaAnimación.EvaluarSuave(tempoAceleración / tiempoAceleración);
+            aceleración = MathUtil.Clamp(aceleración, 0, 1);
+
             // Mientras salta va directo al jugador
-            if(cuerpo.IsGrounded)
+            if (cuerpo.IsGrounded)
                 dirección = ruta[índiceRuta] - Entity.Transform.WorldMatrix.TranslationVector;
             else
                 dirección = ControladorPartida.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector;
@@ -180,15 +183,15 @@ public class ControladorPersecusión : StartupScript
         dirección = persecutor.ObtenerPosiciónCircular(índiceTrigonométrico) - Entity.Transform.WorldMatrix.TranslationVector;
         dirección.Normalize();
         dirección *= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
-        cuerpo.SetVelocity(dirección * 100 * datos.VelocidadMovimiento * distanciaRuta * 0.2f);
-        animador.Caminar(distanciaRuta * 0.2f);
+        cuerpo.SetVelocity(dirección * 100 * datos.VelocidadMovimiento * distanciaRuta * acelaraciónTrigonométrica);
+        animador.Caminar(distanciaRuta * acelaraciónTrigonométrica);
     }
 
     private bool MirarJugador()
     {
         // Si todos los ojos ven al jugador, entonces ataca
         var mirando = new bool[ojos.Count];
-        for(int i=0; i< ojos.Count; i++)
+        for(int i = 0; i < ojos.Count; i++)
         {
             var resultado = this.GetSimulation().Raycast(ojos[i].WorldMatrix.TranslationVector,
                                                          ControladorPartida.ObtenerCabezaJugador(),
