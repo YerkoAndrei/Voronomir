@@ -13,7 +13,6 @@ public class ControladorBarril : StartupScript, IDañable
     public List<ElementoDañable> dañables { get; set; }
 
     private PhysicsComponent cuerpo;
-    private ElementoDañable dañable;
     private float vida;
     private float dañoExplosión;
 
@@ -39,7 +38,7 @@ public class ControladorBarril : StartupScript, IDañable
             return;
 
         // Explotar
-        dañable.Desactivar();
+        dañables[0].Desactivar();
         modelo.Enabled = false;
         cuerpo.Enabled = false;
         partículas.ParticleSystem.StopEmitters();
