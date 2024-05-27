@@ -8,25 +8,25 @@ Nodes:
     18f8a9bedb9d184cb6eb9a5b607b92e4: {Name: Esqueleto, Depth: 0}
     a6f1286e2366af372e9db488880caca8: {Name: Pulga, Depth: 1}
     47480ee4b40d76070bcb339d2de1ae4b: {Name: cuerpo, Depth: 1}
-    09ea5de3f629c261abd7d508c2cc992f: {Name: pata.1_01.R, Depth: 2}
-    f102de43c6a1c5960229e3bdc5413268: {Name: pata.1_02.R, Depth: 3}
-    9cf2837a4e7de446b5b5effcad66b18d: {Name: pata.1_03.R, Depth: 4}
-    328bce3319878dc61ccff19e1d470cee: {Name: pata.2_01.R, Depth: 2}
-    2b05e64a7f34ee9848df194305de4811: {Name: pata.2_02.R, Depth: 3}
-    8476b9639fc898b163084432621218f5: {Name: pata.2_03.R, Depth: 4}
-    7ec5ae9e0e6e12a59a2845f3724ca838: {Name: pata.3_01.R, Depth: 2}
-    accb20fd90165ed779a4ae0de4b96baa: {Name: pata.3_02.R, Depth: 3}
-    dbcfbaebdfe18553211f0abbb59d853a: {Name: pata.3_03.R, Depth: 4}
     2930cf4e341803c27774d2edf72c405f: {Name: cabeza, Depth: 2}
-    a70a3e2ae1131fcad79c4f1059287131: {Name: pata.1_01.L, Depth: 2}
-    21df57638a3ed6011f3f979e49ed9464: {Name: pata.1_02.L, Depth: 3}
-    74ca4a232ebb04ebbabf3bdd64a7a4f5: {Name: pata.1_03.L, Depth: 4}
-    c2d47c5e243c38398ec607c3940558ed: {Name: pata.2_01.L, Depth: 2}
-    239bbda0b12cc182d8bfd19106962be8: {Name: pata.2_02.L, Depth: 3}
-    286e0fecfbaf0623094a09a84c19f6ae: {Name: pata.2_03.L, Depth: 4}
-    9ad1f4067510f3321a98622ac2fb1bf8: {Name: pata.3_01.L, Depth: 2}
-    a3618bad788ef0e2b23ae7947b2a2fa7: {Name: pata.3_02.L, Depth: 3}
-    a1244abdfcb1e0941a5611f1c1d7e9a0: {Name: pata.3_03.L, Depth: 4}
+    09ea5de3f629c261abd7d508c2cc992f: {Name: pata.1_01.R, Depth: 1}
+    f102de43c6a1c5960229e3bdc5413268: {Name: pata.1_02.R, Depth: 2}
+    9cf2837a4e7de446b5b5effcad66b18d: {Name: pata.1_03.R, Depth: 3}
+    328bce3319878dc61ccff19e1d470cee: {Name: pata.2_01.R, Depth: 1}
+    2b05e64a7f34ee9848df194305de4811: {Name: pata.2_02.R, Depth: 2}
+    8476b9639fc898b163084432621218f5: {Name: pata.2_03.R, Depth: 3}
+    7ec5ae9e0e6e12a59a2845f3724ca838: {Name: pata.3_01.R, Depth: 1}
+    accb20fd90165ed779a4ae0de4b96baa: {Name: pata.3_02.R, Depth: 2}
+    dbcfbaebdfe18553211f0abbb59d853a: {Name: pata.3_03.R, Depth: 3}
+    a70a3e2ae1131fcad79c4f1059287131: {Name: pata.1_01.L, Depth: 1}
+    21df57638a3ed6011f3f979e49ed9464: {Name: pata.1_02.L, Depth: 2}
+    74ca4a232ebb04ebbabf3bdd64a7a4f5: {Name: pata.1_03.L, Depth: 3}
+    c2d47c5e243c38398ec607c3940558ed: {Name: pata.2_01.L, Depth: 1}
+    239bbda0b12cc182d8bfd19106962be8: {Name: pata.2_02.L, Depth: 2}
+    286e0fecfbaf0623094a09a84c19f6ae: {Name: pata.2_03.L, Depth: 3}
+    9ad1f4067510f3321a98622ac2fb1bf8: {Name: pata.3_01.L, Depth: 1}
+    a3618bad788ef0e2b23ae7947b2a2fa7: {Name: pata.3_02.L, Depth: 2}
+    a1244abdfcb1e0941a5611f1c1d7e9a0: {Name: pata.3_03.L, Depth: 3}
     e5a1c1f2f161ffdabc7ca18cd28fc30e: {Name: poto, Depth: 1}
 ~SourceHashes:
-    8ea64d41d31e03de4fdbcc6d82aadaeb~Pulga.glb: c6da8a8d2b85e7e76b3e7f95b5a0de4f
+    8ea64d41d31e03de4fdbcc6d82aadaeb~Pulga.glb: 1aaa5a61d8a6dccb14f691b4332f6f60
