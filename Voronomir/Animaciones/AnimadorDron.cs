@@ -35,7 +35,7 @@ public class AnimadorDron : StartupScript, IAnimador
     public void Caminar(float velocidad)
     {
 
-	}
+    }
 
     public void Atacar()
     {

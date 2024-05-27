@@ -115,8 +115,11 @@ public class AnimadorAraña : StartupScript, IAnimador
 
     public void Atacar()
     {
-        AnimarAtaque(Quaternion.RotationX(MathUtil.DegreesToRadians(60)),
-                     Quaternion.RotationX(MathUtil.DegreesToRadians(-100)));
+        tokenAtaque.Cancel();
+        tokenAtaque = new CancellationTokenSource();
+
+        AnimarAtaque(Quaternion.RotationX(MathUtil.DegreesToRadians(80)),
+                     Quaternion.RotationX(MathUtil.DegreesToRadians(-90)));
     }
 
     public void Morir()

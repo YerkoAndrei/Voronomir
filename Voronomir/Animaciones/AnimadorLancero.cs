@@ -83,6 +83,9 @@ public class AnimadorLancero : StartupScript, IAnimador
 
     public void Atacar()
     {
+        tokenAtaque.Cancel();
+        tokenAtaque = new CancellationTokenSource();
+
         ApuntarLanza();
         AnimarAtaque(Quaternion.RotationZ(MathUtil.DegreesToRadians(-110)),
                      Quaternion.RotationZ(MathUtil.DegreesToRadians(110)));

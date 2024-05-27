@@ -72,6 +72,9 @@ public class AnimadorZombi : StartupScript, IAnimador
 
     public void Atacar()
     {
+        tokenAtaque.Cancel();
+        tokenAtaque = new CancellationTokenSource();
+
         AnimarAtaque(Quaternion.RotationZ(MathUtil.DegreesToRadians(-100)), 
                      Quaternion.RotationZ(MathUtil.DegreesToRadians(100)));
     }

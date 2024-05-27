@@ -133,6 +133,9 @@ public class AnimadorBabosa : StartupScript, IAnimador
 
     public void Atacar()
     {
+        tokenAtaque.Cancel();
+        tokenAtaque = new CancellationTokenSource();
+
         AnimarAtaque(Vector3.One * 0.5f);
     }
 
