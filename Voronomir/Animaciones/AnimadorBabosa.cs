@@ -148,6 +148,8 @@ public class AnimadorBabosa : StartupScript, IAnimador
         tokenAtaque.Cancel();
         tokenAtaque = new CancellationTokenSource();
 
+        esqueleto.NodeTransformations[idCola].Transform.Scale = tamañoInicioCola;
+
         AnimarAtaque(Vector3.One * 0.5f);
     }
 

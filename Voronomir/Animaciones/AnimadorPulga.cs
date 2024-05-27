@@ -123,6 +123,15 @@ public class AnimadorPulga : StartupScript, IAnimador
         tokenAtaque.Cancel();
         tokenAtaque = new CancellationTokenSource();
 
+        for (int i = 0; i < idPatasIzq.Length; i++)
+        {
+            esqueleto.NodeTransformations[idPatasIzq[i]].Transform.Rotation = rotacionesInicioPatasIzq[i];
+        }
+        for (int i = 0; i < idPatasDer.Length; i++)
+        {
+            esqueleto.NodeTransformations[idPatasDer[i]].Transform.Rotation = rotacionesInicioPatasDer[i];
+        }
+
         AnimarAtaque(Quaternion.RotationX(MathUtil.DegreesToRadians(-90)),
                      Quaternion.RotationX(MathUtil.DegreesToRadians(-160)));
     }

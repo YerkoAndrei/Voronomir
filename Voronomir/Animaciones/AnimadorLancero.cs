@@ -28,6 +28,9 @@ public class AnimadorLancero : StartupScript, IAnimador
     private Quaternion rotaciónInicioBrazoIzq;
     private Quaternion rotaciónInicioBrazoDer;
 
+    private Quaternion rotaciónInicioPiernaIzq;
+    private Quaternion rotaciónInicioPiernaDer;
+
     private CancellationTokenSource tokenAtaque;
 
     public void Iniciar()
@@ -59,6 +62,9 @@ public class AnimadorLancero : StartupScript, IAnimador
         esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = rotaciónInicioBrazoIzq;
         esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = rotaciónInicioBrazoDer;
 
+        rotaciónInicioPiernaIzq = esqueleto.NodeTransformations[idPiernas[0]].Transform.Rotation;
+        rotaciónInicioPiernaDer = esqueleto.NodeTransformations[idPiernas[1]].Transform.Rotation;
+
         pociciónLanzaInicio = lanza.Position;
         pociciónLanzaAtaque = lanza.Position + new Vector3(0, 0, 1.5f);
 
@@ -86,6 +92,9 @@ public class AnimadorLancero : StartupScript, IAnimador
     {
         tokenAtaque.Cancel();
         tokenAtaque = new CancellationTokenSource();
+
+        esqueleto.NodeTransformations[idPiernas[0]].Transform.Rotation = rotaciónInicioPiernaIzq;
+        esqueleto.NodeTransformations[idPiernas[1]].Transform.Rotation = rotaciónInicioPiernaDer;
 
         AnimarAtaque(Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(100), 0, MathUtil.DegreesToRadians(90)),
                      Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-100), 0, MathUtil.DegreesToRadians(-90)));

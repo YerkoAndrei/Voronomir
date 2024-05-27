@@ -56,7 +56,7 @@ public class AnimadorAraña : StartupScript, IAnimador
                 if (esqueleto.Nodes[i].Name == patasIzq[ii])
                 {
                     idPatasIzq[ii] = i;
-                    rotacionesInicioPatasIzq[ii] = esqueleto.NodeTransformations[ii].Transform.Rotation;
+                    rotacionesInicioPatasIzq[ii] = esqueleto.NodeTransformations[i].Transform.Rotation;
                 }
             }
 
@@ -65,7 +65,7 @@ public class AnimadorAraña : StartupScript, IAnimador
                 if (esqueleto.Nodes[i].Name == patasDer[ii])
                 {
                     idPatasDer[ii] = i;
-                    rotacionesInicioPatasDer[ii] = esqueleto.NodeTransformations[ii].Transform.Rotation;
+                    rotacionesInicioPatasDer[ii] = esqueleto.NodeTransformations[i].Transform.Rotation;
                 }
             }
 
@@ -105,11 +105,11 @@ public class AnimadorAraña : StartupScript, IAnimador
     {
         for (int i = 0; i < idPatasIzq.Length; i++)
         {
-            esqueleto.NodeTransformations[idPatasIzq[i]].Transform.Rotation *= Quaternion.RotationZ(-velocidad * 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
+            esqueleto.NodeTransformations[idPatasIzq[i]].Transform.Rotation *= Quaternion.RotationZ(-velocidad * 20 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
         }
         for (int i = 0; i < idPatasDer.Length; i++)
         {
-            esqueleto.NodeTransformations[idPatasDer[i]].Transform.Rotation *= Quaternion.RotationZ(velocidad * 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
+            esqueleto.NodeTransformations[idPatasDer[i]].Transform.Rotation *= Quaternion.RotationZ(velocidad * 20 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
         }
     }
 
@@ -117,6 +117,15 @@ public class AnimadorAraña : StartupScript, IAnimador
     {
         tokenAtaque.Cancel();
         tokenAtaque = new CancellationTokenSource();
+
+        for (int i = 0; i < idPatasIzq.Length; i++)
+        {
+            esqueleto.NodeTransformations[idPatasIzq[i]].Transform.Rotation = rotacionesInicioPatasIzq[i];
+        }
+        for (int i = 0; i < idPatasDer.Length; i++)
+        {
+            esqueleto.NodeTransformations[idPatasDer[i]].Transform.Rotation =rotacionesInicioPatasDer[i];
+        }
 
         AnimarAtaque(Quaternion.RotationX(MathUtil.DegreesToRadians(80)),
                      Quaternion.RotationX(MathUtil.DegreesToRadians(-90)));

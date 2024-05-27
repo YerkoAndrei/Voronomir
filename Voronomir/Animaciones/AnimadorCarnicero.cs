@@ -20,6 +20,9 @@ public class AnimadorCarnicero : StartupScript, IAnimador
     private Quaternion rotaciónInicioBrazoIzq;
     private Quaternion rotaciónInicioBrazoDer;
 
+    private Quaternion rotaciónInicioPiernaIzq;
+    private Quaternion rotaciónInicioPiernaDer;
+
     private CancellationTokenSource tokenAtaque;
 
     public void Iniciar()
@@ -50,6 +53,9 @@ public class AnimadorCarnicero : StartupScript, IAnimador
 
         esqueleto.NodeTransformations[idBrazos[0]].Transform.Rotation = rotaciónInicioBrazoIzq;
         esqueleto.NodeTransformations[idBrazos[1]].Transform.Rotation = rotaciónInicioBrazoDer;
+
+        rotaciónInicioPiernaIzq = esqueleto.NodeTransformations[idPiernas[0]].Transform.Rotation;
+        rotaciónInicioPiernaDer = esqueleto.NodeTransformations[idPiernas[1]].Transform.Rotation;
     }
 
     public void Actualizar()
@@ -72,6 +78,9 @@ public class AnimadorCarnicero : StartupScript, IAnimador
     {
         tokenAtaque.Cancel();
         tokenAtaque = new CancellationTokenSource();
+
+        esqueleto.NodeTransformations[idPiernas[0]].Transform.Rotation = rotaciónInicioPiernaIzq;
+        esqueleto.NodeTransformations[idPiernas[1]].Transform.Rotation = rotaciónInicioPiernaDer;
 
         AnimarAtaque(Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(60), 0, MathUtil.DegreesToRadians(-80)),
                      Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(-60), 0, MathUtil.DegreesToRadians(80)));
