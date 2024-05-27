@@ -1154,7 +1154,7 @@ Hierarchy:
                     f542ff92c4376c5d46d4b52ef47c2df1~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 160.0
-                Height: 100.0
+                Height: 85.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -2338,7 +2338,7 @@ Hierarchy:
                     f542ff92c4376c5d46d4b52ef47c2df1~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 160.0
-                Height: 100.0
+                Height: 85.0
                 Margin: {Top: 250.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -3145,7 +3145,7 @@ Hierarchy:
                 Visibility: Hidden
                 Width: 200.0
                 Height: 230.0
-                Margin: {Top: 330.0, Right: 835.0}
+                Margin: {Top: 315.0, Right: 835.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -3205,7 +3205,7 @@ Hierarchy:
                     f919c1959ac409ecb2b25e208ad6efbe~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 120.0
-                Height: 120.0
+                Height: 100.0
                 Margin: {Left: 240.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -3591,7 +3591,7 @@ Hierarchy:
                     f919c1959ac409ecb2b25e208ad6efbe~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 120.0
-                Height: 100.0
+                Height: 80.0
                 Margin: {Right: 835.0, Bottom: 250.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -7425,7 +7425,7 @@ Hierarchy:
                     f919c1959ac409ecb2b25e208ad6efbe~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 120.0
-                Height: 100.0
+                Height: 80.0
                 Margin: {Left: 240.0, Top: 250.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -7775,7 +7775,7 @@ Hierarchy:
                     f919c1959ac409ecb2b25e208ad6efbe~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 120.0
-                Height: 140.0
+                Height: 120.0
                 Margin: {Top: 295.0, Right: 835.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -10350,7 +10350,7 @@ Hierarchy:
                     f542ff92c4376c5d46d4b52ef47c2df1~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 160.0
-                Height: 100.0
+                Height: 85.0
                 Margin: {Bottom: 250.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -12295,7 +12295,7 @@ Hierarchy:
                     3790295f5a5f02b714156bf1efceb5d1~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 200.0
-                Height: 100.0
+                Height: 80.0
                 Margin: {Right: 835.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
