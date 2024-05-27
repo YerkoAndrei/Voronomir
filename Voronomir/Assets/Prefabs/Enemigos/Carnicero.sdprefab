@@ -203,7 +203,7 @@ Hierarchy:
                     a60cbff727993b50e85c8863a7d8a974: !CharacterComponent
                         Id: 6905a480-3378-4b17-af05-1168e8811a30
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.1
                         Friction: 0.0
