@@ -131,10 +131,17 @@ public class AnimadorAraña : StartupScript, IAnimador
         veneno.Entity.Transform.Scale = new Vector3(1.5f, 1, 1.5f);
         partículas.Entity.Transform.Position = new Vector3(0, 0.2f, 0);
 
+        esqueleto.NodeTransformations[idCabeza].Transform.Scale = new Vector3(0.5f, 0.8f, 1);
+
         // Apagar extremidades
         for (int i = 0; i < idPatasInicio.Length; i++)
         {
             esqueleto.NodeTransformations[idPatasInicio[i]].Transform.Scale = Vector3.Zero;
+
+            if (esqueleto.NodeTransformations[idPatasInicio[i]].Transform.Position.X > 0)
+                esqueleto.NodeTransformations[idPatasInicio[i]].Transform.Position -= Vector3.UnitX * 1.2f;
+            else
+                esqueleto.NodeTransformations[idPatasInicio[i]].Transform.Position += Vector3.UnitX * 1.2f;
         }
     }
 
