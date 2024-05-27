@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Rendering;
 using Stride.Engine;
+using System;
 
 namespace Voronomir;
 using static Utilidades;
@@ -29,7 +31,7 @@ public class AnimadorBabosa : StartupScript, IAnimador
     private Vector3[] tamañosMaxCuerpos;
 
     private float duraciónCaminata;
-    private float duraciónPalpitar;
+    private float[] duracionesPalpitar;
     private float[] tiempos;
     private float[] tiemposLerp;
     private bool[] expandiendo;
@@ -50,7 +52,6 @@ public class AnimadorBabosa : StartupScript, IAnimador
         tamañosMaxCuerpos = new Vector3[cuerpos.Count];
 
         duraciónCaminata = 0.8f;
-        duraciónPalpitar = 0.4f;
 
         // Encuentra huesos por nombre
         for (int i = 0; i < esqueleto.Nodes.Length; i++)
@@ -77,13 +78,24 @@ public class AnimadorBabosa : StartupScript, IAnimador
         tamañoMaxCola = tamañoInicioCola * 1.5f;
 
         // Aleatorización
+        duracionesPalpitar = new float[]
+        {
+            0.4f,
+            0.6f,
+            0.8f,
+            1.0f
+        };
+
+        var aleatorio = new Random();
+        duracionesPalpitar.ToList().OrderBy(x => aleatorio.Next()).ToArray();
+
         tiempos = new float[cuerpos.Count];
         tiemposLerp = new float[cuerpos.Count];
         expandiendo = new bool[cuerpos.Count];
 
         for (int i = 0; i < idCuerpos.Length; i++)
         {
-            tiemposLerp[i] = RangoAleatorio(0, 1);
+            tiemposLerp[i] = RangoAleatorio(0, 0.8f);
             expandiendo[i] = true;
         }
     }
@@ -93,7 +105,7 @@ public class AnimadorBabosa : StartupScript, IAnimador
         // Palpitación aleatorioa del cuerpo
         for (int i = 0; i < idCuerpos.Length; i++)
         {
-            tiempos[i] = SistemaAnimación.EvaluarSuave(tiemposLerp[i] / duraciónPalpitar);
+            tiempos[i] = SistemaAnimación.EvaluarSuave(tiemposLerp[i] / duracionesPalpitar[i]);
             tiemposLerp[i] += (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
             if (expandiendo[i])
@@ -101,7 +113,7 @@ public class AnimadorBabosa : StartupScript, IAnimador
             else
                 esqueleto.NodeTransformations[idCuerpos[i]].Transform.Scale = Vector3.Lerp(tamañosMaxCuerpos[i], tamañosInicioCuerpos[i], tiempos[i]);
 
-            if (tiemposLerp[i] > duraciónPalpitar)
+            if (tiemposLerp[i] > duracionesPalpitar[i])
             {
                 tiemposLerp[i] = 0;
                 expandiendo[i] = !expandiendo[i];

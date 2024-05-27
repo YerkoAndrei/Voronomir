@@ -190,10 +190,8 @@ Hierarchy:
                         cuerpos:
                             d88f8eb3c3a0472fdd5b4683b7a35352: cuerpo_01.L
                             3aa80143614f8b6ebba804307afd2b8c: cuerpo_02.L
-                            3f44b262b0c15f249e26a1b679b9a012: cuerpo_03.L
                             7382ab4897b0a2444a243a37032aad39: cuerpo_01.R
                             0bce1c3819360767adba55c7306cbbf9: cuerpo_02.R
-                            ad1ee24f867ee73658224935bf193ccc: cuerpo_03.R
         -   Entity:
                 Id: 9f545b3c-2af1-461f-91fd-64ab709d1b5c
                 Name: OjoIzq
