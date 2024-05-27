@@ -19,7 +19,7 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 85f94fbb-6b49-49b9-b449-22801feb11c5
                         Enabled: false
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials: {}
         -   Entity:
                 Id: ffaf0f04-a1a7-474a-8e05-7f0c7c41f485

@@ -55,7 +55,7 @@ Hierarchy:
                         Id: a2c27460-eea3-4916-9348-a3f49363350a
                         Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
                         Materials:
-                            67871fe64f68385cdb392243a8eaa836~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
+                            67871fe64f68385cdb392243a8eaa836~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/Llaves/LlaveAzul
         -   Entity:
                 Id: 9ed46e5c-e8aa-4d32-ad0e-34ea6d159d4c
                 Name: Base

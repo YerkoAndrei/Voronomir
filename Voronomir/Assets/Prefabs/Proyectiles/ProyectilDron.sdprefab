@@ -19,7 +19,7 @@ Hierarchy:
                         Children: {}
                     79c97683a9b44b1d2aa39475a8794065: !ModelComponent
                         Id: 39bd3370-36d4-4e32-8db2-7ef710753930
-                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Proyectiles/Cilindro/Cilindro
+                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                         IsShadowCaster: false
                         Materials:
                             90accdfd0dfb494b39fe5127fbfe4301~0: c037cb85-dcbe-429b-95c1-4b17ad81a48a:Materiales/Electricidad

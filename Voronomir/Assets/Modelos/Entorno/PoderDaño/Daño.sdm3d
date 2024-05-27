@@ -13,7 +13,7 @@ Materials:
     932540b18517b5a3ea907496385ad7bc:
         Name: Anillo
         MaterialInstance:
-            Material: 1d2bad36-6ad0-469b-89af-5007737a3b10:Materiales/Anillo
+            Material: 1d2bad36-6ad0-469b-89af-5007737a3b10:Materiales/Metal
 Modifiers: {}
 ~SourceHashes:
     "b9d53a9bd1c1c7322738f8bb783e06f1~Daño.glb": ae034d055f601f8c9ac93b5ce9598910

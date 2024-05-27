@@ -20,7 +20,7 @@ Hierarchy:
                         Id: b7158362-2a6c-425c-be42-717c0d8911f6
                         Model: 5b896984-0486-4a70-abf8-1a52f64f29a7:Modelos/Entorno/Llave/Llave
                         Materials:
-                            790347199cd46b2dc25cec73548ae265~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
+                            790347199cd46b2dc25cec73548ae265~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/Llaves/LlaveAzul
         -   Entity:
                 Id: 60a17964-ae87-420b-b6c7-baa54dd9ac8a
                 Name: Llave (Azul)

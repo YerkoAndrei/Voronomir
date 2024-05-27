@@ -9,7 +9,7 @@ Materials:
     8b666684ec962bd18a9f20f65ec48896:
         Name: Material
         MaterialInstance:
-            Material: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Obstáculo"
+            Material: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
 DeduplicateMaterials: false
 Modifiers: {}
 ~SourceHashes:

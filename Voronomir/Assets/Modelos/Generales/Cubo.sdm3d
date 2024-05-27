@@ -9,7 +9,7 @@ Materials:
     5de61e3c026edd83fa34815edca972ce:
         Name: Material
         MaterialInstance:
-            Material: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Obstáculo"
+            Material: null
 DeduplicateMaterials: false
 Modifiers: {}
 ~SourceHashes:

@@ -198,7 +198,7 @@ Hierarchy:
                         Id: b85fe614-efc6-4d17-96e4-be02b8880f86
                         Model: 5b896984-0486-4a70-abf8-1a52f64f29a7:Modelos/Entorno/Llave/Llave
                         Materials:
-                            29052f4076ada5a695dba44b47be1ac7~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
+                            29052f4076ada5a695dba44b47be1ac7~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/Llaves/LlaveRoja
         -   Entity:
                 Id: bf9a8b69-299c-46ff-8817-d0b2f00148e4
                 Name: Emisor

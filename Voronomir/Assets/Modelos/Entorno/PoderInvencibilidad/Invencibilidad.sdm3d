@@ -13,7 +13,7 @@ Materials:
     744e0bc154769f4411f008a49711f043:
         Name: Anillo
         MaterialInstance:
-            Material: 1d2bad36-6ad0-469b-89af-5007737a3b10:Materiales/Anillo
+            Material: 1d2bad36-6ad0-469b-89af-5007737a3b10:Materiales/Metal
 Modifiers: {}
 ~SourceHashes:
     edb54218a6307e8dfcd22cd976261f69~Invencibilidad.glb: e6f216758765eefb8f27418e80f94b76

@@ -34,7 +34,7 @@ Hierarchy:
                         Id: 1f2b11ae-badb-4ac6-8c7d-5d24ca222eb2
                         Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
                         Materials:
-                            d2b19c308a18a23717508b2aeb6c19bb~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
+                            d2b19c308a18a23717508b2aeb6c19bb~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/Llaves/LlaveRoja
         -   Entity:
                 Id: ac76f714-74d1-46fa-9972-1b87615dc7d7
                 Name: "Botón (Rojo)"

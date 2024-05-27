@@ -549,9 +549,9 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
                         Id: ec03448c-4a4c-4fbb-a6c9-586fb23bc055
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials:
-                            20ea19b545ed568ea3e84fb5ecb8d169~0: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Piso
+                            20ea19b545ed568ea3e84fb5ecb8d169~0: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Mapa/Piso
         -   Folder: null
             Entity:
                 Id: 1330df51-afef-4f37-b933-5d015309569e
@@ -644,7 +644,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 2a9d6341-775d-4527-8727-0ddaee4913ca
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Pared
                         Materials: {}
         -   Entity:
                 Id: 192aae67-88cf-46cd-9a6b-79fdb36cf312
@@ -1012,7 +1012,7 @@ Hierarchy:
                         Id: d48ca9bb-1838-4c80-940e-b656d3266e33
                         Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
                         Materials:
-                            bc95f6c4209cf9648746a3f1a806ef73*~1: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/LlaveAmarilla
+                            bc95f6c4209cf9648746a3f1a806ef73*~1: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/Llaves/LlaveAmarilla
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
@@ -2440,7 +2440,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 6d59886f-c4a5-4069-96d6-9485b7858054
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Pared
                         Materials: {}
         -   Folder: Puertas
             Entity:
@@ -2870,7 +2870,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: b0e5187c-fc2b-42f0-a0e1-580deee1c4c3
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Pared
                         Materials: {}
         -   Folder: Grupo01
             Entity:
@@ -3620,7 +3620,7 @@ Hierarchy:
                         Id: c485710b-d8f1-4870-9edf-8cc3968eba5c
                         Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
                         Materials:
-                            67871fe64f68385cdb392243a8eaa836~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
+                            67871fe64f68385cdb392243a8eaa836~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/Llaves/LlaveAzul
             Base:
                 BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/EntornoDinámico/Botón (Azul)"
                 BasePartId: 6ba9d529-deb5-41b0-a29a-42e3547040f8
@@ -3682,7 +3682,7 @@ Hierarchy:
                         Id: cef209fb-298d-4161-921e-17df1b95a9b6
                         Model: 5b896984-0486-4a70-abf8-1a52f64f29a7:Modelos/Entorno/Llave/Llave
                         Materials:
-                            29052f4076ada5a695dba44b47be1ac7~0: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/LlaveAmarilla
+                            29052f4076ada5a695dba44b47be1ac7~0: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/Llaves/LlaveAmarilla
             Base:
                 BasePartAsset: "ef15af4c-6c07-4963-bc75-701eb78e548b:Prefabs/EntornoDinámico/Llave (Amarilla)"
                 BasePartId: 235db80c-513d-4dc7-baba-46244842fbb7
@@ -4497,8 +4497,9 @@ Hierarchy:
                         Children: {}
                     ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
                         Id: 92a85a31-56a5-4327-8b8c-adaad18b7459
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
-                        Materials: {}
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials:
+                            bf450f62ad1473fb768b2e2fbef469f0~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
         -   Entity:
                 Id: 86798d33-b755-4665-ae6f-b2b96efd2015
                 Name: ArmaRango
@@ -4529,7 +4530,7 @@ Hierarchy:
                         Id: 4ea54491-3fb9-46ce-82a1-2d2bf29cf3ef
                         Model: 5b896984-0486-4a70-abf8-1a52f64f29a7:Modelos/Entorno/Llave/Llave
                         Materials:
-                            29052f4076ada5a695dba44b47be1ac7~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
+                            29052f4076ada5a695dba44b47be1ac7~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/Llaves/LlaveRoja
             Base:
                 BasePartAsset: "2c6736d1-0a31-4e49-b281-0e17303b2b12:Prefabs/EntornoDinámico/Llave (Roja)"
                 BasePartId: 815d72ca-0660-4eba-8cae-00e9b57fa989
@@ -4703,7 +4704,7 @@ Hierarchy:
                         Id: e4386080-cdf2-4d42-b693-1840fc08bd04
                         Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
                         Materials:
-                            d2b19c308a18a23717508b2aeb6c19bb~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
+                            d2b19c308a18a23717508b2aeb6c19bb~0: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/Llaves/LlaveRoja
             Base:
                 BasePartAsset: "73f16069-e6ab-4eae-a431-2bbd98bb2fe6:Prefabs/EntornoDinámico/Botón (Rojo)"
                 BasePartId: a95bdd9a-d4b5-4794-93a1-c91229340c52
@@ -5053,8 +5054,9 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
                         Id: 85ab4bb0-05e4-4089-81c3-cf17363fe123
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
-                        Materials: {}
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials:
+                            885c00811c3a967eee2a81b6e59b088b~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
         -   Folder: Grupo01
             Entity:
                 Id: 9466ef07-c364-447b-94db-14d4447fda74
@@ -5231,7 +5233,7 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 7a656f81-d627-47f1-b9ac-6d022db074e1
                         Enabled: false
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials: {}
             Base:
                 BasePartAsset: "2566113e-21c9-42ef-94ea-b6ba54bf4188:Prefabs/EntornoDinámico/Activador"
@@ -5547,10 +5549,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             cbf9f2e68f706f746ff54d67277aa5c0: !ColliderShapeAssetDesc
-                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Entorno/Rampa/ColliderRampa
+                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Mapa/Rampa/ColliderRampa
                     f90574c0c620ae24776fc892df6f674b: !ModelComponent
                         Id: c1acaa60-0d98-4788-9819-0d8e661bd257
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Entorno/Rampa/Rampa
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa/Rampa
                         Materials: {}
         -   Entity:
                 Id: a6aae518-5bc4-4527-9995-349e89047d9d
@@ -5566,7 +5568,7 @@ Hierarchy:
                         Id: 5f006e3a-433e-47c6-bf3e-be811162d37d
                         Model: "fbdfc454-c90b-4a61-b520-bfab65962a19:Modelos/Entorno/Botón/Botón"
                         Materials:
-                            d2b19c308a18a23717508b2aeb6c19bb~0: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/LlaveAmarilla
+                            d2b19c308a18a23717508b2aeb6c19bb~0: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/Llaves/LlaveAmarilla
             Base:
                 BasePartAsset: "4f93362e-7333-4a66-aedd-cac3999f99c0:Prefabs/EntornoDinámico/Botón (Amarillo)"
                 BasePartId: 7abdcfa0-cf1c-4a21-8279-5986c982b2e6
@@ -5651,7 +5653,7 @@ Hierarchy:
                         Id: 37e86b2c-b725-4039-9e0f-302798cb10ea
                         Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
                         Materials:
-                            bc95f6c4209cf9648746a3f1a806ef73*~1: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/LlaveRoja
+                            bc95f6c4209cf9648746a3f1a806ef73*~1: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/Llaves/LlaveRoja
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
@@ -6471,10 +6473,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             cbf9f2e68f706f746ff54d67277aa5c0: !ColliderShapeAssetDesc
-                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Entorno/Rampa/ColliderRampa
+                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Mapa/Rampa/ColliderRampa
                     f90574c0c620ae24776fc892df6f674b: !ModelComponent
                         Id: 1c02d769-8a36-4101-9f66-3c9cd3a1eed4
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Entorno/Rampa/Rampa
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa/Rampa
                         Materials: {}
         -   Entity:
                 Id: cb74dedf-a315-4eb5-a0b0-bf447505f378
@@ -6488,7 +6490,7 @@ Hierarchy:
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 617de4d2-f031-4149-b2ff-66aea4359695
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials: {}
             Base:
                 BasePartAsset: "45ea8175-4bdb-46b4-998a-9c398b65c48d:Prefabs/EntornoDinámico/DañadorContinuo"
@@ -6542,7 +6544,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 69b7da8b-7831-48e0-a3b9-09d56c043f51
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Pared
                         Materials: {}
         -   Folder: "EntornoEstático/Obstáculos"
             Entity:
@@ -6568,10 +6570,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             cbf9f2e68f706f746ff54d67277aa5c0: !ColliderShapeAssetDesc
-                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Entorno/Rampa/ColliderRampa
+                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Mapa/Rampa/ColliderRampa
                     f90574c0c620ae24776fc892df6f674b: !ModelComponent
                         Id: 7d390dfb-0a6c-4761-b02c-dea26e55e5cb
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Entorno/Rampa/Rampa
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa/Rampa
                         Materials: {}
         -   Folder: null
             Entity:
@@ -6725,7 +6727,7 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 24d82642-3e8f-4535-8bc7-a2b097ad41cd
                         Enabled*: true
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials: {}
             Base:
                 BasePartAsset: "ba20a406-510b-45d3-8837-e5839f7f9e4e:Prefabs/EntornoDinámico/Fin"
@@ -7732,7 +7734,7 @@ Hierarchy:
                         Id: 65e16933-9120-447f-9e7b-1fa3ff536c95
                         Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
                         Materials:
-                            9f0f310113bae67ad5ef6389213ba9b2*~1: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
+                            9f0f310113bae67ad5ef6389213ba9b2*~1: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/Llaves/LlaveAzul
             Base:
                 BasePartAsset: "28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/EntornoDinámico/Puerta"
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
@@ -7946,10 +7948,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             cbf9f2e68f706f746ff54d67277aa5c0: !ColliderShapeAssetDesc
-                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Entorno/Rampa/ColliderRampa
+                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Mapa/Rampa/ColliderRampa
                     f90574c0c620ae24776fc892df6f674b: !ModelComponent
                         Id: c2aabd68-0d0a-4073-8ec8-187707a9e1c4
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Entorno/Rampa/Rampa
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa/Rampa
                         Materials: {}
         -   Entity:
                 Id: eb67bfca-42e8-4ce6-8c5d-d9e37bd7f436
@@ -7965,7 +7967,7 @@ Hierarchy:
                         Id: 0d043740-baf2-4744-bae0-4b0013d046db
                         Model: 5b896984-0486-4a70-abf8-1a52f64f29a7:Modelos/Entorno/Llave/Llave
                         Materials:
-                            790347199cd46b2dc25cec73548ae265~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/LlaveAzul
+                            790347199cd46b2dc25cec73548ae265~0: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/Llaves/LlaveAzul
             Base:
                 BasePartAsset: "f104c990-42cd-4a37-ac04-9c9181fbe8ed:Prefabs/EntornoDinámico/Llave (Azul)"
                 BasePartId: 0ab9e326-c37c-4666-aaa8-5d30bfd12c45
@@ -8000,7 +8002,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 8634173c-9181-4e1a-9349-56728402efbd
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Pared
                         Materials: {}
         -   Folder: MuestraEnemigos
             Entity:
@@ -8106,7 +8108,7 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: bfce63cf-f011-49e7-8407-0ef152133901
                         Enabled*: true
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Entorno/Cubo/Cubo
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials: {}
             Base:
                 BasePartAsset: "d5058dbe-b40f-4ad7-b603-b31e795ab1f4:Prefabs/EntornoDinámico/Secreto"
@@ -8324,7 +8326,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: d3d64e94-1b92-4b0c-8537-338ffeee3c13
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Entorno/Pared/Pared
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Pared
                         Materials: {}
         -   Entity:
                 Id: ff5480c7-125b-4faf-a925-a78b68f1b73b

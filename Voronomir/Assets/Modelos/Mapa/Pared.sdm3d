@@ -9,7 +9,7 @@ Materials:
     faa9870137c71019549977f67bfded5c:
         Name: Material
         MaterialInstance:
-            Material: a74e9499-aeb8-4eb6-9dcb-3013ae429bc1:Materiales/Pared
+            Material: a74e9499-aeb8-4eb6-9dcb-3013ae429bc1:Materiales/Mapa/Pared
 DeduplicateMaterials: false
 Modifiers: {}
 ~SourceHashes:
