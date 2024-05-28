@@ -41,26 +41,26 @@ Defaults:
             MaxDetailSamplingError: 1.0
         Groups:
             -   Id: f7c234c3-3455-450e-b84f-57871a7dd59b
-                Name: Terrestre
+                Name: Normal
                 AgentSettings:
                     Height: 2.0
                     MaxClimb: 0.25
                     MaxSlope: {Radians: 0.7853982}
                     Radius: 0.5
             -   Id: 2bdbfe22-c886-4059-a832-34043684b804
+                Name: Grande
+                AgentSettings:
+                    Height: 1.0
+                    MaxClimb: 0.5
+                    MaxSlope: {Radians: 1.7453293}
+                    Radius: 0.5
+            -   Id: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                 Name: Aereo
                 AgentSettings:
                     Height: 2.0
                     MaxClimb: 0.5
                     MaxSlope: {Radians: 1.7453293}
                     Radius: 0.1
-            -   Id: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
-                Name: TodoTerreno
-                AgentSettings:
-                    Height: 1.0
-                    MaxClimb: 0.5
-                    MaxSlope: {Radians: 1.7453293}
-                    Radius: 0.5
 Overrides: []
 PlatformFilters:
     - PowerVR SGX 54[0-9]

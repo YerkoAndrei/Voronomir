@@ -2,7 +2,7 @@
 Id: 0c863a7d-a283-4c02-932b-09cd96f2dd6b
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Scene: d96f9ef1-9ebb-4fd3-a140-1cacde38458e:Escenas/Demo
+Scene: d96f9ef1-9ebb-4fd3-a140-1cacde38458e:Escenas/Pruebas
 IncludedCollisionGroups: StaticFilter
 BuildSettings:
     CellHeight: 0.01

@@ -282,7 +282,7 @@ Hierarchy:
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 2fbc4d09-b1c3-4018-9614-373a2aa5121f
                         NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
-                        GroupId: 2bdbfe22-c886-4059-a832-34043684b804
+                        GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 811056ab-1710-41bc-ba2d-c858926a13b7
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
