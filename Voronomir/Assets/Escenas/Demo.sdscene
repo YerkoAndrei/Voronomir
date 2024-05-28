@@ -1419,7 +1419,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 57e78331-6f6b-4804-b491-39533061c5e7
-                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        NavigationMesh: null
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 808b1d34-c9fc-4e4c-8ca1-e8ba38829f82
@@ -2984,7 +2984,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 1fb03700-e34f-4817-8de7-d0a14f911642
-                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        NavigationMesh: null
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 1e41f1ef-05fd-40d2-8527-a388041d2b0b
@@ -3362,7 +3362,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 1832e4d0-eed3-4606-8aad-94a2e75c38f2
-                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        NavigationMesh: null
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: a4274099-6b7f-4e97-8793-42b82c8c9917
@@ -3579,6 +3579,7 @@ Hierarchy:
                         Priority: -1
                         escena: demo
                         siguienteEscena: demo
+                        "navegación": "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                     7107c19923448b964ecd9d41fe2771bf: !TransformComponent
                         Id: 2215b433-55e8-46aa-ab3b-9409b8265d65
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}

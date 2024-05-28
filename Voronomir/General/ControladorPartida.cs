@@ -1,6 +1,7 @@
-﻿using Stride.Core.Mathematics;
+﻿using System.Linq;
+using Stride.Core.Mathematics;
+using Stride.Navigation;
 using Stride.Engine;
-using System.Linq;
 
 namespace Voronomir;
 using static Utilidades;
@@ -10,6 +11,8 @@ public class ControladorPartida : SyncScript
 {
     public Escenas escena;
     public Escenas siguienteEscena;
+
+    public NavigationMesh navegación;
 
     private static Escenas _escena;
     private static Escenas _siguienteEscena;
@@ -51,6 +54,13 @@ public class ControladorPartida : SyncScript
         // Activadores
         activadoresMuerte = Entity.Scene.Entities.Where(o => o.Get<ControladorActivadorMuerte>() != null)
                                                  .Select(o => o.Get<ControladorActivadorMuerte>()).ToArray();
+
+        // Navegables
+        var navegables = Entity.Scene.Entities.Where(o => o.Get<NavigationComponent>() != null).ToArray();
+        foreach (var navegable in navegables)
+        {
+            navegable.Get<NavigationComponent>().NavigationMesh = navegación;
+        }
 
         // Sonidos
         var entidadesSonido = Entity.Scene.Entities.Where(o => o.Get<ElementoEfecto>() != null || 

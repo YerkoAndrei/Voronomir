@@ -1346,7 +1346,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: e8d2af2e-8aa0-4b34-98f2-95932aed2a7d
-                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        NavigationMesh: null
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 38fc10a2-2f72-4b6d-897f-71702408528a
@@ -2915,7 +2915,7 @@ Hierarchy:
                         Id: 793b2b89-b832-4bfd-86d9-142f4726379f
                         Position: {X: 0.0, Y: 0.0, Z: -6.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 0.5, Z: 1.0}
+                        Scale: {X: 1.0, Y: 0.33, Z: 1.0}
                         Children: {}
                     fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
                         Id: 9a2867f6-3a48-4984-a75c-bcb818f13b34
@@ -4507,7 +4507,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.2, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 31dd843e-fbae-4fab-94b1-ad0e28f8f5a6
-                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        NavigationMesh: null
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 3f39c2c2-97ce-4706-9426-a559d88c62b0
@@ -4972,7 +4972,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: ba6b4e77-f736-4b70-855f-1c9319283534
-                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        NavigationMesh: null
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 11198ca9-2dfd-4a6c-aed4-21da1f414109
@@ -5180,7 +5180,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: d5969228-23b9-43e3-9d22-5c5148ef02e8
-                        NavigationMesh: "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
+                        NavigationMesh: null
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 7b50492f-3dbf-494b-bf0d-f896be3322cf
@@ -7261,6 +7261,7 @@ Hierarchy:
                         Priority: -1
                         escena: demo
                         siguienteEscena: demo
+                        "navegación": "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
                     7107c19923448b964ecd9d41fe2771bf: !TransformComponent
                         Id: d22b2c10-5f6a-4267-ae92-9812dfaf0ed5
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}

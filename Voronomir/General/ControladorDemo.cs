@@ -2,6 +2,7 @@
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Input;
+using Stride.Navigation;
 
 namespace Voronomir;
 using static Utilidades;
@@ -101,6 +102,7 @@ public class ControladorDemo : AsyncScript
             posiciónActual = 0;
 
         entidad.Transform.Position = posiciones[posiciónActual];
+        entidad.Get<NavigationComponent>().NavigationMesh = Entity.Get<ControladorPartida>().navegación;
         Entity.Scene.Entities.Add(entidad);
         Activar(entidad);
     }
