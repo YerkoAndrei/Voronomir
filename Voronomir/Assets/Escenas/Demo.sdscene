@@ -72,8 +72,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 1debe2b4-394f-4d05-8199-f0db763a1087
@@ -104,8 +104,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 2159935a-c09c-48aa-9e9b-57a2775e2451
@@ -626,8 +626,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 5f994bdd-bf42-4951-aa89-12cf9a7b1c36
@@ -865,8 +865,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 97f85667-2a91-4e98-845d-19457dad0d4e
@@ -920,13 +920,13 @@ Hierarchy:
                 Components:
                     6d8bcecd738075517046081af5f60aa5: !TransformComponent
                         Id: 1c79f734-6c65-43aa-adf9-5adcb398b73d
-                        Position: {X: 0.0, Y: 2.0, Z: 30.0}
+                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     8da989470e5d3482f6697c8ae7b8694b: !Stride.Navigation.NavigationBoundingBoxComponent,Stride.Navigation
                         Id: 702cc5cc-b8ea-459b-8e4f-66e1cdc93576
-                        Size: {X: 20.0, Y: 4.0, Z: 20.0}
+                        Size: {X: 50.0, Y: 4.0, Z: 50.0}
         -   Entity:
                 Id: 4001d4b4-874b-4a9e-b041-e52965e3e3e5
                 Name: Ojo
@@ -1007,8 +1007,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 6b928ba6-55bc-42fa-82b6-b64c2e3e67ce
@@ -1143,8 +1143,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 875e8a5c-7772-4ffe-a4fe-ba68658c25db
@@ -1189,11 +1189,8 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                            5162de0d97dbdbdc66e20cff891c2661: !StaticMeshColliderShapeDesc
+                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
                     ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
                         Id: 252a985f-5b53-408f-ab56-4f2c8159101f
                         Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
@@ -1251,8 +1248,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 94a8b12d-38c4-4ec2-bf87-5a8ed3d10ff7
@@ -1554,8 +1551,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 539e4437-0ed7-4ea1-9472-00ed99d2ec47
@@ -2079,8 +2076,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: d575954e-d50e-4c23-82e3-664c2ac05694
@@ -2320,8 +2317,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 909b2075-7db6-4473-b36d-cda87189c75c
@@ -2520,8 +2517,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: c5b06efd-779c-4663-a0b5-e47e41cbf2f9
@@ -2744,8 +2741,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: dcd9db1c-14b4-4067-95a7-a447b21a57f3
@@ -2952,8 +2949,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: e2ea6be3-5d97-4e3b-8b2d-32af1c909f85
@@ -3186,8 +3183,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 667315a7-c27e-40fc-a227-cf0680a9613b
@@ -3246,8 +3243,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 6b5f7722-db53-44fd-9396-e2989710cb71
@@ -3298,8 +3295,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 47d37e8a-1277-4d8b-8ee7-7b55fac08d42
@@ -3330,8 +3327,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 938e8cca-abac-4e02-994c-177039000567
@@ -4000,8 +3997,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 839e784f-3848-43b2-8acc-a246f78a4d0b
@@ -4090,8 +4087,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 5f9e8e08-949b-4995-a71e-84c1ae146c8b

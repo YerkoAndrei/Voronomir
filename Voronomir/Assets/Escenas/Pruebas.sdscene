@@ -705,8 +705,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 2a9d6341-775d-4527-8727-0ddaee4913ca
@@ -2501,8 +2501,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 6d59886f-c4a5-4069-96d6-9485b7858054
@@ -2931,8 +2931,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: b0e5187c-fc2b-42f0-a0e1-580deee1c4c3
@@ -6693,8 +6693,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 69b7da8b-7831-48e0-a3b9-09d56c043f51
@@ -8180,8 +8180,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 8634173c-9181-4e1a-9349-56728402efbd
@@ -8533,8 +8533,8 @@ Hierarchy:
                         ColliderShapes:
                             c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: d3d64e94-1b92-4b0c-8537-338ffeee3c13
