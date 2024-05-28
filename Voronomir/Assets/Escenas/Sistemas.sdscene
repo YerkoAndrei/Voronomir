@@ -62,7 +62,7 @@ Hierarchy:
                         Id: 96903a2a-e245-43e8-9b6e-08fe6696783a
                         Priority: 10
                         "escenaMenú": "96aa054d-54af-441d-ace7-62be2c4ea9fd:Escenas/Menú"
-                        escenaDemo: d96f9ef1-9ebb-4fd3-a140-1cacde38458e:Escenas/Demo
+                        escenaDemo: 49fc81ee-27a7-4647-975a-4eef6648b45a:Escenas/Demo
                         compositorBajo: f79cc65d-776c-4d5f-9cf3-d8b624b65593:GraphicsCompositor (Bajo)
                         compositorMedio: 30c63a5c-58b8-4fb8-b31c-15bbd5213e83:GraphicsCompositor (Medio)
                         compositorAlto: 0bae112a-61a6-4ee8-aae1-357a7cb70d8f:GraphicsCompositor (Alto)
