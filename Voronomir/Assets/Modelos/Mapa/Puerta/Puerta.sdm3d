@@ -9,11 +9,11 @@ Materials:
     6dbd936a01e29eca00048c9ec648b500:
         Name: Puerta
         MaterialInstance:
-            Material: f6b3451b-553a-41d6-864c-aca541fa094f:Modelos/Entorno/Puerta/Materiales/Puerta
+            Material: f6b3451b-553a-41d6-864c-aca541fa094f:Modelos/Mapa/Puerta/Materiales/Puerta
     908af2f092532fbd79ba2eaa0a14aa18:
         Name: Llave
         MaterialInstance:
-            Material: "b7e056c4-b8af-47da-855f-2941d34898ee:Materiales/Botón"
+            Material: b7e056c4-b8af-47da-855f-2941d34898ee:Materiales/Mapa/Llave
 Modifiers: {}
 ~SourceHashes:
     1d2646f431dd74fe41676589c396d533~Puerta.glb: 8baae058cd723981731e49f69a2c136e

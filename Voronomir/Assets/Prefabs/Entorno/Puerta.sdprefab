@@ -98,5 +98,5 @@ Hierarchy:
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 5126a893-7e55-4e6d-8e05-82bd8b7cce9c
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Entorno/Puerta/Puerta
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Mapa/Puerta/Puerta
                         Materials: {}
