@@ -732,10 +732,10 @@ Hierarchy:
                         CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.0
+                        Friction: 0.5
                         RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
+                        CcdMotionThreshold: 0.4
+                        CcdSweptSphereRadius: 0.4
                         StepHeight: 0.2
                         FallSpeed: 20.0
                         MaxSlope: {Radians: 0.7853982}

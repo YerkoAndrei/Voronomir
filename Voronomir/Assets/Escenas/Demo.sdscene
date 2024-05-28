@@ -1756,7 +1756,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: c366a528-ada9-4cfb-aefc-96c04e7659d2
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position*: {X: 0.0, Y: 0.0, Z: 27.318129}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 2.0, Y: 0.2, Z: 2.0}
                         Children:
@@ -3652,10 +3652,10 @@ Hierarchy:
                         CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.0
+                        Friction: 0.5
                         RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
+                        CcdMotionThreshold: 0.4
+                        CcdSweptSphereRadius: 0.4
                         StepHeight: 0.2
                         FallSpeed: 20.0
                         MaxSlope: {Radians: 0.7853982}
@@ -4038,8 +4038,8 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !ColliderShapeAssetDesc
-                                Shape: b48c7cf8-b128-4917-87c0-d82f59036858:Modelos/Mapa/Portal/Collider Portal
+                            c47d80fa5e0dafee947938913d83735e: !StaticMeshColliderShapeDesc
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                     22b9cf0a71651d17ea10360ac272fa31: !TransformComponent
                         Id: 416f6b22-c55d-4fde-bdd5-58278d192bf4
                         Position: {X: 0.0, Y: 0.0, Z: 38.0}
@@ -4048,7 +4048,7 @@ Hierarchy:
                         Children: {}
                     5971d764244d6e032eec69e3f7e3b822: !ModelComponent
                         Id: d0b69ec3-ebcb-4db8-8289-633133c01374
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                         Materials: {}
         -   Entity:
                 Id: f8156fef-0926-4ef9-bf8b-745486454c0b

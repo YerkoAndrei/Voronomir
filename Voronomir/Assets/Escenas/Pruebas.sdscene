@@ -331,8 +331,14 @@ Hierarchy:
                 Id: 086c28df-953a-424e-884d-fa244f3dbda4
                 Name: Portal (Amarillo)
                 Components:
-                    d5f138d1702fd046726e4e81653c9dd1: !StaticColliderComponent
-                        Id: 0a58e181-5303-4dd2-baa2-3bf1a5f2ce01
+                    94b8b830efd461e50b6673d2e53902ad: !TransformComponent
+                        Id: 95497c19-472b-466b-bae9-df0a236e8191
+                        Position: {X: 19.5, Y: 0.0, Z: 17.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5f1b59370d4d373297c9582211482e35: !StaticColliderComponent
+                        Id: 761f4387-d87e-40fe-9bde-dafff37ec3c1
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -343,19 +349,13 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !ColliderShapeAssetDesc
-                                Shape: null
-                    94b8b830efd461e50b6673d2e53902ad: !TransformComponent
-                        Id: 95497c19-472b-466b-bae9-df0a236e8191
-                        Position: {X: 19.5, Y: 0.0, Z: 17.0}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
-                        Id: 93eb3b1e-4390-4249-bfc4-30148291df62
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                            707e8f5247ceb9020a56a54259f7931d: !StaticMeshColliderShapeDesc
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                    9b761e99e862b88a0b1ce25463b9ee82: !ModelComponent
+                        Id: fd545d80-a711-4753-b427-88ec14c617ad
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                         Materials:
-                            5a283079726e59fdfd613a9b4645a11d~1: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/Llaves/LlaveAmarilla
+                            619c2e9bbbf2c2460de49e945399b39f~1: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/Llaves/LlaveAmarilla
         -   Folder: null
             Entity:
                 Id: 089e6c39-a3da-443c-97d7-437659f63eff
@@ -445,11 +445,11 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !ColliderShapeAssetDesc
-                                Shape: null
+                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !StaticMeshColliderShapeDesc
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                     8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
                         Id: 37dd92f5-eb34-4e6c-9929-3e3c25bb5148
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                         Materials: {}
         -   Folder: Puertas
             Entity:
@@ -1249,10 +1249,10 @@ Hierarchy:
                         CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.0
+                        Friction: 0.5
                         RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
+                        CcdMotionThreshold: 0.4
+                        CcdSweptSphereRadius: 0.4
                         StepHeight: 0.2
                         FallSpeed: 20.0
                         MaxSlope: {Radians: 0.7853982}
@@ -3108,11 +3108,11 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !ColliderShapeAssetDesc
-                                Shape: null
+                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !StaticMeshColliderShapeDesc
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                     8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
                         Id: bcf2a976-dfaa-4783-9ff4-a2f829febe09
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                         Materials: {}
         -   Folder: Entorno
             Entity:
@@ -5643,11 +5643,11 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            cbf9f2e68f706f746ff54d67277aa5c0: !ColliderShapeAssetDesc
-                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Mapa/Rampa/ColliderRampa
+                            cbf9f2e68f706f746ff54d67277aa5c0: !StaticMeshColliderShapeDesc
+                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
                     f90574c0c620ae24776fc892df6f674b: !ModelComponent
                         Id: c1acaa60-0d98-4788-9819-0d8e661bd257
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa/Rampa
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
                         Materials: {}
         -   Entity:
                 Id: a6aae518-5bc4-4527-9995-349e89047d9d
@@ -6010,11 +6010,11 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !ColliderShapeAssetDesc
-                                Shape: null
+                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !StaticMeshColliderShapeDesc
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                     8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
                         Id: 4fc5ca8f-aa24-4f3a-9a21-5ea5b5399c28
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                         Materials:
                             3b51b2fae72852cc695fbe30b858ec6f~1: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/Llaves/LlaveRoja
         -   Folder: null
@@ -6059,11 +6059,11 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !ColliderShapeAssetDesc
-                                Shape: null
+                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !StaticMeshColliderShapeDesc
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                     8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
                         Id: 198920f2-11a5-456e-a30f-bf362006683b
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                         Materials: {}
         -   Folder: null
             Entity:
@@ -6626,11 +6626,11 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            cbf9f2e68f706f746ff54d67277aa5c0: !ColliderShapeAssetDesc
-                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Mapa/Rampa/ColliderRampa
+                            cbf9f2e68f706f746ff54d67277aa5c0: !StaticMeshColliderShapeDesc
+                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
                     f90574c0c620ae24776fc892df6f674b: !ModelComponent
                         Id: 1c02d769-8a36-4101-9f66-3c9cd3a1eed4
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa/Rampa
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
                         Materials: {}
         -   Entity:
                 Id: cb74dedf-a315-4eb5-a0b0-bf447505f378
@@ -6723,11 +6723,11 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            cbf9f2e68f706f746ff54d67277aa5c0: !ColliderShapeAssetDesc
-                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Mapa/Rampa/ColliderRampa
+                            cbf9f2e68f706f746ff54d67277aa5c0: !StaticMeshColliderShapeDesc
+                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
                     f90574c0c620ae24776fc892df6f674b: !ModelComponent
                         Id: 7d390dfb-0a6c-4761-b02c-dea26e55e5cb
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa/Rampa
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
                         Materials: {}
         -   Folder: null
             Entity:
@@ -7630,11 +7630,11 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !ColliderShapeAssetDesc
-                                Shape: null
+                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !StaticMeshColliderShapeDesc
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                     8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
                         Id: b47da367-bbe6-45b7-af74-3c5d349998c4
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                         Materials: {}
         -   Entity:
                 Id: e4460d8a-feac-4c9a-86ba-4bd7bfa4ff48
@@ -8130,11 +8130,11 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            cbf9f2e68f706f746ff54d67277aa5c0: !ColliderShapeAssetDesc
-                                Shape: 945dc37e-04e8-4064-9615-aef37adf5bb0:Modelos/Mapa/Rampa/ColliderRampa
+                            cbf9f2e68f706f746ff54d67277aa5c0: !StaticMeshColliderShapeDesc
+                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
                     f90574c0c620ae24776fc892df6f674b: !ModelComponent
                         Id: c2aabd68-0d0a-4073-8ec8-187707a9e1c4
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa/Rampa
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
                         Materials: {}
         -   Entity:
                 Id: eb67bfca-42e8-4ce6-8c5d-d9e37bd7f436
@@ -8283,11 +8283,11 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !ColliderShapeAssetDesc
-                                Shape: null
+                            8d8a05181e5a8cd0c7881d9a2e2a0ada: !StaticMeshColliderShapeDesc
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                     8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
                         Id: 3c071f90-ee01-4d29-b687-29dc93b39341
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                         Materials: {}
         -   Folder: null
             Entity:
