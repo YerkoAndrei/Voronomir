@@ -3,5 +3,19 @@ Id: b48c7cf8-b128-4917-87c0-d82f59036858
 SerializedVersion: {Stride: 3.0.0.0}
 Tags: []
 ColliderShapes:
-    2462d79959f99159f8ed1425435c0be5: !StaticMeshColliderShapeDesc
+    2462d79959f99159f8ed1425435c0be5: !ConvexHullColliderShapeDesc
+        ConvexHulls: null
+        ConvexHullsIndices: null
         Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        Scaling: {X: 1.0, Y: 1.0, Z: 1.0}
+        Decomposition:
+            Depth: 2
+            PosSampling: 2
+            AngleSampling: 1
+            PosRefine: 5
+            AngleRefine: 5
+            Alpha: 0.01
+            Threshold: 0.01
+            Enabled: true
