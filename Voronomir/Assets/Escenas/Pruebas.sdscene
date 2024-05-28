@@ -68,6 +68,13 @@ Hierarchy:
         - ref!! a5ef5d26-a4e4-4579-a735-cfe119a49697
         - ref!! cda6bc12-083f-436a-b677-15c45e1b7f8b
         - ref!! 5a803b1f-63e9-45ec-a338-c495dd075143
+        - ref!! 06d7322e-eb71-4f7f-9afa-ce8fad6ef109
+        - ref!! 23e99d99-2342-4947-beac-9f17183b14d7
+        - ref!! dab72f8e-51f1-4957-a8c4-1fd880d48f06
+        - ref!! 19fadc9c-a891-4373-a882-64c0df3f1220
+        - ref!! 2d107242-9095-4af8-89fa-21a1bf8e9d45
+        - ref!! 83b547a0-111f-4679-8056-2c5efc4a9cca
+        - ref!! 1ea13716-50ce-4c6f-baee-4dad08cd1172
     Parts:
         -   Folder: MuestraEnemigos
             Entity:
@@ -263,6 +270,36 @@ Hierarchy:
                 BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Enemigos/Dron
                 BasePartId: 14704f74-1305-4b96-b835-9d409173d13d
                 InstanceId: 0099e264-d3bb-4e4a-9d61-761cd03349de
+        -   Folder: Mapa/Portales
+            Entity:
+                Id: 06d7322e-eb71-4f7f-9afa-ce8fad6ef109
+                Name: Portal (Amarillo)
+                Components:
+                    d3696d522a67a2423dd0b1fd60eb61fd: !StaticColliderComponent
+                        Id: 264b3f48-8573-4aa3-a154-66f1f258911b
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            b3d5a13854f43f42146354a223a62585: !ColliderShapeAssetDesc
+                                Shape: b48c7cf8-b128-4917-87c0-d82f59036858:Modelos/Mapa/Portal/Collider Portal
+                    a15a3d4654b59e34e387edd4c9914e7d: !TransformComponent
+                        Id: b3ad8bb8-805a-4c6f-a2b7-ae2a46105810
+                        Position: {X: 19.5, Y: 0.0, Z: 17.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    31cedc107f79dc3a2525fadd08139e93: !ModelComponent
+                        Id: f7d25420-5aba-4f10-8ac1-2d19c0bb44cc
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Materials:
+                            ea73d48c15033968e24dd118bd59484e~1: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/Llaves/LlaveAmarilla
         -   Folder: null
             Entity:
                 Id: 0741208b-13bd-45f9-8946-b289c1fbc760
@@ -681,6 +718,35 @@ Hierarchy:
                 BasePartAsset: ba20a406-510b-45d3-8837-e5839f7f9e4e:Prefabs/Entorno/Fin
                 BasePartId: ffaf0f04-a1a7-474a-8e05-7f0c7c41f485
                 InstanceId: bc71f645-4720-4972-8946-16796ac03b3f
+        -   Folder: Mapa/Portales
+            Entity:
+                Id: 19fadc9c-a891-4373-a882-64c0df3f1220
+                Name: Portal
+                Components:
+                    d3696d522a67a2423dd0b1fd60eb61fd: !StaticColliderComponent
+                        Id: 939147c3-908d-49c3-9cd8-82abb94d05cb
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            b3d5a13854f43f42146354a223a62585: !ColliderShapeAssetDesc
+                                Shape: b48c7cf8-b128-4917-87c0-d82f59036858:Modelos/Mapa/Portal/Collider Portal
+                    a15a3d4654b59e34e387edd4c9914e7d: !TransformComponent
+                        Id: 4eead4ee-df11-4b4a-96e4-9ca0a143a559
+                        Position: {X: 19.5, Y: 0.0, Z: 5.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    31cedc107f79dc3a2525fadd08139e93: !ModelComponent
+                        Id: 71bc1fe4-4754-4174-8606-cd906662ffb4
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Materials: {}
         -   Folder: Puertas
             Entity:
                 Id: 1c5b8264-fc04-451d-9c17-7124db1caf80
@@ -899,6 +965,35 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 62a7baa8-3145-43f2-9629-a24f718c9fe0
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Folder: Mapa/Portales
+            Entity:
+                Id: 1ea13716-50ce-4c6f-baee-4dad08cd1172
+                Name: Portal
+                Components:
+                    d3696d522a67a2423dd0b1fd60eb61fd: !StaticColliderComponent
+                        Id: 4848c21e-a9dc-4adf-9c19-44a6cc5d3e73
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            b3d5a13854f43f42146354a223a62585: !ColliderShapeAssetDesc
+                                Shape: b48c7cf8-b128-4917-87c0-d82f59036858:Modelos/Mapa/Portal/Collider Portal
+                    a15a3d4654b59e34e387edd4c9914e7d: !TransformComponent
+                        Id: 9b7edae0-a043-4544-8d93-89f05ce9a2f3
+                        Position: {X: 19.5, Y: 0.0, Z: -16.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    31cedc107f79dc3a2525fadd08139e93: !ModelComponent
+                        Id: 2e566bda-9f1c-422c-af82-a3c5408cb3fa
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 1eade4e7-35cb-4b8f-886f-9b7bd17f6e00
@@ -955,6 +1050,36 @@ Hierarchy:
                 BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
                 BasePartId: 5eccdee2-ce1a-41cc-aac6-c215de42cbdf
                 InstanceId: 3931e930-5cbb-4c62-86bc-cc35d97804f7
+        -   Folder: Mapa/Portales
+            Entity:
+                Id: 23e99d99-2342-4947-beac-9f17183b14d7
+                Name: Portal (Rojo)
+                Components:
+                    d3696d522a67a2423dd0b1fd60eb61fd: !StaticColliderComponent
+                        Id: 9da275c0-208b-4faf-9484-c670902cd4bf
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            b3d5a13854f43f42146354a223a62585: !ColliderShapeAssetDesc
+                                Shape: b48c7cf8-b128-4917-87c0-d82f59036858:Modelos/Mapa/Portal/Collider Portal
+                    a15a3d4654b59e34e387edd4c9914e7d: !TransformComponent
+                        Id: 82f5670a-7c2c-4c8b-8d74-20133f079c44
+                        Position: {X: 19.5, Y: 0.0, Z: 13.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    31cedc107f79dc3a2525fadd08139e93: !ModelComponent
+                        Id: 7659b5bd-88a8-4c50-836b-027ed6954377
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Materials:
+                            8e8a63ad7f29c81da35ea8bc05af2d41~1: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/Llaves/LlaveRoja
         -   Folder: null
             Entity:
                 Id: 24db3f26-7269-47e6-b926-c9753227d15d
@@ -1569,6 +1694,35 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: fd468b26-6c42-4010-8266-2ec5a5170898
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
+        -   Folder: Mapa/Portales
+            Entity:
+                Id: 2d107242-9095-4af8-89fa-21a1bf8e9d45
+                Name: Portal
+                Components:
+                    d3696d522a67a2423dd0b1fd60eb61fd: !StaticColliderComponent
+                        Id: f0dcc5d2-a756-490c-a38c-bb7072433dc3
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            b3d5a13854f43f42146354a223a62585: !ColliderShapeAssetDesc
+                                Shape: b48c7cf8-b128-4917-87c0-d82f59036858:Modelos/Mapa/Portal/Collider Portal
+                    a15a3d4654b59e34e387edd4c9914e7d: !TransformComponent
+                        Id: 77003c1e-a695-4492-8c07-c9ed0d45e114
+                        Position: {X: 19.5, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    31cedc107f79dc3a2525fadd08139e93: !ModelComponent
+                        Id: fac87065-e4c1-4527-9c20-38778fbfeae3
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Materials: {}
         -   Folder: Puertas
             Entity:
                 Id: 2d1d60ef-4177-4807-8d97-77ab67d3dc09
@@ -1617,7 +1771,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 644156b2-19ad-4852-881a-5a7959f227d6
-                        Position*: {X: 19.5, Y: 4.0, Z: -2.5}
+                        Position*: {X: 19.5, Y: 4.0, Z: -3}
                         Rotation*: {X: 0.0, Y: 0.0, Z: 0.70710677, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4385,6 +4539,35 @@ Hierarchy:
                 BasePartAsset: 64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/Entorno/Poder (Invulnerabilidad)
                 BasePartId: 366beae1-dd19-431b-a98c-ea330fda3824
                 InstanceId: 938b33c4-b6af-4165-953d-b183bb31a5c8
+        -   Folder: Mapa/Portales
+            Entity:
+                Id: 83b547a0-111f-4679-8056-2c5efc4a9cca
+                Name: Portal
+                Components:
+                    d3696d522a67a2423dd0b1fd60eb61fd: !StaticColliderComponent
+                        Id: e3985d1d-5cbe-4bba-b79c-e0c618bc7d79
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            b3d5a13854f43f42146354a223a62585: !ColliderShapeAssetDesc
+                                Shape: b48c7cf8-b128-4917-87c0-d82f59036858:Modelos/Mapa/Portal/Collider Portal
+                    a15a3d4654b59e34e387edd4c9914e7d: !TransformComponent
+                        Id: a72172a0-1593-4db7-a94b-d3892170ea51
+                        Position: {X: 19.5, Y: 0.0, Z: -8.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    31cedc107f79dc3a2525fadd08139e93: !ModelComponent
+                        Id: 584c9843-25fe-43c9-b62c-d15da52657db
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Materials: {}
         -   Folder: Grupo01
             Entity:
                 Id: 8453a3e0-4d61-4f66-950c-12fa89c30bac
@@ -7232,6 +7415,36 @@ Hierarchy:
                 BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Nada)"
                 BasePartId: ef75cf51-4305-4d0f-b9ea-22eb5c6a1996
                 InstanceId: 788b978f-4a7b-45e3-9237-0934adea20a7
+        -   Folder: Mapa/Portales
+            Entity:
+                Id: dab72f8e-51f1-4957-a8c4-1fd880d48f06
+                Name: Portal (Azul)
+                Components:
+                    d3696d522a67a2423dd0b1fd60eb61fd: !StaticColliderComponent
+                        Id: 9835448b-7a5c-4a5f-865e-0914c1147c15
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            b3d5a13854f43f42146354a223a62585: !ColliderShapeAssetDesc
+                                Shape: b48c7cf8-b128-4917-87c0-d82f59036858:Modelos/Mapa/Portal/Collider Portal
+                    a15a3d4654b59e34e387edd4c9914e7d: !TransformComponent
+                        Id: 08d6ec35-0203-43a3-92c1-ad9d9e80500d
+                        Position: {X: 19.5, Y: 0.0, Z: 9.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    31cedc107f79dc3a2525fadd08139e93: !ModelComponent
+                        Id: 0df424b9-0804-446f-ac1a-f548ae4f41fc
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
+                        Materials:
+                            4c10005c0bb2291c2b5156e9fbc86c17~1: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/Llaves/LlaveAzul
         -   Folder: null
             Entity:
                 Id: db4dc5af-fe78-49b6-b6bd-415ce3dd1a93
@@ -7281,7 +7494,7 @@ Hierarchy:
                     e35a58dffbc4aadd5823f57ed881d54d: !TransformComponent
                         Id: 8578baa7-5062-4910-a926-cef5af77092b
                         Position: {X: 0.0, Y: 5.0, Z: 0.0}
-                        Rotation: {X: 1.4950174E-08, Y: 0.9396926, Z: 0.34202012, W: -4.1075268E-08}
+                        Rotation: {X: -0.02980904, Y: -0.9361168, Z: -0.34071866, W: 0.081899665}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     34c340859588b2f35c268a68055cc5d9: !LightComponent
