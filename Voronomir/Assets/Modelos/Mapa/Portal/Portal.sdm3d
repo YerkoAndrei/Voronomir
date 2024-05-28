@@ -1,0 +1,19 @@
+!Model
+Id: da35d8bb-f91a-48e1-bfce-5ffe7022a088
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Portal.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    8f57cf5641b2a006d3c1aa35368b8252:
+        Name: Portal
+        MaterialInstance:
+            Material: a74e9499-aeb8-4eb6-9dcb-3013ae429bc1:Materiales/Mapa/Muro
+    0564d9ef888639d81edd26fc051d0f3c:
+        Name: Llave
+        MaterialInstance:
+            Material: b7e056c4-b8af-47da-855f-2941d34898ee:Materiales/Mapa/Llave
+Modifiers: {}
+~SourceHashes:
+    61ab9219f0112159abb900f60af0b4b4~Portal.glb: 8ebb1d83efc209d9f0a3e3b1ffbcb834

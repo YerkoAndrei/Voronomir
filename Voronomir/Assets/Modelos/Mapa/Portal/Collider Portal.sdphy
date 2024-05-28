@@ -1,0 +1,7 @@
+!ColliderShapeAsset
+Id: b48c7cf8-b128-4917-87c0-d82f59036858
+SerializedVersion: {Stride: 3.0.0.0}
+Tags: []
+ColliderShapes:
+    2462d79959f99159f8ed1425435c0be5: !StaticMeshColliderShapeDesc
+        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal/Portal
