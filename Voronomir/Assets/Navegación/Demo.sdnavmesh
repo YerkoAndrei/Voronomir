@@ -3,7 +3,7 @@ Id: c1d1bbb1-b129-4ec6-a43d-fe73b844b38f
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Scene: 49fc81ee-27a7-4647-975a-4eef6648b45a:Escenas/Demo
-IncludedCollisionGroups: AllFilter
+IncludedCollisionGroups: StaticFilter, SensorTrigger
 BuildSettings:
     CellHeight: 0.01
     CellSize: 0.1

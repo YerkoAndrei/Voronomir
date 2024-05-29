@@ -216,7 +216,7 @@ Hierarchy:
                 Components:
                     44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
                         Id: c2c52350-cd0f-47c7-839e-8b718916c74a
-                        CollisionGroup: StaticFilter
+                        CollisionGroup: KinematicFilter
                         CanCollideWith: KinematicFilter, DebrisFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
