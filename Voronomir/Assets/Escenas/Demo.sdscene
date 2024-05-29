@@ -30,6 +30,7 @@ Hierarchy:
         - ref!! 4927b9cc-021a-4259-8c03-8aa2bacbcfe4
         - ref!! dc4c51d5-fbc2-40f3-b522-d04f4e68e8c6
         - ref!! c6e4eb8f-8280-4faa-9d6c-5fb037ba06d3
+        - ref!! dc97c5bf-6f1a-4394-947d-2d30dba9ab85
     Parts:
         -   Folder: null
             Entity:
@@ -3583,6 +3584,35 @@ Hierarchy:
                     ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
                         Id: b7478aa2-cea0-4ee0-90a8-d93e9c609c03
                         Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
+        -   Folder: Sala 2/Mapa
+            Entity:
+                Id: dc97c5bf-6f1a-4394-947d-2d30dba9ab85
+                Name: Sala
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: bc2909e1-7ff3-48f1-9b8d-fecfa874a64e
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: 3527461d-c195-4469-b5b2-572b5ae359ee:Modelos/M1E1/Sala2
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 6b623922-15fe-4c46-9428-640f25c45841
+                        Position: {X: 31.0, Y: 2.0, Z: 2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: c17cf563-a4ec-4930-a192-ec660a6316a6
+                        Model: 3527461d-c195-4469-b5b2-572b5ae359ee:Modelos/M1E1/Sala2
                         Materials: {}
         -   Folder: null
             Entity:

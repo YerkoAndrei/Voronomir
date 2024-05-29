@@ -1,23 +1,27 @@
 !Model
-Id: 2240dbb9-9c28-4b17-99ec-f7f1887d9ea8
+Id: 3527461d-c195-4469-b5b2-572b5ae359ee
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Source: !file Sala1.glb
+Source: !file Sala2.glb
 Skeleton: null
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Materials:
-    534d946b1021bb9bbb35078effd697c6:
+    885077a4bdba53664a3ede1facc2fec3:
         Name: Muro
         MaterialInstance:
             Material: a74e9499-aeb8-4eb6-9dcb-3013ae429bc1:Materiales/Mapa/Muro
-    ae59073f23f74d8e07cbfe74e1cea5d1:
+    3e81423c30dc0ab98b6ceae95534779b:
         Name: Piso0
         MaterialInstance:
             Material: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Mapa/Piso0
-    79ebe1ae0944e9803444ab2cba69740c:
+    5a3a54969661b4010b4383d11dcdcb9d:
         Name: Piso1
         MaterialInstance:
             Material: a7da7e5f-ddb1-498c-aeda-8cac30575416:Materiales/Mapa/Piso1
+    4dd1a7047a5f79057cb54ca6b6c00650:
+        Name: Piso2
+        MaterialInstance:
+            Material: 71e6d262-23e0-4535-a7ae-9aff8ad6b8ff:Materiales/Mapa/Piso2
 Modifiers: {}
 ~SourceHashes:
-    4198101db7c50f21edd47e7f810fbd1d~Sala1.glb: 0849f41463497e4fe08bf2593eca06da
+    3e9d6abba3b0695f0b87f7ea64bd1ffa~Sala2.glb: 5ef6fa37367311cd97622e187583dfe9
