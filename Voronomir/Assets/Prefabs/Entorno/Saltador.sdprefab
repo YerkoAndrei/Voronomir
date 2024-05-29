@@ -32,9 +32,9 @@ Hierarchy:
                         IsTrigger: true
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 2.0, Y: 0.5, Z: 2.0}
+                            ea41dc56705b9668e501d93692981896: !CylinderColliderShapeDesc
+                                Height: 0.5
+                                Radius: 1.0
                                 LocalOffset: {X: 0.0, Y: 0.25, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     ae77dc873a2c3c32c294301875605415: !Voronomir.ControladorSaltador,Voronomir.Proyecto

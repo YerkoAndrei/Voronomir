@@ -184,7 +184,8 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 3a600fd6-02b1-408d-9877-607603a44526
                         Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
-                        Materials: {}
+                        Materials:
+                            e4888d76b2e8b7e841c5b13b9a803d82~0: 14a1f75c-a2dd-4ca6-898a-5639d9e6ab04:Materiales/Lava
         -   Entity:
                 Id: d7a4abb5-8b91-4c05-a973-671b9d55674e
                 Name: "Dañador"
