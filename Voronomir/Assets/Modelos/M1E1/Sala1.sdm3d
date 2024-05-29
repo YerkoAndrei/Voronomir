@@ -1,0 +1,23 @@
+!Model
+Id: 2240dbb9-9c28-4b17-99ec-f7f1887d9ea8
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Sala1.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    534d946b1021bb9bbb35078effd697c6:
+        Name: Muro
+        MaterialInstance:
+            Material: a74e9499-aeb8-4eb6-9dcb-3013ae429bc1:Materiales/Mapa/Muro
+    ae59073f23f74d8e07cbfe74e1cea5d1:
+        Name: Piso0
+        MaterialInstance:
+            Material: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Mapa/Piso0
+    79ebe1ae0944e9803444ab2cba69740c:
+        Name: Piso1
+        MaterialInstance:
+            Material: a7da7e5f-ddb1-498c-aeda-8cac30575416:Materiales/Mapa/Piso1
+Modifiers: {}
+~SourceHashes:
+    4198101db7c50f21edd47e7f810fbd1d~Sala1.glb: 93ce7367c3c7afb5cd0a704c6e91d1fd

@@ -1,5 +1,5 @@
 !MaterialAsset
-Id: 2f8770a8-c95d-4c16-bd0b-b6752f240154
+Id: a7da7e5f-ddb1-498c-aeda-8cac30575416
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Attributes:
@@ -8,7 +8,7 @@ Attributes:
             Value: 0.1
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeColor
-            Value: {R: 0.23529412, G: 0.23529412, B: 0.23529412, A: 1.0}
+            Value: {R: 0.15686275, G: 0.15686275, B: 0.15686275, A: 1.0}
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
         MetalnessMap: !ComputeFloat

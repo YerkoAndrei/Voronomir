@@ -19,98 +19,18 @@ Hierarchy:
         - ref!! a0a3909a-d54c-40e3-b579-503534de011b
         - ref!! aff20ceb-9f12-464a-aae0-45f079c64811
         - ref!! 4b666f79-31c0-42bc-9b19-75f8d4384b2a
-        - ref!! 23218ea9-aee4-48f8-aea1-1c32d5ebc5b6
-        - ref!! 9fb8f699-7573-421b-86d7-023abbd35847
-        - ref!! 0e77befa-d5ce-4753-9eac-42e49b7f788b
-        - ref!! f85280f4-ee94-4db6-8068-90f3838dff73
-        - ref!! 483b122c-7301-425c-ab56-0258f417a4a4
+        - ref!! 57d10585-5ec1-4858-a8ca-68efd57c324d
         - ref!! f33d2ea3-2801-4e7b-9be3-053c0fa44bc1
-        - ref!! 4ed534e6-70d4-4a3f-a499-f0968ed4f591
-        - ref!! aeecf132-c75c-457a-951c-88d1a0730898
-        - ref!! 4925dede-76cb-46a0-9fed-ecf23281b01c
-        - ref!! 46005ec1-960d-48e1-b1b7-014843dad6a9
-        - ref!! a480da6c-8923-456f-ab12-59c27ccc8a7e
-        - ref!! 458719e9-1f9c-42ad-b538-747a39836280
-        - ref!! 7b548cba-242f-44fc-b405-90d974fd2954
-        - ref!! aeca637e-7f23-4117-b8e1-3f1d15606194
-        - ref!! a046d3c1-d358-480d-960d-8ba11faed962
-        - ref!! 1cac891d-3f8b-43d1-8272-b93493aa3155
-        - ref!! 937fb249-8d2c-41b1-81ca-97b49590ccf0
         - ref!! a42e39fa-4a38-4d7b-a702-e8908a86bd06
-        - ref!! 647cf18a-857c-4886-b6d9-5a110d00dcd5
-        - ref!! 02712583-24ba-4e9c-a06a-8abe1bb0eca1
-        - ref!! 8afd2a81-e9a9-4a5a-8ebe-a7feb01a92fc
-        - ref!! de5b17d2-4f36-40f1-9e93-ffc02e621a33
-        - ref!! 00e2c344-1e30-47ce-9d21-96e4fe0ef5b0
-        - ref!! aac6626d-1827-4306-b474-d4d84db7c203
-        - ref!! d6cb220a-a931-41d2-9648-c36be0253b54
-        - ref!! 800598f1-048a-4a70-b521-60069c878dd2
-        - ref!! 30f402b6-3a0a-44f4-9b8a-0ef545beb26f
+        - ref!! b6296baf-ed64-43dc-81e1-8f4f829f4ec4
+        - ref!! 55becbee-bec2-4178-8703-5deb48e28089
+        - ref!! 624c0cfb-85e5-408c-8eea-fffb408e0674
+        - ref!! 0df52766-39fc-490b-9fce-7fdef51efd15
+        - ref!! cb05f8a9-8d6f-480e-8f82-0558ad14912b
+        - ref!! 4927b9cc-021a-4259-8c03-8aa2bacbcfe4
+        - ref!! dc4c51d5-fbc2-40f3-b522-d04f4e68e8c6
+        - ref!! c6e4eb8f-8280-4faa-9d6c-5fb037ba06d3
     Parts:
-        -   Folder: Sala 1/Mapa
-            Entity:
-                Id: 00e2c344-1e30-47ce-9d21-96e4fe0ef5b0
-                Name: Muro 0
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 0ff945bb-e8d8-4ce4-bc65-a7b7b57e207e
-                        Position: {X: 30.0, Y: -1.2586494E-06, Z: 10.0}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 4.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 4cfb6ae1-86a2-4cf7-bacc-82ecc0f4579a
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 1debe2b4-394f-4d05-8199-f0db763a1087
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
-        -   Folder: Sala 1/Mapa
-            Entity:
-                Id: 02712583-24ba-4e9c-a06a-8abe1bb0eca1
-                Name: Muro 0
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 5f8b1b08-4d72-4fd3-b9da-84aee18b2459
-                        Position: {X: -10.0, Y: 0.0, Z: 30.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 4.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 8df5c84b-0795-445d-ba51-d8d938d8f02f
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 2159935a-c09c-48aa-9e9b-57a2775e2451
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 0c828415-e7ac-4d9f-92b8-c16f80c98b97
@@ -267,19 +187,19 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: a797918f-0191-4c40-a2ce-1809dc134eca
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
-                Id: 0e77befa-d5ce-4753-9eac-42e49b7f788b
-                Name: Escala 0
+                Id: 0df52766-39fc-490b-9fce-7fdef51efd15
+                Name: Columna 2
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
-                        Id: 1e90edf3-d25f-428f-9710-4a6297fc99e1
-                        Position: {X: 0.0, Y: 0.0, Z: 57.0}
+                        Id: 41923c9d-f9b1-4b63-8044-ceb1d8917b17
+                        Position: {X: -8.0, Y: -1.7996344E-06, Z: 8.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 8.0, Y: 2.0, Z: 5.0}
+                        Scale: {X: 6.0, Y: 8.0, Z: 6.0}
                         Children: {}
                     95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
-                        Id: 19c6460f-31f5-4d9d-9237-d5f165b4b0c0
+                        Id: 09952267-0f5d-4a7a-9861-1b8e99d8a311
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -290,16 +210,13 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                            5162de0d97dbdbdc66e20cff891c2661: !StaticMeshColliderShapeDesc
+                                Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                     ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
-                        Id: ef855df6-b15c-4041-8238-0bbf02f5454f
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Id: 6466da33-4418-41d3-9451-39577b9db138
+                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                         Materials:
-                            20ea19b545ed568ea3e84fb5ecb8d169~0: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Mapa/Piso
+                            e88d3199e2b451fdd119f4532e94fb53~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
         -   Entity:
                 Id: 10f36735-4c99-4f43-9d9d-246d827af646
                 Name: "Partículas"
@@ -601,71 +518,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: b68e92f4-525b-46d7-9ba4-240b06194677
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: 1cac891d-3f8b-43d1-8272-b93493aa3155
-                Name: Muro 9
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: bf740373-d0f6-4528-baaa-3539164a566a
-                        Position: {X: -2.5, Y: -2.0215211E-06, Z: 34.0}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 2.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 0b07a81b-62f2-4bf2-b45e-6d52523cbbf6
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 5f994bdd-bf42-4951-aa89-12cf9a7b1c36
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: 23218ea9-aee4-48f8-aea1-1c32d5ebc5b6
-                Name: Piso 0
-                Components:
-                    a4eff1be567473e8c4551578b450db20: !TransformComponent
-                        Id: 2360d826-55ee-4ea9-b286-1450e9a6301a
-                        Position: {X: 0.0, Y: -0.1, Z: 67.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 8.0, Y: 0.1, Z: 15.0}
-                        Children: {}
-                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
-                        Id: cd132804-e6a8-420d-bfb8-f5b2e57551b5
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
-                        Id: 009ffa62-d808-4bec-94ec-f842acc5099e
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
-                        Materials:
-                            20ea19b545ed568ea3e84fb5ecb8d169~0: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Mapa/Piso
         -   Folder: null
             Entity:
                 Id: 282eb5e7-016c-4b21-9bf1-5f5c6523df93
@@ -840,38 +692,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: be33c8de-5ac2-44b8-a446-61d76ba7a173
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 1/Mapa
-            Entity:
-                Id: 30f402b6-3a0a-44f4-9b8a-0ef545beb26f
-                Name: Muro 0
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 2f604017-ff7b-4147-a2b6-4d33a35068b4
-                        Position: {X: 10.0, Y: 0.0, Z: -30.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 4.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 72157803-4c26-4bed-a577-d8cd64ab6b15
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 97f85667-2a91-4e98-845d-19457dad0d4e
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Entity:
                 Id: 32153f8f-4cc8-469d-ab76-612c0e4f0dc4
                 Name: "Dañable cabeza"
@@ -920,7 +740,7 @@ Hierarchy:
                 Components:
                     6d8bcecd738075517046081af5f60aa5: !TransformComponent
                         Id: 1c79f734-6c65-43aa-adf9-5adcb398b73d
-                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -982,38 +802,6 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 1cb886b6-cff7-4034-9eda-9023f8f94cd1
                 InstanceId: 5970d0b5-0716-4efa-b2b8-448b39c08d8d
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: 458719e9-1f9c-42ad-b538-747a39836280
-                Name: Muro 5
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 589f6fa5-2760-4d44-89e2-8a0000af4511
-                        Position: {X: -8.0, Y: 1.6304883E-06, Z: 44.5}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 3.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 85828133-73de-4900-af7f-ffbc52bb6e6a
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 6b928ba6-55bc-42fa-82b6-b64c2e3e67ce
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Entity:
                 Id: 45f34cb6-8ce3-4e42-93bc-ce416cee12a0
                 Name: "PartículasCalentamiento"
@@ -1118,38 +906,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: e3ffef3f-7d1d-44bb-b143-6ecceeb66783
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: 46005ec1-960d-48e1-b1b7-014843dad6a9
-                Name: Muro 3
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 43ee5157-d322-4f5f-95d8-b7d3dc0a1733
-                        Position: {X: -5.5, Y: 2.385596E-06, Z: 50.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 8f0e3ebe-bc88-42e9-8c58-27843abcf3d0
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 875e8a5c-7772-4ffe-a4fe-ba68658c25db
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 470e6b61-38d6-4974-9121-fc590f671012
@@ -1166,35 +922,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 62a7baa8-3145-43f2-9629-a24f718c9fe0
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: 483b122c-7301-425c-ab56-0258f417a4a4
-                Name: Rampa
-                Components:
-                    a4eff1be567473e8c4551578b450db20: !TransformComponent
-                        Id: 34efa1a0-4497-4750-9840-f086329899bc
-                        Position: {X: 0.0, Y: 0.0, Z: 61.5}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 4.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
-                        Id: d6f82c4f-8bf3-450e-9714-3e884475ea1b
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            5162de0d97dbdbdc66e20cff891c2661: !StaticMeshColliderShapeDesc
-                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
-                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
-                        Id: 252a985f-5b53-408f-ab56-4f2c8159101f
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
-                        Materials: {}
         -   Entity:
                 Id: 4848aed3-90c9-45a9-a9cc-1249b33afbc8
                 Name: Ojo
@@ -1223,37 +950,37 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 4c24f93d-e3a0-4825-833e-e2a97128dba9
                 InstanceId: ac5ceabe-9de8-4d25-9dd9-acbefc97256e
-        -   Folder: Sala 0/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
-                Id: 4925dede-76cb-46a0-9fed-ecf23281b01c
-                Name: Muro 2
+                Id: 4927b9cc-021a-4259-8c03-8aa2bacbcfe4
+                Name: Cubo 0
                 Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 6dcd4507-b58c-496c-8a96-18f59cef6b76
-                        Position: {X: 3.0, Y: 3.983219E-06, Z: 61.5}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 6.0, Y: 1.0, Z: 1.0}
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: c34a4b5f-57f8-4a2a-802b-9da4a85c28aa
+                        Position: {X: -6.0, Y: 1.0128556E-06, Z: 16.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 46ff5f7c-9278-4c8a-b11a-a8ae91798db9
+                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
+                        Id: e541df7e-ef41-46da-ae54-3fd7e19bafe4
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 1.0
+                        Friction: 0.5
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
+                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 94a8b12d-38c4-4ec2-bf87-5a8ed3d10ff7
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: 79e10b42-f435-4dd6-8dd4-c14f82cd262e
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials: {}
         -   Entity:
                 Id: 4b39c6b3-2095-459d-a121-38af27e04d17
@@ -1526,38 +1253,6 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
                 InstanceId: ac5ceabe-9de8-4d25-9dd9-acbefc97256e
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: 4ed534e6-70d4-4a3f-a499-f0968ed4f591
-                Name: Muro 0
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: ec8f8cb4-0dec-4c19-957b-2d8142c005ae
-                        Position: {X: 0.0, Y: 0.0, Z: 73.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.5, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: d91f575c-8675-4611-a733-16ba5b43609f
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 539e4437-0ed7-4ea1-9472-00ed99d2ec47
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Entity:
                 Id: 4eeb2532-039e-41b4-8852-55e6896b3e45
                 Name: "PartículasIzquierda"
@@ -1694,6 +1389,65 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 2040daa6-49ab-4794-bdd5-37e4fde3c568
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: Sala 1/Mapa
+            Entity:
+                Id: 55becbee-bec2-4178-8703-5deb48e28089
+                Name: Columna 0
+                Components:
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: 1a937a65-d6b5-4665-b4f7-8a6bf8c4b93d
+                        Position: {X: -8.0, Y: 0.0, Z: -8.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 6.0, Y: 8.0, Z: 6.0}
+                        Children: {}
+                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
+                        Id: 0aaa8a76-6641-46f1-bffa-2192397a548e
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            5162de0d97dbdbdc66e20cff891c2661: !StaticMeshColliderShapeDesc
+                                Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: bd8a928d-0d43-44fd-9062-48c323f384d5
+                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
+                        Materials:
+                            e88d3199e2b451fdd119f4532e94fb53~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
+        -   Folder: Sala 0/Mapa
+            Entity:
+                Id: 57d10585-5ec1-4858-a8ca-68efd57c324d
+                Name: Sala
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: 1369d39b-5697-404b-928f-9a95ef5e0313
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: dc582356-68b0-413e-b4e0-646ceae64fcc:Modelos/M1E1/Sala0
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 3609b697-997c-4d48-8df9-a1d0d697fc29
+                        Position: {X: 0.0, Y: 2.1338465E-06, Z: 51.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: 6c9b3d8d-b021-420c-b67c-7e2daafdcee5
+                        Model: dc582356-68b0-413e-b4e0-646ceae64fcc:Modelos/M1E1/Sala0
+                        Materials: {}
         -   Folder: Mapa
             Entity:
                 Id: 5af9012c-1379-4f99-ad6a-376f30f571d6
@@ -1710,17 +1464,17 @@ Hierarchy:
                         Texture: 1afb23f5-a8f8-44a2-929d-353d007943a0:Skybox texture
         -   Folder: Sala 1/Mapa
             Entity:
-                Id: 647cf18a-857c-4886-b6d9-5a110d00dcd5
-                Name: Piso 0
+                Id: 624c0cfb-85e5-408c-8eea-fffb408e0674
+                Name: Columna 1
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
-                        Id: 1c7d82ed-ebd9-4851-9357-0747d83e48f8
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Id: 3515cb59-8b52-4989-9e60-8f8f22d56b1b
+                        Position: {X: 8.0, Y: -1.7996344E-06, Z: -8.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 60.0, Y: 0.1, Z: 60.0}
+                        Scale: {X: 6.0, Y: 6.0, Z: 6.0}
                         Children: {}
                     95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
-                        Id: 679d4092-4738-46b6-9378-4a34a7d7e168
+                        Id: a1b2a25f-bfc1-4650-a5b3-ee0ece9c6ca1
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -1731,16 +1485,13 @@ Hierarchy:
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                            5162de0d97dbdbdc66e20cff891c2661: !StaticMeshColliderShapeDesc
+                                Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                     ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
-                        Id: d31bd1bf-da54-4073-a488-436ea6c9842f
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Id: cf5333d7-2b84-4520-b556-bc2c877c7db2
+                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                         Materials:
-                            20ea19b545ed568ea3e84fb5ecb8d169~0: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Mapa/Piso
+                            e88d3199e2b451fdd119f4532e94fb53~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
         -   Entity:
                 Id: 65c1fed0-7bbb-4940-8542-aa488d3aec38
                 Name: Modelo
@@ -1958,9 +1709,9 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: c366a528-ada9-4cfb-aefc-96c04e7659d2
-                        Position*: {X: 0.0, Y: 0.0, Z: 32.0}
+                        Position*: {X: 0.0, Y: 1.5, Z: -20.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.0, Y: 0.2, Z: 2.0}
+                        Scale*: {X: 2.0, Y: 1.0, Z: 2.0}
                         Children:
                             c53ab01d244dfc8b7e6d96450d757bb0: ref!! 8c3fd9e1-b64f-4a96-8622-215ce94e5ad1
                     d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
@@ -2051,38 +1802,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: db0a187b-bd41-45d8-b0ce-c8ba99ddc6ed
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: 7b548cba-242f-44fc-b405-90d974fd2954
-                Name: Muro 6
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 0f613be1-511b-4ce4-8607-cc9ab5def7b3
-                        Position: {X: 8.0, Y: 1.6304883E-06, Z: 44.5}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 3.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 35c8040a-8e3f-4b6d-8b87-91121dd9ff92
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: d575954e-d50e-4c23-82e3-664c2ac05694
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 7bc631fd-9865-4975-bc81-b196da68e19e
@@ -2292,38 +2011,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 86fc6b06-f3ee-4510-a53f-3e5ecd54bb0b
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 1/Mapa
-            Entity:
-                Id: 800598f1-048a-4a70-b521-60069c878dd2
-                Name: Muro 0
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 34bf0d39-b590-4c89-8cfd-ccb511ff5ae1
-                        Position: {X: -10.0, Y: 0.0, Z: -30.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 4.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 37017d22-3b51-48b3-9f76-9f5de9dea07e
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 909b2075-7db6-4473-b36d-cda87189c75c
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Folder: Mapa
             Entity:
                 Id: 8054f753-b197-4385-b38e-ca35ee30239d
@@ -2492,38 +2179,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 8c0411ce-9e6a-4025-8060-a66e526ac647
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 1/Mapa
-            Entity:
-                Id: 8afd2a81-e9a9-4a5a-8ebe-a7feb01a92fc
-                Name: Muro 0
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 1a469c97-9c11-4729-9538-2b1cee38f3dc
-                        Position: {X: 10.0, Y: 0.0, Z: 30.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 4.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 166567ef-a0cd-4806-92b9-42ba88c6f5b8
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: c5b06efd-779c-4663-a0b5-e47e41cbf2f9
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Entity:
                 Id: 8d284b68-8878-499c-8644-8010aa566384
                 Name: "Partículas"
@@ -2716,38 +2371,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: b5498599-9678-4cbd-a50a-c345377df315
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: 937fb249-8d2c-41b1-81ca-97b49590ccf0
-                Name: Muro 10
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: bd4d41e3-54ab-4378-a8a7-6dea39fc692b
-                        Position: {X: 2.5, Y: -2.0215211E-06, Z: 34.0}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 2.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: f427eec9-761f-437f-8772-c53b2f7277a6
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: dcd9db1c-14b4-4067-95a7-a447b21a57f3
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Entity:
                 Id: 95f281f9-094e-45f8-8062-c2a7f722d0e1
                 Name: "Dañable torso"
@@ -2891,71 +2514,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 47bc28de-2e3e-4e1b-87b1-cd9d7fd618a6
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: 9fb8f699-7573-421b-86d7-023abbd35847
-                Name: Piso 1
-                Components:
-                    a4eff1be567473e8c4551578b450db20: !TransformComponent
-                        Id: 19d70f67-c108-4767-a7c5-d5945d018399
-                        Position: {X: 0.0, Y: -0.10000464, Z: 40.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 22.0, Y: 0.1, Z: 22.0}
-                        Children: {}
-                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
-                        Id: f3378b30-332b-42bf-814c-fd686df6b174
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
-                        Id: 116aeba9-e76c-47b3-a75e-c49a4c5970cd
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
-                        Materials:
-                            20ea19b545ed568ea3e84fb5ecb8d169~0: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Mapa/Piso
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: a046d3c1-d358-480d-960d-8ba11faed962
-                Name: Muro 8
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 87fa030a-67af-4539-98cf-9f35b3e70936
-                        Position: {X: 5.5, Y: 1.2027306E-07, Z: 40.0}
-                        Rotation: {X: -0.0, Y: -0.25881904, Z: 0.0, W: 0.9659258}
-                        Scale: {X: 2.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: cf0508cf-88b5-4a3e-a497-3cfeffbe9a79
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: e2ea6be3-5d97-4e3b-8b2d-32af1c909f85
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Folder: Sala 0/Grupo 0
             Entity:
                 Id: a0a3909a-d54c-40e3-b579-503534de011b
@@ -3158,38 +2716,6 @@ Hierarchy:
                 BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: a33fd6d1-a555-494d-8a74-78c1ef821c6c
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: a480da6c-8923-456f-ab12-59c27ccc8a7e
-                Name: Muro 4
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 144b7d2a-cf42-47e8-98dc-37602abb4eda
-                        Position: {X: 5.5, Y: 2.385596E-06, Z: 50.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 586564cb-e022-44be-98ac-595c93400bbe
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 667315a7-c27e-40fc-a227-cf0680a9613b
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Entity:
                 Id: a761dfbf-0913-452f-9d21-ab9869538312
                 Name: Lanzagranadas
@@ -3218,38 +2744,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: f4f81536-6702-4abd-a6b3-088819af3788
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 1/Mapa
-            Entity:
-                Id: aac6626d-1827-4306-b474-d4d84db7c203
-                Name: Muro 0
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: efa2383f-a1ec-485b-a46e-4a0b4eba7016
-                        Position: {X: -30.0, Y: -5.0345975E-06, Z: -10.0}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 4.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 5f0cdd51-f864-4a6e-9e14-f4a0fd4979ea
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 6b5f7722-db53-44fd-9396-e2989710cb71
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Entity:
                 Id: ac36096a-c53c-449a-9736-d8d16e630fa6
                 Name: Fuego
@@ -3270,70 +2764,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: e1f6681a-f5c0-4a3c-83b5-6b117a74df1c
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: aeca637e-7f23-4117-b8e1-3f1d15606194
-                Name: Muro 7
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 1135540b-2d2a-411d-89e1-aac48800dcd0
-                        Position: {X: -5.5, Y: 1.2027306E-07, Z: 40.0}
-                        Rotation: {X: 0.0, Y: 0.25881904, Z: 0.0, W: 0.9659258}
-                        Scale: {X: 2.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 9cef2de5-56af-44d0-ad4f-22ff6f38d223
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 47d37e8a-1277-4d8b-8ee7-7b55fac08d42
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: aeecf132-c75c-457a-951c-88d1a0730898
-                Name: Muro 1
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 5d30f7ae-e596-4a7a-8b35-6d24d291c863
-                        Position: {X: -3.0, Y: 0.0, Z: 61.5}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 6.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: dd66a8fc-463a-4f57-8a3b-351b1d7734da
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 938e8cca-abac-4e02-994c-177039000567
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Folder: Sala 0/Grupo 0
             Entity:
                 Id: aff20ceb-9f12-464a-aae0-45f079c64811
@@ -3753,6 +3183,35 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 147e9c1b-6e08-4fa2-8b4a-a4f0b80d0ed8
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: Sala 1/Mapa
+            Entity:
+                Id: b6296baf-ed64-43dc-81e1-8f4f829f4ec4
+                Name: Sala
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: a7ff2335-3461-4d71-a643-24b432d7a41c
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: 2240dbb9-9c28-4b17-99ec-f7f1887d9ea8:Modelos/M1E1/Sala1
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 51304efb-7455-4911-a23f-b12422ddb9f6
+                        Position: {X: 0.0, Y: 2.1338465E-06, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: 0009d072-44a5-440f-bbc1-d3818bdb9001
+                        Model: 2240dbb9-9c28-4b17-99ec-f7f1887d9ea8:Modelos/M1E1/Sala1
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: b7355959-02a9-47d8-9b74-a45c02f36b5c
@@ -3786,6 +3245,38 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: dd90a596-e723-4a2b-a286-196f763a0dc2
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: Sala 1/Mapa
+            Entity:
+                Id: c6e4eb8f-8280-4faa-9d6c-5fb037ba06d3
+                Name: Cubo 2
+                Components:
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: ff1a78aa-7388-4bd9-a9fa-c6f278b120c7
+                        Position: {X: 10.0, Y: 2.621248E-07, Z: 20.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children: {}
+                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
+                        Id: 7779b5c6-19d8-4fdf-ab9c-64772add07d4
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: 81c614e5-6734-4cde-9809-673f9c168152
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
         -   Entity:
                 Id: c93be7c8-a168-4773-b85f-6784eaac0db1
                 Name: "Dañable cabeza"
@@ -3827,6 +3318,36 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 0c476c17-80e5-422b-a8ae-de6ab3487673
                 InstanceId: 9920bcfa-c981-4dbb-ac89-7ab3c946e8f2
+        -   Folder: Sala 1/Mapa
+            Entity:
+                Id: cb05f8a9-8d6f-480e-8f82-0558ad14912b
+                Name: Columna 4
+                Components:
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: 4b77f6fa-d209-4f87-bf22-b2220c2b1c1d
+                        Position: {X: 8.0, Y: -1.7996344E-06, Z: 8.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 6.0, Y: 4.0, Z: 6.0}
+                        Children: {}
+                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
+                        Id: 0526c282-63ec-40a2-b6ee-fa66a231bb44
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            5162de0d97dbdbdc66e20cff891c2661: !StaticMeshColliderShapeDesc
+                                Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: 9e162ef6-1d50-4ff9-801d-495554770f2e
+                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
+                        Materials:
+                            e88d3199e2b451fdd119f4532e94fb53~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
         -   Entity:
                 Id: ce93489d-09dd-4004-a68f-316293f494f7
                 Name: "Dañable torso"
@@ -3973,38 +3494,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: be5aec12-2afc-4788-8cb7-53966dec6a3e
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 1/Mapa
-            Entity:
-                Id: d6cb220a-a931-41d2-9648-c36be0253b54
-                Name: Muro 0
-                Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 9eee9904-c75b-4e2d-9bd4-8f9af9ceb772
-                        Position: {X: 30.0, Y: -5.0345975E-06, Z: -10.0}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 4.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 05c946a4-8229-41b3-9830-96e39d0f9076
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 839e784f-3848-43b2-8acc-a246f78a4d0b
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
-                        Materials: {}
         -   Entity:
                 Id: d79b8ebb-4d3f-4fa2-9dba-bcb050f2a3b0
                 Name: Jugador
@@ -4065,35 +3554,35 @@ Hierarchy:
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
         -   Folder: Sala 1/Mapa
             Entity:
-                Id: de5b17d2-4f36-40f1-9e93-ffc02e621a33
-                Name: Muro 0
+                Id: dc4c51d5-fbc2-40f3-b522-d04f4e68e8c6
+                Name: Cubo 1
                 Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 3d52fef7-df8f-4421-a171-a1a9edabcd42
-                        Position: {X: -30.0, Y: -1.2586494E-06, Z: 10.0}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 4.0, Y: 1.0, Z: 1.0}
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: b252e22f-5e77-4518-b31f-5c693248a58d
+                        Position: {X: 11.548653, Y: -2.0499733E-06, Z: 10.765188}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 363ae5a3-3832-4cef-8dbf-b0edcbc84a3e
+                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
+                        Id: 85f010de-1215-4ebd-9ab1-3ab384a70f87
                         CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 1.0
+                        Friction: 0.5
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
+                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 4.0, Y: 6.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 5f9e8e08-949b-4995-a71e-84c1ae146c8b
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: b7478aa2-cea0-4ee0-90a8-d93e9c609c03
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials: {}
         -   Folder: null
             Entity:
@@ -4465,39 +3954,6 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: a5cff35c-2b91-4286-b8b4-7d7df69e6dbf
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Mapa
-            Entity:
-                Id: f85280f4-ee94-4db6-8068-90f3838dff73
-                Name: Escala 1
-                Components:
-                    a4eff1be567473e8c4551578b450db20: !TransformComponent
-                        Id: 8f7fd3ae-1871-4b3d-b6a8-e44e41f9f46a
-                        Position: {X: 0.0, Y: 0.0, Z: 53.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 8.0, Y: 4.0, Z: 5.0}
-                        Children: {}
-                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
-                        Id: 840e7736-4401-4a95-af3a-cfa394671a8d
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
-                        Id: 2b7f5826-7906-40ef-9b40-040a183b4409
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
-                        Materials:
-                            20ea19b545ed568ea3e84fb5ecb8d169~0: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Mapa/Piso
         -   Folder: null
             Entity:
                 Id: f8f67bba-8259-4520-94ed-728e1fdd1d56
