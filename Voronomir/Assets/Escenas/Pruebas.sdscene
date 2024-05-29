@@ -3867,9 +3867,9 @@ Hierarchy:
                         IsTrigger: true
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 2.0, Y: 0.5, Z: 2.0}
+                            ea41dc56705b9668e501d93692981896: !CylinderColliderShapeDesc
+                                Height: 0.5
+                                Radius: 1.0
                                 LocalOffset: {X: 0.0, Y: 0.25, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     ae77dc873a2c3c32c294301875605415: !Voronomir.ControladorSaltador,Voronomir.Proyecto
@@ -4932,9 +4932,9 @@ Hierarchy:
                         IsTrigger: true
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
-                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 2.0, Y: 0.5, Z: 2.0}
+                            ea41dc56705b9668e501d93692981896: !CylinderColliderShapeDesc
+                                Height: 0.5
+                                Radius: 1.0
                                 LocalOffset: {X: 0.0, Y: 0.25, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     ae77dc873a2c3c32c294301875605415: !Voronomir.ControladorSaltador,Voronomir.Proyecto
@@ -6645,7 +6645,8 @@ Hierarchy:
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 617de4d2-f031-4149-b2ff-66aea4359695
                         Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
-                        Materials: {}
+                        Materials:
+                            e4888d76b2e8b7e841c5b13b9a803d82~0: 14a1f75c-a2dd-4ca6-898a-5639d9e6ab04:Materiales/Lava
             Base:
                 BasePartAsset: "45ea8175-4bdb-46b4-998a-9c398b65c48d:Prefabs/Entorno/DañadorContinuo"
                 BasePartId: bfe5c0fc-b817-405b-8622-05f5377bf97c
