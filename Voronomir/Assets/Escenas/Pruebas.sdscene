@@ -617,7 +617,7 @@ Hierarchy:
                         Id: ec03448c-4a4c-4fbb-a6c9-586fb23bc055
                         Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials:
-                            20ea19b545ed568ea3e84fb5ecb8d169~0: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Mapa/Piso
+                            20ea19b545ed568ea3e84fb5ecb8d169~0: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Mapa/Piso0
         -   Folder: null
             Entity:
                 Id: 1330df51-afef-4f37-b933-5d015309569e
@@ -2962,7 +2962,7 @@ Hierarchy:
                 Components:
                     44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
                         Id: 3580e87f-8a96-4708-9b1c-4b1430647f4f
-                        CollisionGroup: StaticFilter
+                        CollisionGroup: KinematicFilter
                         CanCollideWith: KinematicFilter, DebrisFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
@@ -3121,7 +3121,7 @@ Hierarchy:
                 Components:
                     44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
                         Id: 3c06dc8d-358c-4587-95c5-0703243bbd4b
-                        CollisionGroup: StaticFilter
+                        CollisionGroup: KinematicFilter
                         CanCollideWith: KinematicFilter, DebrisFilter, CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
