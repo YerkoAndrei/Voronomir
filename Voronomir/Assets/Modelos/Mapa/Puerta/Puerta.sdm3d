@@ -13,7 +13,7 @@ Materials:
     908af2f092532fbd79ba2eaa0a14aa18:
         Name: Llave
         MaterialInstance:
-            Material: b7e056c4-b8af-47da-855f-2941d34898ee:Materiales/Mapa/Llave
+            Material: b7e056c4-b8af-47da-855f-2941d34898ee:Materiales/Llaves/Llave
 Modifiers: {}
 ~SourceHashes:
     1d2646f431dd74fe41676589c396d533~Puerta.glb: 8baae058cd723981731e49f69a2c136e
