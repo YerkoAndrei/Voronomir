@@ -62,8 +62,21 @@ Hierarchy:
         - ref!! 040087ae-d934-464a-8fc1-2e526e3ada64
         - ref!! a739a300-055d-4ea6-8654-3321e3ac580d
         - ref!! d1a6e934-beea-4496-bbd2-219f49fd6e66
-        - ref!! 9ddbb929-0991-4b55-b131-effcf2f0149c
         - ref!! 36ece7d4-3269-4c24-899f-7675e6f778e4
+        - ref!! 5af8f1a3-421e-4875-a233-f62c8ceb2f76
+        - ref!! d6b5ade9-9274-44af-9ad1-9572109b26a0
+        - ref!! 0cffedc5-4801-423f-9f5b-2296625c66c7
+        - ref!! bc535ceb-9621-49e5-a354-10322090055d
+        - ref!! 5ea99578-7581-4a20-b088-6d1bc3f15084
+        - ref!! 28aa6c84-5ce6-4873-8876-5913ff3b13bd
+        - ref!! 9e3ea34f-8e5b-4d87-bfd7-3ab90bd8f2d1
+        - ref!! ab5e148f-91d2-4d77-8e99-a72c463e3c9e
+        - ref!! ace0ab2f-c450-4cbd-bddf-c6b7e490384a
+        - ref!! 73e4021f-12b9-4c08-862f-ab093cd5988c
+        - ref!! acff8231-8ccf-48fc-8d16-c82e18024902
+        - ref!! 813ff55d-8ea1-4f5e-ada3-d642a3abb5a0
+        - ref!! 29a8524e-27a2-4f45-9557-ee8cc4495f02
+        - ref!! e7edc9d5-23b6-44b6-9226-630e07e60573
     Parts:
         -   Folder: Sala 1
             Entity:
@@ -113,8 +126,8 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 131ce3aa-1734-4f15-906b-ba79a2331155
-                        Position*: {X: -27.4, Y: -2.0, Z: 14.0}
-                        Rotation*: {X: 0.579228, Y: -0.4055798, Z: 0.4055798, W: 0.579228}
+                        Position*: {X: -25.75, Y: -2.0, Z: 14.0}
+                        Rotation*: {X: 0.5930296, Y: -0.38511795, Z: 0.38511795, W: 0.5930296}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3788e322f260de9e64a1e85455890478: ref!! aafcd9c9-fd08-43b7-8aa6-feb408fd673a
@@ -197,6 +210,71 @@ Hierarchy:
                 BasePartId: 815d72ca-0660-4eba-8cae-00e9b57fa989
                 InstanceId: d2fa0653-c8f1-49d6-b863-66cbfb5ec7b2
         -   Entity:
+                Id: 05d37473-6268-4736-80c4-1dab700dd5f5
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 1bc94507-4f24-4a4d-ae70-84d3d1fd9676
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: a4f2b44a-eb8e-4db4-9ab6-cc8de9be275d
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: 95ee69e1-8bf3-498b-a84c-10a061b3e878
+        -   Folder: null
+            Entity:
+                Id: 076d9bf2-37da-4ed7-8f34-257cc62b4de5
+                Name: Modelo
+                Components:
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: d89b7580-fba8-4b5d-bebd-df356eccb0e9
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size*: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset*: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: ec778154-9461-42b2-a5ec-3e6ac4c9ab53
+                        Position*: {X: 0.22881652, Y: 0.0, Z: -0.39203367}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 8.0, Y: 3.5, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: a48c11e9-e36f-4892-8eb0-c9ba4bc0056b
+                        Model*: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: 21308e1a-c1ee-40c9-9704-5eaa06068f00
+        -   Entity:
                 Id: 08cc4e92-9488-4d75-99b5-a33428d2e151
                 Name: Emisor
                 Components:
@@ -267,6 +345,49 @@ Hierarchy:
                             e88d3199e2b451fdd119f4532e94fb53~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
         -   Folder: null
             Entity:
+                Id: 0b53b076-42df-4764-9928-727775ee94b7
+                Name: Modelo
+                Components:
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: 471aaf11-ee74-4b1d-bdb0-d3c0dd10941c
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size*: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset*: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 0c962a8b-3f7b-4f7b-b495-37195cccc606
+                        Position*: {X: 0.22881652, Y: 0.0, Z: -0.39203367}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 6.0, Y: 3.5, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: c6193901-2975-4f3c-9284-28bd868b09dd
+                        Model*: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: 29f1914f-99c9-40d5-937a-73545b7df5b1
+        -   Folder: null
+            Entity:
                 Id: 0c828415-e7ac-4d9f-92b8-c16f80c98b97
                 Name: Espada
                 Components:
@@ -285,6 +406,49 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 855d46ad-e0df-46e0-a435-46753f797211
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: Sala 3
+            Entity:
+                Id: 0cffedc5-4801-423f-9f5b-2296625c66c7
+                Name*: Puerta (Circular) 1
+                Components:
+                    684e8d9d72b05614aa004a6afce49ac0: !StaticColliderComponent
+                        Id: d7c95d72-9c1b-4333-bfb8-30ce593ee4d3
+                        Enabled*: false
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            339b26397037be06899b1eaacf8faec7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 0fd5d088-2321-4a20-b02f-623ce5055977
+                        Position*: {X: -33.65, Y: -3.0000014, Z: 9.25}
+                        Rotation*: {X: 0.0, Y: -0.20107792, Z: 0.0, W: 0.9795753}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            974930f89f5418aadc8036b440d5a6c6: ref!! 111a69da-d23d-47d3-8b45-7cced1f18646
+                            ee4217cd28401cf1d731e17066bc4361: ref!! 6e090a74-373c-4e7e-8731-4eaa51381279
+                    288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
+                        Id: ba117f7b-d2a6-4b7a-a1d0-0717f317750f
+                        instantanea*: true
+                        activaciones: 1
+                        modelo: ref!! 111a69da-d23d-47d3-8b45-7cced1f18646
+                        emisor: ref!! a7734f9f-85dc-4037-8ce0-72c1a62e84ff
+                        "posiciónAbierta*": {X: 0.0, Y: -3.1, Z: 0.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: 0cc3baa6-279c-45df-902f-4e2270c63878
         -   Entity:
                 Id: 0d2d6ede-f107-4a4e-98ff-12989e9513cc
                 Name: "Partículas"
@@ -481,6 +645,26 @@ Hierarchy:
                         Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                         Materials:
                             e88d3199e2b451fdd119f4532e94fb53~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
+        -   Folder: null
+            Entity:
+                Id: 10813114-e1b8-47f4-9177-f3aca088f746
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 0cc8908f-f40f-4a34-b209-05fcd345f26a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 102ee96f-fe82-4e10-80ea-b1cf1e32ce9e
+                        Enabled: false
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: d5058dbe-b40f-4ad7-b603-b31e795ab1f4:Prefabs/Entorno/Secreto
+                BasePartId: 31ac85c4-45ee-471c-a957-2959f7c007c3
+                InstanceId: 8ccabb7f-0012-4ba3-978f-4f7889c1818f
         -   Entity:
                 Id: 10f36735-4c99-4f43-9d9d-246d827af646
                 Name: "Partículas"
@@ -782,6 +966,28 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: b68e92f4-525b-46d7-9ba4-240b06194677
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Entity:
+                Id: 16b469cb-caaf-4f7a-9428-7841524e36cc
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 7edfd437-3391-4c95-a1dd-52cad585f4e4
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 1984b165-a111-4722-9d72-76dd370a852b
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: 21308e1a-c1ee-40c9-9704-5eaa06068f00
         -   Folder: Sala 3
             Entity:
                 Id: 1994162a-6dd2-402b-b4a2-6eacc9ed2659
@@ -984,6 +1190,49 @@ Hierarchy:
                 BasePartAsset: e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/Entorno/Saltador
                 BasePartId: 0e6fc922-4c0b-44c8-af46-097632041c0b
                 InstanceId: ce46c735-4f72-4020-a75b-12fecc972ab0
+        -   Folder: null
+            Entity:
+                Id: 1eb3af22-31b5-4019-8461-8c74df0cd059
+                Name: Modelo
+                Components:
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: b9b03e80-58c0-4377-8589-d44152655c7d
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size*: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset*: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 111a69da-d23d-47d3-8b45-7cced1f18646
+                        Position*: {X: 0.22881652, Y: 0.0, Z: -0.39203367}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 8.0, Y: 3.5, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 1e7d2333-456e-4ec1-8d58-4f4e8ad0ed1c
+                        Model*: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: 0cc3baa6-279c-45df-902f-4e2270c63878
         -   Folder: Sala 1
             Entity:
                 Id: 236942f4-1a8d-4e62-a274-5b3b8dcb911b
@@ -1117,6 +1366,49 @@ Hierarchy:
                 BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
                 BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
                 InstanceId: a33fd6d1-a555-494d-8a74-78c1ef821c6c
+        -   Folder: Sala 3
+            Entity:
+                Id: 28aa6c84-5ce6-4873-8876-5913ff3b13bd
+                Name*: Puerta (Circular) 4
+                Components:
+                    684e8d9d72b05614aa004a6afce49ac0: !StaticColliderComponent
+                        Id: ea5888c4-c4d7-416c-b4d1-6ea71319b8e9
+                        Enabled*: false
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            339b26397037be06899b1eaacf8faec7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: e09516a6-c7b0-4fab-bca8-719b2e8027a2
+                        Position*: {X: -46.5, Y: -2.9999988, Z: 21.66}
+                        Rotation*: {X: -0.0, Y: -0.5504807, Z: 0.0, W: 0.83484787}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            974930f89f5418aadc8036b440d5a6c6: ref!! ca5c5d5d-12df-4c55-b543-01f2234e40d9
+                            ee4217cd28401cf1d731e17066bc4361: ref!! ecd7320c-4d6b-4bb9-9a2e-1e6585eb790e
+                    288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
+                        Id: 37edd480-4c6c-4680-82f1-196bab2ca088
+                        instantanea*: true
+                        activaciones: 1
+                        modelo: ref!! ca5c5d5d-12df-4c55-b543-01f2234e40d9
+                        emisor: ref!! 1fc96514-27dd-49c2-a5b1-d81a42cfaecd
+                        "posiciónAbierta*": {X: 0.0, Y: -3.1, Z: 0.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: 3686e751-4182-4946-9d4d-d5daca55d1db
         -   Entity:
                 Id: 29971846-0f52-4bc3-97e2-9383b9ed3aba
                 Name: "Partículas"
@@ -1221,6 +1513,18 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 046e1357-852b-491d-b00a-9f3198b6cd84
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: Sala 4
+            Entity:
+                Id: 29a8524e-27a2-4f45-9557-ee8cc4495f02
+                Name: Secreto
+                Components:
+                    e3ca31ca65e63a81684b712a3b84397d: !TransformComponent
+                        Id: 556c9422-eaff-46ef-b41d-904abee730d2
+                        Position: {X: -46.0, Y: 8.0, Z: -4.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3e626e10dd158846564b18e217d125a8: ref!! 45b21810-9bf5-4533-b8f4-7cea222283c8
         -   Entity:
                 Id: 2c35d380-9d5c-4605-b06d-ae49dac09d3f
                 Name: Modelo
@@ -1371,6 +1675,49 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 0c476c17-80e5-422b-a8ae-de6ab3487673
                 InstanceId: 5970d0b5-0716-4efa-b2b8-448b39c08d8d
+        -   Folder: null
+            Entity:
+                Id: 35da68ce-1ca0-4b14-9b4f-3d4d072dab72
+                Name: Modelo
+                Components:
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: 2a269b06-68db-4818-a4cd-6d57facd01ed
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size*: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset*: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 2c0bc59d-aa2b-47ae-a81c-a1ab72aba9ad
+                        Position*: {X: 0.22881652, Y: 0.0, Z: -0.39203367}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 8.0, Y: 3.5, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: a429d7df-baa8-4323-8028-6ace9ea54f24
+                        Model*: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: 95ee69e1-8bf3-498b-a84c-10a061b3e878
         -   Folder: Sala 3
             Entity:
                 Id: 36ece7d4-3269-4c24-899f-7675e6f778e4
@@ -1413,6 +1760,28 @@ Hierarchy:
                 BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: f25ffdcb-1c58-45af-8007-e24d486dbec9
+        -   Entity:
+                Id: 3709e283-1a95-4c75-9542-be0816d026a1
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 6e090a74-373c-4e7e-8731-4eaa51381279
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: a7734f9f-85dc-4037-8ce0-72c1a62e84ff
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: 0cc3baa6-279c-45df-902f-4e2270c63878
         -   Folder: null
             Entity:
                 Id: 37173fcf-1e29-43a6-899d-e98683d5e3d0
@@ -1691,6 +2060,150 @@ Hierarchy:
                 BasePartId: a95bdd9a-d4b5-4794-93a1-c91229340c52
                 InstanceId: bfb7e0cb-0791-4103-99ee-e77fb38a7a43
         -   Entity:
+                Id: 43029a18-3ab4-480e-8008-f48ef266c46e
+                Name: "Partículas"
+                Components:
+                    ab5f0ff33be84be4576ecc9600f312a1: !TransformComponent
+                        Id: b072745a-4346-475d-a220-447e8d97e2b4
+                        Position: {X: 0.0, Y: 0.2, Z: 0.0}
+                        Rotation: {X: -4.371139E-08, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 0.2}
+                        Children: {}
+                    e7b18cdc52fd5dbf42146476aa7acdb5: !ParticleSystemComponent
+                        Id: 258e1bf9-b2d3-443c-99e9-7f1f4996d1ea
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 1.0, G: 0.0, B: 1.0, A: 0.39215687}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                0bb0b4d692dfa4ecbca6ad2d8b8f437d:
+                                    ParticleLifetime: {X: 2.0, Y: 4.0}
+                                    SortingPolicy: ByOrder
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Brillo
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        c8a001c7e85ef73c9c99b0cfbb90b6ec: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 4.0
+                                    Initializers:
+                                        104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.2}
+                                        74b5ec95eb237d0fbc6df36e211d7738: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: 0.5, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                        1b9625bd46999c9dbee4cd9348aba191: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: -1.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Interpolate: false
+                                        2be575e220b4c25d22bde2252366f2d2: !InitialRotationSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            AngularRotation: {X: -360.0, Y: 360.0}
+                                    Updaters:
+                                        51c45ad5981014c93840960c16f9955c: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        4bf50b8158aa20168b1243da627d62da:
+                                                            Key: 0.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                                        e8c08bb3be5ffac2bd918082430d2e9a:
+                                                            Key: 0.1
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        0b25ddd01aea87784a67e63f2a9747de:
+                                                            Key: 0.8
+                                                            Value: 0.8
+                                                            TangentType: Linear
+                                                        ddab55ab4fa0a214eb2fe0ad77430aa9:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+                        RenderGroup: Group1
+            Base:
+                BasePartAsset: "3058a8fb-6fd5-4bc9-8df4-19fe486ca86e:Prefabs/Entorno/Poder (Daño)"
+                BasePartId: 8b274751-6ddf-429d-a517-8ad6d404bef9
+                InstanceId: 748ee4ea-80eb-4c76-9496-96fec4daef26
+        -   Entity:
                 Id: 45088e3b-3e4d-4e91-8a2d-84b639af98e6
                 Name: "Dañable torso"
                 Components:
@@ -1911,6 +2424,48 @@ Hierarchy:
                         Id: 79e10b42-f435-4dd6-8dd4-c14f82cd262e
                         Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 4aa89067-5962-4d93-8df7-f9e07a220777
+                Name: Poder (Invulnerabilidad)
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 31f6f590-0646-4e3f-9a46-00c6b8417a8e
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 26430e73-c007-4625-a5f5-db8fc7ecb6df
+                            782b05ef9f89770634fdd5c7d4359d9b: ref!! 972a4697-41d0-466b-9af0-9137d2bee64b
+                            12826206053e9ed4176ad8937a12e2df: ref!! a8ce3cc0-cce7-4316-bbf9-47a170f29a21
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 75c22e46-1248-401d-b3bf-1393796fb43e
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    d4a6cfb5e8fa7e584de806c4e1719eb6: !Voronomir.ControladorPoder,Voronomir.Proyecto
+                        Id: 6d4087fd-7d07-4020-a804-c34ebd75e5fa
+                        poder: invulnerabilidad
+                        modelo: ref!! 26430e73-c007-4625-a5f5-db8fc7ecb6df
+                        "partículas": ref!! 1887e3c8-1253-4db6-851a-277207b03877
+                        emisor: ref!! 1656e305-070e-4b4c-ba52-8ab4f5936b40
+            Base:
+                BasePartAsset: 64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/Entorno/Poder (Invulnerabilidad)
+                BasePartId: ee35195a-1513-4fb3-9e69-a6ad7040a4f5
+                InstanceId: 3a67d468-ea3e-46e8-a08a-87d51506dee6
         -   Entity:
                 Id: 4b39c6b3-2095-459d-a121-38af27e04d17
                 Name: "Partículas"
@@ -2474,6 +3029,28 @@ Hierarchy:
                         Model: dc582356-68b0-413e-b4e0-646ceae64fcc:Modelos/M1E1/Sala0
                         Materials: {}
         -   Entity:
+                Id: 58b694ff-4580-4a74-bbaf-f68703e8eb52
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: ecd7320c-4d6b-4bb9-9a2e-1e6585eb790e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 1fc96514-27dd-49c2-a5b1-d81a42cfaecd
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: 3686e751-4182-4946-9d4d-d5daca55d1db
+        -   Entity:
                 Id: 595220c5-4731-479c-aada-457e34b51a1a
                 Name: Modelo
                 Components:
@@ -2551,6 +3128,51 @@ Hierarchy:
                 BasePartAsset: "4f93362e-7333-4a66-aedd-cac3999f99c0:Prefabs/Entorno/Botón (Amarillo)"
                 BasePartId: 63fdb236-87e8-4777-b828-fecb4efc1f27
                 InstanceId: 906f7db1-a59b-494d-8440-497c2592cc56
+        -   Folder: Sala 3
+            Entity:
+                Id: 5af8f1a3-421e-4875-a233-f62c8ceb2f76
+                Name: Activador
+                Components:
+                    b0f10699d65ec41b687f59ee363befd6: !TransformComponent
+                        Id: 3b7c65f1-c759-4c40-818c-d2e93801dbc2
+                        Position*: {X: -37.0, Y: -3.0, Z: 18.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 20.0, Y: 1.0, Z: 20.0}
+                        Children:
+                            35969d616976fdc596f8fb33fa34a234: ref!! 0cab90ca-fff9-4c08-ad17-e9c93aecd9e9
+                    45bb46cc8e08e3285f9b30cf4b79af13: !StaticColliderComponent
+                        Id: 3611e575-21c4-4758-9622-102a519dbea5
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
+                        Id: e47e130e-315d-4cf4-8258-42e9dd74cfc0
+                        activables:
+                            15553c053e8c1ecf011615915505223b*: ref!! d6b5ade9-9274-44af-9ad1-9572109b26a0
+                            c040a9a2f65129b69f5ec161e5d4a04d*: ref!! 0cffedc5-4801-423f-9f5b-2296625c66c7
+                            cff6ceae105bc192f5d55805a5bfc00b*: ref!! bc535ceb-9621-49e5-a354-10322090055d
+                            0c10cc34be243301ef004a04c9b1a72b*: ref!! 5ea99578-7581-4a20-b088-6d1bc3f15084
+                            a74771f360f194ef963930b21584cdb0*: ref!! 28aa6c84-5ce6-4873-8876-5913ff3b13bd
+                            177e403918cedcc84102537f1d1cb8e0*: ref!! 9e3ea34f-8e5b-4d87-bfd7-3ab90bd8f2d1
+                            eed92b90341dea6f75a685533f608208*: ref!! ab5e148f-91d2-4d77-8e99-a72c463e3c9e
+                            3ab92d8964e020a56f53724183ca6b93*: ref!! ace0ab2f-c450-4cbd-bddf-c6b7e490384a
+            Base:
+                BasePartAsset: 2566113e-21c9-42ef-94ea-b6ba54bf4188:Prefabs/Entorno/Activador
+                BasePartId: d050dde3-78be-4c83-b124-1ec2abdb06e5
+                InstanceId: 476cff7c-7e81-4f50-b290-09f57d11b32d
         -   Folder: Mapa
             Entity:
                 Id: 5af9012c-1379-4f99-ad6a-376f30f571d6
@@ -2565,6 +3187,49 @@ Hierarchy:
                     9e6fd99d483f71d3202608c86972b99b: !BackgroundComponent
                         Id: 66f769e9-3a83-456b-959c-56ff8ef02b59
                         Texture: 1afb23f5-a8f8-44a2-929d-353d007943a0:Skybox texture
+        -   Folder: Sala 3
+            Entity:
+                Id: 5ea99578-7581-4a20-b088-6d1bc3f15084
+                Name*: Puerta (Circular) 3
+                Components:
+                    684e8d9d72b05614aa004a6afce49ac0: !StaticColliderComponent
+                        Id: 6e4c816b-c2f4-48b5-908e-d92d2e5f828b
+                        Enabled*: false
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            339b26397037be06899b1eaacf8faec7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 28cab883-099a-4ca0-8a34-dface4c98f4e
+                        Position*: {X: -28.45, Y: -3.0000002, Z: 14.2}
+                        Rotation*: {X: -0.0, Y: -0.5504807, Z: 0.0, W: 0.83484787}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            974930f89f5418aadc8036b440d5a6c6: ref!! ec778154-9461-42b2-a5ec-3e6ac4c9ab53
+                            ee4217cd28401cf1d731e17066bc4361: ref!! 7edfd437-3391-4c95-a1dd-52cad585f4e4
+                    288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
+                        Id: 59373f9a-c4b6-4351-8d45-bc792dba19c5
+                        instantanea*: true
+                        activaciones: 1
+                        modelo: ref!! ec778154-9461-42b2-a5ec-3e6ac4c9ab53
+                        emisor: ref!! 1984b165-a111-4722-9d72-76dd370a852b
+                        "posiciónAbierta*": {X: 0.0, Y: -3.1, Z: 0.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: 21308e1a-c1ee-40c9-9704-5eaa06068f00
         -   Folder: Sala 3
             Entity:
                 Id: 5fcbd7bb-24aa-4012-9de9-b26d0b83dfe7
@@ -3184,6 +3849,150 @@ Hierarchy:
                         Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                         Materials: {}
         -   Entity:
+                Id: 6c38517c-3573-4c8e-8fe8-2c3f12d8c488
+                Name: "Partículas"
+                Components:
+                    ab5f0ff33be84be4576ecc9600f312a1: !TransformComponent
+                        Id: a8ce3cc0-cce7-4316-bbf9-47a170f29a21
+                        Position: {X: 0.0, Y: 0.2, Z: 0.0}
+                        Rotation: {X: -4.371139E-08, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 0.2}
+                        Children: {}
+                    e7b18cdc52fd5dbf42146476aa7acdb5: !ParticleSystemComponent
+                        Id: 1887e3c8-1253-4db6-851a-277207b03877
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 0.0, G: 1.0, B: 0.0, A: 0.39215687}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                0bb0b4d692dfa4ecbca6ad2d8b8f437d:
+                                    ParticleLifetime: {X: 2.0, Y: 4.0}
+                                    SortingPolicy: ByOrder
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Brillo
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        c8a001c7e85ef73c9c99b0cfbb90b6ec: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 4.0
+                                    Initializers:
+                                        104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.2}
+                                        74b5ec95eb237d0fbc6df36e211d7738: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: 0.5, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                        1b9625bd46999c9dbee4cd9348aba191: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: -1.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Interpolate: false
+                                        2be575e220b4c25d22bde2252366f2d2: !InitialRotationSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            AngularRotation: {X: -360.0, Y: 360.0}
+                                    Updaters:
+                                        51c45ad5981014c93840960c16f9955c: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        4bf50b8158aa20168b1243da627d62da:
+                                                            Key: 0.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                                        e8c08bb3be5ffac2bd918082430d2e9a:
+                                                            Key: 0.1
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        0b25ddd01aea87784a67e63f2a9747de:
+                                                            Key: 0.8
+                                                            Value: 0.8
+                                                            TangentType: Linear
+                                                        ddab55ab4fa0a214eb2fe0ad77430aa9:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+                        RenderGroup: Group1
+            Base:
+                BasePartAsset: 64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/Entorno/Poder (Invulnerabilidad)
+                BasePartId: 366beae1-dd19-431b-a98c-ea330fda3824
+                InstanceId: 3a67d468-ea3e-46e8-a08a-87d51506dee6
+        -   Entity:
                 Id: 6de1deab-fcf6-485c-a434-81e983a86779
                 Name: Fin
                 Components:
@@ -3218,6 +4027,171 @@ Hierarchy:
                 BasePartAsset: ba20a406-510b-45d3-8837-e5839f7f9e4e:Prefabs/Entorno/Fin
                 BasePartId: ffaf0f04-a1a7-474a-8e05-7f0c7c41f485
                 InstanceId: 1ff7653c-5248-44ed-8a0c-838b69da7bd0
+        -   Entity:
+                Id: 6e57817c-ce6c-409a-ba49-5db8cb1daa91
+                Name: "Partículas"
+                Components:
+                    ab5f0ff33be84be4576ecc9600f312a1: !TransformComponent
+                        Id: 8634f96d-cbc0-4f75-9164-f513b92f134b
+                        Position: {X: 0.0, Y: 0.2, Z: 0.0}
+                        Rotation: {X: -4.371139E-08, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 0.2}
+                        Children: {}
+                    e7b18cdc52fd5dbf42146476aa7acdb5: !ParticleSystemComponent
+                        Id: 832c1780-a739-4664-9180-e485953f0b08
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 0.0, G: 1.0, B: 1.0, A: 0.39215687}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                0bb0b4d692dfa4ecbca6ad2d8b8f437d:
+                                    ParticleLifetime: {X: 2.0, Y: 4.0}
+                                    SortingPolicy: ByOrder
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: 0516766f-d678-4b27-acaf-05b075854d69:Texturas/Efectos/Brillo
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        c8a001c7e85ef73c9c99b0cfbb90b6ec: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 4.0
+                                    Initializers:
+                                        104ec731a07fe481bff4fcd1331837c8: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.2}
+                                        74b5ec95eb237d0fbc6df36e211d7738: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: 0.5, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                        1b9625bd46999c9dbee4cd9348aba191: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: -1.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Interpolate: false
+                                        2be575e220b4c25d22bde2252366f2d2: !InitialRotationSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            AngularRotation: {X: -360.0, Y: 360.0}
+                                    Updaters:
+                                        51c45ad5981014c93840960c16f9955c: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        4bf50b8158aa20168b1243da627d62da:
+                                                            Key: 0.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                                        e8c08bb3be5ffac2bd918082430d2e9a:
+                                                            Key: 0.1
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        0b25ddd01aea87784a67e63f2a9747de:
+                                                            Key: 0.8
+                                                            Value: 0.8
+                                                            TangentType: Linear
+                                                        ddab55ab4fa0a214eb2fe0ad77430aa9:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+                        RenderGroup: Group1
+            Base:
+                BasePartAsset: 9ff047a9-a9e8-4838-af1b-5b0a91f53265:Prefabs/Entorno/Poder (Velocidad)
+                BasePartId: e89b2c58-aca5-4656-9781-fa49ceb00a2b
+                InstanceId: 1d36595d-4121-45fc-8c5c-b65280685c96
+        -   Entity:
+                Id: 6f70a83c-825d-44b3-b9ec-c7598fa95e03
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 972a4697-41d0-466b-9af0-9137d2bee64b
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 1656e305-070e-4b4c-ba52-8ab4f5936b40
+                        Sounds:
+                            f6ff0bc540a30aa830334fe03cf0f94f~sonido: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/Entorno/Poder (Invulnerabilidad)
+                BasePartId: f4bfee44-8d74-4f83-82d1-69380cae9886
+                InstanceId: 3a67d468-ea3e-46e8-a08a-87d51506dee6
         -   Folder: null
             Entity:
                 Id: 6ffa6976-cf4a-48b5-8ab6-808f85e016f2
@@ -3245,6 +4219,18 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: fd468b26-6c42-4010-8266-2ec5a5170898
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: Sala 3
+            Entity:
+                Id: 73e4021f-12b9-4c08-862f-ab093cd5988c
+                Name: "Poder (Daño)"
+                Components:
+                    8bb2d48b59843982ad899c7189a8bbc2: !TransformComponent
+                        Id: 1a72901a-2196-4884-b5b5-7575b565b7b5
+                        Position: {X: -37.0, Y: -3.0, Z: 18.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            39c1d50c33bfc70cce7ddb8a704ba718: ref!! 3139842a-6c29-4a86-b293-ad0f4df9d1ec
         -   Entity:
                 Id: 76e104ba-794b-47bd-9b88-4da878bbbe7a
                 Name: "Partículas"
@@ -3725,6 +4711,28 @@ Hierarchy:
                                 Value: {R: 0.78431374, G: 0.78431374, B: 0.78431374}
                         Intensity: 2.0
         -   Entity:
+                Id: 810a784e-b724-4e95-9085-b9c16caa08bb
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 81d4310e-04a9-430a-8a1b-d8c796ef6f9f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: e822f0cf-712e-4e05-8ace-a3abba0ded13
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: e1994fd4-812e-4e92-a012-af04639c4b28
+        -   Entity:
                 Id: 810dbe91-366b-43bc-826a-effe930d8b4b
                 Name: Emisor
                 Components:
@@ -3747,6 +4755,18 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 4a60d4e8-39c8-4965-bd7f-125c563e38bb
                 InstanceId: ac5ceabe-9de8-4d25-9dd9-acbefc97256e
+        -   Folder: Sala 4
+            Entity:
+                Id: 813ff55d-8ea1-4f5e-ada3-d642a3abb5a0
+                Name: Poder (Invulnerabilidad)
+                Components:
+                    13e45ac67e45c6ceb383ff5855d06b30: !TransformComponent
+                        Id: 7133b4cd-c8ce-4f7b-89c3-766bf0025009
+                        Position: {X: -46.0, Y: 8.0, Z: -4.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            8f6d08b33aa4a22b6de0e80b108fbb07: ref!! 31f6f590-0646-4e3f-9a46-00c6b8417a8e
         -   Folder: null
             Entity:
                 Id: 826d321c-dc25-450b-94b0-7eaa33d5fbc2
@@ -4147,6 +5167,49 @@ Hierarchy:
                 InstanceId: ac5ceabe-9de8-4d25-9dd9-acbefc97256e
         -   Folder: null
             Entity:
+                Id: 97596c9a-4942-4565-a931-946b5f5f0994
+                Name: Modelo
+                Components:
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: ee1ea8ea-bb36-41bc-8fc5-c6f634e63254
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size*: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset*: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 1d90249d-21e6-47bd-82a8-c6e48a227371
+                        Position*: {X: 0.22881652, Y: 0.0, Z: -0.39203367}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 8.0, Y: 3.5, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 15fd0192-f975-465a-b750-ebb994dca709
+                        Model*: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: e1994fd4-812e-4e92-a012-af04639c4b28
+        -   Folder: null
+            Entity:
                 Id: 98640d63-4b49-4c0d-ab19-b79bed5cc338
                 Name: "Cámara"
                 Components:
@@ -4267,16 +5330,68 @@ Hierarchy:
                             a97504c1f3f90d9317941a9527a02426: ref!! bff58105-718a-442f-bfc0-978bc669ee60
                         activables:
                             280283ebce1a2a356bda9e2519ac9007: ref!! a42e39fa-4a38-4d7b-a702-e8908a86bd06
-        -   Entity:
-                Id: 9ddbb929-0991-4b55-b131-effcf2f0149c
-                Name: Puerta
+        -   Folder: Sala 3
+            Entity:
+                Id: 9e3ea34f-8e5b-4d87-bfd7-3ab90bd8f2d1
+                Name*: Puerta (Circular) 5
                 Components:
-                    8397c80bc505b0708d1f6e06efa3df34: !TransformComponent
-                        Id: ced6180f-8f3d-4e4a-aa8a-1b41e57492d5
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                    684e8d9d72b05614aa004a6afce49ac0: !StaticColliderComponent
+                        Id: 0ac370dc-b71f-41b5-b11b-a73d36695623
+                        Enabled*: false
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            339b26397037be06899b1eaacf8faec7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 57b4de34-9870-4cb9-9497-4d3ad13c6dc5
+                        Position*: {X: -27.75, Y: -2.9999988, Z: 22.16}
+                        Rotation*: {X: 0.0, Y: 0.5504807, Z: 0.0, W: 0.83484787}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            974930f89f5418aadc8036b440d5a6c6: ref!! 2c0bc59d-aa2b-47ae-a81c-a1ab72aba9ad
+                            ee4217cd28401cf1d731e17066bc4361: ref!! 1bc94507-4f24-4a4d-ae70-84d3d1fd9676
+                    288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
+                        Id: 52b42f6b-c685-4467-8449-68368babf79d
+                        instantanea*: true
+                        activaciones: 1
+                        modelo: ref!! 2c0bc59d-aa2b-47ae-a81c-a1ab72aba9ad
+                        emisor: ref!! a4f2b44a-eb8e-4db4-9ab6-cc8de9be275d
+                        "posiciónAbierta*": {X: 0.0, Y: -3.1, Z: 0.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: 95ee69e1-8bf3-498b-a84c-10a061b3e878
+        -   Folder: null
+            Entity:
+                Id: 9e69be8a-06b3-4f08-8f06-ff8c6356ba66
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 93596c12-3757-42fe-b050-f352b435dd10
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: a04d1421-1a62-47f6-8dc7-24db6a115ad8
+                        Model: 440cbaed-3492-4a7f-8695-02ab886f0bfe:Modelos/Entorno/PoderRapidez/Rapidez
+                        Materials: {}
+            Base:
+                BasePartAsset: 9ff047a9-a9e8-4838-af1b-5b0a91f53265:Prefabs/Entorno/Poder (Velocidad)
+                BasePartId: 90ffcfac-272e-49e3-a6c6-2369dd4081fd
+                InstanceId: 1d36595d-4121-45fc-8c5c-b65280685c96
         -   Folder: null
             Entity:
                 Id: 9ebb4f30-da5f-457b-9eca-4750f65ea5c3
@@ -4631,6 +5746,28 @@ Hierarchy:
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: a33fd6d1-a555-494d-8a74-78c1ef821c6c
         -   Entity:
+                Id: a53ba11e-9c70-400d-905c-ae70dd6e6f1a
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 2b06f924-b9e6-4f26-8453-71a65ea91f01
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 9c574593-f889-4a74-b211-27d130449922
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: 073f2163-319c-433f-bb02-f2873ac39e91
+        -   Entity:
                 Id: a542ec2c-66c8-43b4-a49d-1b36fe609985
                 Name: "Partículas"
                 Components:
@@ -4810,8 +5947,8 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 0cf5bfad-9731-47b2-a769-3543c5a4f8ae
-                        Position*: {X: -46.5, Y: -2.0, Z: 14.0}
-                        Rotation*: {X: -0.4055798, Y: -0.579228, Z: -0.579228, W: 0.4055798}
+                        Position*: {X: -48.25, Y: -2.0, Z: 14.0}
+                        Rotation*: {X: -0.38511795, Y: -0.5930296, Z: -0.5930296, W: 0.38511795}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3788e322f260de9e64a1e85455890478: ref!! 867dc0b8-5c88-472b-bed9-126b0f4083a5
@@ -4902,6 +6039,49 @@ Hierarchy:
                         Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                         Materials:
                             e88d3199e2b451fdd119f4532e94fb53~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
+        -   Folder: Sala 3
+            Entity:
+                Id: ab5e148f-91d2-4d77-8e99-a72c463e3c9e
+                Name*: Puerta (Circular) 6
+                Components:
+                    684e8d9d72b05614aa004a6afce49ac0: !StaticColliderComponent
+                        Id: 678a60b7-2979-4f20-b0de-c92edf31f513
+                        Enabled*: false
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            339b26397037be06899b1eaacf8faec7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: a8b3cec2-5372-49d3-af27-3355ac7040b1
+                        Position*: {X: -43.13, Y: -2.9999988, Z: 26.8}
+                        Rotation*: {X: 0.0, Y: -0.31730464, Z: 0.0, W: 0.94832367}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            974930f89f5418aadc8036b440d5a6c6: ref!! 90fffd13-875d-467c-8cbd-114df26de09b
+                            ee4217cd28401cf1d731e17066bc4361: ref!! 2b06f924-b9e6-4f26-8453-71a65ea91f01
+                    288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
+                        Id: e556b6df-97b2-4a96-b888-ebed1a3ec831
+                        instantanea*: true
+                        activaciones: 1
+                        modelo: ref!! 90fffd13-875d-467c-8cbd-114df26de09b
+                        emisor: ref!! 9c574593-f889-4a74-b211-27d130449922
+                        "posiciónAbierta*": {X: 0.0, Y: -3.1, Z: 0.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: 073f2163-319c-433f-bb02-f2873ac39e91
         -   Entity:
                 Id: ac36096a-c53c-449a-9736-d8d16e630fa6
                 Name: Fuego
@@ -4922,6 +6102,61 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: e1f6681a-f5c0-4a3c-83b5-6b117a74df1c
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: Sala 3
+            Entity:
+                Id: ace0ab2f-c450-4cbd-bddf-c6b7e490384a
+                Name*: Puerta (Circular) 7
+                Components:
+                    684e8d9d72b05614aa004a6afce49ac0: !StaticColliderComponent
+                        Id: e110343d-9018-455d-bcb8-df9756f4f3b3
+                        Enabled*: false
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            339b26397037be06899b1eaacf8faec7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 227f3560-f478-45bf-9979-fb2cc6ad7621
+                        Position*: {X: -31.25, Y: -2.9999988, Z: 27.1}
+                        Rotation*: {X: 0.0, Y: 0.31730464, Z: 0.0, W: 0.94832367}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            974930f89f5418aadc8036b440d5a6c6: ref!! 0c962a8b-3f7b-4f7b-b495-37195cccc606
+                            ee4217cd28401cf1d731e17066bc4361: ref!! 022b9d8f-8d59-4b57-b086-9c4c7949623e
+                    288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
+                        Id: ea02e3e4-c807-4d93-8fe3-a70d65cb9f31
+                        instantanea*: true
+                        activaciones: 1
+                        modelo: ref!! 0c962a8b-3f7b-4f7b-b495-37195cccc606
+                        emisor: ref!! 3bb3b9c1-4022-4805-8200-f610ef44c1dc
+                        "posiciónAbierta*": {X: 0.0, Y: -3.1, Z: 0.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: 29f1914f-99c9-40d5-937a-73545b7df5b1
+        -   Folder: Sala 1
+            Entity:
+                Id: acff8231-8ccf-48fc-8d16-c82e18024902
+                Name: Poder (Velocidad)
+                Components:
+                    b7970543d80df9f3be64075e9ff066ed: !TransformComponent
+                        Id: 973e14a3-320d-43a3-a671-1ff24a1f0366
+                        Position: {X: 23.0, Y: 8.0, Z: 8.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            de5bfdad816f703449eb3cc4f7e57f54: ref!! 0245166c-5cf9-413d-af52-f07f775192c7
         -   Folder: Sala 0/Grupo 0
             Entity:
                 Id: aff20ceb-9f12-464a-aae0-45f079c64811
@@ -5429,6 +6664,49 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: f359be66-b309-4bfa-834a-76e6d4d5f4c5
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: null
+            Entity:
+                Id: b8c15a85-82ab-42f7-a773-4df5d2a4a132
+                Name: Modelo
+                Components:
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: 97532011-71e9-4e9c-981d-b5881b0ff4a8
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size*: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset*: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: ca5c5d5d-12df-4c55-b543-01f2234e40d9
+                        Position*: {X: 0.22881652, Y: 0.0, Z: -0.39203367}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 8.0, Y: 3.5, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 199bcb49-b74f-4b53-8db4-1c970f465b7f
+                        Model*: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: 3686e751-4182-4946-9d4d-d5daca55d1db
         -   Folder: Sala 4
             Entity:
                 Id: b94348c7-6b22-45ea-b61e-73bf4c26921e
@@ -5497,6 +6775,49 @@ Hierarchy:
                         Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                         Materials:
                             e88d3199e2b451fdd119f4532e94fb53~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
+        -   Folder: Sala 3
+            Entity:
+                Id: bc535ceb-9621-49e5-a354-10322090055d
+                Name*: Puerta (Circular) 2
+                Components:
+                    684e8d9d72b05614aa004a6afce49ac0: !StaticColliderComponent
+                        Id: 9786c469-7c8e-4421-9ed1-024cc8f1417e
+                        Enabled*: false
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            339b26397037be06899b1eaacf8faec7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 7ac59257-2067-445d-b590-033eeaa9f155
+                        Position*: {X: -45.75, Y: -3.0000002, Z: 14.6}
+                        Rotation*: {X: 0.0, Y: 0.5504807, Z: 0.0, W: 0.83484787}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            974930f89f5418aadc8036b440d5a6c6: ref!! 6e22f8d9-1612-45cf-9d2d-d27d407bd5ad
+                            ee4217cd28401cf1d731e17066bc4361: ref!! df9bcbe1-d4b2-47ba-99d3-d2b0dfba2bbf
+                    288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
+                        Id: f415fc33-b678-4123-b443-4c6d733f87cd
+                        instantanea*: true
+                        activaciones: 1
+                        modelo: ref!! 6e22f8d9-1612-45cf-9d2d-d27d407bd5ad
+                        emisor: ref!! 45293b5e-1c61-4d21-ad89-d8a700d59e18
+                        "posiciónAbierta*": {X: 0.0, Y: -3.1, Z: 0.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: 3219473f-63be-4631-a955-eb753a4a795c
         -   Folder: null
             Entity:
                 Id: bcef8831-f4b9-44c3-a121-830bb0b45b36
@@ -5513,6 +6834,83 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: dd90a596-e723-4a2b-a286-196f763a0dc2
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Entity:
+                Id: bfe18927-103e-4ef8-98c2-b6ddc35972d5
+                Name: Secreto
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 851ae5d3-a0fa-4bbf-8517-9c31c457fa20
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 3.0, Y: 0.5, Z: 2.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 0cc8908f-f40f-4a34-b209-05fcd345f26a
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: f9132b0c-9b36-4523-80a0-6651aec07bb6
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    5fdbf293971470194dde6fc608a8a334: !Voronomir.ControladorSecreto,Voronomir.Proyecto
+                        Id: 5bf930d7-b67c-4115-adb1-90db0d26a713
+            Base:
+                BasePartAsset: d5058dbe-b40f-4ad7-b603-b31e795ab1f4:Prefabs/Entorno/Secreto
+                BasePartId: 72adb0e4-c869-4909-be91-02f39498b109
+                InstanceId: 8ccabb7f-0012-4ba3-978f-4f7889c1818f
+        -   Folder: null
+            Entity:
+                Id: c01fe9ad-7a31-4ae8-894d-70cb1d9fbe6e
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: d2dca997-657c-4d68-a74e-99e9f8ff9cb6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 4c18f4f6-f9b9-49d4-bc4d-03ecc26ad600
+                        Enabled: false
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: d5058dbe-b40f-4ad7-b603-b31e795ab1f4:Prefabs/Entorno/Secreto
+                BasePartId: 31ac85c4-45ee-471c-a957-2959f7c007c3
+                InstanceId: b4a66f6b-bd1a-406b-81e9-ed0cfa6fdd6e
+        -   Entity:
+                Id: c052d9b3-da7d-4632-b9c6-8f970e158719
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 022b9d8f-8d59-4b57-b086-9c4c7949623e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 3bb3b9c1-4022-4805-8200-f610ef44c1dc
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: 29f1914f-99c9-40d5-937a-73545b7df5b1
         -   Entity:
                 Id: c262eb4d-7dda-490b-b576-179003477777
                 Name: Emisor
@@ -5567,6 +6965,41 @@ Hierarchy:
                         Id: 81c614e5-6734-4cde-9809-673f9c168152
                         Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials: {}
+        -   Entity:
+                Id: c7278518-a712-4a8b-8ad9-99e5caf50306
+                Name: Secreto
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 45b21810-9bf5-4533-b8f4-7cea222283c8
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 0.5, Z: 2.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! d2dca997-657c-4d68-a74e-99e9f8ff9cb6
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: a7e20f5f-ca39-4531-9ad6-3b98424fd027
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    5fdbf293971470194dde6fc608a8a334: !Voronomir.ControladorSecreto,Voronomir.Proyecto
+                        Id: e5628f81-a106-4c3e-9dcd-0c90745807ab
+            Base:
+                BasePartAsset: d5058dbe-b40f-4ad7-b603-b31e795ab1f4:Prefabs/Entorno/Secreto
+                BasePartId: 72adb0e4-c869-4909-be91-02f39498b109
+                InstanceId: b4a66f6b-bd1a-406b-81e9-ed0cfa6fdd6e
         -   Entity:
                 Id: c93be7c8-a168-4773-b85f-6784eaac0db1
                 Name: "Dañable cabeza"
@@ -5638,6 +7071,49 @@ Hierarchy:
                         Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                         Materials:
                             e88d3199e2b451fdd119f4532e94fb53~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
+        -   Folder: null
+            Entity:
+                Id: cc26531d-4f1b-4a38-a94f-358bf13b02ab
+                Name: Modelo
+                Components:
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: e3061921-5d32-4929-b439-a7a38c6140ac
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size*: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset*: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 6e22f8d9-1612-45cf-9d2d-d27d407bd5ad
+                        Position*: {X: 0.22881652, Y: 0.0, Z: -0.39203367}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 8.0, Y: 3.5, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: ecc9b4c8-d8e5-45ad-a4c9-e0b85971bdca
+                        Model*: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: 3219473f-63be-4631-a955-eb753a4a795c
         -   Entity:
                 Id: ce93489d-09dd-4004-a68f-316293f494f7
                 Name: "Dañable torso"
@@ -5811,6 +7287,25 @@ Hierarchy:
                 InstanceId: ac5ceabe-9de8-4d25-9dd9-acbefc97256e
         -   Folder: null
             Entity:
+                Id: d47617db-0ed2-4831-9fbd-b54052b39413
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 313eeb07-c587-4bb0-b5f3-630a447efc6d
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 713c6e60-5e36-4d6e-89e5-3ebd5505bceb
+                        Model: "47c1c69d-2581-453c-a307-453e8ac0f6f7:Modelos/Entorno/PoderDaño/Daño"
+                        Materials: {}
+            Base:
+                BasePartAsset: "3058a8fb-6fd5-4bc9-8df4-19fe486ca86e:Prefabs/Entorno/Poder (Daño)"
+                BasePartId: 560a1261-7bf4-4110-a706-95b81d281962
+                InstanceId: 748ee4ea-80eb-4c76-9496-96fec4daef26
+        -   Folder: null
+            Entity:
                 Id: d49acb3f-9137-4962-8cc3-5d5bbcce7a6f
                 Name: Derecha
                 Components:
@@ -5826,6 +7321,49 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: be5aec12-2afc-4788-8cb7-53966dec6a3e
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: Sala 3
+            Entity:
+                Id: d6b5ade9-9274-44af-9ad1-9572109b26a0
+                Name*: Puerta (Circular) 0
+                Components:
+                    684e8d9d72b05614aa004a6afce49ac0: !StaticColliderComponent
+                        Id: 4417b144-a91f-4e7e-866f-1418dfc4503c
+                        Enabled*: false
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            339b26397037be06899b1eaacf8faec7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 4a26fb4e-f70d-4a2b-90d3-6b6f2dd37e88
+                        Position*: {X: -40.76, Y: -3.0000014, Z: 9.43}
+                        Rotation*: {X: 0.0, Y: 0.20107792, Z: 0.0, W: 0.9795753}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            974930f89f5418aadc8036b440d5a6c6: ref!! 1d90249d-21e6-47bd-82a8-c6e48a227371
+                            ee4217cd28401cf1d731e17066bc4361: ref!! 81d4310e-04a9-430a-8a1b-d8c796ef6f9f
+                    288763fffe05bd2540a5679e6d2ee407: !Voronomir.ControladorPuerta,Voronomir.Proyecto
+                        Id: 23828e4b-6eb6-4aa6-83b0-6c51c4cef6de
+                        instantanea*: true
+                        activaciones: 1
+                        modelo: ref!! 1d90249d-21e6-47bd-82a8-c6e48a227371
+                        emisor: ref!! e822f0cf-712e-4e05-8ace-a3abba0ded13
+                        "posiciónAbierta*": {X: 0.0, Y: -3.1, Z: 0.0}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: e1994fd4-812e-4e92-a012-af04639c4b28
         -   Entity:
                 Id: d79b8ebb-4d3f-4fa2-9dba-bcb050f2a3b0
                 Name: Jugador
@@ -6180,6 +7718,69 @@ Hierarchy:
                 BasePartId: 065b1661-ac2e-4926-a264-3dea81b8af3d
                 InstanceId: 23accc34-36bc-428c-9f46-88e982ca4db7
         -   Entity:
+                Id: e55cfb87-3dd5-42fe-b1a5-0b4b58b08269
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 02b7ee2a-55c3-47dd-a969-384156cfddba
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 0de859bc-696b-46cd-82e7-11f902524095
+                        Sounds:
+                            f6ff0bc540a30aa830334fe03cf0f94f~sonido: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 9ff047a9-a9e8-4838-af1b-5b0a91f53265:Prefabs/Entorno/Poder (Velocidad)
+                BasePartId: 0f1382bf-6c40-4201-8302-929ad137e015
+                InstanceId: 1d36595d-4121-45fc-8c5c-b65280685c96
+        -   Folder: null
+            Entity:
+                Id: e57a0c4a-d879-416a-b722-de33e2d14872
+                Name: Poder (Velocidad)
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 0245166c-5cf9-413d-af52-f07f775192c7
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 93596c12-3757-42fe-b050-f352b435dd10
+                            aab4919473b59fccd23d8c44d8f03271: ref!! 02b7ee2a-55c3-47dd-a969-384156cfddba
+                            45dac818d5143b939458e25a152f86f6: ref!! 8634f96d-cbc0-4f75-9164-f513b92f134b
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 227ec228-3ef3-44af-95d3-c45747b9c286
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    d4a6cfb5e8fa7e584de806c4e1719eb6: !Voronomir.ControladorPoder,Voronomir.Proyecto
+                        Id: f7a1a068-970e-4fee-a2d2-bf4f6ba0aabb
+                        poder: velocidad
+                        modelo: ref!! 93596c12-3757-42fe-b050-f352b435dd10
+                        "partículas": ref!! 832c1780-a739-4664-9180-e485953f0b08
+                        emisor: ref!! 0de859bc-696b-46cd-82e7-11f902524095
+            Base:
+                BasePartAsset: 9ff047a9-a9e8-4838-af1b-5b0a91f53265:Prefabs/Entorno/Poder (Velocidad)
+                BasePartId: a5bbf80c-25f8-4ffa-bbdf-0a6f4f966fa9
+                InstanceId: 1d36595d-4121-45fc-8c5c-b65280685c96
+        -   Entity:
                 Id: e5de3ec3-f4d7-4eed-b14b-a38ee17bf592
                 Name: Fuego
                 Components:
@@ -6199,6 +7800,37 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 1db03233-9b09-47d5-a47a-0b5d2d4c84bf
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Entity:
+                Id: e73b0fd0-01ab-425a-9555-4d49b18cfac6
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 0cab90ca-fff9-4c08-ad17-e9c93aecd9e9
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 41f65f7f-a9f3-443e-ab7b-dc9f3a92e60b
+                        Enabled: false
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: 2566113e-21c9-42ef-94ea-b6ba54bf4188:Prefabs/Entorno/Activador
+                BasePartId: 2826dafd-3bb4-4276-8c3a-8807cabe8e1c
+                InstanceId: 476cff7c-7e81-4f50-b290-09f57d11b32d
+        -   Folder: Sala 1
+            Entity:
+                Id: e7edc9d5-23b6-44b6-9226-630e07e60573
+                Name: Secreto
+                Components:
+                    1af143c4eaaf6f44b8a543e4b6aa0f95: !TransformComponent
+                        Id: 89dfa32c-bfeb-459c-92d4-75d532d0dc79
+                        Position: {X: 23.5, Y: 8.0, Z: 8.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b19c6f5ee7a522f6f4122a1ffc62dd28: ref!! 851ae5d3-a0fa-4bbf-8517-9c31c457fa20
         -   Folder: Sala 2/Mapa
             Entity:
                 Id: e9f98bb1-2244-4ad1-bb98-33e9ccc37274
@@ -6489,6 +8121,49 @@ Hierarchy:
                 BasePartAsset: 2566113e-21c9-42ef-94ea-b6ba54bf4188:Prefabs/Entorno/Activador
                 BasePartId: d050dde3-78be-4c83-b124-1ec2abdb06e5
                 InstanceId: b204ec72-f784-4ad0-bb23-4da022aa6224
+        -   Folder: null
+            Entity:
+                Id: ef263f8e-f1b6-4454-b6ba-b3a3e83ff8f6
+                Name: Modelo
+                Components:
+                    f1109e5812b70113e72b75afd6282887: !RigidbodyComponent
+                        Id: 29f1bbb8-f58a-42ad-bdc1-a4a8c709ae41
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c34ed7afc4bfa6fc4b0ff35b81b845c0: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size*: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset*: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 90fffd13-875d-467c-8cbd-114df26de09b
+                        Position*: {X: 0.22881652, Y: 0.0, Z: -0.39203367}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 6.0, Y: 3.5, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 24ac46ea-a940-4589-b65b-2550690b8c1a
+                        Model*: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials: {}
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: 073f2163-319c-433f-bb02-f2873ac39e91
         -   Entity:
                 Id: ef93c420-d8ea-46a3-bf40-5278a53486c8
                 Name: Emisor
@@ -6530,6 +8205,47 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 20b2dabc-0cb3-430e-a286-cd4ae705787f
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Entity:
+                Id: f086d8b9-8073-45ca-99a7-dfeafadddf79
+                Name: "Poder (Daño)"
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 3139842a-6c29-4a86-b293-ad0f4df9d1ec
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aae55b7d8184320bcf68acab7c4a3f21: ref!! 313eeb07-c587-4bb0-b5f3-630a447efc6d
+                            16ae3454a8bff85012039fc94f62b715: ref!! 7eb0c915-c42e-4105-9d0d-e307c9c77ee8
+                            97745cdcac9c1da347f8b63c65e4c7b2: ref!! b072745a-4346-475d-a220-447e8d97e2b4
+                    d9469cd099c47c13797826aad6eb93e2: !StaticColliderComponent
+                        Id: 001bf68b-0247-4e4b-aca8-b68928ff971f
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    d4a6cfb5e8fa7e584de806c4e1719eb6: !Voronomir.ControladorPoder,Voronomir.Proyecto
+                        Id: 54e4fcf0-766b-4b10-9510-8d29fc0241fb
+                        poder: "daño"
+                        modelo: ref!! 313eeb07-c587-4bb0-b5f3-630a447efc6d
+                        "partículas": ref!! 258e1bf9-b2d3-443c-99e9-7f1f4996d1ea
+                        emisor: ref!! 426eb2ca-ff29-4a30-ab2e-2561928ede78
+            Base:
+                BasePartAsset: "3058a8fb-6fd5-4bc9-8df4-19fe486ca86e:Prefabs/Entorno/Poder (Daño)"
+                BasePartId: 135ae145-305c-4c0e-a9fb-bcb9860bb7db
+                InstanceId: 748ee4ea-80eb-4c76-9496-96fec4daef26
         -   Entity:
                 Id: f2e8e972-146f-48a1-bf06-97143f8cad50
                 Name: "PartículasCalentamiento"
@@ -6663,6 +8379,47 @@ Hierarchy:
                         Id: d0b69ec3-ebcb-4db8-8289-633133c01374
                         Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
                         Materials: {}
+        -   Entity:
+                Id: f33eb77d-dc6b-4b26-876e-b3f7f64ac413
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: df9bcbe1-d4b2-47ba-99d3-d2b0dfba2bbf
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 45293b5e-1c61-4d21-ad89-d8a700d59e18
+                        Sounds:
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
+                InstanceId: 3219473f-63be-4631-a955-eb753a4a795c
+        -   Folder: null
+            Entity:
+                Id: f626a7ae-d986-471c-b1eb-eb82e69612d2
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 26430e73-c007-4625-a5f5-db8fc7ecb6df
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 2ede18d3-b485-48c0-9665-071d95559c2c
+                        Model: e8d3d766-24dd-46d2-b345-9d5ba829b473:Modelos/Entorno/PoderInvencibilidad/Invencibilidad
+                        Materials: {}
+            Base:
+                BasePartAsset: 64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/Entorno/Poder (Invulnerabilidad)
+                BasePartId: 75e85694-c129-4841-a288-0597b6172a4d
+                InstanceId: 3a67d468-ea3e-46e8-a08a-87d51506dee6
         -   Entity:
                 Id: f8156fef-0926-4ef9-bf8b-745486454c0b
                 Name: Fuego
@@ -7060,3 +8817,24 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: ae26fb61-6490-4523-8dc8-10162f73c79a
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Entity:
+                Id: fe46a559-988d-4261-b612-3536da0cc3d4
+                Name: Emisor
+                Components:
+                    7825d8f5b48e222550ea2938b8feaf88: !TransformComponent
+                        Id: 7eb0c915-c42e-4105-9d0d-e307c9c77ee8
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
+                        Id: 426eb2ca-ff29-4a30-ab2e-2561928ede78
+                        Sounds:
+                            f6ff0bc540a30aa830334fe03cf0f94f~sonido: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
+                        UseHRTF: true
+                        DirectionalFactor: 0.5
+                        Environment: Large
+            Base:
+                BasePartAsset: "3058a8fb-6fd5-4bc9-8df4-19fe486ca86e:Prefabs/Entorno/Poder (Daño)"
+                BasePartId: c12cda72-f6ef-4bb2-b86e-ba3c72fcb47c
+                InstanceId: 748ee4ea-80eb-4c76-9496-96fec4daef26

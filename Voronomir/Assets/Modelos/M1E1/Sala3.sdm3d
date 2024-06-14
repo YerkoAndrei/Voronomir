@@ -18,6 +18,10 @@ Materials:
         Name: Piso1
         MaterialInstance:
             Material: a7da7e5f-ddb1-498c-aeda-8cac30575416:Materiales/Mapa/Piso1
+    5f39805266b34cfb3dfa33f479335107:
+        Name: Material
+        MaterialInstance:
+            Material: null
 Modifiers: {}
 ~SourceHashes:
-    aa2d4237f2c4fc91762f73ec1c9dba30~Sala3.glb: 336f803717988eb31205f1ff63439f30
+    aa2d4237f2c4fc91762f73ec1c9dba30~Sala3.glb: 2351fbb644d5c36af29e7076cd9c8ad9
