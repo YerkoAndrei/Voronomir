@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 using System.Collections.Generic;
 using Stride.Core.Serialization;
 using Stride.Engine;
-using Newtonsoft.Json;
 using System.Globalization;
 
 namespace Voronomir;
@@ -90,7 +90,7 @@ public class SistemaTraducción : StartupScript
 
     private static Dictionary<string, string> CrearDiccionario(string traducciones)
     {
-        var diccionario = JsonConvert.DeserializeObject<Dictionary<string, string>>(traducciones);
+        var diccionario = JsonSerializer.Deserialize<Dictionary<string, string>>(traducciones);
         return diccionario;
     }
 

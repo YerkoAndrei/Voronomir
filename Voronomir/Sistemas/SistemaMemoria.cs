@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Text.Json;
 using System.Collections.Generic;
 using Stride.Engine;
-using Newtonsoft.Json;
 
 namespace Voronomir;
 using static Utilidades;
@@ -49,7 +49,7 @@ public class SistemaMemoria : StartupScript
             return;
 
         // Guarda valores predeterminados
-        var json = JsonConvert.SerializeObject(ObtenerConfiguraciónPredeterminada(ancho, alto));
+        var json = JsonSerializer.Serialize(ObtenerConfiguraciónPredeterminada(ancho, alto));
         var encriptado = DesEncriptar(json);
         File.WriteAllText(rutaConfiguración, encriptado);
     }
@@ -90,7 +90,7 @@ public class SistemaMemoria : StartupScript
         configuraciones[configuración.ToString()] = valor;
 
         // Sobreescribe archivo
-        var json = JsonConvert.SerializeObject(configuraciones);
+        var json = JsonSerializer.Serialize(configuraciones);
         var encriptado = DesEncriptar(json);
         File.WriteAllText(rutaConfiguración, encriptado);
     }
@@ -107,7 +107,7 @@ public class SistemaMemoria : StartupScript
         {
             var archivo = File.ReadAllText(rutaConfiguración);
             var desencriptado = DesEncriptar(archivo);
-            configuraciones = JsonConvert.DeserializeObject<Dictionary<string, string>>(desencriptado);
+            configuraciones = JsonSerializer.Deserialize<Dictionary<string, string>>(desencriptado);
         }
         return configuraciones;
     }
@@ -136,7 +136,7 @@ public class SistemaMemoria : StartupScript
         {
             var archivo = File.ReadAllText(rutaTiempos);
             var desencriptado = DesEncriptar(archivo);
-            tiempos = JsonConvert.DeserializeObject<Tiempos>(desencriptado);
+            tiempos = JsonSerializer.Deserialize<Tiempos>(desencriptado);
         }
 
         // Sobreescribe si es menor o crea si no existe
@@ -156,7 +156,7 @@ public class SistemaMemoria : StartupScript
                 break;
         }
 
-        var json = JsonConvert.SerializeObject(tiempos);
+        var json = JsonSerializer.Serialize(tiempos);
         var encriptado = DesEncriptar(json);
         File.WriteAllText(rutaTiempos, encriptado);
     }
@@ -169,7 +169,7 @@ public class SistemaMemoria : StartupScript
 
         var archivo = File.ReadAllText(rutaTiempos);
         var desencriptado = DesEncriptar(archivo);
-        var tiempos = JsonConvert.DeserializeObject<Tiempos>(desencriptado);
+        var tiempos = JsonSerializer.Deserialize<Tiempos>(desencriptado);
         var diccionario = new Dictionary<string, float>();
 
         switch (Dificultad)
