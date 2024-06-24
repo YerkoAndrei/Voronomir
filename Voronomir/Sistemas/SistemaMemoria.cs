@@ -11,7 +11,7 @@ using static Constantes;
 
 public class SistemaMemoria : StartupScript
 {
-    private static string carpetaPersistente = "C:\\Users\\{0}\\AppData\\LocalLow\\{1}\\{2}";
+    private static string carpetaPersistente = string.Empty;
     private static string desarrollador = "YerkoAndrei";
     private static string producto = "Voronomir";
 
@@ -32,7 +32,7 @@ public class SistemaMemoria : StartupScript
 
     private static void EstablecerRutas()
     {
-        carpetaPersistente = string.Format(carpetaPersistente, Environment.UserName, desarrollador, producto);
+        carpetaPersistente = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), desarrollador, producto);
         rutaConfiguración = Path.Combine(carpetaPersistente, archivoConfiguración);
         rutaTiempos = Path.Combine(carpetaPersistente, archivoTiempos);
     }
