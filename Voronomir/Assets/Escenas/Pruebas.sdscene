@@ -3693,7 +3693,7 @@ Hierarchy:
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 0.78431374}
                             Radius: 4.0
-                            Shadow: !LightPointShadowMap
+                            Shadow:
                                 Size: Small
                                 BiasParameters: {}
                         Intensity: 4.0
@@ -7286,6 +7286,10 @@ Hierarchy:
                         Id: 41c4e19c-0c5b-4c55-b8b8-d2a4e05dd1f1
                         Priority: -1
                         enemigo: especialLigero
+                    a8024b9a2251dfc21eebd26d3d2dc95b: !Voronomir.ControladorPersecusionesTrigonom%25C3%25A9tricas,Voronomir.Proyecto
+                        Id: a9575163-d9f7-4946-9765-7e7c6c6ba35d
+                        Priority: -1
+                        enemigo: especialMediano
                     be25c192f8666064ceb8a1bef89aaeae: !Voronomir.ControladorPersecusionesTrigonom%25C3%25A9tricas,Voronomir.Proyecto
                         Id: 2b886118-5837-4ff4-8202-f21652caf832
                         Priority: -1
@@ -7299,6 +7303,7 @@ Hierarchy:
                         babosa: e8ff3d35-f6b5-4e6b-8c5d-8fba8c117327:Prefabs/Enemigos/Babosa
                         "araña": "9aa19048-03e4-4927-8465-80862da8cc48:Prefabs/Enemigos/Araña"
                         dron: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Enemigos/Dron
+                        robot: 2b4d2001-96ee-4320-919f-17cb8ff35193:Prefabs/Enemigos/Robot
                         cerebro: f89baa3b-42d2-4588-b0af-916f14d07e34:Prefabs/Enemigos/Cerebro
         -   Entity:
                 Id: d6469b5e-a04d-4f00-8adf-79e362dcd0f4
@@ -7445,7 +7450,7 @@ Hierarchy:
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 0.98039216}
-                            Shadow: !LightDirectionalShadowMap
+                            Shadow:
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf
                                     FilterSize: Filter7x7

@@ -1,0 +1,19 @@
+!Model
+Id: 15e1b3a3-7e75-4219-8747-df1542baf9d4
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file Robot.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    26ffe4139431f7d95fb24f4b6941cb61:
+        Name: Metal
+        MaterialInstance:
+            Material: 42c8ba77-cb4f-44a8-9506-c6c3c757542f:Modelos/Enemigos/Robot/Materiales/Metal
+    8e4de11d3715d9d4702628b5b41153e3:
+        Name: Deco
+        MaterialInstance:
+            Material: e2c5ee19-5f38-453a-9174-62b3de5883f2:Modelos/Enemigos/Robot/Materiales/Deco
+Modifiers: {}
+~SourceHashes:
+    7d1e06603c3a2cf6241f929c75692b36~Robot.glb: b6c55ede7a8ac444bd7db59368e49a94

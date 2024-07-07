@@ -16,7 +16,7 @@ public class ControladorDemo : AsyncScript
     public Prefab babosa;
     public Prefab araña;
     public Prefab dron;
-    //public Prefab ;
+    public Prefab robot;
     public Prefab cerebro;
 
     private Vector3[] posiciones;
@@ -84,7 +84,8 @@ public class ControladorDemo : AsyncScript
             }
             if (Input.IsKeyPressed(Keys.F8))
             {
-
+                var enemigo = robot.Instantiate()[0];
+                Inicializar(enemigo);                
             }
             if (Input.IsKeyPressed(Keys.F9))
             {

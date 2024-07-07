@@ -4905,7 +4905,7 @@ Hierarchy:
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 0.78431374}
                             Radius: 4.0
-                            Shadow: !LightPointShadowMap
+                            Shadow:
                                 Size: Small
                                 BiasParameters: {}
                         Intensity: 4.0
@@ -5649,7 +5649,7 @@ Hierarchy:
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 0.98039216}
-                            Shadow: !LightDirectionalShadowMap
+                            Shadow:
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf
                                     FilterSize: Filter7x7
@@ -6468,6 +6468,10 @@ Hierarchy:
                         Id: 7833aaef-850b-4b8a-bfe0-8e80c0a4597e
                         Priority: -1
                         enemigo: especialLigero
+                    37f73180f1e44f2042c7eb9053982a87: !Voronomir.ControladorPersecusionesTrigonom%25C3%25A9tricas,Voronomir.Proyecto
+                        Id: 2f0dfd8c-e9a4-4660-8c39-a43640913970
+                        Priority: -1
+                        enemigo: especialMediano
                     be25c192f8666064ceb8a1bef89aaeae: !Voronomir.ControladorPersecusionesTrigonom%25C3%25A9tricas,Voronomir.Proyecto
                         Id: 7899fca6-4c74-448f-a922-82c64888e566
                         Priority: -1
@@ -6481,6 +6485,7 @@ Hierarchy:
                         babosa: e8ff3d35-f6b5-4e6b-8c5d-8fba8c117327:Prefabs/Enemigos/Babosa
                         "araña": "9aa19048-03e4-4927-8465-80862da8cc48:Prefabs/Enemigos/Araña"
                         dron: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Enemigos/Dron
+                        robot: null
                         cerebro: f89baa3b-42d2-4588-b0af-916f14d07e34:Prefabs/Enemigos/Cerebro
         -   Entity:
                 Id: b5c4939b-ce2f-490d-a0a5-9130ad8c86a7

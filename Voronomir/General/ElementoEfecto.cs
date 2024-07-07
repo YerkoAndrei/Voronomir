@@ -128,7 +128,9 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
                 rayos.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.especialMediano:
-
+                rayos.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
+                rayos.Enabled = true;
+                rayos.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.especialPesado:
                 rayos.Entity.Transform.Scale = Vector3.One * multiplicadorDaño;
@@ -174,7 +176,8 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
                 Entity.Transform.Position = posición + Vector3.UnitY * 3f;
                 break;
             case Enemigos.especialMediano:
-
+                aparición.Entity.Transform.Scale = Vector3.One * 0.5f;
+                Entity.Transform.Position = posición + Vector3.UnitY * 1f;
                 break;
             case Enemigos.especialPesado:
                 aparición.Entity.Transform.Scale = Vector3.One * 1f;
@@ -237,7 +240,10 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
                 muerteRayos.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.especialMediano:
-
+                muerteRayos.Entity.Transform.Scale = Vector3.One * 0.6f;
+                muerteRayos.Entity.Transform.Position += (Vector3.UnitY * 1f);
+                muerteRayos.Enabled = true;
+                muerteRayos.ParticleSystem.ResetSimulation();
                 break;
             case Enemigos.especialPesado:
                 muerteRayos.Entity.Transform.Scale = Vector3.One * 0.5f;

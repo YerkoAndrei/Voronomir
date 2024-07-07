@@ -81,7 +81,7 @@ public static class Constantes
         rangoPesado,    // Araña
 
         especialLigero, // Dron
-        especialMediano,// 
+        especialMediano,// Robot
         especialPesado, // Cerebro
     }
 

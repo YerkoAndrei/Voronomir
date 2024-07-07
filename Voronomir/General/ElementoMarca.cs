@@ -94,6 +94,9 @@ public class ElementoMarca : StartupScript
                 crear = false;
                 break;
             case Enemigos.especialMediano:
+                textura.SpriteProvider = ObtenerSprite(marcaFuerte);
+                textura.Entity.Transform.Scale = multiplicador * Vector3.One * 0.15f;
+                textura.Color = new Color(0, 0, 100, 200);
                 break;
             case Enemigos.especialPesado:
                 textura.SpriteProvider = ObtenerSprite(marcaFuerte);

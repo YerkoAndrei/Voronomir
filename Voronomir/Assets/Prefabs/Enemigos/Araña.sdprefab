@@ -264,7 +264,7 @@ Hierarchy:
                         RenderGroup: Group1
         -   Entity:
                 Id: a2d52ea3-1fed-47ae-928e-c28bfc64ff7e
-                Name: Veneno
+                Name: "Dañador"
                 Components:
                     b7ea4a4fefe468631620f7f375648eef: !TransformComponent
                         Id: d75465bf-f13c-4de1-a697-cb7c9be6b48f

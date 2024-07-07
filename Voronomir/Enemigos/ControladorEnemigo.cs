@@ -186,7 +186,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
             explotar = true;
 
         // Enemigos pequeños siempre explotan y cerebro nunca
-        if (enemigo == Enemigos.rangoLigero || enemigo == Enemigos.especialLigero)
+        if (enemigo == Enemigos.rangoLigero || enemigo == Enemigos.especialLigero || enemigo == Enemigos.especialMediano)
             explotar = true;
         else if (enemigo == Enemigos.especialPesado)
             explotar = false;
@@ -302,6 +302,8 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         {
             case Enemigos.especialLigero:
                 return 5;
+            case Enemigos.especialMediano:
+                return 2;
             case Enemigos.especialPesado:
                 return 3;
             default:
@@ -412,7 +414,16 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                 data.AlturaObjetivo = Vector3.UnitY * 1.4f;
                 break;
             case Enemigos.especialMediano:
+                data.Vida = 60;
+                data.Daño = 0;
+                data.Cadencia = 0.5f;
+                data.VelocidadMovimiento = 6;
+                data.VelocidadRotación = 4;
+                data.DistanciaSonido = 10;
+                data.TiempoBusqueda = 0.1f;
+                data.PersecutorTrigonométrico = true;
 
+                data.DistanciaAtaque = 3;
                 break;
             case Enemigos.especialPesado:
                 data.Vida = 100;
