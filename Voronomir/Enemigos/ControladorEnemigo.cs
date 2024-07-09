@@ -303,7 +303,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
             case Enemigos.especialLigero:
                 return 5;
             case Enemigos.especialMediano:
-                return 2;
+                return 2.2f;
             case Enemigos.especialPesado:
                 return 3;
             default:
@@ -415,19 +415,18 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                 break;
             case Enemigos.especialMediano:
                 data.Vida = 60;
-                data.Daño = 0;
                 data.Cadencia = 0.5f;
-                data.VelocidadMovimiento = 6;
+                data.VelocidadMovimiento = 4;
                 data.VelocidadRotación = 4;
                 data.DistanciaSonido = 10;
                 data.TiempoBusqueda = 0.1f;
                 data.PersecutorTrigonométrico = true;
 
-                data.DistanciaAtaque = 3;
+                data.Daño = 0;
+                data.DistanciaAtaque = 3.2f;
                 break;
             case Enemigos.especialPesado:
                 data.Vida = 100;
-                data.Daño = 0;
                 data.Cadencia = 0.5f;
                 data.VelocidadMovimiento = 10;
                 data.VelocidadRotación = 4;
@@ -435,6 +434,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                 data.TiempoBusqueda = 0.1f;
                 data.PersecutorTrigonométrico = true;
 
+                data.Daño = 0;
                 data.DistanciaAtaque = 4;
                 break;
         }

@@ -290,9 +290,9 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             0a5042c5122b96b7568d7bafd42c2219: ref!! 58cad4ee-090a-49ea-89ec-2267b4ae444b
-                            5335687c323b410f0abeb005c3b0e03f: ref!! c412e2fb-4b70-4874-ad89-83295814309b
                             255851c9b9799238d8e0f2eaab87c201: ref!! fea0c055-1bff-41c9-b5e8-a66193cca7a5
                             c5b0f56f48d65019360cc7156ebd89ed: ref!! d6b1a8c9-601a-46be-947b-e8ba4ce4811a
+                            a1909fefecec8395497d1d88877a620d: ref!! c412e2fb-4b70-4874-ad89-83295814309b
                             c7c9d0c6ae291e92cf71e8f13bd8a4e1: ref!! 07e87824-3863-43ff-971b-5642118571c8
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: e54a000a-7d20-48df-898b-5fced74ce053

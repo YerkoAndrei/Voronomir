@@ -38,14 +38,13 @@ Hierarchy:
                         ColliderShapes:
                             fbe76a3afc7b249bfeb4a9f90dc2ad2e: !CylinderColliderShapeDesc
                                 Height: 0.1
-                                Radius: 1.0
+                                Radius: 0.95
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
                         Id: 71449cdc-13ba-46a1-ae4f-054865ddc3b0
                         multiplicador: 1.0
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 2fea0cb1-9224-480b-9290-91414307d9d9
                 Name: "Dañador"
                 Components:
@@ -76,6 +75,7 @@ Hierarchy:
                         ColliderShapes:
                             e0f17c1eb8f3b49cf4f3c8fe99745cdb: !SphereColliderShapeDesc
                                 Is2D: false
+                                Radius: 0.45
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                     ad4cd4f1fee9916633c4d8642aa267cf: !Voronomir.ControladorDa%25C3%25B1oContinuo,Voronomir.Proyecto
                         Id: 10d0d904-033e-4094-9d22-859aa25aa58d
@@ -87,7 +87,7 @@ Hierarchy:
                     4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
                         Id: 132050c0-2d6b-48a4-8df3-9be93930fe3e
                         CollisionGroup: KinematicFilter
-                        CanCollideWith: StaticFilter, KinematicFilter
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter
                         CanSleep: false
                         Restitution: 0.2
                         Friction: 0.0
@@ -100,15 +100,14 @@ Hierarchy:
                         JumpSpeed: 0.0
                         Gravity: {X: 0.0, Y: -30.0, Z: 0.0}
                         ColliderShapes:
-                            ed72926b10062c3c2c8aad3be9245c95: !CylinderColliderShapeDesc
-                                Height: 0.2
-                                Radius: 1.2
-                                LocalOffset: {X: 0.0, Y: 0.1, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                            ed72926b10062c3c2c8aad3be9245c95: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: e44ba0a3-05d2-4328-9557-c05299692051
                         NavigationMesh: null
-                        GroupId: 2bdbfe22-c886-4059-a832-34043684b804
+                        GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: f676210a-43e1-4e59-bb2b-d825c4e0f37b
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -116,10 +115,11 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             a909ecd4234ff471c086e59a297e6f0a: ref!! fc0177f5-dd2f-43cf-9306-00f424597198
+                            45ff0ef40eb644255e2ed729b59ab724: ref!! d136026f-ffd8-43db-bdce-5e7894253389
+                            6659f3e21494b9285ab45339a8727815: ref!! c36f3319-db74-478c-b054-699a31ab38aa
                             81ba7fa4cf4be898fc09ac731099949f: ref!! 35260fb0-2c7d-47ff-a56e-138de1bebff7
                             c5b0f56f48d65019360cc7156ebd89ed: ref!! 13e5ca52-6456-4d65-91a6-5f3f082bd73b
-                            861a275ad267fbce0484952e931b32e5: ref!! c36f3319-db74-478c-b054-699a31ab38aa
-                            ee13f7f987c46c368d29e362c468a467: ref!! 63390347-ca83-4a29-abd1-4592b7695ed7
+                            191c567f3872c3295de7703d3343171a: ref!! 63390347-ca83-4a29-abd1-4592b7695ed7
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 389f1198-e9c6-484d-a34b-6c92270c1d74
                         enemigo: especialMediano
@@ -136,9 +136,42 @@ Hierarchy:
                         ojos: {}
                     a9b6ee359c9f1a2fc99c8d71fa30c93e: !Voronomir.AnimadorRobot,Voronomir.Proyecto
                         Id: 899bbf06-0638-4d12-87f0-56bd0e0e4ee7
-                        transform: ref!! f676210a-43e1-4e59-bb2b-d825c4e0f37b
                         modelo: ref!! e3cc33c5-4caa-49ee-b019-4b6f0564e3b4
                         "partículas": ref!! 3514f2c6-c76f-4454-95a0-81da42818f49
+        -   Entity:
+                Id: 59c3e032-175e-4abf-9f39-d72d3dab32ed
+                Name: Cuerpo
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: d136026f-ffd8-43db-bdce-5e7894253389
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: ceba1fba-9dda-44cb-9f68-d8ac540089a4
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !ConeColliderShapeDesc
+                                Height: 0.5
+                                Radius: 1.2
+                                LocalOffset: {X: 0.0, Y: 0.25, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: 6c56ff0f-4572-4963-be35-ce49e4379c9d
@@ -174,8 +207,7 @@ Hierarchy:
                         UseHRTF: true
                         DirectionalFactor: 0.5
                         Environment: Large
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: e80d41ef-4d26-480c-99d4-40891c40e99c
                 Name: Rayos
                 Components:
