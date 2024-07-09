@@ -12,6 +12,7 @@ using Stride.Engine;
 namespace Voronomir;
 using static Utilidades;
 using static Constantes;
+using static Voronomir.Constantes;
 
 public class ControladorArmas : StartupScript
 {
@@ -54,11 +55,9 @@ public class ControladorArmas : StartupScript
 
     // Metralleta
     private TipoDisparo turnoMetralleta;
-    private bool metralletaAtascada;
     private float primerDisparoMetralleta;
     private float tempoMetralleta;
-    private float tiempoMaxMetralleta;
-    private float tiempoAtascamientoMetralleta;
+    private float tiempoPrecisiónMetralleta;
 
     // Lanzagranadas
     private TipoDisparo turnoLanzagranadas;
@@ -73,9 +72,8 @@ public class ControladorArmas : StartupScript
         dañoMínimo = 1;
         dañoMáximo = 200;
 
-        tiempoMaxMetralleta = 6f;
-        tiempoAtascamientoMetralleta = 3f;
-        tempoMetralleta = tiempoMaxMetralleta;
+        tiempoPrecisiónMetralleta = 8f;
+        tempoMetralleta = tiempoPrecisiónMetralleta;
 
         // Filtros disparos
         colisionesDisparo = CollisionFilterGroupFlags.StaticFilter |
@@ -127,42 +125,31 @@ public class ControladorArmas : StartupScript
         if (Input.IsMouseButtonPressed(MouseButton.Left))
         {
             Disparar();
-
             primerDisparoMetralleta = ControladorPartida.ObtenerTiempo();
-            if (tempoMetralleta >= tiempoMaxMetralleta)
-                metralletaAtascada = false;
         }
 
         // Metralleta
-        if (Input.IsMouseButtonDown(MouseButton.Left) && armaActual == Armas.metralleta && !metralletaAtascada)
+        if (Input.IsMouseButtonDown(MouseButton.Left) && armaActual == Armas.metralleta)
         {
-            tempoMetralleta -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            if (tempoMetralleta > 0)
+                tempoMetralleta -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
 
             // Permite disparo singular
             if ((primerDisparoMetralleta + 0.12f) < ControladorPartida.ObtenerTiempo())
-            {
-                if (tempoMetralleta > 0)
-                    Disparar();
-                else
-                    AtascarMetralleta();
-            }
+                Disparar();
         }
 
-        if (!Input.IsMouseButtonDown(MouseButton.Left))
-            EnfriarMetralleta();
+        // Metralleta se enfria más rápido de lo que se calienta
+        if (!Input.IsMouseButtonDown(MouseButton.Left) && tempoMetralleta < tiempoPrecisiónMetralleta)
+        {
+            tempoMetralleta += (float)Game.UpdateTime.WarpElapsed.TotalSeconds * 2;
+        }
 
+        // Efecto calentamiento metralleta
         if (armaActual == Armas.metralleta)
         {
-            if (metralletaAtascada)
-            {
-                partículasMetralletaIzquierda.Color = Color.Transparent;
-                partículasMetralletaDerecha.Color = Color.Transparent;
-            }
-            else
-            {
-                partículasMetralletaIzquierda.Color = Color.Lerp(colorMetralletaCaliente, Color.Transparent, (tempoMetralleta / tiempoMaxMetralleta));
-                partículasMetralletaDerecha.Color = Color.Lerp(colorMetralletaCaliente, Color.Transparent, (tempoMetralleta / tiempoMaxMetralleta));
-            }
+            partículasMetralletaIzquierda.Color = Color.Lerp(colorMetralletaCaliente, Color.Transparent, (tempoMetralleta / tiempoPrecisiónMetralleta));
+            partículasMetralletaDerecha.Color = Color.Lerp(colorMetralletaCaliente, Color.Transparent, (tempoMetralleta / tiempoPrecisiónMetralleta));
         }
 
         // Espadas
@@ -206,10 +193,6 @@ public class ControladorArmas : StartupScript
     private void Disparar(bool clicIzquierdo = true)
     {
         if (cambiandoArma)
-            return;
-
-        // Metralleta
-        if (armaActual == Armas.metralleta && metralletaAtascada)
             return;
 
         // Cadencia
@@ -262,7 +245,7 @@ public class ControladorArmas : StartupScript
             case Armas.escopeta:
                 for (int i = 0; i < 20; i++)
                 {
-                    CalcularRayo(0.1f);
+                    CalcularRayo(0.2f, 0.1f);
                 }
                 controlador.VibrarCámara(16, 10);
                 ActivarLuz();
@@ -271,7 +254,8 @@ public class ControladorArmas : StartupScript
                 break;
             case Armas.metralleta:
                 // Metralleta se vuelve impresisa según calentamiento
-                CalcularRayo(((tiempoMaxMetralleta - tempoMetralleta) / tiempoMaxMetralleta) * 0.1f);
+                CalcularRayo(((tiempoPrecisiónMetralleta - tempoMetralleta) / tiempoPrecisiónMetralleta) * 0.1f,
+                             ((tiempoPrecisiónMetralleta - tempoMetralleta) / tiempoPrecisiónMetralleta) * 0.2f);
                 ActivarLuz();
                 animadorMetralleta.AnimarDisparo(0.1f, 0.1f, turnoMetralleta);
                 últimoDisparoMetralleta = ControladorPartida.ObtenerTiempo();
@@ -295,11 +279,11 @@ public class ControladorArmas : StartupScript
         }
     }
 
-    private void CalcularRayo(float imprecisión)
+    private void CalcularRayo(float imprecisiónHorizontal, float imprecisiónVertical)
     {
-        var aleatorioX = RangoAleatorio(-(imprecisión), imprecisión);
-        var aleatorioY = RangoAleatorio(-(imprecisión), imprecisión);
-        var aleatorioZ = RangoAleatorio(-(imprecisión), imprecisión);
+        var aleatorioX = RangoAleatorio(-(imprecisiónHorizontal), imprecisiónHorizontal);
+        var aleatorioY = RangoAleatorio(-(imprecisiónVertical), imprecisiónVertical);
+        var aleatorioZ = RangoAleatorio(-(imprecisiónHorizontal), imprecisiónHorizontal);
         var aleatorio = new Vector3(aleatorioX, aleatorioY, aleatorioZ);
 
         // Distancia máxima de disparo: 500
@@ -523,19 +507,6 @@ public class ControladorArmas : StartupScript
             else
                 ControladorCofres.IniciarEfectoDañoContinuo(armaActual, posición, normal);
         }
-    }
-
-    private void EnfriarMetralleta()
-    {
-        if (tempoMetralleta < tiempoMaxMetralleta)
-            tempoMetralleta += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
-    }
-
-    private async void AtascarMetralleta()
-    {
-        metralletaAtascada = true;
-        await Task.Delay((int)(tiempoAtascamientoMetralleta * 1000));
-        tempoMetralleta = tiempoMaxMetralleta;
     }
 
     private async void AcercarMira(bool acercar)
@@ -830,6 +801,11 @@ public class ControladorArmas : StartupScript
                 await animadorLanzagranadas.AnimarEntradaArma();
                 break;
         }
+    }
+
+    public float ObtenerCalentamientoMetralleta()
+    {
+        return tempoMetralleta;
     }
 
     public bool ObtenerAnimando()

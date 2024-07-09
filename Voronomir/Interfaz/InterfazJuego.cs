@@ -48,6 +48,7 @@ public class InterfazJuego : SyncScript
     private TextBlock txtTiempo;
     private TextBlock txtVelocidad;
     private TextBlock txtAceleración;
+    private TextBlock txtMetralleta;
     private TextBlock txtFPS;
 
     private TextBlock txtMuerteTiempo;
@@ -117,6 +118,7 @@ public class InterfazJuego : SyncScript
         txtTiempo = página.FindVisualChildOfType<TextBlock>("txtTiempo");
         txtVelocidad = página.FindVisualChildOfType<TextBlock>("txtVelocidad");
         txtAceleración = página.FindVisualChildOfType<TextBlock>("txtAceleración");
+        txtMetralleta = página.FindVisualChildOfType<TextBlock>("txtMetralleta");
         txtFPS = página.FindVisualChildOfType<TextBlock>("txtFPS");
 
         // Datos finales
@@ -536,6 +538,7 @@ public class InterfazJuego : SyncScript
         txtTiempo.Text = "T " + FormatearTiempo(ControladorPartida.ObtenerTiempo());
         txtVelocidad.Text = "V " + (ControladorPartida.ObtenerVelocidad() * 10).ToString("n3");
         txtAceleración.Text = "A " + ControladorPartida.ObtenerAceleración().ToString("n3");
+        txtMetralleta.Text = "M " + ControladorPartida.ObtenerCalentamientoMetralleta().ToString("n3");
         txtFPS.Text = "C " + Game.UpdateTime.FramePerSecond.ToString("000");
     }
 }

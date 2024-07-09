@@ -4559,8 +4559,9 @@ Hierarchy:
                     3c5fd295048f96e793a32c2554010bd0: !TextBlock ref!! b1359a90-e1ab-4fcf-b246-03fac74c857b
                     8690256253b35b35d25fb49e58788e4c: !TextBlock ref!! f12ec70d-c0f5-42c4-8d5e-ad8fee3252a7
                     560d555704fb21c34ae8fd4e2c668734: !TextBlock ref!! 8bcf0fa2-9db4-45af-b257-ebf297550626
+                    64e5ea07c47ca02c36ddcf99f3b9542b: !TextBlock ref!! 77a3b96e-c0bd-441e-beac-0c11126252f0
                     3086f641d01286a3604972d3e515f53d: !TextBlock ref!! 8600101f-2308-44e0-8d3b-23713ee0ae3c
-                Rows: 5
+                Rows: 6
         -   UIElement: !Slider
                 Id: 5cb2474f-a1b9-4d7e-9f22-50d219e6ee5b
                 DependencyProperties:
@@ -5944,6 +5945,21 @@ Hierarchy:
                 BasePartAsset: "ba9e7745-79d3-47e2-b048-5732b631699d:Interfaz/Librerías/Opciones"
                 BasePartId: e5a80500-9fe0-4a24-aa89-fc5bbb577f90
                 InstanceId: ea873e4a-11ca-4b38-9576-d89eab71fe38
+        -   UIElement: !TextBlock
+                Id: 77a3b96e-c0bd-441e-beac-0c11126252f0
+                DependencyProperties:
+                    7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 4
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 10.0
+                Margin: {Left: 2.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtMetralleta
+                Text: M 0.00
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
+                TextSize: 15.0
+                TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
                 Id: 77cf3739-20c1-46c4-a3ac-0b84970d5691
                 DependencyProperties: {}
@@ -6954,7 +6970,7 @@ Hierarchy:
         -   UIElement: !TextBlock
                 Id: 8600101f-2308-44e0-8d3b-23713ee0ae3c
                 DependencyProperties:
-                    7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 4
+                    7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 5
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 10.0
                 Margin: {Left: 2.0}

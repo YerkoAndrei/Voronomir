@@ -20,6 +20,7 @@ public class ControladorPartida : SyncScript
     private static ControladorPersecusionesTrigonométricas[] persecutoresTrigonométricos;
     private static ControladorActivadorMuerte[] activadoresMuerte;
     private static ControladorJugador jugador;
+    private static ControladorArmas armas;
     private static TransformComponent transformJugador;
     private static TransformComponent cabezaJugador;
     private static InterfazJuego interfaz;
@@ -41,6 +42,7 @@ public class ControladorPartida : SyncScript
         // Encuentra jugador para los demás
         var entidadJugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault();
         jugador = entidadJugador.Get<ControladorJugador>();
+        armas = entidadJugador.Get<ControladorArmas>();
         transformJugador = entidadJugador.Transform;
         cabezaJugador = jugador.cabeza;
 
@@ -176,6 +178,11 @@ public class ControladorPartida : SyncScript
     public static float ObtenerAceleración()
     {
         return jugador.ObtenerAceleración();
+    }
+
+    public static float ObtenerCalentamientoMetralleta()
+    {
+        return armas.ObtenerCalentamientoMetralleta();
     }
 
     // Persecutores
