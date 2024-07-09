@@ -52,8 +52,8 @@ public class InterfazOpciones : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnEspañol"), () => EnClicIdioma(Idiomas.español));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnInglés"), () => EnClicIdioma(Idiomas.inglés));
 
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDatosSí"), () => EnClicDatos(true));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDatosNo"), () => EnClicDatos(false));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDepuraciónSí"), () => EnClicDepuración(true));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDepuraciónNo"), () => EnClicDepuración(false));
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosBajos"), () => EnClicGráficos(Calidades.bajo));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosMedios"), () => EnClicGráficos(Calidades.medio));
@@ -109,7 +109,7 @@ public class InterfazOpciones : StartupScript
         BloquearSombras((Calidades)Enum.Parse(typeof(Calidades), SistemaMemoria.ObtenerConfiguración(Configuraciones.sombras)));
         BloquearEfectos((Calidades)Enum.Parse(typeof(Calidades), SistemaMemoria.ObtenerConfiguración(Configuraciones.efectos)));
         BloquearVSync(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.vSync)));
-        BloquearDatos(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.datos)));
+        BloquearDepuración(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.depuración)));
         BloquearHRTF(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf)));
         BloquearPantallaCompleta(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta)));
 
@@ -333,18 +333,18 @@ public class InterfazOpciones : StartupScript
             jugador.Get<ControladorJugador>().ConfigurarCampoVisión((int)slider.Value);
     }
 
-    private void EnClicDatos(bool activo)
+    private void EnClicDepuración(bool activo)
     {
         if (animando)
             return;
 
-        SistemaMemoria.GuardarConfiguración(Configuraciones.datos, activo.ToString());
-        BloquearDatos(activo);
+        SistemaMemoria.GuardarConfiguración(Configuraciones.depuración, activo.ToString());
+        BloquearDepuración(activo);
 
         // Configuración dinámica
         var interfaz = Entity.Scene.Entities.Where(o => o.Get<InterfazJuego>() != null).FirstOrDefault();
         if (interfaz != null)
-            interfaz.Get<InterfazJuego>().ConfigurarDatos(activo);
+            interfaz.Get<InterfazJuego>().ConfigurarDepuración(activo);
     }
 
     private void ConfigurarColorMiraR(object sender, RoutedEventArgs e)
@@ -546,10 +546,10 @@ public class InterfazOpciones : StartupScript
         }
     }
 
-    private void BloquearDatos(bool datos)
+    private void BloquearDepuración(bool depuración)
     {
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnDatosSí"), datos);
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnDatosNo"), !datos);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnDepuraciónSí"), depuración);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnDepuraciónNo"), !depuración);
     }
 
     private void BloquearHRTF(bool hrtf)

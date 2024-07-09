@@ -78,7 +78,7 @@ public class SistemaMemoria : StartupScript
             { Configuraciones.sensibilidad.ToString(),      "1.00" },
             { Configuraciones.campoVisión.ToString(),       "90" },
             { Configuraciones.colorMira.ToString(),         "100,255,100" },
-            { Configuraciones.datos.ToString(),             false.ToString() },
+            { Configuraciones.depuración.ToString(),             false.ToString() },
         };
     }
 

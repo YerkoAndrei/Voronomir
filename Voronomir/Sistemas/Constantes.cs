@@ -144,6 +144,6 @@ public static class Constantes
         sensibilidad,
         campoVisión,
         colorMira,
-        datos
+        depuración
     }
 }

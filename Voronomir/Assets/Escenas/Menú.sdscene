@@ -89,7 +89,6 @@ Hierarchy:
                         Id: 5f99dc94-dcb1-4398-a617-3eb834e8a8ac
                         "códigos":
                             16b7f4df886b1f7b21704b43c4d5d234~txtOpcionesVolver: volver
-                            7f9e62b863b9748500f106bab6cfa408~txtDatos: datos
                             "a8be6221cc711acd1bc0f71901c79cf0~txtCampoVisión": "campoVisión"
                             484b324a57f81707e3cff98fa3ecfa21~txtSensibilidad: sensibilidad
                             2783625bd893ec7d6a8b0adc72b8ec88~txtVolumenGeneral: volumenGeneral
@@ -110,14 +109,15 @@ Hierarchy:
                             9f754da605d225c8e083554935a64bb3~txtPantallaNo: no
                             "b47abe713491a2ca03ea864e2587ad8e~txtVSyncSí": "sí"
                             39e67dfdeef801db2cb08bf194b37b87~txtVSyncNo: no
-                            "bd44e3bcf550bbc9aa89a15e7bdf0585~txtDatosSí": "sí"
-                            7f59266e481a8a91dd0c5ac41afb5b4b~txtDatosNo: no
                             f200fbdc291c194036c0c010a1815316~txtHRTF: hrtf
                             "ef4c7fefb9c051e305dbb205489aaaea~txtHRTFSí": "sí"
                             030fdb8ce3aace92bc8e51a19a5fa6dd~txtHRTFNo: no
                             "ad2e966219ac77169457c99935a4337c~txtDescripciónHRTF": "descripciónHrtf"
                             4d971fef3dee94c53ac60e361cebc5e3~txtColorMira: colorMira
                             90abc67678b65decbb561cac341d1216~txtEfectos: efectos
+                            "b76c5e3c5c7efa3574ebd82cdf1101f3~txtDepuración": "depuración"
+                            "84e634ab3e34ebe6a6f3538b68ec8ef0~txtDepuraciónSí": "sí"
+                            "aa847e93eee5bf3d1cfb1baf1ea92eb6~txtDepuraciónNo": no
                     2a3f5fd9b4d9f74d08afc9b240c3f933: !UIComponent
                         Id: 6fe1333c-8c6e-459b-a3be-af9814613a43
                         Page: "2973b9e0-75a7-45db-bc7a-1d6a505e0191:Interfaz/Menú"

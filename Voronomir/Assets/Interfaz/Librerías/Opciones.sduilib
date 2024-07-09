@@ -131,7 +131,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtDatos
+                Name: "txtDepuración"
                 Text: Datos
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
@@ -1325,7 +1325,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: btnDatosNo
+                Name: "btnDepuraciónNo"
                 Children:
                     21950b6ae099597a396ccd6983fb426f: !Button ref!! 33accdc2-6142-4f6f-8ce8-61bd7868e3e9
                     53fda23d5ef109b30b2f298899261524: !ImageElement ref!! 0633c763-9ae5-462d-b219-c0ecb8b4ba78
@@ -1958,7 +1958,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: Datos
+                Name: "Depuración"
                 Children:
                     c65ccb4166bd8d18fc2fba7cf0642cff: !TextBlock ref!! 05fbbc43-7798-4c6b-b3bd-aaadb45b18f7
                     60448cad345faefa5970de37bfd63ef6: !Grid ref!! df2aa11d-cddb-42d6-a777-1f8c94a5770d
@@ -6402,7 +6402,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtDatosNo
+                Name: "txtDepuraciónNo"
                 Text: No
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
@@ -6586,7 +6586,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: "btnDatosSí"
+                Name: "btnDepuraciónSí"
                 Children:
                     21950b6ae099597a396ccd6983fb426f: !Button ref!! 5367bd43-0735-4a0a-bbbf-93dcd119ab7c
                     53fda23d5ef109b30b2f298899261524: !ImageElement ref!! a63ce4d4-aa56-4411-b2fb-b0f92196f42e
@@ -7041,7 +7041,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: "txtDatosSí"
+                Name: "txtDepuraciónSí"
                 Text: "Sí"
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0

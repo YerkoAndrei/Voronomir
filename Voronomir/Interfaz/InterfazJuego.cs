@@ -42,7 +42,7 @@ public class InterfazJuego : SyncScript
     private Grid imgInvulnerabilidad;
     private Grid imgVelocidad;
 
-    private UniformGrid panelDatos;
+    private UniformGrid panelDepuración;
     private TextBlock txtMensaje;
     private TextBlock txtPosición;
     private TextBlock txtTiempo;
@@ -110,7 +110,7 @@ public class InterfazJuego : SyncScript
         imgInvulnerabilidad = página.FindVisualChildOfType<Grid>("imgInvulnerabilidad");
         imgVelocidad = página.FindVisualChildOfType<Grid>("imgVelocidad");
 
-        panelDatos = página.FindVisualChildOfType<UniformGrid>("Datos");
+        panelDepuración = página.FindVisualChildOfType<UniformGrid>("Depuración");
         txtMensaje = página.FindVisualChildOfType<TextBlock>("txtMensaje");
 
         // Datos depuración
@@ -177,10 +177,10 @@ public class InterfazJuego : SyncScript
         var b = float.Parse(colorMira[2]) / 255;
         ConfigurarMira(new Color(r, g, b));
 
-        // Datos
-        panelDatos.Visibility = Visibility.Hidden;
-        if (bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.datos)))
-            panelDatos.Visibility = Visibility.Visible;
+        // Depuración
+        panelDepuración.Visibility = Visibility.Hidden;
+        if (bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.depuración)))
+            panelDepuración.Visibility = Visibility.Visible;
 
         ApagarMiras();
         ApagarLlaves();
@@ -205,8 +205,8 @@ public class InterfazJuego : SyncScript
                 EnClicContinuar();
         }
 
-        if (ControladorPartida.ObtenerActivo() && panelDatos.Visibility == Visibility.Visible)
-            ActualizarDatos();
+        if (ControladorPartida.ObtenerActivo() && panelDepuración.Visibility == Visibility.Visible)
+            ActualizarDepuración();
     }
 
     private void Pausar()
@@ -274,12 +274,12 @@ public class InterfazJuego : SyncScript
         miraLanzagranadas.Color = color;
     }
 
-    public void ConfigurarDatos(bool activo)
+    public void ConfigurarDepuración(bool activo)
     {
         if (activo)
-            panelDatos.Visibility = Visibility.Visible;
+            panelDepuración.Visibility = Visibility.Visible;
         else
-            panelDatos.Visibility = Visibility.Hidden;
+            panelDepuración.Visibility = Visibility.Hidden;
     }
 
     private void EnClicSalir()
@@ -486,8 +486,8 @@ public class InterfazJuego : SyncScript
         ControladorPartida.Pausar(false);
         BloquearInterfaz(false);
 
-        if (panelDatos.Visibility == Visibility.Visible)
-            ActualizarDatos();
+        if (panelDepuración.Visibility == Visibility.Visible)
+            ActualizarDepuración();
 
         // Datos final
         txtFinalNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
@@ -532,7 +532,7 @@ public class InterfazJuego : SyncScript
         SistemaSonidos.SonarFinalizar();
     }
 
-    private void ActualizarDatos()
+    private void ActualizarDepuración()
     {
         txtPosición.Text = "P " + ControladorPartida.ObtenerPosiciónJugador().ToString("n3");
         txtTiempo.Text = "T " + FormatearTiempo(ControladorPartida.ObtenerTiempo());

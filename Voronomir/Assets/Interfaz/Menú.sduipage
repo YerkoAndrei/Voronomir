@@ -1843,7 +1843,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: Datos
+                Name: "Depuración"
                 Children:
                     c65ccb4166bd8d18fc2fba7cf0642cff: !TextBlock ref!! 7958d59e-4780-4219-8f02-6ca4dd833946
                     60448cad345faefa5970de37bfd63ef6: !Grid ref!! 551d3253-455f-4382-8332-82934629665a
@@ -3933,7 +3933,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: "btnDatosSí"
+                Name: "btnDepuraciónSí"
                 Children:
                     21950b6ae099597a396ccd6983fb426f: !Button ref!! 220d6bb8-f127-4282-8766-5ac91ff18674
                     53fda23d5ef109b30b2f298899261524: !ImageElement ref!! 2f806442-ac56-4ae9-b670-e679602661e1
@@ -5591,7 +5591,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtDatos
+                Name: "txtDepuración"
                 Text: Datos
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
@@ -6828,7 +6828,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtDatosNo
+                Name: "txtDepuraciónNo"
                 Text: No
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
@@ -10893,7 +10893,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: "txtDatosSí"
+                Name: "txtDepuraciónSí"
                 Text: "Sí"
                 Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
@@ -12236,7 +12236,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: btnDatosNo
+                Name: "btnDepuraciónNo"
                 Children:
                     21950b6ae099597a396ccd6983fb426f: !Button ref!! 8536ca30-9ab0-45ad-945f-075ec3194dae
                     53fda23d5ef109b30b2f298899261524: !ImageElement ref!! 4f269ae0-9f23-41b1-be8a-9a99b5145bba
