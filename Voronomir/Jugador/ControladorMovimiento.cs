@@ -1,9 +1,9 @@
-﻿using Stride.Core.Mathematics;
+﻿using System.Linq;
+using System.Globalization;
+using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
-using System.Linq;
-using System.Globalization;
 
 namespace Voronomir;
 using static Utilidades;
@@ -105,6 +105,7 @@ public class ControladorMovimiento : StartupScript
             aceleración = 0;
             detención = false;
         }
+
         if (cuerpo.Collisions.Where(TocaEnemigo).Count() > 0 && aceleración >= 1)
         {
             // 1 enemigo detiene velocidad
