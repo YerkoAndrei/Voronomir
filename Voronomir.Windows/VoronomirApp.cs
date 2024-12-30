@@ -1,4 +1,4 @@
-using Stride.Engine;
+ï»¿using Stride.Engine;
 using System.Windows;
 
 namespace Voronomir
@@ -14,13 +14,13 @@ namespace Voronomir
                 // Primer inicio
                 if (!SistemaMemoria.ObtenerExistenciaArchivo())
                 {
-                    // 63 = barra de título
+                    // 63 = barra de tÃ­tulo
                     var alto = (int)SystemParameters.FullPrimaryScreenHeight + 63;
                     var ancho = (int)SystemParameters.FullPrimaryScreenWidth;
-                    SistemaMemoria.EstablecerConfiguraciónPredeterminada(ancho, alto);
+                    SistemaMemoria.EstablecerConfiguraciÃ³nPredeterminada(ancho, alto);
                 }
                 else
-                    vSync = bool.Parse(SistemaMemoria.ObtenerConfiguración(Constantes.Configuraciones.vSync));
+                    vSync = bool.Parse(SistemaMemoria.ObtenerConfiguraciÃ³n(Constantes.Configuraciones.vSync));
 
                 // vSync
                 game.IsDrawDesynchronized = !vSync;
