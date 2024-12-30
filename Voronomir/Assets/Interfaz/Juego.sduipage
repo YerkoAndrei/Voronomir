@@ -9746,6 +9746,7 @@ Hierarchy:
                 Id: bde80a92-82c3-4198-93de-506ec9356289
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
                 Width: 1100.0
                 Height: 500.0
                 Margin: {}

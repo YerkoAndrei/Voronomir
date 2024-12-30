@@ -1328,6 +1328,7 @@ Hierarchy:
                 Id: 1d230229-3fb8-4bdd-87e0-956c9138186c
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
                 Width: 1100.0
                 Height: 500.0
                 Margin: {}
