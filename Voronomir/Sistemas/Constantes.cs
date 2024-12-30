@@ -142,7 +142,6 @@ public static class Constantes
         volumenEfectos,
         hrtf,
         sensibilidad,
-        campoVisión,
         colorMira,
         depuración
     }

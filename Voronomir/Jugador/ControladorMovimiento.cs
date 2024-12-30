@@ -21,6 +21,7 @@ public class ControladorMovimiento : StartupScript
     private Vector3 movimiento;
     private float velocidadBase;
     private float multiplicadorVelocidad;
+    private float maxVelocidadEspada;
     private bool caminando;
     private bool detención;
     private bool bloqueo;
@@ -34,7 +35,7 @@ public class ControladorMovimiento : StartupScript
 
     private float tiempoAceleración;
     private float tempoAceleración;
-    
+
     private float minVelocidad;
     private float maxVelocidad;
     private float aceleración;
@@ -60,6 +61,7 @@ public class ControladorMovimiento : StartupScript
 
         velocidadBase = 12f;
         multiplicadorVelocidad = velocidadBase;
+        maxVelocidadEspada = 2f - 1f;
         CambiarSensiblidad(false);
     }
 
@@ -204,6 +206,14 @@ public class ControladorMovimiento : StartupScript
             return maxVelocidad;
 
         return aceleración;
+    }
+
+    public float ObtenerPorcentajeVelocidad()
+    {
+        if (aceleración >= 1)
+            return ((aceleración - 1) / maxVelocidadEspada);
+        else
+            return 0;
     }
 
     public void DetenerMovimiento()

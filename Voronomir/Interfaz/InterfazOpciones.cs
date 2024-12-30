@@ -20,7 +20,6 @@ public class InterfazOpciones : StartupScript
     private Grid resoluciones;
     private TextBlock txtResoluciónActual;
     private TextBlock txtSensibilidadActual;
-    private TextBlock txtCampoVisiónActual;
 
     private Grid pestañaGráficos;
     private Grid pestañaSonidos;
@@ -96,9 +95,6 @@ public class InterfazOpciones : StartupScript
         txtSensibilidadActual = página.FindVisualChildOfType<TextBlock>("txtSensibilidadActual");
         txtSensibilidadActual.Text = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad), CultureInfo.InvariantCulture).ToString("n2", SistemaTraducción.Cultura);
 
-        txtCampoVisiónActual = página.FindVisualChildOfType<TextBlock>("txtCampoVisiónActual");
-        txtCampoVisiónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión);
-
         resoluciones = página.FindVisualChildOfType<Grid>("ListaResoluciones");
         resoluciones.Visibility = Visibility.Hidden;
 
@@ -158,7 +154,6 @@ public class InterfazOpciones : StartupScript
         var sliderEfectos = página.FindVisualChildOfType<Slider>("SliderEfectos");
 
         var sliderSensibilidad = página.FindVisualChildOfType<Slider>("SliderSensibilidad");
-        var sliderCampoVisión = página.FindVisualChildOfType<Slider>("SliderCampoVisión");
 
         var sliderColorMiraR = página.FindVisualChildOfType<Slider>("SliderColorMiraR");
         var sliderColorMiraG = página.FindVisualChildOfType<Slider>("SliderColorMiraG");
@@ -174,7 +169,6 @@ public class InterfazOpciones : StartupScript
         sliderColorMiraB.Value = float.Parse(colorMira[2]);
 
         sliderSensibilidad.Value = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.sensibilidad), CultureInfo.InvariantCulture);
-        sliderCampoVisión.Value = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión), CultureInfo.InvariantCulture);
 
         // Configuración sliders
         sliderGeneral.ValueChanged += ConfigurarVolumenGeneral;
@@ -186,7 +180,6 @@ public class InterfazOpciones : StartupScript
         sliderColorMiraB.ValueChanged += ConfigurarColorMiraB;
 
         sliderSensibilidad.ValueChanged += ConfigurarSensibilidad;
-        sliderCampoVisión.ValueChanged += ConfigurarCampoVisión;
 
         // Sonidos
         sliderGeneral.TouchDown += (s, a) => { SistemaSonidos.SonarBotónEntra(); };
@@ -200,9 +193,6 @@ public class InterfazOpciones : StartupScript
 
         sliderSensibilidad.TouchDown += (s, a) => { SistemaSonidos.SonarBotónEntra(); };
         sliderSensibilidad.TouchUp += (s, a) => { SistemaSonidos.SonarBotónSale(); };
-
-        sliderCampoVisión.TouchDown += (s, a) => { SistemaSonidos.SonarBotónEntra(); };
-        sliderCampoVisión.TouchUp += (s, a) => { SistemaSonidos.SonarBotónSale(); };
 
         // Actualiza gráficos
         ActualizaGráficos((Calidades)Enum.Parse(typeof(Calidades), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
@@ -316,21 +306,6 @@ public class InterfazOpciones : StartupScript
         var movimiento = Entity.Scene.Entities.Where(o => o.Get<ControladorMovimiento>() != null).FirstOrDefault();
         if (movimiento != null)
             movimiento.Get<ControladorMovimiento>().CambiarSensiblidadBase(slider.Value);
-    }
-
-    private void ConfigurarCampoVisión(object sender, RoutedEventArgs e)
-    {
-        if (animando)
-            return;
-
-        var slider = (Slider)sender;
-        SistemaMemoria.GuardarConfiguración(Configuraciones.campoVisión, slider.Value.ToString("n0", CultureInfo.InvariantCulture));
-        txtCampoVisiónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión);
-
-        // Configuración dinámica
-        var jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault();
-        if (jugador != null)
-            jugador.Get<ControladorJugador>().ConfigurarCampoVisión((int)slider.Value);
     }
 
     private void EnClicDepuración(bool activo)

@@ -180,6 +180,11 @@ public class ControladorPartida : SyncScript
         return jugador.ObtenerAceleración();
     }
 
+    public static float ObtenerCampoVisión()
+    {
+        return jugador.ObtenerCampoVisión();
+    }
+
     public static float ObtenerCalentamientoMetralleta()
     {
         return armas.ObtenerCalentamientoMetralleta();

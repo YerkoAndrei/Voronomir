@@ -159,7 +159,7 @@ public class InterfazMenú : StartupScript
 
     public void ActualizarTiempos()
     {
-        foreach(var tiempo in txtTiempos)
+        foreach (var tiempo in txtTiempos)
         {
             tiempo.Value.Text = SistemaMemoria.ObtenerTiempo(tiempo.Key);
         }

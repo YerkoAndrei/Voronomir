@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using System.Linq;
 using System.Threading;
-using System.Globalization;
 using Stride.Core.Mathematics;
 using Stride.Physics;
 using Stride.Engine;
@@ -30,6 +29,8 @@ public class ControladorJugador : SyncScript, IDañable
     private bool curando;
     private float vida;
     private float vidaMax;
+    private float campoVisiónMin;
+    private float campoVisiónMax;
 
     // Laves
     private bool llaveAzul;
@@ -46,12 +47,15 @@ public class ControladorJugador : SyncScript, IDañable
         vidaMax = 100;
         vida = vidaMax;
 
+        campoVisiónMin = 90;
+        campoVisiónMax = 110;
+
         interfaz = ControladorPartida.ObtenerInterfaz();
         interfaz.ActualizarVida(vida / vidaMax);
 
         cuerpo = Entity.Get<CharacterComponent>();
         movimiento = Entity.Get<ControladorMovimiento>();
-        armas = Entity.Get<ControladorArmas>();        
+        armas = Entity.Get<ControladorArmas>();
         foreach (var dañable in dañables)
         {
             dañable.Iniciar(this);
@@ -68,7 +72,7 @@ public class ControladorJugador : SyncScript, IDañable
         llaveRoja = false;
 
         // Campo visión
-        ConfigurarCampoVisión(int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión), CultureInfo.InvariantCulture));
+        ConfigurarCampoVisión();
     }
 
     public override void Update()
@@ -79,6 +83,7 @@ public class ControladorJugador : SyncScript, IDañable
         // Updates
         movimiento.ActualizarEntradas();
         armas.ActualizarEntradas();
+        ConfigurarCampoVisión();
 
         // Cura
         if (Input.IsKeyPressed(Keys.F))
@@ -92,7 +97,7 @@ public class ControladorJugador : SyncScript, IDañable
         if (tiempoVelocidad > 0)
             tiempoVelocidad -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
 
-        if(tiempoDaño <= 0)
+        if (tiempoDaño <= 0)
             ApagarPoder(Poderes.daño);
         if (tiempoInvulnerabilidad <= 0)
             ApagarPoder(Poderes.invulnerabilidad);
@@ -299,14 +304,23 @@ public class ControladorJugador : SyncScript, IDañable
                 return tiempoInvulnerabilidad > 0;
             case Poderes.velocidad:
                 return tiempoVelocidad > 0;
-             default:
+            default:
                 return false;
         }
     }
 
-    public void ConfigurarCampoVisión(int campoVisión)
+    public void ConfigurarCampoVisión()
     {
+        if (armas.ObtenerUsoMira())
+            return;
+
+        var campoVisión = MathUtil.Lerp(campoVisiónMin, campoVisiónMax, movimiento.ObtenerPorcentajeVelocidad());
         cámara.VerticalFieldOfView = campoVisión;
+    }
+
+    public float ObtenerCampoVisión()
+    {
+        return cámara.VerticalFieldOfView;
     }
 
     public void VibrarCámara(float fuerza, int iteraciones)

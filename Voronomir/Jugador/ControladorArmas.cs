@@ -2,7 +2,6 @@
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using System.Globalization;
 using Stride.Core.Mathematics;
 using Stride.Particles.Components;
 using Stride.Physics;
@@ -12,7 +11,6 @@ using Stride.Engine;
 namespace Voronomir;
 using static Utilidades;
 using static Constantes;
-using static Voronomir.Constantes;
 
 public class ControladorArmas : StartupScript
 {
@@ -515,7 +513,7 @@ public class ControladorArmas : StartupScript
         movimiento.CambiarSensiblidad(usandoMira);
         interfaz.ApagarMiras();
 
-        var campoVisión = int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.campoVisión), CultureInfo.InvariantCulture);
+        var campoVisión = controlador.ObtenerCampoVisión();
         var inicial = cámara.VerticalFieldOfView;
         var objetivo = inicial;
 
@@ -811,6 +809,11 @@ public class ControladorArmas : StartupScript
     public bool ObtenerAnimando()
     {
         return cambiandoArma;
+    }
+
+    public bool ObtenerUsoMira()
+    {
+        return usandoMira;
     }
 
     public void Bloquear(bool bloquear)

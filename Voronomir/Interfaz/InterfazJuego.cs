@@ -43,14 +43,15 @@ public class InterfazJuego : SyncScript
     private Grid imgVelocidad;
 
     private UniformGrid panelDepuración;
-    private TextBlock txtMensaje;
-    private TextBlock txtPosición;
+    private TextBlock txtCuadrosPorSegundo;
     private TextBlock txtTiempo;
+    private TextBlock txtPosición;
     private TextBlock txtVelocidad;
     private TextBlock txtAceleración;
+    private TextBlock txtCampoVisión;
     private TextBlock txtMetralleta;
-    private TextBlock txtFPS;
 
+    private TextBlock txtMensaje;
     private TextBlock txtMuerteTiempo;
 
     private TextBlock txtFinalNivel;
@@ -114,12 +115,13 @@ public class InterfazJuego : SyncScript
         txtMensaje = página.FindVisualChildOfType<TextBlock>("txtMensaje");
 
         // Datos depuración
-        txtPosición = página.FindVisualChildOfType<TextBlock>("txtPosición");
+        txtCuadrosPorSegundo = página.FindVisualChildOfType<TextBlock>("txtCuadrosPorSegundo");
         txtTiempo = página.FindVisualChildOfType<TextBlock>("txtTiempo");
+        txtPosición = página.FindVisualChildOfType<TextBlock>("txtPosición");
         txtVelocidad = página.FindVisualChildOfType<TextBlock>("txtVelocidad");
         txtAceleración = página.FindVisualChildOfType<TextBlock>("txtAceleración");
+        txtCampoVisión = página.FindVisualChildOfType<TextBlock>("txtCampoVisión");
         txtMetralleta = página.FindVisualChildOfType<TextBlock>("txtMetralleta");
-        txtFPS = página.FindVisualChildOfType<TextBlock>("txtFPS");
 
         // Datos finales
         txtMuerteTiempo = página.FindVisualChildOfType<TextBlock>("txtMuerteTiempo");
@@ -534,11 +536,12 @@ public class InterfazJuego : SyncScript
 
     private void ActualizarDepuración()
     {
-        txtPosición.Text = "P " + ControladorPartida.ObtenerPosiciónJugador().ToString("n3");
-        txtTiempo.Text = "T " + FormatearTiempo(ControladorPartida.ObtenerTiempo());
-        txtVelocidad.Text = "V " + (ControladorPartida.ObtenerVelocidad() * 10).ToString("n3");
-        txtAceleración.Text = "A " + ControladorPartida.ObtenerAceleración().ToString("n3");
-        txtMetralleta.Text = "M " + ControladorPartida.ObtenerCalentamientoMetralleta().ToString("n3");
-        txtFPS.Text = "C " + Game.UpdateTime.FramePerSecond.ToString("000");
+        txtCuadrosPorSegundo.Text = Game.UpdateTime.FramePerSecond.ToString("000");
+        txtTiempo.Text = FormatearTiempo(ControladorPartida.ObtenerTiempo());
+        txtPosición.Text = ControladorPartida.ObtenerPosiciónJugador().ToString("n3");
+        txtVelocidad.Text = (ControladorPartida.ObtenerVelocidad() * 10).ToString("n3");
+        txtAceleración.Text = ControladorPartida.ObtenerAceleración().ToString("n3");
+        txtCampoVisión.Text = ControladorPartida.ObtenerCampoVisión().ToString("000");
+        txtMetralleta.Text = ControladorPartida.ObtenerCalentamientoMetralleta().ToString("n3");
     }
 }
