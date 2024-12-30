@@ -13,6 +13,7 @@ using static Constantes;
 
 public class SistemaEscenas : AsyncScript
 {
+    public UrlReference<Scene> escenaPruebas;
     public UrlReference<Scene> escenaMenú;
     public UrlReference<Scene> escenaDemo;
 
@@ -28,7 +29,7 @@ public class SistemaEscenas : AsyncScript
     private static bool ocultando;
 
     private Grid panelOscuro;
-    private ImageElement imgCursor;
+    //private ImageElement imgCursor;
 
     private float duraciónOcultar;
     private float duraciónAbrir;
@@ -97,7 +98,7 @@ public class SistemaEscenas : AsyncScript
             await Script.NextFrame();
         }
     }
-
+    /*
     private void PosicionarCursor()
     {
         // Cursor es un ImageElement
@@ -118,7 +119,7 @@ public class SistemaEscenas : AsyncScript
             bottom = (0.5f - Input.MousePosition.Y) * 2 * 720;
 
         imgCursor.Margin = new Thickness(left, top, right, bottom);
-    }
+    }*/
 
     public static void BloquearCursor(bool bloquear)
     {

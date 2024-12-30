@@ -87,8 +87,6 @@ public class InterfazMenú : StartupScript
 
         SistemaEscenas.BloquearCursor(false);
         Game.UpdateTime.Factor = 1;
-
-        //SistemaEscenas.CambiarEscena(Escenas.demo);
     }
 
     private void EnClicEscena(Escenas escena)

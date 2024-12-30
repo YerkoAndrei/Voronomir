@@ -27,10 +27,10 @@ public static class Constantes
 
     // Juego
     public enum Escenas
-    {
+    {        
+        pruebas,
         menú,
         demo,
-        //supervivencia,
         M1E1,
         M1E2,
         M1E3,

@@ -61,6 +61,7 @@ Hierarchy:
                     b87e4e66fa2811191dcd016271e1728d: !Voronomir.SistemaEscenas,Voronomir.Proyecto
                         Id: 96903a2a-e245-43e8-9b6e-08fe6696783a
                         Priority: 10
+                        escenaPruebas: d96f9ef1-9ebb-4fd3-a140-1cacde38458e:Escenas/Pruebas
                         "escenaMenú": "96aa054d-54af-441d-ace7-62be2c4ea9fd:Escenas/Menú"
                         escenaDemo: 49fc81ee-27a7-4647-975a-4eef6648b45a:Escenas/Demo
                         compositorBajo: f79cc65d-776c-4d5f-9cf3-d8b624b65593:GraphicsCompositor (Bajo)
