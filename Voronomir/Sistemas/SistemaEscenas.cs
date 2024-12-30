@@ -209,7 +209,7 @@ public class SistemaEscenas : AsyncScript
 
         // Iniciar cuanto termine pantalla suave
         if (juego)
-            ControladorPartida.Pausar(true);
+            ControladorJuego.Pausar(true);
     }
 
     public static bool ObtenerAnimando()
