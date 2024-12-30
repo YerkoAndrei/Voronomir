@@ -124,6 +124,9 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         else if (armaRango != null)
             armaRango.Disparar();
 
+        if (armaMelé == null && armaRango == null)
+            return;
+
         // Sonido
         sonidoAtacar.Stop();
         sonidoAtacar.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
@@ -340,7 +343,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                 data.TiempoBusqueda = 0.1f;
 
                 data.PreparaciónMelé = 0.4f;
-            break;
+                break;
             case Enemigos.meléPesado:
                 data.Vida = 1000;
                 data.Daño = 40;
@@ -352,7 +355,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                 data.TiempoBusqueda = 0.1f;
 
                 data.PreparaciónMelé = 0.2f;
-            break;
+                break;
 
             // Rango
             case Enemigos.rangoLigero:
@@ -417,7 +420,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
                 data.Vida = 60;
                 data.Cadencia = 0.5f;
                 data.VelocidadMovimiento = 4;
-                data.VelocidadRotación = 4;
+                data.VelocidadRotación = 0;
                 data.DistanciaSonido = 10;
                 data.TiempoBusqueda = 0.1f;
                 data.PersecutorTrigonométrico = true;

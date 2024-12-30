@@ -18,6 +18,7 @@ Hierarchy:
         - ref!! a9178381-0e65-41e7-b367-ddfb062cebe6
         - ref!! edeff615-c141-4feb-96da-868b5fe6ebc8
         - ref!! f3e301de-3c24-4082-9407-c92be0463470
+        - ref!! 5c973068-0ae6-43fd-9cb6-e335df2ae970
         - ref!! ed574734-d19c-4582-8145-31497e3f514d
         - ref!! 52cd02bd-3165-4aa6-8d1e-7538541119a3
         - ref!! 0157bade-c6d9-4521-b929-8ef3c82b501a
@@ -817,7 +818,7 @@ Hierarchy:
                 Components:
                     58d1e0ab3962a7692275b79681512bf3: !TransformComponent
                         Id: de69db87-18b9-4c2b-93e9-cb3cba887210
-                        Position: {X: 2.5, Y: 0.0, Z: 15.0}
+                        Position: {X: 3.0, Y: 0.0, Z: 15.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -3043,6 +3044,21 @@ Hierarchy:
                 BasePartAsset: 64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/Entorno/Poder (Invulnerabilidad)
                 BasePartId: 75e85694-c129-4841-a288-0597b6172a4d
                 InstanceId: 938b33c4-b6af-4165-953d-b183bb31a5c8
+        -   Folder: MuestraEnemigos
+            Entity:
+                Id: 5c973068-0ae6-43fd-9cb6-e335df2ae970
+                Name: Robot
+                Components:
+                    157ba8be7a32f345a137c5e11f70817b: !TransformComponent
+                        Id: b3d70b2c-bb71-437f-bcf0-9a513e961fbe
+                        Position: {X: 1.0, Y: 0.0, Z: 15.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: -0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    8582277bd57dbba6c462cdd864595875: !ModelComponent
+                        Id: bff9b56c-4d46-43d5-89f0-a830c0a4ca22
+                        Model: 15e1b3a3-7e75-4219-8747-df1542baf9d4:Modelos/Enemigos/Robot/Robot
+                        Materials: {}
         -   Folder: Secretos
             Entity:
                 Id: 5f2be316-c335-4e47-94e2-616f939d5d8c
@@ -5782,7 +5798,7 @@ Hierarchy:
                 Components:
                     ebfe5ceaccdf331f90ace23a84d4c1bb: !TransformComponent
                         Id: 3a6d564a-7a5b-4abd-adb3-72da02f11f80
-                        Position: {X: 4.5, Y: 0.0, Z: 15.0}
+                        Position: {X: 5.0, Y: 0.0, Z: 15.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: -0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}

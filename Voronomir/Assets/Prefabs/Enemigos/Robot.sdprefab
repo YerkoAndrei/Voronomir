@@ -137,6 +137,7 @@ Hierarchy:
                     a9b6ee359c9f1a2fc99c8d71fa30c93e: !Voronomir.AnimadorRobot,Voronomir.Proyecto
                         Id: 899bbf06-0638-4d12-87f0-56bd0e0e4ee7
                         modelo: ref!! e3cc33c5-4caa-49ee-b019-4b6f0564e3b4
+                        cuerpo: ref!! 35260fb0-2c7d-47ff-a56e-138de1bebff7
                         "partículas": ref!! 3514f2c6-c76f-4454-95a0-81da42818f49
         -   Entity:
                 Id: 59c3e032-175e-4abf-9f39-d72d3dab32ed

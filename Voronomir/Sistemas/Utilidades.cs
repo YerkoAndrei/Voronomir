@@ -25,8 +25,13 @@ public static class Utilidades
     public static float RangoAleatorio(float min, float max)
     {
         var aleatorio = new Random();
-        double valor = (aleatorio.NextDouble() * (max - min) + min);
-        return (float)valor;
+        return (float)(aleatorio.NextDouble() * (max - min) + min);
+    }
+
+    public static bool BoolAleatorio()
+    {
+        var aleatorio = new Random();
+        return aleatorio.NextDouble() > 0.5f;
     }
 
     public static bool TocaEntorno(Collision colisión)

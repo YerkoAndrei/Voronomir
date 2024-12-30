@@ -11,7 +11,7 @@ public class ControladorPersecusión : StartupScript
 {
     public bool estático;
     public List<TransformComponent> ojos = new List<TransformComponent> { };
-    
+
     private Enemigo datos;
     private ControladorPersecusionesTrigonométricas persecutor;
     private ControladorEnemigo controlador;
@@ -82,7 +82,7 @@ public class ControladorPersecusión : StartupScript
         // Estáticos no persiguen y disparan mientras vea al jugador
         if (estático)
         {
-            if (MirarJugador())
+            if (ApuntarJugador())
                 Atacar();
         }
         else
@@ -102,7 +102,7 @@ public class ControladorPersecusión : StartupScript
         índiceRuta = 0;
         tempoBusqueda = datos.TiempoBusqueda;
 
-        if(datos.PersecutorTrigonométrico && persecutor.PosibleRodearJugador())
+        if (datos.PersecutorTrigonométrico && persecutor.PosibleRodearJugador())
             navegador.TryFindPath(persecutor.ObtenerPosiciónCircular(índiceTrigonométrico), ruta);
         else
             navegador.TryFindPath(ControladorJuego.ObtenerPosiciónJugador(), ruta);
@@ -110,6 +110,9 @@ public class ControladorPersecusión : StartupScript
 
     private void MirarJugador(float velocidad)
     {
+        if (velocidad <= 0)
+            return;
+
         direciónJugador = ControladorJuego.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector;
         direciónJugador.Y = 0f;
         direciónJugador.Normalize();
@@ -133,7 +136,7 @@ public class ControladorPersecusión : StartupScript
         // Ataque
         if (distanciaJugador <= datos.DistanciaAtaque)
         {
-            if (MirarJugador())
+            if (ApuntarJugador())
             {
                 Atacar();
                 return;
@@ -152,9 +155,9 @@ public class ControladorPersecusión : StartupScript
                 dirección = ruta[índiceRuta] - Entity.Transform.WorldMatrix.TranslationVector;
             else
                 dirección = ControladorJuego.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector;
-            
+
             dirección.Normalize();
-            dirección *= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;                        
+            dirección *= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             cuerpo.SetVelocity(dirección * 100 * datos.VelocidadMovimiento * aceleración);
             animador.Caminar(aceleración);
         }
@@ -187,11 +190,11 @@ public class ControladorPersecusión : StartupScript
         animador.Caminar(distanciaRuta * acelaraciónTrigonométrica);
     }
 
-    private bool MirarJugador()
+    private bool ApuntarJugador()
     {
         // Si todos los ojos ven al jugador, entonces ataca
         var mirando = new bool[ojos.Count];
-        for(int i = 0; i < ojos.Count; i++)
+        for (int i = 0; i < ojos.Count; i++)
         {
             var resultado = this.GetSimulation().Raycast(ojos[i].WorldMatrix.TranslationVector,
                                                          ControladorJuego.ObtenerCabezaJugador(),
