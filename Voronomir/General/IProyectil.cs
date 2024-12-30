@@ -1,5 +1,4 @@
-﻿using System;
-using Stride.Core.Mathematics;
+﻿using Stride.Core.Mathematics;
 
 namespace Voronomir;
 using static Constantes;
