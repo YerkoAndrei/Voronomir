@@ -195,9 +195,9 @@ Hierarchy:
                     f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
                         Id: 18b70f1f-f4a0-4d81-abe9-43a83186f5bf
                         Sounds:
-                            77654c9207313432df1094f1bac845c9~atacar: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
-                            "225e0fa471669017da53479ca07a123a~daño": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
-                            b4a4b5f9c4cd20149d1933cd4cacb798~morir: e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            77654c9207313432df1094f1bac845c9~atacar: 75087f93-b176-4300-9fb7-2561697e1940:Sonidos/pruebaMundo
+                            "225e0fa471669017da53479ca07a123a~daño": 75087f93-b176-4300-9fb7-2561697e1940:Sonidos/pruebaMundo
+                            b4a4b5f9c4cd20149d1933cd4cacb798~morir: 75087f93-b176-4300-9fb7-2561697e1940:Sonidos/pruebaMundo
                         UseHRTF: true
                         DirectionalFactor: 0.5
                         Environment: Large

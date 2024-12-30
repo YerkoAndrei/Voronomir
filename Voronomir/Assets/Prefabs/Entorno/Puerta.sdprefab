@@ -56,7 +56,7 @@ Hierarchy:
                     f04889bdc2429f09063b4617538af60f: !AudioEmitterComponent
                         Id: 7206dea1-2991-4078-86af-8399f1c442d2
                         Sounds:
-                            "2974598401a8ba0fe1d81a726ba3835b~rápido": e5020f71-e4c7-4472-ae4c-dab7a720a069:Sonidos/pruebaMundo
+                            "2974598401a8ba0fe1d81a726ba3835b~rápido": 75087f93-b176-4300-9fb7-2561697e1940:Sonidos/pruebaMundo
                             71da18141a8ba3f28ed8ebb94af51af0~lento: "486b65f4-1ddd-4e2c-b398-61e9038e61df:Sonidos/pruebaMundoContínua"
                         UseHRTF: true
                         DirectionalFactor: 0.5
