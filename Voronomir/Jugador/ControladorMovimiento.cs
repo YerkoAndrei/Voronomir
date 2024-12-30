@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Globalization;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
@@ -21,7 +22,6 @@ public class ControladorMovimiento : StartupScript
     private Vector3 movimiento;
     private float velocidadBase;
     private float multiplicadorVelocidad;
-    private float maxVelocidadEspada;
     private bool caminando;
     private bool detención;
     private bool bloqueo;
@@ -39,6 +39,10 @@ public class ControladorMovimiento : StartupScript
     private float minVelocidad;
     private float maxVelocidad;
     private float aceleración;
+
+    private bool reiniciandoPorcentajeAceleración;
+    private float porcentajeAceleración;
+    private float maxVelocidadEspada;
 
     // Cursor
     private float sensibilidad;
@@ -102,6 +106,9 @@ public class ControladorMovimiento : StartupScript
         // Aceleración
         if (entradas == Vector3.Zero || detención)
         {
+            if (aceleración > 1.1f && !reiniciandoPorcentajeAceleración)
+                ReiniciarPorcentajeVelocidad();
+
             tempoAceleración = 0;
             tempoIniciación = 0;
             aceleración = 0;
@@ -111,6 +118,9 @@ public class ControladorMovimiento : StartupScript
         if (cuerpo.Collisions.Where(TocaEnemigo).Count() > 0 && aceleración >= 1)
         {
             // 1 enemigo detiene velocidad
+            if (aceleración > 1.05f && !reiniciandoPorcentajeAceleración)
+                ReiniciarPorcentajeVelocidad();
+
             tempoAceleración = 0;
             tempoIniciación = 0;
             aceleración = 0;
@@ -119,6 +129,9 @@ public class ControladorMovimiento : StartupScript
         else if (caminando || cuerpo.Collisions.Where(TocaEntornoEstáico).Count() > 1)
         {
             // 2 pisos o paredes reinician velocidad
+            if (aceleración > 1.05f && !reiniciandoPorcentajeAceleración)
+                ReiniciarPorcentajeVelocidad();
+
             tempoAceleración = 0;
             tempoIniciación = tiempoIniciación;
             aceleración = minVelocidad;
@@ -208,12 +221,36 @@ public class ControladorMovimiento : StartupScript
         return aceleración;
     }
 
-    public float ObtenerPorcentajeVelocidad()
+    public float ObtenerPorcentajeAceleración()
     {
-        if (aceleración >= 1)
-            return ((aceleración - 1) / maxVelocidadEspada);
-        else
-            return 0;
+        if (!reiniciandoPorcentajeAceleración)
+        {
+            if (aceleración >= 1)
+                porcentajeAceleración = ((aceleración - 1) / maxVelocidadEspada);
+            else
+                porcentajeAceleración = 0;
+        }
+        return porcentajeAceleración;
+    }
+
+    private async void ReiniciarPorcentajeVelocidad()
+    {
+        reiniciandoPorcentajeAceleración = true;
+
+        var porcentajeAceleraciónAnterior = porcentajeAceleración;
+        float duración = 0.1f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+            porcentajeAceleración = MathUtil.Lerp(porcentajeAceleraciónAnterior, 0f, tiempo);
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+
+            await Task.Delay(1);
+        }
+        reiniciandoPorcentajeAceleración = false;
     }
 
     public void DetenerMovimiento()

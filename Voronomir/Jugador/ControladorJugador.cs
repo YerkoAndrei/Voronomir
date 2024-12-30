@@ -48,7 +48,7 @@ public class ControladorJugador : SyncScript, IDañable
         vida = vidaMax;
 
         campoVisiónMin = 90;
-        campoVisiónMax = 110;
+        campoVisiónMax = 120;
 
         interfaz = ControladorJuego.ObtenerInterfaz();
         interfaz.ActualizarVida(vida / vidaMax);
@@ -314,7 +314,7 @@ public class ControladorJugador : SyncScript, IDañable
         if (armas.ObtenerUsoMira())
             return;
 
-        var campoVisión = MathUtil.Lerp(campoVisiónMin, campoVisiónMax, movimiento.ObtenerPorcentajeVelocidad());
+        var campoVisión = MathUtil.Lerp(campoVisiónMin, campoVisiónMax, movimiento.ObtenerPorcentajeAceleración());
         cámara.VerticalFieldOfView = campoVisión;
     }
 
