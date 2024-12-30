@@ -97,7 +97,7 @@ public class SistemaSonidos : AsyncScript
 
         while (Game.IsRunning)
         {
-            if (ControladorPartida.ObtenerActivo() && sonidosMundo != null)
+            if (ControladorJuego.ObtenerActivo() && sonidosMundo != null)
                 ActualizarVolúmenesMundo();
 
             await Script.NextFrame();

@@ -7,7 +7,7 @@ namespace Voronomir;
 using static Utilidades;
 using static Constantes;
 
-public class ControladorPartida : SyncScript
+public class ControladorJuego : SyncScript
 {
     public Escenas escena;
     public Escenas siguienteEscena;

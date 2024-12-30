@@ -52,19 +52,19 @@ public class ControladorPuerta : AsyncScript, IActivable, ISonidoMundo
         {
             AnimarPuerta();
             cuerpo.Enabled = false;
-            ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("puertaAbierta"));
+            ControladorJuego.MostrarMensaje(SistemaTraducción.ObtenerTraducción("puertaAbierta"));
             SistemaSonidos.SonarPuerta();
         }
         else
         {
-            ControladorPartida.MostrarMensaje((activaciones - activadas) + " " + SistemaTraducción.ObtenerTraducción("activaciones"));
+            ControladorJuego.MostrarMensaje((activaciones - activadas) + " " + SistemaTraducción.ObtenerTraducción("activaciones"));
             SistemaSonidos.SonarCerrado();
         } 
     }
 
     private void TocarJugador()
     {
-        ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("puertaCerrada"));
+        ControladorJuego.MostrarMensaje(SistemaTraducción.ObtenerTraducción("puertaCerrada"));
         SistemaSonidos.SonarCerrado();
     }
 
@@ -105,7 +105,7 @@ public class ControladorPuerta : AsyncScript, IActivable, ISonidoMundo
         if (finSonido)
             return;
 
-        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerCabezaJugador());
+        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorJuego.ObtenerCabezaJugador());
 
         if (distanciaJugador > distanciaSonido)
         {

@@ -45,7 +45,7 @@ public class ControladorBotón : AsyncScript
         // Llave necesaria
         if (!posible)
         {
-            ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("necesita") + " " + SistemaTraducción.ObtenerTraducción(llave.ToString()));
+            ControladorJuego.MostrarMensaje(SistemaTraducción.ObtenerTraducción("necesita") + " " + SistemaTraducción.ObtenerTraducción(llave.ToString()));
             SistemaSonidos.SonarCerrado();
             return;
         }

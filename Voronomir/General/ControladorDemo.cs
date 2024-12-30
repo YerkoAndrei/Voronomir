@@ -37,16 +37,10 @@ public class ControladorDemo : AsyncScript
             new Vector3 (-0.5f, 0, -0.5f)
         };
 
-        //var jugador = Entity.Scene.Entities.Where(o => o.Get<ControladorJugador>() != null).FirstOrDefault().Get<ControladorJugador>();
+        ControladorJuego.Pausar(true);
 
         while (Game.IsRunning)
         {
-            /*
-            // Armas
-            DebugText.Print(jugador.armas.metralletaAtascada.ToString(), new Int2(x: 20, y: 20));
-            DebugText.Print(jugador.armas.tempoMetralleta.ToString(), new Int2(x: 20, y: 40));
-            */
-
             if (Input.IsKeyPressed(Keys.F1))
             {
                 var enemigo = zombi.Instantiate()[0];
@@ -85,7 +79,7 @@ public class ControladorDemo : AsyncScript
             if (Input.IsKeyPressed(Keys.F8))
             {
                 var enemigo = robot.Instantiate()[0];
-                Inicializar(enemigo);                
+                Inicializar(enemigo);
             }
             if (Input.IsKeyPressed(Keys.F9))
             {
@@ -103,7 +97,7 @@ public class ControladorDemo : AsyncScript
             posiciónActual = 0;
 
         entidad.Transform.Position = posiciones[posiciónActual];
-        entidad.Get<NavigationComponent>().NavigationMesh = Entity.Get<ControladorPartida>().navegación;
+        entidad.Get<NavigationComponent>().NavigationMesh = Entity.Get<ControladorJuego>().navegación;
         Entity.Scene.Entities.Add(entidad);
         Activar(entidad);
     }

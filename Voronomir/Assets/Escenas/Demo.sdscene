@@ -6439,7 +6439,7 @@ Hierarchy:
                 Id: b4019d76-b6c3-4169-81e4-3c84d6c7136f
                 Name: Controlador
                 Components:
-                    5cb52a5c65430d2569b779dae13d4ecd: !Voronomir.ControladorPartida,Voronomir.Proyecto
+                    5cb52a5c65430d2569b779dae13d4ecd: !Voronomir.ControladorJuego,Voronomir.Proyecto
                         Id: 1573d2cd-30f4-4d99-a2a6-d573de4516fe
                         Priority: -1
                         escena: demo

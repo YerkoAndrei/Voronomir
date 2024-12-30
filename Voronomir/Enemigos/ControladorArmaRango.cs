@@ -24,7 +24,7 @@ public class ControladorArmaRango : StartupScript
 
     public void Disparar()
     {
-        var dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorPartida.ObtenerPosiciónJugador() + alturaObjetivo));
+        var dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorJuego.ObtenerPosiciónJugador() + alturaObjetivo));
         var rotación = Quaternion.LookRotation(dirección, Vector3.UnitY);
 
         ControladorCofres.IniciarProyectil(disparador, daño, velocidad, Entity.Transform.WorldMatrix.TranslationVector, rotación, 

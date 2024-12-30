@@ -138,7 +138,7 @@ public class ControladorPoder : AsyncScript, ISonidoMundo
         if (finSonido)
             return;
 
-        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerCabezaJugador());
+        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorJuego.ObtenerCabezaJugador());
 
         if (distanciaJugador > distanciaSonido)
             sonido.Volume = 0;

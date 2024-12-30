@@ -137,7 +137,7 @@ public class ElementoProyectilPersecutor: AsyncScript, IProyectil, IDañable
             // Sigue jugador
             if (velocidadRotación > 0)
             {
-                dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorPartida.ObtenerPosiciónJugador() + altura));
+                dirección = Vector3.Normalize(Entity.Transform.WorldMatrix.TranslationVector - (ControladorJuego.ObtenerPosiciónJugador() + altura));
                 Entity.Transform.Rotation = Quaternion.Lerp(Entity.Transform.Rotation, Quaternion.LookRotation(dirección, Vector3.UnitY), velocidadRotación * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
 
                 Entity.Transform.UpdateWorldMatrix();

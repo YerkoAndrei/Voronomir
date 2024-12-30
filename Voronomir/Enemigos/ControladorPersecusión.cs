@@ -57,7 +57,7 @@ public class ControladorPersecusión : StartupScript
         if (datos.PersecutorTrigonométrico)
         {
             // Busca persecutor trigonométrico
-            persecutor = ControladorPartida.ObtenerPersecutor(controlador.enemigo);
+            persecutor = ControladorJuego.ObtenerPersecutor(controlador.enemigo);
             índiceTrigonométrico = persecutor.ObtenerÍndiceTrigonométrico(this);
         }
     }
@@ -105,12 +105,12 @@ public class ControladorPersecusión : StartupScript
         if(datos.PersecutorTrigonométrico && persecutor.PosibleRodearJugador())
             navegador.TryFindPath(persecutor.ObtenerPosiciónCircular(índiceTrigonométrico), ruta);
         else
-            navegador.TryFindPath(ControladorPartida.ObtenerPosiciónJugador(), ruta);
+            navegador.TryFindPath(ControladorJuego.ObtenerPosiciónJugador(), ruta);
     }
 
     private void MirarJugador(float velocidad)
     {
-        direciónJugador = ControladorPartida.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector;
+        direciónJugador = ControladorJuego.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector;
         direciónJugador.Y = 0f;
         direciónJugador.Normalize();
 
@@ -124,7 +124,7 @@ public class ControladorPersecusión : StartupScript
             return;
 
         distanciaRuta = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ruta[índiceRuta]);
-        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerPosiciónJugador());
+        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorJuego.ObtenerPosiciónJugador());
 
         // Salto
         if (datos.DistanciaSalto > 0 && distanciaJugador <= datos.DistanciaSalto && cuerpo.IsGrounded)
@@ -151,7 +151,7 @@ public class ControladorPersecusión : StartupScript
             if (cuerpo.IsGrounded)
                 dirección = ruta[índiceRuta] - Entity.Transform.WorldMatrix.TranslationVector;
             else
-                dirección = ControladorPartida.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector;
+                dirección = ControladorJuego.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector;
             
             dirección.Normalize();
             dirección *= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;                        
@@ -169,7 +169,7 @@ public class ControladorPersecusión : StartupScript
 
     public void Saltar()
     {
-        var dirección = (ControladorPartida.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector) * (datos.FuerzaSalto * 0.25f);
+        var dirección = (ControladorJuego.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector) * (datos.FuerzaSalto * 0.25f);
         dirección.Y = datos.FuerzaSalto;
         cuerpo.Jump(dirección);
     }
@@ -194,7 +194,7 @@ public class ControladorPersecusión : StartupScript
         for(int i = 0; i < ojos.Count; i++)
         {
             var resultado = this.GetSimulation().Raycast(ojos[i].WorldMatrix.TranslationVector,
-                                                         ControladorPartida.ObtenerCabezaJugador(),
+                                                         ControladorJuego.ObtenerCabezaJugador(),
                                                          CollisionFilterGroups.KinematicFilter,
                                                          colisionesMirada);
 

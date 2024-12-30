@@ -298,7 +298,7 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
 
     public void ActualizarVolumen()
     {
-        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerCabezaJugador());
+        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorJuego.ObtenerCabezaJugador());
 
         if (distanciaJugador > distanciaSonido)
         {

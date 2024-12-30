@@ -50,7 +50,7 @@ public class ControladorJugador : SyncScript, IDañable
         campoVisiónMin = 90;
         campoVisiónMax = 110;
 
-        interfaz = ControladorPartida.ObtenerInterfaz();
+        interfaz = ControladorJuego.ObtenerInterfaz();
         interfaz.ActualizarVida(vida / vidaMax);
 
         cuerpo = Entity.Get<CharacterComponent>();
@@ -77,7 +77,7 @@ public class ControladorJugador : SyncScript, IDañable
 
     public override void Update()
     {
-        if (!ControladorPartida.ObtenerActivo())
+        if (!ControladorJuego.ObtenerActivo())
             return;
 
         // Updates
@@ -167,7 +167,7 @@ public class ControladorJugador : SyncScript, IDañable
 
     public void RecibirDaño(float daño)
     {
-        if (!ControladorPartida.ObtenerActivo())
+        if (!ControladorJuego.ObtenerActivo())
             return;
 
         tokenCura.Cancel();
@@ -200,7 +200,7 @@ public class ControladorJugador : SyncScript, IDañable
     {
         armas.GuardarArma();
         AnimarMuerte();
-        ControladorPartida.Morir();
+        ControladorJuego.Morir();
         SistemaSonidos.SonarMorir();
     }
 
@@ -262,17 +262,17 @@ public class ControladorJugador : SyncScript, IDañable
         {
             case Poderes.daño:
                 tiempoDaño = 30;
-                ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("poderDaño"));
+                ControladorJuego.MostrarMensaje(SistemaTraducción.ObtenerTraducción("poderDaño"));
                 break;
             case Poderes.invulnerabilidad:
                 vida = vidaMax;
                 interfaz.ActualizarVida(vida / vidaMax);
                 tiempoInvulnerabilidad = 30;
-                ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("poderInvulnerabilidad"));
+                ControladorJuego.MostrarMensaje(SistemaTraducción.ObtenerTraducción("poderInvulnerabilidad"));
                 break;
             case Poderes.velocidad:
                 tiempoVelocidad = 30;
-                ControladorPartida.MostrarMensaje(SistemaTraducción.ObtenerTraducción("poderVelocidad"));
+                ControladorJuego.MostrarMensaje(SistemaTraducción.ObtenerTraducción("poderVelocidad"));
                 break;
         }
     }

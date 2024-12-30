@@ -27,6 +27,6 @@ public class ControladorFin : AsyncScript
     private void Finalizar()
     {
         cuerpo.Enabled = false;
-        ControladorPartida.Finalizar();
+        ControladorJuego.Finalizar();
     }
 }

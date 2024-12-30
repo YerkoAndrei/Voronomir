@@ -38,7 +38,7 @@ public class ControladorPersecusionesTrigonométricas : SyncScript
             dirección = new Vector3(MathF.Cos(ángulo), 0, MathF.Sin(ángulo));
             dirección = Vector3.Normalize(dirección) * radio;
 
-            posicionesCirculares[i] = (ControladorPartida.ObtenerPosiciónJugador() + dirección);
+            posicionesCirculares[i] = (ControladorJuego.ObtenerPosiciónJugador() + dirección);
         }
     }
 
@@ -46,7 +46,7 @@ public class ControladorPersecusionesTrigonométricas : SyncScript
     {
         // Persecutores pueden descordinarse por 1 cuadro
         if (posicionesCirculares == null || índice >= posicionesCirculares.Count())
-            return ControladorPartida.ObtenerPosiciónJugador();
+            return ControladorJuego.ObtenerPosiciónJugador();
 
         return posicionesCirculares[índice];
     }

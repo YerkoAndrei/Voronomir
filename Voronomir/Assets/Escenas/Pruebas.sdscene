@@ -7257,11 +7257,11 @@ Hierarchy:
                 Id: d5817381-6a16-4585-b384-72760aaa3d44
                 Name: Controlador
                 Components:
-                    5cb52a5c65430d2569b779dae13d4ecd: !Voronomir.ControladorPartida,Voronomir.Proyecto
+                    5cb52a5c65430d2569b779dae13d4ecd: !Voronomir.ControladorJuego,Voronomir.Proyecto
                         Id: 54081697-9976-4321-80a2-1d5877652fd9
                         Priority: -1
-                        escena: demo
-                        siguienteEscena: demo
+                        escena: pruebas
+                        siguienteEscena: pruebas
                         "navegación": "0c863a7d-a283-4c02-932b-09cd96f2dd6b:Navegación/Pruebas"
                     7107c19923448b964ecd9d41fe2771bf: !TransformComponent
                         Id: d22b2c10-5f6a-4267-ae92-9812dfaf0ed5

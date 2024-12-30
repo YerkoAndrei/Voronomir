@@ -123,7 +123,7 @@ public class ControladorArmas : StartupScript
         if (Input.IsMouseButtonPressed(MouseButton.Left))
         {
             Disparar();
-            primerDisparoMetralleta = ControladorPartida.ObtenerTiempo();
+            primerDisparoMetralleta = ControladorJuego.ObtenerTiempo();
         }
 
         // Metralleta
@@ -133,7 +133,7 @@ public class ControladorArmas : StartupScript
                 tempoMetralleta -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
 
             // Permite disparo singular
-            if ((primerDisparoMetralleta + 0.12f) < ControladorPartida.ObtenerTiempo())
+            if ((primerDisparoMetralleta + 0.12f) < ControladorJuego.ObtenerTiempo())
                 Disparar();
         }
 
@@ -214,7 +214,7 @@ public class ControladorArmas : StartupScript
                 break;
         }
 
-        if (ControladorPartida.ObtenerTiempo() < tiempoDisparo)
+        if (ControladorJuego.ObtenerTiempo() < tiempoDisparo)
             return;
 
         // Metralleta por turnos
@@ -238,7 +238,7 @@ public class ControladorArmas : StartupScript
                     animadorEspada.AnimarAtaque(TipoDisparo.izquierda);
                 else
                     animadorEspada.AnimarAtaque(TipoDisparo.derecha);
-                últimoDisparoEspada = ControladorPartida.ObtenerTiempo();
+                últimoDisparoEspada = ControladorJuego.ObtenerTiempo();
                 break;
             case Armas.escopeta:
                 for (int i = 0; i < 20; i++)
@@ -248,7 +248,7 @@ public class ControladorArmas : StartupScript
                 controlador.VibrarCámara(16, 10);
                 ActivarLuz();
                 animadorEscopeta.AnimarDisparo(0.5f, 0.25f, TipoDisparo.espejo);
-                últimoDisparoEscopeta = ControladorPartida.ObtenerTiempo();
+                últimoDisparoEscopeta = ControladorJuego.ObtenerTiempo();
                 break;
             case Armas.metralleta:
                 // Metralleta se vuelve impresisa según calentamiento
@@ -256,7 +256,7 @@ public class ControladorArmas : StartupScript
                              ((tiempoPrecisiónMetralleta - tempoMetralleta) / tiempoPrecisiónMetralleta) * 0.2f);
                 ActivarLuz();
                 animadorMetralleta.AnimarDisparo(0.1f, 0.1f, turnoMetralleta);
-                últimoDisparoMetralleta = ControladorPartida.ObtenerTiempo();
+                últimoDisparoMetralleta = ControladorJuego.ObtenerTiempo();
                 break;
             case Armas.rifle:
                 movimiento.DetenerMovimiento();
@@ -264,7 +264,7 @@ public class ControladorArmas : StartupScript
                 controlador.VibrarCámara(20, 14);
                 ActivarLuz();
                 animadorRife.AnimarDisparo(2f, 0.4f, TipoDisparo.espejo);
-                últimoDisparoRifle = ControladorPartida.ObtenerTiempo();
+                últimoDisparoRifle = ControladorJuego.ObtenerTiempo();
                 break;
             case Armas.lanzagranadas:
                 movimiento.DetenerMovimiento();
@@ -272,7 +272,7 @@ public class ControladorArmas : StartupScript
                 controlador.VibrarCámara(16, 20);
                 ActivarLuz();
                 animadorLanzagranadas.AnimarDisparo(0.5f, 0.8f, turnoLanzagranadas);
-                últimoDisparoLanzagranadas = ControladorPartida.ObtenerTiempo();
+                últimoDisparoLanzagranadas = ControladorJuego.ObtenerTiempo();
                 break;
         }
     }
@@ -429,7 +429,7 @@ public class ControladorArmas : StartupScript
     {
         // Cadencia
         var tiempoDisparo = ObtenerCadencia(Armas.espada) + últimoDisparoEspada;
-        if (ControladorPartida.ObtenerTiempo() < tiempoDisparo)
+        if (ControladorJuego.ObtenerTiempo() < tiempoDisparo)
             return;
 
         var direccionRayos = rayosMelé;

@@ -107,7 +107,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
 
     public override void Update()
     {
-        if (!ControladorPartida.ObtenerActivo())
+        if (!ControladorJuego.ObtenerActivo())
             return;
 
         if (!activo)
@@ -172,7 +172,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         cuerpo.SetVelocity(Vector3.Zero);
         persecutor.EliminarPersecutor();
 
-        ControladorPartida.SumarEnemigo();
+        ControladorJuego.SumarEnemigo();
         MarcarMuerte();
 
         // Desactivar Dañables
@@ -261,7 +261,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         if (!activo)
             return;
 
-        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorPartida.ObtenerCabezaJugador());
+        distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorJuego.ObtenerCabezaJugador());
 
         if (distanciaJugador > distanciaSonido)
         {

@@ -24,6 +24,6 @@ public class ControladorSecreto : AsyncScript
     private void Activar()
     {
         cuerpo.Enabled = false;
-        ControladorPartida.SumarSecreto();
+        ControladorJuego.SumarSecreto();
     }
 }

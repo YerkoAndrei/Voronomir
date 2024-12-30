@@ -207,7 +207,7 @@ public class InterfazJuego : SyncScript
                 EnClicContinuar();
         }
 
-        if (ControladorPartida.ObtenerActivo() && panelDepuración.Visibility == Visibility.Visible)
+        if (ControladorJuego.ObtenerActivo() && panelDepuración.Visibility == Visibility.Visible)
             ActualizarDepuración();
     }
 
@@ -216,11 +216,11 @@ public class InterfazJuego : SyncScript
         if (SistemaEscenas.ObtenerAnimando())
             return;
 
-        ControladorPartida.Pausar(!ControladorPartida.ObtenerActivo());
-        SistemaSonidos.PausarSonidosMundo(!ControladorPartida.ObtenerActivo());
+        ControladorJuego.Pausar(!ControladorJuego.ObtenerActivo());
+        SistemaSonidos.PausarSonidosMundo(!ControladorJuego.ObtenerActivo());
         opciones.Visibility = Visibility.Hidden;
 
-        if (ControladorPartida.ObtenerActivo())
+        if (ControladorJuego.ObtenerActivo())
         {
             BloquearInterfaz(true);
             panelPausa.Visibility = Visibility.Hidden;
@@ -244,14 +244,14 @@ public class InterfazJuego : SyncScript
 
     private void EnClicReiniciar()
     {
-        ControladorPartida.ApagarFísicas();
-        SistemaEscenas.CambiarEscena(ControladorPartida.ObtenerEscena());
+        ControladorJuego.ApagarFísicas();
+        SistemaEscenas.CambiarEscena(ControladorJuego.ObtenerEscena());
     }
 
     private void EnClicContinuar()
     {
-        ControladorPartida.ApagarFísicas();
-        SistemaEscenas.CambiarEscena(ControladorPartida.ObtenerSiguienteEscena());
+        ControladorJuego.ApagarFísicas();
+        SistemaEscenas.CambiarEscena(ControladorJuego.ObtenerSiguienteEscena());
     }
 
     private void EnClicOpciones()
@@ -476,27 +476,27 @@ public class InterfazJuego : SyncScript
         ApagarLlaves();
         ApagarPoderes();
 
-        ControladorPartida.Pausar(false);
+        ControladorJuego.Pausar(false);
         BloquearInterfaz(false);
 
-        txtMuerteTiempo.Text = ControladorPartida.ObtenerTextoDuración();
+        txtMuerteTiempo.Text = ControladorJuego.ObtenerTextoDuración();
         panelMuerte.Visibility = Visibility.Visible;
     }
 
     public void Finalizar()
     {
-        ControladorPartida.Pausar(false);
+        ControladorJuego.Pausar(false);
         BloquearInterfaz(false);
 
         if (panelDepuración.Visibility == Visibility.Visible)
             ActualizarDepuración();
 
         // Datos final
-        txtFinalNivel.Text = ControladorPartida.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorPartida.ObtenerEscena().ToString());
+        txtFinalNivel.Text = ControladorJuego.ObtenerEscena().ToString() + ": " + SistemaTraducción.ObtenerTraducción(ControladorJuego.ObtenerEscena().ToString());
         txtDificultad.Text = SistemaTraducción.ObtenerTraducción(SistemaMemoria.Dificultad.ToString());
-        txtFinalTiempo.Text = ControladorPartida.ObtenerTextoDuración();
-        txtEnemigos.Text = ControladorPartida.ObtenerTextoEnemigos();
-        txtSecretos.Text = ControladorPartida.ObtenerTextoSecretos();
+        txtFinalTiempo.Text = ControladorJuego.ObtenerTextoDuración();
+        txtEnemigos.Text = ControladorJuego.ObtenerTextoEnemigos();
+        txtSecretos.Text = ControladorJuego.ObtenerTextoSecretos();
 
         txtFinalNivel.Visibility = Visibility.Hidden;
         txtDificultad.Visibility = Visibility.Hidden;
@@ -537,11 +537,11 @@ public class InterfazJuego : SyncScript
     private void ActualizarDepuración()
     {
         txtCuadrosPorSegundo.Text = Game.UpdateTime.FramePerSecond.ToString("000");
-        txtTiempo.Text = FormatearTiempo(ControladorPartida.ObtenerTiempo());
-        txtPosición.Text = ControladorPartida.ObtenerPosiciónJugador().ToString("n3");
-        txtVelocidad.Text = (ControladorPartida.ObtenerVelocidad() * 10).ToString("n3");
-        txtAceleración.Text = ControladorPartida.ObtenerAceleración().ToString("n3");
-        txtCampoVisión.Text = ControladorPartida.ObtenerCampoVisión().ToString("000");
-        txtMetralleta.Text = ControladorPartida.ObtenerCalentamientoMetralleta().ToString("n3");
+        txtTiempo.Text = FormatearTiempo(ControladorJuego.ObtenerTiempo());
+        txtPosición.Text = ControladorJuego.ObtenerPosiciónJugador().ToString("n3");
+        txtVelocidad.Text = (ControladorJuego.ObtenerVelocidad() * 10).ToString("n3");
+        txtAceleración.Text = ControladorJuego.ObtenerAceleración().ToString("n3");
+        txtCampoVisión.Text = ControladorJuego.ObtenerCampoVisión().ToString("000");
+        txtMetralleta.Text = ControladorJuego.ObtenerCalentamientoMetralleta().ToString("n3");
     }
 }

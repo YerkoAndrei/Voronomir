@@ -124,7 +124,7 @@ public class AnimadorLancero : StartupScript, IAnimador
 
     private void ApuntarLanza()
     {
-        ánguloDiferencia = ControladorPartida.ObtenerCabezaJugador().Y - lanza.WorldMatrix.TranslationVector.Y;
+        ánguloDiferencia = ControladorJuego.ObtenerCabezaJugador().Y - lanza.WorldMatrix.TranslationVector.Y;
         lanza.Rotation = rotaciónLanzaInicial * Quaternion.RotationX(MathUtil.DegreesToRadians(85 - (ánguloDiferencia * 10)));
     }
 
