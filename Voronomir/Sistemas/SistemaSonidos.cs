@@ -30,6 +30,9 @@ public class SistemaSonidos : AsyncScript
     public Sound sonidoMetralleta;
     public Sound sonidoRifle;
     public Sound sonidoLanzagranadas;
+    public Sound sonidoCambioArma;
+    public Sound sonidoMiraEntra;
+    public Sound sonidoMiraSale;
 
     public Sound sonidoPoderDaño;
     public Sound sonidoPoderInvulnerabilidad;
@@ -59,6 +62,9 @@ public class SistemaSonidos : AsyncScript
     private static SoundInstance metralleta;
     private static SoundInstance rifle;
     private static SoundInstance lanzagranadas;
+    private static SoundInstance cambioArma;
+    private static SoundInstance miraEntra;
+    private static SoundInstance miraSale;
 
     private static SoundInstance poderDaño;
     private static SoundInstance poderInvulnerabilidad;
@@ -90,6 +96,9 @@ public class SistemaSonidos : AsyncScript
         metralleta = sonidoSalto.CreateInstance();
         rifle = sonidoMorir.CreateInstance();
         lanzagranadas = sonidoMorir.CreateInstance();
+        cambioArma = sonidoCambioArma.CreateInstance();
+        miraEntra = sonidoMiraEntra.CreateInstance();
+        miraSale = sonidoMiraSale.CreateInstance();
 
         poderDaño = sonidoPoderDaño.CreateInstance();
         poderInvulnerabilidad = sonidoPoderInvulnerabilidad.CreateInstance();
@@ -226,6 +235,29 @@ public class SistemaSonidos : AsyncScript
         finalizar.Stop();
         finalizar.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
         finalizar.PlayExclusive();
+    }
+
+    public static void SonarCambioArma()
+    {
+        cambioArma.Stop();
+        cambioArma.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        cambioArma.PlayExclusive();
+    }
+
+    public static void SonarMira(bool entra)
+    {
+        if (entra)
+        {
+            miraEntra.Stop();
+            miraEntra.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+            miraEntra.PlayExclusive();
+        }
+        else
+        {
+            miraSale.Stop();
+            miraSale.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+            miraSale.PlayExclusive();
+        }
     }
 
     public static void SonarDisparo(Armas arma)

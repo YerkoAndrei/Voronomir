@@ -101,7 +101,7 @@ public class ControladorArmas : StartupScript
         animadorMetralleta.Iniciar(this);
         animadorRife.Iniciar(this);
         animadorLanzagranadas.Iniciar(this);
-        
+
         // Arma por defecto
         armaActual = Armas.espada;
         armaAnterior = armaActual;
@@ -155,10 +155,10 @@ public class ControladorArmas : StartupScript
             Disparar(false);
 
         // Rifle
-        if (Input.IsMouseButtonPressed(MouseButton.Right) && armaActual == Armas.rifle)
+        if (Input.IsMouseButtonPressed(MouseButton.Right) && armaActual == Armas.rifle && !usandoMira)
             AcercarMira(true);
 
-        if (Input.IsMouseButtonReleased(MouseButton.Right) && armaActual == Armas.rifle)
+        if (Input.IsMouseButtonReleased(MouseButton.Right) && armaActual == Armas.rifle && usandoMira)
             AcercarMira(false);
 
         // Cambio armas
@@ -234,7 +234,7 @@ public class ControladorArmas : StartupScript
         {
             case Armas.espada:
                 Atacar(clicIzquierdo);
-                if(clicIzquierdo)
+                if (clicIzquierdo)
                     animadorEspada.AnimarAtaque(TipoDisparo.izquierda);
                 else
                     animadorEspada.AnimarAtaque(TipoDisparo.derecha);
@@ -321,7 +321,7 @@ public class ControladorArmas : StartupScript
         // Daño se reduce según distancia
         var distancia = Vector3.Distance(cámara.Entity.Transform.WorldMatrix.TranslationVector, resultado.Point);
         var reducción = 0f;
-        if(distancia > ObtenerDistanciaMáxima(armaActual))
+        if (distancia > ObtenerDistanciaMáxima(armaActual))
             reducción = (distancia - ObtenerDistanciaMáxima(armaActual)) * 0.5f;
 
         // Daña enemigo
@@ -500,7 +500,7 @@ public class ControladorArmas : StartupScript
 
         if (posición != Vector3.Zero && normal != Vector3.Zero)
         {
-            if(entorno)
+            if (entorno)
                 ControladorCofres.IniciarEfectoEntorno(armaActual, posición, normal, true);
             else
                 ControladorCofres.IniciarEfectoDañoContinuo(armaActual, posición, normal);
@@ -509,34 +509,37 @@ public class ControladorArmas : StartupScript
 
     private async void AcercarMira(bool acercar)
     {
-        usandoMira = acercar;
-        movimiento.CambiarSensiblidad(usandoMira);
+        movimiento.CambiarSensiblidad(acercar);
         interfaz.ApagarMiras();
 
-        var campoVisión = controlador.ObtenerCampoVisión();
+        SistemaSonidos.SonarMira(acercar);
         var inicial = cámara.VerticalFieldOfView;
         var objetivo = inicial;
 
+        var duración = 0f;
         var sombraInicial = 0f;
         var sombraObjetivo = 1f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
 
-        if (usandoMira)
-            objetivo = campoVisión * 0.22f; // 20
+        if (acercar)
+        {
+            usandoMira = true;
+            duración = 0.025f;
+            objetivo = controlador.ObtenerCampoVisiónMira();
+        }
         else
         {
-            objetivo = campoVisión;         // 90
             sombraInicial = 1f;
             sombraObjetivo = 0f;
+            duración = 0.06f;
+            objetivo = controlador.ObtenerCampoVisiónMínimo();
             interfaz.MostrarMiraRifle(false);
         }
 
         // Animación mira
         tokenMira.Cancel();
         tokenMira = new CancellationTokenSource();
-
-        float duración = 0.025f;
-        float tiempoLerp = 0;
-        float tiempo = 0;
 
         var token = tokenMira.Token;
         while (tiempoLerp < duración)
@@ -554,8 +557,12 @@ public class ControladorArmas : StartupScript
 
         // Fin
         cámara.VerticalFieldOfView = objetivo;
-        interfaz.MostrarMiraRifle(usandoMira);
         interfaz.ActualizarSombraRifle(sombraObjetivo);
+
+        if (acercar)
+            interfaz.MostrarMiraRifle(true);
+        else
+            usandoMira = false;
     }
 
     private async void ActivarLuz()
@@ -586,6 +593,7 @@ public class ControladorArmas : StartupScript
             return;
 
         AnimarSalida();
+        SistemaSonidos.SonarCambioArma();
 
         cambiandoArma = true;
         armaAnterior = armaActual;
@@ -647,7 +655,7 @@ public class ControladorArmas : StartupScript
                 fuerzaAnimación = movimiento.ObtenerAceleración() * 4f;
                 break;
         }
-        
+
         // Ajuste
         duraciónAnimación = MathUtil.Clamp(duraciónAnimación, 0.2f, 2);
         fuerzaAnimación = MathUtil.Clamp(fuerzaAnimación, 0.5f, 3);

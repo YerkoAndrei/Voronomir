@@ -323,6 +323,16 @@ public class ControladorJugador : SyncScript, IDañable
         return cámara.VerticalFieldOfView;
     }
 
+    public float ObtenerCampoVisiónMínimo()
+    {
+        return campoVisiónMin;
+    }
+
+    public float ObtenerCampoVisiónMira()
+    {
+        return 20;
+    }
+
     public void VibrarCámara(float fuerza, int iteraciones)
     {
         // Cancela vibración actual para iniciar nueva
