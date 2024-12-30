@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Globalization;
+using System.Threading;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Input;
@@ -40,6 +41,7 @@ public class ControladorMovimiento : StartupScript
     private float maxVelocidad;
     private float aceleración;
 
+    private CancellationTokenSource tokenReinicioAceleración;
     private bool reiniciandoPorcentajeAceleración;
     private float porcentajeAceleración;
     private float maxVelocidadEspada;
@@ -66,6 +68,8 @@ public class ControladorMovimiento : StartupScript
         velocidadBase = 12f;
         multiplicadorVelocidad = velocidadBase;
         maxVelocidadEspada = 2f - 1f;
+
+        tokenReinicioAceleración = new CancellationTokenSource();
         CambiarSensiblidad(false);
     }
 
@@ -235,6 +239,8 @@ public class ControladorMovimiento : StartupScript
 
     private async void ReiniciarPorcentajeVelocidad()
     {
+        tokenReinicioAceleración.Cancel();
+        tokenReinicioAceleración = new CancellationTokenSource();
         reiniciandoPorcentajeAceleración = true;
 
         var porcentajeAceleraciónAnterior = porcentajeAceleración;
@@ -242,8 +248,12 @@ public class ControladorMovimiento : StartupScript
         float tiempoLerp = 0;
         float tiempo = 0;
 
+        var token = tokenReinicioAceleración.Token;
         while (tiempoLerp < duración)
         {
+            if (token.IsCancellationRequested)
+                return;
+
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             porcentajeAceleración = MathUtil.Lerp(porcentajeAceleraciónAnterior, 0f, tiempo);
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
