@@ -42,7 +42,8 @@ public class ControladorMovimiento : StartupScript
     private float aceleración;
 
     private CancellationTokenSource tokenReinicioAceleración;
-    private bool reiniciandoPorcentajeAceleración;
+    private CancellationTokenSource tokenCambioVelocidadMax;
+    private bool porcentajeAceleraciónManual;
     private float porcentajeAceleración;
     private float maxVelocidadEspada;
 
@@ -70,6 +71,7 @@ public class ControladorMovimiento : StartupScript
         maxVelocidadEspada = 2f - 1f;
 
         tokenReinicioAceleración = new CancellationTokenSource();
+        tokenCambioVelocidadMax = new CancellationTokenSource();
         CambiarSensiblidad(false);
     }
 
@@ -110,8 +112,8 @@ public class ControladorMovimiento : StartupScript
         // Aceleración
         if (entradas == Vector3.Zero || detención)
         {
-            if (aceleración > 1.1f && !reiniciandoPorcentajeAceleración)
-                ReiniciarPorcentajeVelocidad();
+            if (aceleración > 1.05f && !porcentajeAceleraciónManual && !controlador.ObtenerPoder(Poderes.velocidad))
+                ReiniciarPorcentajeVelocidad(false);
 
             tempoAceleración = 0;
             tempoIniciación = 0;
@@ -122,8 +124,8 @@ public class ControladorMovimiento : StartupScript
         if (cuerpo.Collisions.Where(TocaEnemigo).Count() > 0 && aceleración >= 1)
         {
             // 1 enemigo detiene velocidad
-            if (aceleración > 1.05f && !reiniciandoPorcentajeAceleración)
-                ReiniciarPorcentajeVelocidad();
+            if (aceleración > 1.05f && !porcentajeAceleraciónManual && !controlador.ObtenerPoder(Poderes.velocidad))
+                ReiniciarPorcentajeVelocidad(false);
 
             tempoAceleración = 0;
             tempoIniciación = 0;
@@ -133,8 +135,8 @@ public class ControladorMovimiento : StartupScript
         else if (caminando || cuerpo.Collisions.Where(TocaEntornoEstáico).Count() > 1)
         {
             // 2 pisos o paredes reinician velocidad
-            if (aceleración > 1.05f && !reiniciandoPorcentajeAceleración)
-                ReiniciarPorcentajeVelocidad();
+            if (aceleración > 1.05f && !porcentajeAceleraciónManual && !controlador.ObtenerPoder(Poderes.velocidad))
+                ReiniciarPorcentajeVelocidad(false);
 
             tempoAceleración = 0;
             tempoIniciación = tiempoIniciación;
@@ -227,9 +229,10 @@ public class ControladorMovimiento : StartupScript
 
     public float ObtenerPorcentajeAceleración()
     {
-        if (!reiniciandoPorcentajeAceleración)
+        if (!porcentajeAceleraciónManual)
         {
-            if (aceleración >= 1)
+            // -1 evita aceleración inicial brusca
+            if (aceleración >= 1 || controlador.ObtenerPoder(Poderes.velocidad))
                 porcentajeAceleración = ((aceleración - 1) / maxVelocidadEspada);
             else
                 porcentajeAceleración = 0;
@@ -237,16 +240,23 @@ public class ControladorMovimiento : StartupScript
         return porcentajeAceleración;
     }
 
-    private async void ReiniciarPorcentajeVelocidad()
+    public async void ReiniciarPorcentajeVelocidad(bool acelerar)
     {
         tokenReinicioAceleración.Cancel();
         tokenReinicioAceleración = new CancellationTokenSource();
-        reiniciandoPorcentajeAceleración = true;
+        porcentajeAceleraciónManual = true;
 
         var porcentajeAceleraciónAnterior = porcentajeAceleración;
-        float duración = 0.1f;
         float tiempoLerp = 0;
         float tiempo = 0;
+
+        var duración = 0.1f;
+        var objetivo = 0f;
+        if (acelerar)
+        {
+            duración = 0.4f;
+            objetivo = 1f;
+        }
 
         var token = tokenReinicioAceleración.Token;
         while (tiempoLerp < duración)
@@ -255,12 +265,12 @@ public class ControladorMovimiento : StartupScript
                 return;
 
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
-            porcentajeAceleración = MathUtil.Lerp(porcentajeAceleraciónAnterior, 0f, tiempo);
+            porcentajeAceleración = MathUtil.Lerp(porcentajeAceleraciónAnterior, objetivo, tiempo);
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
 
             await Task.Delay(1);
         }
-        reiniciandoPorcentajeAceleración = false;
+        porcentajeAceleraciónManual = false;
     }
 
     public void DetenerMovimiento()
@@ -279,22 +289,56 @@ public class ControladorMovimiento : StartupScript
 
     public void CambiarVelocidadMáxima(Armas arma)
     {
+        var nuevaVelocidad = 0f;
         switch (arma)
         {
             case Armas.espada:
-                maxVelocidad = 2.0f;
+                nuevaVelocidad = 2.0f;
                 break;
             case Armas.escopeta:
             case Armas.metralleta:
-                maxVelocidad = 1.5f;
+                nuevaVelocidad = 1.5f;
                 break;
             case Armas.rifle:
-                maxVelocidad = 1.4f;
+                nuevaVelocidad = 1.4f;
                 break;
             case Armas.lanzagranadas:
-                maxVelocidad = 1.2f;
+                nuevaVelocidad = 1.2f;
                 break;
         }
+
+        // FOV suave
+        if (controlador.ObtenerPoder(Poderes.velocidad))
+            CambiarVelocidadMáxima(nuevaVelocidad);
+        else
+            maxVelocidad = nuevaVelocidad;
+    }
+
+    public async void CambiarVelocidadMáxima(float nuevaVelocidad)
+    {
+        tokenCambioVelocidadMax.Cancel();
+        tokenCambioVelocidadMax = new CancellationTokenSource();
+
+        var inicio = maxVelocidad;
+        float duración = 0.1f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        var token = tokenCambioVelocidadMax.Token;
+        while (tiempoLerp < duración)
+        {
+            if (token.IsCancellationRequested)
+                return;
+
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+            maxVelocidad = MathUtil.Lerp(inicio, nuevaVelocidad, tiempo);
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+
+            await Task.Delay(1);
+        }
+
+        // Fin
+        maxVelocidad = nuevaVelocidad;
     }
 
     public void CambiarSensiblidad(bool reducir)

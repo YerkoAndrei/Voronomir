@@ -38,6 +38,9 @@ public class ControladorJugador : SyncScript, IDañable
     private bool llaveAmarilla;
 
     // Poderes
+    private bool dañoActivo;
+    private bool invulnerabilidadActiva;
+    private bool velocidadActiva;
     private float tiempoDaño;
     private float tiempoInvulnerabilidad;
     private float tiempoVelocidad;
@@ -97,11 +100,11 @@ public class ControladorJugador : SyncScript, IDañable
         if (tiempoVelocidad > 0)
             tiempoVelocidad -= (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
 
-        if (tiempoDaño <= 0)
+        if (dañoActivo && tiempoDaño <= 0)
             ApagarPoder(Poderes.daño);
-        if (tiempoInvulnerabilidad <= 0)
+        if (invulnerabilidadActiva && tiempoInvulnerabilidad <= 0)
             ApagarPoder(Poderes.invulnerabilidad);
-        if (tiempoVelocidad <= 0)
+        if (velocidadActiva && tiempoVelocidad <= 0)
             ApagarPoder(Poderes.velocidad);
     }
 
@@ -262,16 +265,20 @@ public class ControladorJugador : SyncScript, IDañable
         {
             case Poderes.daño:
                 tiempoDaño = 30;
+                dañoActivo = true;
                 ControladorJuego.MostrarMensaje(SistemaTraducción.ObtenerTraducción("poderDaño"));
                 break;
             case Poderes.invulnerabilidad:
                 vida = vidaMax;
                 interfaz.ActualizarVida(vida / vidaMax);
                 tiempoInvulnerabilidad = 30;
+                invulnerabilidadActiva = true;
                 ControladorJuego.MostrarMensaje(SistemaTraducción.ObtenerTraducción("poderInvulnerabilidad"));
                 break;
             case Poderes.velocidad:
                 tiempoVelocidad = 30;
+                velocidadActiva = true;
+                movimiento.ReiniciarPorcentajeVelocidad(true);
                 ControladorJuego.MostrarMensaje(SistemaTraducción.ObtenerTraducción("poderVelocidad"));
                 break;
         }
@@ -284,12 +291,16 @@ public class ControladorJugador : SyncScript, IDañable
         {
             case Poderes.daño:
                 tiempoDaño = 0;
+                dañoActivo = false;
                 break;
             case Poderes.invulnerabilidad:
                 tiempoInvulnerabilidad = 0;
+                invulnerabilidadActiva = false;
                 break;
             case Poderes.velocidad:
                 tiempoVelocidad = 0;
+                velocidadActiva = false;
+                movimiento.ReiniciarPorcentajeVelocidad(false);
                 break;
         }
     }
