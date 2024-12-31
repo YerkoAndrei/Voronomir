@@ -179,6 +179,10 @@ public class SistemaEscenas : AsyncScript
 
         switch (siguienteEscena)
         {
+            case Escenas.pruebas:
+                escenaActual = Content.Load(escenaPruebas);
+                juego = true;
+                break;
             case Escenas.menú:
                 escenaActual = Content.Load(escenaMenú);
                 break;
