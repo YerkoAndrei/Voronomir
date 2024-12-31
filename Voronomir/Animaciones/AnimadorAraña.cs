@@ -16,23 +16,23 @@ public class AnimadorAraña : StartupScript, IAnimador
     public ParticleSystemComponent partículas;
 
     public string cabeza;
-    public string poto;
+    public string cola;
     public List<string> patasIzq = new List<string> { };
     public List<string> patasDer = new List<string> { };
     public List<string> patasCompletas = new List<string> { };
 
     private SkeletonUpdater esqueleto;
     private int idCabeza;
-    private int idPoto;
+    private int idCola;
     private int[] idPatasIzq;
     private int[] idPatasDer;
-    private int[] idPatasInicio;
+    private int[] idPatasCompletas;
 
     private Quaternion[] rotacionesInicioPatasIzq;
     private Quaternion[] rotacionesInicioPatasDer;
 
     private Quaternion rotaciónInicioCabeza;
-    private Quaternion rotaciónInicioPoto;
+    private Quaternion rotaciónInicioCola;
 
     private CancellationTokenSource tokenAtaque;
 
@@ -43,7 +43,7 @@ public class AnimadorAraña : StartupScript, IAnimador
 
         idPatasIzq = new int[patasIzq.Count];
         idPatasDer = new int[patasDer.Count];
-        idPatasInicio = new int[patasCompletas.Count];
+        idPatasCompletas = new int[patasCompletas.Count];
 
         rotacionesInicioPatasIzq = new Quaternion[patasIzq.Count];
         rotacionesInicioPatasDer = new Quaternion[patasDer.Count];
@@ -72,18 +72,18 @@ public class AnimadorAraña : StartupScript, IAnimador
             for (int ii = 0; ii < patasCompletas.Count; ii++)
             {
                 if (esqueleto.Nodes[i].Name == patasCompletas[ii])
-                    idPatasInicio[ii] = i;
+                    idPatasCompletas[ii] = i;
             }
 
             if (esqueleto.Nodes[i].Name == cabeza)
                 idCabeza = i;
 
-            if (esqueleto.Nodes[i].Name == poto)
-                idPoto = i;
+            if (esqueleto.Nodes[i].Name == cola)
+                idCola = i;
         }
 
         rotaciónInicioCabeza = esqueleto.NodeTransformations[idCabeza].Transform.Rotation;
-        rotaciónInicioPoto = esqueleto.NodeTransformations[idPoto].Transform.Rotation;
+        rotaciónInicioCola = esqueleto.NodeTransformations[idCola].Transform.Rotation;
     }
 
     public void Actualizar()
@@ -124,11 +124,11 @@ public class AnimadorAraña : StartupScript, IAnimador
         }
         for (int i = 0; i < idPatasDer.Length; i++)
         {
-            esqueleto.NodeTransformations[idPatasDer[i]].Transform.Rotation =rotacionesInicioPatasDer[i];
+            esqueleto.NodeTransformations[idPatasDer[i]].Transform.Rotation = rotacionesInicioPatasDer[i];
         }
 
-        AnimarAtaque(Quaternion.RotationX(MathUtil.DegreesToRadians(80)),
-                     Quaternion.RotationX(MathUtil.DegreesToRadians(-90)));
+        AnimarAtaque(rotaciónInicioCabeza * Quaternion.RotationX(MathUtil.DegreesToRadians(-40)),
+                     rotaciónInicioCola * Quaternion.RotationX(MathUtil.DegreesToRadians(-80)));
     }
 
     public void Morir()
@@ -143,17 +143,11 @@ public class AnimadorAraña : StartupScript, IAnimador
         veneno.Entity.Transform.Scale = new Vector3(1.5f, 1, 1.5f);
         partículas.Entity.Transform.Position = new Vector3(0, 0.2f, 0);
 
-        esqueleto.NodeTransformations[idCabeza].Transform.Scale = new Vector3(0.5f, 0.8f, 1);
-
         // Apagar extremidades
-        for (int i = 0; i < idPatasInicio.Length; i++)
+        for (int i = 0; i < idPatasCompletas.Length; i++)
         {
-            esqueleto.NodeTransformations[idPatasInicio[i]].Transform.Scale = Vector3.Zero;
-
-            if (esqueleto.NodeTransformations[idPatasInicio[i]].Transform.Position.X > 0)
-                esqueleto.NodeTransformations[idPatasInicio[i]].Transform.Position -= Vector3.UnitX * 1.2f;
-            else
-                esqueleto.NodeTransformations[idPatasInicio[i]].Transform.Position += Vector3.UnitX * 1.2f;
+            esqueleto.NodeTransformations[idPatasCompletas[i]].Transform.Scale = Vector3.Zero;
+            esqueleto.NodeTransformations[idPatasCompletas[i]].Transform.Position -= Vector3.UnitY * 0.5f;
         }
     }
 
@@ -172,7 +166,7 @@ public class AnimadorAraña : StartupScript, IAnimador
 
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             esqueleto.NodeTransformations[idCabeza].Transform.Rotation = Quaternion.Lerp(objetivoCabeza, rotaciónInicioCabeza, tiempo);
-            esqueleto.NodeTransformations[idPoto].Transform.Rotation = Quaternion.Lerp(objetivoPoto, rotaciónInicioPoto, tiempo);
+            esqueleto.NodeTransformations[idCola].Transform.Rotation = Quaternion.Lerp(objetivoPoto, rotaciónInicioCola, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
@@ -180,7 +174,7 @@ public class AnimadorAraña : StartupScript, IAnimador
 
         // Fin
         esqueleto.NodeTransformations[idCabeza].Transform.Rotation = rotaciónInicioCabeza;
-        esqueleto.NodeTransformations[idPoto].Transform.Rotation = rotaciónInicioPoto;
+        esqueleto.NodeTransformations[idCola].Transform.Rotation = rotaciónInicioCola;
     }
 
     private async void AnimarMuerte(Vector3 posiciónInicio, Vector3 posiciónObjetivo)

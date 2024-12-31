@@ -376,7 +376,7 @@ Hierarchy:
                         veneno: ref!! a6ba3f7b-3276-494b-a6c1-eb06ce4e527d
                         "partículas": ref!! 2ef60f9a-e435-4cba-a2ee-c8cb7b007389
                         cabeza: cabeza
-                        poto: poto_01
+                        cola: cola_01
                         patasIzq:
                             4b8814497bc91db1d7a5cf496d115b5f: pata.1_03.L
                             06b4eca309009beaa875c2e8a572925c: pata.2_03.L
@@ -389,13 +389,29 @@ Hierarchy:
                             c0e672ffdc0ddad77e91ec6b9d8c6d2f: pata.4_03.R
                         patasCompletas:
                             7adfeb7f9812391bb2c40a1d3399e7ae: pata.1_01.L
-                            e5028e88f8b14e3c975b8b708a8e8e77: pata.2_01.L
-                            594dcc95029c4f5d5d2dd05dd166ab5a: pata.3_01.L
-                            dcfd855ce59d6861d79fdc9c7f80cd42: pata.4_01.L
-                            fac884a16d7edbc53b66869b8d4d99c6: pata.1_01.R
-                            e06875d123717e84699ae102728f1568: pata.2_01.R
-                            4569927b76d19594809c1dd53b80f93d: pata.3_01.R
-                            17e85e75892e34e67741885697bbcfd0: pata.4_01.R
+                            e5028e88f8b14e3c975b8b708a8e8e77: pata.1_02.L
+                            594dcc95029c4f5d5d2dd05dd166ab5a: pata.1_03.L
+                            dcfd855ce59d6861d79fdc9c7f80cd42: pata.2_01.L
+                            fac884a16d7edbc53b66869b8d4d99c6: pata.2_02.L
+                            e06875d123717e84699ae102728f1568: pata.2_03.L
+                            4569927b76d19594809c1dd53b80f93d: pata.3_01.L
+                            17e85e75892e34e67741885697bbcfd0: pata.3_02.L
+                            e3575122975e6645555fefef8246fcfe: pata.3_03.L
+                            9acb4214705557c33f6c6398a9ccce7e: pata.4_01.L
+                            cc8d83b8c0937508c5e6f36185d342c1: pata.4_02.L
+                            2c6e55e055d4daab5e225ca5516c034f: pata.4_03.L
+                            2b2c968d2abc36bcd6e86fc92e11f912: pata.1_01.R
+                            3b2a10aa57912a307c9a6c8411b20027: pata.1_02.R
+                            0d4cdd47bb0d42660e355b13e385a957: pata.1_03.R
+                            a06614f87262cdacb207ecb8780f0600: pata.2_01.R
+                            fd547d96eb02731b319d864d2f026c48: pata.2_02.R
+                            9c2ec373eae68f964d49bdcb97a03b71: pata.2_03.R
+                            239223b4860a7d0fd4c0a5b614e3d569: pata.3_01.R
+                            05166a732ddd1cd6b0c0d66db9e2cffb: pata.3_02.R
+                            0ba1e58ca590b3e5539546997498025b: pata.3_03.R
+                            62df65b9e406d1a4ac0e8ca2f5552ec7: pata.4_01.R
+                            cd444a83b840389029e1d3a46fe12a88: pata.4_02.R
+                            05777cde407f1322bb3f80168c53ce17: pata.4_03.R
         -   Folder: null
             Entity:
                 Id: c89d458b-f954-4d3f-9032-14652b88b729

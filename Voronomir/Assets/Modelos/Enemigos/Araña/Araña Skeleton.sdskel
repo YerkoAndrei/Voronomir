@@ -7,34 +7,35 @@ PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Nodes:
     43dad41fa0e9e6531b41f830cc43a47a: {Name: Esqueleto, Depth: 0}
     cf149915dd17f0ce0046bdd2d78da3f7: {Name: "Araña", Depth: 1}
+    4e8b0e2841baa36b9fe099862d9af3b8: {Name: patas, Depth: 1}
+    57b06a66417231ff88975cf68bdfd02b: {Name: pata.1_01.L, Depth: 2}
+    43c5c4712fc1dbfe686bffb5a4e26e4b: {Name: pata.1_02.L, Depth: 3}
+    6a7b8a89b821626ffa1b3da60f253333: {Name: pata.1_03.L, Depth: 4}
+    95b386fe440529642b7afd6443e62b47: {Name: pata.2_01.L, Depth: 2}
+    7dba3737a2470d5394888a0fb723df4d: {Name: pata.2_01.L.001, Depth: 3}
+    7e2e2e63d1946f379444ca24e4177d3b: {Name: pata.2_01.L.002, Depth: 4}
+    d02badc9a45391b8286f9ffb9d41067e: {Name: pata.3_01.L, Depth: 2}
+    7b96377e426061df170effcb81e7aa8d: {Name: pata.3_01.L.001, Depth: 3}
+    cac8fc890bcf8e7dbe9cee1dcc01ded8: {Name: pata.3_01.L.002, Depth: 4}
+    562672f099af9418a189b6778385bc0d: {Name: pata.4_01.L, Depth: 2}
+    00c60b6cb5e5417e687f3a3ee36dfd8f: {Name: pata.4_01.L.001, Depth: 3}
+    805f1eccd402ae572adf23b45e4dea3f: {Name: pata.4_01.L.002, Depth: 4}
+    5fd5fab423f1643af61c254404dedafa: {Name: pata.1_01.R, Depth: 2}
+    52e8ecee212e607d293681167a15576c: {Name: pata.1_02.R, Depth: 3}
+    d86d513c8f75802569215e6d9723d75f: {Name: pata.1_03.R, Depth: 4}
+    a1cdef53a8b5f197b6ef2cf997431965: {Name: pata.2_01.R, Depth: 2}
+    252b24c9f38e806ae6ca295cf61fc2b2: {Name: pata.2_01.R.001, Depth: 3}
+    cb29a7607d07aba6c95e0e5c084f0881: {Name: pata.2_01.R.002, Depth: 4}
+    58b889ecaadac1ffb87aa6334ecbb02d: {Name: pata.3_01.R, Depth: 2}
+    bdb07c60dc8124e3b721859293cf6268: {Name: pata.3_01.R.001, Depth: 3}
+    de4cb7f5ddc240852bf544e881f68834: {Name: pata.3_01.R.002, Depth: 4}
+    c23cdbf08495782be67e9a29c3c7b66e: {Name: pata.4_01.R, Depth: 2}
+    cd150c60502ed11f44e0340b8e3b691d: {Name: pata.4_01.R.001, Depth: 3}
+    3e42dad7318d893b8b66281844201c97: {Name: pata.4_01.R.002, Depth: 4}
     e67dfc1686fc24e75e7a721bab00b554: {Name: cabeza, Depth: 1}
-    bbfbd1b03fe3c704ff6f23d87d5727ee: {Name: colmillo.R, Depth: 2}
     5dd5726442ff50bb4d312bb88ef5f5f3: {Name: colmillo.L, Depth: 2}
-    4858136477f4568246751f25619466d8: {Name: poto_01, Depth: 1}
-    5ee6e6c231c96e798be08f804d6316ef: {Name: poto_02, Depth: 2}
-    c23cdbf08495782be67e9a29c3c7b66e: {Name: pata.4_01.R, Depth: 1}
-    944f42f373b853fd6c49e6eb86005a73: {Name: pata.4_02.R, Depth: 2}
-    3a2d6c11a8d3d5821089cf49ab8b558a: {Name: pata.4_03.R, Depth: 3}
-    58b889ecaadac1ffb87aa6334ecbb02d: {Name: pata.3_01.R, Depth: 1}
-    33fb24329ce980d081561fc33d81991c: {Name: pata.3_02.R, Depth: 2}
-    46e02d2e1722f668f058fcd4798de092: {Name: pata.3_03.R, Depth: 3}
-    a1cdef53a8b5f197b6ef2cf997431965: {Name: pata.2_01.R, Depth: 1}
-    586248a02aabfb98bc014db793dea5f7: {Name: pata.2_02.R, Depth: 2}
-    479be7b613a695d31e2464e741fc17af: {Name: pata.2_03.R, Depth: 3}
-    5fd5fab423f1643af61c254404dedafa: {Name: pata.1_01.R, Depth: 1}
-    52e8ecee212e607d293681167a15576c: {Name: pata.1_02.R, Depth: 2}
-    d86d513c8f75802569215e6d9723d75f: {Name: pata.1_03.R, Depth: 3}
-    562672f099af9418a189b6778385bc0d: {Name: pata.4_01.L, Depth: 1}
-    d96ba45e046784a1e388dbca6f34e7f9: {Name: pata.4_02.L, Depth: 2}
-    508143ce0f115c8b2cf7b933f9997e43: {Name: pata.4_03.L, Depth: 3}
-    d02badc9a45391b8286f9ffb9d41067e: {Name: pata.3_01.L, Depth: 1}
-    473b64f4fd614340946394d7b3ce6ef4: {Name: pata.3_02.L, Depth: 2}
-    1a7a4753bb5cf05bebd664076e5b0d8d: {Name: pata.3_03.L, Depth: 3}
-    95b386fe440529642b7afd6443e62b47: {Name: pata.2_01.L, Depth: 1}
-    1e22a6ce05c1bec3ac161f737a57b15d: {Name: pata.2_02.L, Depth: 2}
-    b9cd38715bc58027a52128fc8ef9c533: {Name: pata.2_03.L, Depth: 3}
-    57b06a66417231ff88975cf68bdfd02b: {Name: pata.1_01.L, Depth: 1}
-    43c5c4712fc1dbfe686bffb5a4e26e4b: {Name: pata.1_02.L, Depth: 2}
-    6a7b8a89b821626ffa1b3da60f253333: {Name: pata.1_03.L, Depth: 3}
+    bbfbd1b03fe3c704ff6f23d87d5727ee: {Name: colmillo.R, Depth: 2}
+    e168053a3d8b6b301b676fb77b831455: {Name: cola_01, Depth: 1}
+    92aa3831318bf448c9b537d645379b9b: {Name: cola_02, Depth: 2}
 ~SourceHashes:
-    "4599703aa072461f40d280fd2306a9c4~Araña.glb": 28389e745c81d804ad8b32fbe0cfd81c
+    "4599703aa072461f40d280fd2306a9c4~Araña.glb": ff4cffdbfdaa202d8089020d53d5b16c
