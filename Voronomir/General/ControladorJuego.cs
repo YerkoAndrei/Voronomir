@@ -27,6 +27,7 @@ public class ControladorJuego : SyncScript
 
     private static bool activo;
     private static float tiempo;
+    private static float valorPrueba;
 
     private static int enemigos;
     private static int maxEnemigos;
@@ -65,7 +66,7 @@ public class ControladorJuego : SyncScript
         }
 
         // Sonidos
-        var entidadesSonido = Entity.Scene.Entities.Where(o => o.Get<ElementoEfecto>() != null || 
+        var entidadesSonido = Entity.Scene.Entities.Where(o => o.Get<ElementoEfecto>() != null ||
                                                                o.Get<ControladorPoder>() != null ||
                                                                o.Get<ControladorLlave>() != null ||
                                                                o.Get<ControladorPuerta>() != null ||
@@ -188,6 +189,16 @@ public class ControladorJuego : SyncScript
     public static float ObtenerCalentamientoMetralleta()
     {
         return armas.ObtenerCalentamientoMetralleta();
+    }
+
+    public static void ConfigurarValorPrueba(float valor)
+    {
+        valorPrueba = valor;
+    }
+
+    public static float ObtenerValorPrueba()
+    {
+        return valorPrueba;
     }
 
     // Persecutores

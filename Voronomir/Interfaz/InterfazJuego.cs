@@ -50,6 +50,7 @@ public class InterfazJuego : SyncScript
     private TextBlock txtAceleración;
     private TextBlock txtCampoVisión;
     private TextBlock txtMetralleta;
+    private TextBlock txtPrueba;
 
     private TextBlock txtMensaje;
     private TextBlock txtMuerteTiempo;
@@ -122,6 +123,7 @@ public class InterfazJuego : SyncScript
         txtAceleración = página.FindVisualChildOfType<TextBlock>("txtAceleración");
         txtCampoVisión = página.FindVisualChildOfType<TextBlock>("txtCampoVisión");
         txtMetralleta = página.FindVisualChildOfType<TextBlock>("txtMetralleta");
+        txtPrueba = página.FindVisualChildOfType<TextBlock>("txtPrueba");
 
         // Datos finales
         txtMuerteTiempo = página.FindVisualChildOfType<TextBlock>("txtMuerteTiempo");
@@ -543,5 +545,6 @@ public class InterfazJuego : SyncScript
         txtAceleración.Text = ControladorJuego.ObtenerAceleración().ToString("n3");
         txtCampoVisión.Text = ControladorJuego.ObtenerCampoVisión().ToString("000");
         txtMetralleta.Text = ControladorJuego.ObtenerCalentamientoMetralleta().ToString("n3");
+        txtPrueba.Text = ControladorJuego.ObtenerValorPrueba().ToString("n3");
     }
 }

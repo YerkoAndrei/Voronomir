@@ -2824,6 +2824,22 @@ Hierarchy:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
                 BasePartId: 4b011e5c-668b-427a-b756-2cc9bc8b6832
                 InstanceId: 2aa5f198-c207-482d-887d-15039c4c9bb3
+        -   UIElement: !TextBlock
+                Id: 3bf40a70-b3b5-42a5-87e5-402b35422b00
+                DependencyProperties:
+                    7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 7
+                    db495f08ad15e2b134c702415c493a2f~GridBase.ColumnPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 10.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtPrueba
+                Text: 0.000
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
+                TextSize: 15.0
+                TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !Grid
                 Id: 3c0c37f5-4b21-41ca-bd9b-0f54c72b0bd0
                 DependencyProperties: {}
@@ -4532,7 +4548,7 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 80.0
-                Height: 110.0
+                Height: 130.0
                 HorizontalAlignment: Left
                 VerticalAlignment: Top
                 Margin: {Left: 5.0}
@@ -4555,7 +4571,9 @@ Hierarchy:
                     fbbdda0e450c007a3ba9a5b2c342eac0: !TextBlock ref!! 75242be8-e3ac-47b1-a0ee-74b1529c13bc
                     64e5ea07c47ca02c36ddcf99f3b9542b: !TextBlock ref!! 77a3b96e-c0bd-441e-beac-0c11126252f0
                     5e615ea8749ea0e61c01d96b0362fb13: !TextBlock ref!! f825f0d0-61cf-4748-83af-13d998eda5f9
-                Rows: 7
+                    c03d5267cc4fd3781973dca137c9d147: !TextBlock ref!! b8bdf538-9f37-45b2-8363-49897ec3220c
+                    cbf6f1000333a2be7dcf76ecfd62fe93: !TextBlock ref!! 3bf40a70-b3b5-42a5-87e5-402b35422b00
+                Rows: 8
                 Columns: 2
         -   UIElement: !Slider
                 Id: 5cb2474f-a1b9-4d7e-9f22-50d219e6ee5b
@@ -8086,7 +8104,7 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 25.0
                 VerticalAlignment: Top
-                Margin: {Top: 100.0}
+                Margin: {Top: 50.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -9567,6 +9585,21 @@ Hierarchy:
                 BasePartAsset: "01c9430c-0aed-4bb2-9e7d-7b06f6e3134d:Interfaz/Librerías/Botón"
                 BasePartId: b05a968b-04bb-4761-8bec-8ad409415f3f
                 InstanceId: 8835d50f-ddd9-4281-a2a3-ef8ad7af45ea
+        -   UIElement: !TextBlock
+                Id: b8bdf538-9f37-45b2-8363-49897ec3220c
+                DependencyProperties:
+                    7d4abb1c0b40b77c8688c246fc290009~GridBase.RowPropertyKey: 7
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 10.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtPRU
+                Text: PRU
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
+                TextSize: 15.0
+                TextColor: {R: 0, G: 255, B: 0, A: 255}
         -   UIElement: !ImageElement
                 Id: b978ad99-691a-4288-a186-941a8aa39c8b
                 DependencyProperties:
