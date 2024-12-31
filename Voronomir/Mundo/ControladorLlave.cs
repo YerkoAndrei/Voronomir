@@ -23,7 +23,7 @@ public class ControladorLlave : AsyncScript, ISonidoMundo
     private Vector3 posiciónArriba;
     private Vector3 posiciónAbajo;
 
-    private bool finSonido;
+    private float multiplicadorVolumen;
     [DataMemberIgnore] public float distanciaSonido { get; set; }
     [DataMemberIgnore] public float distanciaJugador { get; set; }
 
@@ -46,6 +46,7 @@ public class ControladorLlave : AsyncScript, ISonidoMundo
         partículas.ParticleSystem.ResetSimulation();
 
         distanciaSonido = 15;
+        multiplicadorVolumen = 1;
         ActualizarVolumen();
         sonido.IsLooping = true;
         sonido.Play();
@@ -117,7 +118,6 @@ public class ControladorLlave : AsyncScript, ISonidoMundo
 
     private async void AnimarFin()
     {
-        finSonido = true;
         partículas.ParticleSystem.StopEmitters();
 
         var inicio = modelo.Scale;
@@ -129,12 +129,13 @@ public class ControladorLlave : AsyncScript, ISonidoMundo
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
             modelo.Scale = Vector3.Lerp(inicio, Vector3.Zero, tiempo);
-            sonido.Volume = MathUtil.Lerp(SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos), 0, tiempo);
+            multiplicadorVolumen = MathUtil.Lerp(1f, 0f, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
 
+        multiplicadorVolumen = 0;
         activo = false;
         sonido.Stop();
 
@@ -144,7 +145,7 @@ public class ControladorLlave : AsyncScript, ISonidoMundo
 
     public void ActualizarVolumen()
     {
-        if (finSonido)
+        if (!activo)
             return;
 
         distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorJuego.ObtenerCabezaJugador());
@@ -152,18 +153,23 @@ public class ControladorLlave : AsyncScript, ISonidoMundo
         if (distanciaJugador > distanciaSonido)
             sonido.Volume = 0;
         else
-            sonido.Volume = ((distanciaSonido - distanciaJugador) / distanciaSonido) * SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
+            sonido.Volume = ((distanciaSonido - distanciaJugador) / distanciaSonido) * multiplicadorVolumen * SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
     }
 
     public void PausarSonidos(bool pausa)
     {
+        if (!activo)
+            return;
+
         if (pausa)
             sonido.Pause();
         else
         {
             ActualizarVolumen();
             emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
-            sonido.Play();
+
+            if (sonido.PlayState == Stride.Media.PlayState.Paused)
+                sonido.Play();
         }
     }
 }

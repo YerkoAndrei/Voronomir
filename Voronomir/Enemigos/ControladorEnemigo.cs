@@ -150,7 +150,7 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         else
         {
             sonidoMorir.Volume = SistemaSonidos.ObtenerVolumen(Configuraciones.volumenEfectos);
-            sonidoMorir.PlayAndForget();
+            sonidoMorir.Play();
 
             // Si recibe mucho daño al morir, explota (10% de la vida máxima)
             Morir(vida < -(datos.Vida * 0.1f));
@@ -282,6 +282,9 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
 
     public void PausarSonidos(bool pausa)
     {
+        if (!activo)
+            return;
+
         if (pausa)
         {
             sonidoAtacar.Pause();
@@ -292,9 +295,15 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
         {
             ActualizarVolumen();
             emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
-            sonidoAtacar.Play();
-            sonidoDaño.Play();
-            sonidoMorir.Pause();
+
+            if (sonidoAtacar.PlayState == Stride.Media.PlayState.Paused)
+                sonidoAtacar.Play();
+
+            if (sonidoDaño.PlayState == Stride.Media.PlayState.Paused)
+                sonidoDaño.Play();
+
+            if (sonidoMorir.PlayState == Stride.Media.PlayState.Paused)
+                sonidoMorir.Play();
         }
     }
 

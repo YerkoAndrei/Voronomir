@@ -80,7 +80,7 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
                 granada.ParticleSystem.ResetSimulation();
 
                 // Sonido explosión
-                sonidoExplosión.PlayAndForget();
+                sonidoExplosión.Play();
                 break;
         }
 
@@ -189,7 +189,7 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
         aparición.ParticleSystem.ResetSimulation();
 
         ActualizarVolumen();
-        sonidoAparición.PlayAndForget();
+        sonidoAparición.Play();
     }
 
     public void IniciarEfectoMuerte(Enemigos enemigo, Vector3 posición)
@@ -323,8 +323,12 @@ public class ElementoEfecto : StartupScript, ISonidoMundo
         {
             ActualizarVolumen();
             emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
-            sonidoAparición.Play();
-            sonidoExplosión.Play();
+
+            if (sonidoAparición.PlayState == Stride.Media.PlayState.Paused)
+                sonidoAparición.Play();
+
+            if (sonidoExplosión.PlayState == Stride.Media.PlayState.Paused)
+                sonidoExplosión.Play();
         }
     }
 }

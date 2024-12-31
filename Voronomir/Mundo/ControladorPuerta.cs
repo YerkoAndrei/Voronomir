@@ -21,7 +21,7 @@ public class ControladorPuerta : AsyncScript, IActivable, ISonidoMundo
     private AudioEmitterSoundController sonidoRápido;
     private int activadas;
 
-    private bool finSonido;
+    private bool activo;
     [DataMemberIgnore] public float distanciaSonido { get; set; }
     [DataMemberIgnore] public float distanciaJugador { get; set; }
 
@@ -32,6 +32,8 @@ public class ControladorPuerta : AsyncScript, IActivable, ISonidoMundo
         emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
         sonidoLento = emisor["lento"];
         sonidoRápido = emisor["rápido"];
+
+        activo = true;
         distanciaSonido = 20;
 
         while (Game.IsRunning)
@@ -59,7 +61,7 @@ public class ControladorPuerta : AsyncScript, IActivable, ISonidoMundo
         {
             ControladorJuego.MostrarMensaje((activaciones - activadas) + " " + SistemaTraducción.ObtenerTraducción("activaciones"));
             SistemaSonidos.SonarCerrado();
-        } 
+        }
     }
 
     private void TocarJugador()
@@ -80,12 +82,12 @@ public class ControladorPuerta : AsyncScript, IActivable, ISonidoMundo
         if (instantanea)
         {
             duración = 0.1f;
-            sonidoRápido.PlayAndForget();
+            sonidoRápido.Play();
         }
         else
         {
             await Task.Delay(200);
-            sonidoLento.PlayAndForget();
+            sonidoLento.Play();
         }
 
         while (tiempoLerp < duración)
@@ -97,12 +99,12 @@ public class ControladorPuerta : AsyncScript, IActivable, ISonidoMundo
             await Task.Delay(1);
         }
 
-        finSonido = true;
+        activo = false;
     }
 
     public void ActualizarVolumen()
     {
-        if (finSonido)
+        if (!activo)
             return;
 
         distanciaJugador = Vector3.Distance(Entity.Transform.WorldMatrix.TranslationVector, ControladorJuego.ObtenerCabezaJugador());
@@ -121,6 +123,9 @@ public class ControladorPuerta : AsyncScript, IActivable, ISonidoMundo
 
     public void PausarSonidos(bool pausa)
     {
+        if (!activo)
+            return;
+
         if (pausa)
         {
             sonidoRápido.Pause();
@@ -130,8 +135,12 @@ public class ControladorPuerta : AsyncScript, IActivable, ISonidoMundo
         {
             ActualizarVolumen();
             emisor.UseHRTF = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.hrtf));
-            sonidoRápido.Play();
-            sonidoLento.Play();
+
+            if (sonidoRápido.PlayState == Stride.Media.PlayState.Paused)
+                sonidoRápido.Play();
+
+            if (sonidoLento.PlayState == Stride.Media.PlayState.Paused)
+                sonidoLento.Play();
         }
     }
 }
