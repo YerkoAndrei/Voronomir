@@ -229,7 +229,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txt
                 Text: "Botón"
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center

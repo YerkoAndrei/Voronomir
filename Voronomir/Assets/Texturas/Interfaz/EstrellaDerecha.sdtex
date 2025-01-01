@@ -1,7 +1,0 @@
-!Texture
-Id: ab5b52ec-c4af-47c1-8c29-d61259c348a3
-SerializedVersion: {Stride: 2.0.0.0}
-Tags: []
-Source: !file EstrellaDerecha.png
-Type: !ColorTextureType
-    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

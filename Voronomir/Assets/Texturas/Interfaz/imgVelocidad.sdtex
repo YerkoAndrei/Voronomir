@@ -1,7 +1,0 @@
-!Texture
-Id: 0c02ac69-1605-40e0-ad77-96d914616059
-SerializedVersion: {Stride: 2.0.0.0}
-Tags: []
-Source: !file imgVelocidad.png
-Type: !ColorTextureType
-    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

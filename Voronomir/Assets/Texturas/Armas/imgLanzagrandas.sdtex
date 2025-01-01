@@ -1,7 +1,0 @@
-!Texture
-Id: e3a40c8b-0854-4eba-a189-6d0a63768bba
-SerializedVersion: {Stride: 2.0.0.0}
-Tags: []
-Source: !file imgLanzagranadas.png
-Type: !ColorTextureType
-    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
