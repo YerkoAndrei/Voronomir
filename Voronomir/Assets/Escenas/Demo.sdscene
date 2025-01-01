@@ -6321,7 +6321,7 @@ Hierarchy:
                         Id: c34a4b5f-57f8-4a2a-802b-9da4a85c28aa
                         Position: {X: -6.0, Y: 1.0128556E-06, Z: 16.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Scale: {X: 2.0, Y: 3.0, Z: 2.0}
                         Children: {}
                     95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
                         Id: e541df7e-ef41-46da-ae54-3fd7e19bafe4
