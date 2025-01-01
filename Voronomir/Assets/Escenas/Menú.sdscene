@@ -7,51 +7,114 @@ Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
         - ref!! 1d10ba6a-b7e9-4c1e-b4b4-4ad331cb5dab
+        - ref!! 7ffb0423-29be-431c-b50b-2fbfa5441767
         - ref!! 7ea4c980-7567-4efd-a10c-687f8bf4cc46
         - ref!! 46c159ca-7f3d-45e8-8241-728e6f69d604
-        - ref!! e100fb71-cf1a-4222-b929-4c7545c998df
-        - ref!! 67c59d48-6d0d-4438-8410-f1f5bfd87029
-        - ref!! b9461758-446e-4d95-a9e9-79ac6dfb14b6
-        - ref!! 8d5aa17f-6acf-4e5b-b6bc-e35375cc0fbe
-        - ref!! 1a028761-0e76-4237-8ce7-eeb3171d0128
-        - ref!! 7ffb0423-29be-431c-b50b-2fbfa5441767
-        - ref!! a85530a3-8e0e-41cf-9e02-3a6d407082fd
+        - ref!! 03396007-b17c-4783-a1f0-01ba279c6cc2
+        - ref!! e341d5b0-4947-48de-a56a-a305c7c0d202
+        - ref!! fd118062-731c-40ac-b449-00379ee83f49
+        - ref!! c580549e-1dbb-4eec-8903-eb7e70c97058
+        - ref!! b9ed9a0a-7dba-4f9d-9a06-e7a1e55a8988
+        - ref!! 29c0f638-197a-447d-a4be-5567ced57a7e
+        - ref!! 296eca76-c4cf-4ce0-ae91-e22775aa599f
+        - ref!! 6e92e230-5f16-4178-a238-4efeed70454a
+        - ref!! 88a052af-c548-48e5-a5dd-b142e24c6f59
+        - ref!! a8c48b68-6ded-4bb1-b149-921caadf87e2
+        - ref!! f6e0704f-caaf-429d-b993-ce645ae888f7
+        - ref!! 9cc00ff9-038a-41bf-b236-81aa9755db14
+        - ref!! ef80290d-d02d-48d5-bd77-c91550e40e9f
+        - ref!! 6006ff52-c5a4-409c-bf7d-8516df29b927
+        - ref!! 7e1d3870-d46d-484e-ab8e-1ae79cce3987
+        - ref!! 4f8a62f9-3edd-4324-b2ef-2b1769a3e360
+        - ref!! f1280017-4b8a-4a34-a284-fe6f99d7259f
+        - ref!! 058a53a2-a322-4067-891a-1be3a6077ca6
+        - ref!! d38c409a-9e51-41af-af61-83ed779c1e05
+        - ref!! f9f55e53-b70b-4c82-b1bd-b62bda7a48e3
         - ref!! 5cae0776-85e8-46de-88f4-94eb1cfa814b
         - ref!! 583a3938-5c8f-4ffb-b075-771484abcf3f
         - ref!! b4a16ea9-b8c5-4074-b3df-48f4dd2655b7
+        - ref!! 5255fea0-2bba-43bb-8d86-3ed9b610a216
+        - ref!! f60be1dc-7057-4480-bfe8-ee3771239fe5
+        - ref!! 42e29586-6438-40f7-8d7d-0c45e8c35484
+        - ref!! 7e39f4fd-5126-431a-8203-a3d606eb9155
+        - ref!! 73ebd160-f211-443b-9b48-1a66b65f7c6f
+        - ref!! 63f6b8b6-ef73-4e62-9331-00fa69266960
+        - ref!! 8c619cac-b2d6-42f1-8e3a-e56c373f01ab
+        - ref!! 19712054-9fc3-4bdb-b34f-4bb9c15dde9b
+        - ref!! e72caf16-222b-460a-bb30-2e539a748d03
+        - ref!! a85530a3-8e0e-41cf-9e02-3a6d407082fd
+        - ref!! ad213324-06e8-4bd8-94cd-ec2031d01587
+        - ref!! 90c1e258-16ca-47fe-a134-504f0586b734
+        - ref!! 83cde817-5054-4ddd-b1bf-d4768711622e
+        - ref!! 89f05131-7596-4a61-9801-6412019d150c
+        - ref!! b4c5f858-223f-4738-85b0-6ab3b4f19088
+        - ref!! 28aaf57f-acf5-4ead-a7a3-6e19332b07df
+        - ref!! 3fc79f66-7119-4df1-b7ac-259b13cd5080
+        - ref!! 239a6add-1598-4b7a-962e-435bf2a187f5
     Parts:
-        -   Folder: Entorno
+        -   Folder: Mapa
             Entity:
-                Id: 1a028761-0e76-4237-8ce7-eeb3171d0128
-                Name: Pared
+                Id: 03396007-b17c-4783-a1f0-01ba279c6cc2
+                Name: Puerta
                 Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 006d527d-db1b-4eeb-b412-237a7ca6a92b
-                        Position: {X: 5.0, Y: -1.1222115E-06, Z: 0.0}
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 9da5d5fc-2c72-4b6f-b950-02fd724aa0a4
+                        Position*: {X: 0.0, Y: 0.0, Z: 38.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            974930f89f5418aadc8036b440d5a6c6: ref!! 7121d25a-df01-42be-8d8a-70d6334dc743
+                    684e8d9d72b05614aa004a6afce49ac0: ~(Deleted)
+                    288763fffe05bd2540a5679e6d2ee407: ~(Deleted)
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: 428021ed-ac89-4623-a68f-045c52a391e8
+        -   Folder: Mapa
+            Entity:
+                Id: 058a53a2-a322-4067-891a-1be3a6077ca6
+                Name: Portal (Azul)
+                Components:
+                    22b9cf0a71651d17ea10360ac272fa31: !TransformComponent
+                        Id: 207ea137-bb69-4caf-a3dc-b82a402e6a1e
+                        Position: {X: 20.5, Y: 2.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 2.5, Y: 1.0, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 079edb75-b405-43e1-8a93-43b7db3f03eb
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 8a0524b4-2f4d-486c-a1d0-1a306d0ef549
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Generales/Muro
-                        IsShadowCaster: false
+                    5971d764244d6e032eec69e3f7e3b822: !ModelComponent
+                        Id: 2fe3c5e7-25ac-4b3f-82f2-3056e58f3090
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
+                        Materials:
+                            16c017c68fe72af80142d6aad5cb6a57~1: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/Llaves/LlaveAzul
+        -   Folder: Enemigos
+            Entity:
+                Id: 19712054-9fc3-4bdb-b34f-4bb9c15dde9b
+                Name: Lancero (0)
+                Components:
+                    149deb349cd3470a0dda2638c195a7a5: !TransformComponent
+                        Id: 666843aa-00dc-4ccd-bc4f-5be3defd5164
+                        Position: {X: -2.9055915, Y: 0.1, Z: 7.667231}
+                        Rotation: {X: 0.06162843, Y: 0.70441604, Z: 0.70441604, W: -0.06162843}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    500f5e93b4f180476bb60b7b31db4869: !ModelComponent
+                        Id: 93b739ec-def0-4fbc-b47c-34fc68c70075
+                        Model: 449f714b-c2f9-4b2d-b6a8-5ed407b77a72:Modelos/Enemigos/Lancero/Lancero
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 199fe8af-80d8-467f-a0bd-b2ebd05a9ba0
+                Name: Shashka (1)
+                Components:
+                    15823b89037538495cc00f6662c87e0b: !TransformComponent
+                        Id: df50d1c2-a3e3-4ef0-acc4-003c3b333be8
+                        Position: {X: 0.2, Y: 1.0, Z: 0.1}
+                        Rotation: {X: 0.030153695, Y: -0.96984625, Z: 0.17101006, W: 0.1710101}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    eaa105a555b30871d1905b44f1ee2378: !ModelComponent
+                        Id: f80b9379-4bff-44f3-92f3-2fe9a7e321df
+                        Model: af94209d-bf15-4fe0-be2a-de8f4f8d2b4a:Modelos/Armas/Espada/Shashka
                         Materials: {}
         -   Entity:
                 Id: 1d10ba6a-b7e9-4c1e-b4b4-4ad331cb5dab
@@ -124,7 +187,138 @@ Hierarchy:
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
                         ResolutionStretch: FixedHeightAdaptableWidth
                         RenderGroup: Group30
-        -   Folder: Entorno
+        -   Folder: Geroi
+            Entity:
+                Id: 239a6add-1598-4b7a-962e-435bf2a187f5
+                Name: RPG-2 (1)
+                Components:
+                    2b1b7e5aa9183b19a414f8af954998ef: !TransformComponent
+                        Id: b9209316-0864-4ef0-9d0c-8bcd0f8699e8
+                        Position: {X: 1.0, Y: 2.02, Z: 1.3}
+                        Rotation: {X: 0.61237246, Y: -0.61237246, Z: -0.35355335, W: 0.35355335}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    8c3316abb39b549d03734b5c46178065: !ModelComponent
+                        Id: 0dd5def9-6a2d-4e50-acf1-ecda9c3992a3
+                        Model: 8446cdd3-3139-4136-a668-41cb01e8aa8c:Modelos/Armas/Lanzagranadas/RPG-2
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 23ead586-af4b-46af-b708-fb7a485d6a23
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: d6ba5b67-ead8-4b3e-8273-f1fb36d6b12d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: fcfe5e49-832d-42d9-b02a-be8c914edddb
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Generales/Puerta/Puerta
+                        Materials:
+                            0b8b393a8cb869ac03af560332a0abf0*~1: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/Llaves/LlaveAzul
+                    f1109e5812b70113e72b75afd6282887: ~(Deleted)
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: df506732-069e-48b6-8cd4-97ca067f1483
+        -   Folder: Geroi
+            Entity:
+                Id: 28aaf57f-acf5-4ead-a7a3-6e19332b07df
+                Name: PTRD (1)
+                Components:
+                    da39efbb5a1b280fa5a472c909330d6a: !TransformComponent
+                        Id: 45b8b252-6bad-4753-bfed-2f4f37f2758c
+                        Position: {X: 0.8, Y: 2.02, Z: 0.6}
+                        Rotation: {X: 0.4055798, Y: -0.4055798, Z: -0.579228, W: 0.579228}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    02b1b4e60fde9919b880c2eda9e9f7f5: !ModelComponent
+                        Id: 93cd5067-c57d-4ecc-872d-7df3a3325593
+                        Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
+                        Materials: {}
+        -   Folder: Mapa
+            Entity:
+                Id: 296eca76-c4cf-4ce0-ae91-e22775aa599f
+                Name: Piso
+                Components:
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 4680621d-b501-4b70-af1d-8b901f73cb46
+                        Position: {X: 0.0, Y: 2.1338465E-06, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: f1674069-f2fa-4293-aa64-a7900fdc2078
+                        Model: 0fae7445-ad99-4b1a-a401-0718417cb03c:Modelos/Mundos/M1E1/Pisos/PisoSala1
+                        Materials: {}
+        -   Folder: Mapa
+            Entity:
+                Id: 29c0f638-197a-447d-a4be-5567ced57a7e
+                Name: Sala
+                Components:
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 98132b4c-ff4a-45cf-ac29-38c83fd0a3cc
+                        Position: {X: 30.0, Y: 2.0, Z: 2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: 1e634498-e917-41fe-8c7d-5625a2c9ab3f
+                        Model: 3527461d-c195-4469-b5b2-572b5ae359ee:Modelos/Mundos/M1E1/Sala2
+                        Materials: {}
+        -   Folder: Geroi
+            Entity:
+                Id: 3fc79f66-7119-4df1-b7ac-259b13cd5080
+                Name: RPG-2 (0)
+                Components:
+                    2b1b7e5aa9183b19a414f8af954998ef: !TransformComponent
+                        Id: 4468d705-13a3-4016-baff-ff9e1059df6a
+                        Position: {X: -1.0, Y: 2.02, Z: 1.3}
+                        Rotation: {X: 0.6123725, Y: 0.6123724, Z: 0.35355338, W: 0.35355332}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    8c3316abb39b549d03734b5c46178065: !ModelComponent
+                        Id: 3a7c8a09-7884-45e9-9293-f2be17ba6079
+                        Model: 8446cdd3-3139-4136-a668-41cb01e8aa8c:Modelos/Armas/Lanzagranadas/RPG-2
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 4031d3bf-500f-4f6a-8637-81c9294bdee9
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 7121d25a-df01-42be-8d8a-70d6334dc743
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 45e6a48a-e224-4f13-b72f-53e9418329ee
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Generales/Puerta/Puerta
+                        Materials: {}
+                    f1109e5812b70113e72b75afd6282887: ~(Deleted)
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: 428021ed-ac89-4623-a68f-045c52a391e8
+        -   Folder: Enemigos
+            Entity:
+                Id: 42e29586-6438-40f7-8d7d-0c45e8c35484
+                Name: Zombi (5)
+                Components:
+                    149deb349cd3470a0dda2638c195a7a5: !TransformComponent
+                        Id: 6296a0c4-8a7f-4a13-8239-f2b01a12a0ea
+                        Position: {X: 5.0, Y: 0.1, Z: -10.0}
+                        Rotation: {X: -0.29883623, Y: 0.6408564, Z: 0.6408564, W: 0.29883623}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    500f5e93b4f180476bb60b7b31db4869: !ModelComponent
+                        Id: 8b176ab1-1f4b-4b97-80ee-9cc671bb62b2
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
+                        Materials: {}
+        -   Folder: Mapa
             Entity:
                 Id: 46c159ca-7f3d-45e8-8241-728e6f69d604
                 Name: Luz direccional
@@ -153,28 +347,81 @@ Hierarchy:
                     f4d2bbd76c14c3b0e533b466d9fb710c: !Voronomir.ControladorSombras,Voronomir.Proyecto
                         Id: 004a8568-52c4-4df0-89fc-2f5b014c5663
                         luzPrincipal: ref!! b46249b7-0258-48f5-ab91-99884700ff84
+        -   Folder: Mapa
+            Entity:
+                Id: 4f8a62f9-3edd-4324-b2ef-2b1769a3e360
+                Name: Cubo 2
+                Components:
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: 4deceed0-434e-49a0-9787-d4348c3b1f0b
+                        Position: {X: 10.0, Y: 2.621248E-07, Z: 20.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children: {}
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: d7028b8d-7423-4c49-b0a5-6c4c5a7570f9
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials:
+                            d3f17f6cf5948f250d55fe3ebe8c8108~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
+        -   Folder: Enemigos
+            Entity:
+                Id: 5255fea0-2bba-43bb-8d86-3ed9b610a216
+                Name: Zombi (3)
+                Components:
+                    149deb349cd3470a0dda2638c195a7a5: !TransformComponent
+                        Id: 6b218bc1-dbac-408b-913d-2f034e54c049
+                        Position: {X: -8.0, Y: 0.1, Z: 4.0}
+                        Rotation: {X: -0.29883623, Y: 0.6408564, Z: 0.6408564, W: 0.29883623}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    500f5e93b4f180476bb60b7b31db4869: !ModelComponent
+                        Id: 0436bbb0-3567-4d5b-abad-7625f09f7c88
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
+                        Materials: {}
         -   Folder: null
             Entity:
+                Id: 525b25a9-01c2-4d31-8516-41aba302757d
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 2629cee4-3ca5-4cb2-a27f-5b2dbe3c2e0b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: a90e01fa-4e32-43a7-85c2-a4a6205375ce
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Generales/Puerta/Puerta
+                        Materials:
+                            f8194f14809a26c6588bb4ac84640ea2*~1: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/Llaves/LlaveAmarilla
+                    f1109e5812b70113e72b75afd6282887: ~(Deleted)
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: b1e0f116-580f-48fa-86d3-d3accbf157a9
+        -   Folder: Enemigos
+            Entity:
                 Id: 583a3938-5c8f-4ffb-b075-771484abcf3f
-                Name: Zombi 1
+                Name: Zombi (1)
                 Components:
                     149deb349cd3470a0dda2638c195a7a5: !TransformComponent
                         Id: 062865f8-536e-4fb9-ad3c-ad511c2ba8c0
-                        Position: {X: -0.5, Y: 0.1, Z: 0.5}
-                        Rotation: {X: -0.35355335, Y: 0.61237246, Z: 0.61237246, W: 0.35355335}
+                        Position: {X: -6.0, Y: 0.1, Z: -4.0}
+                        Rotation: {X: -0.55720776, Y: 0.4353384, Z: 0.4353384, W: 0.55720776}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     500f5e93b4f180476bb60b7b31db4869: !ModelComponent
                         Id: f8a0f34d-615d-48b3-9276-349ab933559f
                         Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
-        -   Entity:
+        -   Folder: Enemigos
+            Entity:
                 Id: 5cae0776-85e8-46de-88f4-94eb1cfa814b
-                Name: Zombi 0
+                Name: Zombi (0)
                 Components:
                     149deb349cd3470a0dda2638c195a7a5: !TransformComponent
                         Id: 8cb841dd-75a3-493e-862f-b4b36f5092f9
-                        Position: {X: 0.0, Y: 0.1, Z: -0.5}
+                        Position: {X: 0.0, Y: 0.1, Z: -6.0}
                         Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -182,40 +429,99 @@ Hierarchy:
                         Id: acb4ca05-1e36-4695-a9eb-2676845e5119
                         Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
-        -   Folder: Entorno
+        -   Folder: Mapa
             Entity:
-                Id: 67c59d48-6d0d-4438-8410-f1f5bfd87029
-                Name: Pared
+                Id: 6006ff52-c5a4-409c-bf7d-8516df29b927
+                Name: Cubo 0
                 Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 16303cb1-83f6-48a8-bd4e-e7c339cd413f
-                        Position: {X: 0.0, Y: -1.1222115E-06, Z: -5.0}
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: f1845504-06c6-4b50-8b0c-2d06e6ce9715
+                        Position: {X: -6.0, Y: 1.0128556E-06, Z: 16.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.5, Y: 1.0, Z: 1.0}
+                        Scale: {X: 2.0, Y: 3.0, Z: 2.0}
                         Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: 2c889a09-ee60-4701-b783-97d63e4c9bc8
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 13fc660f-c1cc-4f3a-a6e9-f26c4c6bad6f
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Generales/Muro
-                        IsShadowCaster: false
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: c210820e-6f58-4ccc-8a3e-f859c639f098
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials:
+                            b31b281de89e51d8aa4f20758986f02e~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
+        -   Folder: Enemigos
+            Entity:
+                Id: 63f6b8b6-ef73-4e62-9331-00fa69266960
+                Name: Zombi (8)
+                Components:
+                    149deb349cd3470a0dda2638c195a7a5: !TransformComponent
+                        Id: f52490ef-2a65-4eaf-a472-f37622edae29
+                        Position: {X: 5.0, Y: 0.1, Z: 16.0}
+                        Rotation: {X: 3.090862E-08, Y: 0.70710677, Z: 0.70710677, W: -3.090862E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    500f5e93b4f180476bb60b7b31db4869: !ModelComponent
+                        Id: d1ed4932-1394-4de6-9247-9bc763a9c3c1
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
-        -   Folder: Entorno
+        -   Folder: Mapa
+            Entity:
+                Id: 6e92e230-5f16-4178-a238-4efeed70454a
+                Name: Piso
+                Components:
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: b1ed7d81-7ffb-410a-9ad7-306b24accc61
+                        Position: {X: 30.0, Y: 2.0, Z: 2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: 0c8ba7ff-341e-47e4-99b7-1f699f6b3f54
+                        Model: b7213fd4-434b-49e5-9bd2-6846067293d5:Modelos/Mundos/M1E1/Pisos/PisoSala2
+                        Materials: {}
+        -   Folder: Enemigos
+            Entity:
+                Id: 73ebd160-f211-443b-9b48-1a66b65f7c6f
+                Name: Zombi (7)
+                Components:
+                    149deb349cd3470a0dda2638c195a7a5: !TransformComponent
+                        Id: 2fcab3c7-e3ff-441c-9bcf-38b29b8f4ed3
+                        Position: {X: -6.0, Y: 0.1, Z: 12.0}
+                        Rotation: {X: -0.35355335, Y: 0.61237246, Z: 0.61237246, W: 0.35355335}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    500f5e93b4f180476bb60b7b31db4869: !ModelComponent
+                        Id: f76647e7-3a32-43e1-b538-52fbf9536317
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
+                        Materials: {}
+        -   Folder: Mapa
+            Entity:
+                Id: 7e1d3870-d46d-484e-ab8e-1ae79cce3987
+                Name: Cubo 1
+                Components:
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: 5eed765d-97f6-4eed-bbee-52789a9e7b8e
+                        Position: {X: 11.548653, Y: -2.0499733E-06, Z: 10.765188}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children: {}
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: bad13d35-0df3-4d4a-a3ee-1130177a0676
+                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Materials:
+                            97c2037bba92309eb7f9332ec3384264~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
+        -   Folder: Enemigos
+            Entity:
+                Id: 7e39f4fd-5126-431a-8203-a3d606eb9155
+                Name: Zombi (6)
+                Components:
+                    149deb349cd3470a0dda2638c195a7a5: !TransformComponent
+                        Id: 4d131f85-3044-4a0e-94ec-d92fda47c8ca
+                        Position: {X: -7.0, Y: 0.1, Z: -13.0}
+                        Rotation: {X: -0.664463, Y: 0.24184474, Z: 0.24184474, W: 0.664463}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    500f5e93b4f180476bb60b7b31db4869: !ModelComponent
+                        Id: 134a6f8f-311a-4762-b58d-1fb0a9b7b277
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
+                        Materials: {}
+        -   Folder: Mapa
             Entity:
                 Id: 7ea4c980-7567-4efd-a10c-687f8bf4cc46
                 Name: Luz ambiental
@@ -246,61 +552,168 @@ Hierarchy:
                     912dd9027d285f1103445f326cffeb38: !Voronomir.Rotador,Voronomir.Proyecto
                         Id: 26358e1a-59f8-4f9b-9dea-5c7495a1401d
                         "ánguloY": 0.05
-        -   Folder: Entorno
+        -   Folder: Geroi
             Entity:
-                Id: 8d5aa17f-6acf-4e5b-b6bc-e35375cc0fbe
-                Name: Pared
+                Id: 83cde817-5054-4ddd-b1bf-d4768711622e
+                Name: AK-47 (0)
                 Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: a72eb0d5-915c-4965-a563-f1f1a29db0d1
-                        Position: {X: -5.0, Y: -1.1222115E-06, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 2.5, Y: 1.0, Z: 1.0}
+                    1f90cf5ab935fe9fe552d0b6d56c5d8f: !TransformComponent
+                        Id: 7f50b90d-37ac-4b8b-95ab-d26d231eb3b1
+                        Position: {X: -0.8, Y: 2.02, Z: -1.0}
+                        Rotation: {X: -0.27059805, Y: -0.27059805, Z: 0.65328145, W: 0.65328145}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: ecd72930-2876-4ce0-895a-033a81737998
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 4d4bf350-79ae-478c-81cd-2a6cced2688f
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Generales/Muro
-                        IsShadowCaster: false
+                    556173cc1eeefe62e05dee97d7c83888: !ModelComponent
+                        Id: e54b1e1f-f87e-4258-90f9-70fbf9acd047
+                        Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
                         Materials: {}
         -   Entity:
+                Id: 86f03dc9-a171-4053-80f2-27e62d600f14
+                Name: Shashka (0)
+                Components:
+                    15823b89037538495cc00f6662c87e0b: !TransformComponent
+                        Id: 74eef93c-f157-49cd-bbe7-3840e1706674
+                        Position: {X: -0.2, Y: 1.0, Z: 0.1}
+                        Rotation: {X: 0.030153695, Y: 0.96984625, Z: -0.17101006, W: 0.1710101}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    eaa105a555b30871d1905b44f1ee2378: !ModelComponent
+                        Id: 589ec308-c9b2-47f0-9041-2207df72e0d3
+                        Model: af94209d-bf15-4fe0-be2a-de8f4f8d2b4a:Modelos/Armas/Espada/Shashka
+                        Materials: {}
+        -   Folder: Mapa
+            Entity:
+                Id: 88a052af-c548-48e5-a5dd-b142e24c6f59
+                Name: Techo
+                Components:
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 67753b4c-5002-4712-8619-74a6a98ea006
+                        Position: {X: 0.0, Y: 2.1338465E-06, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: f2595873-6067-496b-9045-7b5b9ceda61c
+                        Model: 19b00bc9-b0d0-442d-b078-0c9bc704aefc:Modelos/Mundos/M1E1/Extras/TechoSala1
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Folder: Geroi
+            Entity:
+                Id: 89f05131-7596-4a61-9801-6412019d150c
+                Name: AK-47 (1)
+                Components:
+                    1f90cf5ab935fe9fe552d0b6d56c5d8f: !TransformComponent
+                        Id: 028a0af7-624e-4f8a-8343-1d7a635ff69c
+                        Position: {X: 0.8, Y: 2.02, Z: -1.0}
+                        Rotation: {X: -0.27059805, Y: 0.27059805, Z: -0.65328145, W: 0.65328145}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    556173cc1eeefe62e05dee97d7c83888: !ModelComponent
+                        Id: 8624b176-a94e-4a4b-8a15-e628386b0fa3
+                        Model: 171e2eb7-12ec-414d-8bb4-a6a481b66399:Modelos/Armas/Metralleta/AK-47
+                        Materials: {}
+        -   Folder: Enemigos
+            Entity:
+                Id: 8c619cac-b2d6-42f1-8e3a-e56c373f01ab
+                Name: Zombi (9)
+                Components:
+                    149deb349cd3470a0dda2638c195a7a5: !TransformComponent
+                        Id: bd4616a7-e95f-470d-ad47-ca34f7cc8794
+                        Position: {X: -4.0, Y: 0.1, Z: 3.0}
+                        Rotation: {X: -0.12278783, Y: 0.6963642, Z: 0.6963642, W: 0.12278783}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    500f5e93b4f180476bb60b7b31db4869: !ModelComponent
+                        Id: e41fabe5-95c8-43c0-b272-12a46ad4d228
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
+                        Materials: {}
+        -   Folder: Geroi
+            Entity:
+                Id: 90c1e258-16ca-47fe-a134-504f0586b734
+                Name: MC-6 (1)
+                Components:
+                    fa760017a4447dd6ab9e3f5ed7821514: !TransformComponent
+                        Id: b2118cb4-1517-41d1-9213-e4aa54ba824f
+                        Position: {X: 1.0, Y: 2.02, Z: 0.0}
+                        Rotation: {X: 0.24184474, Y: -0.24184476, Z: -0.664463, W: 0.66446304}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d73fa7ba4c7ebeb119f07fe5c2e54111: !ModelComponent
+                        Id: c1cc82b0-3f28-47eb-af53-8a1b73814998
+                        Model: 08980e3d-c7cb-48a0-8d63-198c7163f769:Modelos/Armas/Escopeta/MC-6
+                        Materials: {}
+        -   Folder: Mapa
+            Entity:
+                Id: 9cc00ff9-038a-41bf-b236-81aa9755db14
+                Name: Columna 2
+                Components:
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: e7056e0b-e467-46c0-8763-e82ce1ed901c
+                        Position: {X: -8.0, Y: -1.7996344E-06, Z: 8.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 6.0, Y: 12.0, Z: 6.0}
+                        Children: {}
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: ca20be8c-91e5-4e38-b2eb-cd5c32b4ad61
+                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
+                        Materials:
+                            e88d3199e2b451fdd119f4532e94fb53~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
+        -   Folder: Geroi
+            Entity:
                 Id: a85530a3-8e0e-41cf-9e02-3a6d407082fd
                 Name: Geroi
                 Components:
                     fc71ffc7d776f28d75dcd5b8de0d15bf: !TransformComponent
                         Id: 22dd994f-f714-41ba-b144-30bef35cd9f2
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            b49738eef350e65cc60dd3b7c0104385: ref!! 74eef93c-f157-49cd-bbe7-3840e1706674
+                            d30b8adc8652e99bdcba718f4d710658: ref!! df50d1c2-a3e3-4ef0-acc4-003c3b333be8
                     61213c6e0f39c981fa4898519b0bf7d9: !ModelComponent
                         Id: e372b488-76d2-4bdb-b1ef-aff7584cf1bd
                         Model: 53769a50-21f0-4a6e-a207-518d4b9bbf96:Modelos/Jugador/Geroi
                         Materials: {}
-        -   Folder: null
+        -   Folder: Mapa
+            Entity:
+                Id: a8c48b68-6ded-4bb1-b149-921caadf87e2
+                Name: Columna 0
+                Components:
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: 03f1f309-99d0-4b3f-92a7-689c5e3d295f
+                        Position: {X: -8.0, Y: 0.0, Z: -8.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 6.0, Y: 12.0, Z: 6.0}
+                        Children: {}
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: a5779e37-3e10-4762-9b31-d8eeb50538b0
+                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
+                        Materials:
+                            e88d3199e2b451fdd119f4532e94fb53~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
+        -   Folder: Geroi
+            Entity:
+                Id: ad213324-06e8-4bd8-94cd-ec2031d01587
+                Name: MC-6 (0)
+                Components:
+                    fa760017a4447dd6ab9e3f5ed7821514: !TransformComponent
+                        Id: 3e84b017-598a-41de-8c87-8b84b5d11d7c
+                        Position: {X: -1.0, Y: 2.02, Z: 0.0}
+                        Rotation: {X: 0.24184474, Y: 0.24184476, Z: 0.664463, W: 0.66446304}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d73fa7ba4c7ebeb119f07fe5c2e54111: !ModelComponent
+                        Id: d20f0db0-d0e4-433f-b658-9345b4db5b73
+                        Model: 08980e3d-c7cb-48a0-8d63-198c7163f769:Modelos/Armas/Escopeta/MC-6
+                        Materials: {}
+        -   Folder: Enemigos
             Entity:
                 Id: b4a16ea9-b8c5-4074-b3df-48f4dd2655b7
-                Name: Zombi 2
+                Name: Zombi (2)
                 Components:
                     149deb349cd3470a0dda2638c195a7a5: !TransformComponent
                         Id: 298bdeaf-f572-4d44-9888-e42ef8aeba44
-                        Position: {X: 0.5, Y: 0.1, Z: 0.5}
+                        Position: {X: 8.0, Y: 0.1, Z: 0.0}
                         Rotation: {X: -0.35355335, Y: -0.61237246, Z: -0.61237246, W: 0.35355335}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -308,38 +721,35 @@ Hierarchy:
                         Id: 1a5a8689-434f-4d73-8e73-eda152dbca2a
                         Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
                         Materials: {}
-        -   Folder: Entorno
+        -   Folder: Geroi
             Entity:
-                Id: b9461758-446e-4d95-a9e9-79ac6dfb14b6
-                Name: Pared
+                Id: b4c5f858-223f-4738-85b0-6ab3b4f19088
+                Name: PTRD (0)
                 Components:
-                    b5a20acf83eae6095e3301df8a950de3: !TransformComponent
-                        Id: 1eef9451-9536-42e9-94b7-70869044e6f3
-                        Position: {X: 0.0, Y: -1.1222115E-06, Z: 5.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.5, Y: 1.0, Z: 1.0}
+                    da39efbb5a1b280fa5a472c909330d6a: !TransformComponent
+                        Id: cada89e7-3bb9-4e20-adf1-d8f429119ac1
+                        Position: {X: -0.8, Y: 2.02, Z: 0.6}
+                        Rotation: {X: 0.4055798, Y: 0.4055798, Z: 0.579228, W: 0.579228}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    fbdf9b1c5be48c8786f9bc36b49ec7f9: !StaticColliderComponent
-                        Id: f83571e8-ad37-4e40-a470-bf78e563e155
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            c47d80fa5e0dafee947938913d83735e: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 4.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
-                        Id: 85e348cc-b9d7-4c31-be4f-349cc196d033
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Generales/Muro
-                        IsShadowCaster: false
+                    02b1b4e60fde9919b880c2eda9e9f7f5: !ModelComponent
+                        Id: e6a0e2ba-5336-4768-9132-d4a7651e906c
+                        Model: e1d41a8b-2723-4a8b-9f40-144593f8145b:Modelos/Armas/Rifle/PTRD
+                        Materials: {}
+        -   Folder: Mapa
+            Entity:
+                Id: b9ed9a0a-7dba-4f9d-9a06-e7a1e55a8988
+                Name: Sala
+                Components:
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 48091e21-37ce-474a-a4ed-3b2258a81e69
+                        Position: {X: 0.0, Y: 2.1338465E-06, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: ca086616-e04b-4adf-af60-a57e897a23b0
+                        Model: 2240dbb9-9c28-4b17-99ec-f7f1887d9ea8:Modelos/Mundos/M1E1/Sala1
                         Materials: {}
         -   Entity:
                 Id: be667d8c-7eba-46db-b617-c4e63e53fe13
@@ -347,46 +757,198 @@ Hierarchy:
                 Components:
                     f54f70abed89338ea151d8f78a56a82d: !TransformComponent
                         Id: 49a47ee1-2699-4531-aad3-8b6c1df1b1a9
-                        Position: {X: 0.0, Y: 1.4, Z: 2.0}
-                        Rotation: {X: -0.034899496, Y: 0.0, Z: 0.0, W: 0.99939084}
+                        Position: {X: 0.0, Y: 3.6, Z: 1.0}
+                        Rotation: {X: -0.17364818, Y: 0.0, Z: 0.0, W: 0.9848077}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     f16251ac079005852047045a87cacca5: !CameraComponent
                         Id: 23bf7f96-84c6-48c4-af5d-4b83b8e0cccd
                         Name: null
                         Projection: Perspective
-                        FarClipPlane: 10.0
+                        VerticalFieldOfView: 90.0
+                        FarClipPlane: 100.0
                         Slot: 064e5ac8-d21d-4f2b-8dc2-54964c07a5ca
-        -   Folder: Entorno
+        -   Folder: Mapa
             Entity:
-                Id: e100fb71-cf1a-4222-b929-4c7545c998df
-                Name: Piso
+                Id: c580549e-1dbb-4eec-8903-eb7e70c97058
+                Name: Puerta
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: 2f4cf4d3-358a-4a95-a6f2-8bb606f20836
+                        Position*: {X: 0.0, Y: 2.0, Z: -20.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            974930f89f5418aadc8036b440d5a6c6: ref!! 2629cee4-3ca5-4cb2-a27f-5b2dbe3c2e0b
+                    684e8d9d72b05614aa004a6afce49ac0: ~(Deleted)
+                    288763fffe05bd2540a5679e6d2ee407: ~(Deleted)
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: b1e0f116-580f-48fa-86d3-d3accbf157a9
+        -   Folder: Mapa
+            Entity:
+                Id: d38c409a-9e51-41af-af61-83ed779c1e05
+                Name: Portal (Rojo)
+                Components:
+                    22b9cf0a71651d17ea10360ac272fa31: !TransformComponent
+                        Id: 364cda32-308d-49ba-9f67-1ca8b761f505
+                        Position: {X: -20.5, Y: 2.0, Z: -5.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5971d764244d6e032eec69e3f7e3b822: !ModelComponent
+                        Id: c4d44239-d987-421d-a97a-e1e27e04ff5b
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
+                        Materials:
+                            98096af8fa726c40402fb1d694b4eed9~1: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/Llaves/LlaveRoja
+        -   Folder: null
+            Entity:
+                Id: d4ad1f9b-dd3b-422c-8168-713cf3728240
+                Name: Modelo
+                Components:
+                    fe7fedc306aeffcc4f309968002ca983: !TransformComponent
+                        Id: 9412d34d-c57e-4036-a317-78f7b7b00c89
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
+                        Id: 442c8bef-fed3-4776-921e-7f7db815e2f1
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Generales/Puerta/Puerta
+                        Materials:
+                            927b09a51c71e68497abdb70450bbefa*~1: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/Llaves/LlaveRoja
+                    f1109e5812b70113e72b75afd6282887: ~(Deleted)
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: d4aa82d0-f2ef-4aaf-ab82-cf7f2b8eae0a
+                InstanceId: b370bb53-2980-426a-be82-48edd813c05b
+        -   Folder: Mapa
+            Entity:
+                Id: e341d5b0-4947-48de-a56a-a305c7c0d202
+                Name: Puerta
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: b03c53bb-5360-4185-92c8-65eff8ed0887
+                        Position*: {X: 20.5, Y: 2.0, Z: 0.0}
+                        Rotation*: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            974930f89f5418aadc8036b440d5a6c6: ref!! d6ba5b67-ead8-4b3e-8273-f1fb36d6b12d
+                    684e8d9d72b05614aa004a6afce49ac0: ~(Deleted)
+                    288763fffe05bd2540a5679e6d2ee407: ~(Deleted)
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: df506732-069e-48b6-8cd4-97ca067f1483
+        -   Folder: Enemigos
+            Entity:
+                Id: e72caf16-222b-460a-bb30-2e539a748d03
+                Name: Lancero (0)
+                Components:
+                    149deb349cd3470a0dda2638c195a7a5: !TransformComponent
+                        Id: a2b002a0-814f-4e3c-99bf-5de72b1e279d
+                        Position: {X: 5.0, Y: 0.1, Z: -5.0}
+                        Rotation: {X: -0.45451948, Y: -0.5416752, Z: -0.5416752, W: 0.45451948}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    500f5e93b4f180476bb60b7b31db4869: !ModelComponent
+                        Id: e46db185-c0e6-4519-b702-1089c6f70578
+                        Model: 449f714b-c2f9-4b2d-b6a8-5ed407b77a72:Modelos/Enemigos/Lancero/Lancero
+                        Materials: {}
+        -   Folder: Mapa
+            Entity:
+                Id: ef80290d-d02d-48d5-bd77-c91550e40e9f
+                Name: Columna 4
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
-                        Id: b859bcf4-224d-43d3-a4f2-952e7b6ae1af
-                        Position: {X: 0.0, Y: -0.1, Z: 0.0}
+                        Id: a4170a79-9781-4c95-a46f-40797a1e6803
+                        Position: {X: 8.0, Y: -1.7996344E-06, Z: 8.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 10.0, Y: 0.1, Z: 10.0}
+                        Scale: {X: 6.0, Y: 4.0, Z: 6.0}
                         Children: {}
-                    95335073bfd1bcf95386d0ea3641c602: !StaticColliderComponent
-                        Id: 46d47a85-dcfa-4110-af82-ed8dec4a8f56
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            5162de0d97dbdbdc66e20cff891c2661: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
-                        Id: 53df197c-4d45-4d1e-824a-040eb598683e
-                        Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
+                        Id: f9aa2d8b-5279-4c58-8835-f58f0a7abec0
+                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                         Materials:
-                            20ea19b545ed568ea3e84fb5ecb8d169~0: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Mapa/Piso0
+                            e88d3199e2b451fdd119f4532e94fb53~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
+        -   Folder: Mapa
+            Entity:
+                Id: f1280017-4b8a-4a34-a284-fe6f99d7259f
+                Name: Portal
+                Components:
+                    22b9cf0a71651d17ea10360ac272fa31: !TransformComponent
+                        Id: ab8660bc-ee28-45a7-af90-a8ee2e311417
+                        Position: {X: 0.0, Y: 0.0, Z: 38.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5971d764244d6e032eec69e3f7e3b822: !ModelComponent
+                        Id: 711b8dc8-0457-467a-9bed-36d0715be841
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
+                        Materials: {}
+        -   Folder: Enemigos
+            Entity:
+                Id: f60be1dc-7057-4480-bfe8-ee3771239fe5
+                Name: Zombi (4)
+                Components:
+                    149deb349cd3470a0dda2638c195a7a5: !TransformComponent
+                        Id: 16e5cdaa-4f7a-46df-a282-a51f6659d43c
+                        Position: {X: 3.0, Y: 0.1, Z: 8.0}
+                        Rotation: {X: -0.09229599, Y: -0.7010574, Z: -0.7010574, W: 0.09229599}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    500f5e93b4f180476bb60b7b31db4869: !ModelComponent
+                        Id: 86a00324-7810-4eb7-88e4-2dceff615a32
+                        Model: 314e89d9-f776-4b7a-a521-e4fe278cc1b5:Modelos/Enemigos/Zombi/Zombi
+                        Materials: {}
+        -   Folder: Mapa
+            Entity:
+                Id: f6e0704f-caaf-429d-b993-ce645ae888f7
+                Name: Columna 1
+                Components:
+                    a4eff1be567473e8c4551578b450db20: !TransformComponent
+                        Id: 66e30e16-64c6-41a6-bbfa-c620974b8b74
+                        Position: {X: 8.0, Y: -1.7996344E-06, Z: -8.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 6.0, Y: 6.0, Z: 6.0}
+                        Children: {}
+                    ff1bacc42884d72efc8cb1abb51f4981: !ModelComponent
+                        Id: 32c9c587-0d0f-402b-9b01-5678db830c74
+                        Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
+                        Materials:
+                            e88d3199e2b451fdd119f4532e94fb53~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
+        -   Folder: Mapa
+            Entity:
+                Id: f9f55e53-b70b-4c82-b1bd-b62bda7a48e3
+                Name: Portal (Amarillo)
+                Components:
+                    22b9cf0a71651d17ea10360ac272fa31: !TransformComponent
+                        Id: e4af887e-d497-487d-945d-d64385a5130f
+                        Position: {X: 0.0, Y: 2.0, Z: -20.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5971d764244d6e032eec69e3f7e3b822: !ModelComponent
+                        Id: 24d9db1a-6f5d-4a11-a909-99b87ba2e139
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
+                        Materials:
+                            fc9f7c88387f28c02242f981ce565f86~1: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/Llaves/LlaveAmarilla
+        -   Folder: Mapa
+            Entity:
+                Id: fd118062-731c-40ac-b449-00379ee83f49
+                Name: Puerta
+                Components:
+                    08a04dd94e1575b4fe06e740981c2963: !TransformComponent
+                        Id: ef259c5c-41fb-4ef8-bd5f-94625e3b566f
+                        Position*: {X: -20.5, Y: 2.0, Z: -5.0}
+                        Rotation*: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            974930f89f5418aadc8036b440d5a6c6: ref!! 9412d34d-c57e-4036-a317-78f7b7b00c89
+                    684e8d9d72b05614aa004a6afce49ac0: ~(Deleted)
+                    288763fffe05bd2540a5679e6d2ee407: ~(Deleted)
+            Base:
+                BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
+                BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
+                InstanceId: b370bb53-2980-426a-be82-48edd813c05b
