@@ -22,10 +22,6 @@ Materials:
         Name: Piso2
         MaterialInstance:
             Material: 71e6d262-23e0-4535-a7ae-9aff8ad6b8ff:Materiales/Mapa/Piso2
-    2eb4f540b9d2aa00688d6351b453e6b3:
-        Name: Material
-        MaterialInstance:
-            Material: null
 Modifiers: {}
 ~SourceHashes:
-    3d5bd461a270fce65aa5b79cb0fc7b91~Sala4.glb: 19fc022310184260da49fcff8bc4b45d
+    3d5bd461a270fce65aa5b79cb0fc7b91~Sala4.glb: 8b79f70c9901ea59ae4caa7ca5a8858c
