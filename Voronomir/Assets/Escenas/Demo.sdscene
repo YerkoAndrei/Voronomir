@@ -6690,7 +6690,7 @@ Hierarchy:
         -   Folder: Sala 0/Grupo 0
             Entity:
                 Id: 4b666f79-31c0-42bc-9b19-75f8d4384b2a
-                Name*: Zombi 2
+                Name*: Zombi (2)
                 Components:
                     4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
                         Id: 47b0f588-5a4f-481f-8929-1ef801b9443d
@@ -11133,6 +11133,7 @@ Hierarchy:
                         ColliderShapes:
                             fbe76a3afc7b249bfeb4a9f90dc2ad2e: !CapsuleColliderShapeDesc
                                 Length: 1.1
+                                Radius: 0.24
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     4a22f075ff1a59d4c77295334ad68948: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
@@ -14251,7 +14252,7 @@ Hierarchy:
         -   Folder: Sala 0/Grupo 0
             Entity:
                 Id: a0a3909a-d54c-40e3-b579-503534de011b
-                Name*: Zombi 0
+                Name*: Zombi (0)
                 Components:
                     4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
                         Id: f8f366a0-f9ce-4dbc-ba0f-44470f190ca6
@@ -15459,7 +15460,7 @@ Hierarchy:
         -   Folder: Sala 0/Grupo 0
             Entity:
                 Id: aff20ceb-9f12-464a-aae0-45f079c64811
-                Name*: Zombi 1
+                Name*: Zombi (1)
                 Components:
                     4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
                         Id: 1b0d185c-0714-41af-b88a-d9a97c409a4e
