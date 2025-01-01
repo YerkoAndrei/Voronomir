@@ -10,14 +10,6 @@ Materials:
         Name: Muro
         MaterialInstance:
             Material: a74e9499-aeb8-4eb6-9dcb-3013ae429bc1:Materiales/Mapa/Muro
-    2e84ab2dde54adb4cd89d1a41062e4f7:
-        Name: Piso0
-        MaterialInstance:
-            Material: 2f8770a8-c95d-4c16-bd0b-b6752f240154:Materiales/Mapa/Piso0
-    027685b47590f63935d20b8d1a0370e5:
-        Name: Piso1
-        MaterialInstance:
-            Material: a7da7e5f-ddb1-498c-aeda-8cac30575416:Materiales/Mapa/Piso1
 Modifiers: {}
 ~SourceHashes:
-    aa2d4237f2c4fc91762f73ec1c9dba30~Sala3.glb: 9e89b3797f4ee6764cca3794aa04c4ae
+    aa2d4237f2c4fc91762f73ec1c9dba30~Sala3.glb: 2fee913f55e19341ef77a3e2fb0f3c6e

@@ -6,7 +6,30 @@ ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
+        - ref!! b6296baf-ed64-43dc-81e1-8f4f829f4ec4
+        - ref!! 37df6c9a-c192-40bf-8f7d-c7c33b804985
+        - ref!! 13dee0a1-80cd-42ab-8f1c-4d5a39b1eb6d
+        - ref!! 55becbee-bec2-4178-8703-5deb48e28089
+        - ref!! 624c0cfb-85e5-408c-8eea-fffb408e0674
+        - ref!! 0df52766-39fc-490b-9fce-7fdef51efd15
+        - ref!! cb05f8a9-8d6f-480e-8f82-0558ad14912b
+        - ref!! 4927b9cc-021a-4259-8c03-8aa2bacbcfe4
+        - ref!! dc4c51d5-fbc2-40f3-b522-d04f4e68e8c6
+        - ref!! c6e4eb8f-8280-4faa-9d6c-5fb037ba06d3
+        - ref!! dee14be4-714c-4560-9b32-e21306d44690
+        - ref!! 3da5210d-f2fd-4a73-aefb-c4149feb71ef
+        - ref!! 7f2f4ea4-8fe3-4782-89af-be00fbdad095
+        - ref!! b060df15-aadd-4faf-9815-d83f7859e656
+        - ref!! 57079ac6-aac8-4ce2-a6ab-77cd2c277c72
+        - ref!! 2e5e62b3-ae0f-48a4-826c-e4be8d87d237
+        - ref!! 7e8b4ddb-a88c-4a47-8606-8b8a36721b8a
+        - ref!! 236942f4-1a8d-4e62-a274-5b3b8dcb911b
+        - ref!! 008505f4-7b56-46f1-9b9b-83a67707d6aa
+        - ref!! 5a198641-d78e-40ae-8835-61441e0967f2
+        - ref!! acff8231-8ccf-48fc-8d16-c82e18024902
+        - ref!! e7edc9d5-23b6-44b6-9226-630e07e60573
         - ref!! a5dd2b60-39dc-4ed5-a615-bbf44dca27e2
+        - ref!! af5bea06-067a-4efd-9572-34012845c63e
         - ref!! 4c1f875e-8223-4c5e-b107-957b12040a79
         - ref!! 0b0f5f96-71fe-4da4-b55e-21d586feedbe
         - ref!! 044f30a1-0f5f-4047-ba80-5069e0368969
@@ -32,12 +55,15 @@ Hierarchy:
         - ref!! aff20ceb-9f12-464a-aae0-45f079c64811
         - ref!! 4b666f79-31c0-42bc-9b19-75f8d4384b2a
         - ref!! 57d10585-5ec1-4858-a8ca-68efd57c324d
+        - ref!! 6b12e017-8ec8-48e5-aa01-692cb683d389
         - ref!! e8f0e27f-be1f-4d47-a679-96c85c613636
         - ref!! f33d2ea3-2801-4e7b-9be3-053c0fa44bc1
         - ref!! a42e39fa-4a38-4d7b-a702-e8908a86bd06
         - ref!! dc97c5bf-6f1a-4394-947d-2d30dba9ab85
+        - ref!! c047c18d-94c2-4285-9654-af00ba2d8e29
         - ref!! b6e2d3ab-adfe-4186-8e09-0f0df4b86ac2
         - ref!! 61c51d55-b785-4ab1-8c6b-fdc4616783af
+        - ref!! c40fd122-847e-4e1b-8133-b1a44c8fb700
         - ref!! 26b275dd-ff74-4429-a96d-b27cf88ca521
         - ref!! 1994162a-6dd2-402b-b4a2-6eacc9ed2659
         - ref!! 6a7d46cc-3991-49e0-8492-705f65389d49
@@ -54,29 +80,8 @@ Hierarchy:
         - ref!! 73e4021f-12b9-4c08-862f-ab093cd5988c
         - ref!! 813ff55d-8ea1-4f5e-ada3-d642a3abb5a0
         - ref!! 29a8524e-27a2-4f45-9557-ee8cc4495f02
-        - ref!! b6296baf-ed64-43dc-81e1-8f4f829f4ec4
-        - ref!! 13dee0a1-80cd-42ab-8f1c-4d5a39b1eb6d
-        - ref!! 55becbee-bec2-4178-8703-5deb48e28089
-        - ref!! 624c0cfb-85e5-408c-8eea-fffb408e0674
-        - ref!! 0df52766-39fc-490b-9fce-7fdef51efd15
-        - ref!! cb05f8a9-8d6f-480e-8f82-0558ad14912b
-        - ref!! 4927b9cc-021a-4259-8c03-8aa2bacbcfe4
-        - ref!! dc4c51d5-fbc2-40f3-b522-d04f4e68e8c6
-        - ref!! c6e4eb8f-8280-4faa-9d6c-5fb037ba06d3
-        - ref!! dee14be4-714c-4560-9b32-e21306d44690
-        - ref!! 3da5210d-f2fd-4a73-aefb-c4149feb71ef
-        - ref!! 7f2f4ea4-8fe3-4782-89af-be00fbdad095
-        - ref!! b060df15-aadd-4faf-9815-d83f7859e656
-        - ref!! 57079ac6-aac8-4ce2-a6ab-77cd2c277c72
-        - ref!! 2e5e62b3-ae0f-48a4-826c-e4be8d87d237
-        - ref!! 7e8b4ddb-a88c-4a47-8606-8b8a36721b8a
-        - ref!! 236942f4-1a8d-4e62-a274-5b3b8dcb911b
-        - ref!! 008505f4-7b56-46f1-9b9b-83a67707d6aa
-        - ref!! 5a198641-d78e-40ae-8835-61441e0967f2
-        - ref!! acff8231-8ccf-48fc-8d16-c82e18024902
-        - ref!! e7edc9d5-23b6-44b6-9226-630e07e60573
     Parts:
-        -   Folder: Sala 0/Sala 1
+        -   Folder: Sala 1
             Entity:
                 Id: 008505f4-7b56-46f1-9b9b-83a67707d6aa
                 Name: "Botón (Rojo)"
@@ -468,7 +473,7 @@ Hierarchy:
                         Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                         Materials:
                             e88d3199e2b451fdd119f4532e94fb53~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
-        -   Folder: Sala 0/Sala 1/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
                 Id: 0df52766-39fc-490b-9fce-7fdef51efd15
                 Name: Columna 2
@@ -805,7 +810,7 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 94fd931a-0823-45a7-a8df-8da017664b5a
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Sala 1/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
                 Id: 13dee0a1-80cd-42ab-8f1c-4d5a39b1eb6d
                 Name: Techo
@@ -1053,7 +1058,7 @@ Hierarchy:
                 BasePartAsset: e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/Entorno/Saltador
                 BasePartId: 0e6fc922-4c0b-44c8-af46-097632041c0b
                 InstanceId: ce46c735-4f72-4020-a75b-12fecc972ab0
-        -   Folder: Sala 0/Sala 1
+        -   Folder: Sala 1
             Entity:
                 Id: 236942f4-1a8d-4e62-a274-5b3b8dcb911b
                 Name: "Botón (Azul)"
@@ -1374,7 +1379,7 @@ Hierarchy:
                 BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
                 BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
                 InstanceId: 5f4f3705-da07-49c2-925d-45ee6701575c
-        -   Folder: Sala 0/Sala 1
+        -   Folder: Sala 1
             Entity:
                 Id: 2e5e62b3-ae0f-48a4-826c-e4be8d87d237
                 Name*: Puerta (Rojo)
@@ -1563,6 +1568,35 @@ Hierarchy:
                 BasePartAsset: "39acfead-acee-4d73-8f99-4814622ecf7e:Prefabs/Entorno/Botón (Nada)"
                 BasePartId: 33d94d5f-9c78-4548-88fc-74a17c50d5a7
                 InstanceId: d89714ee-0785-45f0-93f6-21f6a8839e2d
+        -   Folder: Sala 1/Mapa
+            Entity:
+                Id: 37df6c9a-c192-40bf-8f7d-c7c33b804985
+                Name: Piso
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: fae4b6ac-678c-4bad-b4ce-16db177157ce
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: 0fae7445-ad99-4b1a-a401-0718417cb03c:Modelos/Mundos/M1E1/Pisos/PisoSala1
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 3391c1e4-6ccf-4abf-af93-f76aae6f35c2
+                        Position: {X: 0.0, Y: 2.1338465E-06, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: d8ed2dc4-91db-40e6-8bd5-12f80bf24097
+                        Model: 0fae7445-ad99-4b1a-a401-0718417cb03c:Modelos/Mundos/M1E1/Pisos/PisoSala1
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 385bfc23-67c1-4d76-924a-bfe672193520
@@ -1707,7 +1741,7 @@ Hierarchy:
                 BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/Entorno/Botón (Azul)"
                 BasePartId: 9ed46e5c-e8aa-4d32-ad0e-34ea6d159d4c
                 InstanceId: 654877db-2552-4b54-a24e-9b7ce64a8595
-        -   Folder: Sala 0/Sala 1/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
                 Id: 3da5210d-f2fd-4a73-aefb-c4149feb71ef
                 Name: Portal (Rojo)
@@ -2136,7 +2170,7 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 4c24f93d-e3a0-4825-833e-e2a97128dba9
                 InstanceId: ac5ceabe-9de8-4d25-9dd9-acbefc97256e
-        -   Folder: Sala 0/Sala 1/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
                 Id: 4927b9cc-021a-4259-8c03-8aa2bacbcfe4
                 Name: Cubo 0
@@ -2702,7 +2736,7 @@ Hierarchy:
                 BasePartAsset: "45ea8175-4bdb-46b4-998a-9c398b65c48d:Prefabs/Entorno/DañadorContinuo"
                 BasePartId: d7a4abb5-8b91-4c05-a973-671b9d55674e
                 InstanceId: 240793b7-9c1a-4438-84a8-dd2373921a24
-        -   Folder: Sala 0/Sala 1/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
                 Id: 55becbee-bec2-4178-8703-5deb48e28089
                 Name: Columna 0
@@ -2734,7 +2768,7 @@ Hierarchy:
                         Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                         Materials:
                             e88d3199e2b451fdd119f4532e94fb53~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
-        -   Folder: Sala 0/Sala 1
+        -   Folder: Sala 1
             Entity:
                 Id: 57079ac6-aac8-4ce2-a6ab-77cd2c277c72
                 Name*: Puerta (Azul)
@@ -2842,7 +2876,7 @@ Hierarchy:
                 BasePartAsset: "42c3308d-cdee-4c52-b089-84ae70a08179:Prefabs/Entorno/Botón (Azul)"
                 BasePartId: 6ba9d529-deb5-41b0-a29a-42e3547040f8
                 InstanceId: 654877db-2552-4b54-a24e-9b7ce64a8595
-        -   Folder: Sala 0/Sala 1
+        -   Folder: Sala 1
             Entity:
                 Id: 5a198641-d78e-40ae-8835-61441e0967f2
                 Name: "Botón (Amarillo)"
@@ -2942,7 +2976,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: f524e3a4-a854-4670-bae9-1f5a59fe77b5
-                        Position*: {X: -37.0, Y: 5.0, Z: 45.0}
+                        Position*: {X: -37.0, Y: 5.0, Z: 47.0}
                         Rotation*: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3049,7 +3083,7 @@ Hierarchy:
                         Id: 8606f9f0-4602-4701-8300-73805f2c5ff9
                         Model: 099f2089-828e-4a00-ab84-358ee8159e4a:Modelos/Mundos/M1E1/Sala3
                         Materials: {}
-        -   Folder: Sala 0/Sala 1/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
                 Id: 624c0cfb-85e5-408c-8eea-fffb408e0674
                 Name: Columna 1
@@ -3554,6 +3588,35 @@ Hierarchy:
                     5971d764244d6e032eec69e3f7e3b822: !ModelComponent
                         Id: e8de0279-972f-4e1c-adfe-759191845cee
                         Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
+                        Materials: {}
+        -   Folder: Sala 0/Mapa
+            Entity:
+                Id: 6b12e017-8ec8-48e5-aa01-692cb683d389
+                Name: Piso
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: 0e91a5cb-c2ed-45ea-9b97-820a1d0b3d38
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: 80ee7671-f735-423c-b4c6-d552117ebd7e:Modelos/Mundos/M1E1/Pisos/PisoSala0
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 2cbe1bdb-b6e5-4f71-bd24-ee568225c04f
+                        Position: {X: 0.0, Y: 2.1338465E-06, Z: 52.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: d99664dd-fd08-4c38-97bb-9e2d5edfb903
+                        Model: 80ee7671-f735-423c-b4c6-d552117ebd7e:Modelos/Mundos/M1E1/Pisos/PisoSala0
                         Materials: {}
         -   Entity:
                 Id: 6c38517c-3573-4c8e-8fe8-2c3f12d8c488
@@ -4328,7 +4391,7 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 86fc6b06-f3ee-4510-a53f-3e5ecd54bb0b
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Sala 1
+        -   Folder: Sala 1
             Entity:
                 Id: 7e8b4ddb-a88c-4a47-8606-8b8a36721b8a
                 Name*: Puerta (Amarillo)
@@ -4370,7 +4433,7 @@ Hierarchy:
                 BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: 31969b7f-eb0c-4213-a428-e9f1fd8c11ab
-        -   Folder: Sala 0/Sala 1/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
                 Id: 7f2f4ea4-8fe3-4782-89af-be00fbdad095
                 Name: Portal (Amarillo)
@@ -5704,7 +5767,7 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: e1f6681a-f5c0-4a3c-83b5-6b117a74df1c
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Sala 1
+        -   Folder: Sala 1
             Entity:
                 Id: acff8231-8ccf-48fc-8d16-c82e18024902
                 Name: Poder (Velocidad)
@@ -5716,6 +5779,35 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             de5bfdad816f703449eb3cc4f7e57f54: ref!! 0245166c-5cf9-413d-af52-f07f775192c7
+        -   Folder: Sala 4/Mapa
+            Entity:
+                Id: af5bea06-067a-4efd-9572-34012845c63e
+                Name: Piso
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: fccf8bb1-a9fc-4389-8f61-6a33a532611d
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: e492354a-6113-482c-98a2-b8ef482b52bc:Modelos/Mundos/M1E1/Pisos/PisoSala4
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: e45a218b-f901-46c5-b51a-88b74b55a7b6
+                        Position: {X: -43.0, Y: 8.0, Z: -3.0}
+                        Rotation: {X: -0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: 4d029b07-bb62-448f-b949-9e770505d87e
+                        Model: e492354a-6113-482c-98a2-b8ef482b52bc:Modelos/Mundos/M1E1/Pisos/PisoSala4
+                        Materials: {}
         -   Folder: Sala 0/Grupo 0
             Entity:
                 Id: aff20ceb-9f12-464a-aae0-45f079c64811
@@ -5806,7 +5898,7 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 434a53a6-c739-4baa-86c3-20856d57d555
                 InstanceId: 9920bcfa-c981-4dbb-ac89-7ab3c946e8f2
-        -   Folder: Sala 0/Sala 1
+        -   Folder: Sala 1
             Entity:
                 Id: b060df15-aadd-4faf-9815-d83f7859e656
                 Name: Llave (Azul)
@@ -6182,7 +6274,7 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 147e9c1b-6e08-4fa2-8b4a-a4f0b80d0ed8
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Sala 1/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
                 Id: b6296baf-ed64-43dc-81e1-8f4f829f4ec4
                 Name: Sala
@@ -6399,6 +6491,35 @@ Hierarchy:
                 BasePartAsset: d5058dbe-b40f-4ad7-b603-b31e795ab1f4:Prefabs/Entorno/Secreto
                 BasePartId: 31ac85c4-45ee-471c-a957-2959f7c007c3
                 InstanceId: b4a66f6b-bd1a-406b-81e9-ed0cfa6fdd6e
+        -   Folder: Sala 2/Mapa
+            Entity:
+                Id: c047c18d-94c2-4285-9654-af00ba2d8e29
+                Name: Piso
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: 8241b2ad-c0d3-434f-b857-1368f79c1228
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: b7213fd4-434b-49e5-9bd2-6846067293d5:Modelos/Mundos/M1E1/Pisos/PisoSala2
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 3bb86dee-a0e7-4437-b278-087ea596b4df
+                        Position: {X: 30.0, Y: 2.0, Z: 2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: 9eb034c1-9f09-49c1-9c31-f0d4a21c590c
+                        Model: b7213fd4-434b-49e5-9bd2-6846067293d5:Modelos/Mundos/M1E1/Pisos/PisoSala2
+                        Materials: {}
         -   Entity:
                 Id: c262eb4d-7dda-490b-b576-179003477777
                 Name: Emisor
@@ -6421,7 +6542,36 @@ Hierarchy:
                 BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
                 BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
                 InstanceId: 3f4d5a58-5a58-4052-aed6-c954af0ffc99
-        -   Folder: Sala 0/Sala 1/Mapa
+        -   Folder: Sala 3/Mapa
+            Entity:
+                Id: c40fd122-847e-4e1b-8133-b1a44c8fb700
+                Name: Piso
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: 0ea5cfdf-9b3a-4303-bb7f-b6eb6658007b
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: 374c2a27-ad78-47ac-a9b5-461313aa6ea3:Modelos/Mundos/M1E1/Pisos/PisoSala3
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 3d1bd7cc-36c5-402c-b2a9-6fc8395ab083
+                        Position: {X: -37.0, Y: -3.0, Z: 22.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: e65b854a-73c0-40e9-b978-705070aa17b0
+                        Model: 374c2a27-ad78-47ac-a9b5-461313aa6ea3:Modelos/Mundos/M1E1/Pisos/PisoSala3
+                        Materials: {}
+        -   Folder: Sala 1/Mapa
             Entity:
                 Id: c6e4eb8f-8280-4faa-9d6c-5fb037ba06d3
                 Name: Cubo 2
@@ -6530,7 +6680,7 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 0c476c17-80e5-422b-a8ae-de6ab3487673
                 InstanceId: 9920bcfa-c981-4dbb-ac89-7ab3c946e8f2
-        -   Folder: Sala 0/Sala 1/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
                 Id: cb05f8a9-8d6f-480e-8f82-0558ad14912b
                 Name: Columna 4
@@ -6867,7 +7017,7 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 4286558c-21f8-4c73-8ce1-d58ae4daec5d
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Sala 1/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
                 Id: dc4c51d5-fbc2-40f3-b522-d04f4e68e8c6
                 Name: Cubo 1
@@ -6949,7 +7099,7 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 64ccf3d0-2c5c-483a-8cb7-82bb054525c0
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
-        -   Folder: Sala 0/Sala 1/Mapa
+        -   Folder: Sala 1/Mapa
             Entity:
                 Id: dee14be4-714c-4560-9b32-e21306d44690
                 Name: Portal (Azul)
@@ -7265,7 +7415,7 @@ Hierarchy:
                 BasePartAsset: 2566113e-21c9-42ef-94ea-b6ba54bf4188:Prefabs/Entorno/Activador
                 BasePartId: 2826dafd-3bb4-4276-8c3a-8807cabe8e1c
                 InstanceId: 476cff7c-7e81-4f50-b290-09f57d11b32d
-        -   Folder: Sala 0/Sala 1
+        -   Folder: Sala 1
             Entity:
                 Id: e7edc9d5-23b6-44b6-9226-630e07e60573
                 Name: Secreto
