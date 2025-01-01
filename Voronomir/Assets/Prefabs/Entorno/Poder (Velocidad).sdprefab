@@ -30,7 +30,7 @@ Hierarchy:
                 Components:
                     fe7fedc306aeffcc4f309968002ca983: !TransformComponent
                         Id: 8489cd7c-e803-4c64-9421-bdefb11ac9be
-                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -45,7 +45,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 41a0e868-ed87-49a1-b39a-918417405046
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -67,8 +67,8 @@ Hierarchy:
                         ColliderShapes:
                             ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                Size: {X: 1.0, Y: 1.2, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.6, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     d4a6cfb5e8fa7e584de806c4e1719eb6: !Voronomir.ControladorPoder,Voronomir.Proyecto
                         Id: 547e1e13-cc56-48b4-929e-a92fe8d9e2ef
@@ -82,7 +82,7 @@ Hierarchy:
                 Components:
                     ab5f0ff33be84be4576ecc9600f312a1: !TransformComponent
                         Id: 2d5345ca-b387-426c-a974-120660a89c29
-                        Position: {X: 0.0, Y: 0.2, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.6, Z: 0.0}
                         Rotation: {X: -4.371139E-08, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.2, Y: 0.2, Z: 0.2}
                         Children: {}

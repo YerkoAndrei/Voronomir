@@ -646,7 +646,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 5f6da2b2-6a39-4fd5-9992-32554bb64aee
-                        Position*: {X: -16.0, Y: 0.5, Z: 12.0}
+                        Position*: {X: -16.0, Y: 0.0, Z: 12.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -668,8 +668,8 @@ Hierarchy:
                         ColliderShapes:
                             ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                Size: {X: 1.0, Y: 1.2, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.6, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     d4a6cfb5e8fa7e584de806c4e1719eb6: !Voronomir.ControladorPoder,Voronomir.Proyecto
                         Id: 1ef6478f-93fb-4fff-b9a4-10f8e1722ee5
@@ -1319,7 +1319,7 @@ Hierarchy:
                 BasePartAsset: ef15af4c-6c07-4963-bc75-701eb78e548b:Prefabs/Entorno/Llave (Amarilla)
                 BasePartId: 29fad8a6-04fc-4a7d-8894-ba55137e35c5
                 InstanceId: 97f85d52-a51b-42ea-83d6-cc54586981f9
-        -   Folder: Grupo01
+        -   Folder: Grupo 0
             Entity:
                 Id: 293f7583-6c3c-4921-a3ca-4853773072d5
                 Name*: Zombi 0
@@ -1896,7 +1896,7 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: c4d72591-362b-4f02-a4ab-6166c7e4df26
                 InstanceId: 9dd30e7b-d86d-45a4-b7a1-71bba7dddc96
-        -   Folder: Grupo01
+        -   Folder: Grupo 0
             Entity:
                 Id: 347bd0cd-f2ad-4c4b-a987-27846fe13532
                 Name: Activador
@@ -2098,7 +2098,7 @@ Hierarchy:
                 Components:
                     ab5f0ff33be84be4576ecc9600f312a1: !TransformComponent
                         Id: 28247fa0-981d-40c3-baf1-ae43675dd2b0
-                        Position: {X: 0.0, Y: 0.2, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.6, Z: 0.0}
                         Rotation: {X: -4.371139E-08, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.2, Y: 0.2, Z: 0.2}
                         Children: {}
@@ -2939,7 +2939,7 @@ Hierarchy:
                         Id: b0e5187c-fc2b-42f0-a0e1-580deee1c4c3
                         Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Generales/Muro
                         Materials: {}
-        -   Folder: Grupo01
+        -   Folder: Grupo 0
             Entity:
                 Id: 58b7b2f1-d384-40f3-8df7-f7a220be1f91
                 Name: ActivadorMuerte
@@ -3032,7 +3032,7 @@ Hierarchy:
                 Components:
                     fe7fedc306aeffcc4f309968002ca983: !TransformComponent
                         Id: 2f292ff2-68d1-4939-884c-78cab4160835
-                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -3066,7 +3066,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: d49822e4-2d66-485e-ba72-1585f1b7face
-                        Position*: {X: -16.0, Y: 0.5, Z: 16.0}
+                        Position*: {X: -16.0, Y: 0.0, Z: 16.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3088,8 +3088,8 @@ Hierarchy:
                         ColliderShapes:
                             ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                Size: {X: 1.0, Y: 1.2, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.6, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     d4a6cfb5e8fa7e584de806c4e1719eb6: !Voronomir.ControladorPoder,Voronomir.Proyecto
                         Id: 2bccf3a4-174f-4ef5-a635-d5a40ce87c02
@@ -4358,7 +4358,7 @@ Hierarchy:
                 Components:
                     ab5f0ff33be84be4576ecc9600f312a1: !TransformComponent
                         Id: 91c92da7-4f55-47fd-8d77-95c98b4706cb
-                        Position: {X: 0.0, Y: 0.2, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.6, Z: 0.0}
                         Rotation: {X: -4.371139E-08, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.2, Y: 0.2, Z: 0.2}
                         Children: {}
@@ -4496,7 +4496,7 @@ Hierarchy:
                 BasePartAsset: 64449b5a-f9ba-4670-b8f7-299dd5509330:Prefabs/Entorno/Poder (Invulnerabilidad)
                 BasePartId: 366beae1-dd19-431b-a98c-ea330fda3824
                 InstanceId: 938b33c4-b6af-4165-953d-b183bb31a5c8
-        -   Folder: Grupo01
+        -   Folder: Grupo 0
             Entity:
                 Id: 8453a3e0-4d61-4f66-950c-12fa89c30bac
                 Name: Dron
@@ -4910,7 +4910,7 @@ Hierarchy:
                 Components:
                     fe7fedc306aeffcc4f309968002ca983: !TransformComponent
                         Id: 6f497df9-acb3-4047-b451-d4d070ad90c1
-                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -4960,7 +4960,7 @@ Hierarchy:
                 BasePartAsset: e4451e65-7f4f-4d2f-a0d7-1543b17c8b8d:Prefabs/Entorno/Saltador
                 BasePartId: 0e6fc922-4c0b-44c8-af46-097632041c0b
                 InstanceId: 9a9ab826-c1a2-484c-87b5-e01fd29e4113
-        -   Folder: Grupo01
+        -   Folder: Grupo 0
             Entity:
                 Id: 9003c97f-e6c6-4e78-ba13-390eef43db89
                 Name*: Zombi 1
@@ -5168,7 +5168,7 @@ Hierarchy:
                         Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials:
                             885c00811c3a967eee2a81b6e59b088b~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
-        -   Folder: Grupo01
+        -   Folder: Grupo 0
             Entity:
                 Id: 9466ef07-c364-447b-94db-14d4447fda74
                 Name*: Zombi 2
@@ -6325,7 +6325,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: bb9be785-1c98-4f92-85ce-64bca6ccc946
-                        Position*: {X: -16.0, Y: 0.5, Z: 8.0}
+                        Position*: {X: -16.0, Y: 0.0, Z: 8.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -6347,8 +6347,8 @@ Hierarchy:
                         ColliderShapes:
                             ea41dc56705b9668e501d93692981896: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                Size: {X: 1.0, Y: 1.2, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.6, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     d4a6cfb5e8fa7e584de806c4e1719eb6: !Voronomir.ControladorPoder,Voronomir.Proyecto
                         Id: eec2be22-bb19-4b34-b8cc-3481c11f177e
@@ -6780,7 +6780,7 @@ Hierarchy:
                 Components:
                     fe7fedc306aeffcc4f309968002ca983: !TransformComponent
                         Id: 411e04b7-e116-4fb4-8bf5-773513c77a48
-                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -7992,7 +7992,7 @@ Hierarchy:
                 Components:
                     ab5f0ff33be84be4576ecc9600f312a1: !TransformComponent
                         Id: 9c89cd24-436b-4abc-8adf-5c50103b6da4
-                        Position: {X: 0.0, Y: 0.2, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.6, Z: 0.0}
                         Rotation: {X: -4.371139E-08, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.2, Y: 0.2, Z: 0.2}
                         Children: {}
