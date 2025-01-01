@@ -47,8 +47,8 @@ Hierarchy:
                         ColliderShapes:
                             deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: 3487a520-6ce1-4bff-ad75-9161159452ad

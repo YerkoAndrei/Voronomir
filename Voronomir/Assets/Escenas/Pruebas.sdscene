@@ -1923,8 +1923,8 @@ Hierarchy:
                         ColliderShapes:
                             deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: 6fb2ce7d-6840-4e48-827c-896af4749d68
@@ -4610,7 +4610,7 @@ Hierarchy:
                         Id: 92a85a31-56a5-4327-8b8c-adaad18b7459
                         Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials:
-                            bf450f62ad1473fb768b2e2fbef469f0~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
+                            bf450f62ad1473fb768b2e2fbef469f0~0: a74e9499-aeb8-4eb6-9dcb-3013ae429bc1:Materiales/Mapa/Muro
         -   Entity:
                 Id: 86798d33-b755-4665-ae6f-b2b96efd2015
                 Name: ArmaRango
@@ -5167,7 +5167,7 @@ Hierarchy:
                         Id: 85ab4bb0-05e4-4089-81c3-cf17363fe123
                         Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials:
-                            885c00811c3a967eee2a81b6e59b088b~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
+                            885c00811c3a967eee2a81b6e59b088b~0: a74e9499-aeb8-4eb6-9dcb-3013ae429bc1:Materiales/Mapa/Muro
         -   Folder: Grupo 0
             Entity:
                 Id: 9466ef07-c364-447b-94db-14d4447fda74

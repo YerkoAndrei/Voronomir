@@ -243,7 +243,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: d9835dd5-584b-49cf-bbf3-25e00b15bd7f
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 05677e2e-185d-46b9-b6e5-4db717bcd548
@@ -259,7 +259,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: ba8d9c2e-671a-4cb1-ad19-d3ac4edfd5ae
                         enemigo: rangoLigero
-                        invisible: false
+                        invisible*: true
                         "armaMelé": null
                         armaRango: ref!! 68431d63-67e7-4825-a006-8d769627fa46
                         emisor: ref!! b54769d4-53d5-4338-bebd-ee1f8ccd9cf5
@@ -1103,7 +1103,7 @@ Hierarchy:
         -   Folder: Sala 1/Grupo 1
             Entity:
                 Id: 1069b401-f9a4-45cf-9540-c015b8e019cf
-                Name: Zombi (0)
+                Name*: Zombi (0)
                 Components:
                     4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
                         Id: d5c2abf9-39d6-46cb-9740-6705772a6130
@@ -1128,11 +1128,11 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 090243d5-51ac-4c3c-a17a-c07005ed67f7
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: de503f78-5085-4391-987a-5db2c0278bc9
-                        Position: {X: -8.0, Y: 0.0, Z: -0.22754493}
+                        Position*: {X: -7.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -2131,7 +2131,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 493f158c-0b35-4c2e-b085-091ad6e1de10
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 22294677-c1a4-4a48-b7a5-e0e16c358784
@@ -4224,12 +4224,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     691c8f9386df01a1270f88b33a2974d5: !NavigationComponent
                         Id: b66c7801-f44a-4a76-b570-ab504120d183
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: b5889f40-e580-487f-97e3-fb2450c91874
                         Position*: {X: 16.0, Y: 8.0, Z: -26.0}
-                        Rotation*: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             886187fd130d4c87a9a9d76aed7b7965: ref!! ed841553-1951-4651-ae12-665a07471389
@@ -4362,7 +4362,7 @@ Hierarchy:
         -   Folder: Sala 1/Grupo 1
             Entity:
                 Id: 38568f43-6151-4ea5-b023-f101deb64c91
-                Name: Zombi (3)
+                Name*: Zombi (3)
                 Components:
                     4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
                         Id: fc9d55aa-717f-40eb-afbe-a3d6efddc318
@@ -4387,11 +4387,11 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: e284019f-6e5f-486b-9fce-7d6f527ea603
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 1bc36aab-00ec-439b-8a11-5ceaec039714
-                        Position: {X: 6.0, Y: 0.0, Z: -6.0}
+                        Position*: {X: 12.0, Y: 0.0, Z: -14.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4740,7 +4740,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.2, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: cb35d19d-424b-43ed-af19-c173ef86b432
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 0ab83102-6919-44da-a78f-5515ef667e47
@@ -5002,13 +5002,13 @@ Hierarchy:
                 Components:
                     6d8bcecd738075517046081af5f60aa5: !TransformComponent
                         Id: 1c79f734-6c65-43aa-adf9-5adcb398b73d
-                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Position: {X: -4.0, Y: 10.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     8da989470e5d3482f6697c8ae7b8694b: !Stride.Navigation.NavigationBoundingBoxComponent,Stride.Navigation
                         Id: 702cc5cc-b8ea-459b-8e4f-66e1cdc93576
-                        Size: {X: 50.0, Y: 4.0, Z: 50.0}
+                        Size: {X: 50.0, Y: 15.0, Z: 50.0}
         -   Folder: Sala 4
             Entity:
                 Id: 3f819265-05e2-411f-83a0-1b256797141e
@@ -5036,8 +5036,8 @@ Hierarchy:
                         ColliderShapes:
                             deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: 6e614095-d3d5-4e24-bea7-45a86f7d747f
@@ -6242,12 +6242,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 07c383b7-e942-4ac2-b6fd-41c0e2f6e1c5
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 3d16ca32-2e19-40d5-95cf-a151d0632e75
                         Position*: {X: 0.0, Y: 2.0, Z: 0.0}
-                        Rotation*: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f14eafd2887605601cb783e4e612d427: ref!! 114aa081-9827-484e-a512-a52816b2551a
@@ -6715,7 +6715,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 57e78331-6f6b-4804-b491-39533061c5e7
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 808b1d34-c9fc-4e4c-8ca1-e8ba38829f82
@@ -6809,12 +6809,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     09db92a0e4c509fdd87f9b0ba04c75ed: !NavigationComponent
                         Id: 3bb79c10-77d8-4647-9d2c-565b46b05e8b
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: a5300c3c-2746-492c-b549-6fce57886036
-                        Position*: {X: 42.0, Y: 2.0, Z: 7.0}
-                        Rotation*: {X: -0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Position*: {X: 42.0, Y: 2.0, Z: 6.0}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             e99fd69243b07ffb3cb8b699d64c5a6b: ref!! c9084b26-2f71-4046-abfb-d89e85f760d8
@@ -6828,7 +6828,7 @@ Hierarchy:
                     dde0c8ec0d35e0e851f71b7539019f93: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: c85a86c3-aa39-48cc-8e24-0c10e38385d9
                         enemigo: especialPesado
-                        invisible: false
+                        invisible*: true
                         "armaMelé": null
                         armaRango: null
                         emisor: ref!! ca43a245-50c7-40d6-8b90-874a702143ba
@@ -7352,7 +7352,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 488baa68-ebea-4554-be5e-ad602db64e58
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: eccdc2c5-0cb1-445f-a94f-c1eb1517599a
@@ -7483,7 +7483,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.2, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: ff70bb61-8ee6-4cd6-a6f9-16fea425eace
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 9f67314c-4d7f-4a2b-8358-01c00ef08cba
@@ -7750,12 +7750,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     691c8f9386df01a1270f88b33a2974d5: !NavigationComponent
                         Id: dcf069f5-2d1b-4586-81fd-28be549d347d
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: ab8188b4-3453-4557-b696-14241366a2ab
                         Position*: {X: -4.0, Y: 0.0, Z: 9.0}
-                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             886187fd130d4c87a9a9d76aed7b7965: ref!! 5c29b66e-b27b-4631-a0f0-637b41f1884e
@@ -8053,7 +8053,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.2, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 4fb67125-bb7b-4a4a-9c2d-4df48f64874f
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 9a419828-e73e-4ad2-a709-39845aadbdd8
@@ -8158,9 +8158,9 @@ Hierarchy:
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: 3b7c65f1-c759-4c40-818c-d2e93801dbc2
-                        Position*: {X: -37.0, Y: -3.0, Z: 22.0}
+                        Position*: {X: -37.0, Y: -4.0, Z: 22.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale*: {X: 30.0, Y: 1.0, Z: 32.0}
+                        Scale*: {X: 30.0, Y: 0.5, Z: 32.0}
                         Children:
                             35969d616976fdc596f8fb33fa34a234: ref!! 0cab90ca-fff9-4c08-ad17-e9c93aecd9e9
                     45bb46cc8e08e3285f9b30cf4b79af13: !StaticColliderComponent
@@ -8178,8 +8178,8 @@ Hierarchy:
                         ColliderShapes:
                             deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: e47e130e-315d-4cf4-8258-42e9dd74cfc0
@@ -8632,7 +8632,7 @@ Hierarchy:
         -   Folder: Sala 1/Grupo 1
             Entity:
                 Id: 63de97c1-1c70-4cee-923b-b6814b3a57b5
-                Name: Zombi (1)
+                Name*: Zombi (1)
                 Components:
                     4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
                         Id: 8d0acc56-99bf-4533-ab31-d66a8866f4be
@@ -8657,11 +8657,11 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 012df279-0f16-4c84-9ea8-8854f90c5e16
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 0a830d87-9f30-4264-86bb-360746fca6e0
-                        Position: {X: -6.0, Y: 0.0, Z: -6.0}
+                        Position*: {X: 0.0, Y: 0.0, Z: -7.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -8820,7 +8820,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.2, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 1a1c13ea-7dc7-45ed-ab3c-a7ed06d752d4
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 644ac124-b454-4c6f-b1bf-c66908f8112d
@@ -9775,7 +9775,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.2, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: eeef0240-b555-4d6d-a40a-e1155cc939fe
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 7c48aa57-3b3d-4df5-a88c-114c5d5f4ff4
@@ -10410,12 +10410,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 4380d04b-7c55-4400-99fd-1cd2ef5e17eb
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 1c35e291-ec20-43a8-b6bd-6d780f22cc42
                         Position*: {X: 18.0, Y: 0.0, Z: 18.0}
-                        Rotation*: {X: 0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f14eafd2887605601cb783e4e612d427: ref!! 78419a01-6b56-49de-848f-e80f1cf6e226
@@ -10914,8 +10914,8 @@ Hierarchy:
                         ColliderShapes:
                             deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: e7a7c28a-8c1d-4260-83c0-4633c0b9f4f5
@@ -11064,7 +11064,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 6cef7878-baec-461c-abcb-05975768819e
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: c9e52fab-0728-43c1-85fd-af27eaee183c
@@ -11171,7 +11171,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 6d66ef8a-736f-4bb8-a703-216a04ca17bf
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: de72d20e-6fa7-4090-adeb-937bce53226b
@@ -11187,7 +11187,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 502212ae-f29c-4d8d-8808-af7dd177bbaf
                         enemigo: rangoLigero
-                        invisible: false
+                        invisible*: true
                         "armaMelé": null
                         armaRango: ref!! caa9e5f6-134a-417a-92cf-b4ed548f5cb6
                         emisor: ref!! 60ad379a-2d7e-4371-8e7f-a4139198af1b
@@ -11585,7 +11585,7 @@ Hierarchy:
                         Id: 6ba0bebc-4e61-4fa0-804a-21dc2b091b50
                         Position*: {X: 15.0, Y: 7.5, Z: 6.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale*: {X: 10.0, Y: 1.0, Z: 28.0}
+                        Scale*: {X: 10.0, Y: 0.5, Z: 28.0}
                         Children:
                             35969d616976fdc596f8fb33fa34a234: ref!! 9d60ff14-8df5-44c2-86a1-cb78f5fc9528
                     45bb46cc8e08e3285f9b30cf4b79af13: !StaticColliderComponent
@@ -11603,8 +11603,8 @@ Hierarchy:
                         ColliderShapes:
                             deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: c16bc2db-327d-4116-b0c1-d0c1270f60fe
@@ -11822,12 +11822,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: cd820b9b-2ca5-4d91-bfae-a23447031229
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: b72cc354-e750-4d43-9017-9dbcd491ab42
                         Position*: {X: 34.0, Y: 2.0, Z: 5.0}
-                        Rotation*: {X: -0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             485e7f9120c580e5bb72adc1995ae7d8: ref!! 1b60103e-7849-4b19-ae4a-38ce8856e4a8
@@ -11838,7 +11838,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 44dbb575-72f8-438f-87e2-2679f28bd330
                         enemigo: rangoLigero
-                        invisible: false
+                        invisible*: true
                         "armaMelé": null
                         armaRango: ref!! 1696a155-6baf-484f-8feb-4dad5282512c
                         emisor: ref!! 4c6c55fb-d252-4b10-92f9-66518463856b
@@ -12728,12 +12728,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     691c8f9386df01a1270f88b33a2974d5: !NavigationComponent
                         Id: 24f99c66-738f-42dc-923b-f9441925ef23
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: 2bdbfe22-c886-4059-a832-34043684b804
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 2d33850f-6fe2-4eb9-a8be-c16146514553
                         Position*: {X: 10.0, Y: 0.0, Z: 0.0}
-                        Rotation*: {X: -0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             886187fd130d4c87a9a9d76aed7b7965: ref!! 939e16cd-5c20-4e66-945a-e7cfa2a3b65b
@@ -13218,7 +13218,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: daa74df8-4ead-4dbe-8a16-89a677bb6d28
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: 2bdbfe22-c886-4059-a832-34043684b804
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 12b9dca5-489c-4474-a16f-c1db89839acb
@@ -13325,8 +13325,8 @@ Hierarchy:
                         ColliderShapes:
                             deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: a042fe13-a4d9-4d82-83bd-141b371c9f32
@@ -13443,7 +13443,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 8a698f9a-2a35-4547-ba3b-7d49eef2d074
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 63494a3e-9f5b-446d-9a62-6b12ecddd336
@@ -13524,7 +13524,7 @@ Hierarchy:
         -   Folder: Sala 1/Grupo 1
             Entity:
                 Id: 964ab4e5-bd20-4f07-a532-c1dcf8aebd85
-                Name: Zombi (2)
+                Name*: Zombi (2)
                 Components:
                     4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
                         Id: fc378017-03be-4e18-a2dc-860147448907
@@ -13549,11 +13549,11 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 4329b233-776f-4808-a307-7fae4dbe013c
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 205609f4-bc91-4f02-b103-684a14938129
-                        Position: {X: 0.0, Y: 0.0, Z: -10.0}
+                        Position*: {X: 7.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -13929,13 +13929,13 @@ Hierarchy:
         -   Folder: Sala 2
             Entity:
                 Id: 9a64d522-87eb-49d3-8b12-e53ac5c5cd22
-                Name: Activador 0
+                Name*: Activador 0
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: c4e6a74f-8f2b-49ff-a33f-758150900eee
-                        Position*: {X: 23.5, Y: 2.0, Z: 1.0}
+                        Position*: {X: 22.5, Y: 2.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 6.0, Y: 1.0, Z: 10.0}
+                        Scale*: {X: 4.0, Y: 1.0, Z: 3.0}
                         Children:
                             35969d616976fdc596f8fb33fa34a234: ref!! 72d36edc-c433-4fca-9394-0f170e733582
                     45bb46cc8e08e3285f9b30cf4b79af13: !StaticColliderComponent
@@ -13953,14 +13953,14 @@ Hierarchy:
                         ColliderShapes:
                             deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: 06311872-1abd-4670-9870-bde0660b073b
                         activables:
                             3bc0c80db9f4c944fc9bf210503db8bf*: ref!! e147d7fe-2198-46d5-af74-770e476567dc
-                            03578fbc8d28958827532676aee4f1a7*: ref!! e147d7fe-2198-46d5-af74-770e476567dc
+                            03578fbc8d28958827532676aee4f1a7*: ref!! 4bdfc132-3e5e-4749-8421-f98a6626a917
                             ff3f28354927ba52fe6a892419ab4fb7*: ref!! 7c052073-406a-45d8-8f17-204107b9e972
                             3d23b8426fcd3461121ffa600234024e*: ref!! 0184d15a-0c89-4150-9bea-d1c746ff8f8c
                             fda13892c3fdc5786c12db9d0697fb8b*: ref!! bd625159-8ff7-468b-b7c0-8363a77b9aa4
@@ -14276,7 +14276,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 1fb03700-e34f-4817-8de7-d0a14f911642
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 1e41f1ef-05fd-40d2-8527-a388041d2b0b
@@ -14433,12 +14433,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 3bc65f0d-b080-4a00-83a5-568aac982ce2
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: eda4625b-33cc-41c5-ac7e-35af1b634293
                         Position*: {X: 43.0, Y: 4.0, Z: -4.0}
-                        Rotation*: {X: -0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             485e7f9120c580e5bb72adc1995ae7d8: ref!! 9b8b523a-b255-4903-bedc-702bfe8b55ba
@@ -14449,7 +14449,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 22d239f2-bf09-426d-a911-67a270e8e248
                         enemigo: rangoLigero
-                        invisible: false
+                        invisible*: true
                         "armaMelé": null
                         armaRango: ref!! 4ae6267e-7429-44ec-8514-04901979055b
                         emisor: ref!! e003d804-35ca-4bec-a26b-1c1366b775a6
@@ -15176,7 +15176,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 8d1ce7cc-1dee-469a-acdd-5f90d1707d6f
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: f3558314-68e9-4602-bd3c-79e870941bbc
@@ -15484,7 +15484,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 1832e4d0-eed3-4606-8aad-94a2e75c38f2
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: a4274099-6b7f-4e97-8793-42b82c8c9917
@@ -15735,12 +15735,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 6dd90dc0-3fcf-4724-86b2-df13544466b0
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 33a1c531-11fb-4570-bfda-10469b3dab1e
                         Position*: {X: 33.0, Y: 8.0, Z: -12.0}
-                        Rotation*: {X: -0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f14eafd2887605601cb783e4e612d427: ref!! 88b3ebc1-fe5a-4f91-9fd9-7c07c1cc8969
@@ -16767,12 +16767,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: fdb6e72f-750a-44e0-a044-4eed114c2100
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: b75d1b16-8a69-4c00-9d7f-44d193e1cff2
                         Position*: {X: 30.0, Y: 2.0, Z: 7.0}
-                        Rotation*: {X: -0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             485e7f9120c580e5bb72adc1995ae7d8: ref!! aa3429d2-5d29-4161-8496-c73286bcd43c
@@ -16783,7 +16783,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: 57d242cb-2ab9-4c15-8c12-f344b0c23aa7
                         enemigo: rangoLigero
-                        invisible: false
+                        invisible*: true
                         "armaMelé": null
                         armaRango: ref!! 125c4e1f-d092-4d79-81bd-b9376977f159
                         emisor: ref!! 704b0a95-b0cc-4d0a-8089-e6b03d909a23
@@ -16908,7 +16908,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.2, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 1c10c075-5654-4311-ae5a-ed89bb582f41
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 127e70f4-7a18-42dc-b8fa-94f734771cac
@@ -17157,12 +17157,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 6e9dea81-6a9d-42a5-b1ab-fb33c58e5912
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: 2bdbfe22-c886-4059-a832-34043684b804
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: f674a7d1-4379-4a97-84b8-5138554c7e75
                         Position*: {X: -0.5, Y: 22.0, Z: -4.8}
-                        Rotation*: {X: -0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f14eafd2887605601cb783e4e612d427: ref!! 14514ae8-f6a9-4586-be0a-2c39e8b4f888
@@ -17625,8 +17625,8 @@ Hierarchy:
                         ColliderShapes:
                             deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: a6a792ff-4d80-4ec1-823a-bbd51bcb974b
@@ -17831,12 +17831,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     691c8f9386df01a1270f88b33a2974d5: !NavigationComponent
                         Id: 71b6b69b-32aa-4fe0-9117-9f3bc071f4f0
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 8a14383c-f18d-403d-9385-b5b763743ed7
                         Position*: {X: 4.0, Y: 0.0, Z: 9.0}
-                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             886187fd130d4c87a9a9d76aed7b7965: ref!! 0a4d3dfd-4b64-465d-beb5-fe584283c409
@@ -18734,7 +18734,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.2, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 76c1d9bf-7252-4e0c-ad6d-843cf7e93a68
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: bb3ded58-741e-483a-96bd-c8b03fb2832d
@@ -18991,7 +18991,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 8eacfcd9-2de7-45af-846d-4dbdc2030555
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: ed39768f-8910-465c-b1fd-611a21de7a28
@@ -19064,12 +19064,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: f60ab0eb-1e7f-4a98-8b4b-aa0112cfeaa5
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: f9a519b7-0c02-480e-9f51-0f8b1c8e03c6
                         Position*: {X: -37.0, Y: 20.0, Z: -3.0}
-                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f14eafd2887605601cb783e4e612d427: ref!! 7382b2e7-d7a9-4c8a-bd6e-e925e3ebb078
@@ -19156,9 +19156,9 @@ Hierarchy:
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: fb96390b-b46f-4d9b-8632-f52f3360dcb8
-                        Position*: {X: 0.0, Y: 0.0, Z: 30.0}
+                        Position*: {X: 0.0, Y: 0.0, Z: 29.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale*: {X: 4.0, Y: 1.0, Z: 4.0}
+                        Scale*: {X: 4.0, Y: 1.0, Z: 6.0}
                         Children:
                             35969d616976fdc596f8fb33fa34a234: ref!! 6708f020-ffef-46ca-ac01-3b9450efe8d0
                     45bb46cc8e08e3285f9b30cf4b79af13: !StaticColliderComponent
@@ -19176,8 +19176,8 @@ Hierarchy:
                         ColliderShapes:
                             deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: 416e0e2d-17c6-4cbd-a388-ae1cd6128b72
@@ -19343,12 +19343,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 3bc424ec-0926-4a6f-92d0-d1d14896adff
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: e051e65f-768f-45c8-94e6-068c7dfe60c6
                         Position*: {X: 33.0, Y: 2.0, Z: -2.0}
-                        Rotation*: {X: -0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             485e7f9120c580e5bb72adc1995ae7d8: ref!! d862d4b6-caac-4117-b5ea-f78acc73765e
@@ -19359,7 +19359,7 @@ Hierarchy:
                     7f6e66f0d97456bb9a986066b6ffeee1: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: fcce1221-e17c-49ec-8fed-ef19569c43e7
                         enemigo: rangoLigero
-                        invisible: false
+                        invisible*: true
                         "armaMelé": null
                         armaRango: ref!! 208ae751-f9cf-45ee-b976-3bfca0170879
                         emisor: ref!! aee0323a-7c1a-4bf9-b46e-e48d64459851
@@ -19520,12 +19520,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     09db92a0e4c509fdd87f9b0ba04c75ed: !NavigationComponent
                         Id: c0bc1604-653c-460f-857d-73fb0b7d6945
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 5502b452-20f3-45a7-837f-20f93ed63b07
                         Position*: {X: 39.0, Y: 2.0, Z: -3.0}
-                        Rotation*: {X: -0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             e99fd69243b07ffb3cb8b699d64c5a6b: ref!! 704d6be9-b0e2-4be9-bd60-4d13cd346d30
@@ -19539,7 +19539,7 @@ Hierarchy:
                     dde0c8ec0d35e0e851f71b7539019f93: !Voronomir.ControladorEnemigo,Voronomir.Proyecto
                         Id: c0e800bc-788a-4cad-8f11-64faccfc1490
                         enemigo: especialPesado
-                        invisible: false
+                        invisible*: true
                         "armaMelé": null
                         armaRango: null
                         emisor: ref!! 39181419-a4dd-4555-bd95-5baa54819565
@@ -19734,12 +19734,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 066c26c2-ce72-4028-9a3a-6cbceb315394
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: bcd68cbc-9a0a-4515-8d99-f5a979bc4c50
                         Position*: {X: 8.0, Y: 4.0, Z: 8.0}
-                        Rotation*: {X: 0.0, Y: -0.9396926, Z: 0.0, W: 0.34202015}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f14eafd2887605601cb783e4e612d427: ref!! 9e55fe56-bdd8-413f-8e6e-1025664a25e7
@@ -19808,7 +19808,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.2, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 0560bd44-46c4-4cdc-8eb2-65a313c34ead
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 23a14c9c-7bfa-485f-8d8f-00743216df08
@@ -20238,7 +20238,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 3a9fbd7f-5dc6-4c3e-bf5a-56b647fcc87f
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: e9cfc6f7-45a4-4fba-b343-914938368ce8
@@ -20309,7 +20309,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: c8c9d11e-545e-47c2-91d3-c14d656dc363
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 3e5383eb-9dac-45c0-8ef2-ab8212c35daf
@@ -20719,8 +20719,8 @@ Hierarchy:
                         ColliderShapes:
                             deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: 3f1b4e97-a09f-4dbb-842e-ad6d780cc5bf
@@ -20872,7 +20872,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: 9d639e86-afef-4db4-af6c-d67f1bc6a604
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: f88e9c44-c97c-42e0-afbd-6414152706ae
@@ -21082,7 +21082,7 @@ Hierarchy:
         -   Folder: Sala 1/Grupo 1
             Entity:
                 Id: ebfe65cb-3ead-4a53-8fac-fde550499976
-                Name: Zombi (4)
+                Name*: Zombi (4)
                 Components:
                     4a35ecf39ea7d942dad4023eb6b7feaa: !CharacterComponent
                         Id: 3463a073-e8d8-4440-b7ed-21f66dfa5ed5
@@ -21107,11 +21107,11 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: e069cc0b-b5ad-4a01-9f26-3234711fe607
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: f7c234c3-3455-450e-b84f-57871a7dd59b
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: c9325e42-e56f-4219-bd2e-5bd294c40c4d
-                        Position: {X: 9.0, Y: 0.0, Z: 0.0}
+                        Position*: {X: 17.0, Y: 2.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -21397,9 +21397,9 @@ Hierarchy:
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: c193ffd9-f2d1-4586-9eb3-5a9377e3f508
-                        Position*: {X: 0.0, Y: 0.0, Z: 45.0}
+                        Position*: {X: 0.0, Y: 3.0, Z: 54.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale*: {X: 15.0, Y: 1.0, Z: 12.0}
+                        Scale*: {X: 4.0, Y: 1.5, Z: 1.0}
                         Children:
                             da2ed410bf0d8a92329c6be006407236: ref!! cbdad818-c1a7-479e-890a-e91ad162c215
                     45bb46cc8e08e3285f9b30cf4b79af13: !StaticColliderComponent
@@ -21417,8 +21417,8 @@ Hierarchy:
                         ColliderShapes:
                             deb71e92d045ce9d0d4fc44937a5f89e: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e680e31a6c74c52f698f67703af2b423: !Voronomir.ControladorActivador,Voronomir.Proyecto
                         Id: 4ba7cdfe-a5ec-4626-aca6-10864081b204
@@ -22469,12 +22469,12 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     691c8f9386df01a1270f88b33a2974d5: !NavigationComponent
                         Id: c1b725b0-aed5-466a-be19-0add8588b8a5
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: 2bdbfe22-c886-4059-a832-34043684b804
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: 06b6256e-d649-4914-ace1-924b97cd4676
                         Position*: {X: -10.0, Y: 0.0, Z: 0.0}
-                        Rotation*: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             886187fd130d4c87a9a9d76aed7b7965: ref!! e139b689-8e81-46d1-b867-724896263bd5
@@ -22907,7 +22907,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.2, Z: 0.0}
                     1e1eaefcad69fb8c26d0f54aa9295cae: !NavigationComponent
                         Id: a9df92ea-c465-4c95-86a9-af1d3417f311
-                        NavigationMesh: null
+                        NavigationMesh*: "c1d1bbb1-b129-4ec6-a43d-fe73b844b38f:Navegación/Demo"
                         GroupId: bbe121b8-2e0b-4575-ba7b-dc9c5a708547
                     5c3712b7730db1a3c2064795b79553df: !TransformComponent
                         Id: c72522e9-cdf0-47df-aa25-20958d573f93

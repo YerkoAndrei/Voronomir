@@ -241,6 +241,15 @@ public class ControladorPersecusión : StartupScript
         atacando = false;
     }
 
+    public void MirarJugadorInstantaneamente()
+    {
+        direciónJugador = ControladorJuego.ObtenerPosiciónJugador() - Entity.Transform.WorldMatrix.TranslationVector;
+        direciónJugador.Y = 0f;
+        direciónJugador.Normalize();
+
+        cuerpo.Orientation = Quaternion.LookRotation(direciónJugador, Vector3.UnitY);
+    }
+
     public void EliminarPersecutor()
     {
         if (datos.PersecutorTrigonométrico)

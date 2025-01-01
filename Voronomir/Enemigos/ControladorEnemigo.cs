@@ -95,10 +95,11 @@ public class ControladorEnemigo : SyncScript, IDañable, IActivable, ISonidoMund
 
         if (invisible)
         {
+            ControladorCofres.IniciarAparición(enemigo, posiciónInicial);
+            persecutor.MirarJugadorInstantaneamente();
             cuerpo.Teleport(posiciónInicial);
             cuerpo.Gravity = gravedadInicial;
             animador.Activar(true);
-            ControladorCofres.IniciarAparición(enemigo, posiciónInicial);
         }
 
         despierto = true;
