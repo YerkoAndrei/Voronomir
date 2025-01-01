@@ -22,6 +22,10 @@ Materials:
         Name: Piso2
         MaterialInstance:
             Material: 71e6d262-23e0-4535-a7ae-9aff8ad6b8ff:Materiales/Mapa/Piso2
+    ee9b733363d540eb45dd8fd527612a40:
+        Name: Techo
+        MaterialInstance:
+            Material: 84506824-2a94-4d6a-a66a-1eb628a1532b:Materiales/Mapa/Techo
 Modifiers: {}
 ~SourceHashes:
-    3d5bd461a270fce65aa5b79cb0fc7b91~Sala4.glb: 298f2fe73ef13ce718f2be087f3c31ec
+    3d5bd461a270fce65aa5b79cb0fc7b91~Sala4.glb: 060b6d7a4359dede5ab104b79d208771

@@ -1,0 +1,15 @@
+!Model
+Id: 19b00bc9-b0d0-442d-b078-0c9bc704aefc
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file TechoSala1.glb
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    45fe32f7bd0078965b0fe2f22b2eef7f:
+        Name: Techo
+        MaterialInstance:
+            Material: 84506824-2a94-4d6a-a66a-1eb628a1532b:Materiales/Mapa/Techo
+Modifiers: {}
+~SourceHashes:
+    f17858d8c28cbeb1a0693fd05d869b09~TechoSala1.glb: 6cf0ada6ea7940cb3e1b8d05d6c44f0b

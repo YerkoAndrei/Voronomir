@@ -7,6 +7,7 @@ Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
         - ref!! a5dd2b60-39dc-4ed5-a615-bbf44dca27e2
+        - ref!! 4c1f875e-8223-4c5e-b107-957b12040a79
         - ref!! 0b0f5f96-71fe-4da4-b55e-21d586feedbe
         - ref!! 044f30a1-0f5f-4047-ba80-5069e0368969
         - ref!! bb3dd3e5-1c63-4f00-ad07-d7a790854ee9
@@ -31,9 +32,11 @@ Hierarchy:
         - ref!! aff20ceb-9f12-464a-aae0-45f079c64811
         - ref!! 4b666f79-31c0-42bc-9b19-75f8d4384b2a
         - ref!! 57d10585-5ec1-4858-a8ca-68efd57c324d
+        - ref!! e8f0e27f-be1f-4d47-a679-96c85c613636
         - ref!! f33d2ea3-2801-4e7b-9be3-053c0fa44bc1
         - ref!! a42e39fa-4a38-4d7b-a702-e8908a86bd06
         - ref!! b6296baf-ed64-43dc-81e1-8f4f829f4ec4
+        - ref!! 13dee0a1-80cd-42ab-8f1c-4d5a39b1eb6d
         - ref!! 55becbee-bec2-4178-8703-5deb48e28089
         - ref!! 624c0cfb-85e5-408c-8eea-fffb408e0674
         - ref!! 0df52766-39fc-490b-9fce-7fdef51efd15
@@ -42,7 +45,9 @@ Hierarchy:
         - ref!! dc4c51d5-fbc2-40f3-b522-d04f4e68e8c6
         - ref!! c6e4eb8f-8280-4faa-9d6c-5fb037ba06d3
         - ref!! dc97c5bf-6f1a-4394-947d-2d30dba9ab85
+        - ref!! b6e2d3ab-adfe-4186-8e09-0f0df4b86ac2
         - ref!! 61c51d55-b785-4ab1-8c6b-fdc4616783af
+        - ref!! 26b275dd-ff74-4429-a96d-b27cf88ca521
         - ref!! 1994162a-6dd2-402b-b4a2-6eacc9ed2659
         - ref!! dee14be4-714c-4560-9b32-e21306d44690
         - ref!! 3da5210d-f2fd-4a73-aefb-c4149feb71ef
@@ -160,7 +165,7 @@ Hierarchy:
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: c58c2487-83c0-4342-958c-2d0b19f093cf
-                        Position: {X: -20.0, Y: 18.0, Z: -5.0}
+                        Position: {X: -20.0, Y: 18.0, Z: -3.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 4.0, Y: 3.0, Z: 4.0}
                         Children: {}
@@ -250,7 +255,7 @@ Hierarchy:
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: 64f5df53-cfe8-452c-bf63-d12b71584468
-                        Position: {X: -24.0, Y: 18.0, Z: -7.0}
+                        Position: {X: -24.0, Y: 18.0, Z: -5.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 4.0, Y: 2.0, Z: 4.0}
                         Children: {}
@@ -438,7 +443,7 @@ Hierarchy:
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: 4c8a9813-e7d0-45e9-bcc6-c56fb3c6b3b7
-                        Position: {X: -6.0, Y: 18.0, Z: -5.5}
+                        Position: {X: -6.0, Y: 18.0, Z: -5.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 5.5, Y: 2.0, Z: 5.5}
                         Children: {}
@@ -800,6 +805,36 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 94fd931a-0823-45a7-a8df-8da017664b5a
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: Sala 1/Mapa
+            Entity:
+                Id: 13dee0a1-80cd-42ab-8f1c-4d5a39b1eb6d
+                Name: Techo
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: 63aa25a9-914d-4cf2-8878-dfebbf68b0dc
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: 19b00bc9-b0d0-442d-b078-0c9bc704aefc:Modelos/Mundos/M1E1/Extras/TechoSala1
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: d748428b-f57c-4338-8111-515333d75a46
+                        Position: {X: 0.0, Y: 2.1338465E-06, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: c3179ed0-c191-488e-84dd-0008bdebe989
+                        Model: 19b00bc9-b0d0-442d-b078-0c9bc704aefc:Modelos/Mundos/M1E1/Extras/TechoSala1
+                        IsShadowCaster: false
+                        Materials: {}
         -   Entity:
                 Id: 1477c629-8342-448b-9839-d7d488b1ed81
                 Name: Oyente
@@ -1110,6 +1145,36 @@ Hierarchy:
                 BasePartAsset: "45ea8175-4bdb-46b4-998a-9c398b65c48d:Prefabs/Entorno/DañadorContinuo"
                 BasePartId: bfe5c0fc-b817-405b-8622-05f5377bf97c
                 InstanceId: 240793b7-9c1a-4438-84a8-dd2373921a24
+        -   Folder: Sala 3/Mapa
+            Entity:
+                Id: 26b275dd-ff74-4429-a96d-b27cf88ca521
+                Name: Techo
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: d647265f-fd2d-471f-b91e-d73db4ff88e2
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: 8eab9d58-a968-415c-90c8-30714b97e7a9:Modelos/Mundos/M1E1/Extras/TechoSala3
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: f581ebb0-6e22-4d00-b40c-b398431a7a08
+                        Position: {X: -37.0, Y: -3.0, Z: 22.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: a627f123-a2eb-4934-8b6d-f00989017594
+                        Model: 8eab9d58-a968-415c-90c8-30714b97e7a9:Modelos/Mundos/M1E1/Extras/TechoSala3
+                        IsShadowCaster: false
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 282eb5e7-016c-4b21-9bf1-5f5c6523df93
@@ -2375,6 +2440,36 @@ Hierarchy:
                 BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
                 BasePartId: 2023a0b8-cf0c-4666-8d30-dd97349f123b
                 InstanceId: a33fd6d1-a555-494d-8a74-78c1ef821c6c
+        -   Folder: Sala 4/Mapa
+            Entity:
+                Id: 4c1f875e-8223-4c5e-b107-957b12040a79
+                Name: Techo
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: 5d51cf40-aa70-4323-a892-4440d729653c
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: bea1c7ba-bfb2-481a-8860-85d530c4896e:Modelos/Mundos/M1E1/Extras/TechoSala4
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 116eb6f8-4c77-4c35-9ec5-5178bdbc73c4
+                        Position: {X: -43.0, Y: 8.0, Z: -3.0}
+                        Rotation: {X: -0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: 451b9917-29a8-4e8e-822d-4a1d479d91d6
+                        Model: bea1c7ba-bfb2-481a-8860-85d530c4896e:Modelos/Mundos/M1E1/Extras/TechoSala4
+                        IsShadowCaster: false
+                        Materials: {}
         -   Entity:
                 Id: 4d53c26a-5af4-4237-9c35-783a09693eac
                 Name: Base
@@ -3260,7 +3355,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 69141233-a39b-4e1c-b027-8369bc701037
-                        Position*: {X: 1.2, Y: 22.5, Z: -8.2}
+                        Position*: {X: 1.2, Y: 22.5, Z: -7.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5564,7 +5659,7 @@ Hierarchy:
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: eec36ab8-576c-498e-b3dd-93ab00cdb314
-                        Position: {X: -11.708326, Y: 18.0, Z: -4.5}
+                        Position: {X: -11.708326, Y: 18.0, Z: -4.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 4.0, Y: 5.0, Z: 4.0}
                         Children: {}
@@ -6115,6 +6210,36 @@ Hierarchy:
                     76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
                         Id: 0009d072-44a5-440f-bbc1-d3818bdb9001
                         Model: 2240dbb9-9c28-4b17-99ec-f7f1887d9ea8:Modelos/Mundos/M1E1/Sala1
+                        Materials: {}
+        -   Folder: Sala 2/Mapa
+            Entity:
+                Id: b6e2d3ab-adfe-4186-8e09-0f0df4b86ac2
+                Name: Techo
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: 08f470f2-e010-49f8-8c9e-211b5e6d6fb3
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: 87abe23b-a3f8-40c4-97e7-199427b141a6:Modelos/Mundos/M1E1/Extras/TechoSala2
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: 3f0458dc-1d8e-42ba-92cf-6e8e438c1b35
+                        Position: {X: 30.0, Y: 2.0, Z: 2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: 4e8e2c59-30b2-4dd1-abfa-a37a818b6521
+                        Model: 87abe23b-a3f8-40c4-97e7-199427b141a6:Modelos/Mundos/M1E1/Extras/TechoSala2
+                        IsShadowCaster: false
                         Materials: {}
         -   Folder: null
             Entity:
@@ -6861,7 +6986,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: a4d5db16-9027-4ca6-88cb-4ce3b6d359b6
-                        Position*: {X: -15.0, Y: 18.0, Z: -6.0}
+                        Position*: {X: -15.0, Y: 18.0, Z: -5.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale*: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -7152,6 +7277,36 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             b19c6f5ee7a522f6f4122a1ffc62dd28: ref!! 851ae5d3-a0fa-4bbf-8517-9c31c457fa20
+        -   Folder: Sala 0/Mapa
+            Entity:
+                Id: e8f0e27f-be1f-4d47-a679-96c85c613636
+                Name: Techo
+                Components:
+                    bf516f7b7e0a3f09939157104aee1b2d: !StaticColliderComponent
+                        Id: aa52b685-168a-496a-a798-946114a60a75
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            72ba4aa902e0009955cc4128dfa70b43: !StaticMeshColliderShapeDesc
+                                Model: b0431b02-e99b-4efd-aa04-ec0cf659b56b:Modelos/Mundos/M1E1/Extras/TechoSala0
+                    6054fa0cb7abe238b4db4808d1b39fc7: !TransformComponent
+                        Id: df0f7d6e-dc88-4c26-8845-c8dcfcad9a4e
+                        Position: {X: 0.0, Y: 2.1338465E-06, Z: 52.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    76edfb85608dcc5e31ec1dac29312e3e: !ModelComponent
+                        Id: 7640cb25-4c8c-43bf-9857-45d28916f751
+                        Model: b0431b02-e99b-4efd-aa04-ec0cf659b56b:Modelos/Mundos/M1E1/Extras/TechoSala0
+                        IsShadowCaster: false
+                        Materials: {}
         -   Folder: Sala 2/Mapa
             Entity:
                 Id: e9f98bb1-2244-4ad1-bb98-33e9ccc37274
@@ -7704,7 +7859,7 @@ Hierarchy:
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: e34c085e-e1e6-46d7-ad94-8eb2803fea19
-                        Position*: {X: -6.0, Y: 20.0, Z: -5.5}
+                        Position*: {X: -6.0, Y: 20.0, Z: -5.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
