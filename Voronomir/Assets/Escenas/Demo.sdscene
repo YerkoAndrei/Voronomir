@@ -131,6 +131,12 @@ Hierarchy:
         - ref!! c5e9fc88-53b3-48c1-9c21-0404b98257b9
         - ref!! bfe18927-103e-4ef8-98c2-b6ddc35972d5
         - ref!! e57a0c4a-d879-416a-b722-de33e2d14872
+        - ref!! def32ff6-c469-491f-ad32-47cd6845ac08
+        - ref!! ea30cbd8-842e-4fae-bd6b-e3aab6cdd807
+        - ref!! 781bbfcd-9a3b-4e6b-b177-ef31cae330df
+        - ref!! 2bb2713b-51cf-43c3-a02f-3a732700e594
+        - ref!! 90c110e0-7b3b-4262-81db-c49ef4ec33f1
+        - ref!! d0d099d9-1274-4130-a0a2-cc0e3274d374
     Parts:
         -   Folder: Sala 1
             Entity:
@@ -838,6 +844,162 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 079d47a8-0660-41d5-98d0-9fed78af029a
                 InstanceId: df490ea9-7088-4961-abc5-95852b22a7cf
+        -   Entity:
+                Id: 0c53f3a8-f637-4593-aeeb-6242f9256644
+                Name: "Partículas"
+                Components:
+                    476f325290518cd2046e04f02dc87988: !TransformComponent
+                        Id: b0e67273-8a3b-400b-b92a-9b3920a9e884
+                        Position: {X: 0.0, Y: 0.95, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 0.2}
+                        Children: {}
+                    bbf6de4eda3e187e7c32af3002049f7d: !ParticleSystemComponent
+                        Id: 31403fa2-cfca-42a9-9f4b-2f26ac11320f
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 0.39215687, G: 0.0, B: 0.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                ae4b47162b3b6e5ef84edf610c3b9a9c:
+                                    ParticleLifetime: {X: 1.0, Y: 2.0}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        29757c32a41092950edd45984ac01a1a: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 16.0
+                                    Initializers:
+                                        377f773af10332ac1d32f421c9d567a5: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.2}
+                                        4e21b7aeef83355ae6bf3142e3f5bb8b: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 0.0, Z: 1.0}
+                                            Interpolate: false
+                                        b663f69a05042540ff539d253be0dea8: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -0.5, Y: 0.5, Z: -0.5}
+                                            VelocityMax: {X: 0.5, Y: 1.0, Z: 0.5}
+                                    Updaters:
+                                        5ca2b8661b95d9ecfe5b085cf59c4f1f: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames: {}
+                                            SamplerOptional: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        d0da4575610384f87bfd9d2a6ee28630:
+                                                            Key: 0.0
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        90750d9472a6c03a34b9365413dfdcb2:
+                                                            Key: 0.8
+                                                            Value: 0.8
+                                                            TangentType: Linear
+                                                        ea777a7cfa589bfd8327f714cf22cab7:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SeedOffset: 0
+                                        d6722b5c48b55716b710ccf9c0ed8709: !UpdaterColorOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames: {}
+                                            SamplerOptional: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames:
+                                                        05d908fd9088a09b31f977b0ad9afe1d:
+                                                            Key: 0.0
+                                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                                            TangentType: Linear
+                                                        97e0bd710080e013648bb83140970632:
+                                                            Key: 0.8
+                                                            Value: {R: 0.8, G: 0.8, B: 0.8, A: 0.8}
+                                                            TangentType: Linear
+                                                        46f23b428762d005b97d3408bb17f966:
+                                                            Key: 1.0
+                                                            Value: {R: 0.0, G: 0.0, B: 0.0, A: 0.0}
+                                                            TangentType: Linear
+                                            SeedOffset: 0
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: c3fcae24-a9f6-46b7-9340-35add639d6f1
+                InstanceId: 0b2ad97b-ca34-4b86-8ae9-867e315d91f5
         -   Folder: null
             Entity:
                 Id: 0c828415-e7ac-4d9f-92b8-c16f80c98b97
@@ -1295,6 +1457,25 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 6a221535-0550-4e8b-b845-bc7cec0ebe9b
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: null
+            Entity:
+                Id: 10f4f5db-e99b-454d-b3ef-140d79b48ef9
+                Name: Modelo
+                Components:
+                    98556f64ada3672c35d60a1c548c8cd8: !TransformComponent
+                        Id: f1bbeb83-819d-4c52-ad5f-aff5f366de89
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    c65c42348d3cee5fb36248d0c7099a96: !ModelComponent
+                        Id: 6f1aad14-06ae-44b7-9ad4-52f3ae246ef3
+                        Model: c4e749bb-4884-4a6a-9ba6-558a90bd6774:Modelos/Entorno/Barril/Barril
+                        Materials: {}
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: 5eccdee2-ce1a-41cc-aac6-c215de42cbdf
+                InstanceId: f7a94228-be49-47f7-8867-b6d553244b5f
         -   Entity:
                 Id: 10f50eac-b696-4979-afc2-796ad653ea25
                 Name: "Partículas"
@@ -1641,6 +1822,163 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 894c9013-3bc7-44f0-84fe-40b8deffbd6b
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: null
+            Entity:
+                Id: 125d36e2-2440-4c95-bbac-660405f16f73
+                Name: "Partículas"
+                Components:
+                    476f325290518cd2046e04f02dc87988: !TransformComponent
+                        Id: 9cfc16a8-01e3-41a9-9cb9-407a46ee41ab
+                        Position: {X: 0.0, Y: 0.95, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 0.2}
+                        Children: {}
+                    bbf6de4eda3e187e7c32af3002049f7d: !ParticleSystemComponent
+                        Id: 13c0ea50-9cd0-4ac1-bb06-31b2bedf4223
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 0.39215687, G: 0.0, B: 0.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                ae4b47162b3b6e5ef84edf610c3b9a9c:
+                                    ParticleLifetime: {X: 1.0, Y: 2.0}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        29757c32a41092950edd45984ac01a1a: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 16.0
+                                    Initializers:
+                                        377f773af10332ac1d32f421c9d567a5: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.2}
+                                        4e21b7aeef83355ae6bf3142e3f5bb8b: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 0.0, Z: 1.0}
+                                            Interpolate: false
+                                        b663f69a05042540ff539d253be0dea8: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -0.5, Y: 0.5, Z: -0.5}
+                                            VelocityMax: {X: 0.5, Y: 1.0, Z: 0.5}
+                                    Updaters:
+                                        5ca2b8661b95d9ecfe5b085cf59c4f1f: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames: {}
+                                            SamplerOptional: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        d0da4575610384f87bfd9d2a6ee28630:
+                                                            Key: 0.0
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        90750d9472a6c03a34b9365413dfdcb2:
+                                                            Key: 0.8
+                                                            Value: 0.8
+                                                            TangentType: Linear
+                                                        ea777a7cfa589bfd8327f714cf22cab7:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SeedOffset: 0
+                                        d6722b5c48b55716b710ccf9c0ed8709: !UpdaterColorOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames: {}
+                                            SamplerOptional: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames:
+                                                        05d908fd9088a09b31f977b0ad9afe1d:
+                                                            Key: 0.0
+                                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                                            TangentType: Linear
+                                                        97e0bd710080e013648bb83140970632:
+                                                            Key: 0.8
+                                                            Value: {R: 0.8, G: 0.8, B: 0.8, A: 0.8}
+                                                            TangentType: Linear
+                                                        46f23b428762d005b97d3408bb17f966:
+                                                            Key: 1.0
+                                                            Value: {R: 0.0, G: 0.0, B: 0.0, A: 0.0}
+                                                            TangentType: Linear
+                                            SeedOffset: 0
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: c3fcae24-a9f6-46b7-9340-35add639d6f1
+                InstanceId: f7a94228-be49-47f7-8867-b6d553244b5f
         -   Folder: null
             Entity:
                 Id: 12c9f803-582a-4977-b83f-88bdc62e1cf3
@@ -2042,6 +2380,48 @@ Hierarchy:
                 BasePartAsset: f89baa3b-42d2-4588-b0af-916f14d07e34:Prefabs/Enemigos/Cerebro
                 BasePartId: ad748dd7-2c60-492d-a797-f86fa8178d02
                 InstanceId: f63f2527-6b91-4f89-8684-4e70811a8e9d
+        -   Entity:
+                Id: 16b6d0ed-c9f2-4b10-b45f-f63d708ac4ce
+                Name: "Dañable"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 2cd20f90-55f5-48c9-b1cd-ee8347c544f8
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.7, Y: 1.0, Z: 0.7}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 9b655422-77e6-4fbe-a53e-ce49183c0394
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    721ca503963ff4f73832348472556aea: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: 4d17c28d-464e-4918-bc64-ab9b5f4c13a9
+                        Priority: 1
+                        multiplicador: 1.0
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: 58463450-a377-4fd8-9a4f-546d377fa9e3
+                InstanceId: 814986c9-33f8-4e42-98c9-26fd5e7e0194
         -   Folder: null
             Entity:
                 Id: 172c12cf-d572-4a2f-97af-183106eaa696
@@ -2797,6 +3177,49 @@ Hierarchy:
                 BasePartAsset: 85ecd4c8-8f43-47d4-b453-eaf1bc88c847:Prefabs/Enemigos/Dron
                 BasePartId: 2e94d3f0-7c64-4ad6-a82c-e93b0cf6854e
                 InstanceId: d1cfe115-0b56-4766-be1c-951d5fe81fd4
+        -   Folder: null
+            Entity:
+                Id: 20cc4a2f-23a9-4929-a38e-0a6bcb80bc7a
+                Name: "Dañable"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 72c7759f-b8e9-4223-8b76-4427404a29dc
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.7, Y: 1.0, Z: 0.7}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 813d18b3-58da-4a73-86b7-4e11c750f896
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    721ca503963ff4f73832348472556aea: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: aca1fd11-f62e-441e-903c-30b87e0219a6
+                        Priority: 1
+                        multiplicador: 1.0
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: 58463450-a377-4fd8-9a4f-546d377fa9e3
+                InstanceId: f7a94228-be49-47f7-8867-b6d553244b5f
         -   Entity:
                 Id: 221e9482-42f4-4aaa-bcd2-e9013d0f34ed
                 Name: Emisor
@@ -3569,6 +3992,48 @@ Hierarchy:
                 BasePartAsset: 2566113e-21c9-42ef-94ea-b6ba54bf4188:Prefabs/Entorno/Activador
                 BasePartId: 2826dafd-3bb4-4276-8c3a-8807cabe8e1c
                 InstanceId: 14176503-d79f-4d8a-8e59-b5a551e3f2f6
+        -   Folder: Sala 1
+            Entity:
+                Id: 2bb2713b-51cf-43c3-a02f-3a732700e594
+                Name*: BarrilExplosivo 3
+                Components:
+                    44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
+                        Id: fac5c1c6-1195-462f-b8f8-64b0c5123f8e
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: KinematicFilter, DebrisFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            82a3e6b3a311f928882d9c75faeaa237: !CapsuleColliderShapeDesc
+                                Length: 0.3
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 0.55, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    75cd02e194ec093c238a550c32b180af: !TransformComponent
+                        Id: bf80ee1f-7257-4aca-8520-4def8f59ea22
+                        Position*: {X: 8.0, Y: 0.0, Z: -6.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            93f0fe77b71ab8f31e4249c49190d2ed: ref!! b340bf0b-2c41-4886-89dd-1f3396c63d29
+                            265bb466ce7005948bc5b436885cc1b1: ref!! 646a5a9a-2bce-4c97-8141-6f3142cdb6b5
+                            c876eb5c0a7482a8c45d09d405d50630: ref!! e40fcab0-2af8-49a2-b02e-74533f48135a
+                    ef06bc99ca096ccc9c405f3b5f3676b7: !Voronomir.ControladorBarril,Voronomir.Proyecto
+                        Id: 0672077c-ae2e-4ae5-84cc-42d4543d4b57
+                        modelo: ref!! fa7daa85-7717-4c38-bdea-3b45e7780a05
+                        "partículas": ref!! 63fee4bc-6b71-4a22-937f-a5283bbc6c5a
+                        "dañables":
+                            c1b66228a57d90e7d9d8cbb91d355bf1: ref!! 40efa8fb-0cb6-4d94-827a-6d8cd3520a58
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: e8a114c4-1de9-4991-b0c5-c0a3a78869ba
+                InstanceId: 5062cb63-d6be-4b6e-a5fd-048cfb4ab95f
         -   Folder: null
             Entity:
                 Id: 2bbd8e41-433c-41f9-bf87-90099c8f1a48
@@ -3587,6 +4052,48 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: a915ed66-ff6c-4a76-92c5-9e635b07766e
                 InstanceId: a0adadee-e6b2-4dc1-bb2c-b66e69b084cd
+        -   Entity:
+                Id: 2beea30a-5973-4533-b755-7567357a7288
+                Name: "Dañable"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: b340bf0b-2c41-4886-89dd-1f3396c63d29
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.7, Y: 1.0, Z: 0.7}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 58d856ee-d97c-43a3-8237-44b13caee5e4
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    721ca503963ff4f73832348472556aea: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: 40efa8fb-0cb6-4d94-827a-6d8cd3520a58
+                        Priority: 1
+                        multiplicador: 1.0
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: 58463450-a377-4fd8-9a4f-546d377fa9e3
+                InstanceId: 5062cb63-d6be-4b6e-a5fd-048cfb4ab95f
         -   Entity:
                 Id: 2c35d380-9d5c-4605-b06d-ae49dac09d3f
                 Name: Modelo
@@ -3853,6 +4360,49 @@ Hierarchy:
                 BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
                 BasePartId: 0a7759be-ed18-4c1d-8398-a75695dc3d8a
                 InstanceId: 5f4f3705-da07-49c2-925d-45ee6701575c
+        -   Folder: null
+            Entity:
+                Id: 2f7ac3f6-49ce-43e9-9489-a751ba9c01be
+                Name: "Dañable"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: a6207461-4f71-4702-870f-14ee68a69888
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.7, Y: 1.0, Z: 0.7}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: ff7a78c2-aa5e-4c2f-9695-38d53c985521
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    721ca503963ff4f73832348472556aea: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: 763baf1e-1e2f-4819-bba2-99f5c0998a7a
+                        Priority: 1
+                        multiplicador: 1.0
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: 58463450-a377-4fd8-9a4f-546d377fa9e3
+                InstanceId: c41f8176-d639-43da-84f8-4ee68d9db859
         -   Folder: null
             Entity:
                 Id: 3034254d-ce8a-4b32-9c7b-303dd138effa
@@ -10889,6 +11439,48 @@ Hierarchy:
                 InstanceId: 5f3646d4-10ea-4719-96a1-a918894e3fe1
         -   Folder: Sala 1
             Entity:
+                Id: 781bbfcd-9a3b-4e6b-b177-ef31cae330df
+                Name*: BarrilExplosivo 2
+                Components:
+                    44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
+                        Id: b2114612-ec71-4c7a-b5f7-37072942e0fa
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: KinematicFilter, DebrisFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            82a3e6b3a311f928882d9c75faeaa237: !CapsuleColliderShapeDesc
+                                Length: 0.3
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 0.55, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    75cd02e194ec093c238a550c32b180af: !TransformComponent
+                        Id: 20d83b2d-8352-475d-9ef9-6ff234947dad
+                        Position*: {X: -6.0, Y: 0.0, Z: -8.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            93f0fe77b71ab8f31e4249c49190d2ed: ref!! 2cd20f90-55f5-48c9-b1cd-ee8347c544f8
+                            265bb466ce7005948bc5b436885cc1b1: ref!! 6f5973fe-de07-4d63-b6e1-33d318accab5
+                            c876eb5c0a7482a8c45d09d405d50630: ref!! 8ba279f5-741b-49a9-aaa0-73d3921eff81
+                    ef06bc99ca096ccc9c405f3b5f3676b7: !Voronomir.ControladorBarril,Voronomir.Proyecto
+                        Id: 571bb911-3695-4770-93d1-5add33ab97e7
+                        modelo: ref!! bc120533-3460-473c-9b03-65fb764df0df
+                        "partículas": ref!! 90761d33-2200-493e-9425-3accdb51747e
+                        "dañables":
+                            c1b66228a57d90e7d9d8cbb91d355bf1: ref!! 4d17c28d-464e-4918-bc64-ab9b5f4c13a9
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: e8a114c4-1de9-4991-b0c5-c0a3a78869ba
+                InstanceId: 814986c9-33f8-4e42-98c9-26fd5e7e0194
+        -   Folder: Sala 1
+            Entity:
                 Id: 78984a51-66d0-4458-92bc-a2dae0da652d
                 Name*: Activador 1
                 Components:
@@ -11650,6 +12242,24 @@ Hierarchy:
                             Color: !ColorRgbProvider
                                 Value: {R: 0.78431374, G: 0.78431374, B: 0.78431374}
                         Intensity: 2.0
+        -   Entity:
+                Id: 80f90b4a-f912-47f9-8fa6-fe0bfd2e6935
+                Name: Modelo
+                Components:
+                    98556f64ada3672c35d60a1c548c8cd8: !TransformComponent
+                        Id: 6f5973fe-de07-4d63-b6e1-33d318accab5
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    c65c42348d3cee5fb36248d0c7099a96: !ModelComponent
+                        Id: bc120533-3460-473c-9b03-65fb764df0df
+                        Model: c4e749bb-4884-4a6a-9ba6-558a90bd6774:Modelos/Entorno/Barril/Barril
+                        Materials: {}
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: 5eccdee2-ce1a-41cc-aac6-c215de42cbdf
+                InstanceId: 814986c9-33f8-4e42-98c9-26fd5e7e0194
         -   Entity:
                 Id: 810a784e-b724-4e95-9085-b9c16caa08bb
                 Name: Emisor
@@ -12701,6 +13311,25 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: 4a85f05e-ee90-42e6-bb21-70bfe3b94b7f
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: null
+            Entity:
+                Id: 8ddf25c3-aa87-4f8d-b80c-094a7b0ff1fb
+                Name: Modelo
+                Components:
+                    98556f64ada3672c35d60a1c548c8cd8: !TransformComponent
+                        Id: b024565a-27ca-41f8-a6d9-02f67132d5d1
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    c65c42348d3cee5fb36248d0c7099a96: !ModelComponent
+                        Id: a0b00f8b-21a9-4a79-9b41-a78f3bb79279
+                        Model: c4e749bb-4884-4a6a-9ba6-558a90bd6774:Modelos/Entorno/Barril/Barril
+                        Materials: {}
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: 5eccdee2-ce1a-41cc-aac6-c215de42cbdf
+                InstanceId: c41f8176-d639-43da-84f8-4ee68d9db859
         -   Folder: Sala 1/Grupo 3
             Entity:
                 Id: 8e7bb2b7-90fb-4955-ab68-1c08e2d9e60b
@@ -12774,6 +13403,48 @@ Hierarchy:
                 BasePartAsset: f1595cc7-238a-48d9-9554-45fdbeb6f57b:Prefabs/Enemigos/Carnicero
                 BasePartId: 7775d43f-4a74-4716-9411-e498e7159645
                 InstanceId: dcbd56d9-6490-48d3-b392-16f96d0f792c
+        -   Entity:
+                Id: 8eb50999-ba67-4cfd-a662-9a3ab8bb4560
+                Name: "Dañable"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: 37fbc28f-82a4-411a-ae7f-138e48b6ae29
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.7, Y: 1.0, Z: 0.7}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 5f81e709-36e5-406a-85bf-ed51e0f834aa
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    721ca503963ff4f73832348472556aea: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: 43d66de9-23ff-4a82-99ec-25631ce3f053
+                        Priority: 1
+                        multiplicador: 1.0
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: 58463450-a377-4fd8-9a4f-546d377fa9e3
+                InstanceId: 185a1a06-4d1b-4844-b2af-ef598955e8a4
         -   Folder: null
             Entity:
                 Id: 8eca1ba2-9d8c-4a76-9533-0f89c2d5a740
@@ -12932,6 +13603,48 @@ Hierarchy:
                 BasePartAsset: 633c96f0-28d2-4321-85bd-6914353a72e0:Prefabs/Jugador
                 BasePartId: b5498599-9678-4cbd-a50a-c345377df315
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
+        -   Folder: Sala 2
+            Entity:
+                Id: 90c110e0-7b3b-4262-81db-c49ef4ec33f1
+                Name: BarrilExplosivo 0
+                Components:
+                    44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
+                        Id: 65e35732-02c8-4d2c-94bf-b59f7d5847d9
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: KinematicFilter, DebrisFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            82a3e6b3a311f928882d9c75faeaa237: !CapsuleColliderShapeDesc
+                                Length: 0.3
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 0.55, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    75cd02e194ec093c238a550c32b180af: !TransformComponent
+                        Id: 4172050c-a158-4a31-bd0a-cba7113acecd
+                        Position*: {X: 32.5, Y: 2.0, Z: 5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            93f0fe77b71ab8f31e4249c49190d2ed: ref!! a6207461-4f71-4702-870f-14ee68a69888
+                            265bb466ce7005948bc5b436885cc1b1: ref!! b024565a-27ca-41f8-a6d9-02f67132d5d1
+                            c876eb5c0a7482a8c45d09d405d50630: ref!! fea7c6a0-0751-452a-a9ac-a6c08521e6e2
+                    ef06bc99ca096ccc9c405f3b5f3676b7: !Voronomir.ControladorBarril,Voronomir.Proyecto
+                        Id: fe9c9b17-44cf-49b9-876d-7809b338b533
+                        modelo: ref!! a0b00f8b-21a9-4a79-9b41-a78f3bb79279
+                        "partículas": ref!! a200d1f5-473f-46bc-812c-310cef62a32b
+                        "dañables":
+                            c1b66228a57d90e7d9d8cbb91d355bf1: ref!! 763baf1e-1e2f-4819-bba2-99f5c0998a7a
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: e8a114c4-1de9-4991-b0c5-c0a3a78869ba
+                InstanceId: c41f8176-d639-43da-84f8-4ee68d9db859
         -   Entity:
                 Id: 912a8a40-08dd-42dc-be12-5def00124c60
                 Name: Emisor
@@ -14320,6 +15033,162 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
                 InstanceId: 9920bcfa-c981-4dbb-ac89-7ab3c946e8f2
+        -   Entity:
+                Id: a10d25b1-ca0d-4d9d-918f-20b5518742b4
+                Name: "Partículas"
+                Components:
+                    476f325290518cd2046e04f02dc87988: !TransformComponent
+                        Id: 8ba279f5-741b-49a9-aaa0-73d3921eff81
+                        Position: {X: 0.0, Y: 0.95, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 0.2}
+                        Children: {}
+                    bbf6de4eda3e187e7c32af3002049f7d: !ParticleSystemComponent
+                        Id: 90761d33-2200-493e-9425-3accdb51747e
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 0.39215687, G: 0.0, B: 0.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                ae4b47162b3b6e5ef84edf610c3b9a9c:
+                                    ParticleLifetime: {X: 1.0, Y: 2.0}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        29757c32a41092950edd45984ac01a1a: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 16.0
+                                    Initializers:
+                                        377f773af10332ac1d32f421c9d567a5: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.2}
+                                        4e21b7aeef83355ae6bf3142e3f5bb8b: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 0.0, Z: 1.0}
+                                            Interpolate: false
+                                        b663f69a05042540ff539d253be0dea8: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -0.5, Y: 0.5, Z: -0.5}
+                                            VelocityMax: {X: 0.5, Y: 1.0, Z: 0.5}
+                                    Updaters:
+                                        5ca2b8661b95d9ecfe5b085cf59c4f1f: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames: {}
+                                            SamplerOptional: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        d0da4575610384f87bfd9d2a6ee28630:
+                                                            Key: 0.0
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        90750d9472a6c03a34b9365413dfdcb2:
+                                                            Key: 0.8
+                                                            Value: 0.8
+                                                            TangentType: Linear
+                                                        ea777a7cfa589bfd8327f714cf22cab7:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SeedOffset: 0
+                                        d6722b5c48b55716b710ccf9c0ed8709: !UpdaterColorOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames: {}
+                                            SamplerOptional: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames:
+                                                        05d908fd9088a09b31f977b0ad9afe1d:
+                                                            Key: 0.0
+                                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                                            TangentType: Linear
+                                                        97e0bd710080e013648bb83140970632:
+                                                            Key: 0.8
+                                                            Value: {R: 0.8, G: 0.8, B: 0.8, A: 0.8}
+                                                            TangentType: Linear
+                                                        46f23b428762d005b97d3408bb17f966:
+                                                            Key: 1.0
+                                                            Value: {R: 0.0, G: 0.0, B: 0.0, A: 0.0}
+                                                            TangentType: Linear
+                                            SeedOffset: 0
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: c3fcae24-a9f6-46b7-9340-35add639d6f1
+                InstanceId: 814986c9-33f8-4e42-98c9-26fd5e7e0194
         -   Folder: null
             Entity:
                 Id: a1f4ba3e-5a29-4ac1-a9b0-ae0f16e2d028
@@ -15651,6 +16520,48 @@ Hierarchy:
                 BasePartAsset: f104c990-42cd-4a37-ac04-9c9181fbe8ed:Prefabs/Entorno/Llave (Azul)
                 BasePartId: 60a17964-ae87-420b-b6c7-baa54dd9ac8a
                 InstanceId: efad1b6c-6504-4b0c-9ee8-32b5d554e64d
+        -   Entity:
+                Id: b090a602-6e74-4ce6-a87c-e6c85752f05c
+                Name: "Dañable"
+                Components:
+                    1fb0443bb0be733b2ea61c59608bf901: !TransformComponent
+                        Id: c32c7f75-ab75-4acf-bfeb-26e33d5ca2dc
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.7, Y: 1.0, Z: 0.7}
+                        Children: {}
+                    da64571f4442e2fc19be9fc0864e570e: !RigidbodyComponent
+                        Id: 1468c56f-65c9-4c48-a783-e592a4e5b2ad
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: DefaultFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fbe76a3afc7b249bfeb4a9f90dc2ad2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    721ca503963ff4f73832348472556aea: !Voronomir.ElementoDa%25C3%25B1able,Voronomir.Proyecto
+                        Id: d668e223-7078-475e-84ed-fd87d3544266
+                        Priority: 1
+                        multiplicador: 1.0
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: 58463450-a377-4fd8-9a4f-546d377fa9e3
+                InstanceId: 0b2ad97b-ca34-4b86-8ae9-867e315d91f5
         -   Folder: null
             Entity:
                 Id: b092ef37-df9e-4ac3-8317-1771ec74dfc8
@@ -16407,6 +17318,162 @@ Hierarchy:
                 BasePartId: f359be66-b309-4bfa-834a-76e6d4d5f4c5
                 InstanceId: 6240daad-794e-4cc5-a38b-47bb90d5b79e
         -   Entity:
+                Id: b79eb682-480a-4c6d-a3ea-fb76c27e23f5
+                Name: "Partículas"
+                Components:
+                    476f325290518cd2046e04f02dc87988: !TransformComponent
+                        Id: 2ea2f8e6-4ffd-4cde-9425-68a4d3d31352
+                        Position: {X: 0.0, Y: 0.95, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 0.2}
+                        Children: {}
+                    bbf6de4eda3e187e7c32af3002049f7d: !ParticleSystemComponent
+                        Id: 2d8468a9-4f8c-42c4-8293-b41058391366
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 0.39215687, G: 0.0, B: 0.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                ae4b47162b3b6e5ef84edf610c3b9a9c:
+                                    ParticleLifetime: {X: 1.0, Y: 2.0}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        29757c32a41092950edd45984ac01a1a: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 16.0
+                                    Initializers:
+                                        377f773af10332ac1d32f421c9d567a5: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.2}
+                                        4e21b7aeef83355ae6bf3142e3f5bb8b: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 0.0, Z: 1.0}
+                                            Interpolate: false
+                                        b663f69a05042540ff539d253be0dea8: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -0.5, Y: 0.5, Z: -0.5}
+                                            VelocityMax: {X: 0.5, Y: 1.0, Z: 0.5}
+                                    Updaters:
+                                        5ca2b8661b95d9ecfe5b085cf59c4f1f: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames: {}
+                                            SamplerOptional: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        d0da4575610384f87bfd9d2a6ee28630:
+                                                            Key: 0.0
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        90750d9472a6c03a34b9365413dfdcb2:
+                                                            Key: 0.8
+                                                            Value: 0.8
+                                                            TangentType: Linear
+                                                        ea777a7cfa589bfd8327f714cf22cab7:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SeedOffset: 0
+                                        d6722b5c48b55716b710ccf9c0ed8709: !UpdaterColorOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames: {}
+                                            SamplerOptional: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames:
+                                                        05d908fd9088a09b31f977b0ad9afe1d:
+                                                            Key: 0.0
+                                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                                            TangentType: Linear
+                                                        97e0bd710080e013648bb83140970632:
+                                                            Key: 0.8
+                                                            Value: {R: 0.8, G: 0.8, B: 0.8, A: 0.8}
+                                                            TangentType: Linear
+                                                        46f23b428762d005b97d3408bb17f966:
+                                                            Key: 1.0
+                                                            Value: {R: 0.0, G: 0.0, B: 0.0, A: 0.0}
+                                                            TangentType: Linear
+                                            SeedOffset: 0
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: c3fcae24-a9f6-46b7-9340-35add639d6f1
+                InstanceId: 185a1a06-4d1b-4844-b2af-ef598955e8a4
+        -   Entity:
                 Id: b802ce56-0f32-45db-9968-5554e8f93666
                 Name: "Dañable cabeza"
                 Components:
@@ -16723,6 +17790,42 @@ Hierarchy:
                 BasePartAsset: 2cccb0da-7f3b-474a-9dcb-86bb06c58ab2:Prefabs/Enemigos/Pulga
                 BasePartId: 1789377b-d2e5-4118-b9a6-9db732a5293d
                 InstanceId: 1a0af3bf-16a4-4af7-87ab-9cad22e81655
+        -   Entity:
+                Id: bb8a5971-7a8d-48fd-88c7-d7559e1f2b5f
+                Name: Modelo
+                Components:
+                    98556f64ada3672c35d60a1c548c8cd8: !TransformComponent
+                        Id: 61b8693f-0f84-4575-9bf9-c3c7c3f17e01
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    c65c42348d3cee5fb36248d0c7099a96: !ModelComponent
+                        Id: 825c4d39-55bb-4db6-bb78-70d510d87dc6
+                        Model: c4e749bb-4884-4a6a-9ba6-558a90bd6774:Modelos/Entorno/Barril/Barril
+                        Materials: {}
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: 5eccdee2-ce1a-41cc-aac6-c215de42cbdf
+                InstanceId: 185a1a06-4d1b-4844-b2af-ef598955e8a4
+        -   Entity:
+                Id: bba8b06a-ca78-4e93-a916-03384214341e
+                Name: Modelo
+                Components:
+                    98556f64ada3672c35d60a1c548c8cd8: !TransformComponent
+                        Id: 646a5a9a-2bce-4c97-8141-6f3142cdb6b5
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    c65c42348d3cee5fb36248d0c7099a96: !ModelComponent
+                        Id: fa7daa85-7717-4c38-bdea-3b45e7780a05
+                        Model: c4e749bb-4884-4a6a-9ba6-558a90bd6774:Modelos/Entorno/Barril/Barril
+                        Materials: {}
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: 5eccdee2-ce1a-41cc-aac6-c215de42cbdf
+                InstanceId: 5062cb63-d6be-4b6e-a5fd-048cfb4ab95f
         -   Folder: null
             Entity:
                 Id: bcef8831-f4b9-44c3-a121-830bb0b45b36
@@ -17962,6 +19065,163 @@ Hierarchy:
                 BasePartAsset: 348ffd0b-1a96-4bdb-bd14-ebd446626828:Prefabs/Enemigos/Lancero
                 BasePartId: d770ab0b-cf84-4c1c-b35b-6c63b81f004c
                 InstanceId: 18deeeba-563d-4a36-8f85-0839a0657d74
+        -   Folder: null
+            Entity:
+                Id: cab46c42-d48f-41ce-b985-6d1519ec62f9
+                Name: "Partículas"
+                Components:
+                    476f325290518cd2046e04f02dc87988: !TransformComponent
+                        Id: fea7c6a0-0751-452a-a9ac-a6c08521e6e2
+                        Position: {X: 0.0, Y: 0.95, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 0.2}
+                        Children: {}
+                    bbf6de4eda3e187e7c32af3002049f7d: !ParticleSystemComponent
+                        Id: a200d1f5-473f-46bc-812c-310cef62a32b
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 0.39215687, G: 0.0, B: 0.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                ae4b47162b3b6e5ef84edf610c3b9a9c:
+                                    ParticleLifetime: {X: 1.0, Y: 2.0}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        29757c32a41092950edd45984ac01a1a: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 16.0
+                                    Initializers:
+                                        377f773af10332ac1d32f421c9d567a5: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.2}
+                                        4e21b7aeef83355ae6bf3142e3f5bb8b: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 0.0, Z: 1.0}
+                                            Interpolate: false
+                                        b663f69a05042540ff539d253be0dea8: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -0.5, Y: 0.5, Z: -0.5}
+                                            VelocityMax: {X: 0.5, Y: 1.0, Z: 0.5}
+                                    Updaters:
+                                        5ca2b8661b95d9ecfe5b085cf59c4f1f: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames: {}
+                                            SamplerOptional: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        d0da4575610384f87bfd9d2a6ee28630:
+                                                            Key: 0.0
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        90750d9472a6c03a34b9365413dfdcb2:
+                                                            Key: 0.8
+                                                            Value: 0.8
+                                                            TangentType: Linear
+                                                        ea777a7cfa589bfd8327f714cf22cab7:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SeedOffset: 0
+                                        d6722b5c48b55716b710ccf9c0ed8709: !UpdaterColorOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames: {}
+                                            SamplerOptional: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames:
+                                                        05d908fd9088a09b31f977b0ad9afe1d:
+                                                            Key: 0.0
+                                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                                            TangentType: Linear
+                                                        97e0bd710080e013648bb83140970632:
+                                                            Key: 0.8
+                                                            Value: {R: 0.8, G: 0.8, B: 0.8, A: 0.8}
+                                                            TangentType: Linear
+                                                        46f23b428762d005b97d3408bb17f966:
+                                                            Key: 1.0
+                                                            Value: {R: 0.0, G: 0.0, B: 0.0, A: 0.0}
+                                                            TangentType: Linear
+                                            SeedOffset: 0
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: c3fcae24-a9f6-46b7-9340-35add639d6f1
+                InstanceId: c41f8176-d639-43da-84f8-4ee68d9db859
         -   Entity:
                 Id: caefd7ff-3dd0-41fd-abed-9bbbb27972d0
                 Name: "Dañable torso"
@@ -18389,6 +19649,48 @@ Hierarchy:
                 BasePartAsset: e8ff3d35-f6b5-4e6b-8c5d-8fba8c117327:Prefabs/Enemigos/Babosa
                 BasePartId: a0b04e52-6591-4bee-ac88-264aa2dc1814
                 InstanceId: 133ac092-ed4b-4750-aa83-f0da80473e85
+        -   Folder: Sala 2
+            Entity:
+                Id: d0d099d9-1274-4130-a0a2-cc0e3274d374
+                Name*: BarrilExplosivo 1
+                Components:
+                    44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
+                        Id: d7a3203f-1f52-42b2-9f25-c70c0621e461
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: KinematicFilter, DebrisFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            82a3e6b3a311f928882d9c75faeaa237: !CapsuleColliderShapeDesc
+                                Length: 0.3
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 0.55, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    75cd02e194ec093c238a550c32b180af: !TransformComponent
+                        Id: 93ba3ce1-ae3e-4d0a-a2ba-1c40e8e0eabc
+                        Position*: {X: 37.0, Y: 2.0, Z: 7.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            93f0fe77b71ab8f31e4249c49190d2ed: ref!! 72c7759f-b8e9-4223-8b76-4427404a29dc
+                            265bb466ce7005948bc5b436885cc1b1: ref!! f1bbeb83-819d-4c52-ad5f-aff5f366de89
+                            c876eb5c0a7482a8c45d09d405d50630: ref!! 9cfc16a8-01e3-41a9-9cb9-407a46ee41ab
+                    ef06bc99ca096ccc9c405f3b5f3676b7: !Voronomir.ControladorBarril,Voronomir.Proyecto
+                        Id: b45e3c7a-2d66-44d2-aee6-4cdb621a00a4
+                        modelo: ref!! 6f1aad14-06ae-44b7-9ad4-52f3ae246ef3
+                        "partículas": ref!! 13c0ea50-9cd0-4ac1-bb06-31b2bedf4223
+                        "dañables":
+                            c1b66228a57d90e7d9d8cbb91d355bf1: ref!! aca1fd11-f62e-441e-903c-30b87e0219a6
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: e8a114c4-1de9-4991-b0c5-c0a3a78869ba
+                InstanceId: f7a94228-be49-47f7-8867-b6d553244b5f
         -   Entity:
                 Id: d1447ffa-ff44-46f9-bd98-ba0ee1dbaf59
                 Name: Emisor
@@ -19108,6 +20410,24 @@ Hierarchy:
                 BasePartAsset: 3a7f29a6-f9db-4382-a2f1-61a64c23d506:Prefabs/Enemigos/Zombi
                 BasePartId: 7a8e594f-2dc9-4757-9c8b-6ba499a42422
                 InstanceId: 52c47e12-6118-475d-b1e8-00aabeca00a6
+        -   Entity:
+                Id: db181225-c287-4130-b7c8-edb16c00c9bb
+                Name: Modelo
+                Components:
+                    98556f64ada3672c35d60a1c548c8cd8: !TransformComponent
+                        Id: 68470537-94fd-49fc-8c16-317a5df660b1
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    c65c42348d3cee5fb36248d0c7099a96: !ModelComponent
+                        Id: 57a62c47-1a68-4edd-8f83-3b397326485a
+                        Model: c4e749bb-4884-4a6a-9ba6-558a90bd6774:Modelos/Entorno/Barril/Barril
+                        Materials: {}
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: 5eccdee2-ce1a-41cc-aac6-c215de42cbdf
+                InstanceId: 0b2ad97b-ca34-4b86-8ae9-867e315d91f5
         -   Folder: null
             Entity:
                 Id: dbd8f8d7-19d3-498a-901b-60adf8a51b35
@@ -19439,6 +20759,204 @@ Hierarchy:
                         Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                         Materials:
                             16c017c68fe72af80142d6aad5cb6a57~1: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/Llaves/LlaveAzul
+        -   Folder: Sala 1
+            Entity:
+                Id: def32ff6-c469-491f-ad32-47cd6845ac08
+                Name*: BarrilExplosivo 0
+                Components:
+                    44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
+                        Id: 96d3ac37-4c76-492c-b426-d4fc6a77fbd2
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: KinematicFilter, DebrisFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            82a3e6b3a311f928882d9c75faeaa237: !CapsuleColliderShapeDesc
+                                Length: 0.3
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 0.55, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    75cd02e194ec093c238a550c32b180af: !TransformComponent
+                        Id: 7f2a7113-e94c-418c-bfc4-ba292f7fde4a
+                        Position*: {X: 3.0, Y: 0.0, Z: 3.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            93f0fe77b71ab8f31e4249c49190d2ed: ref!! 37fbc28f-82a4-411a-ae7f-138e48b6ae29
+                            265bb466ce7005948bc5b436885cc1b1: ref!! 61b8693f-0f84-4575-9bf9-c3c7c3f17e01
+                            c876eb5c0a7482a8c45d09d405d50630: ref!! 2ea2f8e6-4ffd-4cde-9425-68a4d3d31352
+                    ef06bc99ca096ccc9c405f3b5f3676b7: !Voronomir.ControladorBarril,Voronomir.Proyecto
+                        Id: 705caeaf-b4c0-4c2b-a852-9f0c65a14516
+                        modelo: ref!! 825c4d39-55bb-4db6-bb78-70d510d87dc6
+                        "partículas": ref!! 2d8468a9-4f8c-42c4-8293-b41058391366
+                        "dañables":
+                            c1b66228a57d90e7d9d8cbb91d355bf1: ref!! 43d66de9-23ff-4a82-99ec-25631ce3f053
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: e8a114c4-1de9-4991-b0c5-c0a3a78869ba
+                InstanceId: 185a1a06-4d1b-4844-b2af-ef598955e8a4
+        -   Entity:
+                Id: dff33d3d-6847-4434-ba9e-8d17b16d4866
+                Name: "Partículas"
+                Components:
+                    476f325290518cd2046e04f02dc87988: !TransformComponent
+                        Id: e40fcab0-2af8-49a2-b02e-74533f48135a
+                        Position: {X: 0.0, Y: 0.95, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.2, Y: 0.2, Z: 0.2}
+                        Children: {}
+                    bbf6de4eda3e187e7c32af3002049f7d: !ParticleSystemComponent
+                        Id: 63fee4bc-6b71-4a22-937f-a5283bbc6c5a
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 0.39215687, G: 0.0, B: 0.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                ae4b47162b3b6e5ef84edf610c3b9a9c:
+                                    ParticleLifetime: {X: 1.0, Y: 2.0}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "1048d0ab-68c1-4f5d-8aa7-56f095a2dfe3:Texturas/Efectos/Octágono"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        29757c32a41092950edd45984ac01a1a: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 16.0
+                                    Initializers:
+                                        377f773af10332ac1d32f421c9d567a5: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.1, Y: 0.2}
+                                        4e21b7aeef83355ae6bf3142e3f5bb8b: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 0.0, Z: 1.0}
+                                            Interpolate: false
+                                        b663f69a05042540ff539d253be0dea8: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -0.5, Y: 0.5, Z: -0.5}
+                                            VelocityMax: {X: 0.5, Y: 1.0, Z: 0.5}
+                                    Updaters:
+                                        5ca2b8661b95d9ecfe5b085cf59c4f1f: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames: {}
+                                            SamplerOptional: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        d0da4575610384f87bfd9d2a6ee28630:
+                                                            Key: 0.0
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        90750d9472a6c03a34b9365413dfdcb2:
+                                                            Key: 0.8
+                                                            Value: 0.8
+                                                            TangentType: Linear
+                                                        ea777a7cfa589bfd8327f714cf22cab7:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SeedOffset: 0
+                                        d6722b5c48b55716b710ccf9c0ed8709: !UpdaterColorOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames: {}
+                                            SamplerOptional: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames:
+                                                        05d908fd9088a09b31f977b0ad9afe1d:
+                                                            Key: 0.0
+                                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                                            TangentType: Linear
+                                                        97e0bd710080e013648bb83140970632:
+                                                            Key: 0.8
+                                                            Value: {R: 0.8, G: 0.8, B: 0.8, A: 0.8}
+                                                            TangentType: Linear
+                                                        46f23b428762d005b97d3408bb17f966:
+                                                            Key: 1.0
+                                                            Value: {R: 0.0, G: 0.0, B: 0.0, A: 0.0}
+                                                            TangentType: Linear
+                                            SeedOffset: 0
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: c3fcae24-a9f6-46b7-9340-35add639d6f1
+                InstanceId: 5062cb63-d6be-4b6e-a5fd-048cfb4ab95f
         -   Folder: Sala 4
             Entity:
                 Id: e04214ed-30b3-49e4-a7c6-79e0e386ad4a
@@ -20846,6 +22364,48 @@ Hierarchy:
                         Model: 4e2549b4-1cf5-4162-9f14-1a8757e5494a:Modelos/Generales/Cilindro
                         Materials:
                             e88d3199e2b451fdd119f4532e94fb53~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
+        -   Folder: Sala 1
+            Entity:
+                Id: ea30cbd8-842e-4fae-bd6b-e3aab6cdd807
+                Name*: BarrilExplosivo 1
+                Components:
+                    44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
+                        Id: 705a971d-8e2b-440c-b51c-0698a9994882
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: KinematicFilter, DebrisFilter, CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            82a3e6b3a311f928882d9c75faeaa237: !CapsuleColliderShapeDesc
+                                Length: 0.3
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 0.55, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    75cd02e194ec093c238a550c32b180af: !TransformComponent
+                        Id: 0ca0f9e5-1d1a-4628-974e-0b2aa8c2b52f
+                        Position*: {X: -4.0, Y: 0.0, Z: 4.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            93f0fe77b71ab8f31e4249c49190d2ed: ref!! c32c7f75-ab75-4acf-bfeb-26e33d5ca2dc
+                            265bb466ce7005948bc5b436885cc1b1: ref!! 68470537-94fd-49fc-8c16-317a5df660b1
+                            c876eb5c0a7482a8c45d09d405d50630: ref!! b0e67273-8a3b-400b-b92a-9b3920a9e884
+                    ef06bc99ca096ccc9c405f3b5f3676b7: !Voronomir.ControladorBarril,Voronomir.Proyecto
+                        Id: 510c28b9-dfe0-403c-87b0-089300eee274
+                        modelo: ref!! 57a62c47-1a68-4edd-8f83-3b397326485a
+                        "partículas": ref!! 31403fa2-cfca-42a9-9f4b-2f26ac11320f
+                        "dañables":
+                            c1b66228a57d90e7d9d8cbb91d355bf1: ref!! d668e223-7078-475e-84ed-fd87d3544266
+            Base:
+                BasePartAsset: 4f68afa4-35cf-49b0-a4f6-7638df6e666a:Prefabs/Entorno/BarrilExplosivo
+                BasePartId: e8a114c4-1de9-4991-b0c5-c0a3a78869ba
+                InstanceId: 0b2ad97b-ca34-4b86-8ae9-867e315d91f5
         -   Folder: Sala 3/Grupo 0
             Entity:
                 Id: eabf5dd6-2d9c-42bb-a600-00fbb03b2adf
