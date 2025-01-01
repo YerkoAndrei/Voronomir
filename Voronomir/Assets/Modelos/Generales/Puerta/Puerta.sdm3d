@@ -9,7 +9,7 @@ Materials:
     6dbd936a01e29eca00048c9ec648b500:
         Name: Puerta
         MaterialInstance:
-            Material: f6b3451b-553a-41d6-864c-aca541fa094f:Modelos/Mapa/Puerta/Materiales/Puerta
+            Material: f6b3451b-553a-41d6-864c-aca541fa094f:Materiales/Mapa/Puerta
     908af2f092532fbd79ba2eaa0a14aa18:
         Name: Llave
         MaterialInstance:

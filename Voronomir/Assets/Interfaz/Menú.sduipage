@@ -69,7 +69,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtRActual
                 Text: 000
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -233,7 +233,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtInglés"
                 Text: English
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -455,7 +455,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtVSyncNo
                 Text: No
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -515,7 +515,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txt
                 Text: 960 x 540
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -554,7 +554,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtResoluciónActual"
                 Text: 0 x 0
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -615,7 +615,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtBActual
                 Text: 000
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -940,7 +940,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtTiempoDemo
                 Text: 00:00:000
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
@@ -1174,7 +1174,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtSonidos
                 Text: Sonidos
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -1196,7 +1196,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtGActual
                 Text: 000
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -1894,7 +1894,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtPantallaCompleta
                 Text: Pantalla Completa
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -1956,7 +1956,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtCalidad
                 Text: Calidad
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -2057,7 +2057,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txt
                 Text: 1366 x 768
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -2328,7 +2328,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name*: txtM1E3
                 Text*: E1M3
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -2423,7 +2423,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtIdioma
                 Text: Idioma
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -2767,7 +2767,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name*: txtM1E2
                 Text*: E1M2
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -3594,7 +3594,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtVSyncSí"
                 Text: "Sí"
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -3614,7 +3614,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtTítulo"
                 Text: Voronomir
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 110.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -4047,7 +4047,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtEspañol"
                 Text: "Español"
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -4382,7 +4382,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtTiempoM1E3
                 Text: 00:00:000
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
@@ -4806,7 +4806,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtVolumenGeneral
                 Text: Volumen General
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -4954,7 +4954,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtReinicio
                 Text: (Requiere reinicio)
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 15.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -5551,7 +5551,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtDepuración"
                 Text: Datos
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -6358,7 +6358,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtSensibilidad
                 Text: Sensibilidad
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -6657,7 +6657,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtEfectos
                 Text: Cantidad efectos
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -6694,7 +6694,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txt
                 Text: 1280 x 720
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -6788,7 +6788,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtDepuraciónNo"
                 Text: No
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -6978,7 +6978,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name*: txtNormal
                 Text*: Normal
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -7294,7 +7294,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name*: txtM1E1
                 Text*: E1M1
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -7588,7 +7588,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name*: txtSalir
                 Text*: Salir
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -7648,7 +7648,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name*: txtM1E4
                 Text*: E1M4
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -7750,7 +7750,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtDificultad
                 Text: Dificultad
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -7866,7 +7866,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtVSync
                 Text: v Sync
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -7934,7 +7934,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name*: txtOpciones
                 Text*: Opciones
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -7993,7 +7993,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name*: "txtDifícil"
                 Text*: "Difícil"
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -8015,7 +8015,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtSensibilidadActual
                 Text: 0.00
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -8099,7 +8099,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtOpcionesVolver
                 Text: Volver
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -8188,7 +8188,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtMundos
                 Text: Mundos
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -8260,7 +8260,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtPantallaNo
                 Text: No
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -8279,7 +8279,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name*: txtVolver
                 Text*: Volver
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -8471,7 +8471,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtHRTFNo
                 Text: No
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -8573,7 +8573,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtVolumenMúsica"
                 Text: "Volumen Música"
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -8842,7 +8842,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtTiempoM1E1
                 Text: 00:00:000
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
@@ -9035,7 +9035,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txt
                 Text: 2560 x 1440
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -9217,7 +9217,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtColorMira
                 Text: Color Mira
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -9429,7 +9429,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtHRTFSí"
                 Text: "Sí"
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -9743,7 +9743,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtTiempoM1E4
                 Text: 00:00:000
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
@@ -9796,7 +9796,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name*: txtDemo
                 Text*: Demo
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -9983,7 +9983,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtPantallaSí"
                 Text: "Sí"
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -10169,7 +10169,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtTiempoM1E2
                 Text: 00:00:000
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 25.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
@@ -10247,7 +10247,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txt
                 Text: 1600 x 900
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -10302,7 +10302,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txt
                 Text: 3840 x 2160
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -10446,7 +10446,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtDescripciónHRTF"
                 Text: (Mejor sonido 3D)
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -10667,7 +10667,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtDepuraciónSí"
                 Text: "Sí"
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -10876,7 +10876,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtGráficos"
                 Text: "Gráficos"
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -10993,7 +10993,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name*: txtJugar
                 Text*: Jugar
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor*: {R: 240, G: 240, B: 200, A: 255}
                 TextAlignment: Center
@@ -11222,7 +11222,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtDescripciónDificultad"
                 Text: "Descripción dificultad lorem ipsum dolor sit amet"
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -11325,7 +11325,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtResolución"
                 Text: "Resolución"
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -11467,7 +11467,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtSombras
                 Text: Sombras
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -11546,7 +11546,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name*: "txtFácil"
                 Text*: "Fácil"
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -11566,7 +11566,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: "txtTítuloOpciones"
                 Text: Opciones
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 40.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Right
@@ -11928,7 +11928,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtHRTF
                 Text: HRTF
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center
@@ -12118,7 +12118,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtJuego
                 Text: Juego
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -12157,7 +12157,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txt
                 Text: 1920 x 1080
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
@@ -12317,7 +12317,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: txtVolumenEfectos
                 Text: Volumen Efectos
-                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Interfaz/Fuente/Kroftsmann
+                Font: 78791f2a-f37e-45e1-86b1-5a2c0b5a9855:Fuente/Kroftsmann
                 TextSize: 20.0
                 TextColor: {R: 240, G: 240, B: 240, A: 240}
                 TextAlignment: Center

@@ -2,7 +2,7 @@
 Id: f218e192-c37d-4a6d-8384-1bf3ce3ba843
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Source: !file ../PuertaSala3.glb
+Source: !file PuertaSala3.glb
 Skeleton: null
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Materials:
@@ -12,4 +12,4 @@ Materials:
             Material: a74e9499-aeb8-4eb6-9dcb-3013ae429bc1:Materiales/Mapa/Muro
 Modifiers: {}
 ~SourceHashes:
-    578770f72c08d2ee07c8f8c0c9456df2~../PuertaSala3.glb: f93807ea032f66aabe92e475623bcf41
+    8890eb97002ed3e9fc5d162fdb23959d~PuertaSala3.glb: f93807ea032f66aabe92e475623bcf41

@@ -351,10 +351,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             707e8f5247ceb9020a56a54259f7931d: !StaticMeshColliderShapeDesc
-                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                     9b761e99e862b88a0b1ce25463b9ee82: !ModelComponent
                         Id: fd545d80-a711-4753-b427-88ec14c617ad
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                         Materials:
                             619c2e9bbbf2c2460de49e945399b39f~1: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/Llaves/LlaveAmarilla
         -   Folder: null
@@ -394,7 +394,7 @@ Hierarchy:
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 797424c9-c7fe-4281-975a-0fc200f33191
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Mapa/Puerta/Puerta
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Generales/Puerta/Puerta
                         Materials: {}
             Base:
                 BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
@@ -447,10 +447,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             8d8a05181e5a8cd0c7881d9a2e2a0ada: !StaticMeshColliderShapeDesc
-                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                     8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
                         Id: 37dd92f5-eb34-4e6c-9929-3e3c25bb5148
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                         Materials: {}
         -   Folder: Puertas
             Entity:
@@ -580,7 +580,7 @@ Hierarchy:
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 9148b084-6c1e-4ba5-8e1e-5ae42fe853ad
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Mapa/Puerta/Puerta
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Generales/Puerta/Puerta
                         Materials: {}
             Base:
                 BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
@@ -711,7 +711,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 2a9d6341-775d-4527-8727-0ddaee4913ca
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Generales/Muro
                         Materials: {}
         -   Entity:
                 Id: 192aae67-88cf-46cd-9a6b-79fdb36cf312
@@ -1077,7 +1077,7 @@ Hierarchy:
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: d48ca9bb-1838-4c80-940e-b656d3266e33
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Mapa/Puerta/Puerta
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Generales/Puerta/Puerta
                         Materials:
                             bc95f6c4209cf9648746a3f1a806ef73*~1: ec8a5bbc-0345-4659-a941-afd661744fe9:Materiales/Llaves/LlaveAmarilla
             Base:
@@ -2013,7 +2013,7 @@ Hierarchy:
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: f66c9591-7afb-4864-a634-ac0826b5e455
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Mapa/Puerta/Puerta
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Generales/Puerta/Puerta
                         Materials: {}
             Base:
                 BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
@@ -2507,7 +2507,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 6d59886f-c4a5-4069-96d6-9485b7858054
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Generales/Muro
                         Materials: {}
         -   Folder: Puertas
             Entity:
@@ -2937,7 +2937,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: b0e5187c-fc2b-42f0-a0e1-580deee1c4c3
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Generales/Muro
                         Materials: {}
         -   Folder: Grupo01
             Entity:
@@ -3125,10 +3125,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             8d8a05181e5a8cd0c7881d9a2e2a0ada: !StaticMeshColliderShapeDesc
-                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                     8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
                         Id: bcf2a976-dfaa-4783-9ff4-a2f829febe09
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                         Materials: {}
         -   Folder: Entorno
             Entity:
@@ -4610,7 +4610,7 @@ Hierarchy:
                         Id: 92a85a31-56a5-4327-8b8c-adaad18b7459
                         Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials:
-                            bf450f62ad1473fb768b2e2fbef469f0~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
+                            bf450f62ad1473fb768b2e2fbef469f0~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
         -   Entity:
                 Id: 86798d33-b755-4665-ae6f-b2b96efd2015
                 Name: ArmaRango
@@ -5167,7 +5167,7 @@ Hierarchy:
                         Id: 85ab4bb0-05e4-4089-81c3-cf17363fe123
                         Model: 9888010c-da09-43e3-9b25-a4b43cdc5d87:Modelos/Generales/Cubo
                         Materials:
-                            885c00811c3a967eee2a81b6e59b088b~0: c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Mapa
+                            885c00811c3a967eee2a81b6e59b088b~0: "c8cb7fc8-2eee-4d71-995f-f89ed59d19d6:Materiales/Mapa/Obstáculo"
         -   Folder: Grupo01
             Entity:
                 Id: 9466ef07-c364-447b-94db-14d4447fda74
@@ -5660,10 +5660,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             cbf9f2e68f706f746ff54d67277aa5c0: !StaticMeshColliderShapeDesc
-                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
+                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Generales/Rampa
                     f90574c0c620ae24776fc892df6f674b: !ModelComponent
                         Id: c1acaa60-0d98-4788-9819-0d8e661bd257
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Generales/Rampa
                         Materials: {}
         -   Entity:
                 Id: a6aae518-5bc4-4527-9995-349e89047d9d
@@ -5762,7 +5762,7 @@ Hierarchy:
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 37e86b2c-b725-4039-9e0f-302798cb10ea
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Mapa/Puerta/Puerta
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Generales/Puerta/Puerta
                         Materials:
                             bc95f6c4209cf9648746a3f1a806ef73*~1: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/Llaves/LlaveRoja
             Base:
@@ -6027,10 +6027,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             8d8a05181e5a8cd0c7881d9a2e2a0ada: !StaticMeshColliderShapeDesc
-                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                     8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
                         Id: 4fc5ca8f-aa24-4f3a-9a21-5ea5b5399c28
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                         Materials:
                             3b51b2fae72852cc695fbe30b858ec6f~1: b8ca956f-9942-4921-89aa-14dff3188f97:Materiales/Llaves/LlaveRoja
         -   Folder: null
@@ -6076,10 +6076,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             8d8a05181e5a8cd0c7881d9a2e2a0ada: !StaticMeshColliderShapeDesc
-                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                     8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
                         Id: 198920f2-11a5-456e-a30f-bf362006683b
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                         Materials: {}
         -   Folder: null
             Entity:
@@ -6643,10 +6643,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             cbf9f2e68f706f746ff54d67277aa5c0: !StaticMeshColliderShapeDesc
-                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
+                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Generales/Rampa
                     f90574c0c620ae24776fc892df6f674b: !ModelComponent
                         Id: 1c02d769-8a36-4101-9f66-3c9cd3a1eed4
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Generales/Rampa
                         Materials: {}
         -   Entity:
                 Id: cb74dedf-a315-4eb5-a0b0-bf447505f378
@@ -6715,7 +6715,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 69b7da8b-7831-48e0-a3b9-09d56c043f51
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Generales/Muro
                         Materials: {}
         -   Folder: "Mapa/Obstáculos"
             Entity:
@@ -6741,10 +6741,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             cbf9f2e68f706f746ff54d67277aa5c0: !StaticMeshColliderShapeDesc
-                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
+                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Generales/Rampa
                     f90574c0c620ae24776fc892df6f674b: !ModelComponent
                         Id: 7d390dfb-0a6c-4761-b02c-dea26e55e5cb
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Generales/Rampa
                         Materials: {}
         -   Folder: null
             Entity:
@@ -7654,10 +7654,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             8d8a05181e5a8cd0c7881d9a2e2a0ada: !StaticMeshColliderShapeDesc
-                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                     8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
                         Id: b47da367-bbe6-45b7-af74-3c5d349998c4
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                         Materials: {}
         -   Entity:
                 Id: e4460d8a-feac-4c9a-86ba-4bd7bfa4ff48
@@ -7718,7 +7718,7 @@ Hierarchy:
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 11cffe9e-2aaa-4a4a-9905-711f2c03f957
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Mapa/Puerta/Puerta
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Generales/Puerta/Puerta
                         Materials: {}
             Base:
                 BasePartAsset: 28b8e327-888e-42ee-a610-bc4a60c5f9c3:Prefabs/Entorno/Puerta
@@ -7938,7 +7938,7 @@ Hierarchy:
                         Children: {}
                     1695245ca0bb4ae06463f992b8498b6b: !ModelComponent
                         Id: 65e16933-9120-447f-9e7b-1fa3ff536c95
-                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Mapa/Puerta/Puerta
+                        Model: da73348f-10e1-483f-a717-bbab57d625cc:Modelos/Generales/Puerta/Puerta
                         Materials:
                             9f0f310113bae67ad5ef6389213ba9b2*~1: 310399f4-e3d2-4678-8293-d8ff6fd87a7d:Materiales/Llaves/LlaveAzul
             Base:
@@ -8154,10 +8154,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             cbf9f2e68f706f746ff54d67277aa5c0: !StaticMeshColliderShapeDesc
-                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
+                                Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Generales/Rampa
                     f90574c0c620ae24776fc892df6f674b: !ModelComponent
                         Id: c2aabd68-0d0a-4073-8ec8-187707a9e1c4
-                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Mapa/Rampa
+                        Model: e01784e0-2784-46b0-b413-ff821b238fa6:Modelos/Generales/Rampa
                         Materials: {}
         -   Entity:
                 Id: eb67bfca-42e8-4ce6-8c5d-d9e37bd7f436
@@ -8208,7 +8208,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: 8634173c-9181-4e1a-9349-56728402efbd
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Generales/Muro
                         Materials: {}
         -   Folder: MuestraEnemigos
             Entity:
@@ -8307,10 +8307,10 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             8d8a05181e5a8cd0c7881d9a2e2a0ada: !StaticMeshColliderShapeDesc
-                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                                Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                     8a35b76df4d388ae54fc8d71ed95c765: !ModelComponent
                         Id: 3c071f90-ee01-4d29-b687-29dc93b39341
-                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Mapa/Portal
+                        Model: da35d8bb-f91a-48e1-bfce-5ffe7022a088:Modelos/Generales/Puerta/Portal
                         Materials: {}
         -   Folder: null
             Entity:
@@ -8561,7 +8561,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     57c6e51bba5728d4c0ce878885e6ec95: !ModelComponent
                         Id: d3d64e94-1b92-4b0c-8537-338ffeee3c13
-                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Mapa/Muro
+                        Model: c01e661c-0165-4b93-a5ef-b62401b80024:Modelos/Generales/Muro
                         Materials: {}
         -   Entity:
                 Id: ff5480c7-125b-4faf-a925-a78b68f1b73b
