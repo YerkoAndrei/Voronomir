@@ -403,7 +403,7 @@ Hierarchy:
         -   Folder: Sala 4/Mapa
             Entity:
                 Id: 044f30a1-0f5f-4047-ba80-5069e0368969
-                Name: Columna 1
+                Name: Columna (1)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: c58c2487-83c0-4342-958c-2d0b19f093cf
@@ -732,7 +732,7 @@ Hierarchy:
         -   Folder: Sala 4/Mapa
             Entity:
                 Id: 0b0f5f96-71fe-4da4-b55e-21d586feedbe
-                Name: Columna 0
+                Name: Columna (0)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: 64f5df53-cfe8-452c-bf63-d12b71584468
@@ -1201,7 +1201,7 @@ Hierarchy:
         -   Folder: Sala 4/Mapa
             Entity:
                 Id: 0d4b2031-e6a8-491d-96f9-bfc8872fc62d
-                Name: Columna 4
+                Name: Columna (4)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: 4c8a9813-e7d0-45e9-bcc6-c56fb3c6b3b7
@@ -1233,7 +1233,7 @@ Hierarchy:
         -   Folder: Sala 1/Mapa
             Entity:
                 Id: 0df52766-39fc-490b-9fce-7fdef51efd15
-                Name: Columna 2
+                Name: Columna (2)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: 41923c9d-f9b1-4b63-8044-ceb1d8917b17
@@ -2944,7 +2944,7 @@ Hierarchy:
         -   Folder: Sala 4
             Entity:
                 Id: 1b91fc61-b424-457a-b5de-bf0639daa54e
-                Name*: Saltador 0
+                Name*: Saltador (0)
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 7cb3c115-f892-4890-8a9a-de6da1348c70
@@ -3381,7 +3381,7 @@ Hierarchy:
         -   Folder: Sala 2/Mapa
             Entity:
                 Id: 23e265e2-126e-45ea-9cba-41d4332f2032
-                Name: Columna 2
+                Name: Columna (2)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: 7e5e93a1-767d-4611-bff0-e1d3620da51d
@@ -3995,7 +3995,7 @@ Hierarchy:
         -   Folder: Sala 1
             Entity:
                 Id: 2bb2713b-51cf-43c3-a02f-3a732700e594
-                Name*: BarrilExplosivo 3
+                Name*: BarrilExplosivo (3)
                 Components:
                     44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
                         Id: fac5c1c6-1195-462f-b8f8-64b0c5123f8e
@@ -5562,7 +5562,7 @@ Hierarchy:
         -   Folder: Sala 4
             Entity:
                 Id: 3f819265-05e2-411f-83a0-1b256797141e
-                Name*: Activador 0
+                Name*: Activador (0)
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: 48f88912-05ef-4cc1-85a0-2cd397130f31
@@ -6865,7 +6865,7 @@ Hierarchy:
         -   Folder: Sala 1/Mapa
             Entity:
                 Id: 4927b9cc-021a-4259-8c03-8aa2bacbcfe4
-                Name: Cubo 0
+                Name: Cubo (0)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: c34a4b5f-57f8-4a2a-802b-9da4a85c28aa
@@ -8224,7 +8224,7 @@ Hierarchy:
         -   Folder: Sala 1/Mapa
             Entity:
                 Id: 55becbee-bec2-4178-8703-5deb48e28089
-                Name: Columna 0
+                Name: Columna (0)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: 1a937a65-d6b5-4665-b4f7-8a6bf8c4b93d
@@ -8704,7 +8704,7 @@ Hierarchy:
         -   Folder: Sala 3
             Entity:
                 Id: 5af8f1a3-421e-4875-a233-f62c8ceb2f76
-                Name*: Activador 0 (Circular)
+                Name*: Activador (Circular)
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: 3b7c65f1-c759-4c40-818c-d2e93801dbc2
@@ -8993,7 +8993,7 @@ Hierarchy:
         -   Folder: Sala 1/Mapa
             Entity:
                 Id: 624c0cfb-85e5-408c-8eea-fffb408e0674
-                Name: Columna 1
+                Name: Columna (1)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: 3515cb59-8b52-4989-9e60-8f8f22d56b1b
@@ -11440,7 +11440,7 @@ Hierarchy:
         -   Folder: Sala 1
             Entity:
                 Id: 781bbfcd-9a3b-4e6b-b177-ef31cae330df
-                Name*: BarrilExplosivo 2
+                Name*: BarrilExplosivo (2)
                 Components:
                     44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
                         Id: b2114612-ec71-4c7a-b5f7-37072942e0fa
@@ -11482,7 +11482,7 @@ Hierarchy:
         -   Folder: Sala 1
             Entity:
                 Id: 78984a51-66d0-4458-92bc-a2dae0da652d
-                Name*: Activador 1
+                Name*: Activador (1)
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: 4bcfed31-d573-40b3-a112-322aeca1e87a
@@ -12172,7 +12172,7 @@ Hierarchy:
         -   Folder: Sala 1
             Entity:
                 Id: 8004cfaa-4b48-44d0-a8d0-804ee4d17921
-                Name*: Activador 2
+                Name*: Activador (2)
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: 6ba0bebc-4e61-4fa0-804a-21dc2b091b50
@@ -13606,7 +13606,7 @@ Hierarchy:
         -   Folder: Sala 2
             Entity:
                 Id: 90c110e0-7b3b-4262-81db-c49ef4ec33f1
-                Name: BarrilExplosivo 0
+                Name*: BarrilExplosivo (0)
                 Components:
                     44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
                         Id: 65e35732-02c8-4d2c-94bf-b59f7d5847d9
@@ -14015,7 +14015,7 @@ Hierarchy:
         -   Folder: Sala 1
             Entity:
                 Id: 94d7400d-ef15-46d7-8a21-b2beea2a4e30
-                Name*: Activador 3
+                Name*: Activador (3)
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: 6d7d9921-333c-42f1-99a6-e1ce926dfb62
@@ -14643,7 +14643,7 @@ Hierarchy:
         -   Folder: Sala 2
             Entity:
                 Id: 9a64d522-87eb-49d3-8b12-e53ac5c5cd22
-                Name*: Activador 0
+                Name*: Activador (0)
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: c4e6a74f-8f2b-49ff-a33f-758150900eee
@@ -15989,7 +15989,7 @@ Hierarchy:
         -   Folder: Sala 4/Mapa
             Entity:
                 Id: a83da07a-cfab-4a4f-8120-c5040f09fcb4
-                Name: Columna 3
+                Name: Columna (3)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: eec36ab8-576c-498e-b3dd-93ab00cdb314
@@ -17643,7 +17643,7 @@ Hierarchy:
         -   Folder: Sala 4
             Entity:
                 Id: b94348c7-6b22-45ea-b61e-73bf4c26921e
-                Name*: Saltador 1
+                Name*: Saltador (1)
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: 23a31c2d-d0e5-418c-8a57-e34172949028
@@ -17742,7 +17742,7 @@ Hierarchy:
         -   Folder: Sala 4/Mapa
             Entity:
                 Id: bb3dd3e5-1c63-4f00-ad07-d7a790854ee9
-                Name: Columna 2
+                Name: Columna (2)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: 4aa94e06-b0fe-4050-bf46-d6171786ca5f
@@ -18705,7 +18705,7 @@ Hierarchy:
         -   Folder: Sala 2
             Entity:
                 Id: c5e9fc88-53b3-48c1-9c21-0404b98257b9
-                Name*: Activador 2
+                Name*: Activador (2)
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: 4e87c3aa-5bfb-4b62-bffd-644600ebf767
@@ -18805,7 +18805,7 @@ Hierarchy:
         -   Folder: Sala 1/Mapa
             Entity:
                 Id: c6e4eb8f-8280-4faa-9d6c-5fb037ba06d3
-                Name: Cubo 2
+                Name: Cubo (2)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: ff1a78aa-7388-4bd9-a9fa-c6f278b120c7
@@ -19266,7 +19266,7 @@ Hierarchy:
         -   Folder: Sala 1/Mapa
             Entity:
                 Id: cb05f8a9-8d6f-480e-8f82-0558ad14912b
-                Name: Columna 4
+                Name: Columna (3)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: 4b77f6fa-d209-4f87-bf22-b2220c2b1c1d
@@ -19652,7 +19652,7 @@ Hierarchy:
         -   Folder: Sala 2
             Entity:
                 Id: d0d099d9-1274-4130-a0a2-cc0e3274d374
-                Name*: BarrilExplosivo 1
+                Name*: BarrilExplosivo (1)
                 Components:
                     44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
                         Id: d7a3203f-1f52-42b2-9f25-c70c0621e461
@@ -20473,7 +20473,7 @@ Hierarchy:
         -   Folder: Sala 1
             Entity:
                 Id: dbfadbda-cd72-442e-a28f-0f94d98edecd
-                Name*: Activador 0
+                Name*: Activador (0)
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: fb96390b-b46f-4d9b-8632-f52f3360dcb8
@@ -20534,7 +20534,7 @@ Hierarchy:
         -   Folder: Sala 1/Mapa
             Entity:
                 Id: dc4c51d5-fbc2-40f3-b522-d04f4e68e8c6
-                Name: Cubo 1
+                Name: Cubo (1)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: b252e22f-5e77-4518-b31f-5c693248a58d
@@ -20762,7 +20762,7 @@ Hierarchy:
         -   Folder: Sala 1
             Entity:
                 Id: def32ff6-c469-491f-ad32-47cd6845ac08
-                Name*: BarrilExplosivo 0
+                Name*: BarrilExplosivo (0)
                 Components:
                     44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
                         Id: 96d3ac37-4c76-492c-b426-d4fc6a77fbd2
@@ -22214,7 +22214,7 @@ Hierarchy:
         -   Folder: Sala 2
             Entity:
                 Id: e979e2a1-d802-40ac-baef-1ddea05325ba
-                Name*: Activador 1
+                Name*: Activador (1)
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: 561b1022-82a6-4d10-8793-34ad9edcaa66
@@ -22335,7 +22335,7 @@ Hierarchy:
         -   Folder: Sala 2/Mapa
             Entity:
                 Id: e9f98bb1-2244-4ad1-bb98-33e9ccc37274
-                Name: Columna 0
+                Name: Columna (0)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: d4b60649-8048-49dd-9833-54703b1eaa45
@@ -22367,7 +22367,7 @@ Hierarchy:
         -   Folder: Sala 1
             Entity:
                 Id: ea30cbd8-842e-4fae-bd6b-e3aab6cdd807
-                Name*: BarrilExplosivo 1
+                Name*: BarrilExplosivo (1)
                 Components:
                     44576d0fb4d5f10c804558e3c70082b1: !StaticColliderComponent
                         Id: 705a971d-8e2b-440c-b51c-0698a9994882
@@ -22954,7 +22954,7 @@ Hierarchy:
         -   Folder: Sala 0
             Entity:
                 Id: ee0bee4b-f854-49eb-b5fc-64537de380c8
-                Name*: Activador 0
+                Name*: Activador (0)
                 Components:
                     b0f10699d65ec41b687f59ee363befd6: !TransformComponent
                         Id: c193ffd9-f2d1-4586-9eb3-5a9377e3f508
@@ -23732,7 +23732,7 @@ Hierarchy:
         -   Folder: Sala 4
             Entity:
                 Id: f8a4d847-6927-48c6-aed3-e6dd823e5ff0
-                Name*: Saltador 2
+                Name*: Saltador (2)
                 Components:
                     08a04dd94e1575b4fe06e740981c2963: !TransformComponent
                         Id: e34c085e-e1e6-46d7-ad94-8eb2803fea19
@@ -23927,7 +23927,7 @@ Hierarchy:
         -   Folder: Sala 2/Mapa
             Entity:
                 Id: fadbfc1b-9e52-429b-ab6c-9f6f529e8dbe
-                Name: Columna 1
+                Name: Columna (1)
                 Components:
                     a4eff1be567473e8c4551578b450db20: !TransformComponent
                         Id: dfcff588-ee14-4aa7-8bee-df7d633a4ee2
